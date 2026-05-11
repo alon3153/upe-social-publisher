@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_publish": "2026-05-11T13:50:20Z",
+  "last_publish": "2026-05-11T19:26:45.203097Z",
   "publications": {
     "1": {
       "uproductionevents": {
@@ -616,6 +616,24 @@
         "post_id": "local-day20-ig-es",
         "error": null,
         "timestamp": "2026-05-11T13:49:31Z"
+      },
+      "uproductionevents": {
+        "success": true,
+        "post_id": "497539806947915_1576475097821610",
+        "error": null,
+        "timestamp": "2026-05-11T19:26:41.058012Z"
+      },
+      "uproduction_spain": {
+        "success": true,
+        "post_id": "156930967509326_122250907106126815",
+        "error": null,
+        "timestamp": "2026-05-11T19:26:45.203091Z"
+      },
+      "ig_uproductionevents": {
+        "success": false,
+        "post_id": null,
+        "error": "No IMAGE_BASE_URL set — Instagram requires public image URL",
+        "timestamp": "2026-05-11T19:26:45.203131Z"
       }
     }
   }

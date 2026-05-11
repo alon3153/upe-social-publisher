@@ -94,14 +94,15 @@ def verify_account(ig_user_id: str, access_token: str) -> Tuple[bool, str]:
 
 
 def publish_post(account_key: str, caption: str, image_url: str) -> dict:
-    ig_user_id = os.environ.get(f"IG_{account_key.upper()}_USER_ID")
-    access_token = os.environ.get(f"IG_{account_key.upper()}_ACCESS_TOKEN")
+    env_suffix = account_key.upper().removeprefix("IG_")
+    ig_user_id = os.environ.get(f"IG_{env_suffix}_USER_ID")
+    access_token = os.environ.get(f"IG_{env_suffix}_ACCESS_TOKEN")
 
     if not ig_user_id or not access_token:
         return {
             "success": False,
             "account": account_key,
-            "error": f"Missing IG_{account_key.upper()}_USER_ID or IG_{account_key.upper()}_ACCESS_TOKEN",
+            "error": f"Missing IG_{env_suffix}_USER_ID or IG_{env_suffix}_ACCESS_TOKEN",
         }
 
     try:

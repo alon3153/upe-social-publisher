@@ -43,7 +43,8 @@ ACCOUNTS = [
     {"key": "uproduction_spain",   "platform": "facebook",  "lang": "es"},
     {"key": "ig_uproductionevents", "platform": "instagram", "lang": "en"},
     {"key": "ig_uproduction_spain", "platform": "instagram", "lang": "es"},
-    {"key": "ig_alon3153",          "platform": "instagram", "lang": "he"},
+    # ig_alon3153 dropped 2026-05-11: not a linked IG Business account on a managed Page.
+    # Continues to be posted manually by Alon.
 ]
 
 
