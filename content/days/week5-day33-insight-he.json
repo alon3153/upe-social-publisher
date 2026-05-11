@@ -1,0 +1,25 @@
+{
+  "day": 33,
+  "category": "industry_insight",
+  "language": "he",
+  "date": "2026-05-24",
+  "weekday": "Sunday",
+  "theme": "עתיד אירועי החברה — מה AI לא יחליף",
+  "instagram": {
+    "profile": "@alon3153",
+    "text": "AI באירועים מרשים. הנה מה שהוא עדיין לא יודע לעשות: 🤖\n\n→ לנסוע 4 שעות ב-11 בלילה כשאוטובוס נשבר\n→ לכתוב לבעל מסעדה בפראג שיפתח לך חדר פרטי בהתראה של שעתיים\n→ לגרום ל-CEO להבין שהאירוע הפך לרגע הכי גדול בשנה של הצוות\n\nAI יעשה אותנו יעילים יותר.\nהאמון נשאר אנושי.\n\nמה צריך להישאר אנושי באירועים? תכתוב לי 👇\n\n📩 הודעה.\n\n#AI #עתידהעבודה #הפקתאירועים #UproductionEvents",
+    "dimensions": "1:1",
+    "cta": "הודעה פרטית"
+  },
+  "image_prompt": "Corporate event scene: The future of corporate events — what AI can't replace, luxury, professional, gold accents",
+  "image_style": "photorealistic, editorial, luxury event magazine",
+  "brand": {
+    "colors": [
+      "#1C1C1C",
+      "#FBCE0A"
+    ],
+    "font": "Comfortaa",
+    "logo": "uproduction_official_logo.png"
+  },
+  "_note": "Manual posting to @alon3153 (Personal IG, not in auto-publish pipeline). Alon-as-founder voice."
+}

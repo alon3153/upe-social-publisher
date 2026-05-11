@@ -1,0 +1,25 @@
+{
+  "day": 34,
+  "category": "destination",
+  "language": "he",
+  "date": "2026-05-25",
+  "weekday": "Monday",
+  "theme": "פורטו — היעד הלא-מוערך שמשנה כלל המשחק",
+  "instagram": {
+    "profile": "@alon3153",
+    "text": "פורטו לא-מוערכת באופן פלילי לקבוצות חברה. 🏰\n\nלמה אנחנו שולחים יותר ויותר צוותים:\n→ מרתפי יין מהמאה ה-17 כאולמות אירועים\n→ 25-35% זול מליסבון, באותה איכות\n→ 3.5 שעות מישראל, 1-2 שעות מרוב אירופה\n→ אף אחד מהצוות לא היה שם = חידוש = מעורבות\n→ 9.4/10 מקבוצת פינטק האחרונה שלנו\n\nמתאים לצוותים שרוצים אותנטי. לא חוף. שכבר היו בברצלונה (זה קורה 😅)\n\n📩 הודעה לבדוק זמינות.\n\n#פורטו #פורטוגל #טיוליתמריץ #UproductionEvents #יעדיאירועים",
+    "dimensions": "1:1",
+    "cta": "הודעה פרטית"
+  },
+  "image_prompt": "Corporate event scene: Porto: The underrated gem for corporate groups, luxury, professional, gold accents",
+  "image_style": "photorealistic, editorial, luxury event magazine",
+  "brand": {
+    "colors": [
+      "#1C1C1C",
+      "#FBCE0A"
+    ],
+    "font": "Comfortaa",
+    "logo": "uproduction_official_logo.png"
+  },
+  "_note": "Manual posting to @alon3153 (Personal IG, not in auto-publish pipeline). Alon-as-founder voice."
+}

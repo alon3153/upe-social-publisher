@@ -1,0 +1,25 @@
+{
+  "day": 30,
+  "category": "case_study",
+  "language": "he",
+  "date": "2026-05-21",
+  "weekday": "Thursday",
+  "theme": "חברת פארמה. 28% תחלופה. איך פתרנו את זה ב-4 ימים באתונה",
+  "instagram": {
+    "profile": "@alon3153",
+    "text": "חברת פארמה. תחלופה שנתית 28%. ככה תיקנו: 🎯\n\n4 ימים באתונה ל-40 הביצועיסטים שלהם:\n→ ארוחת ערב פרטית באקרופוליס\n→ אתגר צוותים על יאכטה\n→ הוקרה אישית של ה-CEO\n→ טקס פרסים בגג\n\n12 חודש אחרי:\n✅ תחלופה: 28% → 11%\n✅ ביצועי צוות +23%\n✅ ROI: 6.7:1\n\nלפעמים הדבר הכי יקר הוא לא להשקיע בעובדים שלך.\n\n📩 הודעה.\n\n#קייסטאדי #שימורעובדים #אתונה #UproductionEvents #משאביאנוש",
+    "dimensions": "1:1",
+    "cta": "הודעה פרטית"
+  },
+  "image_prompt": "Corporate event scene: How a pharma company used incentive travel to solve a retention crisis, luxury, professional, gold accents",
+  "image_style": "photorealistic, editorial, luxury event magazine",
+  "brand": {
+    "colors": [
+      "#1C1C1C",
+      "#FBCE0A"
+    ],
+    "font": "Comfortaa",
+    "logo": "uproduction_official_logo.png"
+  },
+  "_note": "Manual posting to @alon3153 (Personal IG, not in auto-publish pipeline). Alon-as-founder voice."
+}

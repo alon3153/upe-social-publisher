@@ -1,0 +1,25 @@
+{
+  "day": 32,
+  "category": "testimonial",
+  "language": "he",
+  "date": "2026-05-23",
+  "weekday": "Saturday",
+  "theme": "מה לקוחות שלנו אומרים — לא ערוך",
+  "instagram": {
+    "profile": "@alon3153",
+    "text": "ביקשנו מלקוחות רגע אחד. לא ביקורת. 💬\n\n\"יוסי. 18 שנה איתנו. הרבעון הכי טוב שלו. ה-CEO הגיש לו אישית את הפרס. הוא בכה. המנהל שלו בכה. אני בכיתי. שווה יותר מכל בונוס משכורת.\"\n— סמנכ\"ל מכירות, חברת טק (ברצלונה)\n\n\"הפקנו טיולי חברה לפני. תמיד היה טוב. אף פעם לא יוצא דופן. זו הייתה הפעם הראשונה ששמעתי את המשפט 'מעולם לא עשיתי משהו כזה'. בשביל זה אנחנו משלמים.\"\n— CEO, חברת בריאות (פראג)\n\nזה מה שאנחנו בונים. לא אירועים. רגעים.\n\n📩 הודעה.\n\n#עדויותלקוחות #אירועיחברה #UproductionEvents #משאביאנוש",
+    "dimensions": "1:1",
+    "cta": "הודעה פרטית"
+  },
+  "image_prompt": "Corporate event scene: What our clients say — unscripted, luxury, professional, gold accents",
+  "image_style": "photorealistic, editorial, luxury event magazine",
+  "brand": {
+    "colors": [
+      "#1C1C1C",
+      "#FBCE0A"
+    ],
+    "font": "Comfortaa",
+    "logo": "uproduction_official_logo.png"
+  },
+  "_note": "Manual posting to @alon3153 (Personal IG, not in auto-publish pipeline). Alon-as-founder voice."
+}

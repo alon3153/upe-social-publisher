@@ -1,0 +1,25 @@
+{
+  "day": 35,
+  "category": "employee_engagement",
+  "language": "he",
+  "date": "2026-05-26",
+  "weekday": "Tuesday",
+  "theme": "למה העובדים הכי טובים שלך מעדכנים בשקט LinkedIn",
+  "instagram": {
+    "profile": "@alon3153",
+    "text": "העובדים הכי טובים שלך מעדכנים את הלינקדאין שלהם. בשקט. 💡\n\nזה אומר מה?\n\nביצועיסטים מובילים לא מתלוננים. הם עוזבים.\n\nמה באמת שומר אותם לטווח ארוך:\n❌ לא משכורת (מביאה אותם. שומרת לשנתיים.)\n❌ לא קידום (מספק שאיפות. לא יוצר נאמנות.)\n✅ להיראות. בפומבי. מול עמיתים.\n\nחברות עם תכניות תמריץ שנתיות:\n→ 9% תחלופה רצונית\nמול ממוצע התעשייה: 22%\n\nמה אסטרטגיית השימור שלך? 👇\n\n📩 הודעה.\n\n#שימורעובדים #משאביאנוש #UproductionEvents #טיוליתמריץ",
+    "dimensions": "1:1",
+    "cta": "הודעה פרטית"
+  },
+  "image_prompt": "Corporate event scene: Why your best employees are quietly updating their LinkedIn, luxury, professional, gold accents",
+  "image_style": "photorealistic, editorial, luxury event magazine",
+  "brand": {
+    "colors": [
+      "#1C1C1C",
+      "#FBCE0A"
+    ],
+    "font": "Comfortaa",
+    "logo": "uproduction_official_logo.png"
+  },
+  "_note": "Manual posting to @alon3153 (Personal IG, not in auto-publish pipeline). Alon-as-founder voice."
+}

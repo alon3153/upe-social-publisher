@@ -1,0 +1,25 @@
+{
+  "day": 36,
+  "category": "cta",
+  "language": "he",
+  "date": "2026-05-27",
+  "weekday": "Wednesday",
+  "theme": "קיץ 2026 — המקומות האחרונים",
+  "instagram": {
+    "profile": "@alon3153",
+    "text": "קיץ 2026. סטטוס נכון להיום: 🌞\n\n✅ יוני — 3 מקומות\n✅ יולי — 2 מקומות\n⚠️ אוגוסט — מקום אחד (שיא הסיזון)\n\nיעדים שעוד פנויים:\nליסבון • פורטו • סביליה • ברצלונה • אתונה • ספליט • דוברובניק\n\nקבוצות 20-150 איש. הפקה מלאה.\n\n✅ תקציב מאושר?\n✅ Q3 פתוח אצלך?\n\nאם כן — בוא נסגור עכשיו, לפני שהשוק יתפוס את שאר הסלוטים.\n\n📩 הודעה. תשובה תוך 24 שעות.\n\n#קיץ2026 #אירועיחברה #טיוליתמריץ #UproductionEvents #משאביאנוש #טסיםלעבודה",
+    "dimensions": "1:1",
+    "cta": "הודעה פרטית"
+  },
+  "image_prompt": "Corporate event scene: Summer 2026 — Last spots available, luxury, professional, gold accents",
+  "image_style": "photorealistic, editorial, luxury event magazine",
+  "brand": {
+    "colors": [
+      "#1C1C1C",
+      "#FBCE0A"
+    ],
+    "font": "Comfortaa",
+    "logo": "uproduction_official_logo.png"
+  },
+  "_note": "Manual posting to @alon3153 (Personal IG, not in auto-publish pipeline). Alon-as-founder voice."
+}

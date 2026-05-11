@@ -1,0 +1,25 @@
+{
+  "day": 37,
+  "category": "behind_scenes",
+  "language": "he",
+  "date": "2026-05-28",
+  "weekday": "Thursday",
+  "theme": "השיחה ב-5 בבוקר שהצילה אירוע של 120 איש",
+  "instagram": {
+    "profile": "@alon3153",
+    "text": "5 בבוקר. 120 איש. ברצלונה. כפל הזמנה במלון. 🔴\n\nככה זה נפתר לפני שמישהו התעורר:\n\n5:00 — שיחה למנהל המלון. לא ענה. שיחה שוב.\n5:20 — קו חירום של חברת הניהול.\n5:30 — מו\"מ על הפרת חוזה. כל החדרים נשארים אצלנו.\n5:45 — מלונות גיבוי שכבר זוהו לפני 3 שבועות.\n6:15 — בלובי. מחייכים. אף אחד לא ידע.\n\nניסיון = לדעת למי לצלצל ב-5 בבוקר.\n\n📩 הודעה.\n\n#מאחוריהקלעים #ניסיון #הפקתאירועים #UproductionEvents #משבר",
+    "dimensions": "1:1",
+    "cta": "הודעה פרטית"
+  },
+  "image_prompt": "Corporate event scene: The 5AM call that saved a 120-person event, luxury, professional, gold accents",
+  "image_style": "photorealistic, editorial, luxury event magazine",
+  "brand": {
+    "colors": [
+      "#1C1C1C",
+      "#FBCE0A"
+    ],
+    "font": "Comfortaa",
+    "logo": "uproduction_official_logo.png"
+  },
+  "_note": "Manual posting to @alon3153 (Personal IG, not in auto-publish pipeline). Alon-as-founder voice."
+}

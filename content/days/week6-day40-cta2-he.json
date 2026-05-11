@@ -1,0 +1,25 @@
+{
+  "day": 40,
+  "category": "cta_discovery",
+  "language": "he",
+  "date": "2026-05-31",
+  "weekday": "Sunday",
+  "theme": "שיחה אחת. זה כל מה שצריך.",
+  "instagram": {
+    "profile": "@alon3153",
+    "text": "שיחה אחת. זה כל מה שצריך. ☎️\n\n16 שנה. 200+ אירועים. 20+ מדינות.\n\nהפילוסופיה של השיחה הראשונה:\n\"אני עדיין לא יודע אם אנחנו יכולים לעזור לך. תן לי קודם להבין את המטרות שלך.\"\n\nבלי pitch.\nבלי חבילה.\nבלי לחץ.\n\n78% חזרה ללקוחות. ככה נשארים בעסק 16 שנה.\n\nחושב על אירוע צוות ב-2026?\n📩 הודעה או alon@upe.co.il\n\n#אירועיחברה #טיוליתמריץ #UproductionEvents #שיחתהיכרות #משאביאנוש",
+    "dimensions": "1:1",
+    "cta": "הודעה פרטית"
+  },
+  "image_prompt": "Corporate event scene: One conversation. That's all it takes., luxury, professional, gold accents",
+  "image_style": "photorealistic, editorial, luxury event magazine",
+  "brand": {
+    "colors": [
+      "#1C1C1C",
+      "#FBCE0A"
+    ],
+    "font": "Comfortaa",
+    "logo": "uproduction_official_logo.png"
+  },
+  "_note": "Manual posting to @alon3153 (Personal IG, not in auto-publish pipeline). Alon-as-founder voice."
+}

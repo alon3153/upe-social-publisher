@@ -1,0 +1,25 @@
+{
+  "day": 39,
+  "category": "industry_insight",
+  "language": "he",
+  "date": "2026-05-30",
+  "weekday": "Saturday",
+  "theme": "למה 2026 היא שנת המעבר האירופי של אירועי תמריץ",
+  "instagram": {
+    "profile": "@alon3153",
+    "text": "2026: שנת המעבר האירופי של חברות ישראליות. 🇪🇺\n\nלמה כולם פתאום עוברים לאירופה השנה:\n\n✅ יורו/שקל: 20-30% תמורה יותר לחוויה\n✅ יעדים חדשים: פורטו, ספליט, סביליה, ולטה\n✅ מחירי ונייוז הטובים ביותר זה שנים (פוסט-קוביד)\n✅ תוכן עובדים מאירופה = זהב לגיוס\n\nההפקה שלנו ב-2026: 85% באירופה (מ-65% ב-2024)\n\nחלון Q3/Q4 עוד פתוח. אבל לא לעוד הרבה זמן.\n\n📩 הודעה.\n\n#אירופה #טיוליתמריץ #אירועיחברה2026 #UproductionEvents #משאביאנוש",
+    "dimensions": "1:1",
+    "cta": "הודעה פרטית"
+  },
+  "image_prompt": "Corporate event scene: Why 2026 is the year of the European incentive pivot, luxury, professional, gold accents",
+  "image_style": "photorealistic, editorial, luxury event magazine",
+  "brand": {
+    "colors": [
+      "#1C1C1C",
+      "#FBCE0A"
+    ],
+    "font": "Comfortaa",
+    "logo": "uproduction_official_logo.png"
+  },
+  "_note": "Manual posting to @alon3153 (Personal IG, not in auto-publish pipeline). Alon-as-founder voice."
+}

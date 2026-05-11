@@ -1,0 +1,25 @@
+{
+  "day": 29,
+  "category": "behind_scenes",
+  "language": "he",
+  "date": "2026-05-20",
+  "weekday": "Wednesday",
+  "theme": "72 שעות לפני 200 איש שנוחתים בעיר זרה",
+  "instagram": {
+    "profile": "@alon3153",
+    "text": "72 שעות לפני 200 איש שנוחתים. מה הצוות שלנו עושה: 👀\n\nT-72: סיור מלא בוונייו. צ'ק-ליסט של 140 פריטים\nT-48: חלוקת חדרים + בדיקת רגישויות מזון\nT-36: צוות שדה תעופה מבריף. רכבי גיבוי מאושרים\nT-24: חזרה טכנית מלאה. תקלות הצלחנו לפתור 7\nT-12: ארוחת צוות. כל תפקיד עבר ביקורת\nT-0: האורחים נוחתים. מוכנים.\n\nזה איך נראה \"כלום לא משתבש\". זו לא יד המקרה. זה משמעת.\n\n📩 הודעה.\n\n#מאחוריהקלעים #הפקתאירועים #אירועיחברה #UproductionEvents #משמעת",
+    "dimensions": "1:1",
+    "cta": "הודעה פרטית"
+  },
+  "image_prompt": "Corporate event scene: What happens 72 hours before 200 people land in a foreign city, luxury, professional, gold accents",
+  "image_style": "photorealistic, editorial, luxury event magazine",
+  "brand": {
+    "colors": [
+      "#1C1C1C",
+      "#FBCE0A"
+    ],
+    "font": "Comfortaa",
+    "logo": "uproduction_official_logo.png"
+  },
+  "_note": "Manual posting to @alon3153 (Personal IG, not in auto-publish pipeline). Alon-as-founder voice."
+}

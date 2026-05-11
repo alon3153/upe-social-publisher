@@ -1,0 +1,25 @@
+{
+  "day": 31,
+  "category": "tips_howto",
+  "language": "he",
+  "date": "2026-05-22",
+  "weekday": "Friday",
+  "theme": "איך בוחרים את היעד הנכון לאירוע חברה",
+  "instagram": {
+    "profile": "@alon3153",
+    "text": "איך בוחרים יעד נכון. ה-framework שלנו אחרי 200+ אירועים: 🗺️\n\n1️⃣ הגדרת המטרה (תגמול לעומת בניית צוות)\n   תגמול = רוצים יוקרה (פריז, ברצלונה)\n   בניית צוות = פעילויות (קרואטיה, סלובניה)\n\n2️⃣ תקציב אמיתי לאדם\n   לא רק טיסה+מלון. כולל פעילויות, מזון, ביטוח, מיתוג\n\n3️⃣ התאמת יעד לתרבות המותג\n   חברה שמרנית → ערים היסטוריות\n   חברה צעירה → טבע ואדרנלין\n\n4️⃣ לוגיסטיקה (זמן טיסה, ויזות, עונה)\n\n5️⃣ ולידציה מקבוצות עבר\n   מבקשים מהצוות לדרג קבוצות קודמות\n\nהיעד הנכון לא הכי יפה. הוא הכי מתאים לקבוצה.\n\n📩 הודעה.\n\n#יעדיאירועים #טיוליתמריץ #אירועיחברה #UproductionEvents",
+    "dimensions": "1:1",
+    "cta": "הודעה פרטית"
+  },
+  "image_prompt": "Corporate event scene: How to choose the right destination for your corporate event, luxury, professional, gold accents",
+  "image_style": "photorealistic, editorial, luxury event magazine",
+  "brand": {
+    "colors": [
+      "#1C1C1C",
+      "#FBCE0A"
+    ],
+    "font": "Comfortaa",
+    "logo": "uproduction_official_logo.png"
+  },
+  "_note": "Manual posting to @alon3153 (Personal IG, not in auto-publish pipeline). Alon-as-founder voice."
+}
