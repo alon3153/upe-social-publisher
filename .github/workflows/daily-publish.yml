@@ -1,17 +1,17 @@
-name: Daily Publish (Facebook)
+name: Daily Publish (Facebook + Instagram)
 
 on:
   schedule:
-    # 09:00 IST = 06:00 UTC (handles daylight saving via UTC)
+    # 09:00 IST = 06:00 UTC (handles DST automatically via UTC anchor)
     - cron: "0 6 * * *"
   workflow_dispatch:
     inputs:
       day:
-        description: "Specific day number to publish (leave empty for today)"
+        description: "Specific day number to publish (empty = next pending)"
         required: false
         type: string
       catchup:
-        description: "Publish all missing past days"
+        description: "Publish all missing past days at once"
         required: false
         type: boolean
         default: false
@@ -28,6 +28,8 @@ jobs:
   publish:
     runs-on: ubuntu-latest
     timeout-minutes: 10
+    # Only the repo owner may trigger manually (cron always allowed)
+    if: github.event_name == 'schedule' || github.actor == 'alon3153'
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -45,13 +47,13 @@ jobs:
 
       - name: Publish
         env:
-          FB_UPRODUCTIONEVENTS_PAGE_ID: ${{ secrets.FB_UPRODUCTIONEVENTS_PAGE_ID }}
-          FB_UPRODUCTIONEVENTS_PAGE_TOKEN: ${{ secrets.FB_UPRODUCTIONEVENTS_PAGE_TOKEN }}
-          FB_UPRODUCTION_SPAIN_PAGE_ID: ${{ secrets.FB_UPRODUCTION_SPAIN_PAGE_ID }}
-          FB_UPRODUCTION_SPAIN_PAGE_TOKEN: ${{ secrets.FB_UPRODUCTION_SPAIN_PAGE_TOKEN }}
-          IG_UPRODUCTIONEVENTS_USER_ID: ${{ secrets.IG_UPRODUCTIONEVENTS_USER_ID }}
+          FB_UPRODUCTIONEVENTS_PAGE_ID:     ${{ secrets.FB_UPRODUCTIONEVENTS_PAGE_ID }}
+          FB_UPRODUCTIONEVENTS_PAGE_TOKEN:  ${{ secrets.FB_UPRODUCTIONEVENTS_PAGE_TOKEN }}
+          FB_UPRODUCTION_SPAIN_PAGE_ID:     ${{ secrets.FB_UPRODUCTION_SPAIN_PAGE_ID }}
+          FB_UPRODUCTION_SPAIN_PAGE_TOKEN:  ${{ secrets.FB_UPRODUCTION_SPAIN_PAGE_TOKEN }}
+          IG_UPRODUCTIONEVENTS_USER_ID:      ${{ secrets.IG_UPRODUCTIONEVENTS_USER_ID }}
           IG_UPRODUCTIONEVENTS_ACCESS_TOKEN: ${{ secrets.IG_UPRODUCTIONEVENTS_ACCESS_TOKEN }}
-          IG_UPRODUCTION_SPAIN_USER_ID: ${{ secrets.IG_UPRODUCTION_SPAIN_USER_ID }}
+          IG_UPRODUCTION_SPAIN_USER_ID:      ${{ secrets.IG_UPRODUCTION_SPAIN_USER_ID }}
           IG_UPRODUCTION_SPAIN_ACCESS_TOKEN: ${{ secrets.IG_UPRODUCTION_SPAIN_ACCESS_TOKEN }}
           IMAGE_BASE_URL: https://raw.githubusercontent.com/${{ github.repository }}/${{ github.ref_name }}
         run: |
@@ -84,3 +86,25 @@ jobs:
           name: daily-report-${{ github.run_id }}
           path: reports/
           retention-days: 30
+
+      - name: Notify on failure
+        if: failure()
+        env:
+          MS_GRAPH_TENANT_ID:     ${{ secrets.MS_GRAPH_TENANT_ID }}
+          MS_GRAPH_CLIENT_ID:     ${{ secrets.MS_GRAPH_CLIENT_ID }}
+          MS_GRAPH_CLIENT_SECRET: ${{ secrets.MS_GRAPH_CLIENT_SECRET }}
+          MS_GRAPH_FROM:          ${{ secrets.MS_GRAPH_FROM }}
+          RESEND_API_KEY:         ${{ secrets.RESEND_API_KEY }}
+          NOTIFY_FROM:            ${{ secrets.NOTIFY_FROM }}
+        run: |
+          python3 scripts/notify.py \
+            --subject "❌ UPE Social Publisher FAILED — $(date -u +%Y-%m-%d)" \
+            --body "GitHub Actions run failed.
+
+Repo: ${{ github.repository }}
+Run: https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}
+Workflow: ${{ github.workflow }}
+Trigger: ${{ github.event_name }}
+Branch: ${{ github.ref_name }}
+
+Check the run log for details. Posts may have partially gone out — verify before next scheduled run." || echo "Notification failed (no backend configured) — falling back to silent failure"

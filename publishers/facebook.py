@@ -4,12 +4,34 @@ import os
 import requests
 from typing import Optional, Tuple
 
+from publishers.safe import scrub, with_retry
+
 GRAPH_API = "https://graph.facebook.com/v22.0"
 TIMEOUT = 60
 
 
 class FacebookPublishError(Exception):
     pass
+
+
+@with_retry(max_attempts=3, base_delay=2.0)
+def _post_photo(url: str, page_token: str, caption: str, image_path: str) -> requests.Response:
+    with open(image_path, "rb") as img:
+        return requests.post(
+            url,
+            data={"caption": caption, "access_token": page_token},
+            files={"source": img},
+            timeout=TIMEOUT,
+        )
+
+
+@with_retry(max_attempts=3, base_delay=2.0)
+def _post_feed(url: str, page_token: str, message: str) -> requests.Response:
+    return requests.post(
+        url,
+        data={"message": message, "access_token": page_token},
+        timeout=TIMEOUT,
+    )
 
 
 def post_to_page(
@@ -23,20 +45,10 @@ def post_to_page(
 
     if image_path and os.path.exists(image_path):
         url = f"{GRAPH_API}/{page_id}/photos"
-        with open(image_path, "rb") as img:
-            r = requests.post(
-                url,
-                data={"caption": text, "access_token": page_token},
-                files={"source": img},
-                timeout=TIMEOUT,
-            )
+        r = _post_photo(url, page_token, text, image_path)
     else:
         url = f"{GRAPH_API}/{page_id}/feed"
-        r = requests.post(
-            url,
-            data={"message": text, "access_token": page_token},
-            timeout=TIMEOUT,
-        )
+        r = _post_feed(url, page_token, text)
 
     try:
         body = r.json()
@@ -46,25 +58,41 @@ def post_to_page(
     if r.status_code != 200:
         err = body.get("error", {}) if isinstance(body, dict) else {}
         msg = err.get("message", body) if err else body
-        raise FacebookPublishError(f"HTTP {r.status_code}: {msg}")
+        raise FacebookPublishError(f"HTTP {r.status_code}: {scrub(msg)}")
 
     post_id = body.get("post_id") or body.get("id")
     if not post_id:
-        raise FacebookPublishError(f"No post_id in response: {body}")
+        raise FacebookPublishError(f"No post_id in response: {scrub(body)}")
     return True, post_id
 
 
 def verify_token(page_id: str, page_token: str) -> Tuple[bool, str]:
-    url = f"{GRAPH_API}/{page_id}"
+    """Quick check that token is valid. Returns (ok, page_name_or_error)."""
     r = requests.get(
-        url,
+        f"{GRAPH_API}/{page_id}",
         params={"fields": "name,id", "access_token": page_token},
         timeout=10,
     )
     if r.status_code != 200:
-        return False, f"HTTP {r.status_code}: {r.text[:200]}"
+        return False, f"HTTP {r.status_code}: {scrub(r.text[:200])}"
     data = r.json()
     return True, data.get("name", page_id)
+
+
+def get_token_expiry(page_token: str) -> Optional[int]:
+    """Return UNIX timestamp when this token expires, or None if non-expiring/unknown."""
+    r = requests.get(
+        f"{GRAPH_API}/debug_token",
+        params={"input_token": page_token, "access_token": page_token},
+        timeout=10,
+    )
+    if r.status_code != 200:
+        return None
+    data = r.json().get("data", {})
+    expires_at = data.get("expires_at")
+    if expires_at == 0:
+        return None  # never expires
+    return expires_at
 
 
 def publish_post(account_key: str, text: str, image_path: Optional[str] = None) -> dict:
@@ -87,6 +115,6 @@ def publish_post(account_key: str, text: str, image_path: Optional[str] = None) 
             "post_id": post_id,
         }
     except FacebookPublishError as e:
-        return {"success": False, "account": account_key, "error": str(e)}
+        return {"success": False, "account": account_key, "error": scrub(e)}
     except Exception as e:
-        return {"success": False, "account": account_key, "error": f"Unexpected: {e}"}
+        return {"success": False, "account": account_key, "error": f"Unexpected: {scrub(e)}"}

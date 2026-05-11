@@ -207,6 +207,34 @@ def main() -> int:
         show_status()
         return 0
 
+    # Verify all tokens at start unless dry-run (fail-fast on invalid tokens)
+    if not args.dry_run and os.environ.get("SKIP_TOKEN_VERIFY") != "1":
+        log("Verifying all account tokens before publishing…")
+        from publishers.facebook import verify_token as fb_verify
+        from publishers.instagram import verify_account as ig_verify
+        invalid = []
+        for acc in ACCOUNTS:
+            if args.platform and acc["platform"] != args.platform:
+                continue
+            if acc["platform"] == "facebook":
+                pid = os.environ.get(f"FB_{acc['key'].upper()}_PAGE_ID")
+                tok = os.environ.get(f"FB_{acc['key'].upper()}_PAGE_TOKEN")
+                ok, info = fb_verify(pid, tok) if (pid and tok) else (False, "missing env")
+            else:
+                env_suffix = acc["key"].upper().removeprefix("IG_")
+                pid = os.environ.get(f"IG_{env_suffix}_USER_ID")
+                tok = os.environ.get(f"IG_{env_suffix}_ACCESS_TOKEN")
+                ok, info = ig_verify(pid, tok) if (pid and tok) else (False, "missing env")
+            mark = "✅" if ok else "❌"
+            log(f"  {mark} {acc['platform']}::{acc['key']} → {info}")
+            if not ok:
+                invalid.append(f"{acc['platform']}::{acc['key']}: {info}")
+        if invalid:
+            log(f"ABORT: {len(invalid)} token(s) invalid — refusing to publish")
+            for line in invalid:
+                log(f"  - {line}")
+            return 2
+
     if args.catchup:
         days = find_catchup_days()
         log(f"Catchup: {len(days)} days — {days}")
