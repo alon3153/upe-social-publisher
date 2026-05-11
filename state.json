@@ -1,0 +1,622 @@
+{
+  "version": 1,
+  "last_publish": "2026-05-11T13:50:20Z",
+  "publications": {
+    "1": {
+      "uproductionevents": {
+        "success": true,
+        "post_id": "legacy-day1-uproductionevents",
+        "error": null,
+        "timestamp": "2026-05-03T06:00:00Z"
+      },
+      "uproduction_spain": {
+        "success": true,
+        "post_id": "legacy-day1-uproduction_spain",
+        "error": null,
+        "timestamp": "2026-05-03T06:00:00Z"
+      },
+      "ig_uproductionevents": {
+        "success": true,
+        "post_id": "legacy-day1-ig_uproductionevents",
+        "error": null,
+        "timestamp": "2026-05-03T06:00:00Z"
+      },
+      "ig_uproduction_spain": {
+        "success": true,
+        "post_id": "legacy-day1-ig_uproduction_spain",
+        "error": null,
+        "timestamp": "2026-05-03T06:00:00Z"
+      },
+      "ig_alon3153": {
+        "success": true,
+        "post_id": "legacy-day1-ig_alon3153",
+        "error": null,
+        "timestamp": "2026-05-03T06:00:00Z"
+      }
+    },
+    "2": {
+      "uproductionevents": {
+        "success": true,
+        "post_id": "legacy-day2-uproductionevents",
+        "error": null,
+        "timestamp": "2026-05-03T06:00:00Z"
+      },
+      "uproduction_spain": {
+        "success": true,
+        "post_id": "legacy-day2-uproduction_spain",
+        "error": null,
+        "timestamp": "2026-05-03T06:00:00Z"
+      },
+      "ig_uproductionevents": {
+        "success": true,
+        "post_id": "legacy-day2-ig_uproductionevents",
+        "error": null,
+        "timestamp": "2026-05-03T06:00:00Z"
+      },
+      "ig_uproduction_spain": {
+        "success": true,
+        "post_id": "legacy-day2-ig_uproduction_spain",
+        "error": null,
+        "timestamp": "2026-05-03T06:00:00Z"
+      },
+      "ig_alon3153": {
+        "success": true,
+        "post_id": "legacy-day2-ig_alon3153",
+        "error": null,
+        "timestamp": "2026-05-03T06:00:00Z"
+      }
+    },
+    "3": {
+      "uproductionevents": {
+        "success": true,
+        "post_id": "legacy-day3-uproductionevents",
+        "error": null,
+        "timestamp": "2026-05-03T06:00:00Z"
+      },
+      "uproduction_spain": {
+        "success": true,
+        "post_id": "legacy-day3-uproduction_spain",
+        "error": null,
+        "timestamp": "2026-05-03T06:00:00Z"
+      },
+      "ig_uproductionevents": {
+        "success": true,
+        "post_id": "legacy-day3-ig_uproductionevents",
+        "error": null,
+        "timestamp": "2026-05-03T06:00:00Z"
+      },
+      "ig_uproduction_spain": {
+        "success": true,
+        "post_id": "legacy-day3-ig_uproduction_spain",
+        "error": null,
+        "timestamp": "2026-05-03T06:00:00Z"
+      },
+      "ig_alon3153": {
+        "success": true,
+        "post_id": "legacy-day3-ig_alon3153",
+        "error": null,
+        "timestamp": "2026-05-03T06:00:00Z"
+      }
+    },
+    "4": {
+      "uproductionevents": {
+        "success": true,
+        "post_id": "legacy-day4-uproductionevents",
+        "error": null,
+        "timestamp": "2026-05-03T06:00:00Z"
+      },
+      "uproduction_spain": {
+        "success": true,
+        "post_id": "legacy-day4-uproduction_spain",
+        "error": null,
+        "timestamp": "2026-05-03T06:00:00Z"
+      },
+      "ig_uproductionevents": {
+        "success": true,
+        "post_id": "legacy-day4-ig_uproductionevents",
+        "error": null,
+        "timestamp": "2026-05-03T06:00:00Z"
+      },
+      "ig_uproduction_spain": {
+        "success": true,
+        "post_id": "legacy-day4-ig_uproduction_spain",
+        "error": null,
+        "timestamp": "2026-05-03T06:00:00Z"
+      },
+      "ig_alon3153": {
+        "success": true,
+        "post_id": "legacy-day4-ig_alon3153",
+        "error": null,
+        "timestamp": "2026-05-03T06:00:00Z"
+      }
+    },
+    "5": {
+      "uproductionevents": {
+        "success": true,
+        "post_id": "legacy-day5-uproductionevents",
+        "error": null,
+        "timestamp": "2026-05-03T06:00:00Z"
+      },
+      "uproduction_spain": {
+        "success": true,
+        "post_id": "legacy-day5-uproduction_spain",
+        "error": null,
+        "timestamp": "2026-05-03T06:00:00Z"
+      },
+      "ig_uproductionevents": {
+        "success": true,
+        "post_id": "legacy-day5-ig_uproductionevents",
+        "error": null,
+        "timestamp": "2026-05-03T06:00:00Z"
+      },
+      "ig_uproduction_spain": {
+        "success": true,
+        "post_id": "legacy-day5-ig_uproduction_spain",
+        "error": null,
+        "timestamp": "2026-05-03T06:00:00Z"
+      },
+      "ig_alon3153": {
+        "success": true,
+        "post_id": "legacy-day5-ig_alon3153",
+        "error": null,
+        "timestamp": "2026-05-03T06:00:00Z"
+      }
+    },
+    "6": {
+      "uproductionevents": {
+        "success": true,
+        "post_id": "legacy-day6-uproductionevents",
+        "error": null,
+        "timestamp": "2026-05-03T06:00:00Z"
+      },
+      "uproduction_spain": {
+        "success": true,
+        "post_id": "legacy-day6-uproduction_spain",
+        "error": null,
+        "timestamp": "2026-05-03T06:00:00Z"
+      },
+      "ig_uproductionevents": {
+        "success": true,
+        "post_id": "legacy-day6-ig_uproductionevents",
+        "error": null,
+        "timestamp": "2026-05-03T06:00:00Z"
+      },
+      "ig_uproduction_spain": {
+        "success": true,
+        "post_id": "legacy-day6-ig_uproduction_spain",
+        "error": null,
+        "timestamp": "2026-05-03T06:00:00Z"
+      },
+      "ig_alon3153": {
+        "success": true,
+        "post_id": "legacy-day6-ig_alon3153",
+        "error": null,
+        "timestamp": "2026-05-03T06:00:00Z"
+      }
+    },
+    "7": {
+      "uproductionevents": {
+        "success": true,
+        "post_id": "legacy-day7-uproductionevents",
+        "error": null,
+        "timestamp": "2026-05-03T06:00:00Z"
+      },
+      "uproduction_spain": {
+        "success": true,
+        "post_id": "legacy-day7-uproduction_spain",
+        "error": null,
+        "timestamp": "2026-05-03T06:00:00Z"
+      },
+      "ig_uproductionevents": {
+        "success": true,
+        "post_id": "legacy-day7-ig_uproductionevents",
+        "error": null,
+        "timestamp": "2026-05-03T06:00:00Z"
+      },
+      "ig_uproduction_spain": {
+        "success": true,
+        "post_id": "legacy-day7-ig_uproduction_spain",
+        "error": null,
+        "timestamp": "2026-05-03T06:00:00Z"
+      },
+      "ig_alon3153": {
+        "success": true,
+        "post_id": "legacy-day7-ig_alon3153",
+        "error": null,
+        "timestamp": "2026-05-03T06:00:00Z"
+      }
+    },
+    "8": {
+      "uproductionevents": {
+        "success": true,
+        "post_id": "legacy-day8-uproductionevents",
+        "error": null,
+        "timestamp": "2026-05-03T06:00:00Z"
+      },
+      "uproduction_spain": {
+        "success": true,
+        "post_id": "legacy-day8-uproduction_spain",
+        "error": null,
+        "timestamp": "2026-05-03T06:00:00Z"
+      },
+      "ig_uproductionevents": {
+        "success": true,
+        "post_id": "legacy-day8-ig_uproductionevents",
+        "error": null,
+        "timestamp": "2026-05-03T06:00:00Z"
+      },
+      "ig_uproduction_spain": {
+        "success": true,
+        "post_id": "legacy-day8-ig_uproduction_spain",
+        "error": null,
+        "timestamp": "2026-05-03T06:00:00Z"
+      },
+      "ig_alon3153": {
+        "success": true,
+        "post_id": "legacy-day8-ig_alon3153",
+        "error": null,
+        "timestamp": "2026-05-03T06:00:00Z"
+      }
+    },
+    "9": {
+      "uproductionevents": {
+        "success": true,
+        "post_id": "legacy-day9-uproductionevents",
+        "error": null,
+        "timestamp": "2026-05-03T06:00:00Z"
+      },
+      "uproduction_spain": {
+        "success": true,
+        "post_id": "legacy-day9-uproduction_spain",
+        "error": null,
+        "timestamp": "2026-05-03T06:00:00Z"
+      },
+      "ig_uproductionevents": {
+        "success": true,
+        "post_id": "legacy-day9-ig_uproductionevents",
+        "error": null,
+        "timestamp": "2026-05-03T06:00:00Z"
+      },
+      "ig_uproduction_spain": {
+        "success": true,
+        "post_id": "legacy-day9-ig_uproduction_spain",
+        "error": null,
+        "timestamp": "2026-05-03T06:00:00Z"
+      },
+      "ig_alon3153": {
+        "success": true,
+        "post_id": "legacy-day9-ig_alon3153",
+        "error": null,
+        "timestamp": "2026-05-03T06:00:00Z"
+      }
+    },
+    "10": {
+      "uproductionevents": {
+        "success": true,
+        "post_id": "legacy-day10-uproductionevents",
+        "error": null,
+        "timestamp": "2026-05-03T06:00:00Z"
+      },
+      "uproduction_spain": {
+        "success": true,
+        "post_id": "legacy-day10-uproduction_spain",
+        "error": null,
+        "timestamp": "2026-05-03T06:00:00Z"
+      },
+      "ig_uproductionevents": {
+        "success": true,
+        "post_id": "legacy-day10-ig_uproductionevents",
+        "error": null,
+        "timestamp": "2026-05-03T06:00:00Z"
+      },
+      "ig_uproduction_spain": {
+        "success": true,
+        "post_id": "legacy-day10-ig_uproduction_spain",
+        "error": null,
+        "timestamp": "2026-05-03T06:00:00Z"
+      },
+      "ig_alon3153": {
+        "success": true,
+        "post_id": "legacy-day10-ig_alon3153",
+        "error": null,
+        "timestamp": "2026-05-03T06:00:00Z"
+      }
+    },
+    "11": {
+      "uproductionevents": {
+        "success": true,
+        "post_id": "legacy-day11-uproductionevents",
+        "error": null,
+        "timestamp": "2026-05-03T06:00:00Z"
+      },
+      "uproduction_spain": {
+        "success": true,
+        "post_id": "legacy-day11-uproduction_spain",
+        "error": null,
+        "timestamp": "2026-05-03T06:00:00Z"
+      },
+      "ig_uproductionevents": {
+        "success": true,
+        "post_id": "legacy-day11-ig_uproductionevents",
+        "error": null,
+        "timestamp": "2026-05-03T06:00:00Z"
+      },
+      "ig_uproduction_spain": {
+        "success": true,
+        "post_id": "legacy-day11-ig_uproduction_spain",
+        "error": null,
+        "timestamp": "2026-05-03T06:00:00Z"
+      },
+      "ig_alon3153": {
+        "success": true,
+        "post_id": "legacy-day11-ig_alon3153",
+        "error": null,
+        "timestamp": "2026-05-03T06:00:00Z"
+      }
+    },
+    "12": {
+      "uproductionevents": {
+        "success": true,
+        "post_id": "legacy-day12-uproductionevents",
+        "error": null,
+        "timestamp": "2026-05-03T06:00:00Z"
+      },
+      "uproduction_spain": {
+        "success": true,
+        "post_id": "legacy-day12-uproduction_spain",
+        "error": null,
+        "timestamp": "2026-05-03T06:00:00Z"
+      },
+      "ig_uproductionevents": {
+        "success": true,
+        "post_id": "legacy-day12-ig_uproductionevents",
+        "error": null,
+        "timestamp": "2026-05-03T06:00:00Z"
+      },
+      "ig_uproduction_spain": {
+        "success": true,
+        "post_id": "legacy-day12-ig_uproduction_spain",
+        "error": null,
+        "timestamp": "2026-05-03T06:00:00Z"
+      },
+      "ig_alon3153": {
+        "success": true,
+        "post_id": "legacy-day12-ig_alon3153",
+        "error": null,
+        "timestamp": "2026-05-03T06:00:00Z"
+      }
+    },
+    "13": {
+      "uproductionevents": {
+        "success": true,
+        "post_id": "legacy-day13-uproductionevents",
+        "error": null,
+        "timestamp": "2026-05-03T06:00:00Z"
+      },
+      "uproduction_spain": {
+        "success": true,
+        "post_id": "legacy-day13-uproduction_spain",
+        "error": null,
+        "timestamp": "2026-05-03T06:00:00Z"
+      },
+      "ig_uproductionevents": {
+        "success": true,
+        "post_id": "legacy-day13-ig_uproductionevents",
+        "error": null,
+        "timestamp": "2026-05-03T06:00:00Z"
+      },
+      "ig_uproduction_spain": {
+        "success": true,
+        "post_id": "legacy-day13-ig_uproduction_spain",
+        "error": null,
+        "timestamp": "2026-05-03T06:00:00Z"
+      },
+      "ig_alon3153": {
+        "success": true,
+        "post_id": "legacy-day13-ig_alon3153",
+        "error": null,
+        "timestamp": "2026-05-03T06:00:00Z"
+      }
+    },
+    "14": {
+      "uproductionevents": {
+        "success": true,
+        "post_id": "legacy-day14-uproductionevents",
+        "error": null,
+        "timestamp": "2026-05-03T06:00:00Z"
+      },
+      "uproduction_spain": {
+        "success": true,
+        "post_id": "legacy-day14-uproduction_spain",
+        "error": null,
+        "timestamp": "2026-05-03T06:00:00Z"
+      },
+      "ig_uproductionevents": {
+        "success": true,
+        "post_id": "legacy-day14-ig_uproductionevents",
+        "error": null,
+        "timestamp": "2026-05-03T06:00:00Z"
+      },
+      "ig_uproduction_spain": {
+        "success": true,
+        "post_id": "legacy-day14-ig_uproduction_spain",
+        "error": null,
+        "timestamp": "2026-05-03T06:00:00Z"
+      },
+      "ig_alon3153": {
+        "success": true,
+        "post_id": "legacy-day14-ig_alon3153",
+        "error": null,
+        "timestamp": "2026-05-03T06:00:00Z"
+      }
+    },
+    "15": {
+      "uproductionevents": {
+        "success": true,
+        "post_id": "legacy-day15-uproductionevents",
+        "error": null,
+        "timestamp": "2026-05-03T06:00:00Z"
+      },
+      "uproduction_spain": {
+        "success": true,
+        "post_id": "legacy-day15-uproduction_spain",
+        "error": null,
+        "timestamp": "2026-05-03T06:00:00Z"
+      },
+      "ig_uproductionevents": {
+        "success": true,
+        "post_id": "legacy-day15-ig_uproductionevents",
+        "error": null,
+        "timestamp": "2026-05-03T06:00:00Z"
+      },
+      "ig_uproduction_spain": {
+        "success": true,
+        "post_id": "legacy-day15-ig_uproduction_spain",
+        "error": null,
+        "timestamp": "2026-05-03T06:00:00Z"
+      },
+      "ig_alon3153": {
+        "success": true,
+        "post_id": "legacy-day15-ig_alon3153",
+        "error": null,
+        "timestamp": "2026-05-03T06:00:00Z"
+      }
+    },
+    "16": {
+      "uproductionevents": {
+        "success": true,
+        "post_id": "legacy-day16-uproductionevents",
+        "error": null,
+        "timestamp": "2026-05-03T06:00:00Z"
+      },
+      "uproduction_spain": {
+        "success": true,
+        "post_id": "legacy-day16-uproduction_spain",
+        "error": null,
+        "timestamp": "2026-05-03T06:00:00Z"
+      },
+      "ig_uproductionevents": {
+        "success": true,
+        "post_id": "legacy-day16-ig_uproductionevents",
+        "error": null,
+        "timestamp": "2026-05-03T06:00:00Z"
+      },
+      "ig_uproduction_spain": {
+        "success": true,
+        "post_id": "legacy-day16-ig_uproduction_spain",
+        "error": null,
+        "timestamp": "2026-05-03T06:00:00Z"
+      },
+      "ig_alon3153": {
+        "success": true,
+        "post_id": "legacy-day16-ig_alon3153",
+        "error": null,
+        "timestamp": "2026-05-03T06:00:00Z"
+      }
+    },
+    "17": {
+      "uproductionevents": {
+        "success": true,
+        "post_id": "legacy-day17-uproductionevents",
+        "error": null,
+        "timestamp": "2026-05-03T06:00:00Z"
+      },
+      "uproduction_spain": {
+        "success": true,
+        "post_id": "legacy-day17-uproduction_spain",
+        "error": null,
+        "timestamp": "2026-05-03T06:00:00Z"
+      },
+      "ig_uproductionevents": {
+        "success": true,
+        "post_id": "legacy-day17-ig_uproductionevents",
+        "error": null,
+        "timestamp": "2026-05-03T06:00:00Z"
+      },
+      "ig_uproduction_spain": {
+        "success": true,
+        "post_id": "legacy-day17-ig_uproduction_spain",
+        "error": null,
+        "timestamp": "2026-05-03T06:00:00Z"
+      },
+      "ig_alon3153": {
+        "success": true,
+        "post_id": "legacy-day17-ig_alon3153",
+        "error": null,
+        "timestamp": "2026-05-03T06:00:00Z"
+      }
+    },
+    "18": {
+      "uproductionevents": {
+        "success": true,
+        "post_id": "legacy-day18-uproductionevents",
+        "error": null,
+        "timestamp": "2026-05-03T06:00:00Z"
+      },
+      "uproduction_spain": {
+        "success": true,
+        "post_id": "legacy-day18-uproduction_spain",
+        "error": null,
+        "timestamp": "2026-05-03T06:00:00Z"
+      },
+      "ig_uproductionevents": {
+        "success": true,
+        "post_id": "legacy-day18-ig_uproductionevents",
+        "error": null,
+        "timestamp": "2026-05-03T06:00:00Z"
+      },
+      "ig_uproduction_spain": {
+        "success": true,
+        "post_id": "legacy-day18-ig_uproduction_spain",
+        "error": null,
+        "timestamp": "2026-05-03T06:00:00Z"
+      },
+      "ig_alon3153": {
+        "success": true,
+        "post_id": "legacy-day18-ig_alon3153",
+        "error": null,
+        "timestamp": "2026-05-03T06:00:00Z"
+      }
+    },
+    "19": {
+      "uproductionevents": {
+        "success": true,
+        "post_id": "legacy-day19-uproductionevents",
+        "error": null,
+        "timestamp": "2026-05-03T06:00:00Z"
+      },
+      "uproduction_spain": {
+        "success": true,
+        "post_id": "legacy-day19-uproduction_spain",
+        "error": null,
+        "timestamp": "2026-05-03T06:00:00Z"
+      },
+      "ig_uproductionevents": {
+        "success": true,
+        "post_id": "legacy-day19-ig_uproductionevents",
+        "error": null,
+        "timestamp": "2026-05-03T06:00:00Z"
+      },
+      "ig_uproduction_spain": {
+        "success": true,
+        "post_id": "legacy-day19-ig_uproduction_spain",
+        "error": null,
+        "timestamp": "2026-05-03T06:00:00Z"
+      },
+      "ig_alon3153": {
+        "success": true,
+        "post_id": "legacy-day19-ig_alon3153",
+        "error": null,
+        "timestamp": "2026-05-03T06:00:00Z"
+      }
+    },
+    "20": {
+      "ig_uproduction_spain": {
+        "success": true,
+        "post_id": "local-day20-ig-es",
+        "error": null,
+        "timestamp": "2026-05-11T13:49:31Z"
+      }
+    }
+  }
+}

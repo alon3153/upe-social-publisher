@@ -1,0 +1,36 @@
+{
+  "day": 35,
+  "category": "employee_engagement",
+  "language": "es",
+  "date": "2026-05-05",
+  "weekday": "Tuesday",
+  "theme": "Why your best employees are quietly updating their LinkedIn",
+  "linkedin": {
+    "profile": "Uproduction Spain (Company Page)",
+    "text": "Tus mejores empleados están actualizando silenciosamente su LinkedIn. Qué hacer al respecto.\n\nNo los ruidosos. No los que se quejan en las reuniones. Los silenciosos. Los que llevan años entregando resultados.\n\nLa investigación es consistente: los mejores se van antes de quejarse. Actualizan perfiles, atienden llamadas, y un día entran a tu oficina con una carta.\n\nLo que retiene a largo plazo no es el salario ni los ascensos. Es sentirse visto. Públicamente. Frente a sus pares.\n\nLas empresas con programas de incentivos anuales tienen una rotación voluntaria media del 9% para su cohorte incentivada.\n\nLa media del sector para roles similares es del 22%.\n\n¿Tu organización tiene un programa de incentivos para 2026?\n\n📩 alon@upe.co.il | 🌐 upe-spain.com\n\n#RetencionEmpleados #TalentoTop #ViajesDeIncentivo #RecursosHumanos #EventosCorporativos #Liderazgo #UproductionSpain #CompromisoProfesional",
+    "dimensions": "1:1",
+    "cta": "DM o visita upe-spain.com para empezar a planificar"
+  },
+  "instagram": {
+    "profile": "@uproduction_spain",
+    "text": "Tus mejores empleados actualizan LinkedIn en silencio. Por qué 💡\n\nLos top performers no se quejan. Se van.\n\nLo que retiene a largo plazo:\n❌ No el salario (solo 2 años)\n❌ No los ascensos (ambición, no lealtad)\n✅ Sentirse visto. Públicamente.\n\nEmpresas con incentivos anuales: 9% rotación\nvs. media del sector: 22%\n\n¿Cuál es tu estrategia de retención? 👇\n\n#RetencionEmpleados #TalentoTop #ViajesDeIncentivo #UproductionSpain #RecursosHumanos",
+    "dimensions": "1:1",
+    "cta": "Link en bio"
+  },
+  "facebook": {
+    "profile": "Uproduction Spain (Page)",
+    "text": "Tus mejores empleados están actualizando silenciosamente su LinkedIn. Qué hacer al respecto.\n\nNo los ruidosos. No los que se quejan en las reuniones. Los silenciosos. Los que llevan años entregando resultados.\n\nLa investigación es consistente: los mejores se van antes de quejarse. Actualizan perfiles, atienden llamadas, y un día entran a tu oficina con una carta.\n\nLo que retiene a largo plazo no es el salario ni los ascensos. Es sentirse visto. Públicamente. Frente a sus pares.\n\nLas empresas con programas de incentivos anuales tienen una rotación voluntaria media del 9% para su cohorte incentivada.\n\nLa media del sector para roles similares es del 22%.\n\n¿Tu organización tiene un programa de incentivos para 2026?\n\n📩 alon@upe.co.il | 🌐 upe-spain.com\n\n#RetencionEmpleados #TalentoTop #ViajesDeI\n\n🌐 upe-spain.com",
+    "dimensions": "1.91:1",
+    "cta": "Envíanos un mensaje"
+  },
+  "image_prompt": "Corporate event scene: Why your best employees are quietly updating their LinkedIn, luxury, professional, gold accents",
+  "image_style": "photorealistic, editorial, luxury event magazine",
+  "brand": {
+    "colors": [
+      "#1C1C1C",
+      "#FBCE0A"
+    ],
+    "font": "Comfortaa",
+    "logo": "uproduction_official_logo.png"
+  }
+}

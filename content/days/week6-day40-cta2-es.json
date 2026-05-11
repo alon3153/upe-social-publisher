@@ -1,0 +1,36 @@
+{
+  "day": 40,
+  "category": "cta_discovery",
+  "language": "es",
+  "date": "2026-05-10",
+  "weekday": "Sunday",
+  "theme": "One conversation. That's all it takes.",
+  "linkedin": {
+    "profile": "Uproduction Spain (Company Page)",
+    "text": "Una conversación. Eso es todo lo que hace falta.\n\n16 años. 200+ eventos. 20+ países.\n\nEsto es lo que le digo a cada cliente potencial en nuestra primera llamada:\n\n\"Todavía no sé si podemos ayudarte. Déjame entender qué quieres lograr. Entonces lo sabremos juntos.\"\n\nNo es una táctica de ventas. Así hemos mantenido un 78% de tasa de clientes recurrentes durante más de una década.\n\nNo vendemos destinos. Preguntamos sobre tu equipo.\nNo vendemos programas. Preguntamos sobre tus objetivos.\nNo vendemos paquetes. Diseñamos experiencias.\n\nSin compromiso. Sin presentación. 30 minutos y una conversación honesta.\n\n📩 alon@upe.co.il | 🌐 upe-spain.com\n\n#EventosCorporativos #ViajesDeIncentivo #ProduccionDeEventos #UproductionSpain #MICE #RecursosHumanos #LlamaDeDescubrimiento #Hablemos",
+    "dimensions": "1:1",
+    "cta": "DM o visita upe-spain.com para empezar a planificar"
+  },
+  "instagram": {
+    "profile": "@uproduction_spain",
+    "text": "Una conversación. Eso es todo. ☎️\n\n16 años. 200+ eventos. 20+ países.\n\nFilosofía de primera llamada:\n'Todavía no sé si podemos ayudarte. Cuéntame tus objetivos primero.'\n\nSin pitch. Sin paquete. Sin presión.\n78% tasa de clientes recurrentes.\n\n¿Pensando en un evento de equipo para 2026?\nEscríbeme o 📩 alon@upe.co.il\n\n#EventosCorporativos #ViajesDeIncentivo #UproductionSpain #MICE #HableMos #DiscoveryCall",
+    "dimensions": "1:1",
+    "cta": "Link en bio"
+  },
+  "facebook": {
+    "profile": "Uproduction Spain (Page)",
+    "text": "Una conversación. Eso es todo lo que hace falta.\n\n16 años. 200+ eventos. 20+ países.\n\nEsto es lo que le digo a cada cliente potencial en nuestra primera llamada:\n\n\"Todavía no sé si podemos ayudarte. Déjame entender qué quieres lograr. Entonces lo sabremos juntos.\"\n\nNo es una táctica de ventas. Así hemos mantenido un 78% de tasa de clientes recurrentes durante más de una década.\n\nNo vendemos destinos. Preguntamos sobre tu equipo.\nNo vendemos programas. Preguntamos sobre tus objetivos.\nNo vendemos paquetes. Diseñamos experiencias.\n\nSin compromiso. Sin presentación. 30 minutos y una conversación honesta.\n\n📩 alon@upe.co.il | 🌐 upe-spain.com\n\n#EventosCorporativos #ViajesDeIncentivo #ProduccionDeEventos #UproductionSpain #MICE #RecursosHumanos #LlamaDeDescubrimiento #Hablemos\n\n🌐 upe-spain.com",
+    "dimensions": "1.91:1",
+    "cta": "Envíanos un mensaje"
+  },
+  "image_prompt": "Corporate event scene: One conversation. That's all it takes., luxury, professional, gold accents",
+  "image_style": "photorealistic, editorial, luxury event magazine",
+  "brand": {
+    "colors": [
+      "#1C1C1C",
+      "#FBCE0A"
+    ],
+    "font": "Comfortaa",
+    "logo": "uproduction_official_logo.png"
+  }
+}

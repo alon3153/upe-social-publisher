@@ -1,0 +1,81 @@
+name: Daily Publish (Facebook)
+
+on:
+  schedule:
+    # 09:00 IST = 06:00 UTC (handles daylight saving via UTC)
+    - cron: "0 6 * * *"
+  workflow_dispatch:
+    inputs:
+      day:
+        description: "Specific day number to publish (leave empty for today)"
+        required: false
+        type: string
+      catchup:
+        description: "Publish all missing past days"
+        required: false
+        type: boolean
+        default: false
+      dry_run:
+        description: "Dry-run only (preview, no actual posting)"
+        required: false
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Show status
+        run: python3 scripts/publish.py --status
+
+      - name: Publish
+        env:
+          FB_UPRODUCTIONEVENTS_PAGE_ID: ${{ secrets.FB_UPRODUCTIONEVENTS_PAGE_ID }}
+          FB_UPRODUCTIONEVENTS_PAGE_TOKEN: ${{ secrets.FB_UPRODUCTIONEVENTS_PAGE_TOKEN }}
+          FB_UPRODUCTION_SPAIN_PAGE_ID: ${{ secrets.FB_UPRODUCTION_SPAIN_PAGE_ID }}
+          FB_UPRODUCTION_SPAIN_PAGE_TOKEN: ${{ secrets.FB_UPRODUCTION_SPAIN_PAGE_TOKEN }}
+        run: |
+          ARGS=""
+          if [ "${{ inputs.dry_run }}" = "true" ]; then ARGS="$ARGS --dry-run"; fi
+          if [ "${{ inputs.catchup }}" = "true" ]; then
+            ARGS="$ARGS --catchup"
+          elif [ -n "${{ inputs.day }}" ]; then
+            ARGS="$ARGS --day ${{ inputs.day }}"
+          fi
+          python3 scripts/publish.py $ARGS
+
+      - name: Commit state and report
+        if: ${{ inputs.dry_run != 'true' }}
+        run: |
+          git config user.name "upe-publisher-bot"
+          git config user.email "bot@upe.co.il"
+          git add state.json reports/
+          if git diff --staged --quiet; then
+            echo "No state changes to commit"
+          else
+            git commit -m "publish: $(date -u +%Y-%m-%d) [skip ci]"
+            git push
+          fi
+
+      - name: Upload report artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: daily-report-${{ github.run_id }}
+          path: reports/
+          retention-days: 30

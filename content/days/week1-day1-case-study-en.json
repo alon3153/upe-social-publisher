@@ -1,0 +1,37 @@
+{
+  "day": 1,
+  "category": "case_study",
+  "language": "en",
+  "date": "2026-04-13",
+  "weekday": "Sunday",
+  "theme": "From ordinary meetings to extraordinary experiences",
+
+  "linkedin": {
+    "profile": "Uproduction Events (Company Page)",
+    "text": "Your top performers don't need another bonus.\nThey need to feel valued.\n\nLast quarter, we took 200 sales leaders from a leading Israeli company to Barcelona for a 3-day incentive trip.\n\nWhat we delivered:\n→ A rooftop dinner overlooking the city at golden hour\n→ A private cooking masterclass with a Michelin-starred chef\n→ A team challenge across the Gothic Quarter\n→ An awards ceremony they'll remember for years\n\nThe result?\n• 94% said it was \"the best company event ever\"\n• Voluntary turnover dropped 31% in the following quarter\n• 3 other divisions asked for the same experience\n\nGreat events don't cost money. They make money.\n\nPlanning something for your team? Let's talk.\n📩 alon@upe.co.il | 🌐 upe.co.il\n\n#CorporateEvents #IncentiveTravel #EmployeeRetention #Barcelona #TeamBuilding #EventProduction #HRLeadership #UproductionEvents",
+    "dimensions": "16:9",
+    "cta": "Comment 'PLAN' or DM us to start planning your next event"
+  },
+
+  "instagram": {
+    "profile": "@uproductionevents",
+    "text": "Your top performers don't need another bonus. They need THIS. 👆\n\n200 sales leaders. Barcelona. 3 unforgettable days.\n\nRooftop dinner at golden hour ✨\nMichelin-starred cooking masterclass 🍽️\nGothic Quarter team challenge 🏛️\nAwards ceremony they'll never forget 🏆\n\nThe result? 94% called it \"the best company event ever.\"\nVoluntary turnover dropped 31% the next quarter.\n\nGreat events don't cost money. They make money.\n\n📩 Link in bio to start planning yours.\n\n#CorporateEvents #IncentiveTravel #Barcelona #TeamBuilding #EventProduction #EmployeeRetention #HRLeadership #UproductionEvents #BusinessTravel #CorporateTravel #EventPlanner #MICE #CompanyRetreat #TeamRetreat #EuropeEvents",
+    "dimensions": "1:1",
+    "cta": "Link in bio"
+  },
+
+  "facebook": {
+    "profile": "Uproduction Events (Page)",
+    "text": "What happens when you invest in your people instead of just their paychecks?\n\nWe took 200 sales leaders to Barcelona for 3 days. Rooftop dinner, Michelin cooking class, team challenges, and an awards night they'll talk about forever.\n\nThe numbers speak for themselves:\n✅ 94% rated it \"best company event ever\"\n✅ 31% drop in voluntary turnover\n✅ 3 other divisions requested the same experience\n\nGreat events don't cost — they pay back.\n\nThinking about your next team event? Drop us a message or visit upe.co.il 💬\n\n#CorporateEvents #IncentiveTravel #Barcelona #TeamBuilding",
+    "dimensions": "1.91:1",
+    "cta": "Send us a message"
+  },
+
+  "image_prompt": "Elegant rooftop dinner in Barcelona at golden hour, long banquet table, gold accents, city skyline, corporate luxury atmosphere",
+  "image_style": "photorealistic, editorial, luxury event magazine",
+  "brand": {
+    "colors": ["#1C1C1C", "#FBCE0A"],
+    "font": "Comfortaa",
+    "logo": "uproduction_official_logo.png"
+  }
+}

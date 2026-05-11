@@ -1,0 +1,36 @@
+{
+  "day": 33,
+  "category": "industry_insight",
+  "language": "es",
+  "date": "2026-05-03",
+  "weekday": "Sunday",
+  "theme": "The future of corporate events — what AI can't replace",
+  "linkedin": {
+    "profile": "Uproduction Spain (Company Page)",
+    "text": "Todos hablan de IA en eventos. Esto es lo que no puede reemplazar.\n\nLlevo 16 años en la industria de eventos. Las herramientas de IA son impresionantes.\n\nPero lo que sé después de 200+ eventos:\n\nEl proveedor que conduce 4 horas a las 11pm porque el autobús se averió — la IA no lo contrató. Lo hice yo, hace 8 años.\n\nEl contacto local en Praga que sabe qué propietario de restaurante abrirá su sala privada para 50 personas con 2 horas de aviso — la IA no puede llamarle. Yo sí.\n\nLa IA hará nuestra industria más eficiente. Pero la razón por la que los clientes vuelven no es la eficiencia. Es la confianza en que cuando algo va mal — y algo siempre va mal — la persona correcta ya está al teléfono resolviéndolo.\n\nSigue siendo un negocio humano.\n\n#IndustriaEventos #IA #FuturoDelTrabajo #EventosCorporativos #UproductionSpain #MICE #TecnologiaEventos",
+    "dimensions": "1:1",
+    "cta": "DM o visita upe-spain.com para empezar a planificar"
+  },
+  "instagram": {
+    "profile": "@uproduction_spain",
+    "text": "La IA en eventos es impresionante. Lo que aún no puede hacer 🤖\n\n→ Conducir 4 horas a las 11pm cuando el bus se avería\n→ Llamar al contacto en Praga para abrir sala privada en 2 horas\n→ Crear el momento en que un CEO realiza que el evento es el highlight del año\n\nLa IA nos hará más eficientes.\nLa confianza sigue siendo humana.\n\n¿Qué debe quedarse humano en eventos? 👇\n\n#IndustriaEventos #IA #EventosCorporativos #UproductionSpain #MICE",
+    "dimensions": "1:1",
+    "cta": "Link en bio"
+  },
+  "facebook": {
+    "profile": "Uproduction Spain (Page)",
+    "text": "Todos hablan de IA en eventos. Esto es lo que no puede reemplazar.\n\nLlevo 16 años en la industria de eventos. Las herramientas de IA son impresionantes.\n\nPero lo que sé después de 200+ eventos:\n\nEl proveedor que conduce 4 horas a las 11pm porque el autobús se averió — la IA no lo contrató. Lo hice yo, hace 8 años.\n\nEl contacto local en Praga que sabe qué propietario de restaurante abrirá su sala privada para 50 personas con 2 horas de aviso — la IA no puede llamarle. Yo sí.\n\nLa IA hará nuestra industria más eficiente. Pero la razón por la que los clientes vuelven no es la eficiencia. Es la confianza en que cuando algo va mal — y algo siempre va mal — la persona correcta ya está al teléfono resolviéndolo.\n\nSigue siendo un negocio humano.\n\n#IndustriaEventos #IA #FuturoDelTrabajo #EventosCorp\n\n🌐 upe-spain.com",
+    "dimensions": "1.91:1",
+    "cta": "Envíanos un mensaje"
+  },
+  "image_prompt": "Corporate event scene: The future of corporate events — what AI can't replace, luxury, professional, gold accents",
+  "image_style": "photorealistic, editorial, luxury event magazine",
+  "brand": {
+    "colors": [
+      "#1C1C1C",
+      "#FBCE0A"
+    ],
+    "font": "Comfortaa",
+    "logo": "uproduction_official_logo.png"
+  }
+}

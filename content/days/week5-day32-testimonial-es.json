@@ -1,0 +1,36 @@
+{
+  "day": 32,
+  "category": "testimonial",
+  "language": "es",
+  "date": "2026-05-02",
+  "weekday": "Saturday",
+  "theme": "What our clients say — unscripted",
+  "linkedin": {
+    "profile": "Uproduction Spain (Company Page)",
+    "text": "No pedimos a los clientes testimonios. Les pedimos que describan un momento.\n\n\"El momento en que nuestro CEO se acercó personalmente a quien llevaba 18 años con nosotros — el mejor trimestre de su carrera — y le entregó el premio frente a 80 colegas. Lloró. Su manager lloró. Yo lloré.\"\n— VP de Ventas, empresa tech, viaje a Barcelona\n\n\"Cuando entramos al estudio de cocina privado en Roma y vimos que estaba preparado como una competición — con nombres de equipos, estaciones individuales y un chef jurado real — la energía cambió completamente.\"\n— Directora de RRHH, empresa de seguros, viaje a Roma\n\n\"Habíamos hecho viajes de empresa antes. Siempre bien. Nunca extraordinario. Esta fue la primera vez que escuché 'nunca había hecho algo así'. Eso es por lo que pagamos.\"\n— CEO, empresa sanitaria, viaje a Praga\n\nEsto es lo que construimos. No eventos. Momentos.\n\n#Testimonios #EventosCorporativos #HistoriasDeClientes #ViajesDeIncentivo #UproductionSpain #MICE #ReconocimientoEmpleados",
+    "dimensions": "1:1",
+    "cta": "DM o visita upe-spain.com para empezar a planificar"
+  },
+  "instagram": {
+    "profile": "@uproduction_spain",
+    "text": "Preguntamos a clientes por UN momento, no una reseña 💬\n\n'Primera vez que escuché: nunca había hecho algo así. Eso es por lo que pagamos.'\n— CEO, empresa sanitaria (Praga)\n\n'La energía cambió completamente cuando vimos que era una competición real.'\n— Directora RRHH (Roma)\n\nMomentos. No eventos.\n\n#Testimonios #EventosCorporativos #ViajesDeIncentivo #UproductionSpain #MICE #ReconocimientoEmpleados",
+    "dimensions": "1:1",
+    "cta": "Link en bio"
+  },
+  "facebook": {
+    "profile": "Uproduction Spain (Page)",
+    "text": "No pedimos a los clientes testimonios. Les pedimos que describan un momento.\n\n\"El momento en que nuestro CEO se acercó personalmente a quien llevaba 18 años con nosotros — el mejor trimestre de su carrera — y le entregó el premio frente a 80 colegas. Lloró. Su manager lloró. Yo lloré.\"\n— VP de Ventas, empresa tech, viaje a Barcelona\n\n\"Cuando entramos al estudio de cocina privado en Roma y vimos que estaba preparado como una competición — con nombres de equipos, estaciones individuales y un chef jurado real — la energía cambió completamente.\"\n— Directora de RRHH, empresa de seguros, viaje a Roma\n\n\"Habíamos hecho viajes de empresa antes. Siempre bien. Nunca extraordinario. Esta fue la primera vez que escuché 'nunca había hecho algo así'. Eso es por lo que pagamos.\"\n— CEO, empresa sanitaria, \n\n🌐 upe-spain.com",
+    "dimensions": "1.91:1",
+    "cta": "Envíanos un mensaje"
+  },
+  "image_prompt": "Corporate event scene: What our clients say — unscripted, luxury, professional, gold accents",
+  "image_style": "photorealistic, editorial, luxury event magazine",
+  "brand": {
+    "colors": [
+      "#1C1C1C",
+      "#FBCE0A"
+    ],
+    "font": "Comfortaa",
+    "logo": "uproduction_official_logo.png"
+  }
+}
