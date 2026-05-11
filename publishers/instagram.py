@@ -118,6 +118,76 @@ def get_token_expiry(access_token: str) -> Optional[int]:
     return expires_at
 
 
+def post_carousel(
+    ig_user_id: str,
+    access_token: str,
+    caption: str,
+    image_urls: list,
+) -> Tuple[bool, str]:
+    """IG carousel: create item containers → wait → carousel container → publish."""
+    if not image_urls:
+        raise InstagramPublishError("at least one image required")
+    if len(image_urls) > 10:
+        raise InstagramPublishError(f"IG carousel max 10 items, got {len(image_urls)}")
+    for u in image_urls:
+        if not u.startswith("https://"):
+            raise InstagramPublishError(f"image_url must be HTTPS: {u}")
+
+    # 1) Create child containers
+    child_ids = []
+    for u in image_urls:
+        child = _post(
+            f"{GRAPH_API}/{ig_user_id}/media",
+            {"image_url": u, "is_carousel_item": "true", "access_token": access_token},
+        )
+        cid = child.get("id")
+        if not cid:
+            raise InstagramPublishError(f"No container id for {u}: {scrub(child)}")
+        _wait_container_ready(cid, access_token)
+        child_ids.append(cid)
+
+    # 2) Create carousel container
+    carousel = _post(
+        f"{GRAPH_API}/{ig_user_id}/media",
+        {
+            "media_type": "CAROUSEL",
+            "children": ",".join(child_ids),
+            "caption": caption,
+            "access_token": access_token,
+        },
+    )
+    carousel_id = carousel.get("id")
+    if not carousel_id:
+        raise InstagramPublishError(f"No carousel container id: {scrub(carousel)}")
+    _wait_container_ready(carousel_id, access_token)
+
+    # 3) Publish
+    result = _post(
+        f"{GRAPH_API}/{ig_user_id}/media_publish",
+        {"creation_id": carousel_id, "access_token": access_token},
+    )
+    media_id = result.get("id")
+    if not media_id:
+        raise InstagramPublishError(f"No media id in publish response: {scrub(result)}")
+    return True, media_id
+
+
+def publish_carousel(account_key: str, caption: str, image_urls: list) -> dict:
+    env_suffix = account_key.upper().removeprefix("IG_")
+    ig_user_id = os.environ.get(f"IG_{env_suffix}_USER_ID")
+    access_token = os.environ.get(f"IG_{env_suffix}_ACCESS_TOKEN")
+    if not ig_user_id or not access_token:
+        return {"success": False, "account": account_key,
+                "error": f"Missing IG_{env_suffix}_USER_ID or IG_{env_suffix}_ACCESS_TOKEN"}
+    try:
+        ok, media_id = post_carousel(ig_user_id, access_token, caption, image_urls)
+        return {"success": ok, "account": account_key, "ig_user_id": ig_user_id, "post_id": media_id}
+    except InstagramPublishError as e:
+        return {"success": False, "account": account_key, "error": scrub(e)}
+    except Exception as e:
+        return {"success": False, "account": account_key, "error": f"Unexpected: {scrub(e)}"}
+
+
 def publish_post(account_key: str, caption: str, image_url: str) -> dict:
     env_suffix = account_key.upper().removeprefix("IG_")
     ig_user_id = os.environ.get(f"IG_{env_suffix}_USER_ID")

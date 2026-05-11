@@ -81,4 +81,51 @@ def extract_text(day_data: dict, platform: str) -> Optional[str]:
 
 
 def days_with_image(content: dict) -> list:
-    return [d for d in content if find_image_path(d)]
+    return [d for d in content if find_image_path(d) or find_carousel_paths(d)]
+
+
+def find_carousel_paths(day: int) -> Optional[list]:
+    """Return list of carousel slide paths if day's content has carousel field, else None."""
+    entry = get_day(day) if isinstance(day, int) else None
+    if not entry:
+        return None
+    return _carousel_paths_from_data(entry["data"])
+
+
+def _carousel_paths_from_data(data: dict) -> Optional[list]:
+    carousel = data.get("carousel")
+    if not carousel:
+        return None
+    img_dir = carousel.get("image_dir", "")
+    slides = carousel.get("slides", [])
+    if not slides:
+        return None
+    paths = []
+    for s in slides:
+        path = os.path.join(CONTENT_IMAGES_DIR, img_dir, s) if img_dir else os.path.join(CONTENT_IMAGES_DIR, s)
+        if not os.path.exists(path):
+            return None
+        paths.append(path)
+    return paths
+
+
+def find_carousel_urls(data: dict) -> Optional[list]:
+    """Return list of public URLs for carousel slides."""
+    if not IMAGE_BASE_URL:
+        return None
+    carousel = data.get("carousel")
+    if not carousel:
+        return None
+    img_dir = carousel.get("image_dir", "")
+    slides = carousel.get("slides", [])
+    if not slides:
+        return None
+    base = f"{IMAGE_BASE_URL}/content/images"
+    if img_dir:
+        return [f"{base}/{img_dir}/{s}" for s in slides]
+    return [f"{base}/{s}" for s in slides]
+
+
+def get_carousel_paths_for_data(data: dict) -> Optional[list]:
+    """Public: get carousel paths directly from day data dict."""
+    return _carousel_paths_from_data(data)

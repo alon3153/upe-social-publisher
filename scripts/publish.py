@@ -27,6 +27,8 @@ from publishers.content import (
     extract_text,
     find_image_path,
     find_image_url,
+    get_carousel_paths_for_data,
+    find_carousel_urls,
 )
 from publishers.state import (
     load_state,
@@ -79,18 +81,32 @@ def _publish_one(acc: dict, day: int, data: dict, image_path: str, image_url: st
         return {"success": False, "platform": platform, "account": acc["key"],
                 "error": f"No {platform}.text in day {day}"}
 
+    carousel_paths = get_carousel_paths_for_data(data)
+    carousel_urls = find_carousel_urls(data) if carousel_paths else None
+    is_carousel = bool(carousel_paths)
+
     if dry_run:
-        log(f"  [DRY] {platform}::{acc['key']} ({acc['lang']}) — {len(text)} chars")
+        kind = f"CAROUSEL[{len(carousel_paths)}]" if is_carousel else "single"
+        log(f"  [DRY] {platform}::{acc['key']} ({acc['lang']}) — {kind} — {len(text)} chars")
         return {"success": True, "platform": platform, "account": acc["key"], "post_id": "DRY_RUN"}
 
     if platform == "facebook":
-        result = facebook.publish_post(acc["key"], text, image_path)
+        if is_carousel:
+            result = facebook.publish_carousel(acc["key"], text, carousel_paths)
+        else:
+            result = facebook.publish_post(acc["key"], text, image_path)
     elif platform == "instagram":
         ig_key = acc["key"].replace("ig_", "")
-        if not image_url:
-            return {"success": False, "platform": platform, "account": acc["key"],
-                    "error": "No IMAGE_BASE_URL set — Instagram requires public image URL"}
-        result = instagram.publish_post(ig_key, text, image_url)
+        if is_carousel:
+            if not carousel_urls:
+                return {"success": False, "platform": platform, "account": acc["key"],
+                        "error": "No IMAGE_BASE_URL set — IG carousel requires public URLs"}
+            result = instagram.publish_carousel(ig_key, text, carousel_urls)
+        else:
+            if not image_url:
+                return {"success": False, "platform": platform, "account": acc["key"],
+                        "error": "No IMAGE_BASE_URL set — Instagram requires public image URL"}
+            result = instagram.publish_post(ig_key, text, image_url)
     else:
         return {"success": False, "platform": platform, "account": acc["key"],
                 "error": f"Unknown platform: {platform}"}
@@ -106,14 +122,18 @@ def publish_day(day: int, dry_run: bool = False, platform_filter: str = None) ->
         return False
 
     data = entry["data"]
-    image_path = find_image_path(day)
+    carousel_paths = get_carousel_paths_for_data(data)
+    image_path = find_image_path(day) if not carousel_paths else carousel_paths[0]
     image_url = find_image_url(day)
-    if not image_path:
-        log(f"ERROR: No image for day {day}")
+    if not image_path and not carousel_paths:
+        log(f"ERROR: No image or carousel for day {day}")
         return False
 
     log(f"Day {day}: {data.get('theme', data.get('title','?'))[:80]}")
-    log(f"  Image: {os.path.basename(image_path)}")
+    if carousel_paths:
+        log(f"  Carousel: {len(carousel_paths)} slides")
+    else:
+        log(f"  Image: {os.path.basename(image_path)}")
     if image_url:
         log(f"  Image URL: {image_url}")
 
