@@ -97,14 +97,17 @@ jobs:
           RESEND_API_KEY:         ${{ secrets.RESEND_API_KEY }}
           NOTIFY_FROM:            ${{ secrets.NOTIFY_FROM }}
         run: |
+          BODY=$(printf '%s\n' \
+            'GitHub Actions run failed.' \
+            '' \
+            'Repo: ${{ github.repository }}' \
+            'Run: https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}' \
+            'Workflow: ${{ github.workflow }}' \
+            'Trigger: ${{ github.event_name }}' \
+            'Branch: ${{ github.ref_name }}' \
+            '' \
+            'Check the run log for details. Posts may have partially gone out — verify before next scheduled run.')
           python3 scripts/notify.py \
             --subject "❌ UPE Social Publisher FAILED — $(date -u +%Y-%m-%d)" \
-            --body "GitHub Actions run failed.
-
-Repo: ${{ github.repository }}
-Run: https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}
-Workflow: ${{ github.workflow }}
-Trigger: ${{ github.event_name }}
-Branch: ${{ github.ref_name }}
-
-Check the run log for details. Posts may have partially gone out — verify before next scheduled run." || echo "Notification failed (no backend configured) — falling back to silent failure"
+            --body "$BODY" \
+            || echo "Notification failed (no backend configured) — falling back to silent failure"
