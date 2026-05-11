@@ -50,11 +50,15 @@ jobs:
           RESEND_API_KEY:         ${{ secrets.RESEND_API_KEY }}
           NOTIFY_FROM:            ${{ secrets.NOTIFY_FROM }}
         run: |
+          REPORT=$(cat /tmp/token_report.txt 2>/dev/null || echo 'No report available')
+          BODY=$(printf '%s\n' \
+            "$REPORT" \
+            '' \
+            'Action: refresh any expiring tokens at developers.facebook.com → Tools → Graph API Explorer.' \
+            'Long-lived Page tokens are valid for 60 days from issuance.' \
+            '' \
+            'Run: https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}')
           python3 scripts/notify.py \
             --subject "⚠️ UPE Social Publisher — Token health alert" \
-            --body "$(cat /tmp/token_report.txt 2>/dev/null || echo 'No report available')
-
-Action: refresh any expiring tokens at developers.facebook.com → Tools → Graph API Explorer.
-Long-lived Page tokens are valid for 60 days from issuance.
-
-Run: https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}" || echo "Notification failed"
+            --body "$BODY" \
+            || echo "Notification failed"
