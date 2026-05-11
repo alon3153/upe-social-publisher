@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_publish": "2026-05-11T19:26:45.203097Z",
+  "last_publish": "2026-05-11T20:08:00.342083Z",
   "publications": {
     "1": {
       "uproductionevents": {
@@ -630,10 +630,10 @@
         "timestamp": "2026-05-11T19:26:45.203091Z"
       },
       "ig_uproductionevents": {
-        "success": false,
-        "post_id": null,
-        "error": "No IMAGE_BASE_URL set — Instagram requires public image URL",
-        "timestamp": "2026-05-11T19:26:45.203131Z"
+        "success": true,
+        "post_id": "17917354242165505",
+        "error": null,
+        "timestamp": "2026-05-11T20:08:00.342074Z"
       }
     }
   }
