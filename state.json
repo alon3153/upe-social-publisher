@@ -687,6 +687,20 @@
         "error": null,
         "timestamp": "2026-05-11T22:48:31.300712Z"
       }
+    },
+    "22": {
+      "ig_uproductionevents": {
+        "success": true,
+        "post_id": "18125493160538752",
+        "error": "Posted Hebrew content by accident — needs manual deletion + reposting",
+        "timestamp": "2026-05-12T08:27:54Z"
+      },
+      "ig_uproduction_spain": {
+        "success": true,
+        "post_id": "18090629498340159",
+        "error": "Posted Hebrew content by accident — needs manual deletion + reposting",
+        "timestamp": "2026-05-12T08:28:07Z"
+      }
     }
   }
 }
