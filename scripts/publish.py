@@ -85,13 +85,22 @@ def _publish_one(acc: dict, day: int, data: dict, image_path: str, image_url: st
     carousel_urls = find_carousel_urls(data) if carousel_paths else None
     is_carousel = bool(carousel_paths)
 
+    # Per-platform strategy: FB can override carousel → single (slide1 only)
+    fb_strategy = data.get("facebook_strategy")
+    fb_use_single = platform == "facebook" and fb_strategy == "single_first_slide" and is_carousel
+
     if dry_run:
-        kind = f"CAROUSEL[{len(carousel_paths)}]" if is_carousel else "single"
+        if fb_use_single:
+            kind = "single(from carousel[0])"
+        else:
+            kind = f"CAROUSEL[{len(carousel_paths)}]" if is_carousel else "single"
         log(f"  [DRY] {platform}::{acc['key']} ({acc['lang']}) — {kind} — {len(text)} chars")
         return {"success": True, "platform": platform, "account": acc["key"], "post_id": "DRY_RUN"}
 
     if platform == "facebook":
-        if is_carousel:
+        if fb_use_single:
+            result = facebook.publish_post(acc["key"], text, carousel_paths[0])
+        elif is_carousel:
             result = facebook.publish_carousel(acc["key"], text, carousel_paths)
         else:
             result = facebook.publish_post(acc["key"], text, image_path)

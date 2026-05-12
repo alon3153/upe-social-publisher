@@ -13,9 +13,24 @@ CONTENT_IMAGES_DIR = os.environ.get("CONTENT_IMAGES_DIR", os.path.join(ROOT, "co
 IMAGE_BASE_URL = os.environ.get("IMAGE_BASE_URL", "").rstrip("/")
 
 
+_LANG_PRIORITY = {"-en.": 0, "-es.": 1, "-he.": 99}
+
+
+def _file_priority(filepath: str) -> int:
+    """Lower = preferred. Hebrew files are de-prioritized so EN wins for auto-publishing."""
+    name = os.path.basename(filepath)
+    for suffix, prio in _LANG_PRIORITY.items():
+        if suffix in name:
+            return prio
+    return 50
+
+
 def load_all_content() -> dict:
-    result = {}
-    for f in glob.glob(os.path.join(CONTENT_DAYS_DIR, "*.json")):
+    """Load all day files. When multiple language versions exist for the same day,
+    prefer EN over ES over HE (Hebrew is manually-posted-only and excluded from auto-pipeline).
+    """
+    candidates = {}  # day → list of (priority, filepath, data)
+    for f in sorted(glob.glob(os.path.join(CONTENT_DAYS_DIR, "*.json"))):
         try:
             data = json.load(open(f, encoding="utf-8"))
         except Exception:
@@ -26,7 +41,16 @@ def load_all_content() -> dict:
             day = int(m.group(1)) if m else None
         if day is None:
             continue
-        result[int(day)] = {"file": f, "data": data}
+        # Skip Hebrew files entirely — they're for manual posting only
+        if "-he." in os.path.basename(f):
+            continue
+        candidates.setdefault(int(day), []).append((_file_priority(f), f, data))
+
+    result = {}
+    for day, items in candidates.items():
+        items.sort(key=lambda t: (t[0], t[1]))  # lowest priority + alphabetical
+        _, picked_f, picked_data = items[0]
+        result[day] = {"file": picked_f, "data": picked_data}
     return dict(sorted(result.items()))
 
 

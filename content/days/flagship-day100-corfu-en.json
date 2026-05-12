@@ -7,18 +7,17 @@
   "theme": "The one mistake 80% make — flagship carousel",
 
   "carousel": {
-    "image_dir": "pilot-corfu-flagship",
+    "image_dir": "pilot-corfu-v2",
     "slides": [
       "slide1.png",
       "slide2.png",
       "slide3.png",
       "slide4.png",
-      "slide5.png",
-      "slide6.png",
-      "slide7.png",
-      "slide8.png"
+      "slide5.png"
     ]
   },
+
+  "facebook_strategy": "single_first_slide",
 
   "linkedin": {
     "profile": "Uproduction Events (Company Page)",
