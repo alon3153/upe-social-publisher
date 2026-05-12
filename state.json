@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_publish": "2026-05-11T22:48:31.300721Z",
+  "last_publish": "2026-05-12T08:59:04.062808Z",
   "publications": {
     "1": {
       "uproductionevents": {
@@ -700,6 +700,18 @@
         "post_id": "18090629498340159",
         "error": "Posted Hebrew content by accident — needs manual deletion + reposting",
         "timestamp": "2026-05-12T08:28:07Z"
+      },
+      "uproductionevents": {
+        "success": true,
+        "post_id": "497539806947915_1576944467774673",
+        "error": null,
+        "timestamp": "2026-05-12T08:58:58.774459Z"
+      },
+      "uproduction_spain": {
+        "success": true,
+        "post_id": "156930967509326_122250961346126815",
+        "error": null,
+        "timestamp": "2026-05-12T08:59:04.062801Z"
       }
     }
   }
