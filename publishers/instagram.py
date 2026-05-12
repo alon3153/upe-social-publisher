@@ -188,6 +188,83 @@ def publish_carousel(account_key: str, caption: str, image_urls: list) -> dict:
         return {"success": False, "account": account_key, "error": f"Unexpected: {scrub(e)}"}
 
 
+REELS_POLL_INTERVAL = 5
+REELS_POLL_MAX = 60   # up to ~5 min for video processing
+
+
+def _wait_reels_ready(container_id: str, access_token: str) -> None:
+    """Poll until a Reels container is FINISHED. Reels need longer than image containers."""
+    url = f"{GRAPH_API}/{container_id}"
+    last_status = None
+    for _ in range(REELS_POLL_MAX):
+        r = requests.get(url, params={"fields": "status_code,status", "access_token": access_token}, timeout=15)
+        if r.status_code == 200:
+            body = r.json()
+            last_status = body.get("status_code")
+            if last_status == "FINISHED":
+                return
+            if last_status == "ERROR":
+                raise InstagramPublishError(f"Reels container failed: {scrub(body)}")
+        time.sleep(REELS_POLL_INTERVAL)
+    raise InstagramPublishError(
+        f"Reels container did not finish in {REELS_POLL_INTERVAL * REELS_POLL_MAX}s (last status: {last_status})"
+    )
+
+
+def post_reel(
+    ig_user_id: str,
+    access_token: str,
+    caption: str,
+    video_url: str,
+    share_to_feed: bool = True,
+) -> Tuple[bool, str]:
+    if not ig_user_id or not access_token:
+        raise InstagramPublishError("ig_user_id and access_token are required")
+    if not video_url or not video_url.startswith("https://"):
+        raise InstagramPublishError(f"video_url must be HTTPS, got: {video_url}")
+
+    container = _post(
+        f"{GRAPH_API}/{ig_user_id}/media",
+        {
+            "media_type": "REELS",
+            "video_url": video_url,
+            "caption": caption,
+            "share_to_feed": "true" if share_to_feed else "false",
+            "access_token": access_token,
+        },
+    )
+    container_id = container.get("id")
+    if not container_id:
+        raise InstagramPublishError(f"No container id in response: {scrub(container)}")
+
+    _wait_reels_ready(container_id, access_token)
+
+    result = _post(
+        f"{GRAPH_API}/{ig_user_id}/media_publish",
+        {"creation_id": container_id, "access_token": access_token},
+    )
+    media_id = result.get("id")
+    if not media_id:
+        raise InstagramPublishError(f"No media id in publish response: {scrub(result)}")
+    return True, media_id
+
+
+def publish_reel(account_key: str, caption: str, video_url: str, share_to_feed: bool = True) -> dict:
+    env_suffix = account_key.upper().removeprefix("IG_")
+    ig_user_id = os.environ.get(f"IG_{env_suffix}_USER_ID")
+    access_token = os.environ.get(f"IG_{env_suffix}_ACCESS_TOKEN")
+    if not ig_user_id or not access_token:
+        return {"success": False, "account": account_key,
+                "error": f"Missing IG_{env_suffix}_USER_ID or IG_{env_suffix}_ACCESS_TOKEN"}
+    try:
+        ok, media_id = post_reel(ig_user_id, access_token, caption, video_url, share_to_feed)
+        return {"success": ok, "account": account_key, "ig_user_id": ig_user_id, "post_id": media_id}
+    except InstagramPublishError as e:
+        return {"success": False, "account": account_key, "error": scrub(e)}
+    except Exception as e:
+        return {"success": False, "account": account_key, "error": f"Unexpected: {scrub(e)}"}
+
+
 def publish_post(account_key: str, caption: str, image_url: str) -> dict:
     env_suffix = account_key.upper().removeprefix("IG_")
     ig_user_id = os.environ.get(f"IG_{env_suffix}_USER_ID")
