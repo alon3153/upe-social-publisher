@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>UPE — TikTok OAuth Callback</title>
+<style>
+  body { font-family: -apple-system, Segoe UI, Arial, sans-serif; background: #111; color: #eee; padding: 40px 20px; max-width: 720px; margin: 0 auto; text-align: center; }
+  h1 { color: #FFC600; margin-bottom: 8px; }
+  .sub { color: #888; margin-bottom: 30px; font-size: 14px; }
+  .code-box { background: #222; padding: 24px; border-radius: 12px; margin: 20px 0; border: 1px solid #333; word-break: break-all; }
+  .label { color: #FFC600; font-size: 14px; margin-bottom: 8px; }
+  .code { font-family: 'SF Mono', Monaco, monospace; font-size: 16px; color: #4ade80; user-select: all; cursor: pointer; }
+  .error { color: #f87171; }
+  button { background: #FFC600; color: #111; border: none; padding: 12px 28px; border-radius: 8px; font-weight: 600; cursor: pointer; font-size: 14px; margin-top: 10px; }
+  button:hover { background: #ffd840; }
+  .footer { color: #666; font-size: 12px; margin-top: 40px; }
+</style>
+</head>
+<body>
+<h1>UPE — TikTok OAuth</h1>
+<p class="sub">קוד האימות התקבל. העתק והדבק בטרמינל.</p>
+
+<div id="result"></div>
+
+<script>
+const params = new URLSearchParams(window.location.search);
+const code = params.get('code');
+const error = params.get('error');
+const errorDesc = params.get('error_description');
+const state = params.get('state');
+const scopes = params.get('scopes');
+const out = document.getElementById('result');
+
+if (error) {
+  out.innerHTML = `
+    <div class="code-box">
+      <div class="label">❌ שגיאה</div>
+      <div class="code error">${error}</div>
+      ${errorDesc ? `<div style="color:#aaa;margin-top:10px;font-size:13px;">${decodeURIComponent(errorDesc)}</div>` : ''}
+    </div>`;
+} else if (code) {
+  out.innerHTML = `
+    <div class="code-box">
+      <div class="label">✅ קוד אימות (לחץ להעתקה)</div>
+      <div class="code" id="code-text">${code}</div>
+      <button onclick="navigator.clipboard.writeText('${code}'); this.textContent='הועתק ✓'">📋 העתק קוד</button>
+    </div>
+    ${state ? `<div style="font-size:12px;color:#666;margin-top:10px;">state: ${state}</div>` : ''}
+    ${scopes ? `<div style="font-size:12px;color:#666;">scopes: ${scopes}</div>` : ''}
+    <p class="sub" style="margin-top:30px;">חזור לטרמינל והדבק את הקוד בבקשה.</p>`;
+} else {
+  out.innerHTML = `<div class="code-box"><div class="error">לא נמצא קוד או שגיאה ב-URL</div></div>`;
+}
+</script>
+
+<p class="footer">Uproduction Events · upe.co.il</p>
+</body>
+</html>
