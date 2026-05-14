@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_publish": "2026-05-13T08:35:14.926048Z",
+  "last_publish": "2026-05-14T08:29:00.348346Z",
   "publications": {
     "1": {
       "uproductionevents": {
@@ -738,6 +738,32 @@
         "post_id": "17861709603587232",
         "error": null,
         "timestamp": "2026-05-13T08:35:14.926038Z"
+      }
+    },
+    "24": {
+      "uproductionevents": {
+        "success": true,
+        "post_id": "497539806947915_1578913620911091",
+        "error": null,
+        "timestamp": "2026-05-14T08:28:39.840046Z"
+      },
+      "uproduction_spain": {
+        "success": true,
+        "post_id": "156930967509326_122251151576126815",
+        "error": null,
+        "timestamp": "2026-05-14T08:28:44.625355Z"
+      },
+      "ig_uproductionevents": {
+        "success": true,
+        "post_id": "17951198715143642",
+        "error": null,
+        "timestamp": "2026-05-14T08:28:50.399989Z"
+      },
+      "ig_uproduction_spain": {
+        "success": true,
+        "post_id": "18115587157704983",
+        "error": null,
+        "timestamp": "2026-05-14T08:29:00.348339Z"
       }
     }
   }
