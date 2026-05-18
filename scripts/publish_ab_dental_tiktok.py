@@ -16,6 +16,8 @@ Caption optimized for TikTok virality:
 import os
 import sys
 import argparse
+import subprocess
+import platform
 from pathlib import Path
 from dotenv import load_dotenv
 
@@ -42,6 +44,23 @@ Uproduction Events
 from business to pleasure 🎯
 
 #fyp #foryou #foryoupage #אירועיחברה #גאלה #קרוז #הפקתאירועים #ישראל #abdental #uproductionevents #incentivetravel #corporateevents #eventproduction #galanight #cruise #ניהולאירועים #upe"""
+
+
+def copy_to_clipboard(text: str) -> bool:
+    """Copy text to system clipboard. Returns True on success."""
+    try:
+        if platform.system() == "Darwin":
+            subprocess.run(["pbcopy"], input=text.encode("utf-8"), check=True)
+        elif platform.system() == "Linux":
+            subprocess.run(["xclip", "-selection", "clipboard"],
+                           input=text.encode("utf-8"), check=True)
+        elif platform.system() == "Windows":
+            subprocess.run(["clip"], input=text.encode("utf-16le"), check=True)
+        else:
+            return False
+        return True
+    except Exception:
+        return False
 
 
 def get_valid_access_token():
@@ -109,6 +128,15 @@ def main():
     print(f"🎯 Mode: {'DIRECT POST' if args.direct else 'INBOX (draft)'}")
     if args.direct:
         print(f"🔒 Privacy: {args.privacy}")
+
+    # Inbox mode can't set caption via API — copy it to clipboard so the user
+    # can paste it in the TikTok app when reviewing the uploaded draft.
+    if not args.direct:
+        if copy_to_clipboard(CAPTION):
+            print(f"📋 Caption copied to clipboard — paste in TikTok app")
+        else:
+            print(f"⚠️  Could not copy to clipboard — caption printed below")
+            print(f"---\n{CAPTION}\n---")
     print()
 
     def do_upload(token):
