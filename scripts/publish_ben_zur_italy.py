@@ -32,8 +32,8 @@ from publishers.tiktok import upload_video_to_inbox, direct_post_video, TikTokEr
 
 GRAPH_API = "https://graph.facebook.com/v22.0"
 
-REEL_VIDEO_URL = "https://raw.githubusercontent.com/alon3153/upe-social-publisher/main/content/videos/ben_zur_italy_reel_9x16.mp4"
-FB_VIDEO_URL   = "https://raw.githubusercontent.com/alon3153/upe-social-publisher/main/content/videos/ben_zur_italy_fb_16x9.mp4"
+REEL_VIDEO_URL = os.environ.get("BEN_ZUR_REEL_URL", "https://raw.githubusercontent.com/alon3153/upe-social-publisher/main/content/videos/ben_zur_italy_reel_9x16.mp4")
+FB_VIDEO_URL   = os.environ.get("BEN_ZUR_FB_URL",   "https://raw.githubusercontent.com/alon3153/upe-social-publisher/main/content/videos/ben_zur_italy_fb_16x9.mp4")
 
 LOCAL_REEL_PATH = ROOT / "content/videos/ben_zur_italy_reel_9x16.mp4"
 LOCAL_FB_PATH   = ROOT / "content/videos/ben_zur_italy_fb_16x9.mp4"
