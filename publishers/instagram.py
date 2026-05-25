@@ -16,8 +16,27 @@ from publishers.safe import scrub, with_retry
 
 GRAPH_API = "https://graph.facebook.com/v22.0"
 TIMEOUT = 60
-CONTAINER_POLL_INTERVAL = 3
-CONTAINER_POLL_MAX = 10
+
+# Container polling: IG image containers usually finish in <10s, but videos /
+# carousels can take 30-90s. Total budget overridable via IG_PUBLISH_TIMEOUT_SEC.
+CONTAINER_POLL_INTERVAL = 2
+_DEFAULT_PUBLISH_TIMEOUT_SEC = 120
+
+
+def _publish_timeout_sec() -> int:
+    """Total seconds to wait for an IG media container to finish processing.
+
+    Override with env var IG_PUBLISH_TIMEOUT_SEC (default 120). Falls back to
+    the default on any parse error or non-positive value.
+    """
+    raw = os.environ.get("IG_PUBLISH_TIMEOUT_SEC")
+    if not raw:
+        return _DEFAULT_PUBLISH_TIMEOUT_SEC
+    try:
+        val = int(raw)
+        return val if val > 0 else _DEFAULT_PUBLISH_TIMEOUT_SEC
+    except ValueError:
+        return _DEFAULT_PUBLISH_TIMEOUT_SEC
 
 
 class InstagramPublishError(Exception):
@@ -43,19 +62,35 @@ def _post(url: str, data: dict) -> dict:
 
 
 def _wait_container_ready(container_id: str, access_token: str) -> None:
-    """Poll until container is FINISHED or ERROR. Raise on ERROR or timeout."""
+    """Poll until container is FINISHED. Raise early on ERROR/EXPIRED, raise on timeout.
+
+    Honors IG_PUBLISH_TIMEOUT_SEC env override (default 120s). Surfaces the last
+    observed status code in the timeout error so failures are diagnosable.
+    """
     url = f"{GRAPH_API}/{container_id}"
     last_status = None
-    for _ in range(CONTAINER_POLL_MAX):
-        r = requests.get(url, params={"fields": "status_code", "access_token": access_token}, timeout=15)
+    last_body = None
+    timeout_sec = _publish_timeout_sec()
+    deadline = time.monotonic() + timeout_sec
+    while time.monotonic() < deadline:
+        r = requests.get(
+            url,
+            params={"fields": "status_code", "access_token": access_token},
+            timeout=15,
+        )
         if r.status_code == 200:
-            last_status = r.json().get("status_code")
+            last_body = r.json()
+            last_status = last_body.get("status_code")
             if last_status == "FINISHED":
                 return
-            if last_status == "ERROR":
-                raise InstagramPublishError(f"Container processing failed: {scrub(r.json())}")
+            if last_status in ("ERROR", "EXPIRED"):
+                raise InstagramPublishError(
+                    f"Container processing {last_status}: {scrub(last_body)}"
+                )
         time.sleep(CONTAINER_POLL_INTERVAL)
-    raise InstagramPublishError(f"Container did not finish processing in {CONTAINER_POLL_INTERVAL * CONTAINER_POLL_MAX}s (last status: {last_status})")
+    raise InstagramPublishError(
+        f"Container did not finish processing in {timeout_sec}s (last status: {last_status})"
+    )
 
 
 def post_to_account(
