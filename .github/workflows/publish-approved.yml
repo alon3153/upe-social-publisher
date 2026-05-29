@@ -1,0 +1,46 @@
+name: Publish Approved
+
+on:
+  schedule:
+    # every 2h, 07:00-19:00 UTC — publishes posts you approved, soon after approval
+    - cron: "0 7-19/2 * * *"
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: "Dry-run only"
+        required: false
+        type: boolean
+        default: false
+
+permissions:
+  contents: read
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    if: github.event_name == 'schedule' || github.actor == 'alon3153'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - run: pip install -r requirements.txt
+      - name: Publish approved posts
+        env:
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
+          FB_UPRODUCTIONEVENTS_PAGE_ID:     ${{ secrets.FB_UPRODUCTIONEVENTS_PAGE_ID }}
+          FB_UPRODUCTIONEVENTS_PAGE_TOKEN:  ${{ secrets.FB_UPRODUCTIONEVENTS_PAGE_TOKEN }}
+          FB_UPRODUCTION_SPAIN_PAGE_ID:     ${{ secrets.FB_UPRODUCTION_SPAIN_PAGE_ID }}
+          FB_UPRODUCTION_SPAIN_PAGE_TOKEN:  ${{ secrets.FB_UPRODUCTION_SPAIN_PAGE_TOKEN }}
+          IG_UPRODUCTIONEVENTS_USER_ID:      ${{ secrets.IG_UPRODUCTIONEVENTS_USER_ID }}
+          IG_UPRODUCTIONEVENTS_ACCESS_TOKEN: ${{ secrets.IG_UPRODUCTIONEVENTS_ACCESS_TOKEN }}
+          IG_UPRODUCTION_SPAIN_USER_ID:      ${{ secrets.IG_UPRODUCTION_SPAIN_USER_ID }}
+          IG_UPRODUCTION_SPAIN_ACCESS_TOKEN: ${{ secrets.IG_UPRODUCTION_SPAIN_ACCESS_TOKEN }}
+        run: |
+          if [ "${{ inputs.dry_run }}" = "true" ]; then
+            python3 scripts/publish_approved.py --dry-run
+          else
+            python3 scripts/publish_approved.py
+          fi

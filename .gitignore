@@ -11,3 +11,4 @@ reports/*.txt
 *.DS_Store
 content/videos/
 content/images_realistic/
+scripts/send_approval_demo.py
