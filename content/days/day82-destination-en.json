@@ -1,0 +1,36 @@
+{
+  "day": 82,
+  "category": "destination",
+  "language": "en",
+  "date": "2026-07-16",
+  "weekday": "Thursday",
+  "theme": "Maldives overwater incentive that rewards top performers",
+  "linkedin": {
+    "profile": "Uproduction Events (Company Page)",
+    "text": "Some bonuses get spent and forgotten. This one gets framed. Picture your top performers waking up over a turquoise Maldives lagoon, private overwater villas, sunset dhoni cruises, and a gala dinner on a sandbank in the middle of the Indian Ocean. We handle the charter flights, the seaplanes, the rooming, the logistics — you hand out the reward of a lifetime. This is what incentive travel was made for. Ready to reward your best? Send us a message. #UproductionEvents #IncentiveTravel #CorporateEvents #Maldives #LuxuryTravel #RewardTravel #FromBusinessToPleasure",
+    "dimensions": "1:1",
+    "cta": "DM us or book a call"
+  },
+  "instagram": {
+    "profile": "@uproductionevents",
+    "text": "Some bonuses get spent and forgotten. This one gets framed. Picture your top performers waking up over a turquoise Maldives lagoon, private overwater villas, sunset dhoni cruises, and a gala dinner on a sandbank in the middle of the Indian Ocean. We handle the charter flights, the seaplanes, the rooming, the logistics — you hand out the reward of a lifetime. This is what incentive travel was made for. Ready to reward your best? Send us a message. #UproductionEvents #IncentiveTravel #CorporateEvents #Maldives #LuxuryTravel #RewardTravel #FromBusinessToPleasure",
+    "dimensions": "1:1",
+    "cta": "Link in bio"
+  },
+  "facebook": {
+    "profile": "Uproduction Events (Page)",
+    "text": "Some bonuses get spent and forgotten. This one gets framed. Picture your top performers waking up over a turquoise Maldives lagoon, private overwater villas, sunset dhoni cruises, and a gala dinner on a sandbank in the middle of the Indian Ocean. We handle the charter flights, the seaplanes, the rooming, the logistics — you hand out the reward of a lifetime. This is what incentive travel was made for. Ready to reward your best? Send us a message. #UproductionEvents #IncentiveTravel #CorporateEvents #Maldives #LuxuryTravel #RewardTravel #FromBusinessToPleasure",
+    "dimensions": "1.91:1",
+    "cta": "Send us a message"
+  },
+  "image_prompt": "Sweeping aerial of a Maldives private atoll at golden hour, a curving row of overwater villas on stilts above impossibly turquoise lagoon, a long wooden jetty trailing into deep blue ocean, tiny figures walking the boardwalk far below, coral reef shadows visible through clear water. Photorealistic, 35mm film grain, no CGI, no text, no logos.",
+  "image_style": "photorealistic, editorial, documentary, 35mm film grain",
+  "brand": {
+    "colors": [
+      "#1C1C1C",
+      "#FBCE0A"
+    ],
+    "font": "Comfortaa",
+    "logo": "uproduction_official_logo.png"
+  }
+}

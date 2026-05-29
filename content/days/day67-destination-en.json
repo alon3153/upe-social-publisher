@@ -1,0 +1,36 @@
+{
+  "day": 67,
+  "category": "destination",
+  "language": "en",
+  "date": "2026-07-01",
+  "weekday": "Wednesday",
+  "theme": "Amalfi Coast where ambition meets the sea",
+  "linkedin": {
+    "profile": "Uproduction Events (Company Page)",
+    "text": "The Amalfi Coast doesn't do ordinary. Cliffside dinners over a glowing sea, private boat arrivals, terraces draped in bougainvillea — this is the backdrop for incentive trips your team will measure every future reward against. UPE handles the impossible logistics of these vertical villages so you experience only the awe. Reward big. Reward here. Message us to start designing your Amalfi escape. #UproductionEvents #IncentiveTravel #CorporateEvents #AmalfiCoast #ItalyEvents #LuxuryTravel #B2B",
+    "dimensions": "1:1",
+    "cta": "DM us or book a call"
+  },
+  "instagram": {
+    "profile": "@uproductionevents",
+    "text": "The Amalfi Coast doesn't do ordinary. Cliffside dinners over a glowing sea, private boat arrivals, terraces draped in bougainvillea — this is the backdrop for incentive trips your team will measure every future reward against. UPE handles the impossible logistics of these vertical villages so you experience only the awe. Reward big. Reward here. Message us to start designing your Amalfi escape. #UproductionEvents #IncentiveTravel #CorporateEvents #AmalfiCoast #ItalyEvents #LuxuryTravel #B2B",
+    "dimensions": "1:1",
+    "cta": "Link in bio"
+  },
+  "facebook": {
+    "profile": "Uproduction Events (Page)",
+    "text": "The Amalfi Coast doesn't do ordinary. Cliffside dinners over a glowing sea, private boat arrivals, terraces draped in bougainvillea — this is the backdrop for incentive trips your team will measure every future reward against. UPE handles the impossible logistics of these vertical villages so you experience only the awe. Reward big. Reward here. Message us to start designing your Amalfi escape. #UproductionEvents #IncentiveTravel #CorporateEvents #AmalfiCoast #ItalyEvents #LuxuryTravel #B2B",
+    "dimensions": "1.91:1",
+    "cta": "Send us a message"
+  },
+  "image_prompt": "Breathtaking aerial view of the Amalfi Coast, pastel villages clinging to dramatic vertical cliffs above turquoise Mediterranean water, winding coastal road threading between lemon groves, white yachts dotting the bay far below. Photorealistic, 35mm film grain, no CGI, no text, no logos.",
+  "image_style": "photorealistic, editorial, documentary, 35mm film grain",
+  "brand": {
+    "colors": [
+      "#1C1C1C",
+      "#FBCE0A"
+    ],
+    "font": "Comfortaa",
+    "logo": "uproduction_official_logo.png"
+  }
+}

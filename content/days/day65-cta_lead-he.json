@@ -1,0 +1,36 @@
+{
+  "day": 65,
+  "category": "cta_lead",
+  "language": "he",
+  "date": "2026-06-29",
+  "weekday": "Monday",
+  "theme": "Stop planning events alone start producing",
+  "linkedin": {
+    "profile": "Uproduction Events (Company Page)",
+    "text": "להפיק אירוע פנימית בזמן שאתם מנהלים עסק? אלה שתי משרות מלאות. תנו לנו את הבריף והחזירו לעצמכם את הפוקוס. UPE מנהלת הכול — אתרים, לוגיסטיקה, הפקה, אומנים, הסעות, וגם את הבלתי צפוי. אתם מביאים את המטרות, אנחנו את מחיאות הכפיים. 200+ אירועים, 120+ מדינות, מאז 2010. בואו נדבר על הבא. שלחו הודעה היום. #UproductionEvents #הפקתאירועים #אירועיחברה #טיוליתמרוץ #ניהולאירועים",
+    "dimensions": "1:1",
+    "cta": "DM us or book a call"
+  },
+  "instagram": {
+    "profile": "@uproductionevents",
+    "text": "להפיק אירוע פנימית בזמן שאתם מנהלים עסק? אלה שתי משרות מלאות. תנו לנו את הבריף והחזירו לעצמכם את הפוקוס. UPE מנהלת הכול — אתרים, לוגיסטיקה, הפקה, אומנים, הסעות, וגם את הבלתי צפוי. אתם מביאים את המטרות, אנחנו את מחיאות הכפיים. 200+ אירועים, 120+ מדינות, מאז 2010. בואו נדבר על הבא. שלחו הודעה היום. #UproductionEvents #הפקתאירועים #אירועיחברה #טיוליתמרוץ #ניהולאירועים",
+    "dimensions": "1:1",
+    "cta": "Link in bio"
+  },
+  "facebook": {
+    "profile": "Uproduction Events (Page)",
+    "text": "להפיק אירוע פנימית בזמן שאתם מנהלים עסק? אלה שתי משרות מלאות. תנו לנו את הבריף והחזירו לעצמכם את הפוקוס. UPE מנהלת הכול — אתרים, לוגיסטיקה, הפקה, אומנים, הסעות, וגם את הבלתי צפוי. אתם מביאים את המטרות, אנחנו את מחיאות הכפיים. 200+ אירועים, 120+ מדינות, מאז 2010. בואו נדבר על הבא. שלחו הודעה היום. #UproductionEvents #הפקתאירועים #אירועיחברה #טיוליתמרוץ #ניהולאירועים",
+    "dimensions": "1.91:1",
+    "cta": "Send us a message"
+  },
+  "image_prompt": "Wide overhead shot of a massive corporate conference audience from behind, thousands of seated heads filling a vast modern hall, a distant stage glowing at the far end, dramatic uplighting washing the side walls, immense sense of scale, tiny faces. Photorealistic, 35mm film grain, no CGI, no text, no logos.",
+  "image_style": "photorealistic, editorial, documentary, 35mm film grain",
+  "brand": {
+    "colors": [
+      "#1C1C1C",
+      "#FBCE0A"
+    ],
+    "font": "Comfortaa",
+    "logo": "uproduction_official_logo.png"
+  }
+}

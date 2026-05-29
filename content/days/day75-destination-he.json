@@ -1,0 +1,36 @@
+{
+  "day": 75,
+  "category": "destination",
+  "language": "he",
+  "date": "2026-07-09",
+  "weekday": "Thursday",
+  "theme": "Dubrovnik walls above the Adriatic",
+  "linkedin": {
+    "profile": "Uproduction Events (Company Page)",
+    "text": "תגמלו את האנשים שלכם בתוך עיר שהים לא הצליח לכבוש. דוברובניק נותנת לצוות חומות מהמאות הקדומות לטייל בהן בשקיעה, אי פרטי לגאלה, ואדריאטי כל כך כחול שהוא נראה ערוך. הפקנו כאן כנסים על חומות עתיקות וארוחות במבצרים מעל הצוק — תפאורה שגורמת לתגמול להרגיש מושג ובלתי-חוזר. המצטיינים שלכם ידעו בדיוק מה השקעתם כדי להביא אותם לכאן. זו ההודעה. from business to pleasure. שלחו הודעה על דוברובניק. #UproductionEvents #דוברובניק #תמרוץ #אירועים #טיולי_תמריץ #קרואטיה",
+    "dimensions": "1:1",
+    "cta": "DM us or book a call"
+  },
+  "instagram": {
+    "profile": "@uproductionevents",
+    "text": "תגמלו את האנשים שלכם בתוך עיר שהים לא הצליח לכבוש. דוברובניק נותנת לצוות חומות מהמאות הקדומות לטייל בהן בשקיעה, אי פרטי לגאלה, ואדריאטי כל כך כחול שהוא נראה ערוך. הפקנו כאן כנסים על חומות עתיקות וארוחות במבצרים מעל הצוק — תפאורה שגורמת לתגמול להרגיש מושג ובלתי-חוזר. המצטיינים שלכם ידעו בדיוק מה השקעתם כדי להביא אותם לכאן. זו ההודעה. from business to pleasure. שלחו הודעה על דוברובניק. #UproductionEvents #דוברובניק #תמרוץ #אירועים #טיולי_תמריץ #קרואטיה",
+    "dimensions": "1:1",
+    "cta": "Link in bio"
+  },
+  "facebook": {
+    "profile": "Uproduction Events (Page)",
+    "text": "תגמלו את האנשים שלכם בתוך עיר שהים לא הצליח לכבוש. דוברובניק נותנת לצוות חומות מהמאות הקדומות לטייל בהן בשקיעה, אי פרטי לגאלה, ואדריאטי כל כך כחול שהוא נראה ערוך. הפקנו כאן כנסים על חומות עתיקות וארוחות במבצרים מעל הצוק — תפאורה שגורמת לתגמול להרגיש מושג ובלתי-חוזר. המצטיינים שלכם ידעו בדיוק מה השקעתם כדי להביא אותם לכאן. זו ההודעה. from business to pleasure. שלחו הודעה על דוברובניק. #UproductionEvents #דוברובניק #תמרוץ #אירועים #טיולי_תמריץ #קרואטיה",
+    "dimensions": "1.91:1",
+    "cta": "Send us a message"
+  },
+  "image_prompt": "Dramatic aerial view of Dubrovnik's old town from high above, the circular medieval stone walls hugging terracotta rooftops, the deep blue Adriatic wrapping around the peninsula, a lone kayak trailing a wake far below, distant islands hazy on the horizon, late afternoon light raking across the stone. Photorealistic, 35mm film grain, no CGI, no text, no logos.",
+  "image_style": "photorealistic, editorial, documentary, 35mm film grain",
+  "brand": {
+    "colors": [
+      "#1C1C1C",
+      "#FBCE0A"
+    ],
+    "font": "Comfortaa",
+    "logo": "uproduction_official_logo.png"
+  }
+}

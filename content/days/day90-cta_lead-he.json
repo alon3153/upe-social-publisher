@@ -1,0 +1,36 @@
+{
+  "day": 90,
+  "category": "cta_lead",
+  "language": "he",
+  "date": "2026-07-24",
+  "weekday": "Friday",
+  "theme": "Your 2026 event starts with one message",
+  "linkedin": {
+    "profile": "Uproduction Events (Company Page)",
+    "text": "היומן מתמלא מהר. המתחמים הטובים ביותר, התאריכים המבוקשים והיעדים הבולטים ל-2026 הולכים לצוותים שזזים ראשונים — ואלה בדרך כלל האמיצים. בין אם זה כנס לאלפים, ריטריט הנהלה אינטימי או טיול תמריץ של פעם בקריירה — ככל שנתחיל מוקדם יותר, כך נוכל לבנות יותר. 15 שנה, 200+ אירועים, 120+ מדינות — ונשמח שהאירוע הבא יהיה שלכם. הודעה אחת וזה מתחיל. שלחו היום. #UproductionEvents #טיוליתמריץ #הפקתאירועים #אירועיםעסקיים #FromBusinessToPleasure",
+    "dimensions": "1:1",
+    "cta": "DM us or book a call"
+  },
+  "instagram": {
+    "profile": "@uproductionevents",
+    "text": "היומן מתמלא מהר. המתחמים הטובים ביותר, התאריכים המבוקשים והיעדים הבולטים ל-2026 הולכים לצוותים שזזים ראשונים — ואלה בדרך כלל האמיצים. בין אם זה כנס לאלפים, ריטריט הנהלה אינטימי או טיול תמריץ של פעם בקריירה — ככל שנתחיל מוקדם יותר, כך נוכל לבנות יותר. 15 שנה, 200+ אירועים, 120+ מדינות — ונשמח שהאירוע הבא יהיה שלכם. הודעה אחת וזה מתחיל. שלחו היום. #UproductionEvents #טיוליתמריץ #הפקתאירועים #אירועיםעסקיים #FromBusinessToPleasure",
+    "dimensions": "1:1",
+    "cta": "Link in bio"
+  },
+  "facebook": {
+    "profile": "Uproduction Events (Page)",
+    "text": "היומן מתמלא מהר. המתחמים הטובים ביותר, התאריכים המבוקשים והיעדים הבולטים ל-2026 הולכים לצוותים שזזים ראשונים — ואלה בדרך כלל האמיצים. בין אם זה כנס לאלפים, ריטריט הנהלה אינטימי או טיול תמריץ של פעם בקריירה — ככל שנתחיל מוקדם יותר, כך נוכל לבנות יותר. 15 שנה, 200+ אירועים, 120+ מדינות — ונשמח שהאירוע הבא יהיה שלכם. הודעה אחת וזה מתחיל. שלחו היום. #UproductionEvents #טיוליתמריץ #הפקתאירועים #אירועיםעסקיים #FromBusinessToPleasure",
+    "dimensions": "1.91:1",
+    "cta": "Send us a message"
+  },
+  "image_prompt": "Aerial twilight shot looking down on a grand rooftop gala high above a glittering city skyline, hundreds of guests as tiny figures mingling around a central stage and long banquet tables, string lights and skyline glow merging, the curve of the horizon visible beyond. Photorealistic, 35mm film grain, no CGI, no text, no logos.",
+  "image_style": "photorealistic, editorial, documentary, 35mm film grain",
+  "brand": {
+    "colors": [
+      "#1C1C1C",
+      "#FBCE0A"
+    ],
+    "font": "Comfortaa",
+    "logo": "uproduction_official_logo.png"
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "day": 83,
+  "category": "cta_lead",
+  "language": "es",
+  "date": "2026-07-17",
+  "weekday": "Friday",
+  "theme": "One partner from brief to final applause",
+  "linkedin": {
+    "profile": "Uproduction Events (Company Page)",
+    "text": "Casi todas las pesadillas de eventos empiezan con demasiadas manos y nadie a cargo del resultado. Nosotros hacemos lo contrario. Un solo equipo gestiona tu brief desde la primera llamada hasta el último aplauso: concepto, presupuesto, vuelos, hoteles, escenografía, branding y producción in situ. Sin culpas, sin vacíos, sin sorpresas en la factura. 15 años, más de 200 eventos, más de 120 países. Cuéntanos qué planeas. #UproductionEvents #IncentiveTravel #CorporateEvents #GestiónDeEventos #EventosCorporativos #FromBusinessToPleasure",
+    "dimensions": "1:1",
+    "cta": "DM us or book a call"
+  },
+  "instagram": {
+    "profile": "@uproductionevents",
+    "text": "Casi todas las pesadillas de eventos empiezan con demasiadas manos y nadie a cargo del resultado. Nosotros hacemos lo contrario. Un solo equipo gestiona tu brief desde la primera llamada hasta el último aplauso: concepto, presupuesto, vuelos, hoteles, escenografía, branding y producción in situ. Sin culpas, sin vacíos, sin sorpresas en la factura. 15 años, más de 200 eventos, más de 120 países. Cuéntanos qué planeas. #UproductionEvents #IncentiveTravel #CorporateEvents #GestiónDeEventos #EventosCorporativos #FromBusinessToPleasure",
+    "dimensions": "1:1",
+    "cta": "Link in bio"
+  },
+  "facebook": {
+    "profile": "Uproduction Events (Page)",
+    "text": "Casi todas las pesadillas de eventos empiezan con demasiadas manos y nadie a cargo del resultado. Nosotros hacemos lo contrario. Un solo equipo gestiona tu brief desde la primera llamada hasta el último aplauso: concepto, presupuesto, vuelos, hoteles, escenografía, branding y producción in situ. Sin culpas, sin vacíos, sin sorpresas en la factura. 15 años, más de 200 eventos, más de 120 países. Cuéntanos qué planeas. #UproductionEvents #IncentiveTravel #CorporateEvents #GestiónDeEventos #EventosCorporativos #FromBusinessToPleasure",
+    "dimensions": "1.91:1",
+    "cta": "Send us a message"
+  },
+  "image_prompt": "High wide shot from the back of a packed indoor conference auditorium, thousands of seated attendees seen from behind as tiny silhouettes facing a glowing stage, sculptural lighting rig overhead, soft haze catching warm beams, sense of vast scale and order. Photorealistic, 35mm film grain, no CGI, no text, no logos.",
+  "image_style": "photorealistic, editorial, documentary, 35mm film grain",
+  "brand": {
+    "colors": [
+      "#1C1C1C",
+      "#FBCE0A"
+    ],
+    "font": "Comfortaa",
+    "logo": "uproduction_official_logo.png"
+  }
+}

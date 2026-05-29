@@ -1,0 +1,36 @@
+{
+  "day": 55,
+  "category": "cta_lead",
+  "language": "en",
+  "date": "2026-06-19",
+  "weekday": "Friday",
+  "theme": "The Hidden Cost Of DIY Events",
+  "linkedin": {
+    "profile": "Uproduction Events (Company Page)",
+    "text": "Planning a 500-person event in-house looks cheaper — until you count the cost. ⏳ The 200 internal hours. The vendor who vanishes two weeks out. The contract clause nobody read. The risk that lands on your name. We absorb all of it: sourcing, negotiation, logistics, on-site command and a single point of accountability. You get your team back and your weekends too. The math almost always favors the specialist. Want us to run a free risk-and-cost review of your next event? Send the brief — we'll show you the gaps. 🔍 #UproductionEvents #IncentiveTravel #CorporateEvents #EventManagement #EventPlanning #B2BEvents #MICE #CorporateTravel",
+    "dimensions": "1:1",
+    "cta": "DM us or book a call"
+  },
+  "instagram": {
+    "profile": "@uproductionevents",
+    "text": "Planning a 500-person event in-house looks cheaper — until you count the cost. ⏳ The 200 internal hours. The vendor who vanishes two weeks out. The contract clause nobody read. The risk that lands on your name. We absorb all of it: sourcing, negotiation, logistics, on-site command and a single point of accountability. You get your team back and your weekends too. The math almost always favors the specialist. Want us to run a free risk-and-cost review of your next event? Send the brief — we'll show you the gaps. 🔍 #UproductionEvents #IncentiveTravel #CorporateEvents #EventManagement #EventPlanning #B2BEvents #MICE #CorporateTravel",
+    "dimensions": "1:1",
+    "cta": "Link in bio"
+  },
+  "facebook": {
+    "profile": "Uproduction Events (Page)",
+    "text": "Planning a 500-person event in-house looks cheaper — until you count the cost. ⏳ The 200 internal hours. The vendor who vanishes two weeks out. The contract clause nobody read. The risk that lands on your name. We absorb all of it: sourcing, negotiation, logistics, on-site command and a single point of accountability. You get your team back and your weekends too. The math almost always favors the specialist. Want us to run a free risk-and-cost review of your next event? Send the brief — we'll show you the gaps. 🔍 #UproductionEvents #IncentiveTravel #CorporateEvents #EventManagement #EventPlanning #B2BEvents #MICE #CorporateTravel",
+    "dimensions": "1.91:1",
+    "cta": "Send us a message"
+  },
+  "image_prompt": "Aerial overhead view of a massive outdoor corporate festival at dusk, thousands of attendees seen as tiny figures spread across a lit plaza with food stalls, stage rigging and crowd-flow lanes, organized chaos viewed from very high above, warm and cool lights mixing. Photorealistic, 35mm film grain, no CGI, no text, no logos.",
+  "image_style": "photorealistic, editorial, documentary, 35mm film grain",
+  "brand": {
+    "colors": [
+      "#1C1C1C",
+      "#FBCE0A"
+    ],
+    "font": "Comfortaa",
+    "logo": "uproduction_official_logo.png"
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "day": 59,
+  "category": "destination",
+  "language": "es",
+  "date": "2026-06-23",
+  "weekday": "Tuesday",
+  "theme": "Nice, The Riviera Gateway",
+  "linkedin": {
+    "profile": "Uproduction Events (Company Page)",
+    "text": "Niza es la Riviera sin complicaciones. ✈️ Un gran aeropuerto internacional, la Costa Azul a la puerta y Mónaco, Cannes y Antibes a un corto trayecto — la base perfecta para un incentivo de varios días que se siente glamuroso sin esfuerzo. Galas frente al mar, cenas en villas sobre las colinas y excursiones por la costa más fotografiada de Europa. Nosotros gestionamos la complejidad; tus invitados solo sienten la elegancia. ¿Imaginas la Riviera Francesa para tu programa 2026? Dinos fechas y tamaño del grupo y armamos un borrador esta semana. 🌊 #UproductionEvents #IncentiveTravel #CorporateEvents #Niza #RivieraFrancesa #MICE #ViajesDeLujo #Destinos",
+    "dimensions": "1:1",
+    "cta": "DM us or book a call"
+  },
+  "instagram": {
+    "profile": "@uproductionevents",
+    "text": "Niza es la Riviera sin complicaciones. ✈️ Un gran aeropuerto internacional, la Costa Azul a la puerta y Mónaco, Cannes y Antibes a un corto trayecto — la base perfecta para un incentivo de varios días que se siente glamuroso sin esfuerzo. Galas frente al mar, cenas en villas sobre las colinas y excursiones por la costa más fotografiada de Europa. Nosotros gestionamos la complejidad; tus invitados solo sienten la elegancia. ¿Imaginas la Riviera Francesa para tu programa 2026? Dinos fechas y tamaño del grupo y armamos un borrador esta semana. 🌊 #UproductionEvents #IncentiveTravel #CorporateEvents #Niza #RivieraFrancesa #MICE #ViajesDeLujo #Destinos",
+    "dimensions": "1:1",
+    "cta": "Link in bio"
+  },
+  "facebook": {
+    "profile": "Uproduction Events (Page)",
+    "text": "Niza es la Riviera sin complicaciones. ✈️ Un gran aeropuerto internacional, la Costa Azul a la puerta y Mónaco, Cannes y Antibes a un corto trayecto — la base perfecta para un incentivo de varios días que se siente glamuroso sin esfuerzo. Galas frente al mar, cenas en villas sobre las colinas y excursiones por la costa más fotografiada de Europa. Nosotros gestionamos la complejidad; tus invitados solo sienten la elegancia. ¿Imaginas la Riviera Francesa para tu programa 2026? Dinos fechas y tamaño del grupo y armamos un borrador esta semana. 🌊 #UproductionEvents #IncentiveTravel #CorporateEvents #Niza #RivieraFrancesa #MICE #ViajesDeLujo #Destinos",
+    "dimensions": "1.91:1",
+    "cta": "Send us a message"
+  },
+  "image_prompt": "Sweeping aerial view along the Promenade des Anglais in Nice at golden hour, the curving Baie des Anges with deep blue water meeting the pebble shoreline, Belle Époque facades and palm trees lining the bay, hills rising behind the city, no people discernible, vast luminous coastline. Photorealistic, 35mm film grain, no CGI, no text, no logos.",
+  "image_style": "photorealistic, editorial, documentary, 35mm film grain",
+  "brand": {
+    "colors": [
+      "#1C1C1C",
+      "#FBCE0A"
+    ],
+    "font": "Comfortaa",
+    "logo": "uproduction_official_logo.png"
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "day": 84,
+  "category": "destination",
+  "language": "he",
+  "date": "2026-07-18",
+  "weekday": "Saturday",
+  "theme": "Cape Town where ocean meets mountain drama",
+  "linkedin": {
+    "profile": "Uproduction Events (Company Page)",
+    "text": "איפה עוד הצוות שלכם יכול לעלות על הר ברכבל, לטעום יין ברמה עולמית בעמקים ולצפות בשמש שוקעת בין שני אוקיינוסים — והכל לפני ארוחת הגאלה? קייפ טאון היא יעד התמריץ שמשלב אדרנלין, פינוק ונופים עוצרי נשימה בתוכנית אחת. ספארי, גאלות בכרמים, קבלות פנים על הר השולחן — אנחנו בונים ומפעילים הכל בשטח. בואו נתכנן. שלחו הודעה. #UproductionEvents #טיוליתמריץ #קייפטאון #אירועיםעסקיים #FromBusinessToPleasure",
+    "dimensions": "1:1",
+    "cta": "DM us or book a call"
+  },
+  "instagram": {
+    "profile": "@uproductionevents",
+    "text": "איפה עוד הצוות שלכם יכול לעלות על הר ברכבל, לטעום יין ברמה עולמית בעמקים ולצפות בשמש שוקעת בין שני אוקיינוסים — והכל לפני ארוחת הגאלה? קייפ טאון היא יעד התמריץ שמשלב אדרנלין, פינוק ונופים עוצרי נשימה בתוכנית אחת. ספארי, גאלות בכרמים, קבלות פנים על הר השולחן — אנחנו בונים ומפעילים הכל בשטח. בואו נתכנן. שלחו הודעה. #UproductionEvents #טיוליתמריץ #קייפטאון #אירועיםעסקיים #FromBusinessToPleasure",
+    "dimensions": "1:1",
+    "cta": "Link in bio"
+  },
+  "facebook": {
+    "profile": "Uproduction Events (Page)",
+    "text": "איפה עוד הצוות שלכם יכול לעלות על הר ברכבל, לטעום יין ברמה עולמית בעמקים ולצפות בשמש שוקעת בין שני אוקיינוסים — והכל לפני ארוחת הגאלה? קייפ טאון היא יעד התמריץ שמשלב אדרנלין, פינוק ונופים עוצרי נשימה בתוכנית אחת. ספארי, גאלות בכרמים, קבלות פנים על הר השולחן — אנחנו בונים ומפעילים הכל בשטח. בואו נתכנן. שלחו הודעה. #UproductionEvents #טיוליתמריץ #קייפטאון #אירועיםעסקיים #FromBusinessToPleasure",
+    "dimensions": "1.91:1",
+    "cta": "Send us a message"
+  },
+  "image_prompt": "Sweeping aerial of Cape Town at golden hour, the flat-topped Table Mountain towering over the city and the deep blue Atlantic curving along the coastline, sunlight raking across cliffs and beaches, a tiny luxury yacht trailing a white wake far below in the bay. Photorealistic, 35mm film grain, no CGI, no text, no logos.",
+  "image_style": "photorealistic, editorial, documentary, 35mm film grain",
+  "brand": {
+    "colors": [
+      "#1C1C1C",
+      "#FBCE0A"
+    ],
+    "font": "Comfortaa",
+    "logo": "uproduction_official_logo.png"
+  }
+}

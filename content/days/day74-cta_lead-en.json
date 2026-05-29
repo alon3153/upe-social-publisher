@@ -1,0 +1,36 @@
+{
+  "day": 74,
+  "category": "cta_lead",
+  "language": "en",
+  "date": "2026-07-08",
+  "weekday": "Wednesday",
+  "theme": "Q4 incentive planning starts now",
+  "linkedin": {
+    "profile": "Uproduction Events (Company Page)",
+    "text": "The trip your team takes in Q4 is being decided right now — in calendars, not catalogs. The standout venues, the private estates, the charter flights: they go to whoever books first. By the time it 'feels' like planning season, the best dates are gone. We've spent fifteen years securing the unbookable for clients who moved early. Lock your destination and dates before your competitors do. From business to pleasure. Send us your headcount and target month today. #UproductionEvents #IncentiveTravel #CorporateEvents #Q4Planning #EventStrategy #MICE #B2B #CorporateRetreat",
+    "dimensions": "1:1",
+    "cta": "DM us or book a call"
+  },
+  "instagram": {
+    "profile": "@uproductionevents",
+    "text": "The trip your team takes in Q4 is being decided right now — in calendars, not catalogs. The standout venues, the private estates, the charter flights: they go to whoever books first. By the time it 'feels' like planning season, the best dates are gone. We've spent fifteen years securing the unbookable for clients who moved early. Lock your destination and dates before your competitors do. From business to pleasure. Send us your headcount and target month today. #UproductionEvents #IncentiveTravel #CorporateEvents #Q4Planning #EventStrategy #MICE #B2B #CorporateRetreat",
+    "dimensions": "1:1",
+    "cta": "Link in bio"
+  },
+  "facebook": {
+    "profile": "Uproduction Events (Page)",
+    "text": "The trip your team takes in Q4 is being decided right now — in calendars, not catalogs. The standout venues, the private estates, the charter flights: they go to whoever books first. By the time it 'feels' like planning season, the best dates are gone. We've spent fifteen years securing the unbookable for clients who moved early. Lock your destination and dates before your competitors do. From business to pleasure. Send us your headcount and target month today. #UproductionEvents #IncentiveTravel #CorporateEvents #Q4Planning #EventStrategy #MICE #B2B #CorporateRetreat",
+    "dimensions": "1.91:1",
+    "cta": "Send us a message"
+  },
+  "image_prompt": "High aerial view at dusk over a large coastal resort, hundreds of guests as tiny figures gathered across a series of connected infinity terraces overlooking the sea, soft pool lighting glowing turquoise, palm silhouettes, a yacht anchored offshore, the last orange light fading at the horizon line. Photorealistic, 35mm film grain, no CGI, no text, no logos.",
+  "image_style": "photorealistic, editorial, documentary, 35mm film grain",
+  "brand": {
+    "colors": [
+      "#1C1C1C",
+      "#FBCE0A"
+    ],
+    "font": "Comfortaa",
+    "logo": "uproduction_official_logo.png"
+  }
+}

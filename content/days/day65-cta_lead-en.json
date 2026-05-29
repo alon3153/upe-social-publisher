@@ -1,0 +1,36 @@
+{
+  "day": 65,
+  "category": "cta_lead",
+  "language": "en",
+  "date": "2026-06-29",
+  "weekday": "Monday",
+  "theme": "Stop planning events alone start producing",
+  "linkedin": {
+    "profile": "Uproduction Events (Company Page)",
+    "text": "Running an event in-house while running your business? That's two full-time jobs. Hand us the brief and reclaim your focus. UPE manages everything — venues, logistics, production, talent, transport, the unexpected — across Italy and beyond. You bring the goals; we deliver the standing ovation. 200+ events, 120+ countries, since 2010. Let's talk about your next one. DM us today. #UproductionEvents #IncentiveTravel #CorporateEvents #EventProduction #B2B #EventManagement #FromBusinessToPleasure",
+    "dimensions": "1:1",
+    "cta": "DM us or book a call"
+  },
+  "instagram": {
+    "profile": "@uproductionevents",
+    "text": "Running an event in-house while running your business? That's two full-time jobs. Hand us the brief and reclaim your focus. UPE manages everything — venues, logistics, production, talent, transport, the unexpected — across Italy and beyond. You bring the goals; we deliver the standing ovation. 200+ events, 120+ countries, since 2010. Let's talk about your next one. DM us today. #UproductionEvents #IncentiveTravel #CorporateEvents #EventProduction #B2B #EventManagement #FromBusinessToPleasure",
+    "dimensions": "1:1",
+    "cta": "Link in bio"
+  },
+  "facebook": {
+    "profile": "Uproduction Events (Page)",
+    "text": "Running an event in-house while running your business? That's two full-time jobs. Hand us the brief and reclaim your focus. UPE manages everything — venues, logistics, production, talent, transport, the unexpected — across Italy and beyond. You bring the goals; we deliver the standing ovation. 200+ events, 120+ countries, since 2010. Let's talk about your next one. DM us today. #UproductionEvents #IncentiveTravel #CorporateEvents #EventProduction #B2B #EventManagement #FromBusinessToPleasure",
+    "dimensions": "1.91:1",
+    "cta": "Send us a message"
+  },
+  "image_prompt": "Wide overhead shot of a massive corporate conference audience from behind, thousands of seated heads filling a vast modern hall, a distant stage glowing at the far end, dramatic uplighting washing the side walls, immense sense of scale, tiny faces. Photorealistic, 35mm film grain, no CGI, no text, no logos.",
+  "image_style": "photorealistic, editorial, documentary, 35mm film grain",
+  "brand": {
+    "colors": [
+      "#1C1C1C",
+      "#FBCE0A"
+    ],
+    "font": "Comfortaa",
+    "logo": "uproduction_official_logo.png"
+  }
+}

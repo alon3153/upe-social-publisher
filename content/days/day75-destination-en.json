@@ -1,0 +1,36 @@
+{
+  "day": 75,
+  "category": "destination",
+  "language": "en",
+  "date": "2026-07-09",
+  "weekday": "Thursday",
+  "theme": "Dubrovnik walls above the Adriatic",
+  "linkedin": {
+    "profile": "Uproduction Events (Company Page)",
+    "text": "Reward people inside a city the sea couldn't conquer. Dubrovnik gives your team medieval walls to walk at sunset, a private island for the gala, and an Adriatic so blue it looks edited. We've staged conferences on ancient ramparts and dinners in cliffside fortresses here — the kind of setting that makes a reward feel earned and unrepeatable. Your top performers will know exactly what it cost you to bring them here. That's the message. From business to pleasure. Message us about Dubrovnik. #UproductionEvents #IncentiveTravel #CorporateEvents #Dubrovnik #Croatia #LuxuryTravel #MICE #EventDesign",
+    "dimensions": "1:1",
+    "cta": "DM us or book a call"
+  },
+  "instagram": {
+    "profile": "@uproductionevents",
+    "text": "Reward people inside a city the sea couldn't conquer. Dubrovnik gives your team medieval walls to walk at sunset, a private island for the gala, and an Adriatic so blue it looks edited. We've staged conferences on ancient ramparts and dinners in cliffside fortresses here — the kind of setting that makes a reward feel earned and unrepeatable. Your top performers will know exactly what it cost you to bring them here. That's the message. From business to pleasure. Message us about Dubrovnik. #UproductionEvents #IncentiveTravel #CorporateEvents #Dubrovnik #Croatia #LuxuryTravel #MICE #EventDesign",
+    "dimensions": "1:1",
+    "cta": "Link in bio"
+  },
+  "facebook": {
+    "profile": "Uproduction Events (Page)",
+    "text": "Reward people inside a city the sea couldn't conquer. Dubrovnik gives your team medieval walls to walk at sunset, a private island for the gala, and an Adriatic so blue it looks edited. We've staged conferences on ancient ramparts and dinners in cliffside fortresses here — the kind of setting that makes a reward feel earned and unrepeatable. Your top performers will know exactly what it cost you to bring them here. That's the message. From business to pleasure. Message us about Dubrovnik. #UproductionEvents #IncentiveTravel #CorporateEvents #Dubrovnik #Croatia #LuxuryTravel #MICE #EventDesign",
+    "dimensions": "1.91:1",
+    "cta": "Send us a message"
+  },
+  "image_prompt": "Dramatic aerial view of Dubrovnik's old town from high above, the circular medieval stone walls hugging terracotta rooftops, the deep blue Adriatic wrapping around the peninsula, a lone kayak trailing a wake far below, distant islands hazy on the horizon, late afternoon light raking across the stone. Photorealistic, 35mm film grain, no CGI, no text, no logos.",
+  "image_style": "photorealistic, editorial, documentary, 35mm film grain",
+  "brand": {
+    "colors": [
+      "#1C1C1C",
+      "#FBCE0A"
+    ],
+    "font": "Comfortaa",
+    "logo": "uproduction_official_logo.png"
+  }
+}

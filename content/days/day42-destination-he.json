@@ -1,0 +1,36 @@
+{
+  "day": 42,
+  "category": "destination",
+  "language": "he",
+  "date": "2026-06-06",
+  "weekday": "Saturday",
+  "theme": "Mykonos After Dark",
+  "linkedin": {
+    "profile": "Uproduction Events (Company Page)",
+    "text": "קירות לבנים. כחול אגאי. שקיעה שהופכת ארוחת ערב עסקית לזיכרון שמדברים עליו שנים. 🌅 מיקונוס היא לא רק רקע — היא הצהרה שהצוות שלכם הגיע לפסגה. הפקנו ערבי גאלה למאות אורחים על מרפסות מול הים, עם לוגיסטיקה מקצה לקצה — אתם רואים רק את הקסם. כאן טיולי התמריצים מפסיקים להרגיש כמו נסיעת עבודה. חושבים על יוון לתוכנית התגמול הבאה? בואו נדבר לפני שעונת השיא סוגרת את האי. 👉 שלחו \"מיקונוס\" או קבעו שיחה דרך הקישור בביו. #UproductionEvents #IncentiveTravel #מיקונוס #טיולתמריצים #הפקתאירועים",
+    "dimensions": "1:1",
+    "cta": "DM us or book a call"
+  },
+  "instagram": {
+    "profile": "@uproductionevents",
+    "text": "קירות לבנים. כחול אגאי. שקיעה שהופכת ארוחת ערב עסקית לזיכרון שמדברים עליו שנים. 🌅 מיקונוס היא לא רק רקע — היא הצהרה שהצוות שלכם הגיע לפסגה. הפקנו ערבי גאלה למאות אורחים על מרפסות מול הים, עם לוגיסטיקה מקצה לקצה — אתם רואים רק את הקסם. כאן טיולי התמריצים מפסיקים להרגיש כמו נסיעת עבודה. חושבים על יוון לתוכנית התגמול הבאה? בואו נדבר לפני שעונת השיא סוגרת את האי. 👉 שלחו \"מיקונוס\" או קבעו שיחה דרך הקישור בביו. #UproductionEvents #IncentiveTravel #מיקונוס #טיולתמריצים #הפקתאירועים",
+    "dimensions": "1:1",
+    "cta": "Link in bio"
+  },
+  "facebook": {
+    "profile": "Uproduction Events (Page)",
+    "text": "קירות לבנים. כחול אגאי. שקיעה שהופכת ארוחת ערב עסקית לזיכרון שמדברים עליו שנים. 🌅 מיקונוס היא לא רק רקע — היא הצהרה שהצוות שלכם הגיע לפסגה. הפקנו ערבי גאלה למאות אורחים על מרפסות מול הים, עם לוגיסטיקה מקצה לקצה — אתם רואים רק את הקסם. כאן טיולי התמריצים מפסיקים להרגיש כמו נסיעת עבודה. חושבים על יוון לתוכנית התגמול הבאה? בואו נדבר לפני שעונת השיא סוגרת את האי. 👉 שלחו \"מיקונוס\" או קבעו שיחה דרך הקישור בביו. #UproductionEvents #IncentiveTravel #מיקונוס #טיולתמריצים #הפקתאירועים",
+    "dimensions": "1.91:1",
+    "cta": "Send us a message"
+  },
+  "image_prompt": "Aerial twilight view of Mykonos coastline, whitewashed cube houses cascading down to a dark Aegean sea, iconic windmills silhouetted on a ridge, a distant cluster of hundreds of event guests gathered on a vast seaside terrace lit by warm lanterns, tiny figures from above, deep indigo sky with first stars. Photorealistic, 35mm film grain, no CGI, no text, no logos.",
+  "image_style": "photorealistic, editorial, documentary, 35mm film grain",
+  "brand": {
+    "colors": [
+      "#1C1C1C",
+      "#FBCE0A"
+    ],
+    "font": "Comfortaa",
+    "logo": "uproduction_official_logo.png"
+  }
+}

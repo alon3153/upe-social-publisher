@@ -1,0 +1,36 @@
+{
+  "day": 88,
+  "category": "destination",
+  "language": "es",
+  "date": "2026-07-22",
+  "weekday": "Wednesday",
+  "theme": "Marrakesh palatial nights and desert grandeur",
+  "linkedin": {
+    "profile": "Uproduction Events (Company Page)",
+    "text": "Pocos destinos convierten una noche en teatro como Marrakech. Patios de riad iluminados con farolillos, una gala a la luz de las velas en un jardín rodeado de antorchas, una cena privada bajo las estrellas en el desierto de Agafay con el Atlas brillando en el horizonte. Suma caravanas de camellos, tambores y bailarines, y tienes un programa de incentivos que se siente como entrar en otro mundo. Suficientemente exótico para impresionar, suficientemente cercano para ser sencillo. Diseñamos cada momento y lo operamos sobre el terreno. Creemos magia — escríbenos. #UproductionEvents #IncentiveTravel #Marrakech #Marruecos #ViajesDeIncentivo #FromBusinessToPleasure",
+    "dimensions": "1:1",
+    "cta": "DM us or book a call"
+  },
+  "instagram": {
+    "profile": "@uproductionevents",
+    "text": "Pocos destinos convierten una noche en teatro como Marrakech. Patios de riad iluminados con farolillos, una gala a la luz de las velas en un jardín rodeado de antorchas, una cena privada bajo las estrellas en el desierto de Agafay con el Atlas brillando en el horizonte. Suma caravanas de camellos, tambores y bailarines, y tienes un programa de incentivos que se siente como entrar en otro mundo. Suficientemente exótico para impresionar, suficientemente cercano para ser sencillo. Diseñamos cada momento y lo operamos sobre el terreno. Creemos magia — escríbenos. #UproductionEvents #IncentiveTravel #Marrakech #Marruecos #ViajesDeIncentivo #FromBusinessToPleasure",
+    "dimensions": "1:1",
+    "cta": "Link in bio"
+  },
+  "facebook": {
+    "profile": "Uproduction Events (Page)",
+    "text": "Pocos destinos convierten una noche en teatro como Marrakech. Patios de riad iluminados con farolillos, una gala a la luz de las velas en un jardín rodeado de antorchas, una cena privada bajo las estrellas en el desierto de Agafay con el Atlas brillando en el horizonte. Suma caravanas de camellos, tambores y bailarines, y tienes un programa de incentivos que se siente como entrar en otro mundo. Suficientemente exótico para impresionar, suficientemente cercano para ser sencillo. Diseñamos cada momento y lo operamos sobre el terreno. Creemos magia — escríbenos. #UproductionEvents #IncentiveTravel #Marrakech #Marruecos #ViajesDeIncentivo #FromBusinessToPleasure",
+    "dimensions": "1.91:1",
+    "cta": "Send us a message"
+  },
+  "image_prompt": "Aerial view at dusk over a sprawling Marrakesh riad estate, lantern-lit courtyards and reflecting pools surrounded by palm groves, the Atlas Mountains glowing pink on the horizon, tiny guests gathered around a candlelit dinner in a torch-rimmed garden far below, ochre rooftops fading into desert. Photorealistic, 35mm film grain, no CGI, no text, no logos.",
+  "image_style": "photorealistic, editorial, documentary, 35mm film grain",
+  "brand": {
+    "colors": [
+      "#1C1C1C",
+      "#FBCE0A"
+    ],
+    "font": "Comfortaa",
+    "logo": "uproduction_official_logo.png"
+  }
+}

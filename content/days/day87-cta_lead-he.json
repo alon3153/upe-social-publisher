@@ -1,0 +1,36 @@
+{
+  "day": 87,
+  "category": "cta_lead",
+  "language": "he",
+  "date": "2026-07-21",
+  "weekday": "Tuesday",
+  "theme": "Budgets that build experiences not excuses",
+  "linkedin": {
+    "profile": "Uproduction Events (Company Page)",
+    "text": "תקציב אירוע טוב הוא לא עניין של להוציא יותר — אלא של כל יורו שמורגש על ידי האנשים בחדר. 15 שנה למדנו איפה הכסף יוצר זיכרונות ואיפה הוא נעלם בשקט. התוצאה: תוכניות שנראות ומרגישות פרימיום בלי בזבוז, עם שקיפות מלאה ואפס הפתעות בגמר חשבון. אתם קובעים את התקציב; אנחנו דואגים שיעבוד הרבה מעבר לגודלו. רוצים לראות עד לאן שלכם יכול להגיע? שלחו בריף ונדבר מספרים. #UproductionEvents #טיוליתמריץ #הפקתאירועים #אירועיםעסקיים #FromBusinessToPleasure",
+    "dimensions": "1:1",
+    "cta": "DM us or book a call"
+  },
+  "instagram": {
+    "profile": "@uproductionevents",
+    "text": "תקציב אירוע טוב הוא לא עניין של להוציא יותר — אלא של כל יורו שמורגש על ידי האנשים בחדר. 15 שנה למדנו איפה הכסף יוצר זיכרונות ואיפה הוא נעלם בשקט. התוצאה: תוכניות שנראות ומרגישות פרימיום בלי בזבוז, עם שקיפות מלאה ואפס הפתעות בגמר חשבון. אתם קובעים את התקציב; אנחנו דואגים שיעבוד הרבה מעבר לגודלו. רוצים לראות עד לאן שלכם יכול להגיע? שלחו בריף ונדבר מספרים. #UproductionEvents #טיוליתמריץ #הפקתאירועים #אירועיםעסקיים #FromBusinessToPleasure",
+    "dimensions": "1:1",
+    "cta": "Link in bio"
+  },
+  "facebook": {
+    "profile": "Uproduction Events (Page)",
+    "text": "תקציב אירוע טוב הוא לא עניין של להוציא יותר — אלא של כל יורו שמורגש על ידי האנשים בחדר. 15 שנה למדנו איפה הכסף יוצר זיכרונות ואיפה הוא נעלם בשקט. התוצאה: תוכניות שנראות ומרגישות פרימיום בלי בזבוז, עם שקיפות מלאה ואפס הפתעות בגמר חשבון. אתם קובעים את התקציב; אנחנו דואגים שיעבוד הרבה מעבר לגודלו. רוצים לראות עד לאן שלכם יכול להגיע? שלחו בריף ונדבר מספרים. #UproductionEvents #טיוליתמריץ #הפקתאירועים #אירועיםעסקיים #FromBusinessToPleasure",
+    "dimensions": "1.91:1",
+    "cta": "Send us a message"
+  },
+  "image_prompt": "Elevated wide shot from behind a large seated audience at an elegant outdoor dinner, hundreds of guests viewed from the rear facing a softly lit stage across a reflecting pool, suspended warm bulbs overhead, manicured gardens framing the scene, deep dusk sky. Photorealistic, 35mm film grain, no CGI, no text, no logos.",
+  "image_style": "photorealistic, editorial, documentary, 35mm film grain",
+  "brand": {
+    "colors": [
+      "#1C1C1C",
+      "#FBCE0A"
+    ],
+    "font": "Comfortaa",
+    "logo": "uproduction_official_logo.png"
+  }
+}

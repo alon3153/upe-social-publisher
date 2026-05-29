@@ -1,0 +1,36 @@
+{
+  "day": 69,
+  "category": "cta_lead",
+  "language": "en",
+  "date": "2026-07-03",
+  "weekday": "Friday",
+  "theme": "Book 2027 dates before they vanish",
+  "linkedin": {
+    "profile": "Uproduction Events (Company Page)",
+    "text": "The most coveted Italian venues for 2027 are already filling. Prime dates, signature villas, and the chefs everyone wants don't wait for late deciders. If a flagship incentive trip or conference is on next year's horizon, now is the moment to lock it in. UPE secures the spaces others can't and shapes them around your goals. Start the conversation today — your future self will thank you. DM us. #UproductionEvents #IncentiveTravel #CorporateEvents #EventPlanning #ItalyEvents #B2B #EventProduction",
+    "dimensions": "1:1",
+    "cta": "DM us or book a call"
+  },
+  "instagram": {
+    "profile": "@uproductionevents",
+    "text": "The most coveted Italian venues for 2027 are already filling. Prime dates, signature villas, and the chefs everyone wants don't wait for late deciders. If a flagship incentive trip or conference is on next year's horizon, now is the moment to lock it in. UPE secures the spaces others can't and shapes them around your goals. Start the conversation today — your future self will thank you. DM us. #UproductionEvents #IncentiveTravel #CorporateEvents #EventPlanning #ItalyEvents #B2B #EventProduction",
+    "dimensions": "1:1",
+    "cta": "Link in bio"
+  },
+  "facebook": {
+    "profile": "Uproduction Events (Page)",
+    "text": "The most coveted Italian venues for 2027 are already filling. Prime dates, signature villas, and the chefs everyone wants don't wait for late deciders. If a flagship incentive trip or conference is on next year's horizon, now is the moment to lock it in. UPE secures the spaces others can't and shapes them around your goals. Start the conversation today — your future self will thank you. DM us. #UproductionEvents #IncentiveTravel #CorporateEvents #EventPlanning #ItalyEvents #B2B #EventProduction",
+    "dimensions": "1.91:1",
+    "cta": "Send us a message"
+  },
+  "image_prompt": "Aerial sunset view of a sprawling historic estate with vast manicured gardens, a long arrival driveway lined with cypress trees, hundreds of guests gathering on a grand lawn far below as tiny figures, golden light raking across the grounds. Photorealistic, 35mm film grain, no CGI, no text, no logos.",
+  "image_style": "photorealistic, editorial, documentary, 35mm film grain",
+  "brand": {
+    "colors": [
+      "#1C1C1C",
+      "#FBCE0A"
+    ],
+    "font": "Comfortaa",
+    "logo": "uproduction_official_logo.png"
+  }
+}

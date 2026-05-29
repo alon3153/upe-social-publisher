@@ -1,0 +1,36 @@
+{
+  "day": 54,
+  "category": "destination",
+  "language": "es",
+  "date": "2026-06-18",
+  "weekday": "Thursday",
+  "theme": "Lisbon Light, Atlantic Energy",
+  "linkedin": {
+    "profile": "Uproduction Events (Company Page)",
+    "text": "Lisboa vive su mejor momento — y tu equipo debería estar ahí. ☀️ Tardes de adoquines, espacios junto al Tajo, noches de gala con fado y mariscos que detienen la conversación. Aquí el encanto europeo se encuentra con un valor real, una de las elecciones más inteligentes para los presupuestos de 2026. Conseguimos los espacios que otros no pueden y producimos de principio a fin. ¿Quieres ver cómo sería un programa en Lisboa para tu grupo? Responde o escríbenos y te enviamos un itinerario de muestra. ✈️ #UproductionEvents #IncentiveTravel #CorporateEvents #Lisboa #Portugal #EventosCorporativos #MICE #Incentivos",
+    "dimensions": "1:1",
+    "cta": "DM us or book a call"
+  },
+  "instagram": {
+    "profile": "@uproductionevents",
+    "text": "Lisboa vive su mejor momento — y tu equipo debería estar ahí. ☀️ Tardes de adoquines, espacios junto al Tajo, noches de gala con fado y mariscos que detienen la conversación. Aquí el encanto europeo se encuentra con un valor real, una de las elecciones más inteligentes para los presupuestos de 2026. Conseguimos los espacios que otros no pueden y producimos de principio a fin. ¿Quieres ver cómo sería un programa en Lisboa para tu grupo? Responde o escríbenos y te enviamos un itinerario de muestra. ✈️ #UproductionEvents #IncentiveTravel #CorporateEvents #Lisboa #Portugal #EventosCorporativos #MICE #Incentivos",
+    "dimensions": "1:1",
+    "cta": "Link in bio"
+  },
+  "facebook": {
+    "profile": "Uproduction Events (Page)",
+    "text": "Lisboa vive su mejor momento — y tu equipo debería estar ahí. ☀️ Tardes de adoquines, espacios junto al Tajo, noches de gala con fado y mariscos que detienen la conversación. Aquí el encanto europeo se encuentra con un valor real, una de las elecciones más inteligentes para los presupuestos de 2026. Conseguimos los espacios que otros no pueden y producimos de principio a fin. ¿Quieres ver cómo sería un programa en Lisboa para tu grupo? Responde o escríbenos y te enviamos un itinerario de muestra. ✈️ #UproductionEvents #IncentiveTravel #CorporateEvents #Lisboa #Portugal #EventosCorporativos #MICE #Incentivos",
+    "dimensions": "1.91:1",
+    "cta": "Send us a message"
+  },
+  "image_prompt": "Aerial view at golden hour over Lisbon's hills, pastel buildings and red-tiled roofs cascading down to the wide Tagus river estuary, the 25 de Abril bridge in the distance, soft Atlantic light flooding the scene, no people, vast cinematic cityscape. Photorealistic, 35mm film grain, no CGI, no text, no logos.",
+  "image_style": "photorealistic, editorial, documentary, 35mm film grain",
+  "brand": {
+    "colors": [
+      "#1C1C1C",
+      "#FBCE0A"
+    ],
+    "font": "Comfortaa",
+    "logo": "uproduction_official_logo.png"
+  }
+}

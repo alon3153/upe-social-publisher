@@ -1,0 +1,36 @@
+{
+  "day": 47,
+  "category": "cta_lead",
+  "language": "es",
+  "date": "2026-06-11",
+  "weekday": "Thursday",
+  "theme": "DM Us To Start Your Brief",
+  "linkedin": {
+    "profile": "Uproduction Events (Company Page)",
+    "text": "No necesitas un RFP de 40 páginas para empezar. Solo necesitas enviarnos dos cosas: tu idea de destino y el número de personas. 💬 Con eso basta para responderte con una dirección realista, un presupuesto aproximado y las preguntas que vale la pena resolver después. Hemos creado más de 200 eventos a partir de briefs que empezaron exactamente así de sueltos. Lo más difícil de un gran evento es simplemente empezar — hagamos que esa parte tome 10 segundos. 📲 Escríbenos ahora con \"[Destino] + [número de personas]\" y seguimos desde ahí. #UproductionEvents #IncentiveTravel #CorporateEvents #PlanificacionDeEventos #EventosB2B #EventProduction #ViajesDeIncentivo #DisenoDeEventos",
+    "dimensions": "1:1",
+    "cta": "DM us or book a call"
+  },
+  "instagram": {
+    "profile": "@uproductionevents",
+    "text": "No necesitas un RFP de 40 páginas para empezar. Solo necesitas enviarnos dos cosas: tu idea de destino y el número de personas. 💬 Con eso basta para responderte con una dirección realista, un presupuesto aproximado y las preguntas que vale la pena resolver después. Hemos creado más de 200 eventos a partir de briefs que empezaron exactamente así de sueltos. Lo más difícil de un gran evento es simplemente empezar — hagamos que esa parte tome 10 segundos. 📲 Escríbenos ahora con \"[Destino] + [número de personas]\" y seguimos desde ahí. #UproductionEvents #IncentiveTravel #CorporateEvents #PlanificacionDeEventos #EventosB2B #EventProduction #ViajesDeIncentivo #DisenoDeEventos",
+    "dimensions": "1:1",
+    "cta": "Link in bio"
+  },
+  "facebook": {
+    "profile": "Uproduction Events (Page)",
+    "text": "No necesitas un RFP de 40 páginas para empezar. Solo necesitas enviarnos dos cosas: tu idea de destino y el número de personas. 💬 Con eso basta para responderte con una dirección realista, un presupuesto aproximado y las preguntas que vale la pena resolver después. Hemos creado más de 200 eventos a partir de briefs que empezaron exactamente así de sueltos. Lo más difícil de un gran evento es simplemente empezar — hagamos que esa parte tome 10 segundos. 📲 Escríbenos ahora con \"[Destino] + [número de personas]\" y seguimos desde ahí. #UproductionEvents #IncentiveTravel #CorporateEvents #PlanificacionDeEventos #EventosB2B #EventProduction #ViajesDeIncentivo #DisenoDeEventos",
+    "dimensions": "1.91:1",
+    "cta": "Send us a message"
+  },
+  "image_prompt": "Drone shot looking straight down on a huge crowd of corporate guests mingling at an evening reception across a Mediterranean piazza, hundreds of tiny figures from directly above scattered around glowing cocktail stations and long banquet tables, warm pools of light on dark stone paving. Photorealistic, 35mm film grain, no CGI, no text, no logos.",
+  "image_style": "photorealistic, editorial, documentary, 35mm film grain",
+  "brand": {
+    "colors": [
+      "#1C1C1C",
+      "#FBCE0A"
+    ],
+    "font": "Comfortaa",
+    "logo": "uproduction_official_logo.png"
+  }
+}

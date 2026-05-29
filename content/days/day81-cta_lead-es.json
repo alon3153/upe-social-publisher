@@ -1,0 +1,36 @@
+{
+  "day": 81,
+  "category": "cta_lead",
+  "language": "es",
+  "date": "2026-07-15",
+  "weekday": "Wednesday",
+  "theme": "Stop planning. Start producing extraordinary",
+  "linkedin": {
+    "profile": "Uproduction Events (Company Page)",
+    "text": "Una sala de juntas crea diapositivas. Un destino crea leyendas. Durante 15 años hemos movido a cientos de personas por más de 120 países, convirtiendo agendas corporativas en historias inolvidables. Conferencias, galas, viajes de incentivo — diseñados de principio a fin y ejecutados sin fallas. La diferencia entre un evento al que asisten y uno que jamás olvidan es quién lo produce. Diseñemos el tuyo. Escríbenos. #UproductionEvents #IncentiveTravel #CorporateEvents #ViajesDeIncentivo #EventosCorporativos #ProducciónDeEventos",
+    "dimensions": "1:1",
+    "cta": "DM us or book a call"
+  },
+  "instagram": {
+    "profile": "@uproductionevents",
+    "text": "Una sala de juntas crea diapositivas. Un destino crea leyendas. Durante 15 años hemos movido a cientos de personas por más de 120 países, convirtiendo agendas corporativas en historias inolvidables. Conferencias, galas, viajes de incentivo — diseñados de principio a fin y ejecutados sin fallas. La diferencia entre un evento al que asisten y uno que jamás olvidan es quién lo produce. Diseñemos el tuyo. Escríbenos. #UproductionEvents #IncentiveTravel #CorporateEvents #ViajesDeIncentivo #EventosCorporativos #ProducciónDeEventos",
+    "dimensions": "1:1",
+    "cta": "Link in bio"
+  },
+  "facebook": {
+    "profile": "Uproduction Events (Page)",
+    "text": "Una sala de juntas crea diapositivas. Un destino crea leyendas. Durante 15 años hemos movido a cientos de personas por más de 120 países, convirtiendo agendas corporativas en historias inolvidables. Conferencias, galas, viajes de incentivo — diseñados de principio a fin y ejecutados sin fallas. La diferencia entre un evento al que asisten y uno que jamás olvidan es quién lo produce. Diseñemos el tuyo. Escríbenos. #UproductionEvents #IncentiveTravel #CorporateEvents #ViajesDeIncentivo #EventosCorporativos #ProducciónDeEventos",
+    "dimensions": "1.91:1",
+    "cta": "Send us a message"
+  },
+  "image_prompt": "Aerial drone view from directly above a vast outdoor gala dinner at dusk, hundreds of round tables with warm candlelight stretching across a private estate lawn, tiny guests seated far below, golden fairy lights threading between trees, dramatic blue-hour sky. Photorealistic, 35mm film grain, no CGI, no text, no logos.",
+  "image_style": "photorealistic, editorial, documentary, 35mm film grain",
+  "brand": {
+    "colors": [
+      "#1C1C1C",
+      "#FBCE0A"
+    ],
+    "font": "Comfortaa",
+    "logo": "uproduction_official_logo.png"
+  }
+}

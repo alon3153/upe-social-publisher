@@ -1,0 +1,36 @@
+{
+  "day": 68,
+  "category": "behind_scenes",
+  "language": "es",
+  "date": "2026-07-02",
+  "weekday": "Thursday",
+  "theme": "The crew you never see working",
+  "linkedin": {
+    "profile": "Uproduction Events (Company Page)",
+    "text": "Los invitados llegan a la perfección. Nunca ven el montaje a las 4 a.m., las radios, el plan B del plan B. No ven a nuestro equipo recorriendo cada metro de la ruta, cronometrando cada traslado, probando cada plato. Esa máquina invisible es exactamente lo que usted paga, y la razón por la que nada falla. UPE: la calma detrás del espectáculo. Cuéntenos su visión y construiremos el motor. #UproductionEvents #IncentiveTravel #CorporateEvents #DetrasDeCamaras #EventosCorporativos #B2B",
+    "dimensions": "1:1",
+    "cta": "DM us or book a call"
+  },
+  "instagram": {
+    "profile": "@uproductionevents",
+    "text": "Los invitados llegan a la perfección. Nunca ven el montaje a las 4 a.m., las radios, el plan B del plan B. No ven a nuestro equipo recorriendo cada metro de la ruta, cronometrando cada traslado, probando cada plato. Esa máquina invisible es exactamente lo que usted paga, y la razón por la que nada falla. UPE: la calma detrás del espectáculo. Cuéntenos su visión y construiremos el motor. #UproductionEvents #IncentiveTravel #CorporateEvents #DetrasDeCamaras #EventosCorporativos #B2B",
+    "dimensions": "1:1",
+    "cta": "Link in bio"
+  },
+  "facebook": {
+    "profile": "Uproduction Events (Page)",
+    "text": "Los invitados llegan a la perfección. Nunca ven el montaje a las 4 a.m., las radios, el plan B del plan B. No ven a nuestro equipo recorriendo cada metro de la ruta, cronometrando cada traslado, probando cada plato. Esa máquina invisible es exactamente lo que usted paga, y la razón por la que nada falla. UPE: la calma detrás del espectáculo. Cuéntenos su visión y construiremos el motor. #UproductionEvents #IncentiveTravel #CorporateEvents #DetrasDeCamaras #EventosCorporativos #B2B",
+    "dimensions": "1.91:1",
+    "cta": "Send us a message"
+  },
+  "image_prompt": "Pre-dawn overhead view of an empty grand event space being prepared, dozens of crew members as small figures from above arranging hundreds of chairs in perfect rows, laying tables, running rigging across a vast hall, soft work lights, immense scale of an event taking shape. Photorealistic, 35mm film grain, no CGI, no text, no logos.",
+  "image_style": "photorealistic, editorial, documentary, 35mm film grain",
+  "brand": {
+    "colors": [
+      "#1C1C1C",
+      "#FBCE0A"
+    ],
+    "font": "Comfortaa",
+    "logo": "uproduction_official_logo.png"
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "day": 75,
+  "category": "destination",
+  "language": "es",
+  "date": "2026-07-09",
+  "weekday": "Thursday",
+  "theme": "Dubrovnik walls above the Adriatic",
+  "linkedin": {
+    "profile": "Uproduction Events (Company Page)",
+    "text": "Premia a tu gente dentro de una ciudad que el mar no pudo conquistar. Dubrovnik le da a tu equipo murallas medievales para recorrer al atardecer, una isla privada para la gala y un Adriático tan azul que parece editado. Aquí hemos montado congresos sobre murallas antiguas y cenas en fortalezas sobre acantilados: un escenario que hace que el premio se sienta merecido e irrepetible. Tus mejores sabrán exactamente lo que costó traerlos. Ese es el mensaje. From business to pleasure. Escríbenos sobre Dubrovnik. #UproductionEvents #IncentiveTravel #CorporateEvents #Dubrovnik #Croacia #ViajesDeLujo #MICE #DiseñoDeEventos",
+    "dimensions": "1:1",
+    "cta": "DM us or book a call"
+  },
+  "instagram": {
+    "profile": "@uproductionevents",
+    "text": "Premia a tu gente dentro de una ciudad que el mar no pudo conquistar. Dubrovnik le da a tu equipo murallas medievales para recorrer al atardecer, una isla privada para la gala y un Adriático tan azul que parece editado. Aquí hemos montado congresos sobre murallas antiguas y cenas en fortalezas sobre acantilados: un escenario que hace que el premio se sienta merecido e irrepetible. Tus mejores sabrán exactamente lo que costó traerlos. Ese es el mensaje. From business to pleasure. Escríbenos sobre Dubrovnik. #UproductionEvents #IncentiveTravel #CorporateEvents #Dubrovnik #Croacia #ViajesDeLujo #MICE #DiseñoDeEventos",
+    "dimensions": "1:1",
+    "cta": "Link in bio"
+  },
+  "facebook": {
+    "profile": "Uproduction Events (Page)",
+    "text": "Premia a tu gente dentro de una ciudad que el mar no pudo conquistar. Dubrovnik le da a tu equipo murallas medievales para recorrer al atardecer, una isla privada para la gala y un Adriático tan azul que parece editado. Aquí hemos montado congresos sobre murallas antiguas y cenas en fortalezas sobre acantilados: un escenario que hace que el premio se sienta merecido e irrepetible. Tus mejores sabrán exactamente lo que costó traerlos. Ese es el mensaje. From business to pleasure. Escríbenos sobre Dubrovnik. #UproductionEvents #IncentiveTravel #CorporateEvents #Dubrovnik #Croacia #ViajesDeLujo #MICE #DiseñoDeEventos",
+    "dimensions": "1.91:1",
+    "cta": "Send us a message"
+  },
+  "image_prompt": "Dramatic aerial view of Dubrovnik's old town from high above, the circular medieval stone walls hugging terracotta rooftops, the deep blue Adriatic wrapping around the peninsula, a lone kayak trailing a wake far below, distant islands hazy on the horizon, late afternoon light raking across the stone. Photorealistic, 35mm film grain, no CGI, no text, no logos.",
+  "image_style": "photorealistic, editorial, documentary, 35mm film grain",
+  "brand": {
+    "colors": [
+      "#1C1C1C",
+      "#FBCE0A"
+    ],
+    "font": "Comfortaa",
+    "logo": "uproduction_official_logo.png"
+  }
+}

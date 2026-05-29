@@ -1,0 +1,36 @@
+{
+  "day": 55,
+  "category": "cta_lead",
+  "language": "es",
+  "date": "2026-06-19",
+  "weekday": "Friday",
+  "theme": "The Hidden Cost Of DIY Events",
+  "linkedin": {
+    "profile": "Uproduction Events (Company Page)",
+    "text": "Organizar un evento de 500 personas internamente parece más barato — hasta que cuentas el costo real. ⏳ Las 200 horas internas. El proveedor que desaparece dos semanas antes. La cláusula que nadie leyó. El riesgo que cae sobre tu nombre. Nosotros lo absorbemos todo: búsqueda, negociación, logística, mando en sitio y un único responsable. Recuperas a tu equipo y tus fines de semana. ¿Quieres una revisión gratuita de riesgos y costos de tu próximo evento? Envía el brief y te mostramos las brechas. 🔍 #UproductionEvents #IncentiveTravel #CorporateEvents #GestiónDeEventos #EventosCorporativos #B2B #MICE #Planificación",
+    "dimensions": "1:1",
+    "cta": "DM us or book a call"
+  },
+  "instagram": {
+    "profile": "@uproductionevents",
+    "text": "Organizar un evento de 500 personas internamente parece más barato — hasta que cuentas el costo real. ⏳ Las 200 horas internas. El proveedor que desaparece dos semanas antes. La cláusula que nadie leyó. El riesgo que cae sobre tu nombre. Nosotros lo absorbemos todo: búsqueda, negociación, logística, mando en sitio y un único responsable. Recuperas a tu equipo y tus fines de semana. ¿Quieres una revisión gratuita de riesgos y costos de tu próximo evento? Envía el brief y te mostramos las brechas. 🔍 #UproductionEvents #IncentiveTravel #CorporateEvents #GestiónDeEventos #EventosCorporativos #B2B #MICE #Planificación",
+    "dimensions": "1:1",
+    "cta": "Link in bio"
+  },
+  "facebook": {
+    "profile": "Uproduction Events (Page)",
+    "text": "Organizar un evento de 500 personas internamente parece más barato — hasta que cuentas el costo real. ⏳ Las 200 horas internas. El proveedor que desaparece dos semanas antes. La cláusula que nadie leyó. El riesgo que cae sobre tu nombre. Nosotros lo absorbemos todo: búsqueda, negociación, logística, mando en sitio y un único responsable. Recuperas a tu equipo y tus fines de semana. ¿Quieres una revisión gratuita de riesgos y costos de tu próximo evento? Envía el brief y te mostramos las brechas. 🔍 #UproductionEvents #IncentiveTravel #CorporateEvents #GestiónDeEventos #EventosCorporativos #B2B #MICE #Planificación",
+    "dimensions": "1.91:1",
+    "cta": "Send us a message"
+  },
+  "image_prompt": "Aerial overhead view of a massive outdoor corporate festival at dusk, thousands of attendees seen as tiny figures spread across a lit plaza with food stalls, stage rigging and crowd-flow lanes, organized chaos viewed from very high above, warm and cool lights mixing. Photorealistic, 35mm film grain, no CGI, no text, no logos.",
+  "image_style": "photorealistic, editorial, documentary, 35mm film grain",
+  "brand": {
+    "colors": [
+      "#1C1C1C",
+      "#FBCE0A"
+    ],
+    "font": "Comfortaa",
+    "logo": "uproduction_official_logo.png"
+  }
+}

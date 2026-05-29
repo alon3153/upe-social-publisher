@@ -1,0 +1,36 @@
+{
+  "day": 57,
+  "category": "destination",
+  "language": "en",
+  "date": "2026-06-21",
+  "weekday": "Sunday",
+  "theme": "Saint-Tropez, Quietly Spectacular",
+  "linkedin": {
+    "profile": "Uproduction Events (Company Page)",
+    "text": "Saint-Tropez whispers luxury — it never shouts. ⛵ Private beach clubs, yacht-deck receptions, hillside villas with sea views that make a room go silent. For a tight group of high performers or a VIP board retreat, nothing signals reward quite like it. We secure the access most agencies only dream of and choreograph every moment. It's the kind of place people say yes to before you finish the sentence. Considering the Côte d'Azur for 2026? Let's design an exclusive program for your top tier. ✨ #UproductionEvents #IncentiveTravel #CorporateEvents #SaintTropez #LuxuryTravel #MICE #VIPEvents #CotedAzur",
+    "dimensions": "1:1",
+    "cta": "DM us or book a call"
+  },
+  "instagram": {
+    "profile": "@uproductionevents",
+    "text": "Saint-Tropez whispers luxury — it never shouts. ⛵ Private beach clubs, yacht-deck receptions, hillside villas with sea views that make a room go silent. For a tight group of high performers or a VIP board retreat, nothing signals reward quite like it. We secure the access most agencies only dream of and choreograph every moment. It's the kind of place people say yes to before you finish the sentence. Considering the Côte d'Azur for 2026? Let's design an exclusive program for your top tier. ✨ #UproductionEvents #IncentiveTravel #CorporateEvents #SaintTropez #LuxuryTravel #MICE #VIPEvents #CotedAzur",
+    "dimensions": "1:1",
+    "cta": "Link in bio"
+  },
+  "facebook": {
+    "profile": "Uproduction Events (Page)",
+    "text": "Saint-Tropez whispers luxury — it never shouts. ⛵ Private beach clubs, yacht-deck receptions, hillside villas with sea views that make a room go silent. For a tight group of high performers or a VIP board retreat, nothing signals reward quite like it. We secure the access most agencies only dream of and choreograph every moment. It's the kind of place people say yes to before you finish the sentence. Considering the Côte d'Azur for 2026? Let's design an exclusive program for your top tier. ✨ #UproductionEvents #IncentiveTravel #CorporateEvents #SaintTropez #LuxuryTravel #MICE #VIPEvents #CotedAzur",
+    "dimensions": "1.91:1",
+    "cta": "Send us a message"
+  },
+  "image_prompt": "Aerial drone view over the Saint-Tropez peninsula at midday, turquoise bays dotted with white yachts, pine-covered headlands meeting golden beaches, a sweep of Côte d'Azur coastline under brilliant blue sky, no people visible, luxurious and expansive. Photorealistic, 35mm film grain, no CGI, no text, no logos.",
+  "image_style": "photorealistic, editorial, documentary, 35mm film grain",
+  "brand": {
+    "colors": [
+      "#1C1C1C",
+      "#FBCE0A"
+    ],
+    "font": "Comfortaa",
+    "logo": "uproduction_official_logo.png"
+  }
+}

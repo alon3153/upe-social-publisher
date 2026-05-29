@@ -1,0 +1,36 @@
+{
+  "day": 62,
+  "category": "destination",
+  "language": "es",
+  "date": "2026-06-26",
+  "weekday": "Friday",
+  "theme": "Rome turns business into living history",
+  "linkedin": {
+    "profile": "Uproduction Events (Company Page)",
+    "text": "Roma no organiza eventos: los eleva. Imagine su cena de gala a pasos de dos mil años de historia, su equipo brindando bajo ruinas iluminadas. En UPE producimos experiencias corporativas en Roma que unen estrategia y espectáculo. ¿Listo para hacer su próximo evento eterno? Contáctenos hoy. #UproductionEvents #IncentiveTravel #CorporateEvents #Roma #Italia #CenaDeGala #EventosCorporativos",
+    "dimensions": "1:1",
+    "cta": "DM us or book a call"
+  },
+  "instagram": {
+    "profile": "@uproductionevents",
+    "text": "Roma no organiza eventos: los eleva. Imagine su cena de gala a pasos de dos mil años de historia, su equipo brindando bajo ruinas iluminadas. En UPE producimos experiencias corporativas en Roma que unen estrategia y espectáculo. ¿Listo para hacer su próximo evento eterno? Contáctenos hoy. #UproductionEvents #IncentiveTravel #CorporateEvents #Roma #Italia #CenaDeGala #EventosCorporativos",
+    "dimensions": "1:1",
+    "cta": "Link in bio"
+  },
+  "facebook": {
+    "profile": "Uproduction Events (Page)",
+    "text": "Roma no organiza eventos: los eleva. Imagine su cena de gala a pasos de dos mil años de historia, su equipo brindando bajo ruinas iluminadas. En UPE producimos experiencias corporativas en Roma que unen estrategia y espectáculo. ¿Listo para hacer su próximo evento eterno? Contáctenos hoy. #UproductionEvents #IncentiveTravel #CorporateEvents #Roma #Italia #CenaDeGala #EventosCorporativos",
+    "dimensions": "1.91:1",
+    "cta": "Send us a message"
+  },
+  "image_prompt": "Sweeping aerial drone shot of Rome at dusk, the Colosseum and ancient ruins glowing amber, terracotta rooftops sprawling toward the horizon, the dome of a basilica catching the last light, no people visible up close, vast cinematic scale. Photorealistic, 35mm film grain, no CGI, no text, no logos.",
+  "image_style": "photorealistic, editorial, documentary, 35mm film grain",
+  "brand": {
+    "colors": [
+      "#1C1C1C",
+      "#FBCE0A"
+    ],
+    "font": "Comfortaa",
+    "logo": "uproduction_official_logo.png"
+  }
+}

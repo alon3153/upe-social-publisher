@@ -1,0 +1,36 @@
+{
+  "day": 47,
+  "category": "cta_lead",
+  "language": "en",
+  "date": "2026-06-11",
+  "weekday": "Thursday",
+  "theme": "DM Us To Start Your Brief",
+  "linkedin": {
+    "profile": "Uproduction Events (Company Page)",
+    "text": "You don't need a 40-page RFP to start. You need to send us two words: your destination idea and your headcount. 💬 That's enough for us to come back with a realistic direction, a ballpark budget and the questions worth answering next. We've built 200+ events from briefs that started exactly this loosely. The hardest part of any great event is simply beginning — so let's make that part take 10 seconds. 📲 DM us right now with \"[Destination] + [number of people]\" and we'll take it from there. #UproductionEvents #IncentiveTravel #CorporateEvents #EventPlanning #B2BEvents #EventProduction #IncentiveTrip #EventDesign",
+    "dimensions": "1:1",
+    "cta": "DM us or book a call"
+  },
+  "instagram": {
+    "profile": "@uproductionevents",
+    "text": "You don't need a 40-page RFP to start. You need to send us two words: your destination idea and your headcount. 💬 That's enough for us to come back with a realistic direction, a ballpark budget and the questions worth answering next. We've built 200+ events from briefs that started exactly this loosely. The hardest part of any great event is simply beginning — so let's make that part take 10 seconds. 📲 DM us right now with \"[Destination] + [number of people]\" and we'll take it from there. #UproductionEvents #IncentiveTravel #CorporateEvents #EventPlanning #B2BEvents #EventProduction #IncentiveTrip #EventDesign",
+    "dimensions": "1:1",
+    "cta": "Link in bio"
+  },
+  "facebook": {
+    "profile": "Uproduction Events (Page)",
+    "text": "You don't need a 40-page RFP to start. You need to send us two words: your destination idea and your headcount. 💬 That's enough for us to come back with a realistic direction, a ballpark budget and the questions worth answering next. We've built 200+ events from briefs that started exactly this loosely. The hardest part of any great event is simply beginning — so let's make that part take 10 seconds. 📲 DM us right now with \"[Destination] + [number of people]\" and we'll take it from there. #UproductionEvents #IncentiveTravel #CorporateEvents #EventPlanning #B2BEvents #EventProduction #IncentiveTrip #EventDesign",
+    "dimensions": "1.91:1",
+    "cta": "Send us a message"
+  },
+  "image_prompt": "Drone shot looking straight down on a huge crowd of corporate guests mingling at an evening reception across a Mediterranean piazza, hundreds of tiny figures from directly above scattered around glowing cocktail stations and long banquet tables, warm pools of light on dark stone paving. Photorealistic, 35mm film grain, no CGI, no text, no logos.",
+  "image_style": "photorealistic, editorial, documentary, 35mm film grain",
+  "brand": {
+    "colors": [
+      "#1C1C1C",
+      "#FBCE0A"
+    ],
+    "font": "Comfortaa",
+    "logo": "uproduction_official_logo.png"
+  }
+}

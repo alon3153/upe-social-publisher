@@ -1,0 +1,36 @@
+{
+  "day": 63,
+  "category": "case_study",
+  "language": "he",
+  "date": "2026-06-27",
+  "weekday": "Saturday",
+  "theme": "How we moved 800 guests flawlessly",
+  "linkedin": {
+    "profile": "Uproduction Events (Company Page)",
+    "text": "הבריף: 800 אורחים בינלאומיים, אתר היסטורי אחד, אפס מקום לטעות. התוצאה: ארוחת גאלה שעבדה כמו שעון — הגעות מתואמות, מנחים רב-לשוניים, ושירת ארבע מנות שהתחילה והסתיימה בזמן. מאחורי הקסם: 14 חודשי תכנון וצוות UPE שחוזה הכול. גודל הוא לא האתגר שלנו — הוא ההתמחות שלנו. בואו נדבר על המספרים שלכם. #UproductionEvents #אירועיחברה #גאלה #הפקתאירועים #טיוליתמרוץ",
+    "dimensions": "1:1",
+    "cta": "DM us or book a call"
+  },
+  "instagram": {
+    "profile": "@uproductionevents",
+    "text": "הבריף: 800 אורחים בינלאומיים, אתר היסטורי אחד, אפס מקום לטעות. התוצאה: ארוחת גאלה שעבדה כמו שעון — הגעות מתואמות, מנחים רב-לשוניים, ושירת ארבע מנות שהתחילה והסתיימה בזמן. מאחורי הקסם: 14 חודשי תכנון וצוות UPE שחוזה הכול. גודל הוא לא האתגר שלנו — הוא ההתמחות שלנו. בואו נדבר על המספרים שלכם. #UproductionEvents #אירועיחברה #גאלה #הפקתאירועים #טיוליתמרוץ",
+    "dimensions": "1:1",
+    "cta": "Link in bio"
+  },
+  "facebook": {
+    "profile": "Uproduction Events (Page)",
+    "text": "הבריף: 800 אורחים בינלאומיים, אתר היסטורי אחד, אפס מקום לטעות. התוצאה: ארוחת גאלה שעבדה כמו שעון — הגעות מתואמות, מנחים רב-לשוניים, ושירת ארבע מנות שהתחילה והסתיימה בזמן. מאחורי הקסם: 14 חודשי תכנון וצוות UPE שחוזה הכול. גודל הוא לא האתגר שלנו — הוא ההתמחות שלנו. בואו נדבר על המספרים שלכם. #UproductionEvents #אירועיחברה #גאלה #הפקתאירועים #טיוליתמרוץ",
+    "dimensions": "1.91:1",
+    "cta": "Send us a message"
+  },
+  "image_prompt": "High overhead view of a grand outdoor gala dinner at night, hundreds of round tables stretching across an illuminated historic courtyard, eight hundred seated guests seen from above as tiny figures, warm candlelight pooling on white linens, ambient string lights overhead. Photorealistic, 35mm film grain, no CGI, no text, no logos.",
+  "image_style": "photorealistic, editorial, documentary, 35mm film grain",
+  "brand": {
+    "colors": [
+      "#1C1C1C",
+      "#FBCE0A"
+    ],
+    "font": "Comfortaa",
+    "logo": "uproduction_official_logo.png"
+  }
+}

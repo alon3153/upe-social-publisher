@@ -1,0 +1,36 @@
+{
+  "day": 85,
+  "category": "case_study",
+  "language": "he",
+  "date": "2026-07-19",
+  "weekday": "Sunday",
+  "theme": "800 employees one continent flawless execution",
+  "linkedin": {
+    "profile": "Uproduction Events (Company Page)",
+    "text": "הבריף: להטיס 800 עובדים לחו\"ל לתמריץ בן 4 ימים — טיסות משלוש ערים, אכלוס מלא, ערב פתיחה ממותג, גאלה חיצונית ותוכנית פעילויות יומית. האתגר: אפס מקום לטעות עם כמות אנשים כזו בתנועה. התוצאה: כל טיסה חוברה, כל חדר אוכלס, כל אורח היה בדיוק במקום — וגאלת סיום שקיבלה תשואות עמידה. ככה נראות 15 שנה של הפקה בקנה מידה גדול. מתכננים משהו גדול? בואו נבחן אותו יחד. שלחו הודעה. #UproductionEvents #טיוליתמריץ #הפקתאירועים #אירועיםעסקיים #FromBusinessToPleasure",
+    "dimensions": "1:1",
+    "cta": "DM us or book a call"
+  },
+  "instagram": {
+    "profile": "@uproductionevents",
+    "text": "הבריף: להטיס 800 עובדים לחו\"ל לתמריץ בן 4 ימים — טיסות משלוש ערים, אכלוס מלא, ערב פתיחה ממותג, גאלה חיצונית ותוכנית פעילויות יומית. האתגר: אפס מקום לטעות עם כמות אנשים כזו בתנועה. התוצאה: כל טיסה חוברה, כל חדר אוכלס, כל אורח היה בדיוק במקום — וגאלת סיום שקיבלה תשואות עמידה. ככה נראות 15 שנה של הפקה בקנה מידה גדול. מתכננים משהו גדול? בואו נבחן אותו יחד. שלחו הודעה. #UproductionEvents #טיוליתמריץ #הפקתאירועים #אירועיםעסקיים #FromBusinessToPleasure",
+    "dimensions": "1:1",
+    "cta": "Link in bio"
+  },
+  "facebook": {
+    "profile": "Uproduction Events (Page)",
+    "text": "הבריף: להטיס 800 עובדים לחו\"ל לתמריץ בן 4 ימים — טיסות משלוש ערים, אכלוס מלא, ערב פתיחה ממותג, גאלה חיצונית ותוכנית פעילויות יומית. האתגר: אפס מקום לטעות עם כמות אנשים כזו בתנועה. התוצאה: כל טיסה חוברה, כל חדר אוכלס, כל אורח היה בדיוק במקום — וגאלת סיום שקיבלה תשואות עמידה. ככה נראות 15 שנה של הפקה בקנה מידה גדול. מתכננים משהו גדול? בואו נבחן אותו יחד. שלחו הודעה. #UproductionEvents #טיוליתמריץ #הפקתאירועים #אירועיםעסקיים #FromBusinessToPleasure",
+    "dimensions": "1.91:1",
+    "cta": "Send us a message"
+  },
+  "image_prompt": "Aerial view from high above a massive outdoor welcome reception at night, roughly eight hundred guests as tiny illuminated figures gathered around glowing food stations and a central stage on a resort plaza, palm trees lit from below, ocean dark at the frame edge, sense of huge organized crowd. Photorealistic, 35mm film grain, no CGI, no text, no logos.",
+  "image_style": "photorealistic, editorial, documentary, 35mm film grain",
+  "brand": {
+    "colors": [
+      "#1C1C1C",
+      "#FBCE0A"
+    ],
+    "font": "Comfortaa",
+    "logo": "uproduction_official_logo.png"
+  }
+}

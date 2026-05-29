@@ -1,0 +1,36 @@
+{
+  "day": 61,
+  "category": "cta_lead",
+  "language": "en",
+  "date": "2026-06-25",
+  "weekday": "Thursday",
+  "theme": "Your incentive trip deserves Italian mastery",
+  "linkedin": {
+    "profile": "Uproduction Events (Company Page)",
+    "text": "Your top performers earned more than a bonus. They earned a story they'll tell for years. UPE designs incentive journeys across Italy for groups of hundreds — every logistic handled, every moment engineered to impress. From the first welcome to the final toast, we turn reward into legend. Let's plan a trip your team will never stop talking about. Message us to start. #UproductionEvents #IncentiveTravel #CorporateEvents #ItalyEvents #EventProduction #B2B #FromBusinessToPleasure",
+    "dimensions": "1:1",
+    "cta": "DM us or book a call"
+  },
+  "instagram": {
+    "profile": "@uproductionevents",
+    "text": "Your top performers earned more than a bonus. They earned a story they'll tell for years. UPE designs incentive journeys across Italy for groups of hundreds — every logistic handled, every moment engineered to impress. From the first welcome to the final toast, we turn reward into legend. Let's plan a trip your team will never stop talking about. Message us to start. #UproductionEvents #IncentiveTravel #CorporateEvents #ItalyEvents #EventProduction #B2B #FromBusinessToPleasure",
+    "dimensions": "1:1",
+    "cta": "Link in bio"
+  },
+  "facebook": {
+    "profile": "Uproduction Events (Page)",
+    "text": "Your top performers earned more than a bonus. They earned a story they'll tell for years. UPE designs incentive journeys across Italy for groups of hundreds — every logistic handled, every moment engineered to impress. From the first welcome to the final toast, we turn reward into legend. Let's plan a trip your team will never stop talking about. Message us to start. #UproductionEvents #IncentiveTravel #CorporateEvents #ItalyEvents #EventProduction #B2B #FromBusinessToPleasure",
+    "dimensions": "1.91:1",
+    "cta": "Send us a message"
+  },
+  "image_prompt": "Aerial view from high above a sun-drenched Italian piazza at golden hour, hundreds of elegantly dressed corporate guests gathered far below, tiny faces, long shadows stretching across ancient stone, surrounding terracotta rooftops glowing warm. Photorealistic, 35mm film grain, no CGI, no text, no logos.",
+  "image_style": "photorealistic, editorial, documentary, 35mm film grain",
+  "brand": {
+    "colors": [
+      "#1C1C1C",
+      "#FBCE0A"
+    ],
+    "font": "Comfortaa",
+    "logo": "uproduction_official_logo.png"
+  }
+}

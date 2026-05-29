@@ -1,0 +1,36 @@
+{
+  "day": 97,
+  "category": "destination",
+  "language": "es",
+  "date": "2026-07-31",
+  "weekday": "Friday",
+  "theme": "Lake Bled fairytale corporate retreat",
+  "linkedin": {
+    "profile": "Uproduction Events (Company Page)",
+    "text": "Hay lugares que invitan a frenar, abrirse y pensar en grande. El lago Bled es uno de ellos: una joya alpina donde un castillo sobre el acantilado, una iglesia en una isla y aguas color esmeralda enmarcan retiros de liderazgo y offsites ejecutivos que de verdad cambian la conversación. Tranquilo para la estrategia profunda y deslumbrante como recompensa. Creamos el programa completo: cenas en el castillo, ceremonias en barca, excursiones alpinas. ¿Un retiro 2026 con profundidad? Diseñemos el tuyo. #UproductionEvents #IncentiveTravel #CorporateEvents #LagoBled #Eslovenia #RetiroEjecutivo",
+    "dimensions": "1:1",
+    "cta": "DM us or book a call"
+  },
+  "instagram": {
+    "profile": "@uproductionevents",
+    "text": "Hay lugares que invitan a frenar, abrirse y pensar en grande. El lago Bled es uno de ellos: una joya alpina donde un castillo sobre el acantilado, una iglesia en una isla y aguas color esmeralda enmarcan retiros de liderazgo y offsites ejecutivos que de verdad cambian la conversación. Tranquilo para la estrategia profunda y deslumbrante como recompensa. Creamos el programa completo: cenas en el castillo, ceremonias en barca, excursiones alpinas. ¿Un retiro 2026 con profundidad? Diseñemos el tuyo. #UproductionEvents #IncentiveTravel #CorporateEvents #LagoBled #Eslovenia #RetiroEjecutivo",
+    "dimensions": "1:1",
+    "cta": "Link in bio"
+  },
+  "facebook": {
+    "profile": "Uproduction Events (Page)",
+    "text": "Hay lugares que invitan a frenar, abrirse y pensar en grande. El lago Bled es uno de ellos: una joya alpina donde un castillo sobre el acantilado, una iglesia en una isla y aguas color esmeralda enmarcan retiros de liderazgo y offsites ejecutivos que de verdad cambian la conversación. Tranquilo para la estrategia profunda y deslumbrante como recompensa. Creamos el programa completo: cenas en el castillo, ceremonias en barca, excursiones alpinas. ¿Un retiro 2026 con profundidad? Diseñemos el tuyo. #UproductionEvents #IncentiveTravel #CorporateEvents #LagoBled #Eslovenia #RetiroEjecutivo",
+    "dimensions": "1.91:1",
+    "cta": "Send us a message"
+  },
+  "image_prompt": "Aerial view of Lake Bled at soft morning light, the tiny island church mid-lake ringed by emerald water, a medieval castle on the cliff, alpine forests and distant Julian Alps wrapped in mist, a lone rowboat as a speck for scale. Photorealistic, 35mm film grain, no CGI, no text, no logos.",
+  "image_style": "photorealistic, editorial, documentary, 35mm film grain",
+  "brand": {
+    "colors": [
+      "#1C1C1C",
+      "#FBCE0A"
+    ],
+    "font": "Comfortaa",
+    "logo": "uproduction_official_logo.png"
+  }
+}

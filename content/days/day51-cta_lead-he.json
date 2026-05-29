@@ -1,0 +1,36 @@
+{
+  "day": 51,
+  "category": "cta_lead",
+  "language": "he",
+  "date": "2026-06-15",
+  "weekday": "Monday",
+  "theme": "Your 2026 Incentive Trip Starts Now",
+  "linkedin": {
+    "profile": "Uproduction Events (Company Page)",
+    "text": "טיולי תמריץ מנצחים לא מזמינים — מהנדסים אותם. 🏆 מאות עובדי מצטיינים, יעד אחד בלתי נשכח, ואפס לוגיסטיקה עליכם. מ-2010 הפקנו 200+ אירועים ב-120+ מדינות. לוח 2026 מתמלא — אולמות פרימיום נסגרים 9-12 חודשים מראש. אל תיתנו לתאריכים להחליט במקומכם. קבעו שיחת היכרות של 20 דקות ונמפה יחד יעד, כמות ותקציב. #UproductionEvents #טיולי_תמריץ #אירועים_עסקיים #הפקת_אירועים #תיירות_עסקית",
+    "dimensions": "1:1",
+    "cta": "DM us or book a call"
+  },
+  "instagram": {
+    "profile": "@uproductionevents",
+    "text": "טיולי תמריץ מנצחים לא מזמינים — מהנדסים אותם. 🏆 מאות עובדי מצטיינים, יעד אחד בלתי נשכח, ואפס לוגיסטיקה עליכם. מ-2010 הפקנו 200+ אירועים ב-120+ מדינות. לוח 2026 מתמלא — אולמות פרימיום נסגרים 9-12 חודשים מראש. אל תיתנו לתאריכים להחליט במקומכם. קבעו שיחת היכרות של 20 דקות ונמפה יחד יעד, כמות ותקציב. #UproductionEvents #טיולי_תמריץ #אירועים_עסקיים #הפקת_אירועים #תיירות_עסקית",
+    "dimensions": "1:1",
+    "cta": "Link in bio"
+  },
+  "facebook": {
+    "profile": "Uproduction Events (Page)",
+    "text": "טיולי תמריץ מנצחים לא מזמינים — מהנדסים אותם. 🏆 מאות עובדי מצטיינים, יעד אחד בלתי נשכח, ואפס לוגיסטיקה עליכם. מ-2010 הפקנו 200+ אירועים ב-120+ מדינות. לוח 2026 מתמלא — אולמות פרימיום נסגרים 9-12 חודשים מראש. אל תיתנו לתאריכים להחליט במקומכם. קבעו שיחת היכרות של 20 דקות ונמפה יחד יעד, כמות ותקציב. #UproductionEvents #טיולי_תמריץ #אירועים_עסקיים #הפקת_אירועים #תיירות_עסקית",
+    "dimensions": "1.91:1",
+    "cta": "Send us a message"
+  },
+  "image_prompt": "Aerial drone view from directly above a vast open-air gala on a Mediterranean clifftop terrace at golden hour, eight hundred guests in evening wear seated at long banquet tables arranged in sweeping curves, tiny faces barely visible from height, waiters threading between tables, string lights and candle glow, deep blue sea horizon beyond. Photorealistic, 35mm film grain, no CGI, no text, no logos.",
+  "image_style": "photorealistic, editorial, documentary, 35mm film grain",
+  "brand": {
+    "colors": [
+      "#1C1C1C",
+      "#FBCE0A"
+    ],
+    "font": "Comfortaa",
+    "logo": "uproduction_official_logo.png"
+  }
+}

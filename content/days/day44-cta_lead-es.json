@@ -1,0 +1,36 @@
+{
+  "day": 44,
+  "category": "cta_lead",
+  "language": "es",
+  "date": "2026-06-08",
+  "weekday": "Monday",
+  "theme": "Free Planning Consult This Week",
+  "linkedin": {
+    "profile": "Uproduction Events (Company Page)",
+    "text": "La mayoría de los equipos piensan demasiado el primer paso. No necesitas un plan terminado, necesitas un socio que lo ha hecho más de 200 veces. 🧭 En una llamada gratuita de 30 minutos pondremos a prueba tu lista de destinos, estimaremos tu presupuesto por persona, señalaremos las fechas que te harán ahorrar y te diremos con honestidad qué es realista. Sin presentación de ventas, sin compromiso, solo claridad para llevar a tu jefe. Vale 30 minutos de la semana de cualquiera. ⏱️ Los cupos de esta semana son limitados — reserva en el enlace de la bio o escribe \"LLAMADA\". #UproductionEvents #IncentiveTravel #CorporateEvents #PlanificacionDeEventos #EventosB2B #EstrategiaDeEventos #ViajesDeIncentivo #EventProduction",
+    "dimensions": "1:1",
+    "cta": "DM us or book a call"
+  },
+  "instagram": {
+    "profile": "@uproductionevents",
+    "text": "La mayoría de los equipos piensan demasiado el primer paso. No necesitas un plan terminado, necesitas un socio que lo ha hecho más de 200 veces. 🧭 En una llamada gratuita de 30 minutos pondremos a prueba tu lista de destinos, estimaremos tu presupuesto por persona, señalaremos las fechas que te harán ahorrar y te diremos con honestidad qué es realista. Sin presentación de ventas, sin compromiso, solo claridad para llevar a tu jefe. Vale 30 minutos de la semana de cualquiera. ⏱️ Los cupos de esta semana son limitados — reserva en el enlace de la bio o escribe \"LLAMADA\". #UproductionEvents #IncentiveTravel #CorporateEvents #PlanificacionDeEventos #EventosB2B #EstrategiaDeEventos #ViajesDeIncentivo #EventProduction",
+    "dimensions": "1:1",
+    "cta": "Link in bio"
+  },
+  "facebook": {
+    "profile": "Uproduction Events (Page)",
+    "text": "La mayoría de los equipos piensan demasiado el primer paso. No necesitas un plan terminado, necesitas un socio que lo ha hecho más de 200 veces. 🧭 En una llamada gratuita de 30 minutos pondremos a prueba tu lista de destinos, estimaremos tu presupuesto por persona, señalaremos las fechas que te harán ahorrar y te diremos con honestidad qué es realista. Sin presentación de ventas, sin compromiso, solo claridad para llevar a tu jefe. Vale 30 minutos de la semana de cualquiera. ⏱️ Los cupos de esta semana son limitados — reserva en el enlace de la bio o escribe \"LLAMADA\". #UproductionEvents #IncentiveTravel #CorporateEvents #PlanificacionDeEventos #EventosB2B #EstrategiaDeEventos #ViajesDeIncentivo #EventProduction",
+    "dimensions": "1.91:1",
+    "cta": "Send us a message"
+  },
+  "image_prompt": "High overhead aerial of a massive open-air conference audience seated in neat rows on a Mediterranean rooftop plaza at golden hour, hundreds of tiny figures from directly above forming clean geometric patterns, long soft shadows stretching across pale stone, sea visible at the frame's edge. Photorealistic, 35mm film grain, no CGI, no text, no logos.",
+  "image_style": "photorealistic, editorial, documentary, 35mm film grain",
+  "brand": {
+    "colors": [
+      "#1C1C1C",
+      "#FBCE0A"
+    ],
+    "font": "Comfortaa",
+    "logo": "uproduction_official_logo.png"
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "day": 98,
+  "category": "cta_lead",
+  "language": "es",
+  "date": "2026-08-01",
+  "weekday": "Saturday",
+  "theme": "Let's design your signature event",
+  "linkedin": {
+    "profile": "Uproduction Events (Company Page)",
+    "text": "Ya tienes la visión: la sensación que quieres que tu gente se lleve a casa. Nuestro trabajo es diseñar cada capa entre esa idea y el momento en que se vuelve real: concepto, destino, logística, branding, producción y los mil detalles invisibles que separan lo bueno de lo inolvidable. Sin plantillas. Diseñamos cada evento desde tu ADN. Cuéntanos qué imaginas para 2026 y lo convertiremos en un concepto concreto y presupuestado, rápido. Diseñemos el tuyo. Escríbenos para empezar. #UproductionEvents #IncentiveTravel #CorporateEvents #DisenoDeEventos #EventosCorporativos #Congresos",
+    "dimensions": "1:1",
+    "cta": "DM us or book a call"
+  },
+  "instagram": {
+    "profile": "@uproductionevents",
+    "text": "Ya tienes la visión: la sensación que quieres que tu gente se lleve a casa. Nuestro trabajo es diseñar cada capa entre esa idea y el momento en que se vuelve real: concepto, destino, logística, branding, producción y los mil detalles invisibles que separan lo bueno de lo inolvidable. Sin plantillas. Diseñamos cada evento desde tu ADN. Cuéntanos qué imaginas para 2026 y lo convertiremos en un concepto concreto y presupuestado, rápido. Diseñemos el tuyo. Escríbenos para empezar. #UproductionEvents #IncentiveTravel #CorporateEvents #DisenoDeEventos #EventosCorporativos #Congresos",
+    "dimensions": "1:1",
+    "cta": "Link in bio"
+  },
+  "facebook": {
+    "profile": "Uproduction Events (Page)",
+    "text": "Ya tienes la visión: la sensación que quieres que tu gente se lleve a casa. Nuestro trabajo es diseñar cada capa entre esa idea y el momento en que se vuelve real: concepto, destino, logística, branding, producción y los mil detalles invisibles que separan lo bueno de lo inolvidable. Sin plantillas. Diseñamos cada evento desde tu ADN. Cuéntanos qué imaginas para 2026 y lo convertiremos en un concepto concreto y presupuestado, rápido. Diseñemos el tuyo. Escríbenos para empezar. #UproductionEvents #IncentiveTravel #CorporateEvents #DisenoDeEventos #EventosCorporativos #Congresos",
+    "dimensions": "1.91:1",
+    "cta": "Send us a message"
+  },
+  "image_prompt": "Aerial night view of a vast open-air dinner gathering for over a thousand guests arranged in elegant geometric table patterns across a desert plateau, warm pools of light around each cluster, the dark landscape stretching to a starlit horizon. Photorealistic, 35mm film grain, no CGI, no text, no logos.",
+  "image_style": "photorealistic, editorial, documentary, 35mm film grain",
+  "brand": {
+    "colors": [
+      "#1C1C1C",
+      "#FBCE0A"
+    ],
+    "font": "Comfortaa",
+    "logo": "uproduction_official_logo.png"
+  }
+}

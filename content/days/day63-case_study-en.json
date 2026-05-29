@@ -1,0 +1,36 @@
+{
+  "day": 63,
+  "category": "case_study",
+  "language": "en",
+  "date": "2026-06-27",
+  "weekday": "Saturday",
+  "theme": "How we moved 800 guests flawlessly",
+  "linkedin": {
+    "profile": "Uproduction Events (Company Page)",
+    "text": "The brief: 800 international guests, one historic venue, zero margin for error. The result: a gala dinner that ran like clockwork — synchronized arrivals, multilingual hosts, a four-course service that began and ended on schedule, and an after-party guests still mention. Behind the magic: 14 months of planning and a UPE crew that anticipates everything. Scale isn't our challenge — it's our specialty. Let's discuss your numbers. #UproductionEvents #IncentiveTravel #CorporateEvents #GalaDinner #EventProduction #B2B #CaseStudy",
+    "dimensions": "1:1",
+    "cta": "DM us or book a call"
+  },
+  "instagram": {
+    "profile": "@uproductionevents",
+    "text": "The brief: 800 international guests, one historic venue, zero margin for error. The result: a gala dinner that ran like clockwork — synchronized arrivals, multilingual hosts, a four-course service that began and ended on schedule, and an after-party guests still mention. Behind the magic: 14 months of planning and a UPE crew that anticipates everything. Scale isn't our challenge — it's our specialty. Let's discuss your numbers. #UproductionEvents #IncentiveTravel #CorporateEvents #GalaDinner #EventProduction #B2B #CaseStudy",
+    "dimensions": "1:1",
+    "cta": "Link in bio"
+  },
+  "facebook": {
+    "profile": "Uproduction Events (Page)",
+    "text": "The brief: 800 international guests, one historic venue, zero margin for error. The result: a gala dinner that ran like clockwork — synchronized arrivals, multilingual hosts, a four-course service that began and ended on schedule, and an after-party guests still mention. Behind the magic: 14 months of planning and a UPE crew that anticipates everything. Scale isn't our challenge — it's our specialty. Let's discuss your numbers. #UproductionEvents #IncentiveTravel #CorporateEvents #GalaDinner #EventProduction #B2B #CaseStudy",
+    "dimensions": "1.91:1",
+    "cta": "Send us a message"
+  },
+  "image_prompt": "High overhead view of a grand outdoor gala dinner at night, hundreds of round tables stretching across an illuminated historic courtyard, eight hundred seated guests seen from above as tiny figures, warm candlelight pooling on white linens, ambient string lights overhead. Photorealistic, 35mm film grain, no CGI, no text, no logos.",
+  "image_style": "photorealistic, editorial, documentary, 35mm film grain",
+  "brand": {
+    "colors": [
+      "#1C1C1C",
+      "#FBCE0A"
+    ],
+    "font": "Comfortaa",
+    "logo": "uproduction_official_logo.png"
+  }
+}

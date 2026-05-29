@@ -1,0 +1,36 @@
+{
+  "day": 61,
+  "category": "cta_lead",
+  "language": "es",
+  "date": "2026-06-25",
+  "weekday": "Thursday",
+  "theme": "Your incentive trip deserves Italian mastery",
+  "linkedin": {
+    "profile": "Uproduction Events (Company Page)",
+    "text": "Sus mejores talentos ganaron más que un bono: ganaron una historia que contarán por años. En UPE diseñamos viajes de incentivo por Italia para grupos de cientos, con cada detalle bajo control. Planifiquemos el viaje del que todos hablarán. Escríbanos para empezar. #UproductionEvents #IncentiveTravel #CorporateEvents #ViajesDeIncentivo #Italia #EventosCorporativos #B2B",
+    "dimensions": "1:1",
+    "cta": "DM us or book a call"
+  },
+  "instagram": {
+    "profile": "@uproductionevents",
+    "text": "Sus mejores talentos ganaron más que un bono: ganaron una historia que contarán por años. En UPE diseñamos viajes de incentivo por Italia para grupos de cientos, con cada detalle bajo control. Planifiquemos el viaje del que todos hablarán. Escríbanos para empezar. #UproductionEvents #IncentiveTravel #CorporateEvents #ViajesDeIncentivo #Italia #EventosCorporativos #B2B",
+    "dimensions": "1:1",
+    "cta": "Link in bio"
+  },
+  "facebook": {
+    "profile": "Uproduction Events (Page)",
+    "text": "Sus mejores talentos ganaron más que un bono: ganaron una historia que contarán por años. En UPE diseñamos viajes de incentivo por Italia para grupos de cientos, con cada detalle bajo control. Planifiquemos el viaje del que todos hablarán. Escríbanos para empezar. #UproductionEvents #IncentiveTravel #CorporateEvents #ViajesDeIncentivo #Italia #EventosCorporativos #B2B",
+    "dimensions": "1.91:1",
+    "cta": "Send us a message"
+  },
+  "image_prompt": "Aerial view from high above a sun-drenched Italian piazza at golden hour, hundreds of elegantly dressed corporate guests gathered far below, tiny faces, long shadows stretching across ancient stone, surrounding terracotta rooftops glowing warm. Photorealistic, 35mm film grain, no CGI, no text, no logos.",
+  "image_style": "photorealistic, editorial, documentary, 35mm film grain",
+  "brand": {
+    "colors": [
+      "#1C1C1C",
+      "#FBCE0A"
+    ],
+    "font": "Comfortaa",
+    "logo": "uproduction_official_logo.png"
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "day": 66,
+  "category": "roi_proof",
+  "language": "es",
+  "date": "2026-06-30",
+  "weekday": "Tuesday",
+  "theme": "Incentive travel that pays you back",
+  "linkedin": {
+    "profile": "Uproduction Events (Company Page)",
+    "text": "El viaje de incentivo no es un gasto: es una de las herramientas de mayor retorno de su negocio. Los estudios muestran que los programas estructurados elevan el desempeño hasta un 44% y mejoran la retención mucho después del viaje. En UPE diseñamos experiencias que conectan emoción con resultados, para que su inversión aparezca en las cifras del próximo año. ¿Quiere ver cómo sería para su equipo? Hagamos los números juntos. #UproductionEvents #IncentiveTravel #CorporateEvents #ROI #RetencionDeTalento #B2B",
+    "dimensions": "1:1",
+    "cta": "DM us or book a call"
+  },
+  "instagram": {
+    "profile": "@uproductionevents",
+    "text": "El viaje de incentivo no es un gasto: es una de las herramientas de mayor retorno de su negocio. Los estudios muestran que los programas estructurados elevan el desempeño hasta un 44% y mejoran la retención mucho después del viaje. En UPE diseñamos experiencias que conectan emoción con resultados, para que su inversión aparezca en las cifras del próximo año. ¿Quiere ver cómo sería para su equipo? Hagamos los números juntos. #UproductionEvents #IncentiveTravel #CorporateEvents #ROI #RetencionDeTalento #B2B",
+    "dimensions": "1:1",
+    "cta": "Link in bio"
+  },
+  "facebook": {
+    "profile": "Uproduction Events (Page)",
+    "text": "El viaje de incentivo no es un gasto: es una de las herramientas de mayor retorno de su negocio. Los estudios muestran que los programas estructurados elevan el desempeño hasta un 44% y mejoran la retención mucho después del viaje. En UPE diseñamos experiencias que conectan emoción con resultados, para que su inversión aparezca en las cifras del próximo año. ¿Quiere ver cómo sería para su equipo? Hagamos los números juntos. #UproductionEvents #IncentiveTravel #CorporateEvents #ROI #RetencionDeTalento #B2B",
+    "dimensions": "1.91:1",
+    "cta": "Send us a message"
+  },
+  "image_prompt": "Aerial twilight view of a large group of corporate guests walking together along a grand terraced hillside vineyard estate, hundreds of small figures from above following lantern-lit paths, rolling Tuscan-style hills fading into purple distance. Photorealistic, 35mm film grain, no CGI, no text, no logos.",
+  "image_style": "photorealistic, editorial, documentary, 35mm film grain",
+  "brand": {
+    "colors": [
+      "#1C1C1C",
+      "#FBCE0A"
+    ],
+    "font": "Comfortaa",
+    "logo": "uproduction_official_logo.png"
+  }
+}

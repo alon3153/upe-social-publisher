@@ -1,0 +1,36 @@
+{
+  "day": 41,
+  "category": "cta_lead",
+  "language": "es",
+  "date": "2026-06-05",
+  "weekday": "Friday",
+  "theme": "Last Spots For 2026 Incentive Season",
+  "linkedin": {
+    "profile": "Uproduction Events (Company Page)",
+    "text": "Los mejores espacios para 2026 se están agotando. Mientras lo piensas, tu competencia ya está reservando villas en acantilados, islas privadas y terrazas de gala al atardecer. ✨ Hemos producido más de 200 eventos en más de 120 países desde 2010, y nuestro calendario 2026 se está llenando. Quedan pocas fechas premium. No dejes que tu viaje de incentivo se convierta en el arrepentimiento del próximo año. Agenda una llamada de planificación gratuita de 30 minutos esta semana. 📅 Envíanos \"2026\" por mensaje o haz clic en el enlace de la bio. #UproductionEvents #IncentiveTravel #CorporateEvents #ViajesDeIncentivo #EventosCorporativos #Eventos #LuxuryTravel #EventPlanning",
+    "dimensions": "1:1",
+    "cta": "DM us or book a call"
+  },
+  "instagram": {
+    "profile": "@uproductionevents",
+    "text": "Los mejores espacios para 2026 se están agotando. Mientras lo piensas, tu competencia ya está reservando villas en acantilados, islas privadas y terrazas de gala al atardecer. ✨ Hemos producido más de 200 eventos en más de 120 países desde 2010, y nuestro calendario 2026 se está llenando. Quedan pocas fechas premium. No dejes que tu viaje de incentivo se convierta en el arrepentimiento del próximo año. Agenda una llamada de planificación gratuita de 30 minutos esta semana. 📅 Envíanos \"2026\" por mensaje o haz clic en el enlace de la bio. #UproductionEvents #IncentiveTravel #CorporateEvents #ViajesDeIncentivo #EventosCorporativos #Eventos #LuxuryTravel #EventPlanning",
+    "dimensions": "1:1",
+    "cta": "Link in bio"
+  },
+  "facebook": {
+    "profile": "Uproduction Events (Page)",
+    "text": "Los mejores espacios para 2026 se están agotando. Mientras lo piensas, tu competencia ya está reservando villas en acantilados, islas privadas y terrazas de gala al atardecer. ✨ Hemos producido más de 200 eventos en más de 120 países desde 2010, y nuestro calendario 2026 se está llenando. Quedan pocas fechas premium. No dejes que tu viaje de incentivo se convierta en el arrepentimiento del próximo año. Agenda una llamada de planificación gratuita de 30 minutos esta semana. 📅 Envíanos \"2026\" por mensaje o haz clic en el enlace de la bio. #UproductionEvents #IncentiveTravel #CorporateEvents #ViajesDeIncentivo #EventosCorporativos #Eventos #LuxuryTravel #EventPlanning",
+    "dimensions": "1.91:1",
+    "cta": "Send us a message"
+  },
+  "image_prompt": "Aerial drone shot from directly above a vast open-air gala dinner at dusk, hundreds of round tables with warm golden lighting stretching across a Mediterranean clifftop terrace, guests seated as tiny figures far below, string lights and candle glow, deep blue twilight sky meeting dark sea on the horizon. Photorealistic, 35mm film grain, no CGI, no text, no logos.",
+  "image_style": "photorealistic, editorial, documentary, 35mm film grain",
+  "brand": {
+    "colors": [
+      "#1C1C1C",
+      "#FBCE0A"
+    ],
+    "font": "Comfortaa",
+    "logo": "uproduction_official_logo.png"
+  }
+}

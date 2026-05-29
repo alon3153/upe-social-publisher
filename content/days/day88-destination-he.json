@@ -1,0 +1,36 @@
+{
+  "day": 88,
+  "category": "destination",
+  "language": "he",
+  "date": "2026-07-22",
+  "weekday": "Wednesday",
+  "theme": "Marrakesh palatial nights and desert grandeur",
+  "linkedin": {
+    "profile": "Uproduction Events (Company Page)",
+    "text": "מעט יעדים הופכים ערב למופע כמו מרקש. חצרות ריאד מוארות בפנסים, גאלה לאור נרות בגן עטור לפידים, ארוחה פרטית תחת כיפת הכוכבים במדבר אגאפיי כשהרי האטלס זוהרים באופק. הוסיפו שיירות גמלים, מתופפים ורקדנים — וקיבלתם תוכנית תמריץ שמרגישה כמו כניסה לעולם אחר. אקזוטי מספיק כדי להרשים, קרוב מספיק כדי להיות פשוט. אנחנו מתכננים כל רגע ומפעילים בשטח. בואו ניצור קסם. שלחו הודעה. #UproductionEvents #טיוליתמריץ #מרקש #אירועיםעסקיים #FromBusinessToPleasure",
+    "dimensions": "1:1",
+    "cta": "DM us or book a call"
+  },
+  "instagram": {
+    "profile": "@uproductionevents",
+    "text": "מעט יעדים הופכים ערב למופע כמו מרקש. חצרות ריאד מוארות בפנסים, גאלה לאור נרות בגן עטור לפידים, ארוחה פרטית תחת כיפת הכוכבים במדבר אגאפיי כשהרי האטלס זוהרים באופק. הוסיפו שיירות גמלים, מתופפים ורקדנים — וקיבלתם תוכנית תמריץ שמרגישה כמו כניסה לעולם אחר. אקזוטי מספיק כדי להרשים, קרוב מספיק כדי להיות פשוט. אנחנו מתכננים כל רגע ומפעילים בשטח. בואו ניצור קסם. שלחו הודעה. #UproductionEvents #טיוליתמריץ #מרקש #אירועיםעסקיים #FromBusinessToPleasure",
+    "dimensions": "1:1",
+    "cta": "Link in bio"
+  },
+  "facebook": {
+    "profile": "Uproduction Events (Page)",
+    "text": "מעט יעדים הופכים ערב למופע כמו מרקש. חצרות ריאד מוארות בפנסים, גאלה לאור נרות בגן עטור לפידים, ארוחה פרטית תחת כיפת הכוכבים במדבר אגאפיי כשהרי האטלס זוהרים באופק. הוסיפו שיירות גמלים, מתופפים ורקדנים — וקיבלתם תוכנית תמריץ שמרגישה כמו כניסה לעולם אחר. אקזוטי מספיק כדי להרשים, קרוב מספיק כדי להיות פשוט. אנחנו מתכננים כל רגע ומפעילים בשטח. בואו ניצור קסם. שלחו הודעה. #UproductionEvents #טיוליתמריץ #מרקש #אירועיםעסקיים #FromBusinessToPleasure",
+    "dimensions": "1.91:1",
+    "cta": "Send us a message"
+  },
+  "image_prompt": "Aerial view at dusk over a sprawling Marrakesh riad estate, lantern-lit courtyards and reflecting pools surrounded by palm groves, the Atlas Mountains glowing pink on the horizon, tiny guests gathered around a candlelit dinner in a torch-rimmed garden far below, ochre rooftops fading into desert. Photorealistic, 35mm film grain, no CGI, no text, no logos.",
+  "image_style": "photorealistic, editorial, documentary, 35mm film grain",
+  "brand": {
+    "colors": [
+      "#1C1C1C",
+      "#FBCE0A"
+    ],
+    "font": "Comfortaa",
+    "logo": "uproduction_official_logo.png"
+  }
+}

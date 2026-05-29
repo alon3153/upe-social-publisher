@@ -1,0 +1,36 @@
+{
+  "day": 56,
+  "category": "testimonial",
+  "language": "es",
+  "date": "2026-06-20",
+  "weekday": "Saturday",
+  "theme": "What Our Clients Actually Say",
+  "linkedin": {
+    "profile": "Uproduction Events (Company Page)",
+    "text": "\"Llegamos nerviosos — 600 personas, un país extranjero, una junta vigilando cada euro. Uproduction lo hizo sentir sencillo. Tres días y ni un solo incendio que apagar. Ya los reservamos para el año que viene.\" 💬 No es un eslogan — es un VP de Ventas tras nuestro último programa de incentivo. Medimos el éxito en renovaciones, y la mayoría de los clientes vuelve. Porque lo premium no es brillo; es que nada falle cuando más importa. ¿Listo para sentir esa calma? Agenda una llamada y hablemos de tu 2026. 📞 #UproductionEvents #IncentiveTravel #CorporateEvents #Testimonios #ProducciónDeEventos #MICE #B2B #Incentivos",
+    "dimensions": "1:1",
+    "cta": "DM us or book a call"
+  },
+  "instagram": {
+    "profile": "@uproductionevents",
+    "text": "\"Llegamos nerviosos — 600 personas, un país extranjero, una junta vigilando cada euro. Uproduction lo hizo sentir sencillo. Tres días y ni un solo incendio que apagar. Ya los reservamos para el año que viene.\" 💬 No es un eslogan — es un VP de Ventas tras nuestro último programa de incentivo. Medimos el éxito en renovaciones, y la mayoría de los clientes vuelve. Porque lo premium no es brillo; es que nada falle cuando más importa. ¿Listo para sentir esa calma? Agenda una llamada y hablemos de tu 2026. 📞 #UproductionEvents #IncentiveTravel #CorporateEvents #Testimonios #ProducciónDeEventos #MICE #B2B #Incentivos",
+    "dimensions": "1:1",
+    "cta": "Link in bio"
+  },
+  "facebook": {
+    "profile": "Uproduction Events (Page)",
+    "text": "\"Llegamos nerviosos — 600 personas, un país extranjero, una junta vigilando cada euro. Uproduction lo hizo sentir sencillo. Tres días y ni un solo incendio que apagar. Ya los reservamos para el año que viene.\" 💬 No es un eslogan — es un VP de Ventas tras nuestro último programa de incentivo. Medimos el éxito en renovaciones, y la mayoría de los clientes vuelve. Porque lo premium no es brillo; es que nada falle cuando más importa. ¿Listo para sentir esa calma? Agenda una llamada y hablemos de tu 2026. 📞 #UproductionEvents #IncentiveTravel #CorporateEvents #Testimonios #ProducciónDeEventos #MICE #B2B #Incentivos",
+    "dimensions": "1.91:1",
+    "cta": "Send us a message"
+  },
+  "image_prompt": "Aerial view from high above an elegant outdoor dinner at a vineyard estate at twilight, six hundred guests at candlelit tables arranged among rows of vines, tiny figures and warm glowing tablecloths, distant hills fading into dusk, immense and serene scale. Photorealistic, 35mm film grain, no CGI, no text, no logos.",
+  "image_style": "photorealistic, editorial, documentary, 35mm film grain",
+  "brand": {
+    "colors": [
+      "#1C1C1C",
+      "#FBCE0A"
+    ],
+    "font": "Comfortaa",
+    "logo": "uproduction_official_logo.png"
+  }
+}

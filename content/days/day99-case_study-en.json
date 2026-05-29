@@ -1,0 +1,36 @@
+{
+  "day": 99,
+  "category": "case_study",
+  "language": "en",
+  "date": "2026-08-02",
+  "weekday": "Sunday",
+  "theme": "1,200 guests, three continents, one stage",
+  "linkedin": {
+    "profile": "Uproduction Events (Company Page)",
+    "text": "The brief: 1,200 top performers from three continents, flown in, housed, fed, awarded, and entertained across four days — with a flagship gala that had to feel personal at massive scale. We coordinated 14 charter movements, 9 hotels, simultaneous translation in four languages, and a custom-built stage show, all under one accountable team. Result: 98% satisfaction and a renewed three-year contract. That's what disciplined production looks like. If your 2026 event feels too complex to hand off, that's exactly when you should call us. Let's talk. #UproductionEvents #IncentiveTravel #CorporateEvents #CaseStudy #EventLogistics #EventProduction #B2B",
+    "dimensions": "1:1",
+    "cta": "DM us or book a call"
+  },
+  "instagram": {
+    "profile": "@uproductionevents",
+    "text": "The brief: 1,200 top performers from three continents, flown in, housed, fed, awarded, and entertained across four days — with a flagship gala that had to feel personal at massive scale. We coordinated 14 charter movements, 9 hotels, simultaneous translation in four languages, and a custom-built stage show, all under one accountable team. Result: 98% satisfaction and a renewed three-year contract. That's what disciplined production looks like. If your 2026 event feels too complex to hand off, that's exactly when you should call us. Let's talk. #UproductionEvents #IncentiveTravel #CorporateEvents #CaseStudy #EventLogistics #EventProduction #B2B",
+    "dimensions": "1:1",
+    "cta": "Link in bio"
+  },
+  "facebook": {
+    "profile": "Uproduction Events (Page)",
+    "text": "The brief: 1,200 top performers from three continents, flown in, housed, fed, awarded, and entertained across four days — with a flagship gala that had to feel personal at massive scale. We coordinated 14 charter movements, 9 hotels, simultaneous translation in four languages, and a custom-built stage show, all under one accountable team. Result: 98% satisfaction and a renewed three-year contract. That's what disciplined production looks like. If your 2026 event feels too complex to hand off, that's exactly when you should call us. Let's talk. #UproductionEvents #IncentiveTravel #CorporateEvents #CaseStudy #EventLogistics #EventProduction #B2B",
+    "dimensions": "1.91:1",
+    "cta": "Send us a message"
+  },
+  "image_prompt": "Sweeping overhead view of 1,200 guests filing into a colossal gala tent at blue hour, guests as tiny figures flowing along illuminated entry paths, the tent glowing from within, surrounding grounds dotted with valet lights and staging. Photorealistic, 35mm film grain, no CGI, no text, no logos.",
+  "image_style": "photorealistic, editorial, documentary, 35mm film grain",
+  "brand": {
+    "colors": [
+      "#1C1C1C",
+      "#FBCE0A"
+    ],
+    "font": "Comfortaa",
+    "logo": "uproduction_official_logo.png"
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "day": 80,
+  "category": "cta_lead",
+  "language": "es",
+  "date": "2026-07-14",
+  "weekday": "Tuesday",
+  "theme": "One call from your best event ever",
+  "linkedin": {
+    "profile": "Uproduction Events (Company Page)",
+    "text": "Todo lo que tu gente recordará durante años empieza con algo que te toma noventa segundos: un mensaje. Dinos el número de asistentes, el presupuesto aproximado, el mes, el ambiente — viaje de incentivo, cumbre de liderazgo, gala de aniversario — y volveremos con un concepto construido alrededor de tus objetivos, no una plantilla. Quince años, más de 200 eventos, más de 120 países, y un solo estándar: el evento del que no pueden dejar de hablar. La primera conversación no cuesta nada y lo cambia todo. From business to pleasure. Envíanos tu brief hoy. #UproductionEvents #IncentiveTravel #CorporateEvents #ProducciónDeEventos #Empecemos #MICE #B2B #DiseñoDeEventos",
+    "dimensions": "1:1",
+    "cta": "DM us or book a call"
+  },
+  "instagram": {
+    "profile": "@uproductionevents",
+    "text": "Todo lo que tu gente recordará durante años empieza con algo que te toma noventa segundos: un mensaje. Dinos el número de asistentes, el presupuesto aproximado, el mes, el ambiente — viaje de incentivo, cumbre de liderazgo, gala de aniversario — y volveremos con un concepto construido alrededor de tus objetivos, no una plantilla. Quince años, más de 200 eventos, más de 120 países, y un solo estándar: el evento del que no pueden dejar de hablar. La primera conversación no cuesta nada y lo cambia todo. From business to pleasure. Envíanos tu brief hoy. #UproductionEvents #IncentiveTravel #CorporateEvents #ProducciónDeEventos #Empecemos #MICE #B2B #DiseñoDeEventos",
+    "dimensions": "1:1",
+    "cta": "Link in bio"
+  },
+  "facebook": {
+    "profile": "Uproduction Events (Page)",
+    "text": "Todo lo que tu gente recordará durante años empieza con algo que te toma noventa segundos: un mensaje. Dinos el número de asistentes, el presupuesto aproximado, el mes, el ambiente — viaje de incentivo, cumbre de liderazgo, gala de aniversario — y volveremos con un concepto construido alrededor de tus objetivos, no una plantilla. Quince años, más de 200 eventos, más de 120 países, y un solo estándar: el evento del que no pueden dejar de hablar. La primera conversación no cuesta nada y lo cambia todo. From business to pleasure. Envíanos tu brief hoy. #UproductionEvents #IncentiveTravel #CorporateEvents #ProducciónDeEventos #Empecemos #MICE #B2B #DiseñoDeEventos",
+    "dimensions": "1.91:1",
+    "cta": "Send us a message"
+  },
+  "image_prompt": "Aerial night view from high above thousands of guests filling a sprawling waterfront festival ground, tiny illuminated figures spread across multiple lounge zones and dining areas, warm pools of light from lanterns and fire pits scattered through the dark, a calm reflective harbor edging the venue, distant city glow on the horizon. Photorealistic, 35mm film grain, no CGI, no text, no logos.",
+  "image_style": "photorealistic, editorial, documentary, 35mm film grain",
+  "brand": {
+    "colors": [
+      "#1C1C1C",
+      "#FBCE0A"
+    ],
+    "font": "Comfortaa",
+    "logo": "uproduction_official_logo.png"
+  }
+}

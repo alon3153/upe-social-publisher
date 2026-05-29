@@ -1,0 +1,36 @@
+{
+  "day": 49,
+  "category": "destination",
+  "language": "en",
+  "date": "2026-06-13",
+  "weekday": "Saturday",
+  "theme": "Ibiza Beyond The Clubs",
+  "linkedin": {
+    "profile": "Uproduction Events (Company Page)",
+    "text": "Forget the cliché. The Ibiza that closes deals isn't the 4am one — it's the private cliff villa, the sunset catamaran for your leadership team, the beach gala that makes a sales kickoff feel like a reward. 🌊 We use the island's energy on your terms: high-impact by day, unforgettable by night, polished from arrival to departure. It's the destination that signals ambition without saying a word. Ready to see your event brief reimagined on Ibiza? 🛥️ DM \"IBIZA\" or book a planning call via the link in bio. #UproductionEvents #IncentiveTravel #CorporateEvents #Ibiza #Spain #LuxuryEvents #IncentiveTrip #EventProduction",
+    "dimensions": "1:1",
+    "cta": "DM us or book a call"
+  },
+  "instagram": {
+    "profile": "@uproductionevents",
+    "text": "Forget the cliché. The Ibiza that closes deals isn't the 4am one — it's the private cliff villa, the sunset catamaran for your leadership team, the beach gala that makes a sales kickoff feel like a reward. 🌊 We use the island's energy on your terms: high-impact by day, unforgettable by night, polished from arrival to departure. It's the destination that signals ambition without saying a word. Ready to see your event brief reimagined on Ibiza? 🛥️ DM \"IBIZA\" or book a planning call via the link in bio. #UproductionEvents #IncentiveTravel #CorporateEvents #Ibiza #Spain #LuxuryEvents #IncentiveTrip #EventProduction",
+    "dimensions": "1:1",
+    "cta": "Link in bio"
+  },
+  "facebook": {
+    "profile": "Uproduction Events (Page)",
+    "text": "Forget the cliché. The Ibiza that closes deals isn't the 4am one — it's the private cliff villa, the sunset catamaran for your leadership team, the beach gala that makes a sales kickoff feel like a reward. 🌊 We use the island's energy on your terms: high-impact by day, unforgettable by night, polished from arrival to departure. It's the destination that signals ambition without saying a word. Ready to see your event brief reimagined on Ibiza? 🛥️ DM \"IBIZA\" or book a planning call via the link in bio. #UproductionEvents #IncentiveTravel #CorporateEvents #Ibiza #Spain #LuxuryEvents #IncentiveTrip #EventProduction",
+    "dimensions": "1.91:1",
+    "cta": "Send us a message"
+  },
+  "image_prompt": "Aerial golden-hour view of the Ibiza coastline, rugged cliffs and pine-covered hills meeting a glittering turquoise sea, a secluded bay below hosting a large beachfront corporate gathering of hundreds, tiny figures from above arranged around white cabanas and a long dinner setup, soft warm light across the water. Photorealistic, 35mm film grain, no CGI, no text, no logos.",
+  "image_style": "photorealistic, editorial, documentary, 35mm film grain",
+  "brand": {
+    "colors": [
+      "#1C1C1C",
+      "#FBCE0A"
+    ],
+    "font": "Comfortaa",
+    "logo": "uproduction_official_logo.png"
+  }
+}

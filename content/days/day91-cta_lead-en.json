@@ -1,0 +1,36 @@
+{
+  "day": 91,
+  "category": "cta_lead",
+  "language": "en",
+  "date": "2026-07-25",
+  "weekday": "Saturday",
+  "theme": "Book your free 2026 strategy call",
+  "linkedin": {
+    "profile": "Uproduction Events (Company Page)",
+    "text": "Great events don't happen by accident — they're engineered. For 15 years we've turned blank calendars into unforgettable moments for hundreds, even thousands, of guests. The strongest concepts always start with a single conversation about your goals, your people, and the experience you want them to remember. Book a free 30-minute strategy call with our team and we'll sketch the first outline of your 2026 event — no obligation, just vision. The earliest planners get the best venues. Let's talk. #UproductionEvents #IncentiveTravel #CorporateEvents #EventPlanning #StrategyCall #B2BEvents #EventProduction",
+    "dimensions": "1:1",
+    "cta": "DM us or book a call"
+  },
+  "instagram": {
+    "profile": "@uproductionevents",
+    "text": "Great events don't happen by accident — they're engineered. For 15 years we've turned blank calendars into unforgettable moments for hundreds, even thousands, of guests. The strongest concepts always start with a single conversation about your goals, your people, and the experience you want them to remember. Book a free 30-minute strategy call with our team and we'll sketch the first outline of your 2026 event — no obligation, just vision. The earliest planners get the best venues. Let's talk. #UproductionEvents #IncentiveTravel #CorporateEvents #EventPlanning #StrategyCall #B2BEvents #EventProduction",
+    "dimensions": "1:1",
+    "cta": "Link in bio"
+  },
+  "facebook": {
+    "profile": "Uproduction Events (Page)",
+    "text": "Great events don't happen by accident — they're engineered. For 15 years we've turned blank calendars into unforgettable moments for hundreds, even thousands, of guests. The strongest concepts always start with a single conversation about your goals, your people, and the experience you want them to remember. Book a free 30-minute strategy call with our team and we'll sketch the first outline of your 2026 event — no obligation, just vision. The earliest planners get the best venues. Let's talk. #UproductionEvents #IncentiveTravel #CorporateEvents #EventPlanning #StrategyCall #B2BEvents #EventProduction",
+    "dimensions": "1.91:1",
+    "cta": "Send us a message"
+  },
+  "image_prompt": "Aerial view from high above a vast outdoor gala dinner at dusk, hundreds of round tables with warm candlelight stretching across a private estate lawn, guests seen from above as tiny silhouettes, string lights crisscrossing overhead, a calm sea on the horizon. Photorealistic, 35mm film grain, no CGI, no text, no logos.",
+  "image_style": "photorealistic, editorial, documentary, 35mm film grain",
+  "brand": {
+    "colors": [
+      "#1C1C1C",
+      "#FBCE0A"
+    ],
+    "font": "Comfortaa",
+    "logo": "uproduction_official_logo.png"
+  }
+}

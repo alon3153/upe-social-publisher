@@ -1,0 +1,36 @@
+{
+  "day": 72,
+  "category": "destination",
+  "language": "en",
+  "date": "2026-07-06",
+  "weekday": "Monday",
+  "theme": "Prague rooftops above the spires",
+  "linkedin": {
+    "profile": "Uproduction Events (Company Page)",
+    "text": "Some cities are backdrops. Prague is a character in your story. Imagine your top performers crossing the Charles Bridge at dawn, a private dinner inside a candlelit baroque hall, the whole skyline of a hundred spires laid out below your rooftop reception. We handle the venues, the logistics, the every detail so your team only handles the memories. This is incentive travel done at the level your people earned. From business to pleasure. Message us to start planning Prague. #UproductionEvents #IncentiveTravel #CorporateEvents #Prague #LuxuryTravel #EventPlanning #Czechia #MICE",
+    "dimensions": "1:1",
+    "cta": "DM us or book a call"
+  },
+  "instagram": {
+    "profile": "@uproductionevents",
+    "text": "Some cities are backdrops. Prague is a character in your story. Imagine your top performers crossing the Charles Bridge at dawn, a private dinner inside a candlelit baroque hall, the whole skyline of a hundred spires laid out below your rooftop reception. We handle the venues, the logistics, the every detail so your team only handles the memories. This is incentive travel done at the level your people earned. From business to pleasure. Message us to start planning Prague. #UproductionEvents #IncentiveTravel #CorporateEvents #Prague #LuxuryTravel #EventPlanning #Czechia #MICE",
+    "dimensions": "1:1",
+    "cta": "Link in bio"
+  },
+  "facebook": {
+    "profile": "Uproduction Events (Page)",
+    "text": "Some cities are backdrops. Prague is a character in your story. Imagine your top performers crossing the Charles Bridge at dawn, a private dinner inside a candlelit baroque hall, the whole skyline of a hundred spires laid out below your rooftop reception. We handle the venues, the logistics, the every detail so your team only handles the memories. This is incentive travel done at the level your people earned. From business to pleasure. Message us to start planning Prague. #UproductionEvents #IncentiveTravel #CorporateEvents #Prague #LuxuryTravel #EventPlanning #Czechia #MICE",
+    "dimensions": "1.91:1",
+    "cta": "Send us a message"
+  },
+  "image_prompt": "Sweeping aerial drone view over Prague at blue hour, the red rooftops and gothic spires of the Old Town glowing under soft lights, the Vltava river curving through the city with its illuminated bridges, the castle perched on the hill in the distance, mist settling over the valley, cinematic wide composition. Photorealistic, 35mm film grain, no CGI, no text, no logos.",
+  "image_style": "photorealistic, editorial, documentary, 35mm film grain",
+  "brand": {
+    "colors": [
+      "#1C1C1C",
+      "#FBCE0A"
+    ],
+    "font": "Comfortaa",
+    "logo": "uproduction_official_logo.png"
+  }
+}

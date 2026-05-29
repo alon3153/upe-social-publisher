@@ -1,0 +1,36 @@
+{
+  "day": 96,
+  "category": "cta_lead",
+  "language": "en",
+  "date": "2026-07-30",
+  "weekday": "Thursday",
+  "theme": "Year-end planning window closing now",
+  "linkedin": {
+    "profile": "Uproduction Events (Company Page)",
+    "text": "Q4 is when smart leaders lock next year's flagship event — long before budgets tighten and venues vanish. Lock your concept now and you'll walk into 2026 with the hardest decisions already made and the best partners already secured. We'll help you align budget, dates, and destination in a single planning sprint, then carry it through to flawless execution. The window for premium 2026 dates is closing fast. Book a year-end planning session with our team this week — message us and we'll send you available slots. #UproductionEvents #IncentiveTravel #CorporateEvents #YearEndPlanning #EventStrategy #2026Events #B2B",
+    "dimensions": "1:1",
+    "cta": "DM us or book a call"
+  },
+  "instagram": {
+    "profile": "@uproductionevents",
+    "text": "Q4 is when smart leaders lock next year's flagship event — long before budgets tighten and venues vanish. Lock your concept now and you'll walk into 2026 with the hardest decisions already made and the best partners already secured. We'll help you align budget, dates, and destination in a single planning sprint, then carry it through to flawless execution. The window for premium 2026 dates is closing fast. Book a year-end planning session with our team this week — message us and we'll send you available slots. #UproductionEvents #IncentiveTravel #CorporateEvents #YearEndPlanning #EventStrategy #2026Events #B2B",
+    "dimensions": "1:1",
+    "cta": "Link in bio"
+  },
+  "facebook": {
+    "profile": "Uproduction Events (Page)",
+    "text": "Q4 is when smart leaders lock next year's flagship event — long before budgets tighten and venues vanish. Lock your concept now and you'll walk into 2026 with the hardest decisions already made and the best partners already secured. We'll help you align budget, dates, and destination in a single planning sprint, then carry it through to flawless execution. The window for premium 2026 dates is closing fast. Book a year-end planning session with our team this week — message us and we'll send you available slots. #UproductionEvents #IncentiveTravel #CorporateEvents #YearEndPlanning #EventStrategy #2026Events #B2B",
+    "dimensions": "1.91:1",
+    "cta": "Send us a message"
+  },
+  "image_prompt": "Aerial twilight view of a sprawling beachfront resort hosting a corporate festival, hundreds of guests as tiny dots gathered around lantern-lit pathways and pools, palm silhouettes, ocean fading to dark blue at the horizon. Photorealistic, 35mm film grain, no CGI, no text, no logos.",
+  "image_style": "photorealistic, editorial, documentary, 35mm film grain",
+  "brand": {
+    "colors": [
+      "#1C1C1C",
+      "#FBCE0A"
+    ],
+    "font": "Comfortaa",
+    "logo": "uproduction_official_logo.png"
+  }
+}

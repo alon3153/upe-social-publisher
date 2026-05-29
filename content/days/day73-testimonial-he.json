@@ -1,0 +1,36 @@
+{
+  "day": 73,
+  "category": "testimonial",
+  "language": "he",
+  "date": "2026-07-07",
+  "weekday": "Tuesday",
+  "theme": "Client voice on flawless execution",
+  "linkedin": {
+    "profile": "Uproduction Events (Company Page)",
+    "text": "\"הבאנו 800 איש לעיר שאף אחד מהם לא הכיר, ושום דבר לא השתבש. ההסעות, הארוחות, הבילוי המפתיע — הכל פשוט קרה. הצוות שלי חושב שאני גאון. האמת? זה היה Uproduction.\" — סמנכ\"ל מכירות, לקוח טכנולוגי גלובלי. זו כל הנקודה: אתם לוקחים את הקרדיט, אנחנו נושאים במורכבות. 15 שנה, 200+ אירועים, אפס מקום ל'כמעט'. from business to pleasure. שלחו הודעה לתכנון הבא. #UproductionEvents #תמרוץ #אירועים #לקוחות #הפקת_אירועים",
+    "dimensions": "1:1",
+    "cta": "DM us or book a call"
+  },
+  "instagram": {
+    "profile": "@uproductionevents",
+    "text": "\"הבאנו 800 איש לעיר שאף אחד מהם לא הכיר, ושום דבר לא השתבש. ההסעות, הארוחות, הבילוי המפתיע — הכל פשוט קרה. הצוות שלי חושב שאני גאון. האמת? זה היה Uproduction.\" — סמנכ\"ל מכירות, לקוח טכנולוגי גלובלי. זו כל הנקודה: אתם לוקחים את הקרדיט, אנחנו נושאים במורכבות. 15 שנה, 200+ אירועים, אפס מקום ל'כמעט'. from business to pleasure. שלחו הודעה לתכנון הבא. #UproductionEvents #תמרוץ #אירועים #לקוחות #הפקת_אירועים",
+    "dimensions": "1:1",
+    "cta": "Link in bio"
+  },
+  "facebook": {
+    "profile": "Uproduction Events (Page)",
+    "text": "\"הבאנו 800 איש לעיר שאף אחד מהם לא הכיר, ושום דבר לא השתבש. ההסעות, הארוחות, הבילוי המפתיע — הכל פשוט קרה. הצוות שלי חושב שאני גאון. האמת? זה היה Uproduction.\" — סמנכ\"ל מכירות, לקוח טכנולוגי גלובלי. זו כל הנקודה: אתם לוקחים את הקרדיט, אנחנו נושאים במורכבות. 15 שנה, 200+ אירועים, אפס מקום ל'כמעט'. from business to pleasure. שלחו הודעה לתכנון הבא. #UproductionEvents #תמרוץ #אירועים #לקוחות #הפקת_אירועים",
+    "dimensions": "1.91:1",
+    "cta": "Send us a message"
+  },
+  "image_prompt": "Elevated wide shot from behind a vast crowd of thousands seated at a gala dinner inside a grand historic hall, tiny faces turned toward a softly lit stage area, ornate ceiling and chandeliers above, the sea of round tables with white linens and candle glow stretching far into the depth of the room. Photorealistic, 35mm film grain, no CGI, no text, no logos.",
+  "image_style": "photorealistic, editorial, documentary, 35mm film grain",
+  "brand": {
+    "colors": [
+      "#1C1C1C",
+      "#FBCE0A"
+    ],
+    "font": "Comfortaa",
+    "logo": "uproduction_official_logo.png"
+  }
+}

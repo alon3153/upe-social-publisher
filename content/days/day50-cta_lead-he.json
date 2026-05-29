@@ -1,0 +1,36 @@
+{
+  "day": 50,
+  "category": "cta_lead",
+  "language": "he",
+  "date": "2026-06-14",
+  "weekday": "Sunday",
+  "theme": "Your Competitors Already Booked",
+  "linkedin": {
+    "profile": "Uproduction Events (Company Page)",
+    "text": "הנה האמת הלא נוחה: החברות שאליהן הטאלנט שלכם משווה אתכם כבר סגרו את טיולי התמריצים שלהן ל-2026. 🏆 היעדים מתמלאים, הווילות הכי טובות נחטפות, ו\"נסדר את זה ברבעון הבא\" זה איך שצוותים נתקעים עם תאריכים שנשארו ומחירים מנופחים. אתם לא צריכים את כל התשובות היום — אתם רק צריכים להתחיל לפני שהאפשרויות הטובות נגמרות. הפקנו 200+ אירועים ב-120+ מדינות; אנחנו זזים מהר כשאתם זזים. ⏳ אל תהיו החברה שעדיין מתלבטת. קבעו שיחה עכשיו — קישור בביו, או שלחו \"לסגור\". #UproductionEvents #IncentiveTravel #אירועיםעסקיים #טיולתמריצים #הפקתאירועים",
+    "dimensions": "1:1",
+    "cta": "DM us or book a call"
+  },
+  "instagram": {
+    "profile": "@uproductionevents",
+    "text": "הנה האמת הלא נוחה: החברות שאליהן הטאלנט שלכם משווה אתכם כבר סגרו את טיולי התמריצים שלהן ל-2026. 🏆 היעדים מתמלאים, הווילות הכי טובות נחטפות, ו\"נסדר את זה ברבעון הבא\" זה איך שצוותים נתקעים עם תאריכים שנשארו ומחירים מנופחים. אתם לא צריכים את כל התשובות היום — אתם רק צריכים להתחיל לפני שהאפשרויות הטובות נגמרות. הפקנו 200+ אירועים ב-120+ מדינות; אנחנו זזים מהר כשאתם זזים. ⏳ אל תהיו החברה שעדיין מתלבטת. קבעו שיחה עכשיו — קישור בביו, או שלחו \"לסגור\". #UproductionEvents #IncentiveTravel #אירועיםעסקיים #טיולתמריצים #הפקתאירועים",
+    "dimensions": "1:1",
+    "cta": "Link in bio"
+  },
+  "facebook": {
+    "profile": "Uproduction Events (Page)",
+    "text": "הנה האמת הלא נוחה: החברות שאליהן הטאלנט שלכם משווה אתכם כבר סגרו את טיולי התמריצים שלהן ל-2026. 🏆 היעדים מתמלאים, הווילות הכי טובות נחטפות, ו\"נסדר את זה ברבעון הבא\" זה איך שצוותים נתקעים עם תאריכים שנשארו ומחירים מנופחים. אתם לא צריכים את כל התשובות היום — אתם רק צריכים להתחיל לפני שהאפשרויות הטובות נגמרות. הפקנו 200+ אירועים ב-120+ מדינות; אנחנו זזים מהר כשאתם זזים. ⏳ אל תהיו החברה שעדיין מתלבטת. קבעו שיחה עכשיו — קישור בביו, או שלחו \"לסגור\". #UproductionEvents #IncentiveTravel #אירועיםעסקיים #טיולתמריצים #הפקתאירועים",
+    "dimensions": "1.91:1",
+    "cta": "Send us a message"
+  },
+  "image_prompt": "Sweeping aerial at dusk over an enormous corporate beach event, thousands of guests seen from high above as a dense field of tiny figures facing a glowing stage zone, torches and warm lighting tracing pathways through the crowd, dark Mediterranean sea and a fading orange horizon beyond. Photorealistic, 35mm film grain, no CGI, no text, no logos.",
+  "image_style": "photorealistic, editorial, documentary, 35mm film grain",
+  "brand": {
+    "colors": [
+      "#1C1C1C",
+      "#FBCE0A"
+    ],
+    "font": "Comfortaa",
+    "logo": "uproduction_official_logo.png"
+  }
+}

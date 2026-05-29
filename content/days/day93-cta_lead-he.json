@@ -1,0 +1,36 @@
+{
+  "day": 93,
+  "category": "cta_lead",
+  "language": "he",
+  "date": "2026-07-27",
+  "weekday": "Monday",
+  "theme": "Limited 2026 production slots remaining",
+  "linkedin": {
+    "profile": "Uproduction Events (Company Page)",
+    "text": "האמת שרוב המתכננים מגלים מאוחר מדי: המקומות הכי טובים, התאריכים הכי טובים והצוותים הכי טובים נסגרים 9–12 חודשים מראש. אנחנו לוקחים מספר מוגבל של הפקות גדולות בשנה, כדי שכל לקוח יקבל את מלוא תשומת הלב. נותרו מעט מקומות ל-2026 — ו-2027 כבר נפתח. אם כנס, גאלה או טיול תמריץ באופק — זה הרגע. שלחו לנו תאריכים ונאשר זמינות תוך 24 שעות. #UproductionEvents #אירועים #כנסים #הפקתאירועים #טיוליתמריץ",
+    "dimensions": "1:1",
+    "cta": "DM us or book a call"
+  },
+  "instagram": {
+    "profile": "@uproductionevents",
+    "text": "האמת שרוב המתכננים מגלים מאוחר מדי: המקומות הכי טובים, התאריכים הכי טובים והצוותים הכי טובים נסגרים 9–12 חודשים מראש. אנחנו לוקחים מספר מוגבל של הפקות גדולות בשנה, כדי שכל לקוח יקבל את מלוא תשומת הלב. נותרו מעט מקומות ל-2026 — ו-2027 כבר נפתח. אם כנס, גאלה או טיול תמריץ באופק — זה הרגע. שלחו לנו תאריכים ונאשר זמינות תוך 24 שעות. #UproductionEvents #אירועים #כנסים #הפקתאירועים #טיוליתמריץ",
+    "dimensions": "1:1",
+    "cta": "Link in bio"
+  },
+  "facebook": {
+    "profile": "Uproduction Events (Page)",
+    "text": "האמת שרוב המתכננים מגלים מאוחר מדי: המקומות הכי טובים, התאריכים הכי טובים והצוותים הכי טובים נסגרים 9–12 חודשים מראש. אנחנו לוקחים מספר מוגבל של הפקות גדולות בשנה, כדי שכל לקוח יקבל את מלוא תשומת הלב. נותרו מעט מקומות ל-2026 — ו-2027 כבר נפתח. אם כנס, גאלה או טיול תמריץ באופק — זה הרגע. שלחו לנו תאריכים ונאשר זמינות תוך 24 שעות. #UproductionEvents #אירועים #כנסים #הפקתאירועים #טיוליתמריץ",
+    "dimensions": "1.91:1",
+    "cta": "Send us a message"
+  },
+  "image_prompt": "High overhead shot of thousands of conference attendees seated in a vast arena auditorium, seen from directly above as a sea of tiny heads in neat curved rows, warm amber lighting washing the crowd, scale emphasized by the sheer density. Photorealistic, 35mm film grain, no CGI, no text, no logos.",
+  "image_style": "photorealistic, editorial, documentary, 35mm film grain",
+  "brand": {
+    "colors": [
+      "#1C1C1C",
+      "#FBCE0A"
+    ],
+    "font": "Comfortaa",
+    "logo": "uproduction_official_logo.png"
+  }
+}

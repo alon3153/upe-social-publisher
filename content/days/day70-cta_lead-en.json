@@ -1,0 +1,36 @@
+{
+  "day": 70,
+  "category": "cta_lead",
+  "language": "en",
+  "date": "2026-07-04",
+  "weekday": "Saturday",
+  "theme": "From business to pleasure done right",
+  "linkedin": {
+    "profile": "Uproduction Events (Company Page)",
+    "text": "From the first strategy call to the final farewell drink, UPE turns business objectives into experiences people feel. Conferences that inform, gala dinners that dazzle, incentive trips that bond — all engineered, all flawless, all unmistakably yours. Since 2010 we've produced over 200 events across 120+ countries, and we'd love yours to be next. From business to pleasure — let's make it real. Reach out today and let's begin. #UproductionEvents #IncentiveTravel #CorporateEvents #EventProduction #B2B #FromBusinessToPleasure #EventManagement",
+    "dimensions": "1:1",
+    "cta": "DM us or book a call"
+  },
+  "instagram": {
+    "profile": "@uproductionevents",
+    "text": "From the first strategy call to the final farewell drink, UPE turns business objectives into experiences people feel. Conferences that inform, gala dinners that dazzle, incentive trips that bond — all engineered, all flawless, all unmistakably yours. Since 2010 we've produced over 200 events across 120+ countries, and we'd love yours to be next. From business to pleasure — let's make it real. Reach out today and let's begin. #UproductionEvents #IncentiveTravel #CorporateEvents #EventProduction #B2B #FromBusinessToPleasure #EventManagement",
+    "dimensions": "1:1",
+    "cta": "Link in bio"
+  },
+  "facebook": {
+    "profile": "Uproduction Events (Page)",
+    "text": "From the first strategy call to the final farewell drink, UPE turns business objectives into experiences people feel. Conferences that inform, gala dinners that dazzle, incentive trips that bond — all engineered, all flawless, all unmistakably yours. Since 2010 we've produced over 200 events across 120+ countries, and we'd love yours to be next. From business to pleasure — let's make it real. Reach out today and let's begin. #UproductionEvents #IncentiveTravel #CorporateEvents #EventProduction #B2B #FromBusinessToPleasure #EventManagement",
+    "dimensions": "1.91:1",
+    "cta": "Send us a message"
+  },
+  "image_prompt": "Aerial night view of a celebratory rooftop reception high above an Italian city, hundreds of guests mingling under warm festoon lighting seen from above as tiny silhouettes, the illuminated city sprawling to the horizon, a sense of triumph and arrival. Photorealistic, 35mm film grain, no CGI, no text, no logos.",
+  "image_style": "photorealistic, editorial, documentary, 35mm film grain",
+  "brand": {
+    "colors": [
+      "#1C1C1C",
+      "#FBCE0A"
+    ],
+    "font": "Comfortaa",
+    "logo": "uproduction_official_logo.png"
+  }
+}

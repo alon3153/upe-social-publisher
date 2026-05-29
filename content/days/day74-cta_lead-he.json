@@ -1,0 +1,36 @@
+{
+  "day": 74,
+  "category": "cta_lead",
+  "language": "he",
+  "date": "2026-07-08",
+  "weekday": "Wednesday",
+  "theme": "Q4 incentive planning starts now",
+  "linkedin": {
+    "profile": "Uproduction Events (Company Page)",
+    "text": "הטיול שהצוות שלכם יצא אליו ברבעון 4 נקבע עכשיו — ביומנים, לא בקטלוגים. המקומות הבולטים, האחוזות הפרטיות, טיסות הצ'ארטר: הם הולכים למי שמזמין ראשון. עד שזה 'מרגיש' כמו עונת תכנון, התאריכים הטובים נגמרו. 15 שנה אנחנו משיגים את הבלתי-מושג ללקוחות שזזו מוקדם. נעלו יעד ותאריכים לפני המתחרים. from business to pleasure. שלחו לנו מספר משתתפים וחודש יעד היום. #UproductionEvents #תמרוץ #אירועים #הפקת_אירועים #טיולי_תמריץ",
+    "dimensions": "1:1",
+    "cta": "DM us or book a call"
+  },
+  "instagram": {
+    "profile": "@uproductionevents",
+    "text": "הטיול שהצוות שלכם יצא אליו ברבעון 4 נקבע עכשיו — ביומנים, לא בקטלוגים. המקומות הבולטים, האחוזות הפרטיות, טיסות הצ'ארטר: הם הולכים למי שמזמין ראשון. עד שזה 'מרגיש' כמו עונת תכנון, התאריכים הטובים נגמרו. 15 שנה אנחנו משיגים את הבלתי-מושג ללקוחות שזזו מוקדם. נעלו יעד ותאריכים לפני המתחרים. from business to pleasure. שלחו לנו מספר משתתפים וחודש יעד היום. #UproductionEvents #תמרוץ #אירועים #הפקת_אירועים #טיולי_תמריץ",
+    "dimensions": "1:1",
+    "cta": "Link in bio"
+  },
+  "facebook": {
+    "profile": "Uproduction Events (Page)",
+    "text": "הטיול שהצוות שלכם יצא אליו ברבעון 4 נקבע עכשיו — ביומנים, לא בקטלוגים. המקומות הבולטים, האחוזות הפרטיות, טיסות הצ'ארטר: הם הולכים למי שמזמין ראשון. עד שזה 'מרגיש' כמו עונת תכנון, התאריכים הטובים נגמרו. 15 שנה אנחנו משיגים את הבלתי-מושג ללקוחות שזזו מוקדם. נעלו יעד ותאריכים לפני המתחרים. from business to pleasure. שלחו לנו מספר משתתפים וחודש יעד היום. #UproductionEvents #תמרוץ #אירועים #הפקת_אירועים #טיולי_תמריץ",
+    "dimensions": "1.91:1",
+    "cta": "Send us a message"
+  },
+  "image_prompt": "High aerial view at dusk over a large coastal resort, hundreds of guests as tiny figures gathered across a series of connected infinity terraces overlooking the sea, soft pool lighting glowing turquoise, palm silhouettes, a yacht anchored offshore, the last orange light fading at the horizon line. Photorealistic, 35mm film grain, no CGI, no text, no logos.",
+  "image_style": "photorealistic, editorial, documentary, 35mm film grain",
+  "brand": {
+    "colors": [
+      "#1C1C1C",
+      "#FBCE0A"
+    ],
+    "font": "Comfortaa",
+    "logo": "uproduction_official_logo.png"
+  }
+}

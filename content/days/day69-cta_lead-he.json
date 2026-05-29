@@ -1,0 +1,36 @@
+{
+  "day": 69,
+  "category": "cta_lead",
+  "language": "he",
+  "date": "2026-07-03",
+  "weekday": "Friday",
+  "theme": "Book 2027 dates before they vanish",
+  "linkedin": {
+    "profile": "Uproduction Events (Company Page)",
+    "text": "האתרים האיטלקיים המבוקשים ביותר ל-2027 כבר מתמלאים. תאריכים מובחרים, וילות חתימה, והשפים שכולם רוצים — לא מחכים למתלבטים. אם טיול תמרוץ דגל או כנס נמצאים באופק של השנה הבאה, עכשיו הרגע לנעול. UPE משיגה את המרחבים שאחרים לא יכולים ומעצבת אותם סביב המטרות שלכם. התחילו את השיחה היום — תודו לעצמכם בעתיד. שלחו הודעה. #UproductionEvents #טיוליתמרוץ #אירועיחברה #תכנוןאירועים #איטליה",
+    "dimensions": "1:1",
+    "cta": "DM us or book a call"
+  },
+  "instagram": {
+    "profile": "@uproductionevents",
+    "text": "האתרים האיטלקיים המבוקשים ביותר ל-2027 כבר מתמלאים. תאריכים מובחרים, וילות חתימה, והשפים שכולם רוצים — לא מחכים למתלבטים. אם טיול תמרוץ דגל או כנס נמצאים באופק של השנה הבאה, עכשיו הרגע לנעול. UPE משיגה את המרחבים שאחרים לא יכולים ומעצבת אותם סביב המטרות שלכם. התחילו את השיחה היום — תודו לעצמכם בעתיד. שלחו הודעה. #UproductionEvents #טיוליתמרוץ #אירועיחברה #תכנוןאירועים #איטליה",
+    "dimensions": "1:1",
+    "cta": "Link in bio"
+  },
+  "facebook": {
+    "profile": "Uproduction Events (Page)",
+    "text": "האתרים האיטלקיים המבוקשים ביותר ל-2027 כבר מתמלאים. תאריכים מובחרים, וילות חתימה, והשפים שכולם רוצים — לא מחכים למתלבטים. אם טיול תמרוץ דגל או כנס נמצאים באופק של השנה הבאה, עכשיו הרגע לנעול. UPE משיגה את המרחבים שאחרים לא יכולים ומעצבת אותם סביב המטרות שלכם. התחילו את השיחה היום — תודו לעצמכם בעתיד. שלחו הודעה. #UproductionEvents #טיוליתמרוץ #אירועיחברה #תכנוןאירועים #איטליה",
+    "dimensions": "1.91:1",
+    "cta": "Send us a message"
+  },
+  "image_prompt": "Aerial sunset view of a sprawling historic estate with vast manicured gardens, a long arrival driveway lined with cypress trees, hundreds of guests gathering on a grand lawn far below as tiny figures, golden light raking across the grounds. Photorealistic, 35mm film grain, no CGI, no text, no logos.",
+  "image_style": "photorealistic, editorial, documentary, 35mm film grain",
+  "brand": {
+    "colors": [
+      "#1C1C1C",
+      "#FBCE0A"
+    ],
+    "font": "Comfortaa",
+    "logo": "uproduction_official_logo.png"
+  }
+}

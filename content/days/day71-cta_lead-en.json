@@ -1,0 +1,36 @@
+{
+  "day": 71,
+  "category": "cta_lead",
+  "language": "en",
+  "date": "2026-07-05",
+  "weekday": "Sunday",
+  "theme": "Your team deserves the unforgettable trip",
+  "linkedin": {
+    "profile": "Uproduction Events (Company Page)",
+    "text": "They'll remember the night the whole company watched the sun drop behind the skyline together. The toast that landed. The trip that turned colleagues into a team. That's what an incentive program buys you — loyalty you can't put on a balance sheet. We've produced over 200 of these moments across 120+ countries since 2010. Tell us who you want to reward, and we'll design the experience they talk about for years. From business to pleasure. Book a discovery call this week. #UproductionEvents #IncentiveTravel #CorporateEvents #EmployeeRewards #EventProduction #TeamBuilding #B2B #LeadershipRetreat",
+    "dimensions": "1:1",
+    "cta": "DM us or book a call"
+  },
+  "instagram": {
+    "profile": "@uproductionevents",
+    "text": "They'll remember the night the whole company watched the sun drop behind the skyline together. The toast that landed. The trip that turned colleagues into a team. That's what an incentive program buys you — loyalty you can't put on a balance sheet. We've produced over 200 of these moments across 120+ countries since 2010. Tell us who you want to reward, and we'll design the experience they talk about for years. From business to pleasure. Book a discovery call this week. #UproductionEvents #IncentiveTravel #CorporateEvents #EmployeeRewards #EventProduction #TeamBuilding #B2B #LeadershipRetreat",
+    "dimensions": "1:1",
+    "cta": "Link in bio"
+  },
+  "facebook": {
+    "profile": "Uproduction Events (Page)",
+    "text": "They'll remember the night the whole company watched the sun drop behind the skyline together. The toast that landed. The trip that turned colleagues into a team. That's what an incentive program buys you — loyalty you can't put on a balance sheet. We've produced over 200 of these moments across 120+ countries since 2010. Tell us who you want to reward, and we'll design the experience they talk about for years. From business to pleasure. Book a discovery call this week. #UproductionEvents #IncentiveTravel #CorporateEvents #EmployeeRewards #EventProduction #TeamBuilding #B2B #LeadershipRetreat",
+    "dimensions": "1.91:1",
+    "cta": "Send us a message"
+  },
+  "image_prompt": "Aerial view from directly above a sweeping rooftop terrace at golden hour, hundreds of guests in elegant attire seen from behind and above as tiny figures gathered around glowing dinner tables, a vast city skyline stretching to the horizon, warm string lights threading across the open-air space, shallow depth of field on the distant cityscape. Photorealistic, 35mm film grain, no CGI, no text, no logos.",
+  "image_style": "photorealistic, editorial, documentary, 35mm film grain",
+  "brand": {
+    "colors": [
+      "#1C1C1C",
+      "#FBCE0A"
+    ],
+    "font": "Comfortaa",
+    "logo": "uproduction_official_logo.png"
+  }
+}

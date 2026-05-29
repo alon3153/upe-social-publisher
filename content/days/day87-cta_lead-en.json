@@ -1,0 +1,36 @@
+{
+  "day": 87,
+  "category": "cta_lead",
+  "language": "en",
+  "date": "2026-07-21",
+  "weekday": "Tuesday",
+  "theme": "Budgets that build experiences not excuses",
+  "linkedin": {
+    "profile": "Uproduction Events (Company Page)",
+    "text": "A great event budget isn't about spending more — it's about every euro being felt by the people in the room. We've spent 15 years learning where money creates memories and where it quietly disappears. The result: programs that look and feel premium without waste, with transparent costs and zero surprises at settlement. You set the budget; we make it punch far above its weight. Want to see how far yours could go? Send us your brief and let's talk numbers. #UproductionEvents #IncentiveTravel #CorporateEvents #EventBudget #B2BEvents #EventPlanning #FromBusinessToPleasure",
+    "dimensions": "1:1",
+    "cta": "DM us or book a call"
+  },
+  "instagram": {
+    "profile": "@uproductionevents",
+    "text": "A great event budget isn't about spending more — it's about every euro being felt by the people in the room. We've spent 15 years learning where money creates memories and where it quietly disappears. The result: programs that look and feel premium without waste, with transparent costs and zero surprises at settlement. You set the budget; we make it punch far above its weight. Want to see how far yours could go? Send us your brief and let's talk numbers. #UproductionEvents #IncentiveTravel #CorporateEvents #EventBudget #B2BEvents #EventPlanning #FromBusinessToPleasure",
+    "dimensions": "1:1",
+    "cta": "Link in bio"
+  },
+  "facebook": {
+    "profile": "Uproduction Events (Page)",
+    "text": "A great event budget isn't about spending more — it's about every euro being felt by the people in the room. We've spent 15 years learning where money creates memories and where it quietly disappears. The result: programs that look and feel premium without waste, with transparent costs and zero surprises at settlement. You set the budget; we make it punch far above its weight. Want to see how far yours could go? Send us your brief and let's talk numbers. #UproductionEvents #IncentiveTravel #CorporateEvents #EventBudget #B2BEvents #EventPlanning #FromBusinessToPleasure",
+    "dimensions": "1.91:1",
+    "cta": "Send us a message"
+  },
+  "image_prompt": "Elevated wide shot from behind a large seated audience at an elegant outdoor dinner, hundreds of guests viewed from the rear facing a softly lit stage across a reflecting pool, suspended warm bulbs overhead, manicured gardens framing the scene, deep dusk sky. Photorealistic, 35mm film grain, no CGI, no text, no logos.",
+  "image_style": "photorealistic, editorial, documentary, 35mm film grain",
+  "brand": {
+    "colors": [
+      "#1C1C1C",
+      "#FBCE0A"
+    ],
+    "font": "Comfortaa",
+    "logo": "uproduction_official_logo.png"
+  }
+}

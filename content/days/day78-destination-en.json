@@ -1,0 +1,36 @@
+{
+  "day": 78,
+  "category": "destination",
+  "language": "en",
+  "date": "2026-07-12",
+  "weekday": "Sunday",
+  "theme": "Tivat and Porto Montenegro superyachts",
+  "linkedin": {
+    "profile": "Uproduction Events (Company Page)",
+    "text": "Where the Mediterranean hides its best-kept secret. Tivat's Porto Montenegro is a superyacht marina cradled in a fjord, mountains falling straight into glassy turquoise water — the kind of view your top performers screenshot and never delete. Charter a yacht for the closing dinner, take the team up the Bay of Kotor at sunrise, end the night dockside under the peaks. It feels like Monaco without the crowds, and it tells your people they've arrived. From business to pleasure. Ask us about Tivat. #UproductionEvents #IncentiveTravel #CorporateEvents #Montenegro #PortoMontenegro #LuxuryTravel #MICE #SuperyachtLife",
+    "dimensions": "1:1",
+    "cta": "DM us or book a call"
+  },
+  "instagram": {
+    "profile": "@uproductionevents",
+    "text": "Where the Mediterranean hides its best-kept secret. Tivat's Porto Montenegro is a superyacht marina cradled in a fjord, mountains falling straight into glassy turquoise water — the kind of view your top performers screenshot and never delete. Charter a yacht for the closing dinner, take the team up the Bay of Kotor at sunrise, end the night dockside under the peaks. It feels like Monaco without the crowds, and it tells your people they've arrived. From business to pleasure. Ask us about Tivat. #UproductionEvents #IncentiveTravel #CorporateEvents #Montenegro #PortoMontenegro #LuxuryTravel #MICE #SuperyachtLife",
+    "dimensions": "1:1",
+    "cta": "Link in bio"
+  },
+  "facebook": {
+    "profile": "Uproduction Events (Page)",
+    "text": "Where the Mediterranean hides its best-kept secret. Tivat's Porto Montenegro is a superyacht marina cradled in a fjord, mountains falling straight into glassy turquoise water — the kind of view your top performers screenshot and never delete. Charter a yacht for the closing dinner, take the team up the Bay of Kotor at sunrise, end the night dockside under the peaks. It feels like Monaco without the crowds, and it tells your people they've arrived. From business to pleasure. Ask us about Tivat. #UproductionEvents #IncentiveTravel #CorporateEvents #Montenegro #PortoMontenegro #LuxuryTravel #MICE #SuperyachtLife",
+    "dimensions": "1.91:1",
+    "cta": "Send us a message"
+  },
+  "image_prompt": "Aerial view over Porto Montenegro in Tivat at golden hour, rows of gleaming superyachts moored along the marina, the deep fjord-like Bay of Kotor framed by dramatic dark mountains plunging into still turquoise water, tiny figures strolling the waterfront promenade far below, soft haze on the distant peaks. Photorealistic, 35mm film grain, no CGI, no text, no logos.",
+  "image_style": "photorealistic, editorial, documentary, 35mm film grain",
+  "brand": {
+    "colors": [
+      "#1C1C1C",
+      "#FBCE0A"
+    ],
+    "font": "Comfortaa",
+    "logo": "uproduction_official_logo.png"
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "day": 97,
+  "category": "destination",
+  "language": "en",
+  "date": "2026-07-31",
+  "weekday": "Friday",
+  "theme": "Lake Bled fairytale corporate retreat",
+  "linkedin": {
+    "profile": "Uproduction Events (Company Page)",
+    "text": "Some places make people slow down, open up, and think bigger. Lake Bled is one of them — an alpine jewel where a clifftop castle, an island church, and glassy emerald water frame leadership retreats and intimate executive offsites that actually change the conversation. Quiet enough for deep strategy, stunning enough to feel like a reward. We craft the full program: castle dinners, private boat ceremonies, alpine excursions. Considering a 2026 retreat with real depth? Let's design yours — get in touch today. #UproductionEvents #IncentiveTravel #CorporateEvents #LakeBled #Slovenia #ExecutiveRetreat #Offsite",
+    "dimensions": "1:1",
+    "cta": "DM us or book a call"
+  },
+  "instagram": {
+    "profile": "@uproductionevents",
+    "text": "Some places make people slow down, open up, and think bigger. Lake Bled is one of them — an alpine jewel where a clifftop castle, an island church, and glassy emerald water frame leadership retreats and intimate executive offsites that actually change the conversation. Quiet enough for deep strategy, stunning enough to feel like a reward. We craft the full program: castle dinners, private boat ceremonies, alpine excursions. Considering a 2026 retreat with real depth? Let's design yours — get in touch today. #UproductionEvents #IncentiveTravel #CorporateEvents #LakeBled #Slovenia #ExecutiveRetreat #Offsite",
+    "dimensions": "1:1",
+    "cta": "Link in bio"
+  },
+  "facebook": {
+    "profile": "Uproduction Events (Page)",
+    "text": "Some places make people slow down, open up, and think bigger. Lake Bled is one of them — an alpine jewel where a clifftop castle, an island church, and glassy emerald water frame leadership retreats and intimate executive offsites that actually change the conversation. Quiet enough for deep strategy, stunning enough to feel like a reward. We craft the full program: castle dinners, private boat ceremonies, alpine excursions. Considering a 2026 retreat with real depth? Let's design yours — get in touch today. #UproductionEvents #IncentiveTravel #CorporateEvents #LakeBled #Slovenia #ExecutiveRetreat #Offsite",
+    "dimensions": "1.91:1",
+    "cta": "Send us a message"
+  },
+  "image_prompt": "Aerial view of Lake Bled at soft morning light, the tiny island church mid-lake ringed by emerald water, a medieval castle on the cliff, alpine forests and distant Julian Alps wrapped in mist, a lone rowboat as a speck for scale. Photorealistic, 35mm film grain, no CGI, no text, no logos.",
+  "image_style": "photorealistic, editorial, documentary, 35mm film grain",
+  "brand": {
+    "colors": [
+      "#1C1C1C",
+      "#FBCE0A"
+    ],
+    "font": "Comfortaa",
+    "logo": "uproduction_official_logo.png"
+  }
+}

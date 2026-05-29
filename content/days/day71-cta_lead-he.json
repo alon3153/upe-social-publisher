@@ -1,0 +1,36 @@
+{
+  "day": 71,
+  "category": "cta_lead",
+  "language": "he",
+  "date": "2026-07-05",
+  "weekday": "Sunday",
+  "theme": "Your team deserves the unforgettable trip",
+  "linkedin": {
+    "profile": "Uproduction Events (Company Page)",
+    "text": "הם לא יזכרו את הבונוס בתלוש. הם יזכרו את הערב שכל החברה צפתה יחד בשקיעה מעל קו הרקיע. תוכנית תמרוץ קונה לך נאמנות שאי אפשר לרשום במאזן. מ-2010 הפקנו מעל 200 חוויות כאלה ב-120+ מדינות. ספרו לנו את מי אתם רוצים לתגמל — ונבנה את החוויה שידברו עליה שנים. from business to pleasure. קבעו שיחת היכרות השבוע. #UproductionEvents #תמרוץ #אירועים #הפקת_אירועים #טיולי_תמריץ #מנהיגות",
+    "dimensions": "1:1",
+    "cta": "DM us or book a call"
+  },
+  "instagram": {
+    "profile": "@uproductionevents",
+    "text": "הם לא יזכרו את הבונוס בתלוש. הם יזכרו את הערב שכל החברה צפתה יחד בשקיעה מעל קו הרקיע. תוכנית תמרוץ קונה לך נאמנות שאי אפשר לרשום במאזן. מ-2010 הפקנו מעל 200 חוויות כאלה ב-120+ מדינות. ספרו לנו את מי אתם רוצים לתגמל — ונבנה את החוויה שידברו עליה שנים. from business to pleasure. קבעו שיחת היכרות השבוע. #UproductionEvents #תמרוץ #אירועים #הפקת_אירועים #טיולי_תמריץ #מנהיגות",
+    "dimensions": "1:1",
+    "cta": "Link in bio"
+  },
+  "facebook": {
+    "profile": "Uproduction Events (Page)",
+    "text": "הם לא יזכרו את הבונוס בתלוש. הם יזכרו את הערב שכל החברה צפתה יחד בשקיעה מעל קו הרקיע. תוכנית תמרוץ קונה לך נאמנות שאי אפשר לרשום במאזן. מ-2010 הפקנו מעל 200 חוויות כאלה ב-120+ מדינות. ספרו לנו את מי אתם רוצים לתגמל — ונבנה את החוויה שידברו עליה שנים. from business to pleasure. קבעו שיחת היכרות השבוע. #UproductionEvents #תמרוץ #אירועים #הפקת_אירועים #טיולי_תמריץ #מנהיגות",
+    "dimensions": "1.91:1",
+    "cta": "Send us a message"
+  },
+  "image_prompt": "Aerial view from directly above a sweeping rooftop terrace at golden hour, hundreds of guests in elegant attire seen from behind and above as tiny figures gathered around glowing dinner tables, a vast city skyline stretching to the horizon, warm string lights threading across the open-air space, shallow depth of field on the distant cityscape. Photorealistic, 35mm film grain, no CGI, no text, no logos.",
+  "image_style": "photorealistic, editorial, documentary, 35mm film grain",
+  "brand": {
+    "colors": [
+      "#1C1C1C",
+      "#FBCE0A"
+    ],
+    "font": "Comfortaa",
+    "logo": "uproduction_official_logo.png"
+  }
+}

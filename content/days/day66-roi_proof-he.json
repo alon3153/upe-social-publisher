@@ -1,0 +1,36 @@
+{
+  "day": 66,
+  "category": "roi_proof",
+  "language": "he",
+  "date": "2026-06-30",
+  "weekday": "Tuesday",
+  "theme": "Incentive travel that pays you back",
+  "linkedin": {
+    "profile": "Uproduction Events (Company Page)",
+    "text": "טיולי תמרוץ הם לא הוצאה — הם אחד הכלים עם ההחזר הגבוה ביותר בעסק. מחקרים מראים שתוכניות תמרוץ מובנות יכולות להעלות ביצועים בעד 44%, וטיולי תגמול מגבירים שימור הרבה אחרי שהמזוודות נפרקו. ב-UPE אנחנו בונים מסעות שמחברים רגש לתוצאות, כך שההשקעה שלכם תופיע במספרים של השנה הבאה. רוצים לראות איך זה נראה אצלכם? בואו נחשב יחד. #UproductionEvents #טיוליתמרוץ #אירועיחברה #החזרהשקעה #שימורעובדים",
+    "dimensions": "1:1",
+    "cta": "DM us or book a call"
+  },
+  "instagram": {
+    "profile": "@uproductionevents",
+    "text": "טיולי תמרוץ הם לא הוצאה — הם אחד הכלים עם ההחזר הגבוה ביותר בעסק. מחקרים מראים שתוכניות תמרוץ מובנות יכולות להעלות ביצועים בעד 44%, וטיולי תגמול מגבירים שימור הרבה אחרי שהמזוודות נפרקו. ב-UPE אנחנו בונים מסעות שמחברים רגש לתוצאות, כך שההשקעה שלכם תופיע במספרים של השנה הבאה. רוצים לראות איך זה נראה אצלכם? בואו נחשב יחד. #UproductionEvents #טיוליתמרוץ #אירועיחברה #החזרהשקעה #שימורעובדים",
+    "dimensions": "1:1",
+    "cta": "Link in bio"
+  },
+  "facebook": {
+    "profile": "Uproduction Events (Page)",
+    "text": "טיולי תמרוץ הם לא הוצאה — הם אחד הכלים עם ההחזר הגבוה ביותר בעסק. מחקרים מראים שתוכניות תמרוץ מובנות יכולות להעלות ביצועים בעד 44%, וטיולי תגמול מגבירים שימור הרבה אחרי שהמזוודות נפרקו. ב-UPE אנחנו בונים מסעות שמחברים רגש לתוצאות, כך שההשקעה שלכם תופיע במספרים של השנה הבאה. רוצים לראות איך זה נראה אצלכם? בואו נחשב יחד. #UproductionEvents #טיוליתמרוץ #אירועיחברה #החזרהשקעה #שימורעובדים",
+    "dimensions": "1.91:1",
+    "cta": "Send us a message"
+  },
+  "image_prompt": "Aerial twilight view of a large group of corporate guests walking together along a grand terraced hillside vineyard estate, hundreds of small figures from above following lantern-lit paths, rolling Tuscan-style hills fading into purple distance. Photorealistic, 35mm film grain, no CGI, no text, no logos.",
+  "image_style": "photorealistic, editorial, documentary, 35mm film grain",
+  "brand": {
+    "colors": [
+      "#1C1C1C",
+      "#FBCE0A"
+    ],
+    "font": "Comfortaa",
+    "logo": "uproduction_official_logo.png"
+  }
+}

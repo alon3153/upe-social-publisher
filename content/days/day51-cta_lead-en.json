@@ -1,0 +1,36 @@
+{
+  "day": 51,
+  "category": "cta_lead",
+  "language": "en",
+  "date": "2026-06-15",
+  "weekday": "Monday",
+  "theme": "Your 2026 Incentive Trip Starts Now",
+  "linkedin": {
+    "profile": "Uproduction Events (Company Page)",
+    "text": "The best incentive trips aren't booked — they're engineered. 🏆 Hundreds of top performers. One unforgettable destination. Zero logistics on your plate. Since 2010 we've produced 200+ events across 120+ countries, turning sales targets into stories your team tells for years. The 2026 calendar is filling fast — premium venues lock 9-12 months ahead. Don't let the dates decide for you. 📅 Book a 20-minute discovery call and we'll map your trip, headcount, and budget on the spot. From business to pleasure. #UproductionEvents #IncentiveTravel #CorporateEvents #EventProduction #B2BEvents #MICE #IncentiveProgram #CorporateTravel",
+    "dimensions": "1:1",
+    "cta": "DM us or book a call"
+  },
+  "instagram": {
+    "profile": "@uproductionevents",
+    "text": "The best incentive trips aren't booked — they're engineered. 🏆 Hundreds of top performers. One unforgettable destination. Zero logistics on your plate. Since 2010 we've produced 200+ events across 120+ countries, turning sales targets into stories your team tells for years. The 2026 calendar is filling fast — premium venues lock 9-12 months ahead. Don't let the dates decide for you. 📅 Book a 20-minute discovery call and we'll map your trip, headcount, and budget on the spot. From business to pleasure. #UproductionEvents #IncentiveTravel #CorporateEvents #EventProduction #B2BEvents #MICE #IncentiveProgram #CorporateTravel",
+    "dimensions": "1:1",
+    "cta": "Link in bio"
+  },
+  "facebook": {
+    "profile": "Uproduction Events (Page)",
+    "text": "The best incentive trips aren't booked — they're engineered. 🏆 Hundreds of top performers. One unforgettable destination. Zero logistics on your plate. Since 2010 we've produced 200+ events across 120+ countries, turning sales targets into stories your team tells for years. The 2026 calendar is filling fast — premium venues lock 9-12 months ahead. Don't let the dates decide for you. 📅 Book a 20-minute discovery call and we'll map your trip, headcount, and budget on the spot. From business to pleasure. #UproductionEvents #IncentiveTravel #CorporateEvents #EventProduction #B2BEvents #MICE #IncentiveProgram #CorporateTravel",
+    "dimensions": "1.91:1",
+    "cta": "Send us a message"
+  },
+  "image_prompt": "Aerial drone view from directly above a vast open-air gala on a Mediterranean clifftop terrace at golden hour, eight hundred guests in evening wear seated at long banquet tables arranged in sweeping curves, tiny faces barely visible from height, waiters threading between tables, string lights and candle glow, deep blue sea horizon beyond. Photorealistic, 35mm film grain, no CGI, no text, no logos.",
+  "image_style": "photorealistic, editorial, documentary, 35mm film grain",
+  "brand": {
+    "colors": [
+      "#1C1C1C",
+      "#FBCE0A"
+    ],
+    "font": "Comfortaa",
+    "logo": "uproduction_official_logo.png"
+  }
+}

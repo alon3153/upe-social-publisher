@@ -1,0 +1,36 @@
+{
+  "day": 67,
+  "category": "destination",
+  "language": "he",
+  "date": "2026-07-01",
+  "weekday": "Wednesday",
+  "theme": "Amalfi Coast where ambition meets the sea",
+  "linkedin": {
+    "profile": "Uproduction Events (Company Page)",
+    "text": "חוף אמלפי לא עושה רגיל. ארוחות על המצוק מעל ים זוהר, הגעות בסירה פרטית, ומרפסות עטופות בוגנוויליה — זה הרקע לטיולי תמרוץ שהצוות שלכם ימדוד מולם כל תגמול עתידי. ב-UPE אנחנו מטפלים בלוגיסטיקה הבלתי אפשרית של הכפרים האנכיים, כדי שתחוו רק את הקסם. תגמלו בגדול. תגמלו כאן. שלחו הודעה ונתחיל לעצב. #UproductionEvents #חוףאמלפי #טיוליתמרוץ #אירועיחברה #יוקרה #איטליה",
+    "dimensions": "1:1",
+    "cta": "DM us or book a call"
+  },
+  "instagram": {
+    "profile": "@uproductionevents",
+    "text": "חוף אמלפי לא עושה רגיל. ארוחות על המצוק מעל ים זוהר, הגעות בסירה פרטית, ומרפסות עטופות בוגנוויליה — זה הרקע לטיולי תמרוץ שהצוות שלכם ימדוד מולם כל תגמול עתידי. ב-UPE אנחנו מטפלים בלוגיסטיקה הבלתי אפשרית של הכפרים האנכיים, כדי שתחוו רק את הקסם. תגמלו בגדול. תגמלו כאן. שלחו הודעה ונתחיל לעצב. #UproductionEvents #חוףאמלפי #טיוליתמרוץ #אירועיחברה #יוקרה #איטליה",
+    "dimensions": "1:1",
+    "cta": "Link in bio"
+  },
+  "facebook": {
+    "profile": "Uproduction Events (Page)",
+    "text": "חוף אמלפי לא עושה רגיל. ארוחות על המצוק מעל ים זוהר, הגעות בסירה פרטית, ומרפסות עטופות בוגנוויליה — זה הרקע לטיולי תמרוץ שהצוות שלכם ימדוד מולם כל תגמול עתידי. ב-UPE אנחנו מטפלים בלוגיסטיקה הבלתי אפשרית של הכפרים האנכיים, כדי שתחוו רק את הקסם. תגמלו בגדול. תגמלו כאן. שלחו הודעה ונתחיל לעצב. #UproductionEvents #חוףאמלפי #טיוליתמרוץ #אירועיחברה #יוקרה #איטליה",
+    "dimensions": "1.91:1",
+    "cta": "Send us a message"
+  },
+  "image_prompt": "Breathtaking aerial view of the Amalfi Coast, pastel villages clinging to dramatic vertical cliffs above turquoise Mediterranean water, winding coastal road threading between lemon groves, white yachts dotting the bay far below. Photorealistic, 35mm film grain, no CGI, no text, no logos.",
+  "image_style": "photorealistic, editorial, documentary, 35mm film grain",
+  "brand": {
+    "colors": [
+      "#1C1C1C",
+      "#FBCE0A"
+    ],
+    "font": "Comfortaa",
+    "logo": "uproduction_official_logo.png"
+  }
+}

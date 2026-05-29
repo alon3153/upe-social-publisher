@@ -1,0 +1,36 @@
+{
+  "day": 83,
+  "category": "cta_lead",
+  "language": "he",
+  "date": "2026-07-17",
+  "weekday": "Friday",
+  "theme": "One partner from brief to final applause",
+  "linkedin": {
+    "profile": "Uproduction Events (Company Page)",
+    "text": "רוב הסיוטים בהפקת אירועים מתחילים מיותר מדי ידיים ואף אחד שלוקח אחריות. אצלנו הפוך. צוות אחד מחזיק את הבריף שלכם מהשיחה הראשונה ועד מחיאות הכפיים האחרונות: קונספט, תקציב, טיסות, מלונות, במה, מיתוג והפקה בשטח. בלי האשמות, בלי פערים, בלי הפתעות בחשבונית. 15 שנה, 200+ אירועים, 120+ מדינות. ספרו לנו מה אתם מתכננים. #UproductionEvents #הפקתאירועים #אירועיםעסקיים #טיוליתמריץ #FromBusinessToPleasure",
+    "dimensions": "1:1",
+    "cta": "DM us or book a call"
+  },
+  "instagram": {
+    "profile": "@uproductionevents",
+    "text": "רוב הסיוטים בהפקת אירועים מתחילים מיותר מדי ידיים ואף אחד שלוקח אחריות. אצלנו הפוך. צוות אחד מחזיק את הבריף שלכם מהשיחה הראשונה ועד מחיאות הכפיים האחרונות: קונספט, תקציב, טיסות, מלונות, במה, מיתוג והפקה בשטח. בלי האשמות, בלי פערים, בלי הפתעות בחשבונית. 15 שנה, 200+ אירועים, 120+ מדינות. ספרו לנו מה אתם מתכננים. #UproductionEvents #הפקתאירועים #אירועיםעסקיים #טיוליתמריץ #FromBusinessToPleasure",
+    "dimensions": "1:1",
+    "cta": "Link in bio"
+  },
+  "facebook": {
+    "profile": "Uproduction Events (Page)",
+    "text": "רוב הסיוטים בהפקת אירועים מתחילים מיותר מדי ידיים ואף אחד שלוקח אחריות. אצלנו הפוך. צוות אחד מחזיק את הבריף שלכם מהשיחה הראשונה ועד מחיאות הכפיים האחרונות: קונספט, תקציב, טיסות, מלונות, במה, מיתוג והפקה בשטח. בלי האשמות, בלי פערים, בלי הפתעות בחשבונית. 15 שנה, 200+ אירועים, 120+ מדינות. ספרו לנו מה אתם מתכננים. #UproductionEvents #הפקתאירועים #אירועיםעסקיים #טיוליתמריץ #FromBusinessToPleasure",
+    "dimensions": "1.91:1",
+    "cta": "Send us a message"
+  },
+  "image_prompt": "High wide shot from the back of a packed indoor conference auditorium, thousands of seated attendees seen from behind as tiny silhouettes facing a glowing stage, sculptural lighting rig overhead, soft haze catching warm beams, sense of vast scale and order. Photorealistic, 35mm film grain, no CGI, no text, no logos.",
+  "image_style": "photorealistic, editorial, documentary, 35mm film grain",
+  "brand": {
+    "colors": [
+      "#1C1C1C",
+      "#FBCE0A"
+    ],
+    "font": "Comfortaa",
+    "logo": "uproduction_official_logo.png"
+  }
+}

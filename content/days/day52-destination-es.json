@@ -1,0 +1,36 @@
+{
+  "day": 52,
+  "category": "destination",
+  "language": "es",
+  "date": "2026-06-16",
+  "weekday": "Tuesday",
+  "theme": "Barcelona For Bold Brands",
+  "linkedin": {
+    "profile": "Uproduction Events (Company Page)",
+    "text": "Barcelona no hace lo ordinario — y tu próximo evento tampoco debería. 🌅 Recepciones en azoteas frente al skyline de Gaudí, cenas de gala en palacios modernistas y afterparties en clubes de playa. Nos encargamos de espacios, traslados, producción y un equipo local que conoce cada rincón. ¿Piensas en Barcelona para 2026? Dinos cuántos asistentes y te enviaremos una selección de espacios a medida en 48 horas. 📩 #UproductionEvents #IncentiveTravel #CorporateEvents #Barcelona #EventosCorporativos #MICE #CenaDeGala #TurismoDeNegocios",
+    "dimensions": "1:1",
+    "cta": "DM us or book a call"
+  },
+  "instagram": {
+    "profile": "@uproductionevents",
+    "text": "Barcelona no hace lo ordinario — y tu próximo evento tampoco debería. 🌅 Recepciones en azoteas frente al skyline de Gaudí, cenas de gala en palacios modernistas y afterparties en clubes de playa. Nos encargamos de espacios, traslados, producción y un equipo local que conoce cada rincón. ¿Piensas en Barcelona para 2026? Dinos cuántos asistentes y te enviaremos una selección de espacios a medida en 48 horas. 📩 #UproductionEvents #IncentiveTravel #CorporateEvents #Barcelona #EventosCorporativos #MICE #CenaDeGala #TurismoDeNegocios",
+    "dimensions": "1:1",
+    "cta": "Link in bio"
+  },
+  "facebook": {
+    "profile": "Uproduction Events (Page)",
+    "text": "Barcelona no hace lo ordinario — y tu próximo evento tampoco debería. 🌅 Recepciones en azoteas frente al skyline de Gaudí, cenas de gala en palacios modernistas y afterparties en clubes de playa. Nos encargamos de espacios, traslados, producción y un equipo local que conoce cada rincón. ¿Piensas en Barcelona para 2026? Dinos cuántos asistentes y te enviaremos una selección de espacios a medida en 48 horas. 📩 #UproductionEvents #IncentiveTravel #CorporateEvents #Barcelona #EventosCorporativos #MICE #CenaDeGala #TurismoDeNegocios",
+    "dimensions": "1.91:1",
+    "cta": "Send us a message"
+  },
+  "image_prompt": "High aerial shot at sunset over Barcelona looking across the city toward the sea, the Sagrada Família spires catching warm light, dense terracotta rooftops and palm-lined avenues stretching to the Mediterranean, soft haze on the horizon, no people visible, sweeping cinematic scale. Photorealistic, 35mm film grain, no CGI, no text, no logos.",
+  "image_style": "photorealistic, editorial, documentary, 35mm film grain",
+  "brand": {
+    "colors": [
+      "#1C1C1C",
+      "#FBCE0A"
+    ],
+    "font": "Comfortaa",
+    "logo": "uproduction_official_logo.png"
+  }
+}

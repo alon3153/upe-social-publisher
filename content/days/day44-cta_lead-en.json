@@ -1,0 +1,36 @@
+{
+  "day": 44,
+  "category": "cta_lead",
+  "language": "en",
+  "date": "2026-06-08",
+  "weekday": "Monday",
+  "theme": "Free Planning Consult This Week",
+  "linkedin": {
+    "profile": "Uproduction Events (Company Page)",
+    "text": "Most teams overthink the first step. You don't need a finished plan — you need a partner who's done this 200+ times. 🧭 In one free 30-minute call we'll pressure-test your destination shortlist, ballpark your budget per head, flag the dates that'll save you money, and tell you honestly what's realistic. No pitch deck, no obligation, just clarity you can take back to your boss. That's worth 30 minutes of anyone's week. ⏱️ Slots this week are limited — book yours via the link in bio or DM \"CALL\". #UproductionEvents #IncentiveTravel #CorporateEvents #EventPlanning #B2BEvents #EventStrategy #IncentiveTrip #EventProduction",
+    "dimensions": "1:1",
+    "cta": "DM us or book a call"
+  },
+  "instagram": {
+    "profile": "@uproductionevents",
+    "text": "Most teams overthink the first step. You don't need a finished plan — you need a partner who's done this 200+ times. 🧭 In one free 30-minute call we'll pressure-test your destination shortlist, ballpark your budget per head, flag the dates that'll save you money, and tell you honestly what's realistic. No pitch deck, no obligation, just clarity you can take back to your boss. That's worth 30 minutes of anyone's week. ⏱️ Slots this week are limited — book yours via the link in bio or DM \"CALL\". #UproductionEvents #IncentiveTravel #CorporateEvents #EventPlanning #B2BEvents #EventStrategy #IncentiveTrip #EventProduction",
+    "dimensions": "1:1",
+    "cta": "Link in bio"
+  },
+  "facebook": {
+    "profile": "Uproduction Events (Page)",
+    "text": "Most teams overthink the first step. You don't need a finished plan — you need a partner who's done this 200+ times. 🧭 In one free 30-minute call we'll pressure-test your destination shortlist, ballpark your budget per head, flag the dates that'll save you money, and tell you honestly what's realistic. No pitch deck, no obligation, just clarity you can take back to your boss. That's worth 30 minutes of anyone's week. ⏱️ Slots this week are limited — book yours via the link in bio or DM \"CALL\". #UproductionEvents #IncentiveTravel #CorporateEvents #EventPlanning #B2BEvents #EventStrategy #IncentiveTrip #EventProduction",
+    "dimensions": "1.91:1",
+    "cta": "Send us a message"
+  },
+  "image_prompt": "High overhead aerial of a massive open-air conference audience seated in neat rows on a Mediterranean rooftop plaza at golden hour, hundreds of tiny figures from directly above forming clean geometric patterns, long soft shadows stretching across pale stone, sea visible at the frame's edge. Photorealistic, 35mm film grain, no CGI, no text, no logos.",
+  "image_style": "photorealistic, editorial, documentary, 35mm film grain",
+  "brand": {
+    "colors": [
+      "#1C1C1C",
+      "#FBCE0A"
+    ],
+    "font": "Comfortaa",
+    "logo": "uproduction_official_logo.png"
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "day": 51,
+  "category": "cta_lead",
+  "language": "es",
+  "date": "2026-06-15",
+  "weekday": "Monday",
+  "theme": "Your 2026 Incentive Trip Starts Now",
+  "linkedin": {
+    "profile": "Uproduction Events (Company Page)",
+    "text": "Los mejores viajes de incentivo no se reservan — se diseñan. 🏆 Cientos de mejores talentos, un destino inolvidable, cero logística para ti. Desde 2010 producimos más de 200 eventos en más de 120 países. El calendario 2026 se llena rápido: los espacios premium se cierran con 9-12 meses de antelación. No dejes que las fechas decidan por ti. 📅 Agenda una llamada de 20 minutos y trazaremos destino, asistentes y presupuesto. Del negocio al placer. #UproductionEvents #IncentiveTravel #CorporateEvents #ViajesDeIncentivo #EventosCorporativos #MICE #TurismoDeNegocios #Incentivos",
+    "dimensions": "1:1",
+    "cta": "DM us or book a call"
+  },
+  "instagram": {
+    "profile": "@uproductionevents",
+    "text": "Los mejores viajes de incentivo no se reservan — se diseñan. 🏆 Cientos de mejores talentos, un destino inolvidable, cero logística para ti. Desde 2010 producimos más de 200 eventos en más de 120 países. El calendario 2026 se llena rápido: los espacios premium se cierran con 9-12 meses de antelación. No dejes que las fechas decidan por ti. 📅 Agenda una llamada de 20 minutos y trazaremos destino, asistentes y presupuesto. Del negocio al placer. #UproductionEvents #IncentiveTravel #CorporateEvents #ViajesDeIncentivo #EventosCorporativos #MICE #TurismoDeNegocios #Incentivos",
+    "dimensions": "1:1",
+    "cta": "Link in bio"
+  },
+  "facebook": {
+    "profile": "Uproduction Events (Page)",
+    "text": "Los mejores viajes de incentivo no se reservan — se diseñan. 🏆 Cientos de mejores talentos, un destino inolvidable, cero logística para ti. Desde 2010 producimos más de 200 eventos en más de 120 países. El calendario 2026 se llena rápido: los espacios premium se cierran con 9-12 meses de antelación. No dejes que las fechas decidan por ti. 📅 Agenda una llamada de 20 minutos y trazaremos destino, asistentes y presupuesto. Del negocio al placer. #UproductionEvents #IncentiveTravel #CorporateEvents #ViajesDeIncentivo #EventosCorporativos #MICE #TurismoDeNegocios #Incentivos",
+    "dimensions": "1.91:1",
+    "cta": "Send us a message"
+  },
+  "image_prompt": "Aerial drone view from directly above a vast open-air gala on a Mediterranean clifftop terrace at golden hour, eight hundred guests in evening wear seated at long banquet tables arranged in sweeping curves, tiny faces barely visible from height, waiters threading between tables, string lights and candle glow, deep blue sea horizon beyond. Photorealistic, 35mm film grain, no CGI, no text, no logos.",
+  "image_style": "photorealistic, editorial, documentary, 35mm film grain",
+  "brand": {
+    "colors": [
+      "#1C1C1C",
+      "#FBCE0A"
+    ],
+    "font": "Comfortaa",
+    "logo": "uproduction_official_logo.png"
+  }
+}

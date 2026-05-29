@@ -1,0 +1,36 @@
+{
+  "day": 87,
+  "category": "cta_lead",
+  "language": "es",
+  "date": "2026-07-21",
+  "weekday": "Tuesday",
+  "theme": "Budgets that build experiences not excuses",
+  "linkedin": {
+    "profile": "Uproduction Events (Company Page)",
+    "text": "Un buen presupuesto de evento no se trata de gastar más — sino de que cada euro sea sentido por las personas en la sala. Llevamos 15 años aprendiendo dónde el dinero crea recuerdos y dónde desaparece en silencio. El resultado: programas que se ven y se sienten premium sin desperdicio, con costos transparentes y cero sorpresas en la liquidación. Tú fijas el presupuesto; nosotros lo hacemos rendir muy por encima de su tamaño. ¿Quieres ver hasta dónde puede llegar el tuyo? Envíanos tu brief y hablemos de números. #UproductionEvents #IncentiveTravel #CorporateEvents #PresupuestoDeEventos #EventosCorporativos #FromBusinessToPleasure",
+    "dimensions": "1:1",
+    "cta": "DM us or book a call"
+  },
+  "instagram": {
+    "profile": "@uproductionevents",
+    "text": "Un buen presupuesto de evento no se trata de gastar más — sino de que cada euro sea sentido por las personas en la sala. Llevamos 15 años aprendiendo dónde el dinero crea recuerdos y dónde desaparece en silencio. El resultado: programas que se ven y se sienten premium sin desperdicio, con costos transparentes y cero sorpresas en la liquidación. Tú fijas el presupuesto; nosotros lo hacemos rendir muy por encima de su tamaño. ¿Quieres ver hasta dónde puede llegar el tuyo? Envíanos tu brief y hablemos de números. #UproductionEvents #IncentiveTravel #CorporateEvents #PresupuestoDeEventos #EventosCorporativos #FromBusinessToPleasure",
+    "dimensions": "1:1",
+    "cta": "Link in bio"
+  },
+  "facebook": {
+    "profile": "Uproduction Events (Page)",
+    "text": "Un buen presupuesto de evento no se trata de gastar más — sino de que cada euro sea sentido por las personas en la sala. Llevamos 15 años aprendiendo dónde el dinero crea recuerdos y dónde desaparece en silencio. El resultado: programas que se ven y se sienten premium sin desperdicio, con costos transparentes y cero sorpresas en la liquidación. Tú fijas el presupuesto; nosotros lo hacemos rendir muy por encima de su tamaño. ¿Quieres ver hasta dónde puede llegar el tuyo? Envíanos tu brief y hablemos de números. #UproductionEvents #IncentiveTravel #CorporateEvents #PresupuestoDeEventos #EventosCorporativos #FromBusinessToPleasure",
+    "dimensions": "1.91:1",
+    "cta": "Send us a message"
+  },
+  "image_prompt": "Elevated wide shot from behind a large seated audience at an elegant outdoor dinner, hundreds of guests viewed from the rear facing a softly lit stage across a reflecting pool, suspended warm bulbs overhead, manicured gardens framing the scene, deep dusk sky. Photorealistic, 35mm film grain, no CGI, no text, no logos.",
+  "image_style": "photorealistic, editorial, documentary, 35mm film grain",
+  "brand": {
+    "colors": [
+      "#1C1C1C",
+      "#FBCE0A"
+    ],
+    "font": "Comfortaa",
+    "logo": "uproduction_official_logo.png"
+  }
+}

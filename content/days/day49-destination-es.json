@@ -1,0 +1,36 @@
+{
+  "day": 49,
+  "category": "destination",
+  "language": "es",
+  "date": "2026-06-13",
+  "weekday": "Saturday",
+  "theme": "Ibiza Beyond The Clubs",
+  "linkedin": {
+    "profile": "Uproduction Events (Company Page)",
+    "text": "Olvida el cliché. La Ibiza que cierra negocios no es la de las 4 de la madrugada — es la villa privada en el acantilado, el catamarán al atardecer para tu equipo directivo, la gala en la playa que hace que un kickoff de ventas se sienta como una recompensa. 🌊 Aprovechamos la energía de la isla en tus términos: de alto impacto de día, inolvidable de noche, impecable desde la llegada hasta la salida. Es el destino que transmite ambición sin decir una palabra. ¿Listo para reimaginar tu brief en Ibiza? 🛥️ Escribe \"IBIZA\" o agenda una llamada en el enlace de la bio. #UproductionEvents #IncentiveTravel #CorporateEvents #Ibiza #Espana #EventosDeLujo #ViajesDeIncentivo #EventProduction",
+    "dimensions": "1:1",
+    "cta": "DM us or book a call"
+  },
+  "instagram": {
+    "profile": "@uproductionevents",
+    "text": "Olvida el cliché. La Ibiza que cierra negocios no es la de las 4 de la madrugada — es la villa privada en el acantilado, el catamarán al atardecer para tu equipo directivo, la gala en la playa que hace que un kickoff de ventas se sienta como una recompensa. 🌊 Aprovechamos la energía de la isla en tus términos: de alto impacto de día, inolvidable de noche, impecable desde la llegada hasta la salida. Es el destino que transmite ambición sin decir una palabra. ¿Listo para reimaginar tu brief en Ibiza? 🛥️ Escribe \"IBIZA\" o agenda una llamada en el enlace de la bio. #UproductionEvents #IncentiveTravel #CorporateEvents #Ibiza #Espana #EventosDeLujo #ViajesDeIncentivo #EventProduction",
+    "dimensions": "1:1",
+    "cta": "Link in bio"
+  },
+  "facebook": {
+    "profile": "Uproduction Events (Page)",
+    "text": "Olvida el cliché. La Ibiza que cierra negocios no es la de las 4 de la madrugada — es la villa privada en el acantilado, el catamarán al atardecer para tu equipo directivo, la gala en la playa que hace que un kickoff de ventas se sienta como una recompensa. 🌊 Aprovechamos la energía de la isla en tus términos: de alto impacto de día, inolvidable de noche, impecable desde la llegada hasta la salida. Es el destino que transmite ambición sin decir una palabra. ¿Listo para reimaginar tu brief en Ibiza? 🛥️ Escribe \"IBIZA\" o agenda una llamada en el enlace de la bio. #UproductionEvents #IncentiveTravel #CorporateEvents #Ibiza #Espana #EventosDeLujo #ViajesDeIncentivo #EventProduction",
+    "dimensions": "1.91:1",
+    "cta": "Send us a message"
+  },
+  "image_prompt": "Aerial golden-hour view of the Ibiza coastline, rugged cliffs and pine-covered hills meeting a glittering turquoise sea, a secluded bay below hosting a large beachfront corporate gathering of hundreds, tiny figures from above arranged around white cabanas and a long dinner setup, soft warm light across the water. Photorealistic, 35mm film grain, no CGI, no text, no logos.",
+  "image_style": "photorealistic, editorial, documentary, 35mm film grain",
+  "brand": {
+    "colors": [
+      "#1C1C1C",
+      "#FBCE0A"
+    ],
+    "font": "Comfortaa",
+    "logo": "uproduction_official_logo.png"
+  }
+}
