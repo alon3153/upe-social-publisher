@@ -11,8 +11,8 @@ from publishers.state import load_state, get_published_days
 
 FN = (os.environ.get("SUPABASE_URL", "").rstrip("/")) + "/functions/v1/approve"
 RESEND_KEY = os.environ.get("RESEND_API_KEY", "")
-RESEND_FROM = os.environ.get("RESEND_FROM", "uproduction <onboarding@resend.dev>")
-TO = os.environ.get("APPROVAL_TO", "alon@upe.co.il")
+RESEND_FROM = os.environ.get("RESEND_FROM") or "uproduction <onboarding@resend.dev>"
+TO = os.environ.get("APPROVAL_TO") or "alon@upe.co.il"
 IMG_BASE = "https://raw.githubusercontent.com/alon3153/upe-social-publisher/main/content/images"
 UA = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36"
 
