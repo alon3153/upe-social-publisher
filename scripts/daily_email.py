@@ -13,7 +13,7 @@ FN = (os.environ.get("SUPABASE_URL", "").rstrip("/")) + "/functions/v1/approve"
 RESEND_KEY = os.environ.get("RESEND_API_KEY", "")
 RESEND_FROM = os.environ.get("RESEND_FROM") or "uproduction <onboarding@resend.dev>"
 TO = os.environ.get("APPROVAL_TO") or "alon@upe.co.il"
-IMG_BASE = "https://raw.githubusercontent.com/alon3153/upe-social-publisher/main/content/images"
+IMG_BASE = "https://cdn.jsdelivr.net/gh/alon3153/upe-social-publisher@main/content/images"
 UA = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36"
 
 # (network, account, platform_key_in_json, lang)
@@ -75,8 +75,17 @@ def email_html(net, day, headline, rid, token, caption, image_url):
  </div></div></body></html>"""
 
 
-def send_resend(subject, html):
-    body = json.dumps({"from": RESEND_FROM, "to": [TO], "subject": subject, "html": html}).encode()
+def send_resend(subject, html, attachment_path=None):
+    payload = {"from": RESEND_FROM, "to": [TO], "subject": subject, "html": html}
+    if attachment_path and os.path.isfile(attachment_path):
+        import base64
+        with open(attachment_path, "rb") as f:
+            payload["attachments"] = [{
+                "filename": os.path.basename(attachment_path),
+                "content": base64.b64encode(f.read()).decode(),
+                "content_type": "image/png",
+            }]
+    body = json.dumps(payload).encode()
     req = urllib.request.Request("https://api.resend.com/emails", data=body,
         headers={"Authorization": f"Bearer {RESEND_KEY}", "Content-Type": "application/json", "User-Agent": UA})
     try:
@@ -133,7 +142,7 @@ def main():
         html = email_html(r["network"], r["day"], r.get("headline", ""), r["id"], r["token"],
                           r["caption"], r.get("image_url") or image_url)
         subj = f"אישור פוסט — {NET_HE.get(r['network'], r['network'])} ({r['lang']}) — יום {day} 📲"
-        ok, info = send_resend(subj, html)
+        ok, info = send_resend(subj, html, attachment_path=_p)
         print(f"{'OK ' if ok else 'ERR'} {r['network']}/{r['lang']}: {info[:80]}")
         sent += ok
     print(f"Enqueued {len(inserted)} / emailed {sent} for day {day}")
