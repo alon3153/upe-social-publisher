@@ -6,7 +6,7 @@ import os, sys, json, glob, datetime, urllib.request, urllib.error
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, ROOT)
 from publishers import queue
-from publishers.content import find_image_url
+from publishers.content import find_image_path
 from publishers.state import load_state, get_published_days
 
 FN = (os.environ.get("SUPABASE_URL", "").rstrip("/")) + "/functions/v1/approve"
@@ -107,7 +107,10 @@ def main():
     if day is None:
         print("Nothing to enqueue."); return 0
     today = datetime.date.today().isoformat()
-    image_url = find_image_url(day) or f"{IMG_BASE}/day{day}.png"
+    _p = find_image_path(day)
+    if not _p:
+        print(f"No image for day {day}"); return 0
+    image_url = f"{IMG_BASE}/{os.path.basename(_p)}"
     rows = []
     for net, account, pkey, lang in ACCOUNTS:
         data = load_day_lang(day, lang)
