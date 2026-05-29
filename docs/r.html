@@ -1,0 +1,45 @@
+<!doctype html>
+<html dir="rtl" lang="he">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>uproduction — אישור פוסט</title>
+<style>
+  body{font-family:Arial,Helvetica,sans-serif;direction:rtl;text-align:center;background:#141414;color:#f5f5f5;margin:0;padding:0;}
+  .card{max-width:520px;margin:60px auto;background:#1e1e1e;border-radius:16px;padding:48px 32px;border-top:6px solid #3fa45b;}
+  .icon{font-size:64px;line-height:1;}
+  h1{font-size:27px;margin:18px 0 10px;}
+  p{font-size:16px;color:#cfcfcf;line-height:1.6;}
+  .brand{margin-top:30px;font-size:15px;}
+  .brand b{color:#FBCE0A;} .brand span{color:#888;}
+</style>
+</head>
+<body>
+<div class="card" id="card">
+  <div class="icon" id="icon">✅</div>
+  <h1 id="title">אושר!</h1>
+  <p id="msg">הפוסט אושר ויפורסם בריצה הקרובה.</p>
+  <div class="brand"><b>uproduction</b> <span>from business to pleasure</span></div>
+</div>
+<script>
+  var q = new URLSearchParams(location.search);
+  var s = q.get('s') || 'ok';
+  var net = q.get('net') || '';
+  var day = q.get('day') || '';
+  var suffix = (net ? (' ל-' + net) : '') + (day ? (' (יום ' + day + ')') : '');
+  var card = document.getElementById('card');
+  var map = {
+    ok:  ['✅','אושר!','הפוסט'+suffix+' אושר ויפורסם בריצת הפרסום הקרובה.','#3fa45b'],
+    dup: ['✅','כבר אושר','הפוסט'+suffix+' כבר מאושר ויפורסם בקרוב.','#3fa45b'],
+    pub: ['✅','כבר פורסם','הפוסט'+suffix+' כבר פורסם.','#3fa45b'],
+    rej: ['🚫','נדחה','הפוסט'+suffix+' לא יפורסם.','#e0533d'],
+    err: ['⚠️','שגיאה','הקישור אינו תקין או פג תוקף.','#e0a23d']
+  };
+  var m = map[s] || map.ok;
+  document.getElementById('icon').textContent = m[0];
+  document.getElementById('title').textContent = m[1];
+  document.getElementById('msg').textContent = m[2];
+  card.style.borderTopColor = m[3];
+</script>
+</body>
+</html>
