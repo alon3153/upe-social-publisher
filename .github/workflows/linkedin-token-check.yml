@@ -1,0 +1,31 @@
+name: LinkedIn Token Check
+
+on:
+  schedule:
+    # weekly, Monday 05:00 UTC — warns ~7 days before the 60-day token expires
+    - cron: "0 5 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    if: github.event_name == 'schedule' || github.actor == 'alon3153'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Check LinkedIn token validity / expiry
+        env:
+          LINKEDIN_CLIENT_ID:      ${{ secrets.LINKEDIN_CLIENT_ID }}
+          LINKEDIN_CLIENT_SECRET:  ${{ secrets.LINKEDIN_CLIENT_SECRET }}
+          LINKEDIN_ACCESS_TOKEN:   ${{ secrets.LINKEDIN_ACCESS_TOKEN }}
+          LINKEDIN_REFRESH_TOKEN:  ${{ secrets.LINKEDIN_REFRESH_TOKEN }}
+          RESEND_API_KEY:          ${{ secrets.RESEND_API_KEY }}
+          RESEND_FROM:             ${{ secrets.RESEND_FROM }}
+          APPROVAL_TO:             ${{ secrets.APPROVAL_TO }}
+        run: python3 scripts/linkedin_token_check.py
