@@ -1,0 +1,52 @@
+name: Publish Sofia Reel Now
+
+on:
+  workflow_dispatch:
+    inputs:
+      video_url:
+        description: "Public HTTPS video URL"
+        required: true
+        default: "https://v3b.fal.media/files/b/0a9c26de/LA5fSXK8pyEd8u7lKpP71_sofia_barcelona_01.mp4"
+      accounts:
+        description: "Comma-separated IG account keys"
+        required: true
+        default: "uproduction_spain,uproductionevents"
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -q requests
+      - name: Publish Sofia Reel
+        env:
+          IG_UPRODUCTION_SPAIN_USER_ID: ${{ secrets.IG_UPRODUCTION_SPAIN_USER_ID }}
+          IG_UPRODUCTION_SPAIN_ACCESS_TOKEN: ${{ secrets.IG_UPRODUCTION_SPAIN_ACCESS_TOKEN }}
+          IG_UPRODUCTIONEVENTS_USER_ID: ${{ secrets.IG_UPRODUCTIONEVENTS_USER_ID }}
+          IG_UPRODUCTIONEVENTS_ACCESS_TOKEN: ${{ secrets.IG_UPRODUCTIONEVENTS_ACCESS_TOKEN }}
+          VIDEO_URL: ${{ github.event.inputs.video_url }}
+          ACCOUNTS: ${{ github.event.inputs.accounts }}
+        run: |
+          python3 - <<'PY'
+          import os
+          from publishers import instagram
+          caption = (
+              "The €40,000 mistake hiding in your Barcelona venue contract.\n\n"
+              "Most premium venues here ban outside catering — and bury an in-house F&B minimum in the fine print. You only find it after you've signed.\n\n"
+              "The fix: lock the F&B exclusivity + minimum-spend clause in writing before signing, and price catering as its own line.\n\n"
+              "200+ events across 120+ countries — this is still the clause that blindsides clients most.\n\n"
+              "Follow for the insider secrets agencies won't tell you. \U0001F3AC\n\n"
+              "#corporateevents #incentivetravel #eventplanner #barcelona #businesstravel #eventos #viajesdeincentivo"
+          )
+          vurl = os.environ["VIDEO_URL"]
+          fail = False
+          for acc in [a.strip() for a in os.environ["ACCOUNTS"].split(",") if a.strip()]:
+              print(f"--> {acc}", flush=True)
+              r = instagram.publish_reel(acc, caption, vurl, share_to_feed=True)
+              print("   ", r, flush=True)
+              fail = fail or not r.get("success")
+          raise SystemExit(1 if fail else 0)
+          PY
