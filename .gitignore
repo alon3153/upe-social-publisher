@@ -6,3 +6,9 @@ __pycache__/
 .claude-flow/
 reports/*.txt
 !reports/.gitkeep
+
+content/images_realistic/
+.env
+.env.*
+*.DS_Store
+content/videos/
