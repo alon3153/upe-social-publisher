@@ -6,6 +6,15 @@ UA = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36"
 
 
 def _token():
+    # Prefer the auto-refreshed token stored in Supabase; fall back to env.
+    if os.environ.get("SUPABASE_URL") and os.environ.get("SUPABASE_SERVICE_ROLE_KEY"):
+        try:
+            from publishers import queue
+            row = queue.get_oauth("linkedin")
+            if row and row.get("access_token"):
+                return row["access_token"]
+        except Exception:
+            pass
     t = os.environ.get("LINKEDIN_ACCESS_TOKEN")
     if not t:
         raise RuntimeError("LINKEDIN_ACCESS_TOKEN not set")

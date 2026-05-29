@@ -42,3 +42,13 @@ def list_approved_unpublished():
 def mark(id_, **fields):
     return _req("PATCH", "post_approvals", params={"id": f"eq.{id_}"},
                 body=fields, prefer="return=minimal")
+
+
+def get_oauth(provider):
+    rows = _req("GET", "oauth_tokens", params={"select": "*", "provider": f"eq.{provider}"})
+    return rows[0] if rows else None
+
+
+def upsert_oauth(provider, **fields):
+    return _req("POST", "oauth_tokens", body={"provider": provider, **fields},
+                prefer="resolution=merge-duplicates,return=minimal")
