@@ -1,0 +1,41 @@
+name: LinkedIn Test
+
+on:
+  workflow_dispatch:
+    inputs:
+      post:
+        description: "Actually publish a test post (otherwise verify only)"
+        required: false
+        type: boolean
+        default: false
+      day:
+        description: "Day number to test-post (only used when post=true)"
+        required: false
+        type: string
+        default: "40"
+
+permissions:
+  contents: read
+
+jobs:
+  linkedin-test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    if: github.actor == 'alon3153'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - run: pip install -r requirements.txt
+      - name: Verify / test LinkedIn
+        env:
+          LINKEDIN_ACCESS_TOKEN: ${{ secrets.LINKEDIN_ACCESS_TOKEN }}
+          LINKEDIN_ORG_ID: ${{ secrets.LINKEDIN_ORG_ID }}
+          LINKEDIN_PERSON_ID: ${{ secrets.LINKEDIN_PERSON_ID }}
+        run: |
+          if [ "${{ inputs.post }}" = "true" ]; then
+            python3 scripts/linkedin_check.py --post --day ${{ inputs.day }}
+          else
+            python3 scripts/linkedin_check.py
+          fi

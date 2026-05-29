@@ -4,7 +4,7 @@ then mark them published. Replaces the un-gated daily cron."""
 import os, sys, datetime
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, ROOT)
-from publishers import queue, facebook, instagram
+from publishers import queue, facebook, instagram, linkedin
 from publishers.content import find_image_path, find_image_url
 
 
@@ -18,7 +18,10 @@ def publish_row(r):
         url = r.get("image_url") or find_image_url(day)
         ig_key = account.replace("ig_", "")
         return instagram.publish_post(ig_key, text, url)
-    # linkedin / tiktok: pending token integration
+    if net == "linkedin":
+        path = find_image_path(day)
+        return linkedin.publish_post(account, text, path)
+    # tiktok: video-only, served by the Sofia video pipeline (not this image pipeline)
     return {"success": False, "error": f"{net} publisher not configured yet"}
 
 
