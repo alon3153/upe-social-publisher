@@ -1,0 +1,29 @@
+name: Resend Domain Setup
+
+on:
+  workflow_dispatch:
+    inputs:
+      domain:
+        description: "Domain to ensure in Resend"
+        required: false
+        type: string
+        default: "upe.co.il"
+
+permissions:
+  contents: read
+
+jobs:
+  resend-domain:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    if: github.actor == 'alon3153'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Ensure domain + print DNS records
+        env:
+          RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
+          RESEND_DOMAIN: ${{ inputs.domain }}
+        run: python3 scripts/resend_domain.py
