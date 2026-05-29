@@ -127,8 +127,9 @@ def _wrap(draw, text, font, max_w):
     return lines
 
 
-def overlay(base_path, day, out_path):
-    slug, headline, _ = DAYS[day]
+def overlay(base_path, day, out_path, headline=None):
+    if headline is None:
+        headline = DAYS[day][1]
     W = H = 1080
     img = Image.open(base_path).convert("RGB")
     # cover-fit to 1080x1080
@@ -195,6 +196,30 @@ def overlay(base_path, day, out_path):
     return out_path
 
 
+def _headline_from_json(day):
+    """For days not in DAYS (41-100): read the EN post theme/title (overlay has no BiDi)."""
+    import glob as _g, json as _j
+    files = _g.glob(os.path.join(ROOT, "content", "days", f"*day{day}-*-en.json")) or \
+            _g.glob(os.path.join(ROOT, "content", "days", f"*day{day}-*.json"))
+    for f in sorted(files):
+        try:
+            d = _j.load(open(f))
+            h = d.get("theme") or d.get("title")
+            if h and h.isascii():
+                return h
+        except Exception:
+            pass
+    # last resort: any ascii title
+    for f in sorted(_g.glob(os.path.join(ROOT, "content", "days", f"*day{day}-*.json"))):
+        try:
+            d = _j.load(open(f)); h = d.get("theme") or d.get("title")
+            if h and h.isascii():
+                return h
+        except Exception:
+            pass
+    return None
+
+
 def brand_all():
     """Overlay branding on every base PNG in _bases/ + _pilot/."""
     import glob, re
@@ -204,20 +229,18 @@ def brand_all():
              glob.glob(os.path.join(out, "_pilot", "*_real.png")))
     done, miss = [], []
     for bp in sorted(bases):
-        m = re.search(r"day(\d+)_", os.path.basename(bp))
+        m = re.match(r"day(\d+)_(.+)_real\.png", os.path.basename(bp))
         if not m:
             continue
         day = int(m.group(1))
-        if day not in DAYS:
-            continue
-        slug = DAYS[day][0]
-        overlay(bp, day, os.path.join(out, f"day{day}_{slug}_branded.png"))
+        slug = m.group(2)
+        if day in DAYS:
+            slug, headline = DAYS[day][0], DAYS[day][1]
+        else:
+            headline = _headline_from_json(day) or slug.replace("-", " ").title()
+        overlay(bp, day, os.path.join(out, f"day{day}_{slug}_branded.png"), headline=headline)
         done.append(day)
-    have = set(done)
-    miss = [d for d in DAYS if d not in have]
     print(f"branded {len(done)}: {sorted(done)}")
-    if miss:
-        print(f"MISSING bases for days: {sorted(miss)}")
     return done, miss
 
 
