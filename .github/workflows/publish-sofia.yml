@@ -1,0 +1,39 @@
+name: Publish Sofia Reel
+
+on:
+  workflow_dispatch:
+    inputs:
+      accounts:
+        description: "Comma-separated IG account keys (uproduction_spain, uproductionevents)"
+        required: true
+        default: "uproduction_spain"
+      video_url:
+        description: "Public HTTPS video URL"
+        required: true
+        default: "https://raw.githubusercontent.com/alon3153/upe-social-publisher/main/content/sofia/videos/sofia_barcelona_01.mp4"
+      caption_file:
+        description: "Path to caption file in repo"
+        required: true
+        default: "content/sofia/captions/barcelona_01.txt"
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install deps
+        run: pip install -q requests
+      - name: Publish Sofia Reel
+        env:
+          IG_UPRODUCTION_SPAIN_USER_ID:      ${{ secrets.IG_UPRODUCTION_SPAIN_USER_ID }}
+          IG_UPRODUCTION_SPAIN_ACCESS_TOKEN: ${{ secrets.IG_UPRODUCTION_SPAIN_ACCESS_TOKEN }}
+          IG_UPRODUCTIONEVENTS_USER_ID:      ${{ secrets.IG_UPRODUCTIONEVENTS_USER_ID }}
+          IG_UPRODUCTIONEVENTS_ACCESS_TOKEN: ${{ secrets.IG_UPRODUCTIONEVENTS_ACCESS_TOKEN }}
+        run: |
+          python3 scripts/publish_sofia_reel.py \
+            --accounts "${{ github.event.inputs.accounts }}" \
+            --video-url "${{ github.event.inputs.video_url }}" \
+            --caption-file "${{ github.event.inputs.caption_file }}"
