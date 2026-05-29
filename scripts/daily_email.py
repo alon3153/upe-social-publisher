@@ -22,6 +22,7 @@ ACCOUNTS = [
     ("facebook",  "uproduction_spain", "facebook",  "es"),
     ("instagram", "ig_uproductionevents", "instagram", "en"),
     ("instagram", "ig_uproduction_spain", "instagram", "es"),
+    ("linkedin",  "alon3153", "linkedin", "en"),
 ]
 NET_HE = {"facebook": "Facebook", "instagram": "Instagram", "linkedin": "LinkedIn", "tiktok": "TikTok"}
 HASHTAGS = {
