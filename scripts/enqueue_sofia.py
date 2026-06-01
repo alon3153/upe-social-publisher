@@ -43,7 +43,8 @@ def email_html(acc, headline, rid, token, caption, video_url):
 def send_resend(subj, html):
     body = json.dumps({"from": RESEND_FROM, "to": [APPROVAL_TO], "subject": subj, "html": html}).encode()
     req = urllib.request.Request("https://api.resend.com/emails", data=body,
-                                 headers={"Authorization": f"Bearer {RESEND_KEY}", "Content-Type": "application/json"})
+                                 headers={"Authorization": f"Bearer {RESEND_KEY}", "Content-Type": "application/json",
+                                          "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124 Safari/537.36"})
     try:
         with urllib.request.urlopen(req) as r:
             return True, r.read().decode()[:80]
