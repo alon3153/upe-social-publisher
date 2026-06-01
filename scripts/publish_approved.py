@@ -15,8 +15,11 @@ def publish_row(r):
         path = find_image_path(day)
         return facebook.publish_post(account, text, path)
     if net == "instagram":
-        url = r.get("image_url") or find_image_url(day)
         ig_key = account.replace("ig_", "")
+        video_url = r.get("video_url")
+        if video_url:  # Sofia Reels (video posts)
+            return instagram.publish_reel(ig_key, text, video_url, share_to_feed=True)
+        url = r.get("image_url") or find_image_url(day)
         return instagram.publish_post(ig_key, text, url)
     if net == "linkedin":
         url = r.get("image_url") or find_image_url(day)
