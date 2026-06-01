@@ -56,8 +56,8 @@ def main():
     posts = json.load(open(f"{ROOT}/content/sofia/queue/{qfile}.json"))
     rows = []
     for p in posts:
-        for acc in p["accounts"]:
-            rows.append({"day": p["day"], "network": "instagram", "account": f"ig_{acc}",
+        for i, acc in enumerate(p["accounts"]):
+            rows.append({"day": p["day"] * 10 + i, "network": "instagram", "account": f"ig_{acc}",
                          "lang": "en", "headline": p["headline"], "caption": p["caption"],
                          "video_url": p["video_url"], "scheduled_date": p["scheduled_date"]})
     inserted = queue.insert_rows(rows)
