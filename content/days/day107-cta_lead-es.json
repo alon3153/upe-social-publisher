@@ -1,0 +1,36 @@
+{
+  "day": 107,
+  "category": "cta_lead",
+  "language": "es",
+  "date": "2026-08-10",
+  "weekday": "Monday",
+  "theme": "Your competitors already booked Q4. Have you?",
+  "linkedin": {
+    "profile": "Uproduction Events (Company Page)",
+    "text": "Mientras lees esto, alguien de tu sector está firmando un contrato de sede para el último trimestre.\n\nNo es una táctica de miedo: es el ritmo con el que se ocupan las mejores fechas. Las empresas que montan el congreso de fin de año que destaca, o el viaje de incentivo del que todos hablan, no tienen suerte; simplemente se comprometen pronto, cuando los mejores espacios, vuelos y equipos de producción aún están disponibles.\n\nEspera a septiembre y elegirás entre lo que sobre. Muévete ahora y eliges lo mejor, en tus términos, con tiempo para construirlo bien.\n\nLa diferencia entre un evento de fin de año olvidable y uno memorable suele ser solo seis semanas de margen. Todavía tenemos hueco para que el tuyo sea el memorable, pero el calendario no espera, y tus competidores tampoco.\n\nBloqueemos tu fecha del último trimestre esta semana. From business to pleasure.\n\n#UproductionEvents #CorporateEvents #IncentiveTravel #EventosCorporativos #ViajesDeIncentivo #Congresos",
+    "dimensions": "1:1",
+    "cta": "DM us or book a call"
+  },
+  "instagram": {
+    "profile": "@uproductionevents",
+    "text": "Mientras lees esto, un competidor está firmando un contrato de sede para el último trimestre. ✍️\n\nNo es táctica de miedo: es el ritmo con el que se ocupan las mejores fechas:\n🏆 Los eventos que destacan no son suerte, son compromiso temprano\n📅 Los mejores espacios, vuelos y equipos se van primero\n⏳ Esperar a septiembre = elegir entre lo que sobra\n\n¿La diferencia entre un fin de año olvidable y uno memorable? A menudo solo seis semanas de margen. 😮\n\nAún tenemos hueco para que el tuyo sea el memorable. Pero el calendario no espera, y tus competidores tampoco. 🏃\n\n📌 Guarda esto como tu despertador del lunes.\n👥 Etiqueta a quien sigue \"decidiendo\" el último trimestre.\n💬 Mándanos un DM esta semana y bloqueamos tu fecha.\n\n#CorporateEvents #IncentiveTravel #EventProduction #EventosCorporativos #EventProfs #ViajesDeIncentivo #MICE #B2BEvents #UproductionEvents #Congresos #EstrategiaDeEventos",
+    "dimensions": "1:1",
+    "cta": "Link in bio"
+  },
+  "facebook": {
+    "profile": "Uproduction Events (Page)",
+    "text": "Mientras lees esto, alguien de tu sector está firmando un contrato de sede para el último trimestre. ✍️\n\nNo es táctica de miedo: es como se ocupan las mejores fechas. Las empresas que montan el congreso de fin de año que destaca, o el viaje de incentivo del que todos hablan, no tienen suerte; se comprometen pronto, cuando los mejores espacios, vuelos y equipos aún están libres. Espera a septiembre y eliges entre lo que sobra.\n\nLa diferencia entre un fin de año olvidable y uno memorable suele ser seis semanas de margen. ¿Ya has bloqueado tu fecha, o sigue en la lista de \"algún día\"? Cuéntanos abajo o mándanos un mensaje esta semana. 👇\n\n#CorporateEvents #IncentiveTravel #EventProduction #EventosCorporativos",
+    "dimensions": "1.91:1",
+    "cta": "Send us a message"
+  },
+  "image_prompt": "Two hands signing a venue contract across a polished boardroom table at dusk, a fountain pen mid-signature, a city skyline glowing through floor-to-ceiling windows behind, sense of a decisive business moment. Photorealistic, 35mm film grain, no CGI, no text, no logos.",
+  "image_style": "photorealistic, editorial, documentary, 35mm film grain",
+  "brand": {
+    "colors": [
+      "#1C1C1C",
+      "#FBCE0A"
+    ],
+    "font": "Comfortaa",
+    "logo": "uproduction_official_logo.png"
+  }
+}

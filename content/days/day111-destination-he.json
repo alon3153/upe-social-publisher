@@ -1,0 +1,36 @@
+{
+  "day": 111,
+  "category": "destination",
+  "language": "he",
+  "date": "2026-08-14",
+  "weekday": "Friday",
+  "theme": "Lisbon: sunlit summits where business feels effortless",
+  "linkedin": {
+    "profile": "Uproduction Events (Company Page)",
+    "text": "יש סיבה שכנסים תובעניים פשוט עובדים טוב יותר בליסבון. האור עושה משהו לחדר. הבקרים נפתחים מעל נהר הטז'ו, הסשנים רצים חדים בתוך ארמונות מרוצפי אריחים, ולקראת ערב העיר מעניקה לצוות שלכם את הרוגע שגורם לאנשים להתחבר באמת. לכנס עסקי, הקצב הזה הוא נכס אסטרטגי — ריכוז כשצריך, שחרור כשמגיע. אנחנו מפיקים את כל הקשת: אולמות כנס על הנהר, ארוחות גאלה בין אריחי אזולז'ו, ערבי פאדו וטיולי תמרוץ ברכבת החשמלית — הכול תחת צוות אחד אחראי. אם אתם מתכננים כנס בפורטוגל ל-2027, בואו נדבר. #UproductionEvents #אירועים #כנסים #הפקתאירועים #לוגיסטיקה",
+    "dimensions": "1:1",
+    "cta": "DM us or book a call"
+  },
+  "instagram": {
+    "profile": "@uproductionevents",
+    "text": "יש ערים שפשוט גורמות לעבודה להרגיש קלה יותר. ☀️\nליסבון היא אחת מהן. 🇵🇹\n\nהכנס שלא מרגיש ככנס:\n\n🏛️ סשנים בארמונות מרוצפי אריחים\n🌊 אולמות על נהר הטז'ו\n🚋 טיולי תמרוץ ברכבת החשמלית בעיר העתיקה\n🎶 ארוחות פאדו לסגירת היום\n\nfrom business to pleasure — אנחנו מפיקים כל שכבה מההתחלה ועד הסוף.\n\n📌 שמרו לרשימת היעדים שלכם ל-2027.\n👉 תייגו את מי שבוחר את היעד.\n💬 שלחו לנו הודעה ונבנה לכם את שלכם.\n\n#UproductionEvents #אירועים #כנסים #הפקתאירועים #לוגיסטיקה #ליסבון #פורטוגל #תמרוץ #MICE",
+    "dimensions": "1:1",
+    "cta": "Link in bio"
+  },
+  "facebook": {
+    "profile": "Uproduction Events (Page)",
+    "text": "לליסבון יש סגולה נדירה: היא גורמת לאג'נדה צפופה להרגיש קלילה. ☀️\n\nהאור, הנהר, הארמונות המרוצפים — עיר שמאפשרת לצוות להתרכז בבוקר ולנשום עם השקיעה. אנחנו מפיקים את כל התוכנית: אולמות על הנהר, ארוחות גאלה, טיולי תמרוץ ברכבת החשמלית וערבי פאדו. from business to pleasure.\n\nאיך הצוות שלכם היה חושב עם נהר הטז'ו ברקע? 🌊\n\nשלחו לנו הודעה ונעצב את הכנס שלכם בליסבון.\n\n#UproductionEvents #אירועים #כנסים #ליסבון",
+    "dimensions": "1.91:1",
+    "cta": "Send us a message"
+  },
+  "image_prompt": "Golden-hour view across Lisbon's terracotta rooftops down to the Tagus river, a hilltop terrace with a long set dinner table and a few elegant guests, the 25 de Abril bridge faint in the haze, warm tiled facades catching the last light. Photorealistic, 35mm film grain, no CGI, no text, no logos.",
+  "image_style": "photorealistic, editorial, documentary, 35mm film grain",
+  "brand": {
+    "colors": [
+      "#1C1C1C",
+      "#FBCE0A"
+    ],
+    "font": "Comfortaa",
+    "logo": "uproduction_official_logo.png"
+  }
+}

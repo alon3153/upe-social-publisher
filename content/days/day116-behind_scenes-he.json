@@ -1,0 +1,36 @@
+{
+  "day": 116,
+  "category": "behind_scenes",
+  "language": "he",
+  "date": "2026-08-19",
+  "weekday": "Wednesday",
+  "theme": "What 200 hours of pre-production actually looks like",
+  "linkedin": {
+    "profile": "Uproduction Events (Company Page)",
+    "text": "האורחים רואים גאלה של ארבע שעות. מאחוריה עומדות בערך 200 שעות עבודה שהם לעולם לא ישימו לב אליהן — וזו בדיוק הנקודה. השעות האלה הן סיורי שטח שנעשו פעמיים, שלוש תוכניות הסעה לקו אחד, תסריט אירוע שמתוזמן לדקה, מטריצות תזונה שמוצלבות מול רשימת האורחים, ספקי גיבוי לספקים, ותוכנית למזג אוויר שכנראה לא יקרה. שום דבר מזה לא נראה בערב עצמו. כל זה הסיבה שהערב מרגיש חלק לחלוטין. העבודה הבלתי נראית היא העבודה. כשמעבר יוצא כל כך חלק שאף אחד לא מעיר עליו — זה לא מזל, אלה 200 שעות שעושות את העבודה בשקט. רוצים את השקט הזה מאחורי האירוע הבא שלכם? בואו נדבר. #UproductionEvents #אירועים #כנסים #הפקתאירועים #לוגיסטיקה",
+    "dimensions": "1:1",
+    "cta": "DM us or book a call"
+  },
+  "instagram": {
+    "profile": "@uproductionevents",
+    "text": "האורחים רואים גאלה של 4 שעות. 🥂\nמאחוריה? בערך 200 שעות שהם לעולם לא ישימו לב אליהן. 🤫\n\nאיך השעות האלה באמת נראות: 👇\n\n📋 סיורי שטח שנעשו פעמיים\n🚌 שלוש תוכניות הסעה לקו אחד\n⏱️ תסריט אירוע מתוזמן לדקה\n🍽️ מטריצות תזונה שמוצלבות אורח-אורח\n🛡️ ספקי גיבוי לספקים\n🌧️ תוכנית מזג אוויר שכנראה לא תצטרכו\n\nשום דבר מזה לא נראה בערב.\nכל זה הסיבה שהערב מרגיש חלק. ✨\n\nהעבודה הבלתי נראית היא העבודה.\n\n📌 שמרו לפעם הבאה שמישהו ישאל \"למה זה עולה ככה\".\n👉 תייגו את המפיק שמבין את זה.\n💬 שלחו לנו הודעה לשקט באירוע הבא שלכם.\n\n#UproductionEvents #אירועים #כנסים #הפקתאירועים #לוגיסטיקה #תמרוץ #MICE #מאחוריהקלעים",
+    "dimensions": "1:1",
+    "cta": "Link in bio"
+  },
+  "facebook": {
+    "profile": "Uproduction Events (Page)",
+    "text": "האורחים רואים גאלה של ארבע שעות. מאחוריה עומדות בערך 200 שעות שהם לעולם לא ישימו לב אליהן. 🤫\n\nסיורי שטח שנעשו פעמיים, שלוש תוכניות הסעה לקו אחד, תסריט מתוזמן לדקה, מטריצות תזונה שמוצלבות אורח-אורח, ספקי גיבוי לספקים, תוכנית מזג אוויר שכנראה לא נשתמש בה. שום דבר לא נראה בערב — ובדיוק לכן הערב מרגיש חלק. העבודה הבלתי נראית היא העבודה.\n\nמה החלק בהפקת אירוע שאף אחד לא רואה מגיע? 👀\n\nשלחו לנו הודעה ונדבר.\n\n#UproductionEvents #אירועים #כנסים #הפקתאירועים",
+    "dimensions": "1.91:1",
+    "cta": "Send us a message"
+  },
+  "image_prompt": "An empty event ballroom mid-afternoon during setup, production crew on ladders rigging lights, rolls of cable and flight cases on the floor, a clipboard on a folding table, soft natural light through tall windows before the room transforms. Photorealistic, 35mm film grain, no CGI, no text, no logos.",
+  "image_style": "photorealistic, editorial, documentary, 35mm film grain",
+  "brand": {
+    "colors": [
+      "#1C1C1C",
+      "#FBCE0A"
+    ],
+    "font": "Comfortaa",
+    "logo": "uproduction_official_logo.png"
+  }
+}

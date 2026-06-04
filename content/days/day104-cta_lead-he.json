@@ -1,0 +1,36 @@
+{
+  "day": 104,
+  "category": "cta_lead",
+  "language": "he",
+  "date": "2026-08-07",
+  "weekday": "Friday",
+  "theme": "One brief. One team. Zero handoff chaos.",
+  "linkedin": {
+    "profile": "Uproduction Events (Company Page)",
+    "text": "תספרו את התפרים באירוע ארגוני טיפוסי: סוכנות נסיעות, DMC, חברת הפקה, ספק AV, סטודיו מיתוג, מערכת רישום. שישה ספקים, שישה חוזים, שש גרסאות של \"זה לא החלק שלנו\".\n\nכל העברת אחריות היא מקום שבו מידע הולך לאיבוד והאחריות נעלמת. וכשמשהו מתחיל להחליק ב-11 בלילה — אתם אלה שתופרים את זה בחזרה.\n\nהקמנו את Uproduction כדי למחוק את התפרים האלה. בריף אחד, צוות אחד, מספר אחד להתקשר אליו — קונספט, יעד, לוגיסטיקה, מיתוג, רישום וביצוע בשטח, הכול תחת קורת גג אחת. כשהכול באחריות אותם אנשים, שום דבר לא נופל בין הכיסאות, כי אין כיסאות.\n\nאם נמאס לכם להיות שכבת האינטגרציה בין הספקים של עצמכם — זו בדיוק הבעיה שאנחנו פותרים. בואו נדבר.\n\n#UproductionEvents #אירועים #כנסים #הפקתאירועים #לוגיסטיקה",
+    "dimensions": "1:1",
+    "cta": "DM us or book a call"
+  },
+  "instagram": {
+    "profile": "@uproductionevents",
+    "text": "שישה ספקים. שישה חוזים. שש גרסאות של \"זה לא החלק שלנו\". 🫠\n\nהמחיר הסמוי של ג'אגלינג בין ספקים:\n🧩 מידע נאבד בכל העברת אחריות\n📞 אין מספר אחד כשזה נשבר ב-11 בלילה\n😵‍💫 אתם הופכים לדבק שמחזיק את הכול\n\nהקמנו את Uproduction כדי למחוק את התפרים:\n✅ בריף אחד\n✅ צוות אחד\n✅ מספר אחד להתקשר אליו\n✅ קונספט ← לוגיסטיקה ← מיתוג ← שטח, תחת קורת גג אחת\n\nכשאותם אנשים אחראים על הכול, שום דבר לא נופל בין הכיסאות — כי אין כיסאות. 🙌\n\n📌 שמרו את זה לפעם הבאה שתיאום ספקים יאכל לכם את השבוע.\n👥 תייגו את מי שתקוע בלהיות \"שכבת האינטגרציה\".\n💬 שלחו לנו DM ובואו נהפוך את האירוע הבא שלכם לחלק.\n\n#CorporateEvents #EventProduction #אירועים #כנסים #הפקתאירועים #לוגיסטיקה #UproductionEvents",
+    "dimensions": "1:1",
+    "cta": "Link in bio"
+  },
+  "facebook": {
+    "profile": "Uproduction Events (Page)",
+    "text": "ספרתם פעם את התפרים באירוע טיפוסי? 🧩\n\nסוכנות נסיעות, DMC, חברת הפקה, צוות AV, סטודיו מיתוג, מערכת רישום — שישה ספקים, שישה חוזים, שש גרסאות של \"זה לא החלק שלנו\". כל העברת אחריות היא מקום שבו מידע הולך לאיבוד, וכשמשהו מתחיל להחליק ב-11 בלילה, אתם אלה שתופרים את זה בחזרה.\n\nהקמנו את Uproduction כדי למחוק את התפרים האלה: בריף אחד, צוות אחד, מספר אחד, הכול תחת קורת גג אחת.\n\nכמה ספקים אתם מג'נגלים לאירוע הבא? ספרו לנו למטה, או שלחו הודעה ונפשט את זה. 👇\n\n#CorporateEvents #EventProduction #אירועים #כנסים",
+    "dimensions": "1.91:1",
+    "cta": "Send us a message"
+  },
+  "image_prompt": "A single calm event director standing in the centre of a busy backstage area, headset on, clipboard in hand, crew and gear flowing around in soft motion blur while the director stays in sharp focus, conveying one person owning the whole operation. Photorealistic, 35mm film grain, no CGI, no text, no logos.",
+  "image_style": "photorealistic, editorial, documentary, 35mm film grain",
+  "brand": {
+    "colors": [
+      "#1C1C1C",
+      "#FBCE0A"
+    ],
+    "font": "Comfortaa",
+    "logo": "uproduction_official_logo.png"
+  }
+}
