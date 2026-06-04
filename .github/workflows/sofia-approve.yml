@@ -1,6 +1,10 @@
 name: Sofia Approval Email
 
 on:
+  schedule:
+    # 3x/week — Sun/Tue/Thu 06:30 UTC (09:30 IST). Idempotent: enqueue_sofia
+    # skips videos already queued, so re-runs on the same queue file are no-ops.
+    - cron: "30 6 * * 0,2,4"
   workflow_dispatch:
     inputs:
       queue_file:
@@ -11,7 +15,7 @@ on:
 jobs:
   enqueue_and_email:
     runs-on: ubuntu-latest
-    if: github.actor == 'alon3153'
+    if: github.event_name == 'schedule' || github.actor == 'alon3153'
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -25,4 +29,4 @@ jobs:
           RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
           RESEND_FROM: ${{ secrets.RESEND_FROM }}
           APPROVAL_TO: ${{ secrets.APPROVAL_TO }}
-        run: python3 scripts/enqueue_sofia.py "${{ github.event.inputs.queue_file }}"
+        run: python3 scripts/enqueue_sofia.py "${{ github.event.inputs.queue_file || 'week1' }}"

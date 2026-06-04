@@ -171,6 +171,50 @@ def publish_carousel(account_key: str, text: str, image_paths: List[str]) -> dic
         return {"success": False, "account": account_key, "error": f"Unexpected: {scrub(e)}"}
 
 
+@with_retry(max_attempts=3, base_delay=2.0)
+def _post_video(page_id: str, page_token: str, description: str, video_url: str) -> requests.Response:
+    return requests.post(
+        f"{GRAPH_API}/{page_id}/videos",
+        data={"file_url": video_url, "description": description, "access_token": page_token},
+        timeout=TIMEOUT,
+    )
+
+
+def post_video_to_page(page_id: str, page_token: str, text: str, video_url: str) -> Tuple[bool, str]:
+    if not page_id or not page_token:
+        raise FacebookPublishError("page_id and page_token are required")
+    if not video_url:
+        raise FacebookPublishError("video_url is required")
+    r = _post_video(page_id, page_token, text, video_url)
+    try:
+        body = r.json()
+    except Exception:
+        body = {"raw": r.text}
+    if r.status_code != 200:
+        err = body.get("error", {}) if isinstance(body, dict) else {}
+        raise FacebookPublishError(f"HTTP {r.status_code}: {scrub(err.get('message', body) if err else body)}")
+    post_id = body.get("id") or body.get("post_id")
+    if not post_id:
+        raise FacebookPublishError(f"No id in video response: {scrub(body)}")
+    return True, post_id
+
+
+def publish_video(account_key: str, text: str, video_url: str) -> dict:
+    """Publish a hosted video to the page feed (FB Graph /videos via file_url)."""
+    page_id = os.environ.get(f"FB_{account_key.upper()}_PAGE_ID")
+    page_token = os.environ.get(f"FB_{account_key.upper()}_PAGE_TOKEN")
+    if not page_id or not page_token:
+        return {"success": False, "account": account_key,
+                "error": f"Missing FB_{account_key.upper()}_PAGE_ID or _PAGE_TOKEN"}
+    try:
+        ok, post_id = post_video_to_page(page_id, page_token, text, video_url)
+        return {"success": ok, "account": account_key, "page_id": page_id, "post_id": post_id}
+    except FacebookPublishError as e:
+        return {"success": False, "account": account_key, "error": scrub(e)}
+    except Exception as e:
+        return {"success": False, "account": account_key, "error": f"Unexpected: {scrub(e)}"}
+
+
 def publish_post(account_key: str, text: str, image_path: Optional[str] = None) -> dict:
     page_id = os.environ.get(f"FB_{account_key.upper()}_PAGE_ID")
     page_token = os.environ.get(f"FB_{account_key.upper()}_PAGE_TOKEN")

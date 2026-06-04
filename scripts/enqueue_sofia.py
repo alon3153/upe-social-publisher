@@ -55,20 +55,36 @@ def send_resend(subj, html):
 def main():
     qfile = sys.argv[1] if len(sys.argv) > 1 else "week1"
     posts = json.load(open(f"{ROOT}/content/sofia/queue/{qfile}.json"))
+    # Each Sofia video fans out to both Instagram (Reel) and Facebook (page video),
+    # per account. LinkedIn org video + TikTok are pending OAuth/app-audit (see README).
     rows = []
     for p in posts:
         for i, acc in enumerate(p["accounts"]):
-            rows.append({"day": p["day"] * 10 + i, "network": "instagram", "account": f"ig_{acc}",
-                         "lang": "en", "headline": p["headline"], "caption": p["caption"],
-                         "video_url": p["video_url"], "scheduled_date": p["scheduled_date"]})
+            lang = "es" if "spain" in acc else "en"
+            base = p["day"] * 10 + i
+            common = {"lang": lang, "headline": p["headline"], "caption": p["caption"],
+                      "video_url": p["video_url"], "scheduled_date": p["scheduled_date"]}
+            rows.append({"day": base, "network": "instagram", "account": f"ig_{acc}", **common})
+            rows.append({"day": base + 5, "network": "facebook", "account": acc, **common})
+    # Idempotency: skip rows whose video is already queued for that network+account,
+    # so a recurring cron never re-sends or double-publishes the same clip.
+    fresh = [r for r in rows
+             if not queue.video_enqueued(r["video_url"], r["network"], r["account"])]
+    skipped = len(rows) - len(fresh)
+    if skipped:
+        print(f"Skipped {skipped} already-enqueued rows")
+    if not fresh:
+        print("Nothing new to enqueue."); return 0
+    rows = fresh
     inserted = queue.insert_rows(rows)
     print(f"Enqueued {len(inserted)} Sofia rows")
     sent = 0
     for r in inserted:
-        subj = f"🎬 אישור סרטון Sofia — {NET_HE.get(r['account'].replace('ig_',''), r['account'])} — {r.get('headline','')}"
-        ok, info = send_resend(subj, email_html(r['account'].replace('ig_', ''), r.get('headline', ''),
+        net_he = NET_HE.get(r["network"], r["network"])
+        subj = f"🎬 אישור סרטון Sofia — {net_he} ({r['lang']}) — {r.get('headline','')}"
+        ok, info = send_resend(subj, email_html(f"{net_he} · {r['account']}", r.get('headline', ''),
                                                 r['id'], r['token'], r['caption'], r['video_url']))
-        print(f"{'OK ' if ok else 'ERR'} {r['account']}: {info}")
+        print(f"{'OK ' if ok else 'ERR'} {r['network']}/{r['account']}: {info}")
         sent += ok
     print(f"Emailed {sent}/{len(inserted)}")
     return 0

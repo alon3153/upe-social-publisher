@@ -46,6 +46,17 @@ def published_days():
     return {int(r["day"]) for r in rows if r.get("day") is not None}
 
 
+def video_enqueued(video_url, network, account):
+    """True if this exact video was already queued for this network+account —
+    makes a recurring Sofia cron idempotent (no re-send / no duplicate post)."""
+    if not video_url:
+        return False
+    r = _req("GET", "post_approvals",
+             params={"select": "id", "video_url": f"eq.{video_url}",
+                     "network": f"eq.{network}", "account": f"eq.{account}", "limit": "1"})
+    return len(r) > 0
+
+
 def mark(id_, **fields):
     return _req("PATCH", "post_approvals", params={"id": f"eq.{id_}"},
                 body=fields, prefer="return=minimal")

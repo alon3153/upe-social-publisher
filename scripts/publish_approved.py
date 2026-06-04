@@ -12,6 +12,9 @@ def publish_row(r):
     net, account, day = r["network"], r["account"], r["day"]
     text = r["caption"]
     if net == "facebook":
+        video_url = r.get("video_url")
+        if video_url:  # Sofia video posts
+            return facebook.publish_video(account, text, video_url)
         path = find_image_path(day)
         return facebook.publish_post(account, text, path)
     if net == "instagram":
