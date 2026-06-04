@@ -1,0 +1,36 @@
+{
+  "day": 112,
+  "category": "cta_lead",
+  "language": "es",
+  "date": "2026-08-15",
+  "weekday": "Saturday",
+  "theme": "Stop comparing quotes. Start comparing outcomes.",
+  "linkedin": {
+    "profile": "Uproduction Events (Company Page)",
+    "text": "El presupuesto más barato casi nunca es el evento más barato.\n\nUna comparación por partidas te dice cuánto cobra un proveedor. No te dice qué van a sentir tus invitados, si los traslados saldrán a tiempo ni quién contesta el teléfono a las 2 de la madrugada cuando se cancela un vuelo. Esos huecos no aparecen en la hoja de cálculo: aparecen la noche del evento.\n\nEn Uproduction (UPE) preferimos que compares resultados: índices de satisfacción, ejecución puntual, las renovaciones que llegan tras un gran año. Esa es la cuenta que protege tu presupuesto, con más de 15 años y 120+ países de experiencia.\n\n¿Tienes propuestas sobre la mesa? Mándanoslas y te mostramos qué compra cada una.\n\n#UproductionEvents #IncentiveTravel #CorporateEvents #EventosCorporativos #ViajesDeIncentivo #Congresos",
+    "dimensions": "1:1",
+    "cta": "DM us or book a call"
+  },
+  "instagram": {
+    "profile": "@uproductionevents",
+    "text": "El presupuesto más barato rara vez es el evento más barato. 💸\n\nLa hoja de cálculo te enseña el precio.\nEsconde todo lo que de verdad importa. 👇\n\n❓ ¿Saldrán los traslados a tiempo?\n❓ ¿Quién contesta a las 2 a.m. si cae un vuelo?\n❓ ¿Qué van a sentir tus invitados?\n❓ ¿Querrán volver el año que viene?\n\nEsas respuestas no caben en una celda. Aparecen la noche del evento.\n\nCompara resultados, no partidas. 🎯\n\n📌 Guarda esto antes de tu próxima ronda de proveedores.\n👉 Etiqueta a quien está pidiendo presupuestos ahora.\n💬 Mándanos tus propuestas y te decimos qué compra cada una.\n\n#UproductionEvents #IncentiveTravel #CorporateEvents #EventosCorporativos #ViajesDeIncentivo #Congresos #EventPlanning #B2BEvents #ROI #MICE #CorporateTravel #EventProfs",
+    "dimensions": "1:1",
+    "cta": "Link in bio"
+  },
+  "facebook": {
+    "profile": "Uproduction Events (Page)",
+    "text": "El presupuesto más barato y el evento más barato casi nunca son lo mismo. 💸\n\nUna comparación por partidas te da el precio, no si los traslados salen a tiempo, ni quién contesta a las 2 a.m., ni cómo se irán tus invitados. Eso no cabe en una hoja de cálculo, pero decide si el evento valió la pena. En Uproduction (UPE) preferimos que compares resultados: satisfacción, ejecución, renovaciones.\n\n¿Qué es lo que un presupuesto nunca te cuenta? 🤔\n\nMándanos un mensaje y lo revisamos juntos.\n\n#UproductionEvents #EventosCorporativos #IncentiveTravel #ROI",
+    "dimensions": "1.91:1",
+    "cta": "Send us a message"
+  },
+  "image_prompt": "A clean executive desk at dusk, two printed event proposals side by side under a warm desk lamp, a person's hands resting between them mid-decision, a coffee cup and a city window blurred behind. Photorealistic, 35mm film grain, no CGI, no text, no logos.",
+  "image_style": "photorealistic, editorial, documentary, 35mm film grain",
+  "brand": {
+    "colors": [
+      "#1C1C1C",
+      "#FBCE0A"
+    ],
+    "font": "Comfortaa",
+    "logo": "uproduction_official_logo.png"
+  }
+}

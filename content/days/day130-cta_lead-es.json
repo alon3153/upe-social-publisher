@@ -1,0 +1,36 @@
+{
+  "day": 130,
+  "category": "cta_lead",
+  "language": "es",
+  "date": "2026-09-02",
+  "weekday": "Wednesday",
+  "theme": "Design your flagship 2027 event with us",
+  "linkedin": {
+    "profile": "Uproduction Events (Company Page)",
+    "text": "Toda empresa tiene un evento al año que carga con el peso de toda la marca: el evento insignia. El kickoff, la cumbre global, la gala de aniversario por la que toda la organización mide el año. Ese no es el evento para improvisar. Es el que se diseña pronto, con intención, desde una página en blanco que parte de tu objetivo, no de la plantilla del año pasado. Construimos los eventos insignia como un solo arco: el objetivo estratégico, el destino que lo amplifica, la producción que vuelve el mensaje inolvidable y la logística que permite que tus líderes lleguen como invitados, no como bomberos. Un solo equipo responsable, del concepto al aplauso final. From business to pleasure. Empecemos a diseñar tu evento insignia de 2027 mientras el calendario sigue abierto. Escríbenos o agenda una llamada. #UproductionEvents #EventosCorporativos #ViajesDeIncentivo #Congresos",
+    "dimensions": "1:1",
+    "cta": "DM us or book a call"
+  },
+  "instagram": {
+    "profile": "@uproductionevents",
+    "text": "Toda empresa tiene UN evento que carga con toda la marca. 🏆\n\nEl evento insignia. El kickoff, la cumbre global, la gala de aniversario por la que se mide el año entero. Ese no es para improvisar. 🙅\n\nDiseñamos los insignia como un solo arco 👇\n🎯 Parte de tu objetivo, no de la plantilla del año pasado\n🌍 Un destino que amplifica el mensaje\n🎬 Producción que lo vuelve inolvidable\n🧘 Logística para que los líderes lleguen como invitados, no como bomberos\n\nUn solo equipo responsable, del concepto al aplauso final. From business to pleasure. 🥂\n\n📌 Guarda esto para tu planificación 2027.\n👥 Etiqueta a quien lleva el evento grande.\n💬 Mándanos un DM con \"INSIGNIA\". El calendario sigue abierto.\n\n#EventosCorporativos #ViajesDeIncentivo #EventStrategy #FlagshipEvents #EventProfs #EventPlanning #CorporateTravel #B2BEvents #EventDesign #Congresos #UproductionEvents #MICE",
+    "dimensions": "1:1",
+    "cta": "Link in bio"
+  },
+  "facebook": {
+    "profile": "Uproduction Events (Page)",
+    "text": "Toda empresa tiene un evento al año que carga con toda la marca: el evento insignia. 🏆\n\nEl kickoff, la cumbre global, la gala de aniversario por la que toda la organización mide el año. Ese no es para improvisar: es el que se diseña pronto, desde una página en blanco que parte de tu objetivo, no de la plantilla del año pasado. Lo construimos como un solo arco (objetivo, destino, producción y logística) para que tus líderes lleguen como invitados, no como bomberos. From business to pleasure.\n\n¿Qué haría tu evento insignia de 2027 realmente inolvidable? Cuéntanos abajo o mándanos un mensaje, el calendario sigue abierto. 👇\n\n#EventosCorporativos #FlagshipEvents #EventStrategy #UproductionEvents",
+    "dimensions": "1.91:1",
+    "cta": "Send us a message"
+  },
+  "image_prompt": "A blank mood board and a fresh sketchpad on a designer's table in a sunlit studio, a hand beginning the first pencil line, fabric swatches and a coffee nearby, an atmosphere of a big idea about to take shape. Photorealistic, 35mm film grain, no CGI, no text, no logos.",
+  "image_style": "photorealistic, editorial, documentary, 35mm film grain",
+  "brand": {
+    "colors": [
+      "#1C1C1C",
+      "#FBCE0A"
+    ],
+    "font": "Comfortaa",
+    "logo": "uproduction_official_logo.png"
+  }
+}

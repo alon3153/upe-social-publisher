@@ -1,0 +1,36 @@
+{
+  "day": 129,
+  "category": "testimonial",
+  "language": "he",
+  "date": "2026-09-01",
+  "weekday": "Tuesday",
+  "theme": "What HR leaders say after the dust settles",
+  "linkedin": {
+    "profile": "Uproduction Events (Company Page)",
+    "text": "פסק הדין האמיתי על אירוע לא מגיע באותו ערב. הוא מגיע שבועיים אחר כך, כשהאדרנלין נגמר ומנהלת משאבי האנוש חוזרת לשולחן שלה. אז אנחנו שומעים את המשפטים שהכי חשובים. מנהלת משאבי אנוש: \"תיבת המייל שלי הייתה מלאה בתודות, לא בתלונות — בפעם הראשונה אי פעם.\" מנהל גיוס: \"שתי התפטרויות שהתכוננתי אליהן פשוט לא הגיעו.\" סמנכ\"לית משאבי אנוש: \"בפעם אחת לא הייתי זו שמתקנת דברים בשתיים בלילה — באמת זכיתי להיות אורחת באירוע של עצמי.\" אלה לא משפטים על תאורה או לוגיסטיקה. הם על מה שאירוע עושה לשימור עובדים, לסנטימנט ולעומס שנושאת מי שאחראית עליו. זאת התוצאה שאנחנו מתכננים אליה. From business to pleasure. רוצים שהצוות שלכם ירגיש את זה אחרי שהאבק שוקע? בואו נדבר. #UproductionEvents #אירועים #כנסים #הפקתאירועים #לוגיסטיקה",
+    "dimensions": "1:1",
+    "cta": "DM us or book a call"
+  },
+  "instagram": {
+    "profile": "@uproductionevents",
+    "text": "הביקורת האמיתית על אירוע מגיעה שבועיים אחר כך. 🕰️\n\nלא באותו ערב — אלא כשהאדרנלין נגמר ומשאבי אנוש חוזרים לשולחן. הנה מה שהם מספרים לנו 👇\n\n💬 מנהלת משאבי אנוש: \"תיבת המייל שלי הייתה מלאה בתודות, לא בתלונות. פעם ראשונה.\"\n💬 מנהל גיוס: \"שתי התפטרויות שהתכוננתי אליהן לא הגיעו.\"\n💬 סמנכ\"לית משאבי אנוש: \"בפעם אחת לא תיקנתי דברים בשתיים בלילה — זכיתי להיות אורחת באירוע של עצמי.\"\n\nלא על תאורה. על שימור עובדים, סנטימנט והעומס על מי שאחראי. 🎯\n\nזאת התוצאה שאנחנו מתכננים אליה. From business to pleasure. 🥂\n\n📌 שמרו לסקירת משאבי האנוש הבאה שלכם.\n👥 תייגו את צוות משאבי האנוש.\n💬 שלחו לנו הודעה ונתכנן את שלכם.\n\n#אירועים #כנסים #הפקתאירועים #לוגיסטיקה #UproductionEvents",
+    "dimensions": "1:1",
+    "cta": "Link in bio"
+  },
+  "facebook": {
+    "profile": "Uproduction Events (Page)",
+    "text": "פסק הדין האמיתי על אירוע לא מגיע באותו ערב — הוא מגיע שבועיים אחר כך, כשמשאבי אנוש חוזרים לשולחן. 🕰️\n\nאז אנחנו שומעים את המשפטים שחשובים: \"תיבת המייל שלי הייתה מלאה בתודות, לא בתלונות.\" \"שתי התפטרויות שהתכוננתי אליהן לא הגיעו.\" \"בפעם אחת לא תיקנתי דברים בשתיים בלילה — זכיתי להיות אורחת באירוע של עצמי.\" זה לא על תאורה. זה על שימור עובדים, סנטימנט והעומס על מי שאחראי. From business to pleasure.\n\nמה האנשים שלכם אומרים שבועיים אחרי אירוע? כתבו לנו למטה או שלחו הודעה. 👇\n\n#אירועים #כנסים #הפקתאירועים #UproductionEvents",
+    "dimensions": "1.91:1",
+    "cta": "Send us a message"
+  },
+  "image_prompt": "A relaxed HR leader at her desk two weeks after an event, smiling at her laptop in soft daylight, a coffee and a small framed event photo beside her, a calm and satisfied atmosphere in a modern office. Photorealistic, 35mm film grain, no CGI, no text, no logos.",
+  "image_style": "photorealistic, editorial, documentary, 35mm film grain",
+  "brand": {
+    "colors": [
+      "#1C1C1C",
+      "#FBCE0A"
+    ],
+    "font": "Comfortaa",
+    "logo": "uproduction_official_logo.png"
+  }
+}

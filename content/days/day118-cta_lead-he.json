@@ -1,0 +1,36 @@
+{
+  "day": 118,
+  "category": "cta_lead",
+  "language": "he",
+  "date": "2026-08-21",
+  "weekday": "Friday",
+  "theme": "From business to pleasure — without the seams showing",
+  "linkedin": {
+    "profile": "Uproduction Events (Company Page)",
+    "text": "\"From business to pleasure\" קל להדפיס במצגת. החלק הקשה הוא התפר שבאמצע. לרוב האירועים יש אחד כזה: הכנס נגמר, האורות נדלקים, ויש פער מגושם לפני שהחגיגה מתחילה — אוטובוס שמתעכב, שעה לא נוחה, אנרגיה שצונחת ולא ממש מתאוששת. התפר הזה הוא המקום שבו תוכניות מצוינות מאבדות בשקט את האורחים שלהן. כל המקצוע שלנו הוא להסתיר אותו. המעבר מסשן אסטרטגיה לארוחת ערב על הגג צריך להרגיש כחוויה אחת רציפה, לא כשני אירועים שמהדקים זה לזה. אותו צוות, אותו סטנדרט, כל מעבר באחריות אחת — כך שהיום זורם ואף אחד לא רואה את החיבור. רוצים תוכנית ל-2027 בלי תפרים נראים? בואו נדבר. #UproductionEvents #אירועים #כנסים #הפקתאירועים #לוגיסטיקה",
+    "dimensions": "1:1",
+    "cta": "DM us or book a call"
+  },
+  "instagram": {
+    "profile": "@uproductionevents",
+    "text": "\"From business to pleasure.\" ✨\nקל להגיד. קשה לבצע. 👇\n\nהחלק הקשה הוא לא הכנס.\nגם לא הגאלה.\nזה התפר שבאמצע. 🪡\n\nאותו פער מגושם שבו:\n🚌 האוטובוס מתעכב\n😬 האנרגיה צונחת\n⌛ צצה שעה לא נוחה\n📉 והמומנטום מת בשקט\n\nכל המקצוע שלנו הוא להסתיר את התפר הזה. סשן אסטרטגיה ← ארוחה על הגג צריך להרגיש כחוויה אחת, לא שני אירועים מהודקים.\n\nאותו צוות. אותו סטנדרט. כל מעבר באחריות. 🎯\n\n📌 שמרו אם האירוע האחרון שלכם \"צנח\" איפשהו.\n👉 תייגו את השותף שלכם להפקה.\n💬 שלחו לנו הודעה ונעצב תוכנית בלי תפרים נראים.\n\n#UproductionEvents #אירועים #כנסים #הפקתאירועים #לוגיסטיקה #תמרוץ #MICE #LiveEvents",
+    "dimensions": "1:1",
+    "cta": "Link in bio"
+  },
+  "facebook": {
+    "profile": "Uproduction Events (Page)",
+    "text": "\"From business to pleasure\" קל להגיד. החלק הקשה הוא התפר שבאמצע. 🪡\n\nלרוב התוכניות יש אחד כזה: הכנס נגמר, ויש פער מגושם לפני שהחגיגה מתחילה — אוטובוס שמתעכב, שעה לא נוחה, אנרגיה שצונחת ולא מתאוששת. שם אירועים מאבדים את האורחים שלהם. כל המקצוע שלנו הוא להסתיר אותו: אותו צוות, אותו סטנדרט, כל מעבר באחריות, כך שהיום זורם כיחידה אחת.\n\nאיפה האירוע האחרון שלכם איבד מומנטום? 🤔\n\nשלחו לנו הודעה ונעצב אירוע בלי תפרים נראים.\n\n#UproductionEvents #אירועים #כנסים #הפקתאירועים",
+    "dimensions": "1.91:1",
+    "cta": "Send us a message"
+  },
+  "image_prompt": "A seamless transition scene at dusk: in the foreground a wrapped-up conference space with a few people standing, opening through wide doors onto a glowing rooftop dinner terrace, the two spaces flowing into one another under warm light. Photorealistic, 35mm film grain, no CGI, no text, no logos.",
+  "image_style": "photorealistic, editorial, documentary, 35mm film grain",
+  "brand": {
+    "colors": [
+      "#1C1C1C",
+      "#FBCE0A"
+    ],
+    "font": "Comfortaa",
+    "logo": "uproduction_official_logo.png"
+  }
+}

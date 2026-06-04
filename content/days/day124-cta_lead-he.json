@@ -1,0 +1,36 @@
+{
+  "day": 124,
+  "category": "cta_lead",
+  "language": "he",
+  "date": "2026-08-27",
+  "weekday": "Thursday",
+  "theme": "Book the call. We'll handle the impossible.",
+  "linkedin": {
+    "profile": "Uproduction Events (Company Page)",
+    "text": "\"אי אפשר לעשות את זה בלוח הזמנים הזה.\" \"האולם הזה לא יאשר את זה.\" \"לעולם לא תזיזו כל כך הרבה אנשים דרך שדה תעופה אחד.\" שמענו את כל השלוש השנה. וביצענו את כל השלוש בכל זאת. אחרי יותר מ-200 אירועים ביותר מ-120 מדינות מאז 2010, למדנו ש\"בלתי אפשרי\" בדרך כלל אומר \"עוד אף אחד לא תכנן את זה מספיק בקפידה\". האישורים קיימים. שרשרת הלוגיסטיקה קיימת. תוכנית החירום קיימת. מישהו פשוט צריך להיות אחראי על כל חוליה — וזאת העבודה. אז תביאו לנו את הבריף שלא נותן לכם לישון: התאריך שאי אפשר להזיז, המיקום המרוחק, מספר המשתתפים שמפחיד את המתכנן הנוכחי שלכם. קבעו שיחה. אנחנו נטפל בבלתי אפשרי. From business to pleasure. בואו נדבר. #UproductionEvents #אירועים #כנסים #הפקתאירועים #לוגיסטיקה",
+    "dimensions": "1:1",
+    "cta": "DM us or book a call"
+  },
+  "instagram": {
+    "profile": "@uproductionevents",
+    "text": "\"אי אפשר לעשות את זה.\" 🙅\n\nשמענו את זה מאה פעמים. ביצענו את זה מאה פעמים. 💪\n\nהסוד השקט שלנו 👇\n🗺️ \"בלתי אפשרי\" בדרך כלל אומר \"עוד לא תוכנן מספיק בקפידה\"\n📋 האישורים קיימים\n🔗 שרשרת הלוגיסטיקה קיימת\n🛟 תוכנית החירום קיימת\n👤 מישהו פשוט צריך להיות אחראי על כל חוליה\n\nיותר מ-200 אירועים. יותר מ-120 מדינות. מאז 2010.\n\nתביאו לנו את הבריף שמפחיד את המתכנן הנוכחי שלכם. התאריך שאי אפשר להזיז. המיקום המרוחק. מספר המשתתפים שאף אחד אחר לא מוכן לגעת בו. From business to pleasure. 🥂\n\n📌 שמרו לרעיון הכי נועז שלכם ל-2026.\n👥 תייגו את מי שתמיד אומר \"אי אפשר\".\n💬 שלחו לנו הודעה. אנחנו נטפל בבלתי אפשרי.\n\n#אירועים #כנסים #הפקתאירועים #לוגיסטיקה #UproductionEvents",
+    "dimensions": "1:1",
+    "cta": "Link in bio"
+  },
+  "facebook": {
+    "profile": "Uproduction Events (Page)",
+    "text": "\"אי אפשר לעשות את זה בלוח הזמנים הזה.\" שמענו את זה כל השנה — וביצענו בכל זאת. 💪\n\nאחרי יותר מ-200 אירועים ביותר מ-120 מדינות מאז 2010, למדנו ש\"בלתי אפשרי\" בדרך כלל פשוט אומר \"עוד אף אחד לא תכנן את זה מספיק בקפידה\". האישורים קיימים. הלוגיסטיקה קיימת. מישהו פשוט צריך להיות אחראי על כל חוליה בשרשרת — וזאת העבודה שלנו. From business to pleasure.\n\nמהו בריף האירוע שלא נותן לכם לישון עכשיו? כתבו אותו למטה, או שלחו הודעה ונפתור אותו. 👇\n\n#אירועים #כנסים #הפקתאירועים #UproductionEvents",
+    "dimensions": "1.91:1",
+    "cta": "Send us a message"
+  },
+  "image_prompt": "A confident event producer standing in an empty cavernous venue mid-build, clipboard in hand, looking up at half-rigged truss and lighting, golden work-lights cutting through the dust, a sense of calm command before the build comes together. Photorealistic, 35mm film grain, no CGI, no text, no logos.",
+  "image_style": "photorealistic, editorial, documentary, 35mm film grain",
+  "brand": {
+    "colors": [
+      "#1C1C1C",
+      "#FBCE0A"
+    ],
+    "font": "Comfortaa",
+    "logo": "uproduction_official_logo.png"
+  }
+}

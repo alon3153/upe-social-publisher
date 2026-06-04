@@ -1,0 +1,36 @@
+{
+  "day": 112,
+  "category": "cta_lead",
+  "language": "en",
+  "date": "2026-08-15",
+  "weekday": "Saturday",
+  "theme": "Stop comparing quotes. Start comparing outcomes.",
+  "linkedin": {
+    "profile": "Uproduction Events (Company Page)",
+    "text": "The cheapest quote is almost never the cheapest event.\n\nA line-item comparison tells you what a vendor will charge. It tells you nothing about what your guests will feel, whether the transfers will actually run on time, or who picks up the phone at 2am when a flight gets cancelled. Those gaps don't show up in a spreadsheet — they show up on the night.\n\nWe'd rather you compare outcomes: satisfaction scores, on-time execution, the renewals that follow a great year. That's the math that protects your budget over 15+ years and 120+ countries of doing this.\n\nGot competing proposals on your desk? Send them over. We'll show you what each one is really buying. DM us or book a call.\n\n#CorporateEvents #IncentiveTravel #EventProduction",
+    "dimensions": "1:1",
+    "cta": "DM us or book a call"
+  },
+  "instagram": {
+    "profile": "@uproductionevents",
+    "text": "The cheapest quote is rarely the cheapest event. 💸\n\nA spreadsheet shows you the price.\nIt hides everything that actually matters. 👇\n\n❓ Will transfers run on time?\n❓ Who answers at 2am when a flight drops?\n❓ How will guests actually feel?\n❓ Will they want to come back next year?\n\nThose answers don't fit in a cell. They show up on the night.\n\nCompare outcomes, not line items. 🎯\n\n📌 Save this before your next vendor review.\n👉 Tag whoever's collecting quotes right now.\n💬 DM us your proposals — we'll show you what each one really buys.\n\n#CorporateEvents #IncentiveTravel #EventProduction #EventProfs #EventPlanning #B2BEvents #CorporateTravel #ROI #MICE #Uproduction #EventPlanner #ProcurementTips",
+    "dimensions": "1:1",
+    "cta": "Link in bio"
+  },
+  "facebook": {
+    "profile": "Uproduction Events (Page)",
+    "text": "The cheapest quote and the cheapest event are rarely the same thing. 💸\n\nA line-item comparison tells you the price — not whether transfers run on time, who answers at 2am, or how your guests feel walking out. Those things never fit in a spreadsheet, but they decide whether your event was worth it. We'd rather you compared outcomes: satisfaction, execution, renewals.\n\nWhat's the one thing a quote never tells you? 🤔\n\nSend us a message and we'll walk through it.\n\n#CorporateEvents #IncentiveTravel #EventProduction #ROI",
+    "dimensions": "1.91:1",
+    "cta": "Send us a message"
+  },
+  "image_prompt": "A clean executive desk at dusk, two printed event proposals side by side under a warm desk lamp, a person's hands resting between them mid-decision, a coffee cup and a city window blurred behind. Photorealistic, 35mm film grain, no CGI, no text, no logos.",
+  "image_style": "photorealistic, editorial, documentary, 35mm film grain",
+  "brand": {
+    "colors": [
+      "#1C1C1C",
+      "#FBCE0A"
+    ],
+    "font": "Comfortaa",
+    "logo": "uproduction_official_logo.png"
+  }
+}

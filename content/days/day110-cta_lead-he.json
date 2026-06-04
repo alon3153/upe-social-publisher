@@ -1,0 +1,36 @@
+{
+  "day": 110,
+  "category": "cta_lead",
+  "language": "he",
+  "date": "2026-08-13",
+  "weekday": "Thursday",
+  "theme": "Tell us the feeling. We'll build the event.",
+  "linkedin": {
+    "profile": "Uproduction Events (Company Page)",
+    "text": "רוב הבריפים מתחילים מאולם, ממספר משתתפים, מתקציב. הטובים ביותר מתחילים מתחושה.\n\n\"אני רוצה שייכנסו וירגישו שהחברה סוף סוף רואה אותם.\" \"אני רוצה שהחדר ישתתק, ואז יתפוצץ.\" \"אני רוצה שעוד ידברו על זה בכינוס של השנה הבאה.\" זה הבריף האמיתי — כל השאר זה רק איך מגיעים לשם.\n\nככה אנחנו אוהבים לעבוד. תגידו לנו את הרגש שאתם רוצים שהאנשים שלכם ייצאו איתו, ואנחנו נהנדס אותו אחורה לקונספט: היעד שנושא אותו, הרגע שמספק אותו, ההפקה שגורמת לו לנחות. בלי תבנית, בלי מופע ממוחזר — בנוי מהחזון שלכם החוצה.\n\nאתם לא צריכים תוכנית גמורה כדי לדבר איתנו. אתם צריכים רק את התחושה. תגידו לנו את שלכם, ונבנה את האירוע סביבה. בואו נדבר.\n\n#UproductionEvents #אירועים #כנסים #הפקתאירועים #לוגיסטיקה",
+    "dimensions": "1:1",
+    "cta": "DM us or book a call"
+  },
+  "instagram": {
+    "profile": "@uproductionevents",
+    "text": "רוב הבריפים מתחילים מאולם. הטובים ביותר מתחילים מתחושה. ✨\n\nתגידו לנו את הרגש 👇\n💛 \"אני רוצה שירגישו שסוף סוף רואים אותם.\"\n🤫 \"אני רוצה שהחדר ישתתק, ואז יתפוצץ.\"\n🗣️ \"אני רוצה שעוד ידברו על זה בשנה הבאה.\"\n\nזה הבריף האמיתי. כל השאר זה רק איך מגיעים לשם. 🎯\n\nאנחנו מהנדסים את התחושה אחורה לקונספט:\n🌍 היעד שנושא אותה\n🎬 הרגע שמספק אותה\n🔧 ההפקה שגורמת לה לנחות\n\nבלי תבנית. בלי מופע ממוחזר. מהחזון שלכם החוצה. 🙌\n\nלא צריך תוכנית גמורה כדי לדבר איתנו — רק את התחושה.\n\n📌 שמרו את זה לחזון האירוע הבא.\n👥 תייגו את מי שחולם את הדברים האלה בעבודה.\n💬 שלחו לנו DM עם התחושה. אנחנו נבנה את האירוע.\n\n#CorporateEvents #IncentiveTravel #EventDesign #אירועים #כנסים #הפקתאירועים #לוגיסטיקה #UproductionEvents",
+    "dimensions": "1:1",
+    "cta": "Link in bio"
+  },
+  "facebook": {
+    "profile": "Uproduction Events (Page)",
+    "text": "רוב הבריפים מתחילים מאולם, ממספר משתתפים, מתקציב. הטובים ביותר מתחילים מתחושה. ✨\n\n\"אני רוצה שייכנסו וירגישו שהחברה סוף סוף רואה אותם.\" \"אני רוצה שהחדר ישתתק, ואז יתפוצץ.\" זה הבריף האמיתי — כל השאר זה רק איך מגיעים לשם. אנחנו מהנדסים את הרגש אחורה לקונספט: היעד שנושא אותו, הרגע שמספק אותו, ההפקה שגורמת לו לנחות. בלי תבנית, בלי מופע ממוחזר.\n\nאם הייתם יכולים לעצב תחושה אחת לאירוע הבא — מה היא הייתה? ספרו לנו למטה, או שלחו הודעה ונבנה את האירוע סביבה. 👇\n\n#CorporateEvents #IncentiveTravel #EventDesign #אירועים",
+    "dimensions": "1.91:1",
+    "cta": "Send us a message"
+  },
+  "image_prompt": "A wide candid shot of corporate guests reacting with genuine joy and surprise at a reveal moment during an event, faces lit by warm stage light, some standing and applauding, raw emotional energy in the room, atmospheric haze. Photorealistic, 35mm film grain, no CGI, no text, no logos.",
+  "image_style": "photorealistic, editorial, documentary, 35mm film grain",
+  "brand": {
+    "colors": [
+      "#1C1C1C",
+      "#FBCE0A"
+    ],
+    "font": "Comfortaa",
+    "logo": "uproduction_official_logo.png"
+  }
+}

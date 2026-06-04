@@ -1,0 +1,36 @@
+{
+  "day": 123,
+  "category": "case_study",
+  "language": "he",
+  "date": "2026-08-26",
+  "weekday": "Wednesday",
+  "theme": "5 countries, 1 week, 1 accountable team",
+  "linkedin": {
+    "profile": "Uproduction Events (Company Page)",
+    "text": "חמש מדינות. חמש חוויות מותג זהות. שישה ימים. צוות אחד שהיה אחראי על הכול. הבריף היה רואד-שואו מוצר שהיה צריך להרגיש בדיוק אותו דבר במדריד, מילאנו, פרנקפורט, אמסטרדם ופריז — אותה במה, אותה תאורה, אותו לוח זמנים — בזמן שכל עיר הביאה חוקי אולם, מכס, ספקים ושפה משלה. הפעלנו את זה כמערך אחד נע: צוות סיורים אחד, 5 אולמות שאובטחו, 14 טון ציוד שעברו מכס בין גבולות, 2,300 אורחים שאירחנו, וחלון החלפת סט של פחות מ-15 דקות שנשמר בכל עיר. אפס ימים שאבדו. התוצאה: אימפקט מותגי עקבי בחמישה שווקים, ולקוח שהפסיק לתמרן בין חמש סוכנויות מקומיות. זה הערך של צוות אחד אחראי. From business to pleasure. מתכננים השקה רב-שוקית ל-2026? בואו נדבר. #UproductionEvents #אירועים #כנסים #הפקתאירועים #לוגיסטיקה",
+    "dimensions": "1:1",
+    "cta": "DM us or book a call"
+  },
+  "instagram": {
+    "profile": "@uproductionevents",
+    "text": "5 מדינות. שבוע אחד. צוות אחד שהיה אחראי על הכול. 🌍\n\nהבריף: רואד-שואו שמרגיש זהה במדריד, מילאנו, פרנקפורט, אמסטרדם ופריז. חמש ערים, חמישה סטים של חוקים, אפס מקום לסטייה.\n\nהנה מה שהחזקנו ביחד 👇\n🚚 צוות סיורים אחד בכל 5 הערים\n📦 14 טון ציוד שעברו מכס בין גבולות\n👥 2,300 אורחים שאירחנו\n⏱️ החלפת סט בפחות מ-15 דקות בכל אולם\n✅ אפס ימים שאבדו\n\nאותו מותג. אותו קסם. חמישה שווקים. From business to pleasure. 🥂\n\n📌 שמרו להשקה הרב-שוקית הבאה שלכם.\n👥 תייגו את מי שמתמרן בין סוכנויות מקומיות.\n💬 שלחו לנו הודעה ונמפה את זה.\n\n#אירועים #כנסים #הפקתאירועים #לוגיסטיקה #UproductionEvents",
+    "dimensions": "1:1",
+    "cta": "Link in bio"
+  },
+  "facebook": {
+    "profile": "Uproduction Events (Page)",
+    "text": "חמש מדינות, שבוע אחד, צוות אחד שהיה אחראי על כל פרט. 🌍\n\nהבריף היה רואד-שואו מוצר שהיה צריך להרגיש זהה במדריד, מילאנו, פרנקפורט, אמסטרדם ופריז. הפעלנו את זה כמערך אחד נע: צוות סיורים אחד, 14 טון ציוד שעברו מכס בין גבולות, 2,300 אורחים שאירחנו, וחלון החלפת סט של פחות מ-15 דקות בכל עיר. אפס ימים שאבדו. הלקוח הפסיק לתמרן בין חמש סוכנויות מקומיות. From business to pleasure.\n\nניסיתם פעם לשמור על מותג עקבי בכמה שווקים? איך הלך? כתבו לנו למטה או שלחו הודעה. 👇\n\n#אירועים #כנסים #הפקתאירועים #UproductionEvents",
+    "dimensions": "1.91:1",
+    "cta": "Send us a message"
+  },
+  "image_prompt": "A touring event crew loading flight cases and staging kit from a branded truck into a European convention venue at early dawn, breath visible in cool air, forklifts and cabling in motion, a sense of disciplined logistics under soft blue morning light. Photorealistic, 35mm film grain, no CGI, no text, no logos.",
+  "image_style": "photorealistic, editorial, documentary, 35mm film grain",
+  "brand": {
+    "colors": [
+      "#1C1C1C",
+      "#FBCE0A"
+    ],
+    "font": "Comfortaa",
+    "logo": "uproduction_official_logo.png"
+  }
+}

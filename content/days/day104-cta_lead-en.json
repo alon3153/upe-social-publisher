@@ -1,0 +1,36 @@
+{
+  "day": 104,
+  "category": "cta_lead",
+  "language": "en",
+  "date": "2026-08-07",
+  "weekday": "Friday",
+  "theme": "One brief. One team. Zero handoff chaos.",
+  "linkedin": {
+    "profile": "Uproduction Events (Company Page)",
+    "text": "Count the seams in a typical corporate event: a travel agency, a DMC, a production house, an AV supplier, a branding studio, a registration tool. Six vendors, six contracts, six versions of \"that's not our part.\"\n\nEvery handoff is a place where information gets lost and accountability goes quiet. When something slips at 11pm, you're the one stitching it back together.\n\nWe built Uproduction to delete those seams. One brief, one team, one number to call — concept, destination, logistics, branding, registration, and on-site execution under a single roof. When everything is owned by the same people, nothing falls into the gaps, because there are no gaps.\n\nIf you're tired of being the integration layer between your own vendors, that's exactly the problem we solve. DM us or book a call.\n\n#CorporateEvents #EventProduction #IncentiveTravel #EventProfs #MICE",
+    "dimensions": "1:1",
+    "cta": "DM us or book a call"
+  },
+  "instagram": {
+    "profile": "@uproductionevents",
+    "text": "Six vendors. Six contracts. Six versions of \"that's not our part.\" 🫠\n\nThe hidden cost of juggling suppliers:\n🧩 Info lost at every handoff\n📞 No single number when it breaks at 11pm\n😵‍💫 You become the glue holding it all together\n\nWe built Uproduction to delete the seams:\n✅ One brief\n✅ One team\n✅ One number to call\n✅ Concept → logistics → branding → on-site, under one roof\n\nWhen the same people own everything, nothing falls into the gaps — because there are no gaps. 🙌\n\n📌 Save this for the next time vendor coordination eats your week.\n👥 Tag the colleague stuck being the \"integration layer.\"\n💬 DM us and let's make your next event seamless.\n\n#CorporateEvents #EventProduction #IncentiveTravel #EventPlanner #EventProfs #OneTeam #B2BEvents #MICE #UproductionEvents #EventManagement #CorporateTravel",
+    "dimensions": "1:1",
+    "cta": "Link in bio"
+  },
+  "facebook": {
+    "profile": "Uproduction Events (Page)",
+    "text": "Ever count the seams in a typical event? 🧩\n\nA travel agency, a DMC, a production house, an AV crew, a branding studio, a registration tool — six vendors, six contracts, six versions of \"that's not our part.\" Every handoff is somewhere info gets lost, and when something slips at 11pm, you're the one stitching it back together.\n\nWe built Uproduction to delete those seams: one brief, one team, one number to call, everything under a single roof.\n\nHow many vendors are you juggling for your next event? Tell us below, or send us a message and let's simplify it. 👇\n\n#CorporateEvents #EventProduction #IncentiveTravel #EventProfs",
+    "dimensions": "1.91:1",
+    "cta": "Send us a message"
+  },
+  "image_prompt": "A single calm event director standing in the centre of a busy backstage area, headset on, clipboard in hand, crew and gear flowing around in soft motion blur while the director stays in sharp focus, conveying one person owning the whole operation. Photorealistic, 35mm film grain, no CGI, no text, no logos.",
+  "image_style": "photorealistic, editorial, documentary, 35mm film grain",
+  "brand": {
+    "colors": [
+      "#1C1C1C",
+      "#FBCE0A"
+    ],
+    "font": "Comfortaa",
+    "logo": "uproduction_official_logo.png"
+  }
+}

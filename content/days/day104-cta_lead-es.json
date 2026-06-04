@@ -1,0 +1,36 @@
+{
+  "day": 104,
+  "category": "cta_lead",
+  "language": "es",
+  "date": "2026-08-07",
+  "weekday": "Friday",
+  "theme": "One brief. One team. Zero handoff chaos.",
+  "linkedin": {
+    "profile": "Uproduction Events (Company Page)",
+    "text": "Cuenta las costuras de un evento corporativo típico: una agencia de viajes, una DMC, una productora, un proveedor de AV, un estudio de branding, una herramienta de inscripciones. Seis proveedores, seis contratos, seis versiones de \"eso no es lo nuestro\".\n\nCada traspaso es un punto donde se pierde información y la responsabilidad se calla. Y cuando algo falla a las 11 de la noche, eres tú quien lo recompone.\n\nEn Uproduction (UPE) creamos la compañía para eliminar esas costuras. Un brief, un equipo, un solo número: concepto, destino, logística, branding, inscripciones y ejecución in situ bajo un mismo techo. Cuando todo lo gestionan las mismas personas, nada cae en los huecos, porque no hay huecos.\n\nSi estás cansado de ser la capa de integración entre tus propios proveedores, ese es justo el problema que resolvemos. From business to pleasure.\n\n#UproductionEvents #CorporateEvents #EventProduction #EventosCorporativos #ViajesDeIncentivo #Congresos",
+    "dimensions": "1:1",
+    "cta": "DM us or book a call"
+  },
+  "instagram": {
+    "profile": "@uproductionevents",
+    "text": "Seis proveedores. Seis contratos. Seis versiones de \"eso no es lo nuestro\". 🫠\n\nEl coste oculto de hacer malabares con proveedores:\n🧩 Info perdida en cada traspaso\n📞 Ni un solo número cuando se rompe a las 11 de la noche\n😵‍💫 Acabas siendo el pegamento que lo sostiene todo\n\nCreamos Uproduction (UPE) para eliminar las costuras:\n✅ Un brief\n✅ Un equipo\n✅ Un solo número\n✅ Concepto → logística → branding → in situ, bajo un mismo techo\n\nCuando las mismas personas lo gestionan todo, nada cae en los huecos, porque no hay huecos. 🙌\n\n📌 Guarda esto para la próxima vez que coordinar proveedores te coma la semana.\n👥 Etiqueta a quien está atrapado siendo la \"capa de integración\".\n💬 Mándanos un DM y hagamos tu próximo evento sin fisuras.\n\n#CorporateEvents #EventProduction #IncentiveTravel #EventosCorporativos #EventProfs #ViajesDeIncentivo #B2BEvents #MICE #UproductionEvents #Congresos #EventManagement",
+    "dimensions": "1:1",
+    "cta": "Link in bio"
+  },
+  "facebook": {
+    "profile": "Uproduction Events (Page)",
+    "text": "¿Has contado alguna vez las costuras de un evento típico? 🧩\n\nUna agencia de viajes, una DMC, una productora, un equipo de AV, un estudio de branding, una herramienta de inscripciones: seis proveedores, seis contratos, seis versiones de \"eso no es lo nuestro\". Cada traspaso es donde se pierde información, y cuando algo falla a las 11 de la noche, eres tú quien lo recompone.\n\nEn Uproduction (UPE) eliminamos esas costuras: un brief, un equipo, un solo número, todo bajo un mismo techo.\n\n¿Con cuántos proveedores haces malabares para tu próximo evento? Cuéntanos abajo o mándanos un mensaje y lo simplificamos. 👇\n\n#CorporateEvents #EventProduction #IncentiveTravel #EventosCorporativos",
+    "dimensions": "1.91:1",
+    "cta": "Send us a message"
+  },
+  "image_prompt": "A single calm event director standing in the centre of a busy backstage area, headset on, clipboard in hand, crew and gear flowing around in soft motion blur while the director stays in sharp focus, conveying one person owning the whole operation. Photorealistic, 35mm film grain, no CGI, no text, no logos.",
+  "image_style": "photorealistic, editorial, documentary, 35mm film grain",
+  "brand": {
+    "colors": [
+      "#1C1C1C",
+      "#FBCE0A"
+    ],
+    "font": "Comfortaa",
+    "logo": "uproduction_official_logo.png"
+  }
+}
