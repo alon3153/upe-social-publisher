@@ -100,6 +100,13 @@ def pick_next_day():
     published = set()
     for acc in ["uproductionevents", "uproduction_spain", "ig_uproductionevents", "ig_uproduction_spain"]:
         published |= set(get_published_days(state, acc))
+    # Supabase is the real source of truth — the cloud publisher marks rows
+    # published there but never writes back to state.json. Without this union,
+    # pick_next_day reads the frozen state.json and re-enqueues the same day forever.
+    try:
+        published |= queue.published_days()
+    except Exception as e:
+        print(f"warn: could not read published_days from Supabase: {e}")
     today = datetime.date.today().isoformat()
     for day in range(1, 101):
         if not glob.glob(os.path.join(ROOT, "content", "days", f"*day{day}-*.json")):
