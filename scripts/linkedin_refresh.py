@@ -46,18 +46,35 @@ def main():
     if "--seed" in sys.argv:
         return seed()
     row = queue.get_oauth("linkedin")
-    if not row or not row.get("refresh_token"):
-        print("no refresh_token stored — cannot auto-refresh (provide one + --seed)"); return 1
+    if not row:
+        print("no linkedin token stored at all — run --seed first"); return 1
+
+    # Days left on the current access token (if known).
     exp = row.get("expires_at")
+    left = None
     if exp:
         try:
             left = (datetime.datetime.fromisoformat(exp.replace("Z", "+00:00")) -
                     datetime.datetime.now(datetime.timezone.utc)).total_seconds() / 86400
             print(f"days_left={left:.1f}")
-            if left > BEFORE_DAYS:
-                print("token still fresh; no refresh needed"); return 0
         except Exception:
             pass
+
+    if not row.get("refresh_token"):
+        # No refresh_token => cannot auto-refresh. Only a problem once the access
+        # token is actually expiring. While it's still fresh, succeed quietly so
+        # the daily job doesn't spam false failures.
+        if left is None or left > BEFORE_DAYS:
+            print("no refresh_token, but access token still fresh — nothing to do "
+                  "(re-auth with offline_access scope to enable auto-refresh)")
+            return 0
+        print(f"ACTION NEEDED: LinkedIn access token expires in {left:.1f}d and no "
+              "refresh_token is stored. Re-authorize the app (offline_access scope) "
+              "and run --seed with the new tokens.")
+        return 1
+
+    if left is not None and left > BEFORE_DAYS:
+        print("token still fresh; no refresh needed"); return 0
     try:
         t = _exchange(row["refresh_token"])
     except urllib.error.HTTPError as e:

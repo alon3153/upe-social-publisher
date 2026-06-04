@@ -39,6 +39,13 @@ def list_approved_unpublished():
                 params={"select": "*", "status": "eq.approved", "order": "day.asc"})
 
 
+def published_days():
+    """Days with at least one already-published row — the real source of truth
+    for rotation (state.json is NOT updated by the cloud publisher)."""
+    rows = _req("GET", "post_approvals", params={"select": "day", "status": "eq.published"})
+    return {int(r["day"]) for r in rows if r.get("day") is not None}
+
+
 def mark(id_, **fields):
     return _req("PATCH", "post_approvals", params={"id": f"eq.{id_}"},
                 body=fields, prefer="return=minimal")
