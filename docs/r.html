@@ -36,10 +36,12 @@
     err: ['⚠️','שגיאה','הקישור אינו תקין או פג תוקף.','#e0a23d']
   };
   var m = map[s] || map.ok;
-  document.getElementById('icon').textContent = m[0];
-  document.getElementById('title').textContent = m[1];
-  document.getElementById('msg').textContent = m[2];
-  card.style.borderTopColor = m[3];
+  // Custom override: t=title, m=message, i=icon, c=color (plain text, XSS-safe via textContent)
+  var ct = q.get('t'), cm = q.get('m'), ci = q.get('i'), cc = q.get('c');
+  document.getElementById('icon').textContent = ci || m[0];
+  document.getElementById('title').textContent = ct || m[1];
+  document.getElementById('msg').textContent = cm || m[2];
+  card.style.borderTopColor = cc || m[3];
 </script>
 </body>
 </html>
