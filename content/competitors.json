@@ -1,0 +1,45 @@
+{
+  "_comment": "Competitor accounts to monitor. Edit this list to add/remove. fb_page_id can be found by visiting facebook.com/<handle>/about and copying the Page ID. ig_handle is the @username without the @ — IG Business Discovery API requires the target to be a Business/Creator account (most event companies are).",
+  "competitors": [
+    {
+      "name": "Diesenhaus Unitours",
+      "fb_page_id": "",
+      "fb_handle": "Diesenhaus.Unitours",
+      "ig_handle": "diesenhaus_unitours",
+      "country": "IL",
+      "category": "incentive_travel"
+    },
+    {
+      "name": "Ortra",
+      "fb_page_id": "",
+      "fb_handle": "ortraltd",
+      "ig_handle": "ortra_events",
+      "country": "IL",
+      "category": "conferences"
+    },
+    {
+      "name": "Kenes Group",
+      "fb_page_id": "",
+      "fb_handle": "KenesGroup",
+      "ig_handle": "kenesgroup",
+      "country": "Global",
+      "category": "conferences"
+    },
+    {
+      "name": "Issta Travel",
+      "fb_page_id": "",
+      "fb_handle": "ISSTA.IL",
+      "ig_handle": "issta_travel",
+      "country": "IL",
+      "category": "incentive_travel"
+    },
+    {
+      "name": "Carmel Forest",
+      "fb_page_id": "",
+      "fb_handle": "carmelforestil",
+      "ig_handle": "carmelforest_resort",
+      "country": "IL",
+      "category": "retreats"
+    }
+  ]
+}
