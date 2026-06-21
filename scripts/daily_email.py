@@ -110,7 +110,7 @@ def pick_next_day():
     except Exception as e:
         print(f"warn: could not read published_days from Supabase: {e}")
     today = datetime.date.today().isoformat()
-    for day in range(1, 101):
+    for day in range(1, 131):
         if not glob.glob(os.path.join(ROOT, "content", "days", f"*day{day}-*.json")):
             continue
         if day in published:
