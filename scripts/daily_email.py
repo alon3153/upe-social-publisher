@@ -22,7 +22,9 @@ ACCOUNTS = [
     ("facebook",  "uproduction_spain", "facebook",  "es"),
     ("instagram", "ig_uproductionevents", "instagram", "en"),
     ("instagram", "ig_uproduction_spain", "instagram", "es"),
-    ("linkedin",  "alon3153", "linkedin", "en"),
+    ("linkedin",  "alon3153",    "linkedin", "en"),  # English company page (default org)
+    ("linkedin",  "li_personal", "linkedin", "he"),  # Alon's personal profile (HE)
+    ("linkedin",  "li_spain",    "linkedin", "es"),  # Uproduction Spain company page (ES)
 ]
 NET_HE = {"facebook": "Facebook", "instagram": "Instagram", "linkedin": "LinkedIn", "tiktok": "TikTok"}
 HASHTAGS = {

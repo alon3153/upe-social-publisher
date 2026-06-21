@@ -52,9 +52,13 @@ def member_urn(token=None):
     return f"urn:li:person:{sub}"
 
 
-def _author(token=None):
-    """Company-page org URN if configured, else the personal member URN."""
-    org = os.environ.get("LINKEDIN_ORG_URN")
+def _author(token=None, org_urn=None):
+    """Explicit org URN if given, else the configured default org
+    (LINKEDIN_ORG_URN), else the personal member URN. Pass the sentinel
+    "__member__" to force the personal profile even when a default org is set."""
+    if org_urn == "__member__":
+        return member_urn(token)
+    org = org_urn or os.environ.get("LINKEDIN_ORG_URN")
     if org:
         return org
     return member_urn(token)
@@ -79,12 +83,13 @@ def _upload_image(token, owner, image_url):
     return asset
 
 
-def publish_post(text, image_url=None, token=None):
-    """Publish to the company page (if LINKEDIN_ORG_URN set) or the member's
-    profile. Returns dict like other publishers."""
+def publish_post(text, image_url=None, token=None, org_urn=None):
+    """Publish to an explicit org page (org_urn), the default company page
+    (LINKEDIN_ORG_URN), or the member's profile. Returns dict like other
+    publishers."""
     try:
         token = token or _token()
-        owner = _author(token)
+        owner = _author(token, org_urn)
         media_cat = "NONE"
         media = []
         if image_url:

@@ -23,7 +23,18 @@ def publish_row(r):
         return instagram.publish_post(ig_key, text, url)
     if net == "linkedin":
         url = r.get("image_url") or find_image_url(day)
-        return linkedin.publish_post(text, url)
+        # Route by account to one of 3 destinations:
+        #   li_personal  -> Alon's personal profile (HE)
+        #   *spain*      -> Uproduction Spain company page (ES)
+        #   else         -> English company page (LINKEDIN_ORG_URN); incl. legacy "alon3153"
+        acc = (account or "").lower()
+        if acc in ("li_personal", "personal"):
+            org_urn = "__member__"
+        elif "spain" in acc:
+            org_urn = os.environ.get("LINKEDIN_ORG_URN_SPAIN")
+        else:
+            org_urn = os.environ.get("LINKEDIN_ORG_URN")
+        return linkedin.publish_post(text, url, org_urn=org_urn)
     # tiktok: pending app audit
     return {"success": False, "error": f"{net} publisher not configured yet"}
 
