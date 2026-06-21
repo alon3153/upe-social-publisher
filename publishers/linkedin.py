@@ -1,4 +1,10 @@
-"""LinkedIn personal-profile publisher (w_member_social, UGC Posts API)."""
+"""LinkedIn publisher (UGC Posts API).
+
+Posts to the **company page** when LINKEDIN_ORG_URN is set (e.g.
+urn:li:organization:12345) — requires a token with w_organization_social.
+Otherwise falls back to the authorizing member's personal profile
+(w_member_social). Run scripts/linkedin_org_oauth.py to obtain the org token+URN.
+"""
 import os, json, urllib.request, urllib.error
 
 API = "https://api.linkedin.com"
@@ -46,6 +52,14 @@ def member_urn(token=None):
     return f"urn:li:person:{sub}"
 
 
+def _author(token=None):
+    """Company-page org URN if configured, else the personal member URN."""
+    org = os.environ.get("LINKEDIN_ORG_URN")
+    if org:
+        return org
+    return member_urn(token)
+
+
 def _upload_image(token, owner, image_url):
     # 1) register upload
     reg = {"registerUploadRequest": {
@@ -66,10 +80,11 @@ def _upload_image(token, owner, image_url):
 
 
 def publish_post(text, image_url=None, token=None):
-    """Publish to the authorizing member's profile. Returns dict like other publishers."""
+    """Publish to the company page (if LINKEDIN_ORG_URN set) or the member's
+    profile. Returns dict like other publishers."""
     try:
         token = token or _token()
-        owner = member_urn(token)
+        owner = _author(token)
         media_cat = "NONE"
         media = []
         if image_url:
