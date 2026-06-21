@@ -51,8 +51,12 @@ def email(subject, html):
 def reauth_html(reason):
     return ("<html dir=\"rtl\" lang=\"he\"><body style=\"font-family:Arial;direction:rtl;text-align:right;\">"
             f"<h2 style=\"color:#e0533d;\">⚠️ טוקן LinkedIn דורש חידוש</h2>"
-            f"<p>{reason}</p><p>לחדש: linkedin.com/developers ← האפליקציה ← Auth ← OAuth 2.0 tools ← Create token "
-            "(scopes: openid, profile, w_member_social) ← העתק ושלח ל-UPE.</p>"
+            f"<p>{reason}</p>"
+            "<p>הטוקן הזה מפרסם לעמוד החברה (אנגלי + ספרד) ולפרופיל האישי. "
+            "כדי לחדש — תגיד ל-UPE \"חדש את טוקן הלינקדאין\" ואני מריץ את ה-OAuth דרך הדפדפן המחובר "
+            "(app <b>78nrl43hscor4q</b>, scopes: w_organization_social r_organization_social "
+            "rw_organization_admin w_member_social) ומעדכן את ה-secret <b>LINKEDIN_ACCESS_TOKEN</b> אוטומטית. "
+            "לוקח דקה.</p>"
             "<p style=\"color:#FBCE0A;\"><b>uproduction</b> from business to pleasure</p></body></html>")
 
 

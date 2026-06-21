@@ -28,4 +28,5 @@ jobs:
           RESEND_API_KEY:          ${{ secrets.RESEND_API_KEY }}
           RESEND_FROM:             ${{ secrets.RESEND_FROM }}
           APPROVAL_TO:             ${{ secrets.APPROVAL_TO }}
+          EXPIRY_WARN_DAYS:        "14"
         run: python3 scripts/linkedin_token_check.py
