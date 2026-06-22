@@ -1,0 +1,30 @@
+{
+  "day": 133,
+  "category": "behind_the_scenes",
+  "language": "he",
+  "date": "",
+  "weekday": "",
+  "theme": "The Invisible Army: Event Setup Before Dawn",
+  "linkedin": {
+    "profile": "Uproduction Events (Company Page)",
+    "text": "יש שתי גרסאות לכל אירוע גדול: מה שהלקוח רואה, ומה שמאפשר את זה לקרות. הגרסה הראשונה — חלקה, מרשימה, בדיוק כמו שתוכננה. הגרסה השנייה מתחילה בשעות הקטנות של הלילה, עם צוותים, צ'קליסטים ותרחישי חירום שאף אחד באולם לא יידע עליהם. אחרי 16 שנה ויותר מ-1,500 אירועים ב-130+ יעדים, אנחנו יודעים שהמצוינות התפעולית היא לא פחות חשובה מהחזון היצירתי. אם אתם מנהלי HR, שיווק או מכירות שמתכננים אירוע או טיול תמריץ — שמח לשתף אתכם בצד שרואים פחות. מוזמנים לפנות אליי ישירות."
+  },
+  "instagram": {
+    "profile": "@uproductionevents",
+    "text": "5 בבוקר. האולם ריק. הצוות שלנו כבר בסיבוב בדיקות שני. ✔️ עיצוב במקום. ✔️ תאורה וסאונד מסונכרנים. ✔️ פלאן B מוכן. האירוע שנראה חלק ומושלם בנוי מהשעות שאף אחד לא מצלם. יותר מ-1,500 אירועים. יותר מ-130 יעדים. הפרודקשן לא ישן. 👇 אתם עובדים בהפקת אירועים? ספרו לנו — מה האתגר הלוגיסטי הכי גדול שלכם. #מאחוריהקלעים #הפקתאירועים #אירועיםקורפורטיביים #UproductionEvents #FromBusinessToPleasure"
+  },
+  "facebook": {
+    "profile": "Uproduction Events (Page)",
+    "text": "עד שהאורחים מגיעים, הצוות שלנו כבר שש שעות באתר. הפרחים מסודרים, הסאונד מכוייל, וכל תרחיש אפשרי תוכנן מראש. מה שנראה קל ביום האירוע הוא תוצאה של לילה שלם של עבודה שאף אחד לא רואה. אחרי יותר מ-1,500 אירועים ב-130+ יעדים, אנחנו יודעים שהקסם לא קורה על הבמה — הוא קורה הרבה לפני שהיא מוכנה. רוצים לשמוע איך זה עובד? כתבו לנו בתגובות או בהודעה פרטית."
+  },
+  "image_prompt": "A wide-angle shot of a large ballroom at 5am being transformed by a crew of eight event professionals arranging centrepieces, rolling cable drums and testing pin-spot lighting, golden pre-dawn light filtering through floor-to-ceiling windows onto polished marble floors.",
+  "image_style": "photorealistic, editorial, documentary, 35mm film grain",
+  "brand": {
+    "colors": [
+      "#1C1C1C",
+      "#FBCE0A"
+    ],
+    "font": "Comfortaa",
+    "logo": "uproduction_official_logo.png"
+  }
+}

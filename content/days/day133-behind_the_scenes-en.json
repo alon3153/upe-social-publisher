@@ -1,0 +1,30 @@
+{
+  "day": 133,
+  "category": "behind_the_scenes",
+  "language": "en",
+  "date": "",
+  "weekday": "",
+  "theme": "The Invisible Army: Event Setup Before Dawn",
+  "linkedin": {
+    "profile": "Uproduction Events (Company Page)",
+    "text": "There's a version of event production that clients see — and the version that actually makes it work. The client sees a seamless 400-person conference opening on cue. What they don't see: the 5am crew call, the three contingency plans for AV failure, the floor-plan revision at midnight because the room layout shifted. After 16 years and 1,500+ events, our edge isn't creativity alone — it's operational precision that runs quietly in the background so your brand moment lands exactly as planned. If you're an HR, marketing or sales leader planning a large-scale event, I'm happy to walk you through how we structure the invisible work. DM me directly."
+  },
+  "instagram": {
+    "profile": "@uproductionevents",
+    "text": "6am. The guests are still asleep. Our crew is already on their third walkthrough. ✔️ Florals positioned. ✔️ AV synced. ✔️ Every contingency mapped. Behind every flawless event is a night shift most people never see. 1,500+ events delivered. 130+ destinations. The prep never changes — only the view does. 👇 Tag someone who thinks events just 'happen'. #BehindTheScenes #EventProduction #CorporateEvents #IncentiveTravel #EventPlanning #UproductionEvents #B2BEvents #EventManagement #FromBusinessToPleasure"
+  },
+  "facebook": {
+    "profile": "Uproduction Events (Page)",
+    "text": "By the time your guests walk through those doors, we've already been on-site for six hours. The florals are set. The AV is tested. The run-of-show is taped to every crew member's clipboard. What looks effortless on the day is actually the result of a very busy night before. After 1,500+ events across 130+ destinations, we've learned that the magic isn't in the moment — it's in everything that happens before it. Curious what goes into your next event? Drop a comment or send us a message."
+  },
+  "image_prompt": "A wide-angle shot of a large ballroom at 5am being transformed by a crew of eight event professionals arranging centrepieces, rolling cable drums and testing pin-spot lighting, golden pre-dawn light filtering through floor-to-ceiling windows onto polished marble floors.",
+  "image_style": "photorealistic, editorial, documentary, 35mm film grain",
+  "brand": {
+    "colors": [
+      "#1C1C1C",
+      "#FBCE0A"
+    ],
+    "font": "Comfortaa",
+    "logo": "uproduction_official_logo.png"
+  }
+}

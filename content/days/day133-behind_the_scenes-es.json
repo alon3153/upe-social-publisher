@@ -1,0 +1,30 @@
+{
+  "day": 133,
+  "category": "behind_the_scenes",
+  "language": "es",
+  "date": "",
+  "weekday": "",
+  "theme": "The Invisible Army: Event Setup Before Dawn",
+  "linkedin": {
+    "profile": "Uproduction Events (Company Page)",
+    "text": "Hay dos versiones de cada evento corporativo: la que el cliente experimenta y la que hace posible esa experiencia. La primera es fluida, emocionante, memorable. La segunda empieza en la madrugada, con equipos de producción, listas de verificación y planes de contingencia que nadie en la sala conocerá jamás. En 16 años y más de 1,500 eventos entregados en más de 130 destinos, hemos aprendido que la excelencia operativa es tan importante como la visión creativa. Si liderás equipos de RRHH, marketing o ventas y estás planificando tu próximo evento o viaje de incentivo, con gusto te cuento cómo estructuramos el trabajo invisible. Escribime por privado."
+  },
+  "instagram": {
+    "profile": "@uproductionevents",
+    "text": "5am. El salón está vacío. Nuestro equipo ya va por su segundo recorrido de revisión. ✔️ Decoración en su lugar. ✔️ Sonido e iluminación sincronizados. ✔️ Plan B (y C) listos. La magia de un evento impecable se construye en las horas que nadie fotografía. Más de 1,500 eventos. Más de 130 destinos. La producción no duerme. 👇 ¿Trabajás en la organización de eventos corporativos? Contanos tu mayor desafío logístico. #DetrasDeEscena #ProduccionDeEventos #EventosCorporativos #ViajesDeIncentivo #UproductionEvents #EventosB2B #FromBusinessToPleasure"
+  },
+  "facebook": {
+    "profile": "Uproduction Events (Page)",
+    "text": "Cuando tus invitados cruzan la puerta, nuestro equipo ya lleva horas trabajando. La ambientación está lista, el audio y video probado, y cada detalle confirmado tres veces. Lo que parece espontáneo el día del evento es el resultado de una noche entera de preparación silenciosa. Con más de 1,500 eventos en más de 130 destinos, sabemos que la diferencia entre un buen evento y uno que se recuerda está en lo que nadie ve. ¿Querés saber cómo trabajamos? Escribinos o dejá tu comentario."
+  },
+  "image_prompt": "A wide-angle shot of a large ballroom at 5am being transformed by a crew of eight event professionals arranging centrepieces, rolling cable drums and testing pin-spot lighting, golden pre-dawn light filtering through floor-to-ceiling windows onto polished marble floors.",
+  "image_style": "photorealistic, editorial, documentary, 35mm film grain",
+  "brand": {
+    "colors": [
+      "#1C1C1C",
+      "#FBCE0A"
+    ],
+    "font": "Comfortaa",
+    "logo": "uproduction_official_logo.png"
+  }
+}
