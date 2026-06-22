@@ -44,6 +44,11 @@ def _req(method, url, token, body=None, raw=None, ctype="application/json", extr
 
 
 def member_urn(token=None):
+    # Prefer a cached URN — personal posting then needs only w_member_social,
+    # not openid/profile (so a token re-auth that drops openid won't break it).
+    cached = os.environ.get("LINKEDIN_MEMBER_URN")
+    if cached:
+        return cached if cached.startswith("urn:li:person:") else f"urn:li:person:{cached}"
     token = token or _token()
     _, info = _req("GET", f"{API}/v2/userinfo", token)
     sub = info.get("sub")

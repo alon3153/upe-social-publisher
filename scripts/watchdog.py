@@ -38,7 +38,9 @@ def check_runway():
     max_day = max(set(days))
     try:
         pub = queue.published_days()
-        last_pub = max(pub) if pub else 0
+        # ignore junk/test day numbers (e.g. 9001x) outside the real bank range
+        real = [d for d in pub if 1 <= d <= max_day]
+        last_pub = max(real) if real else 0
     except Exception as e:
         return [f"⚠️ לא ניתן לקרוא published_days מ-Supabase: {e}"]
     runway = max_day - last_pub
