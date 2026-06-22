@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Daily approval email: pick next day, build per-account posts, virality-optimize,
 enqueue in Supabase, send ONE email per post via Resend with Approve/Reject buttons."""
-import os, sys, json, glob, datetime, urllib.request, urllib.error
+import os, sys, json, glob, datetime, urllib.request, urllib.error, urllib.parse
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, ROOT)
@@ -91,6 +91,49 @@ def email_html_digest(day, approve_all_url, rows):
  </div></div></body></html>"""
 
 
+def send_graph_html(subject, html):
+    """Send via Microsoft Graph (client-credentials) from MS_GRAPH_FROM.
+    Internal alon@upe.co.il sender → lands in Focused Inbox, unlike Resend's
+    onboarding@resend.dev which gets filtered/buried. Returns (ok, info)."""
+    tenant = os.environ.get("MS_GRAPH_TENANT_ID")
+    client_id = os.environ.get("MS_GRAPH_CLIENT_ID")
+    secret = os.environ.get("MS_GRAPH_CLIENT_SECRET")
+    sender = os.environ.get("MS_GRAPH_FROM")
+    if not all([tenant, client_id, secret, sender]):
+        return False, "graph creds missing"
+    try:
+        tok = urllib.parse.urlencode({
+            "client_id": client_id, "client_secret": secret,
+            "scope": "https://graph.microsoft.com/.default",
+            "grant_type": "client_credentials",
+        }).encode()
+        treq = urllib.request.Request(
+            f"https://login.microsoftonline.com/{tenant}/oauth2/v2.0/token",
+            data=tok, headers={"Content-Type": "application/x-www-form-urlencoded"})
+        with urllib.request.urlopen(treq, timeout=30) as r:
+            access = json.loads(r.read().decode()).get("access_token")
+        if not access:
+            return False, "no access_token"
+        payload = json.dumps({
+            "message": {
+                "subject": subject,
+                "body": {"contentType": "HTML", "content": html},
+                "toRecipients": [{"emailAddress": {"address": TO}}],
+            },
+            "saveToSentItems": True,
+        }).encode()
+        sreq = urllib.request.Request(
+            f"https://graph.microsoft.com/v1.0/users/{sender}/sendMail",
+            data=payload,
+            headers={"Authorization": f"Bearer {access}", "Content-Type": "application/json"})
+        with urllib.request.urlopen(sreq, timeout=30) as r:
+            return True, f"graph {r.status}"
+    except urllib.error.HTTPError as e:
+        return False, f"graph {e.code} {e.read().decode()[:200]}"
+    except Exception as e:
+        return False, f"graph error {e}"
+
+
 def send_resend(subject, html, attachment_path=None):
     payload = {"from": RESEND_FROM, "to": [TO], "subject": subject, "html": html}
     if attachment_path and os.path.isfile(attachment_path):
@@ -166,7 +209,13 @@ def main():
     approve_all_url = f"{FN}?action=approve_all&day={day}&token={inserted[0]['token']}"
     html = email_html_digest(day, approve_all_url, inserted)
     subj = f"אישור פוסטים — יום {day} · {len(inserted)} רשתות 📲"
-    ok, info = send_resend(subj, html, attachment_path=_p)
+    # Prefer Microsoft Graph (internal alon@upe.co.il → Focused Inbox); the
+    # Resend onboarding@resend.dev sender gets filtered/buried. Fall back to
+    # Resend only if Graph is unavailable.
+    ok, info = send_graph_html(subj, html)
+    if not ok:
+        print(f"graph send failed ({info}); falling back to resend")
+        ok, info = send_resend(subj, html, attachment_path=_p)
     print(f"{'OK ' if ok else 'ERR'} digest: {info[:120]}")
     print(f"Enqueued {len(inserted)} / emailed {1 if ok else 0} consolidated email for day {day}")
     return 0
