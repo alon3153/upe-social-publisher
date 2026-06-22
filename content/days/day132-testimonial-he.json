@@ -1,0 +1,30 @@
+{
+  "day": 132,
+  "category": "testimonial",
+  "language": "he",
+  "date": "",
+  "weekday": "",
+  "theme": "When the Client Becomes the Advocate",
+  "linkedin": {
+    "profile": "Uproduction Events (Company Page)",
+    "text": "מנהלת משאבי אנוש שלחה לנו הודעה אחרי שהפקנו את כנס המנהלים השנתי שלה. היא כתבה: 'עבדתי עם סוכנויות אירועים רבות לאורך הקריירה. זו הפעם הראשונה שהגעתי ליום שאחרי בלי ולו בעיה אחת לטפל בה.' אנחנו שומרים את המשפט הזה — כי הוא מגדיר בדיוק מה אנחנו בונים לקראתו. לא רק רגע מרשים על הבמה. לא רק עיצוב שיגנוב את ההצגה. אלא הבוקר השקט שמגיע אחרי. מעל 1,500 אירועים מועברים. מעל 130 יעדים ברחבי העולם. מעל 25,000 משתתפים — ב-16 שנות פעילות גלובלית. אם זה הסטנדרט שאתם מחפשים לכנס הבא, לאירוע השקת המוצר, או לטיול התמריצים — בואו נדבר. שלחו לי הודעה ישירה או השאירו תגובה כאן."
+  },
+  "instagram": {
+    "profile": "@uproductionevents",
+    "text": "הביקורת הכי טובה שקיבלנו לא הייתה דירוג. הייתה זו מנהלת משאבי אנוש שכתבה: 'בפעם הראשונה בשנים, הגעתי לעבודה בבוקר שאחרי בלי שום דבר לתקן.' אנחנו מפיקים את הלילה — ומגנים על הבוקר שלכם. מעל 1,500 אירועים. מעל 130 יעדים. מעל 25,000 משתתפים. 👇 כתבו לנו PERFECT בתגובות ונראה לכם איך זה עובד. #הפקתאירועים #אירועיםקורפורטיביים #טיוליתמריצים #כנסיםעסקיים #UproductionEvents #FromBusinessToPleasure #אירועיB2B #גאלהדינר #טימבילדינג"
+  },
+  "facebook": {
+    "profile": "Uproduction Events (Page)",
+    "text": "אחרי אחד האירועים שלנו, מנהלת משאבי אנוש שלחה לנו הודעה שעצרה אותנו: 'עבדתי עם הרבה חברות הפקה במהלך הקריירה שלי. זו הפעם הראשונה שלא הייתה לי שום בעיה לפתור ביום אחרי.' זה בדיוק מה שאנחנו בונים לקראתו בכל פרויקט — לא רק ערב מוצלח, אלא בוקר שקט אחריו. מעל 1,500 אירועים, מעל 130 יעדים, 16 שנות ניסיון. איך נראה עבורך אירוע שמסתיים בלי כאבי ראש? ספרו לנו בתגובות 👇"
+  },
+  "image_prompt": "A candid wide-angle photograph of a packed corporate gala dinner in a grand historic European venue, guests in formal attire laughing and toasting at elegantly set round tables under warm amber chandeliers, with a sense of genuine celebration and scale.",
+  "image_style": "photorealistic, editorial, documentary, 35mm film grain",
+  "brand": {
+    "colors": [
+      "#1C1C1C",
+      "#FBCE0A"
+    ],
+    "font": "Comfortaa",
+    "logo": "uproduction_official_logo.png"
+  }
+}

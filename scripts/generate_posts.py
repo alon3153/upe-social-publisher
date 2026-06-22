@@ -77,7 +77,7 @@ Each network/language version conveys the same idea, adapted to that platform an
 
 {SCHEMA_HINT}"""
     body = json.dumps({
-        "model": MODEL, "max_tokens": 2000,
+        "model": MODEL, "max_tokens": 4096,
         "messages": [{"role": "user", "content": prompt}],
     }).encode()
     req = urllib.request.Request("https://api.anthropic.com/v1/messages", data=body, headers={

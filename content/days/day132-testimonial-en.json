@@ -1,0 +1,30 @@
+{
+  "day": 132,
+  "category": "testimonial",
+  "language": "en",
+  "date": "",
+  "weekday": "",
+  "theme": "When the Client Becomes the Advocate",
+  "linkedin": {
+    "profile": "Uproduction Events (Company Page)",
+    "text": "An HR director sent us a note after we delivered their annual leadership conference. It read: 'I've partnered with a dozen event agencies over 15 years. This is the first time I didn't have a single fire to put out the next morning.' That line lives rent-free in our heads — because it captures exactly what we're building toward on every project. Not the loudest applause on the night. Not the most elaborate stage design. The absence of problems the morning after. 1,500+ events. 130+ destinations. 25,000+ participants across 16 years of operations. If that's the benchmark you're looking for in your next conference, product launch, or incentive trip — let's talk. DM me directly or drop a comment below."
+  },
+  "instagram": {
+    "profile": "@uproductionevents",
+    "text": "The best review we ever got wasn't a five-star rating. It was an HR director telling us: 'First time in 15 years I didn't have to fix anything the morning after.' 1,500+ events. 130+ destinations. 25,000+ participants. We don't just produce moments — we protect your Monday morning. 👇 Drop the word PERFECT and we'll show you how we make it happen. #CorporateEvents #IncentiveTravel #EventProduction #HRLeaders #TeamRetreat #GalaDinner #UproductionEvents #B2BEvents #EventPlanning #FromBusinessToPleasure"
+  },
+  "facebook": {
+    "profile": "Uproduction Events (Page)",
+    "text": "We got a message after one of our events that stopped us in our tracks. The HR director wrote: 'I've worked with a dozen agencies over 15 years. This is the first time I didn't have to fix anything the morning after.' That's the standard we hold ourselves to — not applause on the night, but zero cleanup the day after. After 1,500+ events across 130+ destinations, that kind of message never gets old. What does 'it went perfectly' look like for your next event? Tell us in the comments 👇"
+  },
+  "image_prompt": "A candid wide-angle photograph of a packed corporate gala dinner in a grand historic European venue, guests in formal attire laughing and toasting at elegantly set round tables under warm amber chandeliers, with a sense of genuine celebration and scale.",
+  "image_style": "photorealistic, editorial, documentary, 35mm film grain",
+  "brand": {
+    "colors": [
+      "#1C1C1C",
+      "#FBCE0A"
+    ],
+    "font": "Comfortaa",
+    "logo": "uproduction_official_logo.png"
+  }
+}

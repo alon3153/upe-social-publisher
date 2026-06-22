@@ -1,0 +1,30 @@
+{
+  "day": 132,
+  "category": "testimonial",
+  "language": "es",
+  "date": "",
+  "weekday": "",
+  "theme": "When the Client Becomes the Advocate",
+  "linkedin": {
+    "profile": "Uproduction Events (Company Page)",
+    "text": "Una directora de RRHH nos escribió tras su conferencia anual de liderazgo: 'He trabajado con muchas agencias en 15 años. Es la primera vez que el lunes siguiente no tuve absolutamente nada que resolver.' Guardamos ese mensaje porque resume todo lo que construimos evento a evento. No se trata solo del impacto sobre el escenario. Se trata de la ausencia total de problemas al día siguiente. Más de 1.500 eventos entregados. Más de 130 destinos. Más de 25.000 participantes en 16 años de operaciones globales. Si ese es el estándar que buscas para tu próxima conferencia, lanzamiento de producto o viaje de incentivo — hablemos. Escríbeme por DM o déjame un comentario."
+  },
+  "instagram": {
+    "profile": "@uproductionevents",
+    "text": "La mejor reseña que recibimos no tenía estrellas. Era un mensaje de una directora de RRHH que decía: 'Primera vez en 15 años que no tuve que resolver nada al día siguiente.' Eso lo es todo. Más de 1.500 eventos. Más de 130 destinos. Más de 25.000 participantes. Producimos la noche — y protegemos tu mañana. 👇 Escríbenos PERFECTO en comentarios y te contamos cómo lo hacemos. #EventosCorporativos #ViajesIncentivo #ProducciónDeEventos #RRHHLíderes #UproductionEvents #GalaDinner #TeamBuilding #FromBusinessToPleasure #EventosB2B #ConferenciasEmpresariales"
+  },
+  "facebook": {
+    "profile": "Uproduction Events (Page)",
+    "text": "Después de uno de nuestros eventos, la directora de RRHH nos escribió algo que no olvidamos: 'Llevo 15 años trabajando con agencias de eventos. Es la primera vez que no tuve que apagar ningún incendio al día siguiente.' Eso es exactamente lo que perseguimos en cada proyecto — no solo una noche brillante, sino un lunes tranquilo. Más de 1.500 eventos en más de 130 destinos nos enseñaron que la verdadera medida del éxito está en lo que NO pasa después. ¿Qué significaría para ti que tu próximo evento saliera perfecto? Cuéntanos en los comentarios 👇"
+  },
+  "image_prompt": "A candid wide-angle photograph of a packed corporate gala dinner in a grand historic European venue, guests in formal attire laughing and toasting at elegantly set round tables under warm amber chandeliers, with a sense of genuine celebration and scale.",
+  "image_style": "photorealistic, editorial, documentary, 35mm film grain",
+  "brand": {
+    "colors": [
+      "#1C1C1C",
+      "#FBCE0A"
+    ],
+    "font": "Comfortaa",
+    "logo": "uproduction_official_logo.png"
+  }
+}

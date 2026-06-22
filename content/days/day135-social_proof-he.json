@@ -1,0 +1,30 @@
+{
+  "day": 135,
+  "category": "social_proof",
+  "language": "he",
+  "date": "",
+  "weekday": "",
+  "theme": "Client Trust Built Over Repeat Engagements",
+  "linkedin": {
+    "profile": "Uproduction Events (Company Page)",
+    "text": "המדד שאנחנו הכי גאים בו הוא לא כמות האירועים שהפקנו — אם כי 1,500+ הפקות ב-130+ יעדים לאורך 16 שנה זה מספר שאנחנו עומדים מאחוריו בביטחון. זה הלקוחות שחוזרים. מנהלי HR, סמנכ״לי שיווק ומנהלי מכירות שראו מה קורה כשלוגיסטיקה, יצירתיות ואינטליגנציה תרבותית עובדות יחד בסנכרון מושלם. אותם לא צריך לשכנע פעמיים. אם אתם מעריכים שותפים להפקת האירוע הבא שלכם ורוצים לדבר עם מישהו שכבר היה בחדר יותר מפעם אחת — בואו נתחבר."
+  },
+  "instagram": {
+    "profile": "@uproductionevents",
+    "text": "אותו לקוח. חמישה אירועים. שלוש יבשות. זה לא עסקה — זה אמון שנבנה ביצוע אחרי ביצוע. יותר מ-1,500 אירועים. יותר מ-130 יעדים. יותר מ-25,000 משתתפים. המספר שהכי מדבר אלינו? כמה לקוחות חוזרים. איך נראית נאמנות אצלכם? נשמח לשמוע בתגובות 👇 #הפקתאירועים #טיולימתגמלים #אירועיםקורפורטיביים #UproductionEvents #אירועיםגלובליים #חוויותעסקיות"
+  },
+  "facebook": {
+    "profile": "Uproduction Events (Page)",
+    "text": "כשלקוח חוזר אליך בפעם החמישית, הוא כבר לא מחפש ספק — הוא בא לשותף שהוא סומך עליו. את האמון הזה לא מוכרים, בונים אותו אירוע אחר אירוע, לאורך 1,500+ הפקות ב-130+ יעדים ב-16 שנה. מה גורם לכם לחזור שוב ושוב לאותם שותפים? ספרו לנו בתגובות 👇"
+  },
+  "image_prompt": "A wide-angle candid photograph of a elegantly dressed corporate crowd mingling on a sunlit open-air rooftop terrace overlooking a dramatic Mediterranean coastal cityscape, warm golden-hour light casting long shadows across the stone floor, glasses in hand, genuine laughter and conversation.",
+  "image_style": "photorealistic, editorial, documentary, 35mm film grain",
+  "brand": {
+    "colors": [
+      "#1C1C1C",
+      "#FBCE0A"
+    ],
+    "font": "Comfortaa",
+    "logo": "uproduction_official_logo.png"
+  }
+}

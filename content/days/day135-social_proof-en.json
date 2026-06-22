@@ -1,0 +1,30 @@
+{
+  "day": 135,
+  "category": "social_proof",
+  "language": "en",
+  "date": "",
+  "weekday": "",
+  "theme": "Client Trust Built Over Repeat Engagements",
+  "linkedin": {
+    "profile": "Uproduction Events (Company Page)",
+    "text": "The metric we're most proud of isn't the number of events we've produced — though 1,500+ across 130+ destinations over 16 years is a number we stand behind. It's the clients who come back. Repeat engagements from HR directors, marketing VPs, and sales leaders who've seen what happens when logistics, creativity, and cultural intelligence all fire at once. They don't need to be sold a second time. If you're evaluating event partners and want to speak with someone who's been in the room more than once — let's connect. Happy to make an introduction."
+  },
+  "instagram": {
+    "profile": "@uproductionevents",
+    "text": "Five bookings. Same client. Different continents. That's not a transaction — that's trust built one flawless execution at a time. 1,500+ events. 130+ destinations. 25,000+ participants. The repeat rate speaks louder than any pitch deck ever could. What does loyalty look like in your industry? Tell us below 👇 #CorporateEvents #IncentiveTravel #EventProduction #B2BEvents #ClientTrust #UproductionEvents #EventPlanners #GlobalEvents #MeetingsProfessionals #IncentivePrograms"
+  },
+  "facebook": {
+    "profile": "Uproduction Events (Page)",
+    "text": "When a client books you for the fifth time, they're not just hiring a vendor — they're trusting you with their brand, their people, and their results. That kind of relationship isn't sold. It's earned, event by event, across 1,500+ productions and 130+ destinations over 16 years. We'd love to hear what keeps you coming back to the partners you trust most. Drop it in the comments 👇"
+  },
+  "image_prompt": "A wide-angle candid photograph of a elegantly dressed corporate crowd mingling on a sunlit open-air rooftop terrace overlooking a dramatic Mediterranean coastal cityscape, warm golden-hour light casting long shadows across the stone floor, glasses in hand, genuine laughter and conversation.",
+  "image_style": "photorealistic, editorial, documentary, 35mm film grain",
+  "brand": {
+    "colors": [
+      "#1C1C1C",
+      "#FBCE0A"
+    ],
+    "font": "Comfortaa",
+    "logo": "uproduction_official_logo.png"
+  }
+}

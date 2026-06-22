@@ -1,0 +1,30 @@
+{
+  "day": 135,
+  "category": "social_proof",
+  "language": "es",
+  "date": "",
+  "weekday": "",
+  "theme": "Client Trust Built Over Repeat Engagements",
+  "linkedin": {
+    "profile": "Uproduction Events (Company Page)",
+    "text": "El indicador del que más nos enorgullecemos no es la cantidad de eventos producidos — aunque más de 1,500 en 130+ destinos a lo largo de 16 años es una cifra que respaldamos con orgullo. Es la tasa de retorno de nuestros clientes. Directores de RRHH, vicepresidentes de marketing y líderes comerciales que han visto en primera fila qué ocurre cuando la logística, la creatividad y la inteligencia cultural trabajan en perfecta sincronía. No hace falta venderles la idea una segunda vez. Si estás evaluando socios para tu próximo gran evento y quieres hablar con alguien que ya ha estado en esa sala más de una vez — conectemos."
+  },
+  "instagram": {
+    "profile": "@uproductionevents",
+    "text": "Mismo cliente. Cinco eventos. Tres continentes distintos. Eso no es una transacción — es confianza acumulada ejecución tras ejecución. Más de 1,500 eventos. Más de 130 destinos. Más de 25,000 participantes. Los números que más importan no son los del presupuesto — son los de la reincidencia. ¿Cómo se ve la fidelidad en tu sector? Déjanos tu respuesta abajo 👇 #EventosCorporativos #ViajesDeIncentivo #ProducciónDeEventos #EventosB2B #ConfianzaDelCliente #UproductionEvents #PlanificaciónDeEventos #EventosGlobales #Incentivos"
+  },
+  "facebook": {
+    "profile": "Uproduction Events (Page)",
+    "text": "Cuando un cliente vuelve a contratarte por quinta vez, ya no estás hablando de un proveedor — estás hablando de un socio de confianza. Esa confianza no se vende, se construye evento a evento, a lo largo de 1,500+ producciones en más de 130 destinos durante 16 años. ¿Qué hace que vuelvas una y otra vez a los socios que más valoras? Cuéntanos en los comentarios 👇"
+  },
+  "image_prompt": "A wide-angle candid photograph of a elegantly dressed corporate crowd mingling on a sunlit open-air rooftop terrace overlooking a dramatic Mediterranean coastal cityscape, warm golden-hour light casting long shadows across the stone floor, glasses in hand, genuine laughter and conversation.",
+  "image_style": "photorealistic, editorial, documentary, 35mm film grain",
+  "brand": {
+    "colors": [
+      "#1C1C1C",
+      "#FBCE0A"
+    ],
+    "font": "Comfortaa",
+    "logo": "uproduction_official_logo.png"
+  }
+}
