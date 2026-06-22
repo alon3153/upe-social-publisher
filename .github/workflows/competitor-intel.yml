@@ -1,0 +1,40 @@
+name: Competitor & Viral Intel
+
+on:
+  schedule:
+    # Thursday 03:00 UTC — weekly: research viral angles → adapt into the bank
+    - cron: "0 3 * * 4"
+  workflow_dispatch:
+    inputs:
+      count:
+        description: "How many viral-adapted posts to generate"
+        required: false
+        default: "3"
+
+permissions:
+  contents: write
+
+jobs:
+  intel:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Research + generate viral-adapted posts
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: python3 scripts/competitor_intel.py --count "${{ inputs.count || 3 }}"
+      - name: Commit new bank days
+        run: |
+          git config user.name  "upe-competitor-intel"
+          git config user.email "bot@users.noreply.github.com"
+          git add content/days/
+          if git diff --cached --quiet; then
+            echo "no new content"
+          else
+            git commit -m "chore(bank): viral-adapted posts $(date +%F)"
+            git push
+          fi
