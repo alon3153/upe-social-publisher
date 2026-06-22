@@ -52,10 +52,28 @@ def optimize_virality(text, network):
     return t
 
 
-def email_html(net, day, headline, rid, token, caption, image_url):
-    approve = f"{FN}?id={rid}&token={token}&action=approve"
-    reject = f"{FN}?id={rid}&token={token}&action=reject"
-    cap = caption.replace("&", "&amp;").replace("<", "&lt;").replace("\n", "<br>")
+def post_card(r):
+    """Inner card for a single post inside the consolidated digest email."""
+    approve = f"{FN}?id={r['id']}&token={r['token']}&action=approve"
+    reject = f"{FN}?id={r['id']}&token={r['token']}&action=reject"
+    cap = (r.get("caption") or "").replace("&", "&amp;").replace("<", "&lt;").replace("\n", "<br>")
+    net = NET_HE.get(r["network"], r["network"])
+    img = r.get("image_url") or ""
+    return f"""<div dir="rtl" style="border:1px solid #eee;border-radius:12px;padding:16px;margin-bottom:16px;">
+   <div style="font-size:16px;font-weight:bold;color:#141414;margin-bottom:10px;">{net} <span style="font-size:12px;color:#888;font-weight:normal;">· {r.get('lang','')}</span></div>
+   <img src="{img}" alt="post" style="width:100%;border-radius:8px;display:block;margin-bottom:12px;">
+   <div dir="ltr" style="direction:ltr;text-align:left;background:#f7f7f7;border-radius:8px;padding:12px;font-size:13px;line-height:1.55;color:#222;">{cap}</div>
+   <table dir="rtl" style="width:100%;margin-top:12px;border-collapse:collapse;"><tr>
+     <td style="text-align:center;padding:4px;"><a href="{approve}" style="display:block;background:#2fa84f;color:#fff;text-decoration:none;font-size:14px;font-weight:bold;padding:11px 0;border-radius:8px;">✅ אשר</a></td>
+     <td style="text-align:center;padding:4px;"><a href="{reject}" style="display:block;background:#e0533d;color:#fff;text-decoration:none;font-size:14px;font-weight:bold;padding:11px 0;border-radius:8px;">🚫 דחה</a></td>
+   </tr></table>
+ </div>"""
+
+
+def email_html_digest(day, approve_all_url, rows):
+    """ONE consolidated email: 'approve all' button on top + a card per post."""
+    n = len(rows)
+    cards = "".join(post_card(r) for r in rows)
     return f"""<html dir="rtl" lang="he"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1"></head>
 <body dir="rtl" style="font-family:Arial,Helvetica,sans-serif;font-size:14px;direction:rtl;text-align:right;background:#f2f2f2;margin:0;padding:0;">
@@ -64,16 +82,12 @@ def email_html(net, day, headline, rid, token, caption, image_url):
    <span style="color:#FBCE0A;font-size:20px;font-weight:bold;">uproduction</span>
    <span style="color:#bbb;font-size:12px;"> &nbsp;from business to pleasure</span></div>
  <div dir="rtl" style="padding:20px 24px;direction:rtl;text-align:right;">
-   <div style="font-size:13px;color:#888;">פוסט לאישור · יום {day}</div>
-   <div style="font-size:20px;font-weight:bold;color:#141414;margin:4px 0 14px;">{NET_HE.get(net,net)}</div>
-   <img src="{image_url}" alt="post" style="width:100%;border-radius:10px;display:block;margin-bottom:16px;">
-   <div style="font-size:13px;color:#888;margin-bottom:6px;">הטקסט שיפורסם:</div>
-   <div dir="ltr" style="direction:ltr;text-align:left;background:#f7f7f7;border-radius:8px;padding:14px;font-size:14px;line-height:1.55;color:#222;">{cap}</div>
-   <table dir="rtl" style="width:100%;margin-top:22px;border-collapse:collapse;"><tr>
-     <td style="text-align:center;padding:6px;"><a href="{approve}" style="display:block;background:#2fa84f;color:#fff;text-decoration:none;font-size:17px;font-weight:bold;padding:15px 0;border-radius:10px;">✅ אשר ופרסם</a></td>
-     <td style="text-align:center;padding:6px;"><a href="{reject}" style="display:block;background:#e0533d;color:#fff;text-decoration:none;font-size:17px;font-weight:bold;padding:15px 0;border-radius:10px;">🚫 דחה</a></td>
-   </tr></table>
-   <div style="font-size:12px;color:#999;margin-top:14px;text-align:center;">לחיצה על "אשר" → הפוסט יפורסם אוטומטית בריצת הפרסום הקרובה.</div>
+   <div style="font-size:13px;color:#888;">פוסטים לאישור · יום {day}</div>
+   <div style="font-size:20px;font-weight:bold;color:#141414;margin:4px 0 14px;">{n} פוסטים ממתינים לאישור</div>
+   <a href="{approve_all_url}" style="display:block;background:#2fa84f;color:#fff;text-decoration:none;font-size:18px;font-weight:bold;padding:16px 0;border-radius:12px;text-align:center;margin-bottom:8px;">✅ אשר הכל ({n} פוסטים)</a>
+   <div style="font-size:12px;color:#999;margin-bottom:22px;text-align:center;">או אשר / דחה כל פוסט בנפרד למטה.</div>
+   {cards}
+   <div style="font-size:12px;color:#999;margin-top:6px;text-align:center;">לחיצה על "אשר" → הפוסט יפורסם אוטומטית בריצת הפרסום הקרובה.</div>
  </div></div></body></html>"""
 
 
@@ -146,15 +160,15 @@ def main():
     if not rows:
         print(f"No content for day {day}"); return 0
     inserted = queue.insert_rows(rows)
-    sent = 0
-    for r in inserted:
-        html = email_html(r["network"], r["day"], r.get("headline", ""), r["id"], r["token"],
-                          r["caption"], r.get("image_url") or image_url)
-        subj = f"אישור פוסט — {NET_HE.get(r['network'], r['network'])} ({r['lang']}) — יום {day} 📲"
-        ok, info = send_resend(subj, html, attachment_path=_p)
-        print(f"{'OK ' if ok else 'ERR'} {r['network']}/{r['lang']}: {info[:80]}")
-        sent += ok
-    print(f"Enqueued {len(inserted)} / emailed {sent} for day {day}")
+    if not inserted:
+        print(f"No rows inserted for day {day}"); return 0
+    # One 'approve all' link for the whole day; any row's token proves email receipt.
+    approve_all_url = f"{FN}?action=approve_all&day={day}&token={inserted[0]['token']}"
+    html = email_html_digest(day, approve_all_url, inserted)
+    subj = f"אישור פוסטים — יום {day} · {len(inserted)} רשתות 📲"
+    ok, info = send_resend(subj, html, attachment_path=_p)
+    print(f"{'OK ' if ok else 'ERR'} digest: {info[:120]}")
+    print(f"Enqueued {len(inserted)} / emailed {1 if ok else 0} consolidated email for day {day}")
     return 0
 
 
