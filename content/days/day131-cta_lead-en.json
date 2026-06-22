@@ -1,0 +1,30 @@
+{
+  "day": 131,
+  "category": "cta_lead",
+  "language": "en",
+  "date": "",
+  "weekday": "",
+  "theme": "Turn Your Event Brief Into a Done Deal",
+  "linkedin": {
+    "profile": "Uproduction Events (Company Page)",
+    "text": "Most event briefs I see have the same three things: a deadline, a stakeholder list, and a gap between what's been promised and what's been planned. After 1,500+ events delivered across 130+ destinations, I can tell you that gap is closeable — but only if you start the right conversations early enough. If you're mapping out a conference, incentive trip, or product launch and want a frank conversation about what execution actually looks like, send me a message. No pitch deck, just a real conversation."
+  },
+  "instagram": {
+    "profile": "@uproductionevents",
+    "text": "A date on the calendar. A room full of people. A result you're accountable for. We've helped 25,000+ participants walk away from events that delivered — conferences, incentive trips, gala dinners, product launches. All of it. If your next event is on the horizon, tell us what you're planning. DM us and let's talk. 👇\n#CorporateEvents #IncentiveTravel #EventProduction #B2BEvents #EventPlanning #GalaDinner #CorporateTravel #EventManagement #UproductionEvents"
+  },
+  "facebook": {
+    "profile": "Uproduction Events (Page)",
+    "text": "You have a date, a budget, and a room full of people who need to leave impressed. What you need is a production team that's done this 1,500+ times across 130+ destinations and knows how to turn a brief into an experience people actually remember. Drop your event details in the comments or send us a DM — let's figure out what's possible."
+  },
+  "image_prompt": "A wide-angle shot of a rooftop terrace venue at golden hour where a diverse group of well-dressed professionals mingle over cocktails against a sweeping city skyline, candid and lively, warm ambient lighting.",
+  "image_style": "photorealistic, editorial, documentary, 35mm film grain",
+  "brand": {
+    "colors": [
+      "#1C1C1C",
+      "#FBCE0A"
+    ],
+    "font": "Comfortaa",
+    "logo": "uproduction_official_logo.png"
+  }
+}

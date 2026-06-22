@@ -1,0 +1,30 @@
+{
+  "day": 131,
+  "category": "cta_lead",
+  "language": "es",
+  "date": "",
+  "weekday": "",
+  "theme": "Turn Your Event Brief Into a Done Deal",
+  "linkedin": {
+    "profile": "Uproduction Events (Company Page)",
+    "text": "La mayoría de los briefings que recibo tienen tres cosas en común: una fecha límite, una lista de stakeholders y una brecha entre lo que se prometió y lo que está realmente planificado. Con más de 1.500 eventos entregados en más de 130 destinos, puedo decirte que esa brecha se puede cerrar, pero hay que empezar a trabajar con tiempo. Si estás organizando una convención, un viaje de incentivo o un lanzamiento de producto y quieres una conversación honesta sobre cómo se ejecuta esto en la práctica, escríbeme. Sin presentaciones comerciales, solo una charla real."
+  },
+  "instagram": {
+    "profile": "@uproductionevents",
+    "text": "Una fecha en el calendario. Un salón lleno de personas. Un resultado que tienes que defender. Hemos acompañado a más de 25.000 participantes en eventos que realmente cumplieron su objetivo — congresos, viajes de incentivo, cenas de gala, lanzamientos de producto. Si tu próximo evento ya está en el horizonte, escríbenos por DM y hablamos. 👇\n#EventosCorporativos #ViajesDeIncentivo #ProducciónDeEventos #EventosB2B #PlanificaciónDeEventos #CenaDGala #EventManagement #UproductionEvents"
+  },
+  "facebook": {
+    "profile": "Uproduction Events (Page)",
+    "text": "Tienes la fecha, el presupuesto y la presión de que todo salga bien. Lo que necesitas es un equipo que ya haya pasado por esto más de 1.500 veces en más de 130 destinos. Cuéntanos en los comentarios qué evento estás planeando y te decimos cómo podemos ayudarte a hacerlo realidad."
+  },
+  "image_prompt": "A wide-angle shot of a rooftop terrace venue at golden hour where a diverse group of well-dressed professionals mingle over cocktails against a sweeping city skyline, candid and lively, warm ambient lighting.",
+  "image_style": "photorealistic, editorial, documentary, 35mm film grain",
+  "brand": {
+    "colors": [
+      "#1C1C1C",
+      "#FBCE0A"
+    ],
+    "font": "Comfortaa",
+    "logo": "uproduction_official_logo.png"
+  }
+}

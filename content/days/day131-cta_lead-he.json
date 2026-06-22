@@ -1,0 +1,30 @@
+{
+  "day": 131,
+  "category": "cta_lead",
+  "language": "he",
+  "date": "",
+  "weekday": "",
+  "theme": "Turn Your Event Brief Into a Done Deal",
+  "linkedin": {
+    "profile": "Uproduction Events (Company Page)",
+    "text": "רוב הבריפים שמגיעים אלינו נראים אותו דבר: דדליין, רשימת בעלי עניין, ופער בין מה שהובטח לבין מה שבאמת מתוכנן. אחרי 1,500+ אירועים ב-130+ יעדים, אני יכול להגיד בביטחון שהפער הזה סגיר — אבל רק אם מתחילים את השיחה הנכונה מספיק מוקדם. אם אתם בונים כנס, נסיעת תמריץ או השקת מוצר ורוצים שיחה ישירה על מה שהביצוע באמת דורש — שלחו הודעה. בלי מצגות מכירה, רק שיחה עניינית."
+  },
+  "instagram": {
+    "profile": "@uproductionevents",
+    "text": "תאריך ביומן. חדר מלא אנשים. תוצאה שאתם אחראים עליה. עזרנו ליותר מ-25,000 משתתפים לצאת מאירועים שסיפקו את הסחורה — כנסים, נסיעות תמריץ, ארוחות גאלה, השקות מוצר. הכל. אם האירוע הבא שלכם כבר באופק, שלחו לנו הודעה ונדבר. 👇\n#אירועיםקורפורטיביים #נסיעותתמריץ #הפקתאירועים #UproductionEvents #אירועB2B #כנסיםעסקיים"
+  },
+  "facebook": {
+    "profile": "Uproduction Events (Page)",
+    "text": "יש לך תאריך, תקציב, וחדר מלא אנשים שצריכים לצאת מרוצים. מה שחסר זה צוות שכבר עשה את זה יותר מ-1,500 פעמים ב-130+ יעדים ויודע איך לקחת בריף ולהפוך אותו לאירוע שאנשים מדברים עליו אחר כך. תכתבו לנו בתגובות או בהודעה פרטית — נשמח לשמוע מה אתם מתכננים."
+  },
+  "image_prompt": "A wide-angle shot of a rooftop terrace venue at golden hour where a diverse group of well-dressed professionals mingle over cocktails against a sweeping city skyline, candid and lively, warm ambient lighting.",
+  "image_style": "photorealistic, editorial, documentary, 35mm film grain",
+  "brand": {
+    "colors": [
+      "#1C1C1C",
+      "#FBCE0A"
+    ],
+    "font": "Comfortaa",
+    "logo": "uproduction_official_logo.png"
+  }
+}
