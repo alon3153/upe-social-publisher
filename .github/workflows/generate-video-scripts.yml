@@ -1,0 +1,40 @@
+name: Generate Video Scripts
+
+on:
+  schedule:
+    # Saturday 03:00 UTC — 3 Sofia Short scripts/week (matches the 3-videos/week goal)
+    - cron: "0 3 * * 6"
+  workflow_dispatch:
+    inputs:
+      count:
+        description: "How many video scripts to generate"
+        required: false
+        default: "3"
+
+permissions:
+  contents: write
+
+jobs:
+  scripts:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Generate video scripts
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: python3 scripts/generate_video_scripts.py --count "${{ inputs.count || 3 }}"
+      - name: Commit new scripts
+        run: |
+          git config user.name  "upe-video-scripts"
+          git config user.email "bot@users.noreply.github.com"
+          git add content/video_scripts/
+          if git diff --cached --quiet; then
+            echo "no new scripts"
+          else
+            git commit -m "chore(video): Sofia short scripts $(date +%F)"
+            git push
+          fi
