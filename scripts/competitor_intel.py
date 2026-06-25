@@ -60,17 +60,69 @@ def _api(messages, tools=None, max_tokens=4096):
             raise
 
 
+def _extract_json_array(text):
+    """Pull a JSON array out of model output, tolerating ```json fences and prose."""
+    if not text:
+        return None
+    # strip code fences if present
+    fenced = re.search(r"```(?:json)?\s*(\[.*?\])\s*```", text, re.DOTALL)
+    candidate = fenced.group(1) if fenced else None
+    if candidate is None:
+        m = re.search(r"\[\s*\{.*\}\s*\]", text, re.DOTALL)
+        candidate = m.group(0) if m else None
+    if candidate is None:
+        return None
+    try:
+        return json.loads(candidate)
+    except json.JSONDecodeError:
+        return None
+
+
+REFORMAT_PROMPT = """Below is research about viral B2B event-marketing angles. Convert it into
+ORIGINAL Uproduction Events social posts — reuse the psychological angle/format only, original wording, UPE voice.
+
+{brand}
+
+{rules}
+
+RESEARCH:
+{research}
+
+Return ONLY a JSON array (no other text, no markdown fences) of {n} objects, each:
+{{"angle_used": "<the viral angle>", "theme": "<short English theme>",
+  "image_prompt": "<one photographic sentence>",
+  "en": {{"facebook": "...", "instagram": "...", "linkedin": "..."}},
+  "es": {{"facebook": "...", "instagram": "...", "linkedin": "..."}},
+  "he": {{"facebook": "...", "instagram": "...", "linkedin": "..."}}}}"""
+
+
 def research_and_adapt(n):
-    """ONE call: web-search viral angles AND return n adapted UPE posts (rate-limit friendly)."""
+    """web-search viral angles AND return n adapted UPE posts.
+    Step 1 lets the model research+narrate (web_search). If it doesn't emit clean JSON
+    (common when the tool call makes it answer conversationally), Step 2 is a tool-less
+    reformat call that reliably returns JSON-only."""
     resp = _api(
         [{"role": "user", "content": COMBINED_PROMPT.format(n=n, brand=BRAND, rules=RULES)}],
         tools=[{"type": "web_search_20250305", "name": "web_search", "max_uses": 3}],
-        max_tokens=8000)
+        max_tokens=12000)
     text = "".join(b.get("text", "") for b in resp.get("content", []) if b.get("type") == "text")
-    m = re.search(r"\[\s*\{.*\}\s*\]", text, re.DOTALL)
-    if not m:
-        raise RuntimeError(f"no posts JSON in output: {text[:300]}")
-    return json.loads(m.group(0))
+
+    posts = _extract_json_array(text)
+    if posts:
+        return posts
+
+    # Step 2 — reformat the research prose into JSON-only (no tools = no narration)
+    print("  step-1 returned prose, not JSON — running JSON reformat call...")
+    resp2 = _api(
+        [{"role": "user", "content": REFORMAT_PROMPT.format(
+            brand=BRAND, rules=RULES, research=text[:12000], n=n)}],
+        max_tokens=12000)
+    text2 = "".join(b.get("text", "") for b in resp2.get("content", []) if b.get("type") == "text")
+    posts = _extract_json_array(text2)
+    if posts:
+        return posts
+
+    raise RuntimeError(f"no posts JSON after reformat: {text2[:300] or text[:300]}")
 
 
 def main():
