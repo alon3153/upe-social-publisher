@@ -49,12 +49,20 @@ def _api(messages, tools=None, max_tokens=4096):
     for attempt in range(5):
         try:
             req = urllib.request.Request("https://api.anthropic.com/v1/messages", data=data, headers=headers)
-            with urllib.request.urlopen(req, timeout=180) as r:
+            with urllib.request.urlopen(req, timeout=300) as r:
                 return json.loads(r.read().decode())
         except urllib.error.HTTPError as e:
             if e.code in (429, 529) and attempt < 4:
                 wait = 8 * (attempt + 1)
                 print(f"  rate-limited ({e.code}), retry in {wait}s...")
+                time.sleep(wait)
+                continue
+            raise
+        except (urllib.error.URLError, TimeoutError, OSError) as e:
+            # transient network/read timeout (web_search calls can stall) — retry
+            if attempt < 4:
+                wait = 8 * (attempt + 1)
+                print(f"  network error ({type(e).__name__}: {e}), retry in {wait}s...")
                 time.sleep(wait)
                 continue
             raise
