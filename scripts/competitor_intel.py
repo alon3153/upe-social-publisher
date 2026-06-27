@@ -17,7 +17,7 @@ import os, re, sys, json, time, argparse, urllib.request, urllib.error
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, os.path.join(ROOT, "scripts"))
 from generate_posts import (write_day, next_day, BRAND, RULES, SCHEMA_HINT,
-                            API_KEY, MODEL)
+                            API_KEY, MODEL, council_steering)
 
 COMBINED_PROMPT = """Search the web for what is working RIGHT NOW (2026) in B2B corporate-events,
 incentive-travel and MICE marketing on LinkedIn, Instagram and TikTok — the angles, hooks and
@@ -31,6 +31,7 @@ and LinkedIn copy in English (en), Spanish (es) and Hebrew (he).
 {brand}
 
 {rules}
+{steering}
 
 Return ONLY a JSON array (no other text) of {n} objects, each:
 {{"angle_used": "<the viral angle you adapted>", "theme": "<short English theme>",
@@ -110,7 +111,7 @@ def research_and_adapt(n):
     (common when the tool call makes it answer conversationally), Step 2 is a tool-less
     reformat call that reliably returns JSON-only."""
     resp = _api(
-        [{"role": "user", "content": COMBINED_PROMPT.format(n=n, brand=BRAND, rules=RULES)}],
+        [{"role": "user", "content": COMBINED_PROMPT.format(n=n, brand=BRAND, rules=RULES, steering=council_steering())}],
         tools=[{"type": "web_search_20250305", "name": "web_search", "max_uses": 3}],
         max_tokens=12000)
     text = "".join(b.get("text", "") for b in resp.get("content", []) if b.get("type") == "text")

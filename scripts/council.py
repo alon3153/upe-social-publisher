@@ -31,6 +31,8 @@ sys.path.insert(0, str(ROOT))
 sys.path.insert(0, str(ROOT / "scripts"))
 
 import metricool_analytics as ma
+import leads_source
+import seo_geo_source
 
 API_KEY = os.environ.get("ANTHROPIC_API_KEY", "")
 MODEL = os.environ.get("COUNCIL_MODEL") or "claude-sonnet-4-6"
@@ -46,7 +48,7 @@ def _today():
 
 
 # ---------------------------------------------------------------- scorecard ----
-def build_scorecard(cur, prev):
+def build_scorecard(cur, prev, leads):
     """Deterministic pass/fail vs targets. cur/prev are snapshot dicts."""
     t = TARGETS["effectiveness_targets"]
     ct, pt = cur["totals"], prev["totals"]
@@ -66,7 +68,14 @@ def build_scorecard(cur, prev):
     posts_week = round(ct["posts"] / (cur["period_days"] / 7.0), 1) if cur["period_days"] else 0
     grade("פוסטים/שבוע", posts_week, t["posts_per_week_min"],
           posts_week >= t["posts_per_week_min"])
-    grade("לידים מוסמכים/חודש", "לא מחובר", TARGETS["primary_kpi"]["qualified_leads_per_month"], False)
+    lead_target = TARGETS["primary_kpi"]["qualified_leads_per_month"]
+    if leads.get("ok"):
+        ql = leads.get("qualified_leads", 0)
+        grade("לידים מוסמכים (30 ימים)", ql, lead_target, ql >= lead_target)
+        grade("הזדמנויות חדשות (30 ימים)", leads.get("new_opportunities", 0), "↑",
+              (leads.get("new_opportunities") or 0) > 0)
+    else:
+        grade("לידים מוסמכים/חודש", "לא מחובר", lead_target, False)
 
     passed = sum(1 for r in rows if r["status"] == "✅")
     return {"rows": rows, "passed": passed, "total": len(rows),
@@ -267,7 +276,10 @@ def main():
     for k in ("posts", "impressions", "reach", "interactions"):
         prev["totals"][k] = max(prev["totals"].get(k, 0) - cur["totals"].get(k, 0), 0)
 
-    scorecard = build_scorecard(cur, prev)
+    leads = leads_source.count(30)
+    cur["leads"] = leads
+    cur["seo_geo"] = seo_geo_source.fetch()
+    scorecard = build_scorecard(cur, prev, leads)
 
     if a.no_llm:
         verdict = {"verdict_summary": "(--no-llm) scorecard only", "scores": {}, "what_worked": [],

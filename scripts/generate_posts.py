@@ -16,8 +16,31 @@ import os, re, sys, json, glob, argparse, urllib.request, urllib.error
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DAYS_DIR = os.path.join(ROOT, "content", "days")
+DIRECTIVES_PATH = os.path.join(ROOT, "state", "council_directives.json")
 API_KEY = os.environ.get("ANTHROPIC_API_KEY", "")
 MODEL = os.environ.get("GEN_MODEL", "claude-sonnet-4-6")
+
+
+def council_steering():
+    """Inject the daily Marketing Council's latest safe directives so newly
+    generated content reflects the strategy the council auto-decided. Returns a
+    prompt block, or '' if no directives file exists. Closes the audit→improve loop."""
+    try:
+        d = json.load(open(DIRECTIVES_PATH))
+    except (OSError, ValueError):
+        return ""
+    lines = []
+    for f in d.get("directives", []):
+        ch = f.get("channel", "")
+        lines.append(f"- ({ch}) {f.get('action','')}: {f.get('detail','')}".strip())
+    leads = d.get("leads_actions", [])[:3]
+    block = ""
+    if lines:
+        block += ("\nCOUNCIL STEERING (auto-decided " + str(d.get("updated_at", "")) +
+                  " — follow these when shaping angle/CTA/format):\n" + "\n".join(lines[:8]))
+    if leads:
+        block += "\nLEAD-GEN FOCUS (bias posts toward driving these):\n" + "\n".join(f"- {x}" for x in leads)
+    return block
 
 BRAND = """Uproduction Events (UPE) — B2B corporate event production & incentive travel.
 Tagline: "from business to pleasure". Founded 2010 (16 years). 1,500+ events delivered,
@@ -70,6 +93,7 @@ def call_claude(category, day):
     prompt = f"""{BRAND}
 
 {RULES}
+{council_steering()}
 
 Write a single corporate-social post for day {day}, category "{category}", for Uproduction Events.
 Produce Facebook, Instagram and LinkedIn copy in THREE languages: English (en), Spanish (es), Hebrew (he).
