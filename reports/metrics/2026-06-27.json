@@ -1,0 +1,83 @@
+{
+  "generated_at": "2026-06-27T21:27:05",
+  "period_days": 7,
+  "networks": {
+    "instagram": {
+      "posts": 12,
+      "impressions": 328,
+      "reach": 225,
+      "interactions": 3,
+      "engagement_rate_pct": 0.91,
+      "caveat": null,
+      "top": {
+        "url": "https://www.instagram.com/p/DZ0TYUAE4p6/",
+        "content": "Barcelona doesn't do ordinary. 🌅\nNeither should your next corporate event.\n\n📍 Rooftop receptions over Gaudí skylines\n🍷 Gala dinners inside Modernist palaces\n🌊 B",
+        "impressions": 44,
+        "interactions": 0
+      }
+    },
+    "facebook": {
+      "posts": 12,
+      "impressions": 108,
+      "reach": 0,
+      "interactions": 250,
+      "engagement_rate_pct": 100.0,
+      "caveat": "engagement_rate unreliable (network under-reports impressions for this period)",
+      "top": {
+        "url": null,
+        "content": "",
+        "impressions": 23,
+        "interactions": 0
+      }
+    },
+    "tiktok": {
+      "posts": 2,
+      "impressions": 0,
+      "reach": 412,
+      "interactions": 0,
+      "engagement_rate_pct": 0.0,
+      "caveat": null,
+      "top": {
+        "url": null,
+        "content": "",
+        "impressions": 0,
+        "interactions": 0
+      }
+    },
+    "linkedin": {
+      "posts": 14,
+      "impressions": 132,
+      "reach": 0,
+      "interactions": 17,
+      "engagement_rate_pct": 12.88,
+      "caveat": null,
+      "top": {
+        "url": "https://www.linkedin.com/feed/update/urn:li:share:7474709915102707712",
+        "content": "",
+        "impressions": 28,
+        "interactions": 0
+      }
+    },
+    "youtube": {
+      "posts": 6,
+      "impressions": 7872,
+      "reach": 0,
+      "interactions": 0,
+      "engagement_rate_pct": 0.0,
+      "caveat": null,
+      "top": {
+        "url": null,
+        "content": "",
+        "impressions": 6854,
+        "interactions": 0
+      }
+    }
+  },
+  "totals": {
+    "posts": 46,
+    "impressions": 8440,
+    "reach": 637,
+    "interactions": 270,
+    "engagement_rate_pct": 3.2
+  }
+}
