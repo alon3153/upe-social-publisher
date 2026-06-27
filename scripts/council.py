@@ -33,7 +33,7 @@ sys.path.insert(0, str(ROOT / "scripts"))
 import metricool_analytics as ma
 
 API_KEY = os.environ.get("ANTHROPIC_API_KEY", "")
-MODEL = os.environ.get("COUNCIL_MODEL", "claude-sonnet-4-6")
+MODEL = os.environ.get("COUNCIL_MODEL") or "claude-sonnet-4-6"
 TARGETS = json.loads((ROOT / "scripts" / "kpi_targets.json").read_text())
 REPORT_DIR = ROOT / "reports" / "council"
 METRICS_DIR = ROOT / "reports" / "metrics"
