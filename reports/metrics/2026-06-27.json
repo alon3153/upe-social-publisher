@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-27T21:27:05",
+  "generated_at": "2026-06-27T21:46:14",
   "period_days": 7,
   "networks": {
     "instagram": {
@@ -31,9 +31,9 @@
       }
     },
     "tiktok": {
-      "posts": 2,
+      "posts": 3,
       "impressions": 0,
-      "reach": 412,
+      "reach": 7034,
       "interactions": 0,
       "engagement_rate_pct": 0.0,
       "caveat": null,
@@ -45,11 +45,11 @@
       }
     },
     "linkedin": {
-      "posts": 14,
-      "impressions": 132,
+      "posts": 18,
+      "impressions": 148,
       "reach": 0,
-      "interactions": 17,
-      "engagement_rate_pct": 12.88,
+      "interactions": 20,
+      "engagement_rate_pct": 13.51,
       "caveat": null,
       "top": {
         "url": "https://www.linkedin.com/feed/update/urn:li:share:7474709915102707712",
@@ -74,10 +74,21 @@
     }
   },
   "totals": {
-    "posts": 46,
-    "impressions": 8440,
-    "reach": 637,
-    "interactions": 270,
-    "engagement_rate_pct": 3.2
+    "posts": 51,
+    "impressions": 8456,
+    "reach": 7259,
+    "interactions": 273,
+    "engagement_rate_pct": 3.23
+  },
+  "leads": {
+    "ok": false,
+    "reason": "SALESFORCE_* secrets not set",
+    "qualified_leads": null,
+    "new_opportunities": null,
+    "source": "salesforce"
+  },
+  "seo_geo": {
+    "ok": false,
+    "reason": "GH_PAT not set (cross-repo read to astro)"
   }
 }
