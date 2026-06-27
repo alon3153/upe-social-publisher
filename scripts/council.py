@@ -125,7 +125,7 @@ def run_council(cur, prev, scorecard):
         scorecard=json.dumps(scorecard, ensure_ascii=False))
     body = {
         "model": MODEL,
-        "max_tokens": 6000,
+        "max_tokens": 8000,
         "tools": [{"type": "web_search_20250305", "name": "web_search", "max_uses": 6}],
         "messages": [{"role": "user", "content": prompt}],
     }
@@ -142,7 +142,12 @@ def run_council(cur, prev, scorecard):
     except Exception as e:
         return {"error": f"anthropic {e}"}
     text = "".join(b.get("text", "") for b in resp.get("content", []) if b.get("type") == "text")
-    return _extract_json(text) or {"error": "could not parse council JSON", "raw": text[:800]}
+    parsed = _extract_json(text)
+    if parsed:
+        return parsed
+    sys.stderr.write(f"[council] parse fail. stop_reason={resp.get('stop_reason')} "
+                     f"len={len(text)}\n--- tail ---\n{text[-1500:]}\n")
+    return {"error": "could not parse council JSON", "raw": text[:800]}
 
 
 def _extract_json(text):
