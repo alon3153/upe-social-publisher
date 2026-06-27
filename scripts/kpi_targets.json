@@ -1,0 +1,23 @@
+{
+  "_comment": "UPE Marketing KPI targets — read by the daily council. Edit to retune goals.",
+  "north_star": {
+    "followers_total": 500000,
+    "followers_note": "North-star organic followers (IL + EU decision-makers at companies that run events needing a production company / local supplier). Honest path is multi-year; the council optimizes the leading indicators below, not vanity follower count.",
+    "horizon_months": 36
+  },
+  "primary_kpi": {
+    "qualified_leads_per_month": 10,
+    "leads_definition": "Real NEW inbound leads from NEW potential clients for substantial events/conferences (not existing clients, not vendors).",
+    "leads_source": "UNWIRED — must connect Salesforce new-lead/opportunity count or website form source. Council flags until wired."
+  },
+  "channels": ["instagram", "facebook", "tiktok", "linkedin", "youtube", "google_organic", "ai_geo"],
+  "effectiveness_targets": {
+    "min_avg_engagement_rate_pct": 2.0,
+    "min_reach_per_post": 500,
+    "weekly_impressions_growth_pct": 10,
+    "weekly_follower_growth_pct": 3,
+    "posts_per_week_min": 5
+  },
+  "review_period_days": 7,
+  "trend_period_days": 30
+}

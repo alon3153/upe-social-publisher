@@ -1,0 +1,46 @@
+name: Daily Marketing Council
+
+on:
+  schedule:
+    # 05:30 UTC = 08:30 IST — fresh audit waiting before the workday + before the day's publish
+    - cron: "30 5 * * *"
+  workflow_dispatch:
+    inputs:
+      days:
+        description: "review window in days"
+        required: false
+        default: "7"
+
+permissions:
+  contents: write
+
+jobs:
+  council:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - run: pip install -r requirements.txt
+      - name: Run daily council
+        env:
+          ANTHROPIC_API_KEY:      ${{ secrets.ANTHROPIC_API_KEY }}
+          COUNCIL_MODEL:          ${{ vars.COUNCIL_MODEL }}
+          METRICOOL_TOKEN:        ${{ secrets.METRICOOL_TOKEN }}
+          METRICOOL_USER_ID:      ${{ secrets.METRICOOL_USER_ID }}
+          METRICOOL_BLOG_ID:      ${{ secrets.METRICOOL_BLOG_ID }}
+          APPROVAL_TO:            ${{ secrets.APPROVAL_TO }}
+          MS_GRAPH_TENANT_ID:     ${{ secrets.MS_GRAPH_TENANT_ID }}
+          MS_GRAPH_CLIENT_ID:     ${{ secrets.MS_GRAPH_CLIENT_ID }}
+          MS_GRAPH_CLIENT_SECRET: ${{ secrets.MS_GRAPH_CLIENT_SECRET }}
+          MS_GRAPH_FROM:          ${{ secrets.MS_GRAPH_FROM }}
+        run: python3 scripts/council.py --days "${{ github.event.inputs.days || '7' }}"
+      - name: Commit report + directives
+        run: |
+          git config user.name  "upe-council-bot"
+          git config user.email "bot@upe.co.il"
+          git add reports/council reports/metrics state/council_directives.json 2>/dev/null || true
+          git commit -m "council: daily report $(date -u +%F)" || echo "nothing to commit"
+          git push || echo "push skipped"
