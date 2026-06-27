@@ -4,54 +4,54 @@
   "directives": [
     {
       "category": "safe_auto",
-      "action": "מעבר ל-3 פוסטים איכותיים בשבוע בלינקדאין במקום 18 — עם פוקוס על Native Text Posts",
-      "detail": "עדכון אלגוריתם LinkedIn יוני 2026 מראה ש-Native Text Posts עולים על קרוסלים ב-28% ריץ' ו-34% מעורבות; פחות פוסטים עם dwell-time גבוה עדיפים על ריבוי פוסטים שנקברים",
+      "action": "הורדת תדירות LinkedIn ל-3-4 פוסטים בשבוע, עם פריסה בימים ג'-ה' בין 09:00-10:00",
+      "detail": "אלגוריתם LinkedIn יוני 2026 מעניש multiple same-day posts ומתגמל consistency; 3-5 פוסטים/שבוע מפרופיל אישי הוא האופטימום, עם engagement בשעה הראשונה קריטי להפצה.",
       "channel": "linkedin"
     },
     {
       "category": "safe_auto",
-      "action": "הגדרת 3 עמודי תוכן קבועים ל-TikTok: Behind-the-Scenes מהפקות, 'טעויות שעל תכנן אירוע תאגידי להימנע מהן', ו-Destination Reveals",
-      "detail": "TikTok מתפקדת כמנוע חיפוש ב-2026; תוכן חינוכי בפורמט 'value bomb' עם hook של 3 שניות מייצר organic reach ללא קהל עוקבים — ו-reach של 7K הושג כבר עם 3 פוסטים בלבד",
+      "action": "מעבר לפורמט native-text post ב-LinkedIn עם שאלה ספציפית-שנויה במחלוקת בסיום — במקום carousels",
+      "detail": "מחקר על 147 חשבונות B2B (יוני 2026) הראה native text posts מניבים 28% יותר reach ו-34% יותר engagement מ-carousels; כלול 3-4 hashtags נישתיים בלבד (#CorporateEvents #IncentiveTravel #EventProduction).",
+      "channel": "linkedin"
+    },
+    {
+      "category": "safe_auto",
+      "action": "הגדרת 3 עמודי תוכן ל-TikTok: Behind-the-scenes הפקה / 'טעויות נפוצות' בארגון אירועים / Destination reveal סרטוני 15-30 שניות",
+      "detail": "TikTok algorithm 2026 מתגמל educational 'value bombs' ו-saves/shares כ-primary signals לצמיחה; ברנדים ראו 200%+ גידול עוקבים YOY — 3-5 פוסטים/שבוע הם ה-sweet spot.",
       "channel": "tiktok"
     },
     {
       "category": "safe_auto",
-      "action": "הגדרת לוח זמנים לפרסום לינקדאין: שלישי-חמישי בין 8:00-10:00 ישראל, עם נוכחות אנושית לתגובה בשעה הראשונה",
-      "detail": "אלגוריתם LinkedIn מעריך פוסטים בשעה הראשונה; engagement מהיר מגדיל distribution; שבת-ראשון חלש לB2B. תגובה בשעה הראשונה היא גורם קריטי בחשיפה",
+      "action": "ייצוב Instagram ל-5 פוסטים בשבוע עם Reels בלבד (לא static posts) ממוקדים ב-event moments ויזואלים דרמטיים",
+      "detail": "Organic reach ב-Instagram מצטמצם ל-static posts לפי Emplifi 2026 benchmark; Reels מקבלים הפצה רחבה יותר ומשתלבים ב-TikTok cross-post לחיסכון בייצור.",
+      "channel": "instagram"
+    },
+    {
+      "category": "safe_auto",
+      "action": "הגדרת Metricool/Salesforce webhook — לפחות UTM tracking על כל לינק בbio ו-posts לזיהוי source של כל פניה",
+      "detail": "ה-KPI הראשי (10 לידים/חודש) כלל לא נמדד כרגע; minimum viable measurement = UTM parameters + Google Analytics goal + manual lead log עד לחיבור Salesforce מלא.",
       "channel": "linkedin"
     },
     {
       "category": "safe_auto",
-      "action": "הוספת Call-to-Save בסיום כל פוסט לינקדאין ('שמור לתכנון ה-event הבא שלך')",
-      "detail": "Saves הם סיגנל האיכות החזק ביותר ב-LinkedIn 2026 (+35% boost לאלגוריתם); יוצרים reference content — רשימות, frameworks, step-by-step — שאנשי מקצוע ישמרו",
-      "channel": "linkedin"
-    },
-    {
-      "category": "safe_auto",
-      "action": "ריפורמט של תוכן יוטיוב לפוסטים ב-Instagram Reels ו-TikTok — repurpose אוטומטי",
-      "detail": "יוטיוב כבר מייצר 93% מהחשיפות; Reel/TikTok מאותו תוכן ייצרו reach נוסף ללא עלות ייצור; TikTok's organic reach for video-first content מגיעה לקהל חדש ללא עוקבים",
+      "action": "הגדלת קצב YouTube ל-2 uploads/שבוע: short-form (60 שניות Shorts) + long-form case study אחד לחודש",
+      "detail": "YouTube הוביל עם 7,872 חשיפות מ-6 פוסטים (ממוצע 1,312/פוסט) — ROI הגבוה ביותר בתיק; YouTube Shorts נסרקים גם על-ידי גוגל ומשפרים SEO.",
       "channel": "youtube"
-    },
-    {
-      "category": "safe_auto",
-      "action": "הגדרת hashtag strategy ממוקדת: LinkedIn — 3-5 hashtags נישה (#CorporateEvents, #IncentiveTravel, #EventProduction), Instagram — mix של geotag + #MICE + #EventPlanning",
-      "detail": "Hashtags עם מיליון+ עוקבים מדללים תוכן ב-feed רווי; hashtags נישתיים מובילים לקהל B2B ממוקד; geotag לוקאלי (Israel/Barcelona/Amsterdam) מגדיל relevance לקהל יעד",
-      "channel": "linkedin"
     }
   ],
   "follower_growth_plan": [
-    "שלב 1 (חודשים 1-3): בניית בסיס — Personal Brand של מנהיגים בכירים בלינקדאין + אופטימיזציית דף החברה (תיאור, keywords, Showcase Pages); יעד: הכפלת followers בלינקדאין ל-×2",
-    "שלב 2 (חודשים 3-6): YouTube כמנוע Growth — Library של 30+ סרטוני thought leadership + educational content; כל סרטון ממוטב לחיפוש YouTube/Google; יעד: 1,000 subscribers + 50K impressions/שבוע מ-YouTube בלבד",
-    "שלב 3 (חודשים 6-12): TikTok Organic Expansion — 3-5 פוסטים/שבוע, behind-the-scenes, educational 'EventTok' content; TikTok median brand follower growth >200% YoY — יעד: 10K followers ו-100K+ reach/חודש",
-    "שלב 4 (חודשים 12-18): Employee Advocacy Program — גיוס 10-15 עובדים לפרסום תוכן אישי בלינקדאין תחת branding של UPE; הגדלת organic reach ×8 ע\"פ benchmark",
-    "שלב 5 (חודשים 18-36): Cross-Platform Compounding — תוכן YouTube מופץ כ-Reels/TikToks, LinkedIn Newsletters עם 5K+ מנויים, SEO/GEO מלא מחובר; יעד: 500K עוקבים מצטברים"
+    "שלב 1 (חודשים 1-3): ריכוז משאבים — הורדת סה\"כ פוסטים ל-25/שבוע, העברת 60% מהמאמץ ל-LinkedIn (thought leadership) ו-TikTok (educational shorts); הגדרת 4 עמודי תוכן קבועים (destination wow, behind-the-scenes, event ROI, industry insight).",
+    "שלב 2 (חודשים 3-6): הפעלת Employee Advocacy — 5-8 עובדי UPE פעילים ב-LinkedIn עם פוסטים אישיים 2x/שבוע; 10 advocates עם 2,000 חיבורים = ~40,000 חשיפות/שבוע אורגניות ללא עלות.",
+    "שלב 3 (חודשים 6-12): cross-platform flywheel — כל YouTube case study מרופרפס ל-5 TikTok Shorts + 3 LinkedIn posts + 2 Instagram Reels; מנפה ייצור ומגדיל coverage פי 10 לאותו תוכן.",
+    "שלב 4 (חודשים 12-18): LinkedIn Newsletter ל-5,000+ subscribers + LinkedIn Live events רבעוניים (webinars לCMO/HR); Live מקבל 7x יותר reactions מ-standard video post ובונה follower base מהיר.",
+    "שלב 5 (חודשים 18-36): TikTok כמנוע צמיחה ראשי — ברנדים עם strategy נכונה ראו 200%+ גידול YOY; מחייב 4-5 posts/שבוע נייטיב עם hook 3 שניות ו-educational value; cross-pollination ל-Instagram Reels מכפיל reach ללא עלות."
   ],
   "leads_actions": [
-    "דחוף (שבוע 1): חיבור Salesforce + UTM tracking — ללא זה אפשר לייצר 10 לידים ולא לדעת זאת; זהו ה-prerequisite לכל השאר",
-    "מיידי (שבוע 1-2): LinkedIn Outreach יומי — 20-30 connection requests ל-CMO/HR Directors/Event Managers בישראל ואירופה; follow-up ממוקד ופרסונלי לאחר קבלה; ציפייה: 3-5 שיחות בחודש הראשון",
-    "חודש 1: פרסום Lead Magnet (Budget Planner/Venue Checklist) + Landing Page עם Form; קישור מכל ביו ערוץ + פוסט שבועי שמפנה אליו",
-    "חודש 1-2: הפעלת Personal Brand LinkedIn של מנהל בכיר — כל פוסט מסתיים ב-CTA עדין ('נשמח לשיחת ייעוץ קצרה על האירוע הבא שלכם'); יצירת 'warm pipeline' מקהל הפרט",
-    "חודש 2: Webinar חודשי חינמי — 'איך לתכנן כנס תאגידי בברצלונה/אמסטרדם ב-2026' — Registration = qualified lead; ציפייה: 15-30 רשומים לwebinar ראשון",
-    "חודש 3+: Website Visitor Identification (כלי כמו Leadinfo/Leadfeeder) — זיהוי 98% ממבקרי האתר שלא מגישים form; התראות מיידיות ל-sales עם כוונת קנייה"
+    "מיידי (שבוע 1): חיבור Salesforce + UTM tracking על כל לינקים — ללא זה אי אפשר לדעת אם יש 0 לידים או 10 לידים חודשיים; זו משימה טכנית, לא שיווקית.",
+    "מיידי (שבוע 1-2): פרופיל LinkedIn של מנכ\"ל מותאם — headline עם value prop ברורה, About section עם outcome-focused copy, Featured section עם case study אחד של אירוע מוצלח.",
+    "חודש 1: השקת LinkedIn warm outbound שיטתי — 10 תגובות/יום על posts של CMO/HR ישראל ואירופה; engagement לפני outreach מוריד 'spam radar' ומניב inbound DMs.",
+    "חודש 1-2: יצירת 'event production checklist' או 'MICE destination guide 2026' להורדה ב-LinkedIn — lead magnet ממוקד שמייצר opt-in connections עם decision makers.",
+    "חודש 2-3: LinkedIn Event וובינר חודשי ('How Israeli companies run unforgettable incentive trips in Europe') — events ב-LinkedIn מקבלים הפצה אלגוריתמית חינמית וcapture email בעת הרישום.",
+    "חודש 3+: הפעלת ABM רשימה של 100-200 חברות ישראלי/אירופאיות עם 200+ עובדים — targeting לפי CRO/CMO/HR Director ב-LinkedIn עם Sponsored Content (גם ב-budget נמוך) על גבי organic warmup."
   ]
 }
