@@ -1,0 +1,29 @@
+name: Approve Pending
+
+on:
+  workflow_dispatch:
+    inputs:
+      day:
+        description: "Only approve this content day (blank = all pending)"
+        required: false
+        default: ""
+
+permissions:
+  contents: read
+
+jobs:
+  approve:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    if: github.actor == 'alon3153'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - run: pip install -r requirements.txt
+      - name: Approve pending rows
+        env:
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
+        run: python3 scripts/approve_pending.py "${{ github.event.inputs.day }}"
