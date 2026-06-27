@@ -103,6 +103,9 @@ DETERMINISTIC SCORECARD:
 Use web_search to find what is working RIGHT NOW (2026) for B2B/MICE organic growth and for the
 specific networks where UPE is weakest. Be concrete and brutally honest about the weak numbers.
 
+Be concise to stay within limits: MAX 6 items per list, each item ≤ 2 sentences. Output ONLY the
+json — no preamble, no prose after it.
+
 Return ONE json object (and nothing after it) in a ```json fenced block, all human-facing strings
 in HEBREW, with EXACTLY these keys:
 {{
@@ -125,7 +128,7 @@ def run_council(cur, prev, scorecard):
         scorecard=json.dumps(scorecard, ensure_ascii=False))
     body = {
         "model": MODEL,
-        "max_tokens": 8000,
+        "max_tokens": 16000,
         "tools": [{"type": "web_search_20250305", "name": "web_search", "max_uses": 6}],
         "messages": [{"role": "user", "content": prompt}],
     }
