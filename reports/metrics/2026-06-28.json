@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-28T06:28:51",
+  "generated_at": "2026-06-28T07:09:10",
   "period_days": 7,
   "networks": {
     "instagram": {
@@ -82,7 +82,7 @@
   },
   "leads": {
     "ok": false,
-    "reason": "SF HTTP 400: {\"error\":\"invalid_grant\",\"error_description\":\"no client credentials user enabled\"}",
+    "reason": "SF HTTP 400: {\"error\":\"invalid_grant\",\"error_description\":\"no valid scopes defined\"}",
     "qualified_leads": null,
     "new_opportunities": null,
     "source": "salesforce"
