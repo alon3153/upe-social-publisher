@@ -19,5 +19,10 @@
     "posts_per_week_min": 5
   },
   "review_period_days": 7,
-  "trend_period_days": 30
+  "trend_period_days": 30,
+  "aeo_targets": {
+    "_comment": "Targets for the weekly AEO/GEO loop. per_dimension_min = score below which a dimension is 'weak' and generates briefs.",
+    "per_dimension_min": { "product_search": 70, "comparison": 70, "reputation": 90 },
+    "briefs_per_run": 3
+  }
 }
