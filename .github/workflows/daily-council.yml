@@ -45,6 +45,7 @@ jobs:
         run: |
           git config user.name  "upe-council-bot"
           git config user.email "bot@upe.co.il"
-          git add reports/council reports/metrics state/council_directives.json 2>/dev/null || true
+          git pull --rebase --autostash -q origin main || true
+          git add reports/council reports/metrics state 2>/dev/null || true
           git commit -m "council: daily report $(date -u +%F)" || echo "nothing to commit"
           git push || echo "push skipped"
