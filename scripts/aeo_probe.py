@@ -61,7 +61,7 @@ def run_probe(questions, models, ask_fn, judge_fn):
                                     "aeo": round(mean(dim_scores.values())),
                                     "answers": answers}
         except Exception as e:  # a model with a bad/unbilled key must not crash the whole loop
-            out["errors"].append(f"{model}: probe failed ({type(e).__name__}: {str(e)[:120]})")
+            out["errors"].append(f"{model}: probe failed ({type(e).__name__}: {str(e)[:500]})")
     return out
 
 
