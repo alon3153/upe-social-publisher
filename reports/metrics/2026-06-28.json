@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-28T07:17:13",
+  "generated_at": "2026-06-28T08:29:12",
   "period_days": 7,
   "networks": {
     "instagram": {
@@ -82,10 +82,12 @@
   },
   "leads": {
     "ok": true,
-    "qualified_leads": 0,
+    "qualified_leads": 12,
     "new_opportunities": 12,
+    "lead_object_count": 0,
     "period_days": 30,
-    "source": "salesforce"
+    "source": "salesforce",
+    "definition": "new Opportunities created (all)"
   },
   "seo_geo": {
     "generated_at": "2026-06-27",
