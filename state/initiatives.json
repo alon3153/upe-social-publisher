@@ -1,1 +1,234 @@
-{}
+{
+  "feb2a415": {
+    "id": "feb2a415",
+    "title": "הפחתת נפח פרסום כולל מ-49 ל-20 פוסטים בשבוע — ריכוז משאבי production ב-LinkedIn (5/שבוע) ו-TikTok (4/שבוע) ו-Instagram Reels (3/שבוע), עם Carousel כפורמט מוביל",
+    "status": "todo",
+    "revisions": 0,
+    "history": [
+      {
+        "date": "2026-06-28",
+        "error": "parse fail"
+      }
+    ],
+    "created": "2026-06-28",
+    "updated": "2026-06-28",
+    "kind": "recommendation",
+    "priority": "P0",
+    "channel": "instagram,linkedin,tiktok",
+    "expected_impact": "שיפור של 30-50% ב-engagement rate לפוסט; הפחתת עלות production; שיפור תדמית מקצועית. Metricool 2026: הגברת תדירות ללא איכות הורידה impressions ב-Instagram ב-39%."
+  },
+  "c664ef63": {
+    "id": "c664ef63",
+    "title": "גיוס/הפעלת מנהלי/ות חשבון LinkedIn ב-UPE (CEO, Creative Director, Account Lead) לפרסום פוסטים אישיים של thought leadership — לפחות 2 פוסטים אישיים לשבוע לכל אחד",
+    "status": "todo",
+    "revisions": 0,
+    "history": [
+      {
+        "date": "2026-06-28",
+        "error": "parse fail"
+      }
+    ],
+    "created": "2026-06-28",
+    "updated": "2026-06-28",
+    "kind": "recommendation",
+    "priority": "P0",
+    "channel": "linkedin",
+    "expected_impact": "פרופילים אישיים מייצרים 8x יותר engagement מעמודי חברה ב-LinkedIn. פוסט אישי אחד איכותי יעקוף את 18 פוסטי החברה הנוכחיים בחשיפה. מנוע growth מרכזי לכיוון 500K."
+  },
+  "0fd2010b": {
+    "id": "0fd2010b",
+    "title": "יצירת 4 דפי Landing SEO ייעודיים לביטויי ה-top opportunity: 'virtual events production israel', 'הפקת נופש חברה', 'incentive travel spain', 'new hire team building spain' — כל דף עם case study, תמונות ו-CTA ברור",
+    "status": "todo",
+    "revisions": 0,
+    "history": [],
+    "created": "2026-06-28",
+    "updated": "2026-06-28",
+    "kind": "recommendation",
+    "priority": "P0",
+    "channel": "google_organic_geo",
+    "expected_impact": "UPE נמצאת בעמדה 7-13 על ביטויים עם volume של 98-1,034 חיפושים — שיפור ל-top 5 יכפיל CTR. דפים ייעודיים גם משפרים AI citation rate לפי Seer Interactive 2026 (ציטוט ב-AIO מייצר +120% קליקים)."
+  },
+  "02a0c7b0": {
+    "id": "02a0c7b0",
+    "title": "הפקת סדרת YouTube 'Behind the Production' — 6-8 פרקים של 5-8 דקות המציגים פרויקט אמיתי מrequirement ועד execution, עם hook בולט ב-5 השניות הראשונות ו-3-5 segments עם micro-hooks",
+    "status": "todo",
+    "revisions": 0,
+    "history": [],
+    "created": "2026-06-28",
+    "updated": "2026-06-28",
+    "kind": "recommendation",
+    "priority": "P1",
+    "channel": "youtube",
+    "expected_impact": "YouTube כבר מייצר 7,977 חשיפות אך 0 אינטראקציות — בעיית retention ו-hook. סדרה מגבירה session time ו-watch time (הסיגנל החזק ביותר באלגוריתם) ויוצרת topical authority למנועי חיפוש. יעד: CTR מעל 4% בתוך 3 חודשים."
+  },
+  "758211dc": {
+    "id": "758211dc",
+    "title": "בניית Carousel LinkedIn שבועי: '5 דברים שלמדנו מהפקת [שם אירוע]' — פורמט document post עם נתון מפתיע בslide 1, insight אמיתי בכל slide, ו-CTA לדמו בslide אחרון",
+    "status": "todo",
+    "revisions": 0,
+    "history": [],
+    "created": "2026-06-28",
+    "updated": "2026-06-28",
+    "kind": "recommendation",
+    "priority": "P1",
+    "channel": "linkedin",
+    "expected_impact": "Document posts מייצרים engagement rate של 3.2% ו-reach של 22-35% ב-LinkedIn לפי נתוני Improvado 2026. Native text posts עם storytelling מוביל ב-28% higher reach לפי ניתוח Markana Media יוני 2026 על 147 חשבונות B2B."
+  },
+  "9d9f2d9e": {
+    "id": "9d9f2d9e",
+    "title": "הפסקת השקעה ב-Facebook organic — ניתוב תקציב זמן ל-TikTok ו-LinkedIn. Facebook ישמש אך ורק לretargeting paid בעתיד",
+    "status": "todo",
+    "revisions": 0,
+    "history": [],
+    "created": "2026-06-28",
+    "updated": "2026-06-28",
+    "kind": "recommendation",
+    "priority": "P2",
+    "channel": "facebook",
+    "expected_impact": "Facebook organic reach לעמודי עסקים עומד על מתחת ל-2-3% ב-2026; B2B SaaS ושירותים מראים engagement של 0.28-0.32% בלבד. זמן production הנחסך ינותב לפלטפורמות בעלות ROI גבוה יותר."
+  },
+  "94dcf4e2": {
+    "id": "94dcf4e2",
+    "title": "שמירה על 12 לידים/חודש תוך שיפור איכות: הוספת שאלת 'גודל אירוע משוער' לכל טופס יצירת קשר — סינון הזדמנויות מתחת ל-100 משתתפים לקו שירות אחר.",
+    "status": "todo",
+    "revisions": 0,
+    "history": [],
+    "created": "2026-06-28",
+    "updated": "2026-06-28",
+    "kind": "leads_action",
+    "priority": "leads",
+    "channel": "leads"
+  },
+  "befe9ede": {
+    "id": "befe9ede",
+    "title": "LinkedIn outreach שיטתי: כל employee שמפרסם post יגיב לתגובות ויתחיל שיחת DM עם מגיבים שמתאימים ל-ICP (CMO/HR/Event Lead בחברות 200+) — multi-touch sequence של 5 נגיעות ב-14 יום.",
+    "status": "todo",
+    "revisions": 0,
+    "history": [],
+    "created": "2026-06-28",
+    "updated": "2026-06-28",
+    "kind": "leads_action",
+    "priority": "leads",
+    "channel": "leads"
+  },
+  "a471e79f": {
+    "id": "a471e79f",
+    "title": "בניית 'Event ROI Calculator' כ-lead magnet בדף ה-landing של 'הפקת נופש חברה' ו-'incentive travel spain' — טופס עם 3 שדות בלבד (גודל קבוצה, יעד, תקציב), התוצאה נשלחת ב-email עם follow-up מכירתי.",
+    "status": "todo",
+    "revisions": 0,
+    "history": [],
+    "created": "2026-06-28",
+    "updated": "2026-06-28",
+    "kind": "leads_action",
+    "priority": "leads",
+    "channel": "leads"
+  },
+  "d08940e1": {
+    "id": "d08940e1",
+    "title": "הפעלת LinkedIn Trial Reels / native video testimonials מלקוחות קיימים (אחרי אישור) — video testimonial מ-CMO של לקוח מרכזי עם ציון 'הוריד עלות לנוסע ב-23%' ימשוך ICP זהה. כל ליד ממקור זה מגיע warm.",
+    "status": "todo",
+    "revisions": 0,
+    "history": [],
+    "created": "2026-06-28",
+    "updated": "2026-06-28",
+    "kind": "leads_action",
+    "priority": "leads",
+    "channel": "leads"
+  },
+  "53504a47": {
+    "id": "53504a47",
+    "title": "Salesforce attribution: הוספת שדה 'first_touch_channel' לכל Opportunity חדשה — מיפוי אחורה של 12 הלידים הנוכחיים לפי מקור כדי להכפיל את הערוץ שמייצר הכי הרבה. אחרי 2 חודשים: 80% מהמשאבים לערוץ המוביל.",
+    "status": "todo",
+    "revisions": 0,
+    "history": [],
+    "created": "2026-06-28",
+    "updated": "2026-06-28",
+    "kind": "leads_action",
+    "priority": "leads",
+    "channel": "leads"
+  },
+  "e1164b0f": {
+    "id": "e1164b0f",
+    "title": "יצירת 'UPE Client Council' — קבוצת LinkedIn פרטית ל-20 לקוחות עבר מרכזיים: פעם בחודש תוכן בלעדי (market benchmark, venue guide) + הפניות הדדיות. כל חבר council שמפנה ליד = 1 שעת consulting חינם. קבוצות referral מניבות לידים חמים עם close rate גבוה ב-40%.",
+    "status": "todo",
+    "revisions": 0,
+    "history": [],
+    "created": "2026-06-28",
+    "updated": "2026-06-28",
+    "kind": "leads_action",
+    "priority": "leads",
+    "channel": "leads"
+  },
+  "42260e0b": {
+    "id": "42260e0b",
+    "title": "שלב 1 (חודשים 1-3) — תשתית: הפחתת פוסטים ל-20/שבוע, הגדרת 3 עמודי תוכן ב-TikTok ו-LinkedIn, אופטימיזציה מלאה של פרופילי החברה (bio, keywords, highlights), גיוס 3 אנשי C-level לפרסם מחשבונות אישיים.",
+    "status": "todo",
+    "revisions": 0,
+    "history": [],
+    "created": "2026-06-28",
+    "updated": "2026-06-28",
+    "kind": "follower_plan",
+    "priority": "follower",
+    "channel": "growth"
+  },
+  "a33ae934": {
+    "id": "a33ae934",
+    "title": "שלב 2 (חודשים 2-6) — TikTok scale: 4-6 פוסטים/שבוע ב-TikTok עם hooks חזקים ב-3 שניות ראשונות, שאלות בcaption, mentions של suppliers ו-partners; מטרה: 10K followers TikTok ו-reach 50K/חודש. TikTok מוביל בצמיחת tier-jump (16.47% vs 6.89% ב-LinkedIn) ב-2026.",
+    "status": "todo",
+    "revisions": 0,
+    "history": [],
+    "created": "2026-06-28",
+    "updated": "2026-06-28",
+    "kind": "follower_plan",
+    "priority": "follower",
+    "channel": "growth"
+  },
+  "fc5c8307": {
+    "id": "fc5c8307",
+    "title": "שלב 3 (חודשים 3-9) — LinkedIn authority: סדרת native text posts שבועית מפי מנהלים, LinkedIn Newsletter חודשי 'The Event Intelligence Report', polls שבועיים לCMOs/HR. מטרה: 5K followers LinkedIn בעלי עניין ICP.",
+    "status": "todo",
+    "revisions": 0,
+    "history": [],
+    "created": "2026-06-28",
+    "updated": "2026-06-28",
+    "kind": "follower_plan",
+    "priority": "follower",
+    "channel": "growth"
+  },
+  "cddd78f9": {
+    "id": "cddd78f9",
+    "title": "שלב 4 (חודשים 6-12) — YouTube compounding: סדרת 'Behind the Production' מייצרת session time גבוה ו-SEO ארוך-טווח; embedding סרטונים בעמודי SEO; end-screens ו-playlists מגדילים watch time. מטרה: 1,000 subscribers ו-CTR מעל 4%.",
+    "status": "todo",
+    "revisions": 0,
+    "history": [],
+    "created": "2026-06-28",
+    "updated": "2026-06-28",
+    "kind": "follower_plan",
+    "priority": "follower",
+    "channel": "growth"
+  },
+  "22a722fe": {
+    "id": "22a722fe",
+    "title": "שלב 5 (חודשים 9-18) — Cross-platform flywheel: TikTok-first content מופק ומועתק (ללא watermark) ל-Instagram Reels ו-YouTube Shorts; LinkedIn posts מורחבים ל-carousel; אחד מהit hits מקודם בSponsored Content. מטרה: Instagram 10K, LinkedIn 8K, TikTok 30K.",
+    "status": "todo",
+    "revisions": 0,
+    "history": [],
+    "created": "2026-06-28",
+    "updated": "2026-06-28",
+    "kind": "follower_plan",
+    "priority": "follower",
+    "channel": "growth"
+  },
+  "167474f6": {
+    "id": "167474f6",
+    "title": "שלב 6 (חודשים 18-36) — GEO + AI visibility: בניית case studies ו-editorial mentions שמזינים AI Overviews ו-ChatGPT/Perplexity; שיתופי פעולה עם מגזינים מקצועיים (Meetpie, CEI, Conference & Incentive Travel); מיצוב UPE כ-cited vendor בתשובות AI. מטרה: 100K combined followers, 500K בשנה 3 עם paid amplification.",
+    "status": "todo",
+    "revisions": 0,
+    "history": [],
+    "created": "2026-06-28",
+    "updated": "2026-06-28",
+    "kind": "follower_plan",
+    "priority": "follower",
+    "channel": "growth"
+  }
+}
