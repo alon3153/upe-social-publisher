@@ -50,7 +50,12 @@
     "title": "יצירת 4 דפי Landing SEO ייעודיים לביטויי ה-top opportunity: 'virtual events production israel', 'הפקת נופש חברה', 'incentive travel spain', 'new hire team building spain' — כל דף עם case study, תמונות ו-CTA ברור",
     "status": "todo",
     "revisions": 0,
-    "history": [],
+    "history": [
+      {
+        "date": "2026-06-28",
+        "error": "anthropic Remote end closed connection without response"
+      }
+    ],
     "created": "2026-06-28",
     "updated": "2026-06-28",
     "kind": "recommendation",
