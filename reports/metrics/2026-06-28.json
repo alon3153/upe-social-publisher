@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-28T06:28:51",
+  "generated_at": "2026-06-28T07:17:13",
   "period_days": 7,
   "networks": {
     "instagram": {
@@ -81,10 +81,10 @@
     "engagement_rate_pct": 3.21
   },
   "leads": {
-    "ok": false,
-    "reason": "SF HTTP 400: {\"error\":\"invalid_grant\",\"error_description\":\"no client credentials user enabled\"}",
-    "qualified_leads": null,
-    "new_opportunities": null,
+    "ok": true,
+    "qualified_leads": 0,
+    "new_opportunities": 12,
+    "period_days": 30,
     "source": "salesforce"
   },
   "seo_geo": {

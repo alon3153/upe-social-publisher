@@ -4,55 +4,54 @@
   "directives": [
     {
       "category": "safe_auto",
-      "action": "הגדרת לוח תוכן LinkedIn שבועי: 3 פוסטים מפרופילים אישיים (מנכ\"ל / מנהל פרויקטים / Creative Director) + 1–2 פוסטים מדף החברה",
-      "detail": "פרופילים אישיים מניבים 5–8x יותר reach מדפי חברות ב-2026; פוסטים בין 1,300–3,000 תווים עם line-breaks מושגים 38% יותר ביצועים; פרסום בין 8–10 ובין 12–14 בימים ב'–ה' בשעות שיא B2B",
+      "action": "הפחתת תדירות הפרסום ב-LinkedIn ל-4-5 פוסטים/שבוע תוך דגש על native text posts ו-dwell time",
+      "detail": "אלגוריתם LinkedIn יוני 2026 מגמל native text עם 28% reach גבוה יותר מקרוסלים, ו-dwell time של 15+ שניות מניב +40% reach. פחות פוסטים באיכות גבוהה עדיפים על 18 פוסטים/שבוע עם 8 חשיפות ממוצע.",
       "channel": "linkedin"
     },
     {
       "category": "safe_auto",
-      "action": "הגדרת אסטרטגיית hashtag LinkedIn: מקסימום 3 תגיות, שילוב 1–2 נישה-ספציפיות (#MICEEvents #IncentiveTravel #EventProduction) עם 1 כללית",
-      "detail": "האלגוריתם של LinkedIn ב-2026 מעניש hashtag stuffing; מעל 3 תגיות פוגע ב-reach; תגיות עם מעל מיליון עוקבים מדללות חשיפה בפיד רווי",
+      "action": "הגדרת hashtag strategy ל-LinkedIn: 3-5 תגיות מדויקות בלבד (#MICEindustry, #CorporateEvents, #IncentiveTravel) — ללא תגיות עם מיליון+ עוקבים",
+      "detail": "תגיות רחבות מדי מדיחות תוכן לפיד רווי; תגיות נישה מגדילות חשיפה לקהל היעד הרלוונטי (CMO, HR Directors, Event Leads).",
       "channel": "linkedin"
     },
     {
       "category": "safe_auto",
-      "action": "הגדרת מיקס תוכן Instagram שבועי: 3–4 Reels + 2 Carousels + 1–2 Stories יומיות — עם מדידת saves ו-DM sends במקום לייקים",
-      "detail": "Reels מגיעים ל-30–38% reach לעומת 13% לתמונות סטטיות; Carousels מניבים 109% יותר engagement per impression לעומת Reels; saves ו-DM shares נושאות פי 3 משקל אלגוריתמי מלייקים",
-      "channel": "instagram"
-    },
-    {
-      "category": "safe_auto",
-      "action": "קביעת לוח פוסטים TikTok של 3–4 בשבוע עם פורמטי Behind-the-Scenes, Before/After ו-Event Build Timelapse; קידוד keywords מקצועיים בכיתוב",
-      "detail": "TikTok מעניש חשבונות שמפרסמים פחות מ-3x בשבוע; האלגוריתם מדרג על watchthrough rate ו-shares ולא על לייקים; TikTok פועל כמנוע חיפוש לאנשי מקצוע — כיתובים עם keywords מגדילים discoverability",
-      "channel": "tiktok"
-    },
-    {
-      "category": "safe_auto",
-      "action": "הגדרת YouTube Shorts pipeline: עריכת 60 שניות מכל פרויקט ארוך לפורמט Shorts + כיתוב SEO מלא (200–300 מילה בתיאור) וקישור לסרטון האם",
-      "detail": "YouTube Shorts מניע 200 מיליארד צפיות יומיות; אלגוריתם ה-home feed צמצם slots לסרטונים ארוכים ב-80% בדצמבר 2025; ה-Shorts serve כדיסקברי שמנתב לתוכן ארוך שמגדיל זמן שהייה ו-B2B intent",
+      "action": "בניית לוח תוכן YouTube: שיעור 'behind the scenes production' קצר (60-90 שניות) לכל אירוע גדול + Shorts מתוכן קיים",
+      "detail": "פוסט YouTube אחד הניב 6,886 חשיפות — גבוה פי 46 מממוצע Instagram. הכפלת קצב היצור ל-2 סרטונים/שבוע מנצלת את הערוץ החזק ביותר בנתונים.",
       "channel": "youtube"
     },
     {
       "category": "safe_auto",
-      "action": "יצירת content pillars SEO לאתר upe.co.il סביב 5 מונחי ה-opportunity המובילים (virtual events, הפקת נופש חברה, הפקות אירועים לחברות, אירועי קונספט, ארגון טיולים לחברות) עם מיפוי לעמודי landing ייעודיים",
-      "detail": "UPE אינה מדורגת כלל על מונחי קור-בנצ'מארק תחרותיים; CTR מהנדרים הנ\"ל עומד על 7–13% עם אלפי חשיפות — שיפור ל-Top10 יניב מאות קליקים נוספים חודשיים; 71% ממחקר B2B מתחיל בחיפוש גנרי לפני פנייה לספק",
+      "action": "קביעת חלון פרסום LinkedIn: ימי ב'-ד' בין 8:00-10:00 ו-12:00, עם נוכחות מיידית לתגובה בשעה הראשונה",
+      "detail": "האלגוריתם מעריך כל פוסט בשעה הראשונה; engagement מהיר = הפצה רחבה. תגובה לתגובות בשעה הראשונה היא הגורם המכריע ביותר לreach.",
+      "channel": "linkedin"
+    },
+    {
+      "category": "safe_auto",
+      "action": "מיפוי 5 keywords הזדמנות ב-GSC לדפי נחיתה ייעודיים: 'virtual events' (pos 7.1, 1,034 impressions), 'הפקת נופש חברה' (pos 12.4), 'incentive travel spain' (pos 8.9)",
+      "detail": "כל שלושת הביטויים האלה כבר במיקום עמוד 1-2 עם אלפי חשיפות — שיפור CTR של 2-3% בכל אחד יכפיל קליקים. זה SEO-technical בלבד, לא פרסום.",
       "channel": "google_organic_geo"
+    },
+    {
+      "category": "safe_auto",
+      "action": "הגדרת rotation שבועי של פורמטים ב-TikTok: שבוע 1 = BTS מאירוע, שבוע 2 = טיפ מקצועי, שבוע 3 = case study קצר — 4-5 פוסטים/שבוע",
+      "detail": "TikTok 2026 מעניש חשבונות עם 'filler content' ומגמל saves ו-shares. TikTok-first content ניתן לשימוש חוזר ב-Instagram Reels וב-LinkedIn Video בעלות אפס נוספת.",
+      "channel": "tiktok"
     }
   ],
   "follower_growth_plan": [
-    "חודשים 1–3: ביסוס LinkedIn כמנוע ראשי — 3–5 פוסטים/שבוע (70% מפרופילים אישיים), הפעלת 3 LinkedIn Events, השקת Newsletter. מטרה: הכפלת followers לינקדאין + בניית engagement baseline אמיתי",
-    "חודשים 1–3 (מקבילה): הפקת Reels שבועיים לאינסטגרם מכל פרויקט (behind-the-scenes, timelapse build, result reveal) — מיקוד ב-3-second hook חזק ותגיות נישה (100K–500K posts). מטרה: הגעה ל-5,000 impressions/שבוע",
-    "חודשים 2–4: הגדלת TikTok ל-3–4 פוסטים/שבוע; cross-posting תוכן Reels לTikTok עם כיתוב מותאם; שימוש ב-Duet על תוכן ויראלי בנישת Corporate Events — ניצול reach אורגני שעדיין עולה על Instagram (10–30% vs 2–5%)",
-    "חודשים 3–6: הפעלת employee advocacy מלאה — 3 פרופילים אישיים פעילים, toolkit מוכן לשיתוף, מדידה שבועית של reach per post. מטרה: הגעה ל-50K impressions LinkedIn בחודש",
-    "חודשים 4–8: Google & YouTube SEO — 1 מאמר/עמוד שבועי סביב מונחי high-intent (הפקת כנסים, virtual events, incentive travel spain); YouTube Shorts pipeline קבוע; מטרה: Top10 על 3 מונחי opportunity מרכזיים",
-    "חודשים 6–18: AEO (AI Engine Optimization) — פרסום original research שנתי על שוק האירועים B2B בישראל ואירופה; הפצה לפרסומים תעשייתיים; מטרה: ציטוטים ב-ChatGPT/Perplexity על שאילתות MICE ישראל-אירופה (שיפור מ-14.3% ל-50%+)"
+    "שלב 1 (0-3 חודשים): הפעלת personal brand ל-3 מנהלים ב-LinkedIn + 4-5 פוסטים/שבוע TikTok-first content שמועבר ל-Reels ו-YouTube Shorts — יעד: x3 חשיפות שבועיות",
+    "שלב 2 (3-6 חודשים): השקת LinkedIn Newsletter חודשי על תעשיית ה-MICE (תוכן שמקצועיים רוצים לשמור) + LinkedIn Live רבעוני; בניית engaged community על פני follower count",
+    "שלב 3 (6-12 חודשים): תוכנית employee advocacy — 5-10 עובדי UPE מפרסמים תוכן BTS אישי מאירועים; כל פרופיל אישי נוסף מכפיל organic reach ללא תקציב נוסף",
+    "שלב 4 (12-18 חודשים): שחזור SEO מלא + GEO (נוכחות ב-AI Overviews) — כיום GEO rate 14.3% מתוך 7 נכסים; הגדלה ל-50%+ תפנה flow אורגני משמעותי",
+    "שלב 5 (18-36 חודשים): שיתופי פעולה עם creators/influencers ב-MICE (micro, 10K-100K עוקבים) בישראל ובספרד; TikTok Spark Ads על תוכן אורגני מנצח בלבד — flywheel אורגני+ממומן"
   ],
   "leads_actions": [
-    "תיקון מיידי של Salesforce (P0 — שבוע הקרוב): ללא CRM פעיל ו-UTM tracking לא ניתן לדעת אם מגיעים לידים בכלל. תיקון זה הוא תנאי סף לכל שאר הפעולות",
-    "הוספת Lead Capture לכל LinkedIn Event: דף רישום עם שדות תפקיד/חברה/גודל אירוע; follow-up אוטומטי תוך 24 שעות עם הצעת ייעוץ ראשוני חינמי",
-    "הוספת CTA ברור לכל פוסט LinkedIn: \"מתכננים אירוע ב-2026/2027? שלחו DM לייעוץ מהיר ללא עלות\" — DMs מ-LinkedIn הם הנקודה שבה B2B Instagram ו-LinkedIn ממירים; חיבור לתיבת הודעות מנוהלת",
-    "בניית דפי landing ייעודיים עם lead form ב-upe.co.il ו-upe-spain.com לכל service line (כנסים, incentive travel, הפקה בחו\"ל) — שיפור avg position מ-32.8 ל-Top15 על מונחי opportunity תניב לידים אורגניים ישירים",
-    "הפעלת אסטרטגיית commenting proactive ב-LinkedIn: זיהוי 20–30 CMO/HR/Event Managers רלוונטיים → תגובות מהותיות (מעל 9 מילים) על הפוסטים שלהם → בניית familiarity → פנייה ל-DM. תגובות ארוכות מגדילות impressions של הפוסט האב פי 3",
-    "יצירת lead magnet להורדה: \"מדריך: 10 דברים שצריך לדעת לפני שמארגנים כנס בינלאומי\" — תוכן שמייצג את ה-B2B buyer journey (קהל צורך 4.5 פיסות תוכן לפני פנייה לספק) ומזין pipeline על ידי לכידת מייל מקצועי"
+    "מיידי (שבוע 1): הגדרת LinkedIn Sales Navigator ICP — CMO/HR Director/CEO בחברות 200+ עובדים בישראל ואירופה; בניית רשימת 200 חשבונות יעד ותחילת warm outbound ידני",
+    "שבוע 2-3: השקת LinkedIn Live ראשון (נושא: 'מה הופך כנס חברה לחוויה שעובדים זוכרים?') עם Lead Gen Form — followup אוטומטי ל-100% מהנרשמים תוך 24 שעות",
+    "חודש 1: יצירת 'מדריך הפקת אירועים לחברות 2026' (PDF, 8-12 עמודים) — lead magnet ייעודי המקושר ל-landing page עם form; הפצה דרך LinkedIn Document Post + GEO",
+    "חודש 1-2: הגדרת Salesforce tracking: UTM לכל ערוץ אורגני, attribution ברור בין LinkedIn/SEO/TikTok לבין qualified leads — כרגע 0 לידים מוסמכים כי אין מדידה, לא בגלל שאין עניין",
+    "חודש 2: הפעלת ABM מיני: 50 חשבונות יעד עם תוכן מותאם אישית (LinkedIn posts הרלוונטיים ל-industry שלהם) + outreach ממוקד מפרופיל מנהל בכיר — לא מדף החברה",
+    "חודש 3+: מדידה ואופטימיזציה: כל lead מוסמך שמגיע = בדיקה מה ערוץ המקור; הכפלת תקציב זמן על הערוץ המוביל; יעד ביניים — 3 לידים מוסמכים בחודש 2, 7 בחודש 3, 10+ בחודש 4"
   ]
 }
