@@ -31,6 +31,10 @@ jobs:
           METRICOOL_TOKEN:        ${{ secrets.METRICOOL_TOKEN }}
           METRICOOL_USER_ID:      ${{ secrets.METRICOOL_USER_ID }}
           METRICOOL_BLOG_ID:      ${{ secrets.METRICOOL_BLOG_ID }}
+          GH_PAT:                 ${{ secrets.GH_PAT }}
+          SALESFORCE_INSTANCE_URL: ${{ secrets.SALESFORCE_INSTANCE_URL }}
+          SALESFORCE_CLIENT_ID:    ${{ secrets.SALESFORCE_CLIENT_ID }}
+          SALESFORCE_CLIENT_SECRET: ${{ secrets.SALESFORCE_CLIENT_SECRET }}
           APPROVAL_TO:            ${{ secrets.APPROVAL_TO }}
           MS_GRAPH_TENANT_ID:     ${{ secrets.MS_GRAPH_TENANT_ID }}
           MS_GRAPH_CLIENT_ID:     ${{ secrets.MS_GRAPH_CLIENT_ID }}
