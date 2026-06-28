@@ -50,15 +50,18 @@ def count(days=30):
     n = max(int(days), 1)
     try:
         token, base = _token()
-        # NEW inbound leads in the window (not yet converted) + NEW opportunities created.
-        leads = _soql_count(
-            f"SELECT COUNT() FROM Lead WHERE CreatedDate = LAST_N_DAYS:{n} AND IsConverted = false",
-            token, base)
+        # KPI definition (Alon's choice "א", 28.06): every NEW Opportunity created in
+        # the window counts as a lead — UPE works in Opportunity, not the Lead object.
         opps = _soql_count(
             f"SELECT COUNT() FROM Opportunity WHERE CreatedDate = LAST_N_DAYS:{n}",
             token, base)
-        return {"ok": True, "qualified_leads": leads, "new_opportunities": opps,
-                "period_days": n, "source": "salesforce"}
+        # Lead-object count kept as a secondary signal (typically 0 — not used by UPE).
+        leads_obj = _soql_count(
+            f"SELECT COUNT() FROM Lead WHERE CreatedDate = LAST_N_DAYS:{n} AND IsConverted = false",
+            token, base)
+        return {"ok": True, "qualified_leads": opps, "new_opportunities": opps,
+                "lead_object_count": leads_obj, "period_days": n, "source": "salesforce",
+                "definition": "new Opportunities created (all)"}
     except urllib.error.HTTPError as e:
         return {"ok": False, "reason": f"SF HTTP {e.code}: {e.read().decode()[:160]}",
                 "qualified_leads": None, "new_opportunities": None, "source": "salesforce"}
