@@ -33,6 +33,9 @@ jobs:
           ANTHROPIC_API_KEY:      ${{ secrets.ANTHROPIC_API_KEY }}
           EXECUTOR_MODEL:         ${{ vars.EXECUTOR_MODEL }}
           APPROVAL_TO:            ${{ secrets.APPROVAL_TO }}
+          SUPABASE_URL:              ${{ secrets.SUPABASE_URL }}
+          SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
+          APPROVAL_HMAC_SECRET:      ${{ secrets.APPROVAL_HMAC_SECRET }}
           MS_GRAPH_TENANT_ID:     ${{ secrets.MS_GRAPH_TENANT_ID }}
           MS_GRAPH_CLIENT_ID:     ${{ secrets.MS_GRAPH_CLIENT_ID }}
           MS_GRAPH_CLIENT_SECRET: ${{ secrets.MS_GRAPH_CLIENT_SECRET }}

@@ -29,7 +29,7 @@ Usage:
   python3 scripts/executor.py --dry-run       # no writes/email, print plan
   python3 scripts/executor.py --max 3         # advance at most 3 this run
 """
-import os, sys, json, hashlib, argparse, datetime, urllib.request, urllib.error
+import os, sys, json, hmac, hashlib, argparse, datetime, urllib.request, urllib.error, urllib.parse
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -37,6 +37,64 @@ sys.path.insert(0, str(ROOT)); sys.path.insert(0, str(ROOT / "scripts"))
 
 API_KEY = os.environ.get("ANTHROPIC_API_KEY", "")
 MODEL = os.environ.get("EXECUTOR_MODEL") or "claude-sonnet-4-6"
+
+# Email-approval gate (Supabase + signed token → executor-approve edge function).
+SUPA_URL = os.environ.get("SUPABASE_URL", "").rstrip("/")
+SUPA_KEY = os.environ.get("SUPABASE_SERVICE_ROLE_KEY", "")
+HMAC_SECRET = os.environ.get("APPROVAL_HMAC_SECRET", "")
+APPROVE_FN = f"{SUPA_URL}/functions/v1/executor-approve" if SUPA_URL else ""
+
+
+def _token(iid):
+    return hmac.new(HMAC_SECRET.encode(), iid.encode(), hashlib.sha256).hexdigest()[:32]
+
+
+def _supa(method, path, body=None, params=None):
+    url = f"{SUPA_URL}/rest/v1/{path}"
+    if params:
+        url += "?" + urllib.parse.urlencode(params)
+    req = urllib.request.Request(url, method=method,
+        data=json.dumps(body).encode() if body is not None else None,
+        headers={"apikey": SUPA_KEY, "Authorization": f"Bearer {SUPA_KEY}",
+                 "Content-Type": "application/json", "Prefer": "resolution=merge-duplicates,return=minimal"})
+    with urllib.request.urlopen(req, timeout=30) as r:
+        raw = r.read().decode()
+        return json.loads(raw) if raw else None
+
+
+def supa_fetch_approved():
+    """ids approved (or rejected) via the email link — so the team stops working them."""
+    if not (SUPA_URL and SUPA_KEY):
+        return set(), set()
+    try:
+        rows = _supa("GET", "executor_approvals",
+                     params={"select": "id,status", "status": "in.(approved,rejected)"})
+        appr = {r["id"] for r in rows if r.get("status") == "approved"}
+        rej = {r["id"] for r in rows if r.get("status") == "rejected"}
+        return appr, rej
+    except Exception as e:
+        sys.stderr.write(f"supa fetch approved: {e}\n")
+        return set(), set()
+
+
+def supa_register(it):
+    """Ensure a pending approval row exists (keeps status if already set)."""
+    if not (SUPA_URL and SUPA_KEY and HMAC_SECRET):
+        return
+    try:
+        _supa("POST", "executor_approvals", body={
+            "id": it["id"], "token": _token(it["id"]),
+            "title": it.get("title", "")[:300], "priority": it.get("priority", "")})
+    except Exception as e:
+        sys.stderr.write(f"supa register {it['id']}: {e}\n")
+
+
+def approve_links(iid):
+    if not APPROVE_FN or not HMAC_SECRET:
+        return None, None
+    t = _token(iid)
+    return (f"{APPROVE_FN}?id={iid}&token={t}&action=approve",
+            f"{APPROVE_FN}?id={iid}&token={t}&action=reject")
 STATE_DIR = ROOT / "state"
 DELIV_DIR = ROOT / "deliverables"
 RECS_PATH = STATE_DIR / "council_recommendations.json"
@@ -214,9 +272,18 @@ def render_html(inits, advanced):
     for it, res in advanced:
         oq = res.get("open_questions") or []
         oqh = ("<br><span style='color:#b00;font-size:12px;'>❓ " + "; ".join(oq) + "</span>") if oq else ""
+        ap, rj = approve_links(it["id"])
+        if ap and res.get("ready_for_approval"):
+            act = (f"<a href='{ap}' style='background:#2fa84f;color:#fff;text-decoration:none;"
+                   f"padding:7px 12px;border-radius:7px;font-size:13px;font-weight:bold;display:inline-block;'>✅ אשר</a> "
+                   f"<a href='{rj}' style='color:#b00;text-decoration:none;font-size:12px;'>דחה</a>")
+        elif ap:
+            act = "<span style='color:#999;font-size:12px;'>✍️ בתהליך</span>"
+        else:
+            act = ("✅ מוכן" if res.get("ready_for_approval") else "✍️ בתהליך")
         rows += (f"<tr><td><b>{it.get('priority')}</b></td><td>{it.get('title')[:90]}</td>"
                  f"<td>{res.get('summary','—')}{oqh}</td>"
-                 f"<td>{'✅ מוכן' if res.get('ready_for_approval') else '✍️ בתהליך'}</td>"
+                 f"<td>{act}</td>"
                  f"<td><code>deliverables/{it['id']}.md</code></td></tr>")
     return f"""<html dir="rtl" lang="he"><head><meta charset="utf-8"></head>
 <body dir="rtl" style="font-family:Arial,Helvetica,sans-serif;font-size:14px;direction:rtl;text-align:right;color:#111;">
@@ -228,7 +295,7 @@ def render_html(inits, advanced):
 <table dir="rtl" cellpadding="6" style="border-collapse:collapse;width:100%;font-size:13px;">
 <tr style="background:#222;color:#fff;"><th>עדיפות</th><th>יוזמה</th><th>מה נעשה</th><th>מצב</th><th>קובץ</th></tr>
 {rows or '<tr><td colspan=5>—</td></tr>'}</table>
-<p style="color:#555;font-size:12px;">לאישור יוזמה: הוסף את ה-id ל-<code>state/approvals.json</code> (רשימת "approved") — הצוות יפסיק לשפר אותה.</p>
+<p style="color:#555;font-size:12px;">אישור בלחיצה על "✅ אשר" ליד כל יוזמה מוכנה — הצוות יפסיק לשפר אותה. (אפשר גם להוסיף id ל-<code>state/approvals.json</code>.)</p>
 <hr><p style="color:#888;font-size:11px;">UPE Marketing Executor · אוטומטי · {d}</p>
 </div></body></html>"""
 
@@ -246,9 +313,15 @@ def main():
     inits, warn = sync_backlog(inits)
     if warn:
         print(warn, file=sys.stderr)
-    approved = load_approvals()
+    file_approved = load_approvals()
+    supa_approved, supa_rejected = supa_fetch_approved()
+    approved = file_approved | supa_approved
+    for rid in supa_rejected:  # rejected via email → stop working it
+        if rid in inits and inits[rid].get("status") not in ("done", "archived"):
+            inits[rid]["status"] = "rejected"; inits[rid]["updated"] = _today()
     todo = pick_to_advance(inits, approved, a.max)
-    print(f"backlog: {len(inits)} initiatives | advancing {len(todo)} this run")
+    print(f"backlog: {len(inits)} initiatives | advancing {len(todo)} this run "
+          f"| approved {len(approved)} | rejected {len(supa_rejected)}")
 
     if a.dry_run:
         for it in todo:
@@ -275,6 +348,9 @@ def main():
         print(f"  ✓ {it['id']} [{it.get('status')}] {res.get('summary','')[:60]}")
 
     INIT_PATH.write_text(json.dumps(inits, ensure_ascii=False, indent=2))
+
+    for it, _ in advanced:  # ensure an approval row exists so the email links resolve
+        supa_register(it)
 
     if advanced:
         try:
