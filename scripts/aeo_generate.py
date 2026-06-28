@@ -9,6 +9,10 @@ CANON_LINE = "Uproduction Events — 16 years, 1,500+ events across 130+ destina
 
 BODY_DELIM = "===BODY==="
 
+# Guard-rejected drafts are regenerated (not dropped) up to this many total attempts,
+# feeding the exact offending tokens back to the model each retry. Never drop a page.
+MAX_GEN_ATTEMPTS = 3
+
 GEN_SYSTEM = (
     "You write factual, non-promotional GEO/AEO web content for Uproduction Events (upe.co.il), a boutique global "
     "corporate event & conference production company. STRICT FACTS — the ONLY company stats you may state: founded 2010, "
@@ -44,14 +48,7 @@ def _split_meta_body(raw):
     return payload, payload.get("body_markdown", "")
 
 
-def generate_page(brief, lang, ask_fn, date):
-    prompt = (
-        f"LANGUAGE: {lang}\nPAGE TYPE: {brief['type']}\nTOPIC: {brief['topic']}\n"
-        f"TARGET: improve '{brief['target_dimension']}' visibility.\n"
-        f"Competitors to differentiate against (do not disparage): {', '.join(brief['competitors_to_beat']) or 'n/a'}\n"
-        f"Include 3-5 FAQs (40-80 word answers). Write the body in {lang}."
-    )
-    payload, body = _split_meta_body(ask_fn("claude", GEN_SYSTEM + "\n\n" + prompt))
+def _build_page(brief, lang, payload, body, date):
     slug_base = re.sub(r"[^a-z0-9-]+", "-", payload["slug"].lower()).strip("-")
     fm = {
         "title": payload["title"],
@@ -75,6 +72,35 @@ def generate_page(brief, lang, ask_fn, date):
     violations = aeo_guards.check_content(text_to_check)
     return {"collection": COLLECTION[brief["type"]], "lang": lang, "slug": slug_base,
             "frontmatter": fm, "body": body, "violations": violations}
+
+
+def _correction(violations):
+    return (
+        "\n\nYOUR PREVIOUS DRAFT WAS REJECTED by an automated fact-guard with these violations: "
+        f"{violations}. Regenerate the ENTIRE page and remove every offending token. "
+        "State NO company statistic other than the five allowed facts (founded 2010, 16 years, "
+        "1,500+ events, 130+ destinations, 25K+ participants); if you need a number for venue size, "
+        "headcount or budget, rephrase to avoid 2000/2,000/200+/120+/800+, and never place a "
+        "2011-2024 year next to an event/case mention."
+    )
+
+
+def generate_page(brief, lang, ask_fn, date):
+    prompt = (
+        f"LANGUAGE: {lang}\nPAGE TYPE: {brief['type']}\nTOPIC: {brief['topic']}\n"
+        f"TARGET: improve '{brief['target_dimension']}' visibility.\n"
+        f"Competitors to differentiate against (do not disparage): {', '.join(brief['competitors_to_beat']) or 'n/a'}\n"
+        f"Include 3-5 FAQs (40-80 word answers). Write the body in {lang}."
+    )
+    correction = ""
+    page = None
+    for _ in range(MAX_GEN_ATTEMPTS):
+        payload, body = _split_meta_body(ask_fn("claude", GEN_SYSTEM + "\n\n" + prompt + correction))
+        page = _build_page(brief, lang, payload, body, date)
+        if not page["violations"]:
+            return page
+        correction = _correction(page["violations"])
+    return page  # retries exhausted: surface the last draft's violations rather than crash
 
 
 def render_brief(brief, ask_fn, date):
