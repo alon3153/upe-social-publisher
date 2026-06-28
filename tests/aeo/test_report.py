@@ -25,6 +25,23 @@ def test_build_email_notes_failures():
     assert "build failed" in html
 
 
+def test_build_daily_email_rtl_status_and_keywords():
+    kw = {"he": ["הפקת כנסים בינלאומיים"], "en": ["international conference production"],
+          "competitors": ["BCD", "Maritz"], "priority_actions": ["publish HE category guide"]}
+    subject, html = rep.build_daily_email(sc(60, 55, 100), sc(50, 55, 100), kw, failures=[], target=90)
+    assert 'dir="rtl"' in html and 'lang="he"' in html
+    assert "▲" in html                       # product_search 50->60
+    assert "international conference production" in html
+    assert "הפקת כנסים בינלאומיים" in html
+    assert "BCD" in html
+    assert "מעקב" in subject or "AEO" in subject
+
+
+def test_build_daily_email_says_number_one_when_at_target():
+    subject, html = rep.build_daily_email(sc(95, 92, 100), None, {"he": [], "en": [], "competitors": [], "priority_actions": []}, failures=[], target=90)
+    assert "#1" in html or "מוביל" in html or "ראשון" in html
+
+
 def test_send_uses_injected_fn():
     seen = {}
 
