@@ -46,19 +46,22 @@ def run_probe(questions, models, ask_fn, judge_fn):
     qpath = ROOT / "aeo_questions.json"
     if qpath.exists():
         battery_version = json.loads(qpath.read_text(encoding="utf-8")).get("battery_version", "")
-    out = {"date": date, "battery_version": battery_version, "models": {}}
+    out = {"date": date, "battery_version": battery_version, "models": {}, "errors": []}
     for model in models:
-        answers, per_dim = [], {d: [] for d in DIMS}
-        for q in questions:
-            ans = ask_fn(model, q["text"])
-            sc = score_answer(q, ans, judge_fn)
-            per_dim[q["dimension"]].append(sc[q["dimension"]])
-            answers.append({"id": q["id"], "question": q["text"], "answer": ans,
-                            "scores": sc, "competitors": sc["competitors"], "gap_note": sc["gap_note"]})
-        dim_scores = {d: (round(mean(per_dim[d])) if per_dim[d] else 0) for d in DIMS}
-        out["models"][model] = {**dim_scores,
-                                "aeo": round(mean(dim_scores.values())),
-                                "answers": answers}
+        try:
+            answers, per_dim = [], {d: [] for d in DIMS}
+            for q in questions:
+                ans = ask_fn(model, q["text"])
+                sc = score_answer(q, ans, judge_fn)
+                per_dim[q["dimension"]].append(sc[q["dimension"]])
+                answers.append({"id": q["id"], "question": q["text"], "answer": ans,
+                                "scores": sc, "competitors": sc["competitors"], "gap_note": sc["gap_note"]})
+            dim_scores = {d: (round(mean(per_dim[d])) if per_dim[d] else 0) for d in DIMS}
+            out["models"][model] = {**dim_scores,
+                                    "aeo": round(mean(dim_scores.values())),
+                                    "answers": answers}
+        except Exception as e:  # a model with a bad/unbilled key must not crash the whole loop
+            out["errors"].append(f"{model}: probe failed ({type(e).__name__}: {str(e)[:120]})")
     return out
 
 

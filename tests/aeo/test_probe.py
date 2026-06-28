@@ -49,6 +49,22 @@ def test_run_probe_aggregates_dimensions():
     assert cm["aeo"] == 70              # round(mean(70,40,100))
 
 
+def test_run_probe_skips_failing_model_not_fatal():
+    questions = [{"id": "a", "dimension": "product_search", "text": "q1"}]
+
+    def ask_fn(model, text):
+        if model == "chatgpt":
+            raise RuntimeError("HTTP 401: no billing")
+        return "ok answer"
+
+    judge_fn = lambda prompt: json.dumps({"product_search": 50, "comparison": 0,
+                                          "reputation": 0, "competitors": [], "gap_note": ""})
+    sc = p.run_probe(questions, ["claude", "chatgpt"], ask_fn, judge_fn)
+    assert "claude" in sc["models"]
+    assert "chatgpt" not in sc["models"]          # failing model dropped, not fatal
+    assert any("chatgpt" in e for e in sc["errors"])
+
+
 def test_append_history_creates_and_appends(tmp_path):
     f = tmp_path / "hist.json"
     p.append_history({"date": "2026-06-28"}, str(f))

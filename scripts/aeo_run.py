@@ -29,6 +29,7 @@ def run(repo, dry_run, ask_fn=None, judge_fn=None, send_fn=None, runner=None, to
     history_path = str(Path(repo) / "aeo_history.json") if dry_run else str(HISTORY)
     prev = _prev_scorecard(history_path)
     scorecard = aeo_probe.run_probe(QUESTIONS, models, ask_fn, judge_fn)
+    failures.extend(scorecard.get("errors", []))
     aeo_probe.append_history(scorecard, history_path)
 
     briefs, deferred = aeo_gaps.briefs_with_overflow(scorecard, prev, TARGETS,
