@@ -59,6 +59,63 @@ def build_email(scorecard, prev, shipped, queued, failures, pr_url):
     return subject, html
 
 
+def build_daily_email(scorecard, prev, keywords, failures, target=90):
+    """Daily #1-tracking email: per-model product_search status vs the #1 target,
+    delta vs yesterday, and competitor keyword opportunities (he+en)."""
+    rows, all_top = "", True
+    for model, block in scorecard["models"].items():
+        pblock = (prev or {}).get("models", {}).get(model, {}) if prev else {}
+        ps = block.get("product_search", 0)
+        if ps < target:
+            all_top = False
+        status = "✅ #1" if ps >= target else f"פער {target - ps} ל-#1"
+        arrow = _arrow(ps, pblock.get("product_search") if pblock else None)
+        rows += (f'<tr><td dir="rtl" style="padding:4px 8px;">{MODEL_HE.get(model, model)}</td>'
+                 f'<td dir="rtl" style="padding:4px 8px;text-align:center;">{ps}</td>'
+                 f'<td dir="rtl" style="padding:4px 8px;text-align:center;">{arrow}</td>'
+                 f'<td dir="rtl" style="padding:4px 8px;">{status}</td></tr>')
+
+    def _kwlist(items, ltr=False):
+        if not items:
+            return '<li dir="rtl">—</li>'
+        if ltr:
+            return "".join(f'<li dir="rtl"><span dir="ltr">{k}</span></li>' for k in items)
+        return "".join(f'<li dir="rtl" style="text-align:right;">{k}</li>' for k in items)
+
+    comps = ", ".join(keywords.get("competitors", [])) or "—"
+    actions = "".join(f'<li dir="rtl" style="text-align:right;">{a}</li>'
+                      for a in keywords.get("priority_actions", [])) or '<li dir="rtl">—</li>'
+    headline = ("🥇 UPE מוביל (#1) בכל המודלים!" if all_top
+                else "מטרה: UPE #1 בתוצאות ה-AI — הנה הפער והצעדים")
+
+    fails_html = (f'<p dir="rtl" style="color:#b00;">תקלות: {"; ".join(failures)}</p>' if failures else "")
+    subject = f"מעקב AEO יומי — {scorecard['date']} ({'#1 בכל המודלים' if all_top else 'בדרך ל-#1'})"
+    html = f"""<html dir="rtl" lang="he">
+<head><meta charset="utf-8"></head>
+<body dir="rtl" style="font-family:Arial,Helvetica,sans-serif;font-size:14px;direction:rtl;text-align:right;">
+<div dir="rtl" style="direction:rtl;text-align:right;">
+<h2 dir="rtl">{headline}</h2>
+<p dir="rtl">תאריך: {scorecard['date']} · מדד: חיפוש-מוצר (האם UPE צץ ראשון בשאלות קטגוריה)</p>
+<table dir="rtl" style="border-collapse:collapse;border:1px solid #ddd;">
+<tr><th dir="rtl" style="padding:4px 8px;">מודל</th><th dir="rtl" style="padding:4px 8px;">ציון</th>
+<th dir="rtl" style="padding:4px 8px;">שינוי</th><th dir="rtl" style="padding:4px 8px;">סטטוס #1</th></tr>
+{rows}
+</table>
+<h3 dir="rtl">מתחרים שמובילים כרגע</h3>
+<p dir="rtl" style="text-align:right;">{comps}</p>
+<h3 dir="rtl">מילות מפתח לכבוש — עברית</h3>
+<ul dir="rtl" style="text-align:right;">{_kwlist(keywords.get('he', []))}</ul>
+<h3 dir="rtl">מילות מפתח לכבוש — אנגלית</h3>
+<ul dir="rtl">{_kwlist(keywords.get('en', []), ltr=True)}</ul>
+<h3 dir="rtl">צעדים מומלצים</h3>
+<ul dir="rtl" style="text-align:right;">{actions}</ul>
+{fails_html}
+</div>
+</body>
+</html>"""
+    return subject, html
+
+
 def send(subject, html, send_fn=None):
     if send_fn is None:
         from daily_email import send_graph_html
