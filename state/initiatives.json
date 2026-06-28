@@ -54,6 +54,10 @@
       {
         "date": "2026-06-28",
         "error": "anthropic Remote end closed connection without response"
+      },
+      {
+        "date": "2026-06-28",
+        "error": "anthropic 400: {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.\"},\"request_i"
       }
     ],
     "created": "2026-06-28",
