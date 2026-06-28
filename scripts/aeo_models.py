@@ -43,7 +43,7 @@ def ask(model, prompt, system="", max_tokens=4096, _http=None):
         data = json.loads(http("https://api.openai.com/v1/chat/completions", json.dumps(body).encode(), headers))
         return data["choices"][0]["message"]["content"].strip()
     if model == "gemini":
-        mdl = os.environ.get("AEO_GEMINI_MODEL") or "gemini-2.0-flash"
+        mdl = os.environ.get("AEO_GEMINI_MODEL") or "gemini-2.5-flash"
         key = os.environ.get("GEMINI_API_KEY", "")
         url = f"https://generativelanguage.googleapis.com/v1beta/models/{mdl}:generateContent?key={key}"
         body = {"contents": [{"parts": [{"text": (system + "\n\n" + prompt) if system else prompt}]}],
