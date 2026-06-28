@@ -12,3 +12,6 @@ reports/*.txt
 content/videos/
 content/images_realistic/
 scripts/send_approval_demo.py
+
+# AEO loop scratch output (dry-run)
+reports/aeo/scratch/
