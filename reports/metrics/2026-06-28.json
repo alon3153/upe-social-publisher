@@ -1,24 +1,24 @@
 {
-  "generated_at": "2026-06-28T14:22:25",
-  "period_days": 7,
+  "generated_at": "2026-06-28T20:05:17",
+  "period_days": 14,
   "networks": {
     "instagram": {
-      "posts": 11,
-      "impressions": 284,
-      "reach": 190,
+      "posts": 14,
+      "impressions": 405,
+      "reach": 277,
       "interactions": 3,
-      "engagement_rate_pct": 1.06,
+      "engagement_rate_pct": 0.74,
       "caveat": null,
       "top": {
-        "url": "https://www.instagram.com/p/DZ2DXSxkmhk/",
-        "content": "900 delegates. One flawless week. 🎯\n\nMoving an entire flagship conference abroad — and making it look effortless.\n\nHere's what that really took:\n\n✈️ Flights, ho",
-        "impressions": 42,
+        "url": "https://www.instagram.com/p/DZm5WN6kiMj/",
+        "content": "Your competitors already booked 2026.\nYou're still \"thinking about it.\" 🏆\n\nThe best dates don't wait for your next quarterly meeting.\n\nHere's how the calendar r",
+        "impressions": 52,
         "interactions": 0
       }
     },
     "facebook": {
-      "posts": 11,
-      "impressions": 106,
+      "posts": 12,
+      "impressions": 108,
       "reach": 0,
       "interactions": 250,
       "engagement_rate_pct": 100.0,
@@ -31,9 +31,9 @@
       }
     },
     "tiktok": {
-      "posts": 3,
+      "posts": 6,
       "impressions": 0,
-      "reach": 7034,
+      "reach": 15278,
       "interactions": 0,
       "engagement_rate_pct": 0.0,
       "caveat": null,
@@ -45,40 +45,40 @@
       }
     },
     "linkedin": {
-      "posts": 18,
-      "impressions": 148,
+      "posts": 25,
+      "impressions": 289,
       "reach": 0,
-      "interactions": 20,
-      "engagement_rate_pct": 13.51,
+      "interactions": 63,
+      "engagement_rate_pct": 21.8,
       "caveat": null,
       "top": {
-        "url": "https://www.linkedin.com/feed/update/urn:li:share:7474709915102707712",
+        "url": "https://www.linkedin.com/feed/update/urn:li:ugcPost:7472173897958907905",
         "content": "",
-        "impressions": 28,
+        "impressions": 46,
         "interactions": 0
       }
     },
     "youtube": {
-      "posts": 6,
-      "impressions": 7977,
+      "posts": 12,
+      "impressions": 14041,
       "reach": 0,
-      "interactions": 0,
-      "engagement_rate_pct": 0.0,
+      "interactions": 2,
+      "engagement_rate_pct": 0.01,
       "caveat": null,
       "top": {
         "url": null,
         "content": "",
-        "impressions": 6886,
+        "impressions": 11536,
         "interactions": 0
       }
     }
   },
   "totals": {
-    "posts": 49,
-    "impressions": 8515,
-    "reach": 7224,
-    "interactions": 273,
-    "engagement_rate_pct": 3.21
+    "posts": 69,
+    "impressions": 14843,
+    "reach": 15555,
+    "interactions": 318,
+    "engagement_rate_pct": 2.14
   },
   "leads": {
     "ok": true,
