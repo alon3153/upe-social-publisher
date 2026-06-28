@@ -1,0 +1,47 @@
+[
+  {
+    "type": "trust",
+    "topic": "trust page: Uproduction Events solutions, client proofs and FAQ by audience segment",
+    "target_dimension": "reputation",
+    "lang_set": [
+      "he",
+      "en",
+      "es"
+    ],
+    "why": "Uproduction not surfaced for global event-producer queries; zero product_search visibility",
+    "competitors_to_beat": [
+      "large global agency networks"
+    ],
+    "priority": 80.0
+  },
+  {
+    "type": "category_guide",
+    "topic": "category guide on choosing a global corporate event & conference production company",
+    "target_dimension": "product_search",
+    "lang_set": [
+      "he",
+      "en",
+      "es"
+    ],
+    "why": "Uproduction not surfaced for global event-producer queries; zero product_search visibility",
+    "competitors_to_beat": [
+      "large global agency networks"
+    ],
+    "priority": 70.0
+  },
+  {
+    "type": "comparison",
+    "topic": "comparison: boutique global event producer vs large networks — who is this for",
+    "target_dimension": "comparison",
+    "lang_set": [
+      "he",
+      "en",
+      "es"
+    ],
+    "why": "Uproduction not surfaced for global event-producer queries; zero product_search visibility",
+    "competitors_to_beat": [
+      "large global agency networks"
+    ],
+    "priority": 53.0
+  }
+]

@@ -45,6 +45,40 @@ def test_violation_surfaced():
     assert any("200+" in v for v in page["violations"])
 
 
+def test_guard_violation_is_regenerated_not_dropped():
+    # first draft trips the guard; the retry must produce a clean, publishable page
+    calls = {"n": 0}
+
+    def flaky_ask(model, prompt):
+        calls["n"] += 1
+        if calls["n"] == 1:
+            meta = json.dumps({"title": "Over 2,000 events delivered", "description": "d",
+                               "h1": "h", "slug": "guide-clean", "faqs": []})
+            return meta + "\n===BODY===\nWe have produced 2,000 events."
+        assert "REJECTED" in prompt and "2,000" in prompt  # correction was fed back
+        meta = json.dumps({"title": "A global event production guide", "description": "d",
+                           "h1": "h", "slug": "guide-clean", "faqs": []})
+        return meta + "\n===BODY===\nUproduction Events — 16 years, 1,500+ events.\n"
+
+    page = gen.generate_page(BRIEF, "en", flaky_ask, "2026-06-28")
+    assert page["violations"] == []
+    assert calls["n"] == 2
+
+
+def test_unfixable_violation_surfaces_after_retries():
+    calls = {"n": 0}
+
+    def always_bad(model, prompt):
+        calls["n"] += 1
+        meta = json.dumps({"title": "200+ events", "description": "d", "h1": "h",
+                           "slug": "x", "faqs": []})
+        return meta + "\n===BODY===\nwe have 200+ events"
+
+    page = gen.generate_page(BRIEF, "en", always_bad, "2026-06-28")
+    assert any("200+" in v for v in page["violations"])
+    assert calls["n"] == gen.MAX_GEN_ATTEMPTS
+
+
 def test_body_with_unescaped_newlines_and_quotes_parses():
     # the real-world failure: a long markdown body that would break JSON if embedded
     def messy_ask(model, prompt):
