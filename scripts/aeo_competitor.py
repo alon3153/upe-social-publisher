@@ -2,6 +2,9 @@
 Hebrew + English keywords/phrases competitors win that UPE should target."""
 import json, re
 
+MAX_PER_LANG = 5     # keep only the highest-impact keywords per language
+MAX_ACTIONS = 5
+
 RESEARCH_SYSTEM = (
     "You are a GEO/AEO + SEO strategist for Uproduction Events (upe.co.il), a boutique global "
     "corporate event & conference production company. The goal is for Uproduction Events to become "
@@ -9,6 +12,8 @@ RESEARCH_SYSTEM = (
     "Given the competitors currently winning those answers, identify the concrete keyword/phrase "
     "opportunities Uproduction should target on its site to overtake them. Be specific and realistic "
     "to how decision-makers actually search/ask. "
+    f"Return ONLY the {MAX_PER_LANG} HIGHEST-IMPACT keywords per language, ranked best-first (most "
+    "winnable + highest intent at the top). Quality over quantity. "
     'Reply with ONLY JSON: {"he":[str],"en":[str],"competitors":[str],"priority_actions":[str]}.'
 )
 
@@ -54,8 +59,8 @@ def research_keywords(scorecard, ask_fn):
     )
     data = _extract_json(ask_fn("claude", RESEARCH_SYSTEM + "\n\n" + prompt))
     return {
-        "he": data.get("he", []) or [],
-        "en": data.get("en", []) or [],
+        "he": (data.get("he", []) or [])[:MAX_PER_LANG],
+        "en": (data.get("en", []) or [])[:MAX_PER_LANG],
         "competitors": data.get("competitors", competitors) or competitors,
-        "priority_actions": data.get("priority_actions", []) or [],
+        "priority_actions": (data.get("priority_actions", []) or [])[:MAX_ACTIONS],
     }

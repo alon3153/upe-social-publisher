@@ -31,6 +31,20 @@ def test_research_keywords_parses_he_en():
     assert out["priority_actions"]
 
 
+def test_research_keywords_caps_to_top_per_lang():
+    many_he = [f"מילה {i}" for i in range(30)]
+    many_en = [f"keyword {i}" for i in range(40)]
+
+    def ask_fn(model, prompt):
+        return json.dumps({"he": many_he, "en": many_en, "competitors": ["BCD"], "priority_actions": ["a", "b", "c", "d", "e"]})
+
+    out = comp.research_keywords(scorecard_with(["BCD"]), ask_fn)
+    assert len(out["he"]) == comp.MAX_PER_LANG
+    assert len(out["en"]) == comp.MAX_PER_LANG
+    assert out["he"] == many_he[:comp.MAX_PER_LANG]      # keeps the top-ranked first
+    assert len(out["priority_actions"]) <= comp.MAX_ACTIONS
+
+
 def test_research_keywords_no_competitors_returns_empty():
     # all dimensions already strong → nothing to research
     strong = scorecard_with([], ps=95)
