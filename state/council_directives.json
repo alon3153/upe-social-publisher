@@ -4,55 +4,53 @@
   "directives": [
     {
       "category": "safe_auto",
-      "action": "מיפוי hashtag B2B ל-LinkedIn: החלפה ל-3-5 תגיות נישה בלבד",
-      "detail": "תגיות עם מעל מיליון עוקבים מדללות הפצה ב-LinkedIn 2026; להשתמש ב-#CorporateEvents, #IncentiveTravel, #EventProduction + 1-2 תגיות ישראל/ספרד כגון #EventsIsrael, #CorporateSpain — לסקור ולעדכן בכל פוסט לפי הנחיות LinkedIn Algorithm June 2026.",
+      "action": "הורדת תדירות לינקדאין ל-3 פוסטים שבועיים איכותיים, תזמון שלישי-חמישי 8:00-10:00",
+      "detail": "אלגוריתם LinkedIn יוני 2026 מעניש חשבונות שמפרסמים יותר מ-5 פוסטים בשבוע בירידת distribution; native text posts עם 800-1,500 תווים מקבלים 28% reach גבוה יותר מ-carousels; 'dwell time' מוסיף 40% reach bonus למי שמחזיק קוראים 15+ שניות",
       "channel": "linkedin"
     },
     {
       "category": "safe_auto",
-      "action": "תזמון פוסטי LinkedIn לחלון Tue-Thu 08:00-10:00 + מענה לתגובות תוך שעה ראשונה",
-      "detail": "האלגוריתם מעריך פוסט בשעה הראשונה לאחר פרסום — engagement מהיר מרחיב הפצה משמעותית; לתזמן את הפוסטים בזמן בו מנהל הפרסום זמין לתגובות מיידיות.",
-      "channel": "linkedin"
+      "action": "מיפוי content pillars אינסטגרם: 60% Reels קצרים (under 30s), 30% carousels (8-10 שקופיות), 10% Stories — כל פוסט כולל trigger ל-save או DM",
+      "detail": "Instagram 2026: DM shares שוקלים 3-5x יותר מלייקים; carousels מקבלים 1.92% engagement vs 1.26% לתמונה בודדת; פוסטים ב-20 הדקות הראשונות קובעים את ה-distribution לכל חיי הפוסט — יש לתזמן תגובות מיידיות",
+      "channel": "instagram"
     },
     {
       "category": "safe_auto",
-      "action": "זיהוי עמודי SEO עם חשיפות גבוהות וקליקים נמוכים ועדכון meta titles/descriptions",
-      "detail": "ב-GSC: לסנן query עם >500 impressions ו-CTR<1% — אלה הן הזדמנויות CTR מיידיות; לשכתב snippets עם hook ניסיוני (מקרה אמיתי, נתון ספציפי) שה-AI לא יכול לשכפל, כדי להגביר קליקים.",
+      "action": "הוסף YouTube Shorts: 2-3 קליפים שבועיים של 30-60 שניות מחומרי הפקה קיימים, עם hook ויזואלי ב-3 השניות הראשונות",
+      "detail": "YouTube Shorts מייצר 200 מיליארד views יומיים גלובלית; B2B מותגים שמפרסמים Shorts ראו 87% engagement rate גבוה יותר; כרגע UPE מפרסמת 6 פוסטים בשבוע ב-YouTube עם 0 אינטראקציות — אין Shorts layer כלל",
+      "channel": "youtube"
+    },
+    {
+      "category": "safe_auto",
+      "action": "SEO: העבר קמפיין תוכן לביטויים top-opportunity עם position ≤15: 'virtual events' (pos 7.1, 1,034 impressions), 'incentive travel spain' (pos 8.9, 98 imp) — כתוב 2 דפי landing חדשים בחודש",
+      "detail": "upe.co.il בpositon ממוצע 32.8 — נמוך ממיקום page 3; הביטויים עם position <13 מייצגים quick wins מוכחים; BOFU content (pricing/use-case pages) ממיר טוב פי 3 מ-TOFU guides לפי נתוני B2B Israel",
       "channel": "google_organic_geo"
     },
     {
       "category": "safe_auto",
-      "action": "הוספת פרמטר UTM ייחודי לכל ערוץ אורגני לסנכרון עם Salesforce",
-      "detail": "12 הלידים בסיילספורס מקוטלגים 'all' — ללא UTM tracking לא ניתן לייחס לידים לאורגני דיגיטלי; להגדיר utm_source=linkedin/instagram/tiktok/youtube/seo על כל לינקים ב-bio ו-posts.",
-      "channel": "linkedin"
+      "action": "Facebook: הפסק לפרסם לדף חברה בנפרד; הפעל עובדי UPE כ-employee advocates — כל עובד שמשתף פוסט מגיע ל-20-40% מהחיבורים שלו אורגנית",
+      "detail": "Facebook 2026 מדורג אחרון ב-organic B2B עם median 0.07%; אלגוריתם Meta מעדיף תוכן מחיבורים אישיים ו-Groups על פני Brand Pages; employee advocacy עוקף את המחסום הזה ללא עלות",
+      "channel": "facebook"
     },
     {
       "category": "safe_auto",
-      "action": "הוספת annotation ב-GSC לתקופה מאי 2025–אפריל 2026 כ-'GSC Impression Bug'",
-      "detail": "גוגל אישרה logging error שניפח חשיפות במשך 50 שבועות — הירידה מ-72,716 ל-30,308 חשיפות ב-upe.co.il היא חלקית תיקון נתונים ולא אובדן דירוג; לתעד זאת בכל דוח למנהלים כדי למנוע פאניקה וקבלת החלטות שגויה.",
-      "channel": "google_organic_geo"
-    },
-    {
-      "category": "safe_auto",
-      "action": "גיבוש אסטרטגיית תוכן TikTok מבוססת 3-4 עמודי תוכן B2B עם hook ב-3 שניות הראשונות",
-      "detail": "TikTok 2026 מתגמל completion rate ו-save rate כאותות ראשיים; לבנות פורמטים קבועים: 'Behind the scenes הפקה', 'טעויות שכיחות בתכנון כנסים', 'Before/After אירוע תמריץ' — אלה מייצרים saves ומאריכים watch time.",
-      "channel": "tiktok"
+      "action": "GEO/AI Visibility: הוסף schema markup (Event, Organization, FAQ) לדפי upe.co.il + upe-spain.com, וצור תמלילי YouTube מפורטים עם keywords עסקיים בכל וידאו",
+      "detail": "UPE מצוטטת ב-1/7 בלבד מה-AI platforms (14.3%); YouTube הוא highly machine-readable ו-LLM crawlers מסתמכים על transcripts; תמלילים עם keyword density גבוהה מעלים citation rate — מחקר Brandtch מצא שLLMs מעדיפים וידאו 10-20 דקות עם 8-12 מילים בכותרת",
+      "channel": "youtube"
     }
   ],
   "follower_growth_plan": [
-    "שנה 1 — בסיס: הפעלת personal branding של 2-3 מנהלים ב-LinkedIn (3x/שבוע), בניית 4 עמודי תוכן TikTok קבועים, פרסום YouTube Shorts 2x/שבוע — מטרה: 5,000 עוקבים LinkedIn, 3,000 TikTok, 1,000 YouTube.",
-    "שנה 1-2 — הגברה: LinkedIn Newsletter 'Event Intelligence' לצבירת opted-in subscribers; TikTok Spark Ads על 3 הסרטונים האורגניים הטובים ביותר כדי להגביר reach ללא תחושת פרסומת.",
-    "שנה 2 — אמפליפיקציה: תוכנית Employee Advocacy פורמלית — הכשרת 10-15 עובדי UPE לפרסם מ-personal profiles; מחקרים מראים שעובדים מגיעים ל-networks שה-company page לא נוגע בהם.",
-    "שנה 2-3 — B2B Influencer: שותפות עם 3-5 micro-influencers בתחום MICE/HR (10K-50K followers) לתוכן משותף; focus על LinkedIn + YouTube כיוון שאלו הערוצים עם ROI לידים מוכח ל-B2B.",
-    "שנה 3 — Scale: LinkedIn Thought Leadership Ads (boosting best organic posts) + YouTube in-feed ads על case studies; הטוב ביותר באורגני הופך לזרז ממומן — מודל שמאפשר גדילה לקראת 500K ללא abandon של האורגני.",
-    "KPI leading indicators לכל שלב: saves ב-LinkedIn, comment quality score, TikTok completion rate >50%, YouTube CTR >4% — אלה האינדיקטורים שמנבאים growth לפני שמתרחש."
+    "שלב 1 (חודשים 1-3): הפעל founder personal brand בלינקדאין (3x/שבוע native text posts) + הגדל עקביות TikTok ל-3x/שבוע — מטרה: 500 followers חדשים מוסמכים בלינקדאין, 1,000 ב-TikTok",
+    "שלב 2 (חודשים 3-6): השק YouTube Shorts (2-3/שבוע) + LinkedIn Newsletter חודשי — YouTube Shorts מניע subscribers; Newsletter בונה owned audience ישיר; מטרה: 200 LinkedIn newsletter subscribers, 500 YouTube subscribers",
+    "שלב 3 (חודשים 6-12): הפעל employee advocacy program — 5-10 עובדי UPE מפרסמים מפרופיל אישי שבועי; הוסף repurposing pipeline: כל YouTube video → 3 LinkedIn posts + 5 TikTok clips + 2 Instagram Reels",
+    "שלב 4 (שנה 2): השג partnerships עם event planners אירופאים ו-MICE influencers לcross-promotion; בנה guest posting strategy ב-publications שCMOs קוראים (Event Marketer, MeetingsNet); ממנף GEO citations ב-AI tools",
+    "שלב 5 (שנה 3): Content flywheel מלא — YouTube anchor content (4/חודש) → multi-platform distribution → SEO authority → AI citations → inbound leads מחזקים growth; יעד 500K מחייב ~15K followers חדשים/חודש בשנה 3"
   ],
   "leads_actions": [
-    "מיידי: הוספת UTM tracking לכל bio links וקישורים בתוכן — ללא זה אי אפשר לדעת אם 12 הלידים הקיימים מגיעים מאורגני דיגיטלי או ממקורות אחרים, מה שמסכל אופטימיזציה.",
-    "30 יום: פרסום 2 LinkedIn case studies מ-personal profiles של מנהלים בכירים עם CTA ישיר לדף 'קבל הצעת מחיר' — שילוב organic warmth עם conversion prompt מוכח כמגביר conversion ב-B2B.",
-    "30 יום: אופטימיזציה של 5 דפי landing ב-upe.co.il לכיסוי queries עם intent גבוה: 'הפקת נופש חברה', 'ארגון כנס חברות' — כל דף עם CTR meta + contact form + social proof.",
-    "60 יום: הפעלת LinkedIn multi-touch outreach sequence — Connect → Engage 2-3x → DM → Email; מחקרים מראים 3.5x יותר תגובות מ-email בלבד; לטרגט CMO/HR VP בחברות 200+ עובדים בישראל ואירופה.",
-    "90 יום: בניית Lead Magnet — 'המדריך המלא להפקת כנס חברה ב-2026' כ-PDF ב-LinkedIn ובדף נחיתה ייעודי; document posts מקבלים 3.2% engagement ב-LinkedIn ומייצרים pipeline של עוקבים שהורידו.",
-    "שוטף: דוח חודשי שמייחס כל ליד ל-source (LinkedIn/TikTok/YouTube/SEO/Direct) ב-Salesforce — בלי זה אי אפשר לדעת מה עובד ולכוון תקציב תוכן לצינור שמניב לידים אמיתיים."
+    "מיידי: הוסף UTM links ו-'Where did you hear about us?' לכל נקודת contact — הנתונים הנוכחיים ב-Salesforce (12 leads) ככל הנראה אינם מיוחסים נכון לדיגיטל; ללא attribution אי אפשר לשפר",
+    "30 יום: פרסם 2 case studies מפורטים בלינקדאין (founder account) על לקוחות קיימים עם תוצאות מספריות ('900 delegates, 0 incidents, 12% under budget') — B2B buyers דורשים proof-driven content ב-2026 לפני כל פנייה",
+    "45 יום: הפעל LinkedIn outbound חכם: מנכ\"ל/מייסד UPE מתחבר ל-20 decision makers שבועיים (CMO/HR Director/Event Lead בחברות 100+ עובדים בישראל ואירופה) לאחר אינטראקציה עם התוכן שלהם — לא cold pitch",
+    "60 יום: צור landing page ייעודי ל-'ייעוץ אסטרטגי ראשוני' (לא טופס צור קשר גנרי) עם case study, social proof, ו-calendar booking — הפנה תוכן YouTube ו-LinkedIn ישירות לדף זה",
+    "90 יום: השק קמפיין SEO BOFU: דפי 'הפקת כנסים לחברות ביוון/ספרד/פורטוגל' עם pricing ranges, checklist, ו-case study — content ממיר decision-stage buyers שמחפשים ספק פעיל"
   ]
 }
