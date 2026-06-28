@@ -5,15 +5,16 @@ CANON = {"founded": 2010, "years": 16, "events": "1,500+", "destinations": "130+
 
 FORBIDDEN_TOKENS = ["200+", "2000", "2,000", "120+", "800+", "27 year", "27 שנ"]
 
-# event/case wording near a 4-digit year 2010-2024
+# event/case wording near a 4-digit year 2011-2024.
+# 2010 is the company's FOUNDING year (canonical fact) — allowed anywhere, so it is
+# excluded from the year range to avoid false positives on tenure phrasing like
+# "events since 2010" / "מאז 2010".
 _EVENT_WORDS = r"(?:event|conference|convention|produced|case study|gala|אירוע|כנס|הפקנו|הפיק|מקרה בוחן)"
-_YEAR = r"(?:20(?:1[0-9]|2[0-4]))"
+_YEAR = r"(?:20(?:1[1-9]|2[0-4]))"
 _EVENT_YEAR_RE = re.compile(
     rf"(?:{_EVENT_WORDS}[^.\n]{{0,40}}{_YEAR})|(?:{_YEAR}[^.\n]{{0,40}}{_EVENT_WORDS})",
     re.IGNORECASE,
 )
-# the founding statement is explicitly allowed
-_FOUNDING_RE = re.compile(rf"(?:founded|established|נוסד|מאז)[^.\n]{{0,20}}2010", re.IGNORECASE)
 
 
 def check_content(text):
@@ -22,8 +23,7 @@ def check_content(text):
     for tok in FORBIDDEN_TOKENS:
         if tok.lower() in low:
             violations.append(f"forbidden stat token: {tok!r}")
-    # event-year adjacency, excluding the founding statement
-    scrubbed = _FOUNDING_RE.sub("", text)
-    if _EVENT_YEAR_RE.search(scrubbed):
-        violations.append("event year adjacency (a year 2010-2024 next to event/case wording)")
+    # event-year adjacency (a specific event's year), 2011-2024
+    if _EVENT_YEAR_RE.search(text):
+        violations.append("event year adjacency (a year 2011-2024 next to event/case wording)")
     return violations

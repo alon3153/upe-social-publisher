@@ -23,3 +23,9 @@ def test_event_year_flagged_he():
 
 def test_founding_year_2010_allowed():
     assert gd.check_content("Founded in 2010, Uproduction Events has 16 years of experience.") == []
+
+
+def test_tenure_since_2010_not_flagged():
+    # the real dry-run false-positive: tenure phrasing near "events" must NOT be flagged
+    assert gd.check_content("We have produced 1,500+ events since 2010 across 130+ destinations.") == []
+    assert gd.check_content("16 שנות ניסיון בהפקת אירועים מאז 2010.") == []
