@@ -11,8 +11,12 @@ def available_models():
 
 def _post(url, data, headers):
     req = urllib.request.Request(url, data=data, headers=headers, method="POST")
-    with urllib.request.urlopen(req, timeout=120) as r:
-        return r.read().decode("utf-8")
+    try:
+        with urllib.request.urlopen(req, timeout=120) as r:
+            return r.read().decode("utf-8")
+    except urllib.error.HTTPError as e:
+        body = e.read().decode("utf-8", errors="replace")[:400]
+        raise RuntimeError(f"HTTP {e.code} from {url}: {body}") from None
 
 
 def ask(model, prompt, system="", max_tokens=4096, _http=None):

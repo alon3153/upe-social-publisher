@@ -36,7 +36,12 @@ def run(repo, dry_run, ask_fn=None, judge_fn=None, send_fn=None, runner=None, to
                                                      cap=TARGETS.get("briefs_per_run", 3))
     pages = []
     for brief in briefs:
-        for page in aeo_generate.render_brief(brief, ask_fn, today):
+        try:
+            rendered = aeo_generate.render_brief(brief, ask_fn, today)
+        except Exception as e:  # generation error for one brief must not kill the whole run
+            failures.append(f"generation failed for {brief['type']} ({type(e).__name__}: {str(e)[:160]})")
+            continue
+        for page in rendered:
             if page["violations"]:
                 failures.append(f"guard rejected {page['slug']}: {page['violations']}")
                 continue

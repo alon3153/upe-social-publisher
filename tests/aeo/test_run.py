@@ -37,6 +37,28 @@ def test_full_loop_dry_run(tmp_path, monkeypatch):
     assert (tmp_path / "aeo_history.json").exists()
 
 
+def test_generation_failure_is_not_fatal(tmp_path, monkeypatch):
+    monkeypatch.setenv("ANTHROPIC_API_KEY", "x")
+
+    def ask_fn(model, prompt):
+        if "PAGE TYPE" in prompt:
+            raise RuntimeError("HTTP 400 from anthropic: bad request")
+        return "answer omitting brand"
+
+    def judge_fn(prompt):
+        dim = "product_search" if "product_search" in prompt else (
+            "comparison" if "comparison" in prompt else "reputation")
+        return json.dumps({"product_search": 0, "comparison": 0, "reputation": 0, dim: 30,
+                           "competitors": [], "gap_note": "gap"})
+
+    out = run_mod.run(str(tmp_path), dry_run=True, ask_fn=ask_fn, judge_fn=judge_fn,
+                      send_fn=lambda s, h: (True, "ok"), today="2026-06-28")
+    # probe + briefs still work; generation failures are recorded, run does not crash
+    assert out["scorecard"]["models"]["claude"]["product_search"] == 30
+    assert out["pages"] == []
+    assert out["email_sent"] is True
+
+
 def test_main_smoke(monkeypatch, capsys):
     monkeypatch.setenv("ANTHROPIC_API_KEY", "x")
     monkeypatch.setattr("sys.argv", ["aeo_run.py", "--dry-run"])
