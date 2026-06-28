@@ -228,16 +228,26 @@ def run_agent(it):
     body = {"model": MODEL, "max_tokens": 16000,
             "tools": [{"type": "web_search_20250305", "name": "web_search", "max_uses": 4}],
             "messages": [{"role": "user", "content": prompt}]}
-    req = urllib.request.Request("https://api.anthropic.com/v1/messages",
-        data=json.dumps(body).encode(),
-        headers={"x-api-key": API_KEY, "anthropic-version": "2023-06-01", "content-type": "application/json"})
-    try:
-        with urllib.request.urlopen(req, timeout=600) as r:
-            resp = json.loads(r.read().decode())
-    except urllib.error.HTTPError as e:
-        return {"error": f"anthropic {e.code}: {e.read().decode()[:200]}"}
-    except Exception as e:
-        return {"error": f"anthropic {e}"}
+    data = json.dumps(body).encode()
+    headers = {"x-api-key": API_KEY, "anthropic-version": "2023-06-01", "content-type": "application/json"}
+    resp = None
+    import time
+    for attempt in range(4):  # web_search calls can stall / drop — retry transient failures
+        try:
+            req = urllib.request.Request("https://api.anthropic.com/v1/messages", data=data, headers=headers)
+            with urllib.request.urlopen(req, timeout=600) as r:
+                resp = json.loads(r.read().decode())
+            break
+        except urllib.error.HTTPError as e:
+            if e.code in (429, 500, 529) and attempt < 3:
+                time.sleep(8 * (attempt + 1)); continue
+            return {"error": f"anthropic {e.code}: {e.read().decode()[:200]}"}
+        except (urllib.error.URLError, TimeoutError, OSError, ConnectionError) as e:
+            if attempt < 3:
+                time.sleep(8 * (attempt + 1)); continue
+            return {"error": f"anthropic {e}"}
+    if resp is None:
+        return {"error": "anthropic no response after retries"}
     text = "".join(b.get("text", "") for b in resp.get("content", []) if b.get("type") == "text")
     if not text.strip():
         return {"error": f"empty (stop={resp.get('stop_reason')})"}
