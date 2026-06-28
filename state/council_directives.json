@@ -4,55 +4,54 @@
   "directives": [
     {
       "category": "safe_auto",
-      "action": "הגדר 3-4 עמודות תוכן קבועות ל-LinkedIn ופרסם 4-5 פעמים בשבוע בימי ב'-ה' בין 8:00-10:00",
-      "detail": "אלגוריתם LinkedIn 2026 מתגמל עקביות נושאית ו-dwell time — פוסטים של 800-1500 תווים עם value אמיתי מקבלים 40% bonus reach; פרסום קבוע בשעות peak מגביר חשיפה ראשונית ב-1 השעה הקריטית",
+      "action": "עבור LinkedIn: שנה מיקס פורמטים לפוסטי טקסט-נייטיב קצרים (800-1,500 תווים) עם שאלה ספציפית בסיום — אסטרטגיה מוכחת לפי עדכון אלגוריתם LinkedIn יוני 2026",
+      "detail": "עדכון האלגוריתם של LinkedIn יוני 2026 מראה שפוסטי טקסט-נייטיב עולים ב-28% ריץ' וב-34% engagement על PDF carousels; ה-dwell time מעל 15 שניות מעניק בונוס ריץ' של 40%",
       "channel": "linkedin"
     },
     {
       "category": "safe_auto",
-      "action": "עבור ל-Shorts-first ב-YouTube: חתוך כל וידאו ארוך ל-Shorts של 15-35 שניות עם hook ב-3 השניות הראשונות",
-      "detail": "YouTube Shorts מייצרת 200 מיליארד צפיות יומיות גלובלית; אלגוריתם December 2025 הפחית slots לוידאו ארוך ב-80% בפיד הבית — Shorts הן ערוץ הגילוי המהיר ביותר לערוץ קיים עם תוכן ארוך",
+      "action": "Instagram: צמצם פרסום מ-14 פוסטים/14 ימים ל-3-4 Reels שבועיות איכותיות עם hook ב-3 השניות הראשונות; התמקד בתוכן שמייצר שמירות ושיתופים — לא לייקים",
+      "detail": "אלגוריתם Instagram 2026 מעניש תוכן ממוצע; שמירות ושיתופים הן האותות הגבוהים ביותר; 3 פוסטים עם engagement גבוה עדיפים על 7 בינוניים",
+      "channel": "instagram"
+    },
+    {
+      "category": "safe_auto",
+      "action": "YouTube: בנה ארכיטקטורת תוכן ב-3 pillars ספציפיים ל-MICE/אירועים תאגידיים; הוסף YouTube Shorts לכל סרטון ארוך כדי לייצר גילוי וlead לסרטון המלא",
+      "detail": "87% ממשווקי B2B ב-2026 מדווחים שShorts מייצרים engagement גבוה יותר; B2B ערוצים ללא ארכיטקטורת תוכן ברורה מייצרים אפס pipeline — הShorting Layer הוא מנוע הגילוי",
       "channel": "youtube"
     },
     {
       "category": "safe_auto",
-      "action": "מפה keyword opportunities לדפי נחיתה ייעודיים: 'virtual events' (1,034 impressions, pos 7.1), 'הפקת נופש חברה' (1,029 impressions, pos 12.4) — צור FAQ schema + H2 מבוסס שאלות",
-      "detail": "AEO (Answer Engine Optimization) הוא הכרחי ב-2026: overlap בין top-10 Google לציטוטי AI Overview ירד מ-75% ל-17-38%; דפים עם FAQPage schema, E-E-A-T ברור ותשובות ישירות לאחר כל H2 מוצגים בתשובות AI",
+      "action": "SEO/GEO: עדכן 5 דפי שירות מרכזיים ב-upe.co.il בפורמט Q&A עם נתונים ומקורות — כדי להיכלל ב-AI Overviews של גוגל ולהחזיר ציטוטים",
+      "detail": "92.36% מציטוטי AI Overviews מגיעים מדומיינים שכבר בtop-10; דפים מצוטטים ב-AIO מקבלים 120% יותר קליקים לחשיפה; כפורמט: שאלה, תשובה קצרה, נתון, מקור",
       "channel": "google_organic_geo"
     },
     {
       "category": "safe_auto",
-      "action": "הגדר קדנסת 'engagement hour': מנהל תוכן מגיב לכל תגובה ב-60 דקות מהפרסום ב-LinkedIn ו-Instagram",
-      "detail": "אלגוריתם LinkedIn מעריך כל פוסט ב-60 דקות הראשונות — engagement מוקדם = distribution רחב יותר; אינטראקציה מהירה מגדילה reach ב-50-70% לפי נתוני 2026; ב-Instagram תגובה ב-1 שעה מפעילה 'active post signal' ומוביל ל-Explore",
+      "action": "LinkedIn: הפעל אסטרטגיית Employee Advocacy — מנהלים בכירים ב-UPE יפרסמו פוסטים אישיים על תובנות מקצועיות מאירועים אמיתיים",
+      "detail": "פרופילים אישיים ב-LinkedIn מייצרים 8x יותר engagement מדפי חברה ב-2026; הפרסום ממנהלים בכירים מייצר אמינות גבוהה ומוריד את ה-CPL כשמפעילים קמפייינים ממומנים",
       "channel": "linkedin"
     },
     {
       "category": "safe_auto",
-      "action": "הפעל employee advocacy: הגדר 2-3 עובדים בכירים (CEO/PM) לפרסם מ-פרופיל אישי 3x/שבוע ולתייג את UPE",
-      "detail": "פרופילים אישיים מייצרים 5-10x יותר organic reach מדפי חברה ב-LinkedIn; CEO עם 1,000 קשרים שמשתף פוסט חברה = reach גדול בהרבה מדף החברה עצמו עם 10,000 עוקבים",
-      "channel": "linkedin"
-    },
-    {
-      "category": "safe_auto",
-      "action": "עדכן Instagram להתמקד ב-Reels (15-45 שניות) ו-Stories עם poll stickers — מדד הצלחה: saves ו-DM sends לא likes",
-      "detail": "Instagram 2026: 'sends per reach' הוא סיגנל מספר 1 להפצת Reels; saves מקבלים 3x משקל אלגוריתמי לעומת likes; Reels מייצרים 2x reach לעומת פוסטים סטטיים — מדידת KPIs שגויה (likes) מסבירה את ה-engagement האפסי על הפוסט המוביל",
-      "channel": "instagram"
+      "action": "TikTok/Instagram: נתח את 6 הפוסטים של TikTok שהשיגו 15,278 ריץ' — זהה מה עבד (פורמט, hook, נושא) ושכפל באופן שיטתי שבועי",
+      "detail": "TikTok מייצר את הריץ' הגבוה ביותר ביחס לנפח; 15,278 ריץ' ב-6 פוסטים = ~2,550/פוסט. שיכפול מבוסס-נתונים של הפורמטים המנצחים הוא הצעד ה-ROI הגבוה ביותר בעלות הנמוכה ביותר",
+      "channel": "tiktok"
     }
   ],
   "follower_growth_plan": [
-    "שנה 1 (0-12 חודשים) — בניית תשתית: הפעל employee advocacy (CEO + 2 PM) ב-LinkedIn עם 3-5 פוסטים/שבוע; צלם ועלה 2 Shorts/שבוע מאירועים אמיתיים; יעד ביניים: 5,000 עוקבים LinkedIn + 2,000 Instagram",
-    "שנה 1 — LinkedIn Newsletter: הפעל Newsletter חודשי עם תוכן ייחודי לקהל B2B MICE; הגע ל-500 מנויים בתוך 6 חודשים — כל מנוי = עוקב מוסמך עם נראות גבוהה",
-    "שנה 1-2 — YouTube Shorts funnel: הפק Shorts מכל אירוע (15-35 שניות) + 1 long-form/חודש; Shorts → subscribers → long-form viewers הוא הפאנל האורגני החזק ביותר של YouTube ב-2026",
-    "שנה 2 — Strategic partnerships: שיתופי פעולה עם 2-3 HR influencers / event professionals ישראלים ב-LinkedIn ו-Instagram — nano-influencers (תחת 10K) מייצרים 6.23% engagement vs 0.61% למאקרו",
-    "שנה 2-3 — GEO/AI visibility: הבטח שUPE מצוטטת ב-ChatGPT, Perplexity ו-Google AI Overview לשאילתות מרכזיות — מותגים שמצוטטים ב-AI Overviews מקבלים +120% יותר קליקים ובונים brand awareness גלובלי",
-    "שנה 3 — Scale: הפעל LinkedIn Sponsored Content על הפוסטים האורגניים המנצחים (engagement הגבוה ביותר) + retargeting לקהל מעורב; זה המנגנון שממיר brand awareness ל-500K following בקהל ממוקד B2B"
+    "שלב 1 (חודשים 1-3): בסיס — הפעל Employee Advocacy ב-LinkedIn (3-5 מנהלים מפרסמים פוסטים אישיים 3x/שבוע); הגבל Instagram ל-3 Reels איכותיות/שבוע בפורמט לפני-אחרי; אפס Facebook לפוסט אחד/שבוע תוצרת LinkedIn. יעד: הכפלת engagement rate ב-Instagram ו-LinkedIn.",
+    "שלב 2 (חודשים 3-6): נפח + מינוף תוכן — בנה ארכיטקטורת YouTube (3 פילרים + Shorts שבועיות); השתמש ב-TikTok כמנוע גילוי (6-8 פוסטים/חודש על בסיס הפורמטים שעבדו); סנכרן תוכן חוצה-פלטפורמות. יעד: 50K חשיפות/תקופה, engagement מתחיל להאכיל Salesforce.",
+    "שלב 3 (חודשים 6-12): SEO + GEO כ-flywheel — 5+ מאמרי עומק חדשים/רבעון; keyword targeting ממוקד ל-5 מונחי SEO הזדמנותיים; תחרות/ציטוטים ב-AI Overviews. יעד: 200+ קליקים/חודש מגוגל, 4+ GEO citations.",
+    "שלב 4 (שנה 2): Amplification — פוסטים מובילים ב-LinkedIn יקבלו boost ממומן; LinkedIn Newsletter שבועי לקהל opted-in; collaborations עם גורמים מהתעשייה ב-MICE/Europe. יעד: 50K+ עוקבים מצטברים חוצה-פלטפורמות, 500 קליקים/חודש.",
+    "שלב 5 (שנה 3): Scale — אסטרטגיית UGC מלקוחות קיימים (case studies video), LinkedIn Thought Leadership מ-CEO, נוכחות ב-MICE events עם live content. יעד: 500K חשיפות/חודש כmilestone דרך לקראת 500K עוקבים."
   ],
   "leads_actions": [
-    "מידי (שבוע 1): ייחוס מלא — הוסף UTM parameters לכל קישור ב-LinkedIn, Instagram ו-YouTube ועדכן Salesforce לקשר Opportunities למקור דיגיטלי; ללא attribution אי אפשר לדעת מה מייצר את ה-12 לידים",
-    "חודש 1: פרסם 2 case studies מפורטים עם מספרים אמיתיים ('הפקנו כנס 900 משתתפים ב-3 מדינות') ב-LinkedIn מפרופיל CEO + קישור לדף landing page ייעודי עם CTA ברורה",
-    "חודש 1-2: שדרג את top 5 דפי הנחיתה של upe.co.il עם E-E-A-T, case studies, FAQPage schema ו-author bios — כל דף צריך לענות ישירות על כוונת הבקשה של הלקוח ולכלול CTA לשיחת ייעוץ",
-    "חודש 2: הפעל LinkedIn outreach sequence: connect עם CMO/HR Directors בחברות 200+ עובדים בישראל → engage על תוכנם 2-3 פעמים → שלח DM אישי עם value prop ברור; שילוב LinkedIn + email מייצר 3.5x יותר תגובות מ-email בלבד",
-    "חודש 2-3: צור 'Event ROI Calculator' או 'Budget Estimator' כ-lead magnet על האתר — תוכן מסוג זה מייצר saves ב-LinkedIn (סיגנל אלגוריתמי חזק) ולידים מוסמכים שכבר מעריכים ב-ROI",
-    "מדידה חודשית: הגדר דשבורד ב-Salesforce שמקשר qualified leads → stage → source; אם 12 הלידים הנוכחיים לא קשורים לדיגיטל — כוון את ה-P0 recommendations ל-SEO ו-LinkedIn כערוצי inbound ראשיים"
+    "תקן את פאנל ה-Attribution: ב-Salesforce — סמן על כל Opportunity את המקור הדיגיטלי (LinkedIn DM, Instagram, Google Organic, Referral). ב-3 חודשים יהיה נתון ברור איזה ערוץ מייצר לידים — ואיפה להגביר.",
+    "LinkedIn Direct Outreach: כל מנהל ב-UPE יזהה 20 חברות-יעד/חודש בישראל ובאירופה ויפעיל רצף Touch: follow → לייק על תוכן → comment → connection request → DM עם הפניה לפוסט רלבנטי. שיטה זו מייצרת 3.5x יותר תגובות ממייל בלבד.",
+    "Lead Magnet ב-LinkedIn: פרסם חוברת/מדריך PDF להורדה בLinkedIn ('10 שאלות שכדאי לשאול מחברת הפקה לפני כנס תאגידי') — כולל CTA ברור לדף נחיתה. מייצר לידים warm מהשלב הראשון.",
+    "SEO Bottom-of-Funnel: צור דפי landing ייעודיים בute.co.il לכל מילת מפתח הזדמנותית (כגון 'הפקת נופש חברה', 'virtual events') עם CTA ישיר לקבלת הצעת מחיר — ישירות לפרסומת שרואים מחפשים עם כוונת רכישה.",
+    "Retargeting ב-LinkedIn: הפעל קמפיין LinkedIn Sponsored Content (ממומן, gated) ל-Lookalike Audience של לקוחות קיימים ב-ישראל + ספרד — תוך שימוש בפוסטים האורגניים שקיבלו engagement גבוה. מוריד CPL ומאיץ lead flow.",
+    "Monthly Case Study: פרסם מקרה לקוח חדש מדי חודש בLinkedIn ובאתר — עם נתונים קונקרטיים (ROI, נפח משתתפים, יעד, אתגר). תוכן זה הוא ה-trigger החזק ביותר ל-inbound lead B2B של CMO ו-HR מנהלים."
   ]
 }
