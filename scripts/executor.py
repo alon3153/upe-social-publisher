@@ -150,13 +150,13 @@ human approval — do not assume anything is published.
 
 If you previously produced a draft (shown above), IMPROVE it — sharper, more specific, fix weaknesses.
 
-Return ONE json object in a ```json block, nothing after it:
-{{
-  "summary": "one Hebrew sentence: what you produced/improved this cycle",
-  "deliverable_md": "the full deliverable as markdown (this is the work product Alon will use)",
-  "ready_for_approval": true|false,
-  "open_questions": ["Hebrew — anything you need from Alon to finish, or []"]
-}}"""
+OUTPUT FORMAT (important):
+1. First, output the FULL deliverable as markdown — this is the work product Alon will use.
+2. Then, on the very last lines, a single small ```json block with ONLY metadata:
+```json
+{{"summary": "one Hebrew sentence on what you produced/improved", "ready_for_approval": true, "open_questions": []}}
+```
+Do NOT put the deliverable inside the json. The json is metadata only and must be the last thing you output."""
 
 
 def run_agent(it):
@@ -181,19 +181,26 @@ def run_agent(it):
     except Exception as e:
         return {"error": f"anthropic {e}"}
     text = "".join(b.get("text", "") for b in resp.get("content", []) if b.get("type") == "text")
-    return _extract_json(text) or {"error": "parse fail", "raw": text[-600:]}
-
-
-def _extract_json(text):
+    if not text.strip():
+        return {"error": f"empty (stop={resp.get('stop_reason')})"}
+    # The deliverable is the markdown body; a small json metadata block trails it.
+    meta, deliverable = {}, text
     if "```json" in text:
-        text = text.split("```json", 1)[1].split("```", 1)[0]
-    s, e = text.find("{"), text.rfind("}")
-    if s == -1 or e == -1:
-        return None
-    try:
-        return json.loads(text[s:e + 1])
-    except json.JSONDecodeError:
-        return None
+        deliverable, _, rest = text.rpartition("```json")
+        blob = rest.split("```", 1)[0]
+        s, e = blob.find("{"), blob.rfind("}")
+        if s != -1 and e != -1:
+            try:
+                meta = json.loads(blob[s:e + 1])
+            except json.JSONDecodeError:
+                meta = {}
+    deliverable = deliverable.strip()
+    if not deliverable:
+        return {"error": f"no deliverable body (stop={resp.get('stop_reason')})"}
+    return {"deliverable_md": deliverable,
+            "summary": meta.get("summary", "(no summary)"),
+            "ready_for_approval": bool(meta.get("ready_for_approval", False)),
+            "open_questions": meta.get("open_questions", [])}
 
 
 # ------------------------------------------------------------------- digest ----
