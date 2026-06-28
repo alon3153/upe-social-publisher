@@ -1,0 +1,69 @@
+name: Weekly AEO Loop
+on:
+  schedule:
+    - cron: "0 5 * * 0"        # Sundays 05:00 UTC
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: "Run without opening a PR or sending email"
+        type: boolean
+        default: false
+
+jobs:
+  aeo:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout engine (upe-sp)
+        uses: actions/checkout@v4
+
+      - name: Checkout content repo (uproduction-astro)
+        uses: actions/checkout@v4
+        with:
+          repository: alon3153/uproduction-astro
+          token: ${{ secrets.GH_PAT }}
+          path: astro
+          fetch-depth: 0
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install deps
+        run: pip install -r requirements.txt -r requirements-dev.txt
+
+      - name: Run tests
+        run: python -m pytest tests/aeo -q
+
+      - name: Configure git for content repo
+        run: |
+          git -C astro config user.name "upe-aeo-bot"
+          git -C astro config user.email "alon@upe.co.il"
+
+      - name: Run AEO loop
+        env:
+          ANTHROPIC_API_KEY:      ${{ secrets.ANTHROPIC_API_KEY }}
+          OPENAI_API_KEY:         ${{ secrets.OPENAI_API_KEY }}
+          GEMINI_API_KEY:         ${{ secrets.GEMINI_API_KEY }}
+          GH_PAT:                 ${{ secrets.GH_PAT }}
+          GH_TOKEN:               ${{ secrets.GH_PAT }}
+          ASTRO_REPO:             astro
+          MS_GRAPH_TENANT_ID:     ${{ secrets.MS_GRAPH_TENANT_ID }}
+          MS_GRAPH_CLIENT_ID:     ${{ secrets.MS_GRAPH_CLIENT_ID }}
+          MS_GRAPH_CLIENT_SECRET: ${{ secrets.MS_GRAPH_CLIENT_SECRET }}
+          MS_GRAPH_FROM:          ${{ secrets.MS_GRAPH_FROM }}
+          APPROVAL_TO:            ${{ secrets.APPROVAL_TO }}
+        run: |
+          if [ "${{ inputs.dry_run }}" = "true" ]; then
+            python scripts/aeo_run.py --dry-run
+          else
+            python scripts/aeo_run.py
+          fi
+
+      - name: Persist scorecard history
+        if: ${{ inputs.dry_run != true }}
+        run: |
+          git config user.name "upe-aeo-bot"
+          git config user.email "alon@upe.co.il"
+          git add scripts/aeo_history.json 2>/dev/null || true
+          git commit -m "chore(aeo): scorecard history $(date -u +%F)" || echo "no history change"
+          git push || echo "nothing to push"
