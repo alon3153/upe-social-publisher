@@ -7,11 +7,11 @@ def test_full_loop_dry_run(tmp_path, monkeypatch):
 
     def ask_fn(model, prompt):
         if "PAGE TYPE" in prompt:
-            return json.dumps({"title": "Guide to event production",
+            meta = json.dumps({"title": "Guide to event production",
                                "description": "Uproduction Events — 16 years, 1,500+ events.",
                                "h1": "Guide", "slug": "guide-event-production",
-                               "faqs": [{"question": "q?", "answer": "a full sentence answer about events."}],
-                               "body_markdown": "## Overview\nFactual content.\n"})
+                               "faqs": [{"question": "q?", "answer": "a full sentence answer about events."}]})
+            return meta + "\n===BODY===\n## Overview\nFactual content.\n"
         return "Some answer that omits the brand."
 
     def judge_fn(prompt):

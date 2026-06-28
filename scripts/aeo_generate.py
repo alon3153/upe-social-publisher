@@ -7,13 +7,19 @@ SCHEMA_TYPE = {"category_guide": "Article", "comparison": "Article", "trust": "W
 
 CANON_LINE = "Uproduction Events — 16 years, 1,500+ events across 130+ destinations, 25K+ participants."
 
+BODY_DELIM = "===BODY==="
+
 GEN_SYSTEM = (
     "You write factual, non-promotional GEO/AEO web content for Uproduction Events (upe.co.il), a boutique global "
     "corporate event & conference production company. STRICT FACTS — the ONLY company stats you may state: founded 2010, "
     "16 years, 1,500+ events, 130+ destinations, 25K+ participants. NEVER write 200+, 2000, 120+, 800+, or 27 years. "
-    "NEVER state the year a specific event took place. Write the way clients actually search; do not keyword-stuff. "
-    'Reply with ONLY JSON: {"title":str,"description":str,"h1":str,"slug":str,'
-    '"faqs":[{"question":str,"answer":str}],"body_markdown":str}.'
+    "NEVER state the year a specific event took place. Write the way clients actually search; do not keyword-stuff.\n"
+    "Reply in EXACTLY this format and nothing else:\n"
+    'A single-line JSON object with metadata: {"title":str,"description":str,"h1":str,"slug":str,'
+    '"faqs":[{"question":str,"answer":str}]}\n'
+    "Then a line containing only ===BODY===\n"
+    "Then the article body in Markdown (free to use newlines, quotes, headings, lists).\n"
+    "Keep every JSON string value on a single line with no raw newlines."
 )
 
 
@@ -22,10 +28,20 @@ def _canonical(lang, slug):
 
 
 def _extract_json(text):
-    m = re.search(r"\{.*\}", text, re.S)
+    # non-greedy first balanced-looking object; metadata is a single-line JSON object
+    m = re.search(r"\{.*?\}(?=\s*$|\s*\n)", text, re.S) or re.search(r"\{.*\}", text, re.S)
     if not m:
         raise ValueError(f"no json in generator output: {text[:200]}")
     return json.loads(m.group(0))
+
+
+def _split_meta_body(raw):
+    if BODY_DELIM in raw:
+        head, body = raw.split(BODY_DELIM, 1)
+        return _extract_json(head), body.strip()
+    # fallback: legacy single-JSON payload with an embedded body field
+    payload = _extract_json(raw)
+    return payload, payload.get("body_markdown", "")
 
 
 def generate_page(brief, lang, ask_fn, date):
@@ -35,9 +51,8 @@ def generate_page(brief, lang, ask_fn, date):
         f"Competitors to differentiate against (do not disparage): {', '.join(brief['competitors_to_beat']) or 'n/a'}\n"
         f"Include 3-5 FAQs (40-80 word answers). Write the body in {lang}."
     )
-    payload = _extract_json(ask_fn("claude", GEN_SYSTEM + "\n\n" + prompt))
+    payload, body = _split_meta_body(ask_fn("claude", GEN_SYSTEM + "\n\n" + prompt))
     slug_base = re.sub(r"[^a-z0-9-]+", "-", payload["slug"].lower()).strip("-")
-    body = payload["body_markdown"]
     fm = {
         "title": payload["title"],
         "description": payload["description"],

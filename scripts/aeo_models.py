@@ -15,12 +15,12 @@ def _post(url, data, headers):
         return r.read().decode("utf-8")
 
 
-def ask(model, prompt, system="", _http=None):
+def ask(model, prompt, system="", max_tokens=4096, _http=None):
     http = _http or _post
     if model == "claude":
         body = {
             "model": os.environ.get("AEO_MODEL") or "claude-sonnet-4-6",
-            "max_tokens": 1024,
+            "max_tokens": max_tokens,
             "messages": [{"role": "user", "content": prompt}],
         }
         if system:
@@ -32,6 +32,7 @@ def ask(model, prompt, system="", _http=None):
         return "".join(b.get("text", "") for b in data.get("content", []) if b.get("type") == "text").strip()
     if model == "chatgpt":
         body = {"model": os.environ.get("AEO_OPENAI_MODEL") or "gpt-4o",
+                "max_tokens": max_tokens,
                 "messages": ([{"role": "system", "content": system}] if system else []) +
                             [{"role": "user", "content": prompt}]}
         headers = {"authorization": f"Bearer {os.environ.get('OPENAI_API_KEY','')}", "content-type": "application/json"}
@@ -41,7 +42,8 @@ def ask(model, prompt, system="", _http=None):
         mdl = os.environ.get("AEO_GEMINI_MODEL") or "gemini-1.5-pro"
         key = os.environ.get("GEMINI_API_KEY", "")
         url = f"https://generativelanguage.googleapis.com/v1beta/models/{mdl}:generateContent?key={key}"
-        body = {"contents": [{"parts": [{"text": (system + "\n\n" + prompt) if system else prompt}]}]}
+        body = {"contents": [{"parts": [{"text": (system + "\n\n" + prompt) if system else prompt}]}],
+                "generationConfig": {"maxOutputTokens": max_tokens}}
         data = json.loads(http(url, json.dumps(body).encode(), {"content-type": "application/json"}))
         return data["candidates"][0]["content"]["parts"][0]["text"].strip()
     raise ValueError(f"unknown model {model}")
