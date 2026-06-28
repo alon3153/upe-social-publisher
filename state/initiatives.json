@@ -2,12 +2,17 @@
   "feb2a415": {
     "id": "feb2a415",
     "title": "הפחתת נפח פרסום כולל מ-49 ל-20 פוסטים בשבוע — ריכוז משאבי production ב-LinkedIn (5/שבוע) ו-TikTok (4/שבוע) ו-Instagram Reels (3/שבוע), עם Carousel כפורמט מוביל",
-    "status": "todo",
-    "revisions": 0,
+    "status": "awaiting_approval",
+    "revisions": 1,
     "history": [
       {
         "date": "2026-06-28",
         "error": "parse fail"
+      },
+      {
+        "date": "2026-06-28",
+        "summary": "הופקה המלצה אסטרטגית מלאה ומוכנה לאישור: תכנית הפחתת נפח מ-49 ל-20 פוסטים/שבוע עם לוח שבועי מפורט, 3 תבניות פוסטים מוכנות (LinkedIn Carousel, TikTok Script, Instagram Carousel) בעברית ואנגלית, framework ל-4 עמודי תוכן, KPIs ל-90 יום, ו-production workflow — מבוסס נתוני 2026.",
+        "ready": true
       }
     ],
     "created": "2026-06-28",
@@ -20,12 +25,17 @@
   "c664ef63": {
     "id": "c664ef63",
     "title": "גיוס/הפעלת מנהלי/ות חשבון LinkedIn ב-UPE (CEO, Creative Director, Account Lead) לפרסום פוסטים אישיים של thought leadership — לפחות 2 פוסטים אישיים לשבוע לכל אחד",
-    "status": "todo",
-    "revisions": 0,
+    "status": "in_progress",
+    "revisions": 1,
     "history": [
       {
         "date": "2026-06-28",
         "error": "parse fail"
+      },
+      {
+        "date": "2026-06-28",
+        "summary": "(no summary)",
+        "ready": false
       }
     ],
     "created": "2026-06-28",
