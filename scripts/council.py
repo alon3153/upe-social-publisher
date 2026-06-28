@@ -304,6 +304,16 @@ def main():
     (METRICS_DIR / f"{_today()}.json").write_text(json.dumps(cur, ensure_ascii=False, indent=2))
     (REPORT_DIR / f"{_today()}.md").write_text(md)
 
+    # Persist gated recommendations for the executor agent-team to pick up & advance.
+    STATE_DIR.mkdir(parents=True, exist_ok=True)
+    (STATE_DIR / "council_recommendations.json").write_text(json.dumps({
+        "updated_at": _today(),
+        "scores": verdict.get("scores", {}),
+        "recommendations": verdict.get("recommendations", []),
+        "follower_growth_plan": verdict.get("follower_growth_plan", []),
+        "leads_actions": verdict.get("leads_actions", []),
+    }, ensure_ascii=False, indent=2))
+
     subj = f"🏛️ מועצת השיווק — דוח יומי {_today()} · ציון {verdict.get('scores',{}).get('overall','—')}/100"
     try:
         from daily_email import send_graph_html

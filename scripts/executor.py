@@ -1,0 +1,284 @@
+#!/usr/bin/env python3
+"""
+UPE Marketing Executor — a TEAM OF AGENTS that autonomously advances every
+council recommendation, continuously, in the background.
+
+Each council recommendation / follower-plan step / leads-action becomes an
+"initiative" with its own agent. On every run, each open initiative's agent
+(Claude API + live web_search) produces or IMPROVES a concrete, ready-to-use
+deliverable (draft posts, SEO page copy, YouTube descriptions, lead-magnet
+outline, keyword maps, FAQ schema, outreach scripts…) written to deliverables/.
+
+IRON-RULE BOUNDARY (UPE): agents do everything UP TO the publish/send/spend line,
+then PARK at "awaiting_approval". They never publish, send, or spend — Alon takes
+the finished draft live himself. Content stays review-gated.
+
+Cost is bounded: at most MAX_PER_RUN initiatives advanced per run (P0→P1→P2→leads
+→follower priority), each capped at MAX_REVISIONS improvement cycles before it
+parks until approved.
+
+State:
+  state/council_recommendations.json   (input, written by council.py)
+  state/initiatives.json               (the team's backlog + status)
+  deliverables/<id>.md                 (each agent's work product)
+
+Always exits 0. Emails Alon a digest of what advanced.
+
+Usage:
+  python3 scripts/executor.py                 # one cycle + email
+  python3 scripts/executor.py --dry-run       # no writes/email, print plan
+  python3 scripts/executor.py --max 3         # advance at most 3 this run
+"""
+import os, sys, json, hashlib, argparse, datetime, urllib.request, urllib.error
+from pathlib import Path
+
+ROOT = Path(__file__).resolve().parent.parent
+sys.path.insert(0, str(ROOT)); sys.path.insert(0, str(ROOT / "scripts"))
+
+API_KEY = os.environ.get("ANTHROPIC_API_KEY", "")
+MODEL = os.environ.get("EXECUTOR_MODEL") or "claude-sonnet-4-6"
+STATE_DIR = ROOT / "state"
+DELIV_DIR = ROOT / "deliverables"
+RECS_PATH = STATE_DIR / "council_recommendations.json"
+INIT_PATH = STATE_DIR / "initiatives.json"
+APPROVALS_PATH = STATE_DIR / "approvals.json"
+
+MAX_PER_RUN = int(os.environ.get("EXECUTOR_MAX_PER_RUN", "6"))
+MAX_REVISIONS = int(os.environ.get("EXECUTOR_MAX_REVISIONS", "3"))
+PRIORITY_ORDER = {"P0": 0, "P1": 1, "P2": 2, "leads": 3, "follower": 4}
+
+
+def _today():
+    return datetime.datetime.utcnow().strftime("%Y-%m-%d")
+
+
+def _iid(text):
+    return hashlib.sha1(text.strip().lower().encode()).hexdigest()[:8]
+
+
+# ---------------------------------------------------------- backlog assembly ---
+def load_initiatives():
+    try:
+        return json.loads(INIT_PATH.read_text())
+    except (OSError, ValueError):
+        return {}
+
+
+def load_approvals():
+    try:
+        return set(json.loads(APPROVALS_PATH.read_text()).get("approved", []))
+    except (OSError, ValueError):
+        return set()
+
+
+def sync_backlog(inits):
+    """Merge the latest council recommendations into the initiative backlog.
+    New recs → new initiatives; existing (same text) keep status+history."""
+    try:
+        recs = json.loads(RECS_PATH.read_text())
+    except (OSError, ValueError):
+        return inits, "no council_recommendations.json yet"
+    incoming = []
+    for r in recs.get("recommendations", []):
+        incoming.append((r.get("action", ""), {"kind": "recommendation",
+                         "priority": r.get("priority", "P2"), "channel": r.get("channel", ""),
+                         "expected_impact": r.get("expected_impact", "")}))
+    for s in recs.get("leads_actions", []):
+        incoming.append((s, {"kind": "leads_action", "priority": "leads", "channel": "leads"}))
+    for s in recs.get("follower_growth_plan", []):
+        incoming.append((s, {"kind": "follower_plan", "priority": "follower", "channel": "growth"}))
+    seen = set()
+    for title, meta in incoming:
+        if not title.strip():
+            continue
+        iid = _iid(title); seen.add(iid)
+        if iid not in inits:
+            inits[iid] = {"id": iid, "title": title, "status": "todo", "revisions": 0,
+                          "history": [], "created": _today(), "updated": _today(), **meta}
+        else:
+            inits[iid].update({k: v for k, v in meta.items() if v})
+            if inits[iid].get("status") == "archived":
+                inits[iid]["status"] = "todo"
+    # recs that dropped off the latest council output → archive (keep artifacts)
+    for iid, it in inits.items():
+        if iid not in seen and it.get("status") not in ("done", "archived"):
+            it["status"] = "archived"; it["updated"] = _today()
+    return inits, None
+
+
+def pick_to_advance(inits, approved, limit):
+    open_states = ("todo", "in_progress", "awaiting_approval")
+    cands = []
+    for it in inits.values():
+        if it["id"] in approved:
+            it["status"] = "approved"; continue
+        if it.get("status") not in open_states:
+            continue
+        if it.get("status") == "awaiting_approval" and it.get("revisions", 0) >= MAX_REVISIONS:
+            continue  # parked — waiting for Alon
+        cands.append(it)
+    cands.sort(key=lambda it: (PRIORITY_ORDER.get(it.get("priority"), 5),
+                               it.get("revisions", 0), it.get("updated", "")))
+    return cands[:limit]
+
+
+# ------------------------------------------------------------------ the agent --
+AGENT_PROMPT = """You are a specialist execution agent on UPE's marketing team. UPE = B2B corporate
+event production & incentive travel (Israel + global). Audience: CMO/HR/CEO/event leads at companies
+in Israel & Europe that run conferences/conventions/incentive trips needing a production company.
+Canonical facts: founded 2010, 1,500+ events, 130+ destinations, 25,000+ participants.
+
+YOUR INITIATIVE (advance this ONE thing as far as possible):
+  kind: {kind} | channel: {channel} | priority: {priority}
+  task: {title}
+  expected_impact: {impact}
+
+{prior}
+
+Produce the CONCRETE, READY-TO-USE DELIVERABLE — not advice about it. Examples by kind:
+- a social/LinkedIn recommendation → the actual post drafts (HE + EN), ready to schedule.
+- an SEO/pillar-page rec → the actual page: H1, meta title+description, full sections, internal links, target keywords.
+- a YouTube rec → the rewritten titles + first-2-lines descriptions with CTA + links, per existing video theme.
+- a lead-magnet rec → the full outline + the opening section copy + the opt-in form copy.
+- an outreach rec → the exact connection note + follow-up message templates (HE + EN).
+- a schema/technical rec → the actual JSON-LD / code block, ready to paste.
+- keyword mapping → the actual table: keyword → target URL → current position → intent.
+
+Use web_search for current (2026) best practices and any facts you need. Hebrew where the audience is
+Israeli; English/Spanish where European. RTL-correct Hebrew. Follow UPE iron rules: this is a DRAFT for
+human approval — do not assume anything is published.
+
+If you previously produced a draft (shown above), IMPROVE it — sharper, more specific, fix weaknesses.
+
+Return ONE json object in a ```json block, nothing after it:
+{{
+  "summary": "one Hebrew sentence: what you produced/improved this cycle",
+  "deliverable_md": "the full deliverable as markdown (this is the work product Alon will use)",
+  "ready_for_approval": true|false,
+  "open_questions": ["Hebrew — anything you need from Alon to finish, or []"]
+}}"""
+
+
+def run_agent(it):
+    prior = ""
+    dpath = DELIV_DIR / f"{it['id']}.md"
+    if dpath.exists():
+        prior = "PRIOR DRAFT (improve it):\n-----\n" + dpath.read_text()[:6000] + "\n-----"
+    prompt = AGENT_PROMPT.format(kind=it.get("kind"), channel=it.get("channel"),
+                                 priority=it.get("priority"), title=it.get("title"),
+                                 impact=it.get("expected_impact", "—"), prior=prior or "(no prior draft)")
+    body = {"model": MODEL, "max_tokens": 16000,
+            "tools": [{"type": "web_search_20250305", "name": "web_search", "max_uses": 4}],
+            "messages": [{"role": "user", "content": prompt}]}
+    req = urllib.request.Request("https://api.anthropic.com/v1/messages",
+        data=json.dumps(body).encode(),
+        headers={"x-api-key": API_KEY, "anthropic-version": "2023-06-01", "content-type": "application/json"})
+    try:
+        with urllib.request.urlopen(req, timeout=600) as r:
+            resp = json.loads(r.read().decode())
+    except urllib.error.HTTPError as e:
+        return {"error": f"anthropic {e.code}: {e.read().decode()[:200]}"}
+    except Exception as e:
+        return {"error": f"anthropic {e}"}
+    text = "".join(b.get("text", "") for b in resp.get("content", []) if b.get("type") == "text")
+    return _extract_json(text) or {"error": "parse fail", "raw": text[-600:]}
+
+
+def _extract_json(text):
+    if "```json" in text:
+        text = text.split("```json", 1)[1].split("```", 1)[0]
+    s, e = text.find("{"), text.rfind("}")
+    if s == -1 or e == -1:
+        return None
+    try:
+        return json.loads(text[s:e + 1])
+    except json.JSONDecodeError:
+        return None
+
+
+# ------------------------------------------------------------------- digest ----
+def render_html(inits, advanced):
+    d = _today()
+    counts = {}
+    for it in inits.values():
+        counts[it.get("status", "?")] = counts.get(it.get("status", "?"), 0) + 1
+    summary = " · ".join(f"{k}: {v}" for k, v in sorted(counts.items()))
+    rows = ""
+    for it, res in advanced:
+        oq = res.get("open_questions") or []
+        oqh = ("<br><span style='color:#b00;font-size:12px;'>❓ " + "; ".join(oq) + "</span>") if oq else ""
+        rows += (f"<tr><td><b>{it.get('priority')}</b></td><td>{it.get('title')[:90]}</td>"
+                 f"<td>{res.get('summary','—')}{oqh}</td>"
+                 f"<td>{'✅ מוכן' if res.get('ready_for_approval') else '✍️ בתהליך'}</td>"
+                 f"<td><code>deliverables/{it['id']}.md</code></td></tr>")
+    return f"""<html dir="rtl" lang="he"><head><meta charset="utf-8"></head>
+<body dir="rtl" style="font-family:Arial,Helvetica,sans-serif;font-size:14px;direction:rtl;text-align:right;color:#111;">
+<div dir="rtl" style="direction:rtl;text-align:right;max-width:720px;">
+<h2>🤖 צוות הביצוע — דוח {d}</h2>
+<p>קידמתי <b>{len(advanced)}</b> יוזמות בסבב הזה. מצב מצטבר: {summary}</p>
+<p style="background:#f6f6f6;padding:10px;border-right:3px solid #333;font-size:12px;">
+כל התוצרים הם <b>טיוטות לאישורך</b> — שום דבר לא פורסם/נשלח. התוצרים נשמרו ב-<code>deliverables/</code> ברפו.</p>
+<table dir="rtl" cellpadding="6" style="border-collapse:collapse;width:100%;font-size:13px;">
+<tr style="background:#222;color:#fff;"><th>עדיפות</th><th>יוזמה</th><th>מה נעשה</th><th>מצב</th><th>קובץ</th></tr>
+{rows or '<tr><td colspan=5>—</td></tr>'}</table>
+<p style="color:#555;font-size:12px;">לאישור יוזמה: הוסף את ה-id ל-<code>state/approvals.json</code> (רשימת "approved") — הצוות יפסיק לשפר אותה.</p>
+<hr><p style="color:#888;font-size:11px;">UPE Marketing Executor · אוטומטי · {d}</p>
+</div></body></html>"""
+
+
+# --------------------------------------------------------------------- main ----
+def main():
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--dry-run", action="store_true")
+    ap.add_argument("--max", type=int, default=MAX_PER_RUN)
+    a = ap.parse_args()
+    if not API_KEY and not a.dry_run:
+        print("ANTHROPIC_API_KEY not set", file=sys.stderr); return 0
+
+    inits = load_initiatives()
+    inits, warn = sync_backlog(inits)
+    if warn:
+        print(warn, file=sys.stderr)
+    approved = load_approvals()
+    todo = pick_to_advance(inits, approved, a.max)
+    print(f"backlog: {len(inits)} initiatives | advancing {len(todo)} this run")
+
+    if a.dry_run:
+        for it in todo:
+            print(f"  [{it.get('priority')}] {it['id']} {it.get('title')[:70]} (rev {it.get('revisions',0)})")
+        return 0
+
+    DELIV_DIR.mkdir(parents=True, exist_ok=True); STATE_DIR.mkdir(parents=True, exist_ok=True)
+    advanced = []
+    for it in todo:
+        res = run_agent(it)
+        if res.get("error"):
+            print(f"  ✗ {it['id']}: {res['error']}", file=sys.stderr)
+            it["history"].append({"date": _today(), "error": res["error"]})
+            continue
+        (DELIV_DIR / f"{it['id']}.md").write_text(
+            f"# {it.get('title')}\n\n_{it.get('priority')} · {it.get('channel')} · updated {_today()}_\n\n"
+            + res.get("deliverable_md", ""))
+        it["revisions"] = it.get("revisions", 0) + 1
+        it["status"] = "awaiting_approval" if res.get("ready_for_approval") else "in_progress"
+        it["updated"] = _today()
+        it["history"].append({"date": _today(), "summary": res.get("summary", ""),
+                              "ready": res.get("ready_for_approval", False)})
+        advanced.append((it, res))
+        print(f"  ✓ {it['id']} [{it.get('status')}] {res.get('summary','')[:60]}")
+
+    INIT_PATH.write_text(json.dumps(inits, ensure_ascii=False, indent=2))
+
+    if advanced:
+        try:
+            from daily_email import send_graph_html
+            ok, info = send_graph_html(f"🤖 צוות הביצוע — {_today()} · {len(advanced)} יוזמות קודמו",
+                                       render_html(inits, advanced))
+            print(f"email: {ok} ({info})")
+        except Exception as e:
+            print(f"email failed: {e}", file=sys.stderr)
+    return 0
+
+
+if __name__ == "__main__":
+    sys.exit(main())
