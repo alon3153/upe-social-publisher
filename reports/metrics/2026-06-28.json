@@ -1,0 +1,237 @@
+{
+  "generated_at": "2026-06-28T05:47:59",
+  "period_days": 7,
+  "networks": {
+    "instagram": {
+      "posts": 11,
+      "impressions": 284,
+      "reach": 190,
+      "interactions": 3,
+      "engagement_rate_pct": 1.06,
+      "caveat": null,
+      "top": {
+        "url": "https://www.instagram.com/p/DZ2DXSxkmhk/",
+        "content": "900 delegates. One flawless week. 🎯\n\nMoving an entire flagship conference abroad — and making it look effortless.\n\nHere's what that really took:\n\n✈️ Flights, ho",
+        "impressions": 42,
+        "interactions": 0
+      }
+    },
+    "facebook": {
+      "posts": 11,
+      "impressions": 106,
+      "reach": 0,
+      "interactions": 250,
+      "engagement_rate_pct": 100.0,
+      "caveat": "engagement_rate unreliable (network under-reports impressions for this period)",
+      "top": {
+        "url": null,
+        "content": "",
+        "impressions": 23,
+        "interactions": 0
+      }
+    },
+    "tiktok": {
+      "posts": 3,
+      "impressions": 0,
+      "reach": 7034,
+      "interactions": 0,
+      "engagement_rate_pct": 0.0,
+      "caveat": null,
+      "top": {
+        "url": null,
+        "content": "",
+        "impressions": 0,
+        "interactions": 0
+      }
+    },
+    "linkedin": {
+      "posts": 18,
+      "impressions": 148,
+      "reach": 0,
+      "interactions": 20,
+      "engagement_rate_pct": 13.51,
+      "caveat": null,
+      "top": {
+        "url": "https://www.linkedin.com/feed/update/urn:li:share:7474709915102707712",
+        "content": "",
+        "impressions": 28,
+        "interactions": 0
+      }
+    },
+    "youtube": {
+      "posts": 6,
+      "impressions": 7977,
+      "reach": 0,
+      "interactions": 0,
+      "engagement_rate_pct": 0.0,
+      "caveat": null,
+      "top": {
+        "url": null,
+        "content": "",
+        "impressions": 6886,
+        "interactions": 0
+      }
+    }
+  },
+  "totals": {
+    "posts": 49,
+    "impressions": 8515,
+    "reach": 7224,
+    "interactions": 273,
+    "engagement_rate_pct": 3.21
+  },
+  "leads": {
+    "ok": false,
+    "reason": "SALESFORCE_* secrets not set",
+    "qualified_leads": null,
+    "new_opportunities": null,
+    "source": "salesforce"
+  },
+  "seo_geo": {
+    "generated_at": "2026-06-27",
+    "sites": [
+      {
+        "site": "https://upe.co.il/",
+        "clicks": 80,
+        "impressions": 30308,
+        "avg_position": 32.8,
+        "clicks_prev": 296,
+        "impressions_prev": 72716,
+        "top_opportunities": [
+          [
+            "virtual events",
+            7.1,
+            1034
+          ],
+          [
+            "הפקת נופש חברה",
+            12.4,
+            1029
+          ],
+          [
+            "הפקות אירועים לחברות",
+            10.8,
+            397
+          ],
+          [
+            "אירועי קונספט",
+            18.4,
+            219
+          ],
+          [
+            "ארגון טיולים לחברות",
+            10.5,
+            140
+          ]
+        ]
+      },
+      {
+        "site": "https://upe-spain.com/",
+        "clicks": 36,
+        "impressions": 11900,
+        "avg_position": 25.2,
+        "clicks_prev": 48,
+        "impressions_prev": 12470,
+        "top_opportunities": [
+          [
+            "international product launch event",
+            12.6,
+            180
+          ],
+          [
+            "global product launch event",
+            12.6,
+            167
+          ],
+          [
+            "new hire team building",
+            17.2,
+            161
+          ],
+          [
+            "how to insure event liability",
+            10.6,
+            155
+          ],
+          [
+            "incentive travel spain",
+            8.9,
+            98
+          ]
+        ]
+      }
+    ],
+    "geo": {
+      "status": "ok",
+      "cited": 1,
+      "total": 7,
+      "rate": 14.3
+    },
+    "competitors": [
+      {
+        "term": "הפקת אירועים עסקיים",
+        "pos": null,
+        "top3": [
+          "pinchevents.co.il",
+          "www.arbelpro.co.il",
+          "mantver.co.il"
+        ]
+      },
+      {
+        "term": "חברת הפקת אירועים",
+        "pos": null,
+        "top3": [
+          "www.arbelpro.co.il",
+          "pinchevents.co.il",
+          "allplaces.co.il"
+        ]
+      },
+      {
+        "term": "הפקת כנסים",
+        "pos": null,
+        "top3": [
+          "rtspro.co.il",
+          "www.eron.co.il",
+          "www.ortra.co.il"
+        ]
+      },
+      {
+        "term": "טיולי תמריץ לעובדים",
+        "pos": 5,
+        "top3": [
+          "www.elateva.co.il",
+          "mspirit.co.il",
+          "www.boutiqo.co.il"
+        ]
+      },
+      {
+        "term": "eventos corporativos españa",
+        "pos": null,
+        "top3": [
+          "www.eventoplus.com",
+          "www.creagroupevents.com",
+          "factoryevents.es"
+        ]
+      },
+      {
+        "term": "incentive travel spain",
+        "pos": null,
+        "top3": [
+          "madridexpert.com",
+          "www.uyuni-incentivetravels.com",
+          "www.jaggedhorizons.com"
+        ]
+      },
+      {
+        "term": "corporate events barcelona",
+        "pos": null,
+        "top3": [
+          "www.eventbrite.com",
+          "www.barcelona-life.com",
+          "wearecloudworks.com"
+        ]
+      }
+    ],
+    "ok": true
+  }
+}
