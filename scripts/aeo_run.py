@@ -62,7 +62,7 @@ def run(repo, dry_run, ask_fn=None, judge_fn=None, send_fn=None, runner=None, to
         email_sent = bool(ok)
 
     return {"scorecard": scorecard, "briefs": briefs, "deferred": deferred,
-            "pages": pages, "publish": publish, "email_sent": email_sent}
+            "pages": pages, "publish": publish, "email_sent": email_sent, "failures": failures}
 
 
 def main():
@@ -75,6 +75,8 @@ def main():
     print(f"AEO run {datetime.date.today().isoformat()}: models={list(sc)} "
           f"briefs={len(out['briefs'])} pages={len(out['pages'])} "
           f"deferred={out['deferred']} email_sent={out['email_sent']}")
+    for f in out.get("failures", []):
+        print(f"  FAILURE: {f}")
 
 
 if __name__ == "__main__":
