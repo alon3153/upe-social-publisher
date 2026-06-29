@@ -22,6 +22,7 @@ def publish_row(r):
         url = r.get("image_url") or find_image_url(day)
         return instagram.publish_post(ig_key, text, url)
     if net == "linkedin":
+        video_url = r.get("video_url")
         url = r.get("image_url") or find_image_url(day)
         # Route by account to one of 3 destinations:
         #   li_personal  -> Alon's personal profile (HE)
@@ -34,6 +35,8 @@ def publish_row(r):
             org_urn = os.environ.get("LINKEDIN_ORG_URN_SPAIN")
         else:
             org_urn = os.environ.get("LINKEDIN_ORG_URN")
+        if video_url:  # brand-film / Sofia video posts
+            return linkedin.publish_post(text, video_url=video_url, org_urn=org_urn)
         return linkedin.publish_post(text, url, org_urn=org_urn)
     # tiktok: pending app audit
     return {"success": False, "error": f"{net} publisher not configured yet"}
