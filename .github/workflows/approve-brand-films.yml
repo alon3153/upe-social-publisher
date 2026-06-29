@@ -1,0 +1,24 @@
+name: Approve Brand Films (LinkedIn 3-channel)
+
+# Manual one-off: flip the 3 brand-film LinkedIn rows (days 9001-9003) to
+# approved so the next publish_approved run posts them.
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  approve:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Approve brand films
+        env:
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
+        run: python3 scripts/approve_brand_films.py
