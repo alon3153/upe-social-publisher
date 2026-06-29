@@ -253,7 +253,7 @@
   "40ee95e7": {
     "id": "40ee95e7",
     "title": "השק מסע תוכן SEO/GEO דחוף לאתר upe.co.il: בנה 5 דפי עמוד-עמוד (pillar pages) בנושאים 'virtual events', 'הפקת נופש חברה', 'הפקות אירועים לחברות' עם E-E-A-T מלא, case studies אמיתיים, FAQPage schema ו-author credentials",
-    "status": "todo",
+    "status": "archived",
     "revisions": 0,
     "history": [
       {
@@ -262,7 +262,7 @@
       }
     ],
     "created": "2026-06-28",
-    "updated": "2026-06-28",
+    "updated": "2026-06-29",
     "kind": "recommendation",
     "priority": "P0",
     "channel": "google_organic_geo",
@@ -271,7 +271,7 @@
   "37d434e5": {
     "id": "37d434e5",
     "title": "פתח סדרת LinkedIn thought leadership מפרופיל CEO/מנהל בכיר: 'מאחורי הקלעים של אירוע ל-900 משתתפים' — 1 פוסט ארוך (1,200+ תווים) + 1 קרוסלה + 1 סרטון קצר לשבוע",
-    "status": "awaiting_approval",
+    "status": "approved",
     "revisions": 1,
     "history": [
       {
@@ -281,7 +281,7 @@
       }
     ],
     "created": "2026-06-28",
-    "updated": "2026-06-28",
+    "updated": "2026-06-29",
     "kind": "recommendation",
     "priority": "P0",
     "channel": "linkedin",
@@ -290,7 +290,7 @@
   "c77b189d": {
     "id": "c77b189d",
     "title": "הפק 2 case study videos לחודש מאירועים אמיתיים (כולל מספרים: 'הובלנו 900 משתתפים ל-3 מדינות ב-7 ימים') — פרסם כ-YouTube long-form (5-10 דקות) + חתוך ל-Shorts + העלה native ל-LinkedIn",
-    "status": "awaiting_approval",
+    "status": "approved",
     "revisions": 1,
     "history": [
       {
@@ -300,7 +300,7 @@
       }
     ],
     "created": "2026-06-28",
-    "updated": "2026-06-28",
+    "updated": "2026-06-29",
     "kind": "recommendation",
     "priority": "P1",
     "channel": "youtube",
@@ -309,11 +309,11 @@
   "077080cf": {
     "id": "077080cf",
     "title": "בנה דף נחיתה ייעודי לכל שירות מרכזי (הפקת כנסים, טיולי תמריץ, אירועי חברה) עם הוכחות חברתיות, מספרים ו-CTA ברורה — קשר ל-keyword opportunities מ-GSC",
-    "status": "todo",
+    "status": "archived",
     "revisions": 0,
     "history": [],
     "created": "2026-06-28",
-    "updated": "2026-06-28",
+    "updated": "2026-06-29",
     "kind": "recommendation",
     "priority": "P1",
     "channel": "google_organic_geo",
@@ -322,11 +322,11 @@
   "5d3d4421": {
     "id": "5d3d4421",
     "title": "השק LinkedIn Newsletter חודשי ('The Event Brief') עם תוכן ייחודי לקהל CMO/HR — בדיקות שוק, טרנדים ב-MICE, טיפים מבוססי ניסיון אמיתי",
-    "status": "todo",
+    "status": "archived",
     "revisions": 0,
     "history": [],
     "created": "2026-06-28",
-    "updated": "2026-06-28",
+    "updated": "2026-06-29",
     "kind": "recommendation",
     "priority": "P1",
     "channel": "linkedin",
@@ -335,11 +335,11 @@
   "466f279d": {
     "id": "466f279d",
     "title": "הגדר אסטרטגיית TikTok ממוקדת HR/event managers בישראל: 3-4 סרטוני 'behind the scenes' שבועיים בסגנון 'edutainment' עם גיבוי UTM ל-Salesforce למדידת attribution",
-    "status": "todo",
+    "status": "archived",
     "revisions": 0,
     "history": [],
     "created": "2026-06-28",
-    "updated": "2026-06-28",
+    "updated": "2026-06-29",
     "kind": "recommendation",
     "priority": "P2",
     "channel": "tiktok",
@@ -348,11 +348,11 @@
   "0701980d": {
     "id": "0701980d",
     "title": "מידי (שבוע 1): ייחוס מלא — הוסף UTM parameters לכל קישור ב-LinkedIn, Instagram ו-YouTube ועדכן Salesforce לקשר Opportunities למקור דיגיטלי; ללא attribution אי אפשר לדעת מה מייצר את ה-12 לידים",
-    "status": "todo",
+    "status": "archived",
     "revisions": 0,
     "history": [],
     "created": "2026-06-28",
-    "updated": "2026-06-28",
+    "updated": "2026-06-29",
     "kind": "leads_action",
     "priority": "leads",
     "channel": "leads"
@@ -360,11 +360,11 @@
   "80af8d89": {
     "id": "80af8d89",
     "title": "חודש 1: פרסם 2 case studies מפורטים עם מספרים אמיתיים ('הפקנו כנס 900 משתתפים ב-3 מדינות') ב-LinkedIn מפרופיל CEO + קישור לדף landing page ייעודי עם CTA ברורה",
-    "status": "todo",
+    "status": "archived",
     "revisions": 0,
     "history": [],
     "created": "2026-06-28",
-    "updated": "2026-06-28",
+    "updated": "2026-06-29",
     "kind": "leads_action",
     "priority": "leads",
     "channel": "leads"
@@ -372,11 +372,11 @@
   "4fa7a56a": {
     "id": "4fa7a56a",
     "title": "חודש 1-2: שדרג את top 5 דפי הנחיתה של upe.co.il עם E-E-A-T, case studies, FAQPage schema ו-author bios — כל דף צריך לענות ישירות על כוונת הבקשה של הלקוח ולכלול CTA לשיחת ייעוץ",
-    "status": "todo",
+    "status": "archived",
     "revisions": 0,
     "history": [],
     "created": "2026-06-28",
-    "updated": "2026-06-28",
+    "updated": "2026-06-29",
     "kind": "leads_action",
     "priority": "leads",
     "channel": "leads"
@@ -384,11 +384,11 @@
   "ced1ebf0": {
     "id": "ced1ebf0",
     "title": "חודש 2: הפעל LinkedIn outreach sequence: connect עם CMO/HR Directors בחברות 200+ עובדים בישראל → engage על תוכנם 2-3 פעמים → שלח DM אישי עם value prop ברור; שילוב LinkedIn + email מייצר 3.5x יותר תגובות מ-email בלבד",
-    "status": "todo",
+    "status": "archived",
     "revisions": 0,
     "history": [],
     "created": "2026-06-28",
-    "updated": "2026-06-28",
+    "updated": "2026-06-29",
     "kind": "leads_action",
     "priority": "leads",
     "channel": "leads"
@@ -396,11 +396,11 @@
   "9cdf9f14": {
     "id": "9cdf9f14",
     "title": "חודש 2-3: צור 'Event ROI Calculator' או 'Budget Estimator' כ-lead magnet על האתר — תוכן מסוג זה מייצר saves ב-LinkedIn (סיגנל אלגוריתמי חזק) ולידים מוסמכים שכבר מעריכים ב-ROI",
-    "status": "todo",
+    "status": "archived",
     "revisions": 0,
     "history": [],
     "created": "2026-06-28",
-    "updated": "2026-06-28",
+    "updated": "2026-06-29",
     "kind": "leads_action",
     "priority": "leads",
     "channel": "leads"
@@ -408,11 +408,11 @@
   "6ec0a94f": {
     "id": "6ec0a94f",
     "title": "מדידה חודשית: הגדר דשבורד ב-Salesforce שמקשר qualified leads → stage → source; אם 12 הלידים הנוכחיים לא קשורים לדיגיטל — כוון את ה-P0 recommendations ל-SEO ו-LinkedIn כערוצי inbound ראשיים",
-    "status": "todo",
+    "status": "archived",
     "revisions": 0,
     "history": [],
     "created": "2026-06-28",
-    "updated": "2026-06-28",
+    "updated": "2026-06-29",
     "kind": "leads_action",
     "priority": "leads",
     "channel": "leads"
@@ -420,11 +420,11 @@
   "e5675c46": {
     "id": "e5675c46",
     "title": "שנה 1 (0-12 חודשים) — בניית תשתית: הפעל employee advocacy (CEO + 2 PM) ב-LinkedIn עם 3-5 פוסטים/שבוע; צלם ועלה 2 Shorts/שבוע מאירועים אמיתיים; יעד ביניים: 5,000 עוקבים LinkedIn + 2,000 Instagram",
-    "status": "todo",
+    "status": "archived",
     "revisions": 0,
     "history": [],
     "created": "2026-06-28",
-    "updated": "2026-06-28",
+    "updated": "2026-06-29",
     "kind": "follower_plan",
     "priority": "follower",
     "channel": "growth"
@@ -432,11 +432,11 @@
   "a9f24175": {
     "id": "a9f24175",
     "title": "שנה 1 — LinkedIn Newsletter: הפעל Newsletter חודשי עם תוכן ייחודי לקהל B2B MICE; הגע ל-500 מנויים בתוך 6 חודשים — כל מנוי = עוקב מוסמך עם נראות גבוהה",
-    "status": "todo",
+    "status": "archived",
     "revisions": 0,
     "history": [],
     "created": "2026-06-28",
-    "updated": "2026-06-28",
+    "updated": "2026-06-29",
     "kind": "follower_plan",
     "priority": "follower",
     "channel": "growth"
@@ -444,11 +444,11 @@
   "26ba6024": {
     "id": "26ba6024",
     "title": "שנה 1-2 — YouTube Shorts funnel: הפק Shorts מכל אירוע (15-35 שניות) + 1 long-form/חודש; Shorts → subscribers → long-form viewers הוא הפאנל האורגני החזק ביותר של YouTube ב-2026",
-    "status": "todo",
+    "status": "archived",
     "revisions": 0,
     "history": [],
     "created": "2026-06-28",
-    "updated": "2026-06-28",
+    "updated": "2026-06-29",
     "kind": "follower_plan",
     "priority": "follower",
     "channel": "growth"
@@ -456,11 +456,11 @@
   "e767a1b6": {
     "id": "e767a1b6",
     "title": "שנה 2 — Strategic partnerships: שיתופי פעולה עם 2-3 HR influencers / event professionals ישראלים ב-LinkedIn ו-Instagram — nano-influencers (תחת 10K) מייצרים 6.23% engagement vs 0.61% למאקרו",
-    "status": "todo",
+    "status": "archived",
     "revisions": 0,
     "history": [],
     "created": "2026-06-28",
-    "updated": "2026-06-28",
+    "updated": "2026-06-29",
     "kind": "follower_plan",
     "priority": "follower",
     "channel": "growth"
@@ -468,11 +468,11 @@
   "bb7bc860": {
     "id": "bb7bc860",
     "title": "שנה 2-3 — GEO/AI visibility: הבטח שUPE מצוטטת ב-ChatGPT, Perplexity ו-Google AI Overview לשאילתות מרכזיות — מותגים שמצוטטים ב-AI Overviews מקבלים +120% יותר קליקים ובונים brand awareness גלובלי",
-    "status": "todo",
+    "status": "archived",
     "revisions": 0,
     "history": [],
     "created": "2026-06-28",
-    "updated": "2026-06-28",
+    "updated": "2026-06-29",
     "kind": "follower_plan",
     "priority": "follower",
     "channel": "growth"
@@ -480,11 +480,256 @@
   "c62466df": {
     "id": "c62466df",
     "title": "שנה 3 — Scale: הפעל LinkedIn Sponsored Content על הפוסטים האורגניים המנצחים (engagement הגבוה ביותר) + retargeting לקהל מעורב; זה המנגנון שממיר brand awareness ל-500K following בקהל ממוקד B2B",
-    "status": "todo",
+    "status": "archived",
     "revisions": 0,
     "history": [],
     "created": "2026-06-28",
-    "updated": "2026-06-28",
+    "updated": "2026-06-29",
+    "kind": "follower_plan",
+    "priority": "follower",
+    "channel": "growth"
+  },
+  "4799552f": {
+    "id": "4799552f",
+    "title": "הפעלת תוכנית Employee Advocacy: מנכ\"ל ו-2-3 מנהלים בכירים מפרסמים 3-4 פוסטים שבועיים מחשבונם האישי בLinkedIn, כשהתוכן מקנן את חשבון החברה",
+    "status": "awaiting_approval",
+    "revisions": 1,
+    "history": [
+      {
+        "date": "2026-06-29",
+        "summary": "הופק בנק מלא של 12 טיוטות פוסטים (עברית + אנגלית) ל-4 מנהלים בכירים ב-UPE, כולל לוח פרסום ל-8 שבועות, פרוטוקול Golden Hour, KPIs מדידים, כללי קול ומיתוג — מוכן לאישור ולהתאמה אישית לפני פרסום.",
+        "ready": true
+      }
+    ],
+    "created": "2026-06-29",
+    "updated": "2026-06-29",
+    "kind": "recommendation",
+    "priority": "P0",
+    "channel": "linkedin",
+    "expected_impact": "פרופילים אישיים מייצרים 8x יותר engagement מדפי חברה; reach אורגני של פרופיל אישי יכול להגיע ל-20-40% מהחיבורים עם engagement מוקדם — הגדלת חשיפה פי 5-10 תוך 8-12 שבועות"
+  },
+  "e94d5e54": {
+    "id": "e94d5e54",
+    "title": "יצירת 2 case studies מצולמים חודשיים של אירועים שהופקו — עמוד נחיתה מוקדש בUPE.co.il עם SEO מובנה, הטמעה ב-YouTube, ו-repurpose ל-LinkedIn carousel",
+    "status": "awaiting_approval",
+    "revisions": 1,
+    "history": [
+      {
+        "date": "2026-06-29",
+        "summary": "הופק מסמך הפקה מלא ומוכן לשימוש עבור מערכת ה-Case Study Videos של UPE, הכולל: 2 כותרות + תיאורי YouTube מוכנים להדבקה (עברית ואנגלית), מבנה דפי נחיתה SEO עם Meta Tags, Schema JSON-LD מלא (VideoObject + FAQPage + BreadcrumbList + Organization), 2 LinkedIn Carousels (עברית + אנגלית), script לYouTube Short, לוח ייצור חודשי, keyword mapping, ו-GEO writing rules — הכל מבוסס על Best Practices 2026.",
+        "ready": true
+      }
+    ],
+    "created": "2026-06-29",
+    "updated": "2026-06-29",
+    "kind": "recommendation",
+    "priority": "P0",
+    "channel": "youtube",
+    "expected_impact": "תוכן case study הוא המניע הראשי ל-B2B trust ול-GEO citation; שיפור dwell time באתר, CTR מGSC, וציטוט ב-AI answers — צפי לשיפור ב-conversion rate של לידים אורגניים"
+  },
+  "391ec332": {
+    "id": "391ec332",
+    "title": "השקת LinkedIn Newsletter שבועי 'Inside the Event' — תובנות מקצועיות על הפקת אירועים גלובליים, מספרים, lessons learned",
+    "status": "awaiting_approval",
+    "revisions": 1,
+    "history": [
+      {
+        "date": "2026-06-29",
+        "summary": "הופק קיט השקה מלא ומוכן-לאישור לניוזלטר LinkedIn 'Inside the Event' של UPE — כולל: כרטיס הגדרות ה-Newsletter, תיאור ה-About, לוח עריכה ל-8 גיליונות ראשונים עם תוכן מלא לגיליון #1 ותקצירים לגיליונות 2–8, פוסט השקה בעברית ואנגלית מוכן לתזמון, playbook צמיחה שבועי לחודשים 1–3, KPIs ו-benchmarks מבוססי נתוני 2026, כללי DO/DON'T עם ביסוס ממקורות עדכניים, ו-SOP הפקה שבועי.",
+        "ready": true
+      }
+    ],
+    "created": "2026-06-29",
+    "updated": "2026-06-29",
+    "kind": "recommendation",
+    "priority": "P1",
+    "channel": "linkedin",
+    "expected_impact": "Newsletter בLinkedIn שולח push notification לכל מנוי; open rates של 40-60% לעומת 20-25% לאימייל רגיל — בניית קהל captive של decision-makers תוך 3-6 חודשים"
+  },
+  "d7382044": {
+    "id": "d7382044",
+    "title": "Sprint SEO תוך 30 יום: דפי landing ייעודיים לכל מונח מוביל (הפקת נופש חברה, virtual events, הפקות אירועים לחברות) עם תוכן 1,500+ מילים, FAQ מובנה ו-schema markup",
+    "status": "todo",
+    "revisions": 0,
+    "history": [
+      {
+        "date": "2026-06-29",
+        "error": "anthropic Remote end closed connection without response"
+      }
+    ],
+    "created": "2026-06-29",
+    "updated": "2026-06-29",
+    "kind": "recommendation",
+    "priority": "P1",
+    "channel": "google_organic_geo",
+    "expected_impact": "שלושת המונחים הללו יחד עם 2,460+ חשיפות חודשיות ו-position 7-13 — נמצאים במרחק קפיצה לעמוד 1; ציפי להכפלת קליקים אורגניים תוך 60-90 יום"
+  },
+  "81e0e02b": {
+    "id": "81e0e02b",
+    "title": "TikTok Series 'Event Magic Revealed': 4-5 סרטוני BTS שבועיים קצרים (30-60 שניות) מאחורי הקלעים של הפקות אמיתיות, עם hook מספרי (לדוג': '48 שעות לפני הכנס של 500 אנשים')",
+    "status": "awaiting_approval",
+    "revisions": 1,
+    "history": [
+      {
+        "date": "2026-06-29",
+        "summary": "הופק מסמך הפקה מלא ומוכן לאישור לסדרת TikTok 'Event Magic Revealed' — כולל 5 תסריטים מדויקים עם shot list, captionים, hook bank מבוסס נתוני 2026, 4 עמודי תוכן, KPIs, ו-production checklist.",
+        "ready": true
+      }
+    ],
+    "created": "2026-06-29",
+    "updated": "2026-06-29",
+    "kind": "recommendation",
+    "priority": "P1",
+    "channel": "tiktok",
+    "expected_impact": "Brands שבונות niche community גדלות 3-4x מהר יותר; TikTok accounts tier-up בשיעור 16.47% לשנה לעומת 8.87% בInstagram — הפוטנציאל לגדילה מהירה גבוה ביותר בפלטפורמה זו"
+  },
+  "f1082eac": {
+    "id": "f1082eac",
+    "title": "Facebook: הקמת קבוצה (Group) סגורה ל-Event Managers בישראל במקום הסתמכות על דף החברה — תוכן peer-to-peer ודיונים מקצועיים",
+    "status": "awaiting_approval",
+    "revisions": 1,
+    "history": [
+      {
+        "date": "2026-06-29",
+        "summary": "הופק דליברבל מלא להקמת קבוצת Facebook סגורה 'מנהלי אירועים בישראל' עבור UPE — כולל שם, תיאור, שאלות כניסה, כללים, 5 פוסטים מוכנים, לוח שנה שבועי, קמפיין השקה ל-30 יום, הודעת DM בעברית ואנגלית, KPIs ו-Checklist הקמה.",
+        "ready": true
+      }
+    ],
+    "created": "2026-06-29",
+    "updated": "2026-06-29",
+    "kind": "recommendation",
+    "priority": "P2",
+    "channel": "facebook",
+    "expected_impact": "Facebook Groups מגיעים ל-40-50% מהחברים לפוסט ומייצרים 30-50% יותר engagement מדפי עסק — פתרון מעשי לכשל האורגני של Pages בFacebook 2026"
+  },
+  "123961e8": {
+    "id": "123961e8",
+    "title": "שיפור LinkedIn conversion path: כל פוסט מוביל מחשבונות אישיים של מנהלים יכלול CTA ברור לשיחת ייעוץ/demo — LinkedIn מייצר 80% מלידי B2B social; ניתוב engaged profiles לDM מכוון.",
+    "status": "todo",
+    "revisions": 0,
+    "history": [],
+    "created": "2026-06-29",
+    "updated": "2026-06-29",
+    "kind": "leads_action",
+    "priority": "leads",
+    "channel": "leads"
+  },
+  "b0dc3f98": {
+    "id": "b0dc3f98",
+    "title": "הקמת דף landing ייעודי לכל שירות עיקרי (נופשי תמריץ / כנסים / הפקות אירועים לחברות) עם טופס צור קשר קצר (3 שדות) ו-case study מוטמע — הגדלת conversion rate מ-organic SEO traffic.",
+    "status": "todo",
+    "revisions": 0,
+    "history": [],
+    "created": "2026-06-29",
+    "updated": "2026-06-29",
+    "kind": "leads_action",
+    "priority": "leads",
+    "channel": "leads"
+  },
+  "ae2af095": {
+    "id": "ae2af095",
+    "title": "אוטומציית follow-up ב-Salesforce: כל lead שמגיע מ-organic (אתר/LinkedIn/TikTok) מקבל תגובה תוך 2 שעות — מחקרי B2B מראים ירידה חדה בconversion rate מעבר ל-5 שעות.",
+    "status": "todo",
+    "revisions": 0,
+    "history": [],
+    "created": "2026-06-29",
+    "updated": "2026-06-29",
+    "kind": "leads_action",
+    "priority": "leads",
+    "channel": "leads"
+  },
+  "158b0d43": {
+    "id": "158b0d43",
+    "title": "LinkedIn Outreach שיטתי: מנהלים מתחברים ל-20 decision makers חדשים שבועיים (CMO/HR/CEO בחברות 200+ עובדים בישראל ואירופה), עם 2-3 touchpoints תוכן לפני פנייה ישירה.",
+    "status": "todo",
+    "revisions": 0,
+    "history": [],
+    "created": "2026-06-29",
+    "updated": "2026-06-29",
+    "kind": "leads_action",
+    "priority": "leads",
+    "channel": "leads"
+  },
+  "e36e149d": {
+    "id": "e36e149d",
+    "title": "ייצור חודשי של 1 case study/testimonial מלקוח קיים ושיתופו ב-LinkedIn, YouTube ובאתר — social proof הוא הטריגר העיקרי לבקשות RFQ בשוק B2B MICE לפי מחקרי 2026.",
+    "status": "todo",
+    "revisions": 0,
+    "history": [],
+    "created": "2026-06-29",
+    "updated": "2026-06-29",
+    "kind": "leads_action",
+    "priority": "leads",
+    "channel": "leads"
+  },
+  "c136fb1e": {
+    "id": "c136fb1e",
+    "title": "Retargeting light: כל visitor לעמודי שירות מזמין remarketing בLinkedIn (אורגני: engagement עם הפוסטים הרלוונטיים) — שילוב organic+email outreach מגדיל response rate פי 3.5.",
+    "status": "todo",
+    "revisions": 0,
+    "history": [],
+    "created": "2026-06-29",
+    "updated": "2026-06-29",
+    "kind": "leads_action",
+    "priority": "leads",
+    "channel": "leads"
+  },
+  "82429508": {
+    "id": "82429508",
+    "title": "שלב 1 (חודשים 1-3): בניית תשתית — LinkedIn Employee Advocacy עם 3 מנהלים, תיעדוף TikTok ל-4-5 פוסטים שבועיים, ו-Instagram Reels + Carousel כפורמטים עיקריים. יעד: הכפלת LinkedIn impressions ל-500+/שבוע, TikTok followers +500.",
+    "status": "todo",
+    "revisions": 0,
+    "history": [],
+    "created": "2026-06-29",
+    "updated": "2026-06-29",
+    "kind": "follower_plan",
+    "priority": "follower",
+    "channel": "growth"
+  },
+  "8edc3786": {
+    "id": "8edc3786",
+    "title": "שלב 2 (חודשים 4-6): הפצה שיתופית — cross-posting TikTok-first content ל-Reels וYouTube Shorts, השקת LinkedIn Newsletter לבניית base מנויים של 1,000+, וBreakdown analysis שבועי של top-performers להכפלת מה שעובד.",
+    "status": "todo",
+    "revisions": 0,
+    "history": [],
+    "created": "2026-06-29",
+    "updated": "2026-06-29",
+    "kind": "follower_plan",
+    "priority": "follower",
+    "channel": "growth"
+  },
+  "bb92dc4d": {
+    "id": "bb92dc4d",
+    "title": "שלב 3 (חודשים 7-12): Flywheel SEO+Social — כל case study מיוצר מופץ בכל הפלטפורמות, YouTube playlist ממוקדים לנושאים (incentive travel, corporate events, conferences) לבניית topical authority, ו-GEO structured content שמשפר ציטוט AI ל-50%+.",
+    "status": "todo",
+    "revisions": 0,
+    "history": [],
+    "created": "2026-06-29",
+    "updated": "2026-06-29",
+    "kind": "follower_plan",
+    "priority": "follower",
+    "channel": "growth"
+  },
+  "5812928f": {
+    "id": "5812928f",
+    "title": "שלב 4 (שנה 2): Thought Leadership Scale — CEO/מנהלים כ-LinkedIn Influencers בתחום MICE ישראל-אירופה, שיתופי פעולה עם גורמים משלימים (בתי מלון, חברות תעופה, DMCs) ל-co-content, podcast appearances להרחבת GEO footprint.",
+    "status": "todo",
+    "revisions": 0,
+    "history": [],
+    "created": "2026-06-29",
+    "updated": "2026-06-29",
+    "kind": "follower_plan",
+    "priority": "follower",
+    "channel": "growth"
+  },
+  "66d8dc25": {
+    "id": "66d8dc25",
+    "title": "שלב 5 (שנה 3): 500K path — UGC מלקוחות, micro-influencer partnerships בתחום corporate events ובאירופה, LinkedIn Newsletter ב-50,000+ מנויים, וTikTok כערוץ גיוס לידים B2B עם funnel מוגדר מ-view ל-contact form.",
+    "status": "todo",
+    "revisions": 0,
+    "history": [],
+    "created": "2026-06-29",
+    "updated": "2026-06-29",
     "kind": "follower_plan",
     "priority": "follower",
     "channel": "growth"
