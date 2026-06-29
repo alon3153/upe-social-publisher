@@ -5,7 +5,7 @@ urn:li:organization:12345) — requires a token with w_organization_social.
 Otherwise falls back to the authorizing member's personal profile
 (w_member_social). Run scripts/linkedin_org_oauth.py to obtain the org token+URN.
 """
-import os, json, urllib.request, urllib.error
+import os, json, time, urllib.request, urllib.error
 
 API = "https://api.linkedin.com"
 UA = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36"
@@ -88,7 +88,48 @@ def _upload_image(token, owner, image_url):
     return asset
 
 
-def publish_post(text, image_url=None, token=None, org_urn=None):
+def _asset_status(token, asset):
+    """asset is 'urn:li:digitalmediaAsset:XXXX' — poll its recipe status."""
+    aid = asset.rsplit(":", 1)[-1]
+    _, res = _req("GET", f"{API}/v2/assets/{aid}", token)
+    recipes = res.get("recipes") or []
+    return (recipes[0].get("status") if recipes else res.get("status")) or "UNKNOWN"
+
+
+def _upload_video(token, owner, video_url, poll_secs=180):
+    """Register + upload a video, then wait for LinkedIn to transcode it to
+    AVAILABLE before it can be attached to a UGC post."""
+    reg = {"registerUploadRequest": {
+        "recipes": ["urn:li:digitalmediaRecipe:feedshare-video"],
+        "owner": owner,
+        "serviceRelationships": [{"relationshipType": "OWNER", "identifier": "urn:li:userGeneratedContent"}]}}
+    _, res = _req("POST", f"{API}/v2/assets?action=registerUpload", token, body=reg)
+    val = res["value"]
+    asset = val["asset"]
+    upload_url = val["uploadMechanism"]["com.linkedin.digitalmedia.uploading.MediaUploadHttpRequest"]["uploadUrl"]
+    # fetch the video bytes (local path or http URL)
+    if video_url.startswith("http"):
+        vreq = urllib.request.Request(video_url, headers={"User-Agent": UA})
+        with urllib.request.urlopen(vreq) as r:
+            vid = r.read()
+    else:
+        with open(video_url, "rb") as fh:
+            vid = fh.read()
+    _req("PUT", upload_url, token, raw=vid, ctype="video/mp4")
+    # poll until transcoded (videos are not postable until AVAILABLE)
+    deadline = time.time() + poll_secs
+    status = "PROCESSING"
+    while time.time() < deadline:
+        status = _asset_status(token, asset)
+        if status == "AVAILABLE":
+            break
+        time.sleep(5)
+    if status != "AVAILABLE":
+        raise RuntimeError(f"video asset not AVAILABLE after {poll_secs}s (status={status})")
+    return asset
+
+
+def publish_post(text, image_url=None, video_url=None, token=None, org_urn=None):
     """Publish to an explicit org page (org_urn), the default company page
     (LINKEDIN_ORG_URN), or the member's profile. Returns dict like other
     publishers."""
@@ -97,7 +138,11 @@ def publish_post(text, image_url=None, token=None, org_urn=None):
         owner = _author(token, org_urn)
         media_cat = "NONE"
         media = []
-        if image_url:
+        if video_url:
+            asset = _upload_video(token, owner, video_url)
+            media_cat = "VIDEO"
+            media = [{"status": "READY", "media": asset}]
+        elif image_url:
             asset = _upload_image(token, owner, image_url)
             media_cat = "IMAGE"
             media = [{"status": "READY", "media": asset}]
