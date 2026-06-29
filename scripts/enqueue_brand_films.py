@@ -10,7 +10,12 @@ import os, sys, json
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, ROOT)
 
-FAL = json.load(open("/tmp/upe_brand_fal_urls.json"))
+# FAL-hosted landscape brand films (stable CDN URLs)
+FAL = {
+ "upe-brand-film-he-music.mp4": "https://v3b.fal.media/files/b/0aa03532/foQaPQPZ63kIBuU-jd4MQ_upe-brand-film-he-music.mp4",
+ "upe-brand-film-music.mp4":    "https://v3b.fal.media/files/b/0aa03533/zQIw22yt6l74SvWE9JUA8_upe-brand-film-music.mp4",
+ "upe-brand-es-music.mp4":      "https://v3b.fal.media/files/b/0aa03533/2IhdRZFoGx1atAfYdBVG1_upe-brand-es-music.mp4",
+}
 def u(name): return next(v for k, v in FAL.items() if k.endswith(name))
 
 ROWS = [
