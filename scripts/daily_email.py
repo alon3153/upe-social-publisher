@@ -24,8 +24,43 @@ ACCOUNTS = [
     ("instagram", "ig_uproduction_spain", "instagram", "es"),
     ("linkedin",  "alon3153",    "linkedin", "en"),  # English company page (default org)
     ("linkedin",  "li_personal", "linkedin", "he"),  # Alon's personal profile (HE)
+    ("linkedin",  "li_natalia",  "linkedin", "he"),  # advocate — Natalia (personal, distinct HE variant)
+    ("linkedin",  "li_danielle", "linkedin", "he"),  # advocate — Danielle (personal, distinct HE variant)
     ("linkedin",  "li_spain",    "linkedin", "es"),  # Uproduction Spain company page (ES)
 ]
+
+# Employee-advocacy: each advocate posts a DISTINCT variant of the same HE topic
+# (never an identical copy of Alon's post — that would read as a pod and get throttled).
+ADVOCATE_NAMES = {"li_natalia": "נטליה", "li_danielle": "דניאל"}
+ANTHROPIC_API_KEY = os.environ.get("ANTHROPIC_API_KEY", "")
+GEN_MODEL = os.environ.get("GEN_MODEL", "claude-sonnet-4-6")
+
+
+def advocate_variant(base_text, advocate_name):
+    """Rewrite Alon's HE LinkedIn post into a distinct variant in the advocate's
+    own voice (same topic/facts, different hook + phrasing). Falls back to the
+    base text if the API key is missing or the call fails (never blocks the run)."""
+    if not ANTHROPIC_API_KEY or not base_text:
+        return base_text
+    prompt = (
+        f"להלן פוסט LinkedIn בעברית שאלון וקנין (מייסד Uproduction Events) מפרסם מהפרופיל שלו:\n\n"
+        f"\"\"\"\n{base_text}\n\"\"\"\n\n"
+        f"כתבי מחדש את הפוסט מזווית שונה ובקול אישי של {advocate_name}, אשת צוות בכירה ב-UPE שמשתפת "
+        f"את הפרספקטיבה שלה על אותו נושא. אותם עובדות/מספרים, אבל הוק שונה, ניסוח שונה ופתיחה שונה — "
+        f"כך שזה לא ייראה כמו העתק של הפוסט של אלון. עברית טבעית, אורך דומה. החזירי אך ורק את טקסט הפוסט, בלי הקדמות."
+    )
+    try:
+        body = json.dumps({"model": GEN_MODEL, "max_tokens": 1500,
+                           "messages": [{"role": "user", "content": prompt}]}).encode()
+        req = urllib.request.Request("https://api.anthropic.com/v1/messages", data=body, headers={
+            "x-api-key": ANTHROPIC_API_KEY, "anthropic-version": "2023-06-01", "content-type": "application/json"})
+        with urllib.request.urlopen(req, timeout=120) as r:
+            resp = json.loads(r.read().decode())
+        out = "".join(b.get("text", "") for b in resp.get("content", [])).strip()
+        return out or base_text
+    except Exception as e:
+        print(f"  advocate_variant({advocate_name}) failed, using base text: {e}")
+        return base_text
 NET_HE = {"facebook": "Facebook", "instagram": "Instagram", "linkedin": "LinkedIn", "tiktok": "TikTok"}
 HASHTAGS = {
     "facebook": "", "instagram": "",
@@ -197,6 +232,8 @@ def main():
         if not text:
             continue
         text = optimize_virality(text, net)
+        if account in ADVOCATE_NAMES:  # distinct per-advocate rewrite (no duplicate posts)
+            text = advocate_variant(text, ADVOCATE_NAMES[account])
         rows.append({"day": day, "network": net, "account": account, "lang": lang,
                      "headline": data.get("theme") or data.get("title"),
                      "caption": text, "image_url": image_url, "scheduled_date": today})
