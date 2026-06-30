@@ -29,6 +29,17 @@ def publish_row(r):
         #   *spain*      -> Uproduction Spain company page (ES)
         #   else         -> English company page (LINKEDIN_ORG_URN); incl. legacy "alon3153"
         acc = (account or "").lower()
+        # Advocate personal profiles (li_natalia / li_danielle): post with THEIR
+        # own token + member URN (bypasses the cached LINKEDIN_MEMBER_URN env,
+        # which is Alon's). One-click-connected via the linkedin-oauth edge fn.
+        adv = queue.get_advocate(acc)
+        if adv:
+            tok, urn = adv.get("access_token"), adv.get("member_urn")
+            if not tok or not urn:
+                return {"success": False, "error": f"advocate {acc} not connected"}
+            if video_url:
+                return linkedin.publish_post(text, video_url=video_url, token=tok, org_urn=urn)
+            return linkedin.publish_post(text, url, token=tok, org_urn=urn)
         if acc in ("li_personal", "personal"):
             org_urn = "__member__"
         elif "spain" in acc:
