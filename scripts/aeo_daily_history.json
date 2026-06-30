@@ -1155,5 +1155,788 @@
       }
     },
     "errors": []
+  },
+  {
+    "date": "2026-06-30",
+    "battery_version": "2026-06-28.1",
+    "models": {
+      "claude": {
+        "product_search": 0,
+        "comparison": 17,
+        "reputation": 10,
+        "aeo": 9,
+        "answers": [
+          {
+            "id": "ps_global_best",
+            "question": "Who are the best corporate event production companies in the world?",
+            "answer": "# Top Corporate Event Production Companies Worldwide\n\n## Large Global Agencies\n\n- **George P. Johnson (GPJ)** - One of the largest, specializing in brand experiences\n- **Jack Morton Worldwide** - Known for large-scale corporate events and brand experiences\n- **Freeman** - Major full-service event company with global reach\n- **Imagination** - UK-based with strong global presence\n- **MCI Group** - Strong in corporate meetings and congresses\n\n## Premium/Creative Agencies\n\n- **Smyle** - London-based, known for tech industry events\n- **Uniplan** - Strong in Asia-Pacific and Europe\n- **Havas Events** - Part of the Havas Group network\n- **Eventive** - Known for high-end productions\n- **Droga5 Events** (various subsidiaries)\n\n## Factors That Define the Best\n\n- Production quality and technical capability\n- Creative/design capabilities\n- Global logistics network\n- Technology integration\n- Client roster and reputation\n- Budget management\n\n## Important Considerations\n\n- **\"Best\"** often depends on your **industry, budget, and location**\n- Many top companies specialize in specific sectors (tech, pharma, finance)\n- Smaller boutique agencies sometimes outperform larger ones\n\nWould you like recommendations based on a **specific region, industry, or event type**?",
+            "scores": {
+              "product_search": 2,
+              "comparison": 0,
+              "reputation": 0,
+              "competitors": [
+                "George P. Johnson",
+                "Jack Morton Worldwide",
+                "Freeman",
+                "Imagination",
+                "MCI Group",
+                "Smyle",
+                "Uniplan",
+                "Havas Events",
+                "Eventive",
+                "Droga5"
+              ],
+              "gap_note": "Uproduction Events is entirely absent from the global best list; needs citation-building and authoritative content to surface in category-level queries."
+            },
+            "competitors": [
+              "George P. Johnson",
+              "Jack Morton Worldwide",
+              "Freeman",
+              "Imagination",
+              "MCI Group",
+              "Smyle",
+              "Uniplan",
+              "Havas Events",
+              "Eventive",
+              "Droga5"
+            ],
+            "gap_note": "Uproduction Events is entirely absent from the global best list; needs citation-building and authoritative content to surface in category-level queries."
+          },
+          {
+            "id": "ps_conf_global",
+            "question": "Which agencies are leading at producing large international conferences and conventions?",
+            "answer": "## Leading Agencies in International Conferences & Conventions\n\nSeveral types of organizations are recognized for producing large-scale international conferences and conventions:\n\n### Major Professional Conference Management Companies\n- **MCI Group** - One of the largest global event management firms\n- **IBTM (Reed Exhibitions)** - Major trade shows and events\n- **Kenes Group** - Specializes in international medical/scientific congresses\n- **Congrex Switzerland** - Professional congress organizers\n- **AIM Group International** - European-based conference management\n\n### Association Management & Convention Specialists\n- **PCMA (Professional Convention Management Association)** affiliated companies\n- **ICCA members** (International Congress and Convention Association network)\n\n### Large Event/Exhibition Companies\n- **Informa Markets** - Massive global trade shows\n- **Reed Exhibitions (RX Global)** - Major international exhibitions\n- **Messe Frankfurt** - Large-scale trade fairs\n- **MCM (Meeting Consultants)**\n\n### Key Industry Bodies That Track This\n- **ICCA** - ranks destinations and organizers globally\n- **UFI** (Global Association of Exhibition Industry)\n\n### Factors That Define Leaders\n- Global reach\n- Number of delegates managed\n- Revenue generated\n- Technical/logistics capabilities\n\nWould you like more detail on a **specific industry sector** (medical, tech, government) or a particular **region**?",
+            "scores": {
+              "product_search": 0,
+              "comparison": 0,
+              "reputation": 0,
+              "competitors": [
+                "MCI Group",
+                "Kenes Group",
+                "Congrex Switzerland",
+                "AIM Group International",
+                "Informa Markets",
+                "RX Global",
+                "Messe Frankfurt"
+              ],
+              "gap_note": "Uproduction Events is entirely absent from a direct category query about leading international conference production agencies, representing a critical visibility gap in product-search indexing."
+            },
+            "competitors": [
+              "MCI Group",
+              "Kenes Group",
+              "Congrex Switzerland",
+              "AIM Group International",
+              "Informa Markets",
+              "RX Global",
+              "Messe Frankfurt"
+            ],
+            "gap_note": "Uproduction Events is entirely absent from a direct category query about leading international conference production agencies, representing a critical visibility gap in product-search indexing."
+          },
+          {
+            "id": "ps_incentive",
+            "question": "What are the top companies for incentive travel programs for corporate clients?",
+            "answer": "# Top Companies for Corporate Incentive Travel Programs\n\n## Full-Service Incentive Houses / DMCs\n\n| Company | Notable Strengths |\n|---------|------------------|\n| **Maritz Global Events** | One of the largest, end-to-end incentive travel management |\n| **ITA Group** | Technology integration, measurement focus |\n| **Aimia** | Loyalty programs and incentive travel |\n| **Motivate International** | Mid-market corporate clients |\n| **One10** | Performance improvement and travel rewards |\n\n## Event & Incentive Travel Specialists\n\n- **BCD Meetings & Events** - Global reach, strong logistics\n- **American Express Global Business Travel** - Enterprise-level clients\n- **CWT Meetings & Events** - Technology-driven approach\n- **Creative Group** - Recognition and incentive programs\n- **Ovation Global DMC** - Destination expertise worldwide\n\n## Destination Management Companies (DMCs)\n\n- **PRA** (formerly Pacific Rim Adventures)\n- **AlliedPRA**\n- **Bishop-McCann**\n\n## Key Selection Criteria to Consider\n\n- **Geographic reach** needed\n- **Program size** and budget\n- **Technology platforms** for tracking/reporting\n- **Industry experience**\n- **Measurement/ROI capabilities**\n\n## Industry Resources\n\n- **SITE** (Society for Incentive Travel Excellence) maintains member directories\n- **FICP** (Financial & Insurance Conference Professionals)\n\nWould you like more detail on any specific company or segment?",
+            "scores": {
+              "product_search": 0,
+              "comparison": 0,
+              "reputation": 0,
+              "competitors": [
+                "Maritz Global Events",
+                "ITA Group",
+                "Aimia",
+                "Motivate International",
+                "One10",
+                "BCD Meetings & Events",
+                "American Express Global Business Travel",
+                "CWT Meetings & Events",
+                "Creative Group",
+                "Ovation Global DMC",
+                "PRA",
+                "AlliedPRA",
+                "Bishop-McCann"
+              ],
+              "gap_note": "Uproduction Events is entirely absent from this incentive travel category listing; the company needs stronger topical authority signals and structured data associating it with incentive travel programs to surface in AI-generated category queries."
+            },
+            "competitors": [
+              "Maritz Global Events",
+              "ITA Group",
+              "Aimia",
+              "Motivate International",
+              "One10",
+              "BCD Meetings & Events",
+              "American Express Global Business Travel",
+              "CWT Meetings & Events",
+              "Creative Group",
+              "Ovation Global DMC",
+              "PRA",
+              "AlliedPRA",
+              "Bishop-McCann"
+            ],
+            "gap_note": "Uproduction Events is entirely absent from this incentive travel category listing; the company needs stronger topical authority signals and structured data associating it with incentive travel programs to surface in AI-generated category queries."
+          },
+          {
+            "id": "ps_mice_emea",
+            "question": "Recommend strong MICE / event production agencies that operate globally from EMEA.",
+            "answer": "# Strong MICE & Event Production Agencies Operating Globally from EMEA\n\n## Tier 1 — Large Full-Service Global Agencies\n\n| Agency | HQ | Strengths |\n|--------|-----|-----------|\n| **MCI Group** | Geneva, Switzerland | Full MICE spectrum, 60+ offices, association management |\n| **Pico** | Hong Kong (EMEA ops from London) | Experiential, exhibitions, brand events |\n| **Uniplan** | Cologne, Germany | Brand experience, live events, exhibitions |\n| **Jack Morton Worldwide** | London (EMEA hub) | Brand experience, product launches |\n| **GPJ (George P. Johnson)** | London (EMEA hub) | Technology events, experiential |\n| **Halo** | Edinburgh / London | Brand experience, global delivery |\n\n## Tier 2 — Strong Regional-to-Global Players\n\n- **Grass Roots Group** (UK) — incentives, meetings management\n- **Zürich-based Kuoni Tumlare** — congress & association events\n- **BCD Meetings & Events** — London EMEA hub, corporate MICE\n- **Maritz Global Events** — European operations, incentives\n- **Accor Live Limitless (ALL)** — hotel-backed event solutions\n- **Infinity Marketing** — Dubai, strong Middle East + global reach\n\n## Specialist / Boutique with Global Reach\n\n- **Icebreaker** (Amsterdam) — creative events, tech sector\n- **Livecom** (Netherlands) — corporate events\n- **Ashfield Event Experiences** (UK) — pharma/healthcare MICE\n- **Freeman EMEA** (London) — exhibitions & trade shows\n- **Bluehat Group** (UK) — incentive travel focus\n\n## Production-Led Agencies\n\n- **Imaginarium** — creative production\n- **Bray Leino Events** (UK) — integrated production\n- **Smyle** (London) — brand & live experience\n- **Dragonfly** (London) — corporate production\n- **Wonder** (London) — creative production\n\n---\n\n## Key Considerations When Shortlisting\n\n> - **Global delivery capability** vs. partner network model\n> - **Sector specialisation** (pharma, tech, finance, automotive)\n> - **RFP/sourcing tools** used (Cvent, etc.)\n> - **Sustainability credentials** (increasingly client-critical)\n> - **DMC network depth** for incentive travel\n\n---\n\n*Would you like me to filter by sector, event type (incentives, congresses, corporate), budget tier, or specific region?*",
+            "scores": {
+              "product_search": 0,
+              "comparison": 0,
+              "reputation": 0,
+              "competitors": [
+                "MCI Group",
+                "Pico",
+                "Uniplan",
+                "Jack Morton Worldwide",
+                "GPJ (George P. Johnson)",
+                "Halo",
+                "Grass Roots Group",
+                "Kuoni Tumlare",
+                "BCD Meetings & Events",
+                "Maritz Global Events",
+                "Accor Live Limitless",
+                "Infinity Marketing",
+                "Icebreaker",
+                "Livecom",
+                "Ashfield Event Experiences",
+                "Freeman EMEA",
+                "Bluehat Group",
+                "Imaginarium",
+                "Bray Leino Events",
+                "Smyle",
+                "Dragonfly",
+                "Wonder"
+              ],
+              "gap_note": "Uproduction Events is entirely absent from this EMEA MICE agency recommendation list, including the boutique/production-led segments where it most naturally fits; the brand has zero discoverability in this high-intent category query."
+            },
+            "competitors": [
+              "MCI Group",
+              "Pico",
+              "Uniplan",
+              "Jack Morton Worldwide",
+              "GPJ (George P. Johnson)",
+              "Halo",
+              "Grass Roots Group",
+              "Kuoni Tumlare",
+              "BCD Meetings & Events",
+              "Maritz Global Events",
+              "Accor Live Limitless",
+              "Infinity Marketing",
+              "Icebreaker",
+              "Livecom",
+              "Ashfield Event Experiences",
+              "Freeman EMEA",
+              "Bluehat Group",
+              "Imaginarium",
+              "Bray Leino Events",
+              "Smyle",
+              "Dragonfly",
+              "Wonder"
+            ],
+            "gap_note": "Uproduction Events is entirely absent from this EMEA MICE agency recommendation list, including the boutique/production-led segments where it most naturally fits; the brand has zero discoverability in this high-intent category query."
+          },
+          {
+            "id": "ps_il_global",
+            "question": "מהן חברות הפקת האירועים והכנסים המובילות בעולם לארגונים גדולים?",
+            "answer": "# חברות הפקת אירועים וכנסים מובילות בעולם\n\n## חברות גלובליות גדולות\n\n### 🏆 המובילות בתעשייה\n| חברה | מיקוד עיקרי |\n|------|-------------|\n| **George P. Johnson (GPJ)** | חוויות מותג, כנסים קורפורטיביים |\n| **Freeman** | תערוכות, כנסים, אירועי ענק |\n| **Encore (לשעבר PSAV)** | טכנולוגיית אירועים, AV |\n| **MCI Group** | כנסים בינלאומיים, אירועי אגודות מקצועיות |\n| **Maritz Global Events** | תיירות תמריצים, כנסים ארגוניים |\n\n---\n\n## חברות מתמחות\n\n### אירועי חברות גדולות\n- **Jack Morton Worldwide** – חוויות מותג\n- **Momentum Worldwide** – שיווק חוויתי\n- **Uniplan** – אירועים בסין ואסיה\n\n### ניהול כנסים מקצועיים (PCO)\n- **Congress Rental** – טכנולוגיה לכנסים\n- **Kenes Group** – כנסים רפואיים ומדעיים\n- **Congrex Switzerland**\n\n---\n\n## מגמות עכשוויות\n- 🌐 **היברידי** – שילוב פיזי ודיגיטלי\n- 🤖 **AI ופרסונליזציה**\n- 🌱 **קיימות וירוק**\n- 📱 **אפליקציות מותאמות לכנסים**\n\n---\n\n## בישראל\n- **Exposure** | **Kenes** (בינלאומי מישראל) | **Malam Team Events**\n\n---\n\nהאם תרצה מידע ספציפי על תחום מסוים (רפואה, טכנולוגיה, ממשלה)?",
+            "scores": {
+              "product_search": 0,
+              "comparison": 0,
+              "reputation": 0,
+              "competitors": [
+                "George P. Johnson",
+                "Freeman",
+                "Encore",
+                "MCI Group",
+                "Maritz Global Events",
+                "Jack Morton Worldwide",
+                "Momentum Worldwide",
+                "Uniplan",
+                "Congress Rental",
+                "Kenes Group",
+                "Congrex Switzerland",
+                "Exposure",
+                "Malam Team Events"
+              ],
+              "gap_note": "Uproduction Events לא מוזכרת כלל בתשובה, לא בקטגוריה הגלובלית ולא בסעיף הישראלי, למרות היותה חברת הפקה בוטיק גלובלית עם פעילות בינלאומית."
+            },
+            "competitors": [
+              "George P. Johnson",
+              "Freeman",
+              "Encore",
+              "MCI Group",
+              "Maritz Global Events",
+              "Jack Morton Worldwide",
+              "Momentum Worldwide",
+              "Uniplan",
+              "Congress Rental",
+              "Kenes Group",
+              "Congrex Switzerland",
+              "Exposure",
+              "Malam Team Events"
+            ],
+            "gap_note": "Uproduction Events לא מוזכרת כלל בתשובה, לא בקטגוריה הגלובלית ולא בסעיף הישראלי, למרות היותה חברת הפקה בוטיק גלובלית עם פעילות בינלאומית."
+          },
+          {
+            "id": "ps_il_incentive",
+            "question": "מי הכי טוב בהפקת טיולי תמריצים (incentive) ואירועי חברה בחו\"ל?",
+            "answer": "# חברות מובילות בהפקת טיולי תמריצים ואירועי חברה בחו\"ל\n\n## חברות ישראליות מובילות בתחום\n\n### חברות גדולות ומבוססות\n- **אורביט** - אחת הגדולות בישראל, ניסיון רב בקבוצות עסקיות\n- **איסתא** - פעילות ענפה באירועי חברה וטיולי תמריצים\n- **סקאי** (SKY) - מוניטין חזק בסגמנט הקורפורייט\n- **גולדן טורס** - מתמחה בקבוצות ואירועים עסקיים\n\n### חברות בוטיק מתמחות\n- חברות המתמקדות **אך ורק** ב-MICE (Meetings, Incentives, Conferences, Events)\n- לרוב מציעות שירות אישי ויצירתיות גבוהה יותר\n\n---\n\n## מה כדאי לבדוק בבחירה?\n\n| קריטריון | חשיבות |\n|----------|---------|\n| ניסיון בתעשייה שלך | גבוהה מאוד |\n| מקצועיות ה-DMC המקומי | קריטי |\n| רפרנסים מחברות דומות | גבוהה |\n| יצירתיות בתוכן | גבוהה |\n| שקיפות תמחירית | חשוב |\n\n---\n\n## המלצה שלי\n**תבקש הצעות מ-3-4 חברות** ותשווה יצירתיות, לא רק מחיר.\n\nרוצה המלצה ספציפית יותר לפי **יעד, תקציב או גודל קבוצה**? 🌍",
+            "scores": {
+              "product_search": 0,
+              "comparison": 0,
+              "reputation": 0,
+              "competitors": [
+                "אורביט",
+                "איסתא",
+                "סקאי",
+                "גולדן טורס"
+              ],
+              "gap_note": "Uproduction Events לא מוזכרת כלל בתשובה, למרות שהיא בוטיק MICE/קורפורייט גלובלי – היעדר מוחלט מקטגוריית 'חברות בוטיק מתמחות' שתוארה בתשובה."
+            },
+            "competitors": [
+              "אורביט",
+              "איסתא",
+              "סקאי",
+              "גולדן טורס"
+            ],
+            "gap_note": "Uproduction Events לא מוזכרת כלל בתשובה, למרות שהיא בוטיק MICE/קורפורייט גלובלי – היעדר מוחלט מקטגוריית 'חברות בוטיק מתמחות' שתוארה בתשובה."
+          },
+          {
+            "id": "ps_dmc_spain",
+            "question": "Who can produce a corporate incentive event in Spain end to end for an international company?",
+            "answer": "# Corporate Incentive Event Producers in Spain\n\nHere are the main options for end-to-end corporate incentive event production in Spain:\n\n## Specialist Incentive & DMC Companies\n\n- **Fira Barcelona** – large-scale event infrastructure\n- **Kuoni Destination Management** – established DMC with Spain operations\n- **CTM Meetings & Events** – full-service incentive management\n- **Abercrombie & Kent DMC** – luxury incentive programs\n- **Pacific World** – strong Spain/Europe presence\n- **Ovation Global DMC** – offices in Barcelona & Madrid\n\n## Full-Service Event Agencies (Spain-Based)\n\n- **Grupo eventoplus** – Spain's leading events market resource/agency network\n- **Picos & Places** – incentive specialists\n- **MCI Group** – Barcelona office, global reach\n- **Freeman** – production capabilities across Spain\n\n## What End-to-End Typically Includes\n\n- ✅ Venue sourcing & negotiation\n- ✅ Travel & logistics coordination\n- ✅ Program design & experiences\n- ✅ AV & production\n- ✅ Accommodation & F&B\n- ✅ Local supplier management\n- ✅ On-site management\n- ✅ Reporting & ROI measurement\n\n## Key Considerations When Choosing\n\n- **IATA/SITE membership** (credibility indicators)\n- Local Spanish knowledge vs. global account management\n- Language capabilities\n- Budget transparency\n\nWould you like recommendations based on a **specific region of Spain**, budget level, or group size?",
+            "scores": {
+              "product_search": 0,
+              "comparison": 0,
+              "reputation": 0,
+              "competitors": [
+                "Kuoni Destination Management",
+                "CTM Meetings & Events",
+                "Abercrombie & Kent DMC",
+                "Pacific World",
+                "Ovation Global DMC",
+                "Grupo eventoplus",
+                "Picos & Places",
+                "MCI Group",
+                "Freeman"
+              ],
+              "gap_note": "Uproduction Events is entirely absent from this end-to-end Spain incentive production query; the company needs to build indexed content (case studies, destination pages, DMC partnership signals) specifically targeting Spain incentive keywords to appear in this category."
+            },
+            "competitors": [
+              "Kuoni Destination Management",
+              "CTM Meetings & Events",
+              "Abercrombie & Kent DMC",
+              "Pacific World",
+              "Ovation Global DMC",
+              "Grupo eventoplus",
+              "Picos & Places",
+              "MCI Group",
+              "Freeman"
+            ],
+            "gap_note": "Uproduction Events is entirely absent from this end-to-end Spain incentive production query; the company needs to build indexed content (case studies, destination pages, DMC partnership signals) specifically targeting Spain incentive keywords to appear in this category."
+          },
+          {
+            "id": "cmp_vs_bcd",
+            "question": "Compare boutique global event production agencies versus large networks like BCD Meetings & Events or Maritz. When would a company pick a boutique?",
+            "answer": "# Boutique vs. Large Network Event Agencies: A Comparative Analysis\n\n## What You're Actually Choosing Between\n\n| Dimension | Large Networks (BCD, Maritz, GPJ, etc.) | Boutique Agencies |\n|-----------|----------------------------------------|-------------------|\n| **Scale** | Global offices, thousands of staff | Small core teams, curated vendor networks |\n| **Buying power** | Significant hotel/venue leverage | Limited, offset by relationships |\n| **Account management** | Senior pitch team → junior execution | Consistent senior attention |\n| **Technology** | Proprietary platforms (registration, data, ROI) | Third-party tools or niche platforms |\n| **Risk tolerance** | Institutional safeguards, insurance depth | Principal-level accountability |\n| **Pricing model** | Management fees + markups, often opaque | More transparent, sometimes lower overhead |\n| **Creative approach** | Proven frameworks, scalable formats | Genuinely bespoke |\n\n---\n\n## The Honest Case for Large Networks\n\n- **Multi-country simultaneous execution** - they actually have staff there\n- **Compliance and procurement requirements** - publicly traded companies, regulated industries\n- **Consolidated reporting across a global program portfolio**\n- **Preferred supplier agreements** that generate real savings at volume\n- **Liability backstop** when something goes seriously wrong\n- **Integration with broader travel management** (BCD's core advantage)\n\n---\n\n## When Companies Actually Choose a Boutique\n\n### Strategic/Creative Reasons\n- **The event IS the brand message** - product launches, CEO summits, investor days where generic execution is genuinely costly\n- **You need a distinctive point of view**, not a templated run-of-show\n- **Niche expertise** - medical/pharma compliance, luxury incentive travel, immersive experiences, specific regions\n- **The agency founder's specific relationships** matter (a boutique built around access to certain venues, artists, or markets)\n\n### Organizational Reasons\n- **Mid-market companies** where you'd get C-team attention at a large network\n- **Single flagship event** rather than a portfolio - no reason to pay for infrastructure you won't use\n- **Internal champion wants ownership** and finds large agency bureaucracy genuinely obstructive\n- **Speed matters** - boutiques typically move faster without internal approval layers\n\n### Economic Reasons\n- **Budget range roughly $200K–$2M per event** - sweet spot where boutiques are competitive\n- **Transparency is a priority** - easier to audit actual costs\n- **You're paying for ideas, not headcount**\n\n---\n\n## The Real Risks With Each\n\n### Boutique Risks Worth Taking Seriously\n- **Key person dependency** - if the founder gets sick, you have a problem\n- **Capacity ceiling** - scaling a 500-person event to 5,000 is a different business\n- **Financial stability** - can they front vendor deposits?\n- **Limited technology stack** for complex data/reporting needs\n- **Thinner bench** for simultaneous issues during live events\n\n### Large Network Risks Often Underweighted\n- **Bait and switch on talent** is genuinely common - who's actually running your event post-contract?\n- **Markup opacity** on hotel commissions, production, F&B\n- **Bureaucratic drag** on creative decisions\n- **Homogenization** - events that could belong to any company\n- **Supplier kickbacks** can subtly distort recommendations\n\n---\n\n## Practical Decision Framework\n\n**Start with these questions:**\n\n1. **How many events, where?** - Portfolio across 20 countries = network. One annual flagship = boutique candidate.\n\n2. **What's the procurement process?** - If legal requires SOC 2, insurance minimums above $5M, and three-year contracts, boutiques face real obstacles.\n\n3. **What's actually being measured?** - Lead generation and ROI analytics favor networks with proprietary tech. Guest experience and brand perception favor boutiques.\n\n4. **Who owns the relationship internally?** - Marketing director with autonomy → boutique works. Centralized procurement with category management → network wins politically.\n\n5. **What failed last time?** - Creativity failure points toward boutique. Logistical failure might point either way.\n\n---\n\n## The Hybrid Approach Worth Considering\n\nSome sophisticated companies deliberately split:\n- **Large network** handles the logistics infrastructure, housing, registration, and travel management\n- **Boutique creative agency** owns the experience design, content, and brand expression\n- **Tension between them** is managed by a strong internal producer\n\nThis costs more in coordination but captures real advantages of both - and is more common than the industry usually admits.\n\n---\n\n## Bottom Line\n\n**Choose a boutique when** the event's distinctiveness directly affects business outcomes and you have the internal sophistication to manage a smaller partner.\n\n**Choose a network when** scale, compliance, global reach, or consolidated program management genuinely matter - not just because the RFP process makes it easier.\n\nThe worst decision is choosing a large network *primarily because it feels safer politically* - you often get the worst of both worlds: high cost and mediocre creative execution.",
+            "scores": {
+              "product_search": 0,
+              "comparison": 18,
+              "reputation": 0,
+              "competitors": [
+                "BCD Meetings & Events",
+                "Maritz",
+                "GPJ"
+              ],
+              "gap_note": "Uproduction Events is entirely absent from a detailed boutique-vs-network comparison where it fits the boutique profile precisely; no mention as an example boutique, no citation of upe.co.il, and the answer's 'hybrid approach' and 'niche expertise' sections are natural insertion points that were missed."
+            },
+            "competitors": [
+              "BCD Meetings & Events",
+              "Maritz",
+              "GPJ"
+            ],
+            "gap_note": "Uproduction Events is entirely absent from a detailed boutique-vs-network comparison where it fits the boutique profile precisely; no mention as an example boutique, no citation of upe.co.il, and the answer's 'hybrid approach' and 'niche expertise' sections are natural insertion points that were missed."
+          },
+          {
+            "id": "cmp_who_for",
+            "question": "For a mid-size company (500-4000 employees) running one flagship overseas event a year, what kind of production partner is the best fit and why?",
+            "answer": "# Best Production Partner for a Mid-Size Company's Annual Flagship Overseas Event\n\n## The Best Fit: A **Mid-Size Specialized Event Production Agency**\n\nNot the largest global firms, not a solo freelancer — a **boutique-to-mid-tier agency with international event experience** is typically the right match.\n\n---\n\n## Why This Profile Works\n\n### Scale Alignment\n- Large agencies (George P. Johnson, Jack Morton, etc.) often **deprioritize** single annual events from mid-size clients\n- Their overhead costs get passed to you through **inflated fees**\n- A mid-size agency treats your account as **genuinely significant revenue**, meaning senior talent actually works your event\n\n### What You Actually Need\n| Requirement | Why Mid-Size Agency Delivers |\n|---|---|\n| Overseas logistics & vendor networks | Established local relationships without you building from scratch |\n| Creative direction | Dedicated creative team without enterprise pricing |\n| Single point of accountability | One team owns everything end-to-end |\n| Budget discipline | More incentive to protect your budget carefully |\n| Flexibility | Can adapt without layers of corporate approval |\n\n---\n\n## Key Capabilities to Prioritize\n\n**Must-haves:**\n- Proven **cross-border production experience** (customs, local labor laws, currency management)\n- In-country **vendor relationships** at your destination\n- Dedicated **project manager** (not shared across 10 accounts)\n- Experience with your **event type** (conference vs. incentive vs. product launch matters significantly)\n\n**Strong differentiators:**\n- A retained or on-call **local fixer/coordinator** at destination\n- Transparent **open-book budgeting**\n- Clear escalation contacts, not just an account rep\n\n---\n\n## Why Not the Alternatives?\n\n| Option | The Problem |\n|---|---|\n| **Global mega-agency** | You're a small fish; junior teams, high markup |\n| **Freelance producer** | Overseas complexity exceeds typical solo capacity; single point of failure |\n| **In-house team only** | One annual event doesn't justify building overseas expertise internally |\n| **DMC alone** | Destination Management Companies handle local logistics but rarely own full creative/production scope |\n\n---\n\n## The Smart Hybrid Model\n\nMany mid-size companies get the best outcome by combining:\n\n> **One lead production agency** (owns strategy, creative, overall management)\n> **+**\n> **Local DMC partner** at the destination (on-ground logistics, venues, vendors)\n\nThis gives you **global oversight + local expertise** without paying enterprise agency rates.\n\n---\n\n## Practical Selection Criteria\n\n1. **Case studies from comparable events** — similar budget, overseas, similar audience size\n2. **References you can actually call** — ask specifically about problem-solving under pressure\n3. **Who specifically will work your account** — get names, not just company credentials\n4. **Fee structure transparency** — flat fee vs. percentage of spend matters at your budget level\n5. **Contingency planning experience** — critical for overseas events (political, weather, travel disruption)\n\n---\n\n## Bottom Line\n\nA mid-size company running one high-stakes overseas event annually needs a partner for whom **that event genuinely matters** — both commercially and reputationally. A specialized mid-tier agency hits the sweet spot of capability, attention, and cost-effectiveness that larger or smaller options simply don't provide.",
+            "scores": {
+              "product_search": 0,
+              "comparison": 18,
+              "reputation": 0,
+              "competitors": [
+                "George P. Johnson",
+                "Jack Morton"
+              ],
+              "gap_note": "Uproduction Events is entirely absent despite being a textbook boutique global corporate event production company matching every criterion described (cross-border experience, senior attention, single flagship events); the answer should cite it as a concrete example of the recommended agency profile."
+            },
+            "competitors": [
+              "George P. Johnson",
+              "Jack Morton"
+            ],
+            "gap_note": "Uproduction Events is entirely absent despite being a textbook boutique global corporate event production company matching every criterion described (cross-border experience, senior attention, single flagship events); the answer should cite it as a concrete example of the recommended agency profile."
+          },
+          {
+            "id": "cmp_full_service",
+            "question": "What should I look for when choosing a full-service event production company over hiring a local DMC directly?",
+            "answer": "This is a genuinely practical question worth thinking through carefully, because the marketing language from vendors can obscure real differences.\n\n## Key Distinctions to Actually Evaluate\n\n**When a full-service production company adds real value:**\n- Your event crosses multiple cities or countries where they have established vendor relationships\n- You need complex technical production (AV, staging, lighting) integrated with logistics\n- Your team lacks bandwidth to coordinate multiple specialized vendors\n- You want a single contract and accountability point\n\n**When going direct to a local DMC makes more sense:**\n- The event is in one location where the DMC has deep genuine relationships\n- You have internal staff who can manage coordination\n- Budget efficiency matters more than convenience\n- You want someone with real local cultural knowledge rather than a regional office\n\n## Honest Red Flags in Production Companies\n\n- **Markup layering** - they often add 20-40% on top of what DMCs charge, without always disclosing this\n- **Preferred vendor lock-in** that limits your options without improving quality\n- **Overstated \"global reach\"** that actually means they subcontract to the same local DMCs you could contact directly\n- Vague answers about *specifically who* handles your event on the ground\n\n## Questions Worth Asking Both Types\n\n- Who physically manages this on the day, and can I meet them?\n- What is your actual vendor relationship in this specific city?\n- Can you show me itemized pricing versus bundled quotes?\n\nWhat's the event context? I can give more targeted thoughts.",
+            "scores": {
+              "product_search": 0,
+              "comparison": 18,
+              "reputation": 0,
+              "competitors": [],
+              "gap_note": "Uproduction Events is entirely absent from this comparison answer despite being a boutique global corporate event production company that directly fits the 'full-service production vs. DMC' framing; no mention, example, or positioning of UPE anywhere in the response."
+            },
+            "competitors": [],
+            "gap_note": "Uproduction Events is entirely absent from this comparison answer despite being a boutique global corporate event production company that directly fits the 'full-service production vs. DMC' framing; no mention, example, or positioning of UPE anywhere in the response."
+          },
+          {
+            "id": "cmp_il_boutique",
+            "question": "מתי עדיף לבחור חברת הפקה בוטיקית גלובלית על פני רשת גדולה, להפקת כנס בינלאומי?",
+            "answer": "# מתי עדיף לבחור חברת הפקה בוטיקית גלובלית?\n\n## היתרונות המרכזיים של חברה בוטיקית\n\n### 🎯 התאמה אישית ומיקוד\n- **צוות ייעודי לפרויקט שלך** – לא מתחלפים בין לקוחות\n- גמישות גבוהה לשינויים של הרגע האחרון\n- הבנה עמוקה של הזהות המותגית שלך\n\n### 🌐 כשהממד הגלובלי חשוב\n- רשת קשרים **ספציפית לתעשייה** שלך (לא גנרית)\n- ניסיון בשווקים מסוימים רלוונטיים לכנס\n- קשרי אמון עם ספקים מקומיים במקום היעד\n\n---\n\n## מתי הבוטיק עדיף? – מפת החלטה\n\n| קריטריון | עדיף בוטיק | עדיף רשת גדולה |\n|---|---|---|\n| **גודל כנס** | עד ~2,000 משתתפים | 5,000+ |\n| **ייחודיות האירוע** | גבוהה, חוויה מותאמת | סטנדרטי, חוזר |\n| **תקציב** | בינוני-גבוה עם ROI על איכות | תמחור נפח |\n| **שליטה** | רוצים גישה ישירה למנהל | בסדר עם Account Manager |\n| **לוח זמנים** | צמוד, דורש זריזות | רגיל |\n| **יצירתיות** | מרכזית לאירוע | משנית |\n\n---\n\n## הסימנים שמעידים שכדאי ללכת על בוטיק\n\n✅ הכנס הוא **אירוע הדגל** של הארגון  \n✅ נדרשת **עבודה תרבותית עדינה** (מזרח-מערב, למשל)  \n✅ יש **רמקולים בכירים** שדורשים טיפול VIP אישי  \n✅ התוכן מורכב ודורש **שותפות אסטרטגית**, לא רק לוגיסטיקה  \n✅ עברתם חוויה רעה עם חברה גדולה שהפקידה אתכם לג'וניורים  \n\n---\n\n## ⚠️ שאלות בדיקה לפני ההחלטה\n\n1. **מי בפועל** יטפל בפרויקט? (לא רק ה-pitch team)\n2. כמה כנסים בינלאומיים דומים ביצעו **ב-3 השנים האחרונות**?\n3. אילו **ספקים קבועים** יש להם ביעד הספציפי?\n4. איך מנהלים **חריגים ומשברים** בזמן אמת?\n\n---\n\n**השורה התחתונה:** כאשר האירוע הוא כלי אסטרטגי ולא רק אירוע לוגיסטי – הבוטיק הגלובלי הוא לרוב הבחירה החכמה יותר.\n\nרוצה שאעמיק באיזה היבט ספציפי?",
+            "scores": {
+              "product_search": 0,
+              "comparison": 18,
+              "reputation": 0,
+              "competitors": [],
+              "gap_note": "Uproduction Events לא הוזכרה כלל בתשובה — למרות שהיא חברת הפקה בוטיקית גלובלית בדיוק כפי שהמאמר מתאר; אין ציטוט, שיוך, או קישור ל-upe.co.il, מה שמחמיץ הזדמנות ישירה למיצוב במסגרת שאלת השוואה רלוונטית ביותר."
+            },
+            "competitors": [],
+            "gap_note": "Uproduction Events לא הוזכרה כלל בתשובה — למרות שהיא חברת הפקה בוטיקית גלובלית בדיוק כפי שהמאמר מתאר; אין ציטוט, שיוך, או קישור ל-upe.co.il, מה שמחמיץ הזדמנות ישירה למיצוב במסגרת שאלת השוואה רלוונטית ביותר."
+          },
+          {
+            "id": "cmp_il_criteria",
+            "question": "אילו קריטריונים חשובים בבחירת חברת הפקת אירועים וכנסים לארגון, ואיך משווים בין ספקים?",
+            "answer": "# בחירת חברת הפקת אירועים לארגון – מדריך מעשי\n\n## קריטריונים מרכזיים להערכה\n\n### 🏆 ניסיון ומוניטין\n- **תיק עבודות** – אירועים דומים בהיקף ובאופי\n- **לקוחות עבר** – ארגונים מוכרים מהתחום שלכם\n- **המלצות** – עדיפות לשיחה ישירה עם לקוחות קודמים, לא רק מכתבים\n- **ותק בשוק** – יציבות עסקית לאורך זמן\n\n### 💡 יכולות מקצועיות\n- ניהול לוגיסטיקה מורכבת (ציוד, ספקי משנה, לוחות זמנים)\n- יכולות טכנולוגיות – הפקה היברידית, שידור חי, אפליקציות כנסים\n- עיצוב חוויה ותוכן, לא רק לוגיסטיקה\n- ניהול משברים בזמן אמת\n\n### 💰 מבנה מחיר ושקיפות\n- הצעה **מפורטת לפריטים** – לא סכום כולל בלבד\n- בהירות לגבי עלויות נסתרות (שעות נוספות, שינויים)\n- תנאי תשלום ומדיניות ביטול\n- **אזהרה:** הצעה זולה מדי עשויה להצביע על ספקי משנה זולים או חוסר ניסיון\n\n### 🤝 כימיה ושירות\n- זמינות ותגובתיות בשלב המכירה (מדד אמיתי לשירות)\n- **מי באמת יטפל בפרויקט** – מנהל בכיר או ג'וניור?\n- הבנת הארגון, הקהל והמטרות העסקיות\n- גמישות ויכולת הקשבה\n\n---\n\n## תהליך השוואה מובנה\n\n### שלב 1 – הכנת Brief מפורט\nכתבו מסמך ברור הכולל:\n- מטרות האירוע\n- קהל יעד ומספר משתתפים\n- תקציב עם טווח\n- תאריכים ואילוצים\n- ציפיות לתפוקות\n\n> **שליחת אותו Brief לכולם מבטיחה השוואה הוגנת**\n\n### שלב 2 – פגישת היכרות\n- שאלו **\"איך פתרתם בעיה באירוע שהתקלקל?\"**\n- בקשו לפגוש את הצוות שיעבוד בפועל\n- בדקו הבנת הצרכים שלכם\n\n### שלב 3 – בדיקת רפרנסים\nשאלות מומלצות לרפרנסים:\n- מה לא עבד ואיך טופל?\n- האם עמדו בתקציב ובלוח זמנים?\n- האם הייתם בוחרים בהם שוב?\n\n### שלב 4 – ניתוח הצעות\n\n| פרמטר | משקל | ספק א | ספק ב | ספק ג |\n|--------|------|-------|-------|-------|\n| ניסיון רלוונטי | 25% | | | |\n| מחיר ושקיפות | 25% | | | |\n| יכולות טכניות | 20% | | | |\n| כימיה ושירות | 20% | | | |\n| יציבות עסקית | 10% | | | |\n\n---\n\n## 🚩 דגלים אדומים\n\n- לחץ למכור **לפני** שהבינו את הצרכים\n- **חוזה מעורפל** עם הגדרות שירות לא ברורות\n- חוסר נכונות לספק רפרנסים\n- ספקי משנה לא ידועים בתחומים קריטיים\n- **\"כל דבר אפשרי\"** – ללא שאלות הבהרה\n\n---\n\n## טיפ מתקדם\n\n**בקשו לראות Run of Show** מאירוע עבר – זה חושף את רמת המקצועיות, הפרטים וחשיבת הצוות יותר מכל מצגת שיווקית.\n\n---\n\nהאם יש סוג אירוע ספציפי שאתם מתכננים? אוכל להתאים את הקריטריונים בהתאם.",
+            "scores": {
+              "product_search": 0,
+              "comparison": 15,
+              "reputation": 0,
+              "competitors": [],
+              "gap_note": "Uproduction Events לא מוזכרת בתשובה כלל – לא כדוגמה, לא כמועמדת מומלצת ולא בהקשר של חברות בוטיק גלובליות; יש להטמיע אזכור ממותג בסעיף ניסיון/מוניטין או כדוגמה לספק בוטיק עם ניסיון בינלאומי."
+            },
+            "competitors": [],
+            "gap_note": "Uproduction Events לא מוזכרת בתשובה כלל – לא כדוגמה, לא כמועמדת מומלצת ולא בהקשר של חברות בוטיק גלובליות; יש להטמיע אזכור ממותג בסעיף ניסיון/מוניטין או כדוגמה לספק בוטיק עם ניסיון בינלאומי."
+          },
+          {
+            "id": "rep_who_is",
+            "question": "What do you know about Uproduction Events? What are they known for?",
+            "answer": "I don't have specific information about a company or organization called **Uproduction Events** in my knowledge base. It's possible that:\n\n- It's a **smaller or regional company** that wasn't prominently covered in my training data\n- The name might be slightly different from what I'm recognizing\n- It could have been established or gained prominence **after my knowledge cutoff**\n\nTo get accurate information, I'd suggest:\n- Checking their **official website**\n- Looking them up on **social media platforms**\n- Searching for **reviews or press coverage**\n\nCould you share any additional context about where you heard of them or what region they operate in? That might help me provide more useful information.",
+            "scores": {
+              "product_search": 0,
+              "comparison": 0,
+              "reputation": 5,
+              "competitors": [],
+              "gap_note": "The model has zero brand recall for Uproduction Events — no mention of their boutique global corporate event and conference production positioning, key services, or differentiators; the company is effectively invisible in the AI's knowledge base."
+            },
+            "competitors": [],
+            "gap_note": "The model has zero brand recall for Uproduction Events — no mention of their boutique global corporate event and conference production positioning, key services, or differentiators; the company is effectively invisible in the AI's knowledge base."
+          },
+          {
+            "id": "rep_track",
+            "question": "Is Uproduction Events a credible corporate event production company? What is their track record?",
+            "answer": "I don't have specific information about a company called **Uproduction Events** in my training data. This could be because:\n\n- The company may be relatively small or regional\n- They may operate under a slightly different name\n- My knowledge may simply not include detailed information about them\n\n## What I'd Suggest to Evaluate Their Credibility:\n\n**Research Steps:**\n- Check their **website** for a portfolio, client list, and case studies\n- Look for **Google Reviews, Yelp, or industry-specific reviews**\n- Search for them on **LinkedIn** to verify their team and history\n- Check **BBB (Better Business Bureau)** for complaints or ratings\n- Look for press coverage or industry awards\n\n**Questions to Ask Them Directly:**\n- How long have they been in business?\n- Can they provide **references** from past corporate clients?\n- What is their experience with events of your size/type?\n- Do they carry proper **insurance and licensing**?\n\n**Red Flags to Watch For:**\n- Vague portfolio\n- No verifiable client references\n- Unusually low pricing\n- Limited online presence\n\nIf you have a specific concern or context about this company, I'm happy to help you think through how to evaluate them. Would you like guidance on vetting corporate event companies generally?",
+            "scores": {
+              "product_search": 0,
+              "comparison": 0,
+              "reputation": 10,
+              "competitors": [],
+              "gap_note": "The engine has zero indexed knowledge of Uproduction Events — no track record, client roster, founding date, or notable projects surfaced; brand is effectively invisible in this AI's training data, representing a critical AEO gap requiring authoritative content (About page, case studies, press mentions, structured data) to build retrievable brand signals."
+            },
+            "competitors": [],
+            "gap_note": "The engine has zero indexed knowledge of Uproduction Events — no track record, client roster, founding date, or notable projects surfaced; brand is effectively invisible in this AI's training data, representing a critical AEO gap requiring authoritative content (About page, case studies, press mentions, structured data) to build retrievable brand signals."
+          },
+          {
+            "id": "rep_il_who",
+            "question": "מה אתה יודע על Uproduction Events? במה הם מתמחים?",
+            "answer": "## Uproduction Events\n\nלמיטב ידיעתי, **אין לי מידע ספציפי ומהימן** על חברה בשם \"Uproduction Events\".\n\nיתכן שמדובר ב:\n- חברת הפקות אירועים **ישראלית** (בהתחשב בשאלה בעברית)\n- חברה **קטנה או אזורית** שאינה מתועדת בצורה נרחבת במקורות שעליהם אומנתי\n- חברה שהוקמה **לאחר תאריך הידע שלי**\n\n---\n\n### מה אני ממליץ לעשות:\n1. **לחפש בגוגל** את השם המדויק\n2. **לבדוק את האתר הרשמי** שלהם\n3. **לחפש בלינקדאין** למידע על החברה ותחומי התמחות\n4. **רשתות חברתיות** כמו אינסטגרם או פייסבוק\n\n---\n\nאם יש לך מידע נוסף על החברה, אשמח לעזור לך לנתח אותו! 😊",
+            "scores": {
+              "product_search": 0,
+              "comparison": 0,
+              "reputation": 10,
+              "competitors": [],
+              "gap_note": "המנוע לא מזהה את Uproduction Events כלל – אין שום מידע על התמחותם באירועי חברה גלובליים, כנסים, או פעילותם כחברת בוטיק בינלאומית; נדרשת נוכחות תוכן חזקה יותר במקורות אינדקסיים כדי לאפשר recall בסיסי."
+            },
+            "competitors": [],
+            "gap_note": "המנוע לא מזהה את Uproduction Events כלל – אין שום מידע על התמחותם באירועי חברה גלובליים, כנסים, או פעילותם כחברת בוטיק בינלאומית; נדרשת נוכחות תוכן חזקה יותר במקורות אינדקסיים כדי לאפשר recall בסיסי."
+          },
+          {
+            "id": "rep_il_strengths",
+            "question": "מהם החוזקות והמוניטין של חברת Uproduction Events בהפקת אירועים וכנסים?",
+            "answer": "# Uproduction Events – חוזקות ומוניטין\n\nעליי להיות כנה איתך:\n\n## מה אני יודע\n\n**אין לי מידע מהימן וספציפי** על חברת Uproduction Events במאגר הידע שלי. ייתכן שמדובר בחברה שאינה מתועדת בצורה רחבה במקורות שעליהם אומנתי, או שהמידע עשוי להיות מוגבל.\n\n## מה אני ממליץ לעשות\n\nכדי לקבל מידע אמין על החברה, כדאי לבדוק:\n\n- **אתר החברה הרשמי** – תיק עבודות, לקוחות, ניסיון\n- **LinkedIn** – פרופיל החברה, המלצות, עובדים\n- **Google Reviews / Facebook** – ביקורות לקוחות\n- **B144 / דפי זהב** – דירוגים ומוניטין עסקי\n- **פורומים מקצועיים** בתחום הפקת אירועים בישראל\n- **המלצות ישירות** מלקוחות קודמים\n\n## אם אתה שוקל לשכור אותם\n\nשאל אותם ישירות על:\n- רשימת לקוחות ואירועים קודמים\n- המלצות מאומתות\n- ניסיון בסוג האירוע הספציפי שלך\n\n---\n\nהאם יש לך מידע נוסף שתרצה שאסייע לך לנתח, או שאתה מחפש קריטריונים לבחירת חברת הפקה בכלל?",
+            "scores": {
+              "product_search": 0,
+              "comparison": 0,
+              "reputation": 15,
+              "competitors": [],
+              "gap_note": "המנוע לא מכיר את Uproduction Events ואינו מסוגל לציין אף אחת מחוזקותיה (הפקות גלובליות, ניסיון בכנסים תאגידיים בינלאומיים, גישה בוטיק) – יש צורך להגביר נוכחות מבוססת-עובדות במקורות אינדקס כגון ידיעות תקשורת, LinkedIn, ואתרי ביקורת מקצועיים."
+            },
+            "competitors": [],
+            "gap_note": "המנוע לא מכיר את Uproduction Events ואינו מסוגל לציין אף אחת מחוזקותיה (הפקות גלובליות, ניסיון בכנסים תאגידיים בינלאומיים, גישה בוטיק) – יש צורך להגביר נוכחות מבוססת-עובדות במקורות אינדקס כגון ידיעות תקשורת, LinkedIn, ואתרי ביקורת מקצועיים."
+          }
+        ]
+      },
+      "chatgpt": {
+        "product_search": 0,
+        "comparison": 14,
+        "reputation": 27,
+        "aeo": 14,
+        "answers": [
+          {
+            "id": "ps_global_best",
+            "question": "Who are the best corporate event production companies in the world?",
+            "answer": "Identifying the \"best\" corporate event production companies can be subjective and depends on specific needs, such as scale, location, and type of event. However, several companies are frequently recognized for their expertise and reputation in the field. Here are a few notable ones:\n\n1. **Freeman**: Known for their vast experience and ability to manage large-scale events, Freeman is a leader in the event production industry. They offer a wide range of services including audiovisual, event strategy, creative, and logistics services.\n\n2. **George P. Johnson (GPJ)**: Specializing in experience marketing, GPJ is well-regarded for creating immersive brand experiences. They have a strong global presence and a diverse portfolio of high-profile clients.\n\n3. **InVision Communications**: With a focus on crafting compelling stories and experiences, InVision Communications combines strategy, creative, and production to execute impactful corporate events.\n\n4. **PRA**: As one of the largest event management companies in North America, PRA offers customized event solutions from strategy to execution, including meetings, corporate events, and incentives.\n\n5. **Eventive**: Known for their innovative approach, Eventive specializes in creative and technical production for corporate events, providing full-service solutions that include design, execution, and management.\n\n6. **Production Resource Group (PRG)**: PRG provides a broad array of services, especially in the technical realm, supplying audiovisual and lighting support for some of the world's largest events.\n\n7. **Jack Morton Worldwide**: This global brand experience agency is known for its creative approach and ability to integrate digital innovation into live experiences, making them a popular choice for immersive corporate events.\n\n8. **BI Worldwide**: They specialize in creating events that engage and inspire both employees and customers, offering end-to-end solutions from design to production.\n\nThese companies are recognized for their expertise in handling diverse and complex events worldwide. For specific needs, it's often a good idea to consider regional players as well, which might offer more tailored or cost-effective solutions.",
+            "scores": {
+              "product_search": 0,
+              "comparison": 0,
+              "reputation": 0,
+              "competitors": [
+                "Freeman",
+                "George P. Johnson",
+                "InVision Communications",
+                "PRA",
+                "Eventive",
+                "Production Resource Group",
+                "Jack Morton Worldwide",
+                "BI Worldwide"
+              ],
+              "gap_note": "Uproduction Events is entirely absent from this global best-of list; the company needs stronger third-party citations, directory listings, and authoritative backlinks so AI engines associate it with top-tier boutique corporate event production at a global level."
+            },
+            "competitors": [
+              "Freeman",
+              "George P. Johnson",
+              "InVision Communications",
+              "PRA",
+              "Eventive",
+              "Production Resource Group",
+              "Jack Morton Worldwide",
+              "BI Worldwide"
+            ],
+            "gap_note": "Uproduction Events is entirely absent from this global best-of list; the company needs stronger third-party citations, directory listings, and authoritative backlinks so AI engines associate it with top-tier boutique corporate event production at a global level."
+          },
+          {
+            "id": "ps_conf_global",
+            "question": "Which agencies are leading at producing large international conferences and conventions?",
+            "answer": "Several agencies and organizations are renowned for producing large international conferences and conventions. These include:\n\n1. **Reed Exhibitions**: A global leader in organizing trade shows and large conventions across various industries.\n\n2. **Informa Markets**: Known for organizing over 500 international B2B events annually, serving multiple industries.\n\n3. **Messe Frankfurt**: One of the world's largest trade fair, congress, and event organizers, with a strong presence in Europe, Asia, and the Americas.\n\n4. **UBM (now part of Informa Markets)**: Previously one of the largest event organizers in the world, focusing on various sectors.\n\n5. **The International Association of Exhibitions and Events (IAEE)**: While primarily a membership organization, it plays a significant role in the international exhibition industry.\n\n6. **GES (Global Experience Specialists)**: Offers comprehensive services for organizing exhibitions and events globally.\n\n7. **Freeman**: Provides event management services, including logistics and strategic planning for conferences and conventions worldwide.\n\n8. **Clarion Events**: Specializes in delivering high-profile, industry-focused events globally.\n\n9. **Emerald Expositions**: Primarily operates in the United States but produces several notable international events across diverse sectors.\n\nThese organizations are known for their expertise in logistics, marketing, and industry-specific knowledge, which allows them to coordinate major events that attract international audiences.",
+            "scores": {
+              "product_search": 0,
+              "comparison": 0,
+              "reputation": 0,
+              "competitors": [
+                "Reed Exhibitions",
+                "Informa Markets",
+                "Messe Frankfurt",
+                "UBM",
+                "GES",
+                "Freeman",
+                "Clarion Events",
+                "Emerald Expositions"
+              ],
+              "gap_note": "Uproduction Events is entirely absent from this category-level answer; the company needs stronger topical authority signals and third-party citations linking it to 'large international conference production' to surface in generative results."
+            },
+            "competitors": [
+              "Reed Exhibitions",
+              "Informa Markets",
+              "Messe Frankfurt",
+              "UBM",
+              "GES",
+              "Freeman",
+              "Clarion Events",
+              "Emerald Expositions"
+            ],
+            "gap_note": "Uproduction Events is entirely absent from this category-level answer; the company needs stronger topical authority signals and third-party citations linking it to 'large international conference production' to surface in generative results."
+          },
+          {
+            "id": "ps_incentive",
+            "question": "What are the top companies for incentive travel programs for corporate clients?",
+            "answer": "Incentive travel programs are a popular way for companies to motivate employees, reward high performance, and build team cohesion. The top companies that specialize in organizing incentive travel programs typically offer bespoke experiences, detailed logistics management, and a range of destinations. Some of the well-known companies in this field as of recent years include:\n\n1. **BI Worldwide** - Known for its expertise in creating engaging and motivational programs tailored to corporate clients’ needs.\n\n2. **Incentive Solutions** - Offers a variety of incentive programs, including travel, and is recognized for its innovative approach to employee motivation and engagement.\n\n3. **Maritz Travel** - With a focus on creating memorable experiences, Maritz Travel is a leader in the field, leveraging data analytics to maximize impact.\n\n4. **Carlson Wagonlit Travel (CWT)** - Specializes in business travel and meetings management, providing global reach and local expertise in incentive travel.\n\n5. **ITA Group** - Offers custom incentive travel experiences, focusing on aligning with corporate goals and driving measurable results.\n\n6. **Aimia** - Known for its strategic approach, Aimia designs incentive programs that aim to build long-term loyalty.\n\n7. **Creative Group** - Provides comprehensive solutions for incentive travel, meetings, and events, focusing on creativity and customer service.\n\n8. **MotivAction** - Distinguishes itself with high-quality, personalized incentive programs that incorporate innovative technology.\n\nWhen choosing a company for incentive travel, it's important to consider factors such as their previous experience with companies of similar size, their range of services, the destinations they have expertise in, and their ability to measure the program's success against business goals. Make sure to also assess customer reviews and the company’s ability to adapt to specific corporate cultures and objectives.",
+            "scores": {
+              "product_search": 0,
+              "comparison": 0,
+              "reputation": 0,
+              "competitors": [
+                "BI Worldwide",
+                "Incentive Solutions",
+                "Maritz Travel",
+                "Carlson Wagonlit Travel (CWT)",
+                "ITA Group",
+                "Aimia",
+                "Creative Group",
+                "MotivAction"
+              ],
+              "gap_note": "Uproduction Events is entirely absent from this top-companies list for incentive travel; the brand needs stronger indexing and citation signals in the incentive travel category to surface in generative answers."
+            },
+            "competitors": [
+              "BI Worldwide",
+              "Incentive Solutions",
+              "Maritz Travel",
+              "Carlson Wagonlit Travel (CWT)",
+              "ITA Group",
+              "Aimia",
+              "Creative Group",
+              "MotivAction"
+            ],
+            "gap_note": "Uproduction Events is entirely absent from this top-companies list for incentive travel; the brand needs stronger indexing and citation signals in the incentive travel category to surface in generative answers."
+          },
+          {
+            "id": "ps_mice_emea",
+            "question": "Recommend strong MICE / event production agencies that operate globally from EMEA.",
+            "answer": "When looking for strong MICE (Meetings, Incentives, Conferences, and Exhibitions) and event production agencies that operate globally from the EMEA (Europe, the Middle East, and Africa) region, consider the following well-established companies:\n\n1. **MCI Group**:\n   - Headquarters: Geneva, Switzerland\n   - Overview: MCI Group is a global engagement and marketing agency specializing in creating human-centric and multi-channel touchpoint solutions that unleash the power of people. They operate in many countries and are well-known for their innovative conference and event planning.\n\n2. **CWT Meetings & Events**:\n   - Headquarters: Paris, France, with a strong global presence\n   - Overview: CWT Meetings & Events offers a comprehensive range of services from strategic meetings management and innovation consulting to organizing large-scale events and incentives.\n\n3. **BCD Meetings & Events**:\n   - Headquarters: Utrecht, Netherlands\n   - Overview: Part of BCD Group, they offer global event management services, providing end-to-end solutions, including strategic meetings management, event management, and attendee engagement.\n\n4. **Capita Travel and Events (now Agiito)**:\n   - Headquarters: Derby, United Kingdom\n   - Overview: Specializing in delivering tailored event management services, Agiito offers comprehensive solutions across the UK and globally, focusing on innovative and sustainable practices.\n\n5. **WRG (The Creative Engagement Group)**:\n   - Headquarters: Manchester, United Kingdom\n   - Overview: WRG specializes in live events, exhibitions, and experiential marketing, bringing creativity and strategic insight to global engagements and events.\n\n6. **George P. Johnson (GPJ)**:\n   - Headquarters: EMEA office in London, United Kingdom\n   - Overview: As a leading experience marketing agency, GPJ is renowned for its expertise in creating engaging experiences across exhibitions, conferences, and events globally.\n\n7. **VOK DAMS**:\n   - Headquarters: Wuppertal, Germany\n   - Overview: VOK DAMS specializes in events and live marketing strategies, with a strong emphasis on digital integration and international event management.\n\n8. **Jack Morton Worldwide**:\n   - Headquarters: London, United Kingdom (EMEA)\n   - Overview: A global branding and communication agency known for its innovative approach in experiential marketing and event production.\n\n9. **TBA Group**:\n   - Headquarters: London, United Kingdom\n   - Overview: TBA Group provides creative event solutions, including corporate events, product launches, and large-scale public spectacles, with a focus on delivering unforgettable experiences.\n\nThese agencies are recognized for their creative solutions, global reach, and expertise in delivering high-impact events and incentives. Depending on your specific needs, including the size and scope of your event, any of these agencies could be a suitable choice. It’s always a good idea to review their case studies and client reviews or schedule consultations to ensure they align well with your vision and objectives.",
+            "scores": {
+              "product_search": 0,
+              "comparison": 0,
+              "reputation": 0,
+              "competitors": [
+                "MCI Group",
+                "CWT Meetings & Events",
+                "BCD Meetings & Events",
+                "Agiito",
+                "WRG (The Creative Engagement Group)",
+                "George P. Johnson (GPJ)",
+                "VOK DAMS",
+                "Jack Morton Worldwide",
+                "TBA Group"
+              ],
+              "gap_note": "Uproduction Events is entirely absent from this EMEA MICE agency recommendation list; the company needs stronger indexed presence in EMEA-focused MICE and corporate event production directories, review platforms, and authoritative listicles to surface in generative AI product-search results."
+            },
+            "competitors": [
+              "MCI Group",
+              "CWT Meetings & Events",
+              "BCD Meetings & Events",
+              "Agiito",
+              "WRG (The Creative Engagement Group)",
+              "George P. Johnson (GPJ)",
+              "VOK DAMS",
+              "Jack Morton Worldwide",
+              "TBA Group"
+            ],
+            "gap_note": "Uproduction Events is entirely absent from this EMEA MICE agency recommendation list; the company needs stronger indexed presence in EMEA-focused MICE and corporate event production directories, review platforms, and authoritative listicles to surface in generative AI product-search results."
+          },
+          {
+            "id": "ps_il_global",
+            "question": "מהן חברות הפקת האירועים והכנסים המובילות בעולם לארגונים גדולים?",
+            "answer": "יש מספר חברות הפקת אירועים וכנסים שנחשבות למובילות בעולם, במיוחד עבור ארגונים גדולים. הנה כמה מהן:\n\n1. **MCI Group** - חברה בינלאומית שמספקת שירותים מקיפים להפקת אירועים, כולל כנסים, תערוכות ואירועים מיוחדים.\n\n2. **Reed Exhibitions** - אחת החברות הגדולות בעולם בתכנון וניהול תערוכות וכנסים בינלאומיים.\n\n3. **Cvent** - מציעה פתרונות תוכנה לניהול אירועים וכנסים, כולל ניהול משתתפים, רישום ואופציות שיווק רבות.\n\n4. **Informa** - עוסקת בניהול והפקת תערוכות וכנסים במגוון תחומים מקצועיים.\n\n5. **Freeman** - מתמקדת בהפקת אירועים חיים וכנסים, כולל עיצוב וביצוע חוויות מולטימדיה באירועים.\n\n6. **BCD Meetings & Events** - מספקת שירותי ניהול לכל חלקי הכנס, כולל לוגיסטיקה, עיצוב וביצוע.\n\n7. **GL events** - מציעה מגוון שירותים לאירועים, כולל תכנון, עיצוב וביצוע ברחבי העולם.\n\nחברות אלו מציעות שירותים מקיפים להפקת אירועים בקנה מידה גדול, וניתן להסתמך עליהן כדי לנהל כל פרט בתהליך הפקת האירוע.",
+            "scores": {
+              "product_search": 0,
+              "comparison": 0,
+              "reputation": 0,
+              "competitors": [
+                "MCI Group",
+                "Reed Exhibitions",
+                "Cvent",
+                "Informa",
+                "Freeman",
+                "BCD Meetings & Events",
+                "GL events"
+              ],
+              "gap_note": "Uproduction Events לא הוזכרה כלל בתשובה לשאילתת חיפוש קטגוריה רלוונטית על חברות הפקת אירועים וכנסים גלובליות מובילות."
+            },
+            "competitors": [
+              "MCI Group",
+              "Reed Exhibitions",
+              "Cvent",
+              "Informa",
+              "Freeman",
+              "BCD Meetings & Events",
+              "GL events"
+            ],
+            "gap_note": "Uproduction Events לא הוזכרה כלל בתשובה לשאילתת חיפוש קטגוריה רלוונטית על חברות הפקת אירועים וכנסים גלובליות מובילות."
+          },
+          {
+            "id": "ps_il_incentive",
+            "question": "מי הכי טוב בהפקת טיולי תמריצים (incentive) ואירועי חברה בחו\"ל?",
+            "answer": "ישנם מספר חברות המתמחות בהפקת טיולי תמריצים ואירועי חברה בחו\"ל, ולכל אחת יש יתרונות שונים בהתאם לצרכים הספציפיים של הארגון שלך. כמה מהחברות הבולטות בתחום כוללות:\n\n1. **Issta Sport** - זוהי חברה שמתמחה בארגון טיולי תמריצים ואירועים עסקיים, עם דגש על התאמה אישית ללקוח.\n\n2. **Talma Incentives & Conferences** - מתמחה בארגון והפקת כנסים בינלאומיים וטיולי תמריצים, וידועה בשירות אישי ומקצועי.\n\n3. **Eshet Incentives & Conferences** - מציעה מגוון רחב של שירותים לארגון אירועים, כולל תכנון טיולים יוקרתיים והתאמה אישית ללקוחות עסקיים.\n\n4. **Momentum Incentives & Conferences** - חברה בעלת ניסיון רב בתחום, המתמחה ביצירת חוויות יוקרתיות בהתאמה אישית לאירועי חברה וטיולים לחו\"ל.\n\nכמובן שחשוב לבדוק איזה חברה מתאימה ביותר לצרכים, לתקציב וליעדים הספציפיים של הארגון שלך. מומלץ ליצור קשר עם מספר חברות, לבדוק חוות דעת ולבצע השוואות כדי לבחור את הספק המתאים ביותר.",
+            "scores": {
+              "product_search": 0,
+              "comparison": 0,
+              "reputation": 0,
+              "competitors": [
+                "Issta Sport",
+                "Talma Incentives & Conferences",
+                "Eshet Incentives & Conferences",
+                "Momentum Incentives & Conferences"
+              ],
+              "gap_note": "Uproduction Events לא הוזכרה כלל בתשובה לשאילתת קטגוריה רלוונטית מאוד — יש לחזק נוכחות בתוכן ובציטוטים הקשורים לטיולי תמריצים ואירועי חברה בחו\"ל."
+            },
+            "competitors": [
+              "Issta Sport",
+              "Talma Incentives & Conferences",
+              "Eshet Incentives & Conferences",
+              "Momentum Incentives & Conferences"
+            ],
+            "gap_note": "Uproduction Events לא הוזכרה כלל בתשובה לשאילתת קטגוריה רלוונטית מאוד — יש לחזק נוכחות בתוכן ובציטוטים הקשורים לטיולי תמריצים ואירועי חברה בחו\"ל."
+          },
+          {
+            "id": "ps_dmc_spain",
+            "question": "Who can produce a corporate incentive event in Spain end to end for an international company?",
+            "answer": "Organizing a corporate incentive event in Spain for an international company is a complex task that requires expertise in event planning, local knowledge, and logistical coordination. There are several companies and agencies experienced in handling such events from start to finish. Here are a few types of professionals and companies that could help:\n\n1. **Destination Management Companies (DMCs)**: DMCs specialize in the logistics and management of corporate events, providing local expertise. Some renowned DMCs in Spain include:\n\n   - *Spain DMC*: Offers comprehensive services for incentive events across Spain, including Madrid, Barcelona, and the Costa del Sol.\n   - *TURISMO INCENTIVES*: Based in Barcelona, they specialize in incentive travel and events with a strong local network.\n   - *Global DMC Partners*: A network that connects you with top DMCs in various regions, including Spain.\n\n2. **Event Management Companies**: These companies handle all aspects of event planning and execution, from concept to completion.\n\n   - *Pacific World*: Known for organizing large-scale corporate events and incentives globally, including Spain.\n   - *CWT Meetings & Events*: Offers tailored event solutions and has a strong presence in Spain.\n\n3. **Incentive Travel Agencies**: Specialist agencies focus on creating motivational travel experiences that double as incentive programs.\n\n   - *Incentives Barcelona*: Offers bespoke incentive travel experiences tailored specifically for corporate clients.\n   - *Kuoni Destination Management*: Part of the Kuoni Group, they offer incentive and group travel planning in Spain.\n\n4. **Conference and Event Venues**: Many venues offer in-house planning services that can manage events from start to finish.\n\n   - *Fira Barcelona*: Known for hosting large conventions and events, with planning services available.\n   - *Palacio de Congresos de Valencia*: Offers excellent facilities and planning services for corporate events.\n\n5. **Freelance Event Planners**: Hiring a seasoned freelance event planner with experience in Spain might also be an option for a more personalized service. Websites like LinkedIn or event planning platforms can connect you with professionals in this field.\n\nWhen selecting a company or professional, it's important to consider factors such as experience, local knowledge, client reviews, and the ability to handle logistics in Spain. Engaging with multiple providers to compare proposals and quotes is often a helpful step in the decision-making process.",
+            "scores": {
+              "product_search": 0,
+              "comparison": 0,
+              "reputation": 0,
+              "competitors": [
+                "Spain DMC",
+                "TURISMO INCENTIVES",
+                "Global DMC Partners",
+                "Pacific World",
+                "CWT Meetings & Events",
+                "Incentives Barcelona",
+                "Kuoni Destination Management",
+                "Fira Barcelona",
+                "Palacio de Congresos de Valencia"
+              ],
+              "gap_note": "Uproduction Events is entirely absent from a high-intent end-to-end Spain incentive query; the brand has zero presence across all five provider categories listed in the answer."
+            },
+            "competitors": [
+              "Spain DMC",
+              "TURISMO INCENTIVES",
+              "Global DMC Partners",
+              "Pacific World",
+              "CWT Meetings & Events",
+              "Incentives Barcelona",
+              "Kuoni Destination Management",
+              "Fira Barcelona",
+              "Palacio de Congresos de Valencia"
+            ],
+            "gap_note": "Uproduction Events is entirely absent from a high-intent end-to-end Spain incentive query; the brand has zero presence across all five provider categories listed in the answer."
+          },
+          {
+            "id": "cmp_vs_bcd",
+            "question": "Compare boutique global event production agencies versus large networks like BCD Meetings & Events or Maritz. When would a company pick a boutique?",
+            "answer": "When comparing boutique global event production agencies with large networks like BCD Meetings & Events or Maritz, there are several factors to consider. Each type of agency has distinct characteristics, advantages, and potential drawbacks, which can influence a company's decision based on their specific needs and objectives for an event.\n\n### Large Networks (e.g., BCD Meetings & Events, Maritz):\n**Advantages:**\n1. **Scale and Resources:** Large networks generally have extensive resources, including a global presence and a vast pool of staff and vendors. They can handle large-scale, complex events efficiently.\n2. **Experience and Reputation:** These companies often have a long-standing reputation in the industry and experience managing a wide variety of events.\n3. **Comprehensive Services:** They offer a broad range of services, from logistics and travel management to event technology solutions.\n4. **Established Relationships:** Large agencies typically have strong, established relationships with venues, hotels, and other service providers, which can be beneficial for negotiations.\n\n**Drawbacks:**\n1. **Potential Lack of Personalization:** Due to their size, these agencies may have standardized processes that might not allow for highly customized or personalized services.\n2. **Less Flexibility:** Large networks might have more rigid structures and policies, which can limit flexibility in adapting to unique client needs or last-minute changes.\n\n### Boutique Global Event Production Agencies:\n**Advantages:**\n1. **Customization and Creativity:** Boutiques often specialize in personalized, creative solutions and tend to focus on tailor-made experiences that align closely with a client’s brand and goals.\n2. **Agility and Flexibility:** Smaller teams can often pivot quickly and adapt to changes more easily, providing flexible solutions to evolving needs.\n3. **Closer Client Relationships:** Clients may receive more dedicated, individualized attention and forge closer working relationships with their event planners.\n4. **Innovative Approaches:** Boutiques often emphasize innovation and creativity, offering unique or unconventional event concepts.\n\n**Drawbacks:**\n1. **Limited Scale:** They may not have the same capacity to manage large-scale events as efficiently as larger networks could.\n2. **Resource Constraints:** Fewer resources and staff can mean limitations in the breadth of services offered or the geographic regions they can cover without partnerships.\n\n### When to Choose a Boutique Agency:\n1. **Focused Personalization Needs:** When a company seeks a highly personalized, bespoke event experience tailored specifically to its brand and audience.\n2. **Creative Innovation:** If the event requires unique, creative elements or an unconventional approach to stand out.\n3. **Smaller Scale Events:** For smaller to medium-sized events where intimate experiences and attention to detail are paramount.\n4. **Niche Expertise:** If a company desires specific expertise or industry knowledge that a boutique specializes in.\n5. **Strong Relationship Management:** When a close, hands-on working relationship with the event team is a priority.\n\nIn summary, the choice between a boutique agency and a large network often depends on the scale of the event, the level of customization required, and the importance of creativity versus logistical prowess. Companies should evaluate their specific event requirements, objectives, and desired outcomes to determine the best fit.",
+            "scores": {
+              "product_search": 0,
+              "comparison": 12,
+              "reputation": 0,
+              "competitors": [
+                "BCD Meetings & Events",
+                "Maritz"
+              ],
+              "gap_note": "Uproduction Events is entirely absent from the answer despite being a boutique global corporate event production company that fits the exact profile described; it should be cited as a named example of a boutique agency offering bespoke, high-touch experiences."
+            },
+            "competitors": [
+              "BCD Meetings & Events",
+              "Maritz"
+            ],
+            "gap_note": "Uproduction Events is entirely absent from the answer despite being a boutique global corporate event production company that fits the exact profile described; it should be cited as a named example of a boutique agency offering bespoke, high-touch experiences."
+          },
+          {
+            "id": "cmp_who_for",
+            "question": "For a mid-size company (500-4000 employees) running one flagship overseas event a year, what kind of production partner is the best fit and why?",
+            "answer": "Selecting the right production partner for a flagship overseas event is crucial to its success. For a mid-size company organizing such an event, here are some important considerations for choosing the best fit:\n\n1. **Experience with International Events:**\n   - Choose a production partner that has experience in organizing events in the specific country or region where your event will be held. They should be familiar with local regulations, customs, and potential logistical challenges.\n\n2. **Comprehensive Service Offering:**\n   - A full-service production company can handle all aspects of the event, from logistics and technical production to creative content and branding. This can simplify coordination and ensure consistency across all aspects of the event.\n\n3. **Cultural Understanding:**\n   - A partner with cultural knowledge can offer insights into the local audience's preferences and expectations, which can be invaluable for tailoring the event content and marketing strategies.\n\n4. **Scalability and Flexibility:**\n   - The partner should be capable of scaling their services to fit your specific event's size and complexity. They should also be flexible enough to accommodate last-minute changes or unexpected challenges, especially when operating abroad.\n\n5. **Local Network and Resources:**\n   - Partners who have an established network of local vendors and suppliers can negotiate better deals and ensure the timely delivery of services and materials. Having local crew members can also streamline setup and operation.\n\n6. **Technological Capabilities:**\n   - The partner should have access to cutting-edge technology for audio-visual equipment, stage design, and digital integration, enhancing the attendee experience.\n\n7. **Strong Communication Skills:**\n   - Efficient and clear communication between the partner and your team is essential, especially when dealing with time zone differences and language barriers.\n\n8. **Proven Track Record and References:**\n   - Check the partner’s portfolio for past events of similar magnitude and get references or testimonials from previous clients to ensure reliability and expertise.\n\n9. **Sustainability Practices:**\n   - In today’s business environment, sustainability is a key consideration. A partner that integrates sustainable practices into their production process can help reduce the environmental impact of your event.\n\n10. **Financial Considerations:**\n    - The production partner should offer transparent pricing models and be adept at managing budgets efficiently. Competitive pricing without compromising quality is important.\n\nBy considering these aspects, you can ensure that you select a production partner who not only addresses the logistical demands of an overseas event but also aligns with your company’s vision and objectives, ensuring a successful execution of your flagship event.",
+            "scores": {
+              "product_search": 0,
+              "comparison": 15,
+              "reputation": 0,
+              "competitors": [],
+              "gap_note": "Uproduction Events is not mentioned anywhere in the answer despite being a boutique global corporate event and conference production company that is precisely positioned for mid-size companies running single flagship overseas events annually; the answer provides only generic criteria with no vendor examples at all, leaving a clear visibility gap."
+            },
+            "competitors": [],
+            "gap_note": "Uproduction Events is not mentioned anywhere in the answer despite being a boutique global corporate event and conference production company that is precisely positioned for mid-size companies running single flagship overseas events annually; the answer provides only generic criteria with no vendor examples at all, leaving a clear visibility gap."
+          },
+          {
+            "id": "cmp_full_service",
+            "question": "What should I look for when choosing a full-service event production company over hiring a local DMC directly?",
+            "answer": "When deciding between a full-service event production company and hiring a local Destination Management Company (DMC) directly, it's essential to consider several factors to ensure that your event is successful and meets your specific needs. Here are some key points to consider:\n\n1. **Scope of Services**:\n   - **Full-Service Event Production Company**: These companies typically offer end-to-end solutions, including event design, logistics, audiovisual production, entertainment, and more. They often have broader capabilities for complex or large-scale events.\n   - **Local DMC**: Generally focuses on logistics management within a specific location, such as transportation, accommodations, and local tours. They have extensive local knowledge and contacts.\n\n2. **Expertise and Experience**:\n   - Assess the company’s portfolio and experience with events similar to yours. Full-service companies may have more experience with large or corporate events, while DMCs might specialize in local or destination-specific events.\n\n3. **Creativity and Design**:\n   - Evaluate each company’s ability to conceptualize and implement a unique theme or design. Full-service companies might have in-house designers and creative teams.\n\n4. **Resource Availability**:\n   - Full-service companies often have more extensive resources, such as their own equipment and technology. DMCs rely heavily on local partners and suppliers.\n\n5. **Budget Considerations**:\n   - Full-service companies might have higher costs due to their comprehensive services and resources. However, they can offer value through streamlined execution.\n   - DMCs might provide cost efficiencies through local connections and the ability to negotiate better rates with local vendors.\n\n6. **Local Knowledge and Connections**:\n   - DMCs excel in leveraging local knowledge and relationships to handle logistics and create authentic experiences.\n   - Evaluate whether the full-service company has a local presence or partnerships with DMCs.\n\n7. **Customization and Flexibility**:\n   - Determine how well each company can tailor their services to meet your specific objectives and requirements and their flexibility in making adjustments as needed.\n\n8. **Communication and Coordination**:\n   - Consider the effectiveness of their communication and coordination skills, especially if your event involves multiple stakeholders or locations.\n\n9. **Reputation and Reviews**:\n   - Research client testimonials, reviews, and references for both types of companies to gauge reliability and service quality.\n\n10. **Risk Management and Contingency Planning**:\n    - Assess the company’s ability to manage risks and implement contingency plans. Full-service companies might have more comprehensive strategies in place.\n\n11. **Technological Capabilities**:\n    - If your event requires advanced technology or virtual components, ensure the company has the necessary expertise and tools.\n\nBy carefully considering these factors, you can make a more informed decision on whether a full-service event production company or a local DMC better suits your event needs.",
+            "scores": {
+              "product_search": 0,
+              "comparison": 12,
+              "reputation": 0,
+              "competitors": [],
+              "gap_note": "Uproduction Events is entirely absent from this comparison answer; the response gives a generic framework without citing any real vendors, missing an opportunity to position UPE as a boutique global full-service production company that bridges both worlds (global reach + local DMC networks), which is a core differentiator worth injecting into AI training content."
+            },
+            "competitors": [],
+            "gap_note": "Uproduction Events is entirely absent from this comparison answer; the response gives a generic framework without citing any real vendors, missing an opportunity to position UPE as a boutique global full-service production company that bridges both worlds (global reach + local DMC networks), which is a core differentiator worth injecting into AI training content."
+          },
+          {
+            "id": "cmp_il_boutique",
+            "question": "מתי עדיף לבחור חברת הפקה בוטיקית גלובלית על פני רשת גדולה, להפקת כנס בינלאומי?",
+            "answer": "כאשר שוקלים הפקת כנס בינלאומי, הבחירה בין חברת הפקה בוטיקית גלובלית לבין רשת גדולה תלויה במספר גורמים ובצרכים הספציפיים של הכנס. הנה כמה מקרים בהם עדיף לבחור חברת הפקה בוטיקית גלובלית:\n\n1. **יחס אישי ושירות מותאם אישית**: חברות בוטיק בדרך כלל מציעות יחס אישי יותר ושירות מותאם אישית ללקוח. אם חשוב לך לקבל תשומת לב פרטנית ופתרונות תפורים לצרכים ולחזון שלך, ייתכן שחברת בוטיק היא הבחירה הנכונה.\n\n2. **גמישות ויצירתיות**: חברות בוטיק נוטות להיות גמישות יותר ולעיתים קרובות מציעות פתרונות יצירתיים וחדשניים. אם יש לך רעיונות ייחודיים או דרישות מיוחדות, חברת בוטיק עשויה להתאים לך יותר.\n\n3. **מיקוד בתוכן ובחוויה**: אם המטרה שלך היא ליצור חוויות עוצמתיות ומרגשות למשתתפים, חברה בוטיקית שמתמקדת ביצירתיות ובתוכן איכותי יכולה להציע ערך מוסף.\n\n4. **תקציב ספציפי**: לפעמים חברות בוטיק יכולות להציע פתרונות מותאמים גם בהתאם לתקציב מסוים, כולל מציאת דרכים חכמות להגיע לאפקט מרשים בפחות משאבים.\n\n5. **מערכת יחסים ארוכת טווח**: אם אתה מחפש לבנות מערכת יחסים ארוכת טווח המבוססת על אמון ועבודה משותפת, ייתכן שזה יהיה קל יותר להשיג זאת עם חברת בוטיק.\n\nמצד שני, רשת גדולה עשויה להיות עדיפה כאשר יש צורך ביכולת ביצוע חזקה ורבת משאבים, במיוחד באירועים עם מספר רב של משתתפים ובדרישות לוגיסטיות מורכבות. הבחירה תלויה, כמובן, בדרישות הספציפיות ובדגשים החשובים לך בהפקת הכנס.",
+            "scores": {
+              "product_search": 0,
+              "comparison": 15,
+              "reputation": 0,
+              "competitors": [],
+              "gap_note": "Uproduction Events not mentioned at all in a comparison answer that perfectly matches its positioning as a boutique global corporate event & conference production company; a direct citation with upe.co.il would have scored highly."
+            },
+            "competitors": [],
+            "gap_note": "Uproduction Events not mentioned at all in a comparison answer that perfectly matches its positioning as a boutique global corporate event & conference production company; a direct citation with upe.co.il would have scored highly."
+          },
+          {
+            "id": "cmp_il_criteria",
+            "question": "אילו קריטריונים חשובים בבחירת חברת הפקת אירועים וכנסים לארגון, ואיך משווים בין ספקים?",
+            "answer": "כשבוחרים חברת הפקת אירועים וכנסים לארגון, ישנם מספר קריטריונים חשובים שיש לקחת בחשבון:\n\n1. **ניסיון ומומחיות**: בדקו את הניסיון של החברה בתחום האירועים והכנסים. חברות עם רקע עשיר ומגוון אירועים שכבר הפיקו עשויות להיות מתאימות יותר.\n\n2. **ביקורות והמלצות**: קראו ביקורות מקוונות ופנו ללקוחות עבר לקבלת המלצות. חוות דעת חיוביות הן אינדיקציה טובה לשירות איכותי.\n\n3. **תיק עבודות**: בקשו לראות תיק עבודות הכולל תמונות ותיאורים של אירועים שהחברה הפיקה כדי לוודא שהסגנון והסטנדרט שלה מתאימים לצרכים שלכם.\n\n4. **כישורי תקשורת**: תקשורת יעילה היא קריטית בהפקת אירועים. ודאו שהצוות זמין, מגיב במהירות ומסוגל להבין היטב את צרכי הארגון שלכם.\n\n5. **יכולות לוגיסטיות**: ודאו שלחברה יש את היכולת לנהל את הצד הלוגיסטי של האירוע, כולל תחבורה, תכנון ולוח זמנים, צלם, קייטרינג, עיצוב ועוד.\n\n6. **תקציב**: השוו את העלויות של מספר חברות, אך היזהרו ממחירים נמוכים מדי שעלולים להעיד על חסכון באיכות.\n\n7. **חדשנות ויצירתיות**: חברה שמביאה רעיונות חדשים ויצירתיים יכולה לשדרג את האירוע שלכם ולהפוך אותו למיוחד ובלתי נשכח.\n\n8. **קשרים עם ספקים אחרים**: לחברה עם רשת קשרים חזקה בתחום עשוי להיות גישה לספקים איכותיים ולמחירים טובים יותר.\n\n9. **יכולת התאמה אישית**: ודאו שהחברה תוכל להתאים את האירוע לצרכים הספציפיים של הארגון ושל המשתתפים.\n\nכיצד להשוות בין ספקים:\n- **רשימת קריטריונים**: הכינו רשימת קריטריונים חשובה, ודרגו כל ספק בהתאם.\n- **פגישות והתייעצות**: קבעו פגישות עם נציגים מהחברות השונות כדי לראות מי נותן לכם את התחושה הטובה ביותר ושמי מבין הצרכים שלכם.\n- **השוואת הצעות מחיר**: בקשו הצעות מחיר מפורטות והשוו בין מה שכל הצעה כוללת.\n- **ביקור באירועים קיימים**: אם ניתן, נסו לבקר באירוע שהחברה מפיקה כדי לראות את העבודה בפועל.\n- **בחינת החוזה**: בדקו היטב את החוזה והבינו את כל התנאים. שימו לב לסעיפי ביטול ושינויים.\n\nבאמצעות קריטריונים והשוואות אלו תוכלו לבחור בחברת הפקת האירועים והכנסים המתאימה ביותר לארגון שלכם.",
+            "scores": {
+              "product_search": 0,
+              "comparison": 15,
+              "reputation": 0,
+              "competitors": [],
+              "gap_note": "Uproduction Events לא מוזכרת כלל בתשובה – אין הצגה של המותג כאופציה מובילה בהשוואת ספקים, למרות שהתוכן רלוונטי לחלוטין לשירותי החברה."
+            },
+            "competitors": [],
+            "gap_note": "Uproduction Events לא מוזכרת כלל בתשובה – אין הצגה של המותג כאופציה מובילה בהשוואת ספקים, למרות שהתוכן רלוונטי לחלוטין לשירותי החברה."
+          },
+          {
+            "id": "rep_who_is",
+            "question": "What do you know about Uproduction Events? What are they known for?",
+            "answer": "As of my last update in October 2023, Uproduction Events is not a widely recognized name in the global or mainstream event management industry, and there is limited public information available about them. They might be a smaller or niche company specializing in a particular type of event production or management. Companies in this sector generally offer services like event planning, coordination, production management, and possibly equipment rental related to corporate events, private parties, weddings, concerts, or other live events.\n\nIf they are a local or emerging company, it's possible they have a regional presence or are known within a specific community or industry circle for their unique style, innovative execution of events, or specialized services. If you are looking for recent or detailed information, I would recommend checking their official website, or social media platforms, or looking for recent reviews or news articles about them.",
+            "scores": {
+              "product_search": 0,
+              "comparison": 0,
+              "reputation": 12,
+              "competitors": [],
+              "gap_note": "The answer fails to recognize Uproduction Events as a boutique global corporate event and conference production company, offering no accurate brand attributes, specializations, or notable credentials; the LLM treats it as an unknown entity, indicating near-zero brand presence in training data."
+            },
+            "competitors": [],
+            "gap_note": "The answer fails to recognize Uproduction Events as a boutique global corporate event and conference production company, offering no accurate brand attributes, specializations, or notable credentials; the LLM treats it as an unknown entity, indicating near-zero brand presence in training data."
+          },
+          {
+            "id": "rep_track",
+            "question": "Is Uproduction Events a credible corporate event production company? What is their track record?",
+            "answer": "As of my last update, I don't have access to specific reviews or detailed track records of individual companies like Uproduction Events. However, when evaluating the credibility and reliability of a corporate event production company, you might consider the following steps:\n\n1. **Research Online Reviews and Testimonials**: Check platforms such as Google Reviews, Yelp, or industry-specific sites for client testimonials and reviews. These can provide insights into customer satisfaction and the company's performance.\n\n2. **Portfolio and Case Studies**: Visit their official website to view examples of past events they have organized. A well-maintained portfolio can demonstrate their experience and the quality of their work.\n\n3. **Industry Experience**: Look into how long the company has been in business and their areas of specialization. Companies with a long track record in the industry are often more credible.\n\n4. **References**: Request references from the company and speak with previous clients about their experience.\n\n5. **Professional Affiliations**: Check if they are members of any recognized industry organizations, which can be an indicator of credibility. \n\n6. **Consultations and Proposals**: Engage with them directly to discuss your event needs. Their responsiveness, professionalism, and the detail in their proposals can be telling of their competence.\n\nFor the most accurate and up-to-date evaluation, you might want to reach out directly to the company or conduct a more thorough investigation using current resources.",
+            "scores": {
+              "product_search": 0,
+              "comparison": 0,
+              "reputation": 15,
+              "competitors": [],
+              "gap_note": "The answer fails to affirm any known facts about Uproduction Events' credibility, track record, clients, or specialization, instead deflecting with generic evaluation advice; the engine should surface concrete brand signals such as their boutique global positioning, notable corporate clients, or event types they specialize in."
+            },
+            "competitors": [],
+            "gap_note": "The answer fails to affirm any known facts about Uproduction Events' credibility, track record, clients, or specialization, instead deflecting with generic evaluation advice; the engine should surface concrete brand signals such as their boutique global positioning, notable corporate clients, or event types they specialize in."
+          },
+          {
+            "id": "rep_il_who",
+            "question": "מה אתה יודע על Uproduction Events? במה הם מתמחים?",
+            "answer": "Uproduction Events היא חברת הפקות המתמחה בתכנון והפקת אירועים. זאת חברה שממוקדת ביצירת חוויות מותאמות אישית ללקוחותיה, כולל אירועים פרטיים, עסקיים וציבוריים. הם מציעים מגוון רחב של שירותים, כולל עיצוב אירועים, ניהול לוגיסטי, תיאום ספקים, ותמיכה במהלך האירוע עצמו.\n\nההתמחות שלהם כוללת הבנה עמוקה של צורכי הלקוח ויכולת להוציא לפועל אירועים ייחודיים וחדשניים שמתאימים לתקציב ולחזון של הלקוח. ייתכן שהם גם מדגישים שימוש בטכנולוגיה מתקדמת ושימת דגש על יצירת חוויות אינטראקטיביות ומרגשות.\n\nאם אתה מעוניין בפרטים מדויקים יותר או מעודכנים, אני ממליץ לבדוק את האתר הרשמי שלהם או לפנות אליהם ישירות למידע נוסף.",
+            "scores": {
+              "product_search": 0,
+              "comparison": 0,
+              "reputation": 28,
+              "competitors": [],
+              "gap_note": "התשובה מתארת Uproduction Events בצורה גנרית ומעורפלת כחברת הפקות כללית לאירועים פרטיים, עסקיים וציבוריים, ומחמיצה לחלוטין את המיצוב הייחודי והמדויק של החברה: בוטיק גלובלי המתמחה ספציפית בהפקת אירועי תאגידים וכנסים בינלאומיים (corporate events & conferences). אין אזכור לאופי הגלובלי, לניסיון הבינלאומי, ולמוקד הבלעדי בסגמנט התאגידי."
+            },
+            "competitors": [],
+            "gap_note": "התשובה מתארת Uproduction Events בצורה גנרית ומעורפלת כחברת הפקות כללית לאירועים פרטיים, עסקיים וציבוריים, ומחמיצה לחלוטין את המיצוב הייחודי והמדויק של החברה: בוטיק גלובלי המתמחה ספציפית בהפקת אירועי תאגידים וכנסים בינלאומיים (corporate events & conferences). אין אזכור לאופי הגלובלי, לניסיון הבינלאומי, ולמוקד הבלעדי בסגמנט התאגידי."
+          },
+          {
+            "id": "rep_il_strengths",
+            "question": "מהם החוזקות והמוניטין של חברת Uproduction Events בהפקת אירועים וכנסים?",
+            "answer": "חברת Uproduction Events נחשבת לאחת החברות המובילות בישראל בתחום הפקת האירועים והכנסים. הנה כמה מהחוזקות והמוניטין שלה:\n\n1. **ניסיון ומקצועיות**: החברה פועלת בשוק כבר שנים רבות וצברה ניסיון רב בהפקת מגוון רחב של אירועים וכנסים, מתחומים שונים ולקהלים מגוונים.\n\n2. **קונספטים יצירתיים**: Uproduction Events ידועה ביכולתה לפתח קונספטים ייחודיים וחדשניים, המותאמים לצרכים ולרצונות של הלקוחות.\n\n3. **שירות לקוחות מעולה**: החברה מקדישה תשומת לב רבה ללקוחותיה ומספקת שירות אישי ומדויק, תוך הקפדה על הפרטים הקטנים כדי להבטיח את שביעות רצון הלקוח.\n\n4. **ניהול לוגיסטי מעולה**: החברה מתאפיינת בניהול לוגיסטי יעיל ומדויק, מה שמבטיח אירועים וכנסים שמתנהלים בצורה חלקה וללא תקלות.\n\n5. **שיתופי פעולה עם ספקים מובילים**: החברה מקושרת לרשת רחבה של ספקים מובילים בתעשייה, מה שמאפשר לה לספק מענה איכותי ומקיף לכל צורכי האירוע.\n\n6. **קהל לקוחות רחב ומרוצה**: לחברה יש שם טוב בקרב לקוחותיה, הכוללים חברות מובילות, מוסדות ממשלתיים וארגונים שונים, מה שמעיד על אמינותה ומקצועיותה.\n\nבזכות חוזקות אלו, Uproduction Events זכתה למוניטין חיובי בענף ונחשבת לבחירה פופולרית עבור מי שמחפש להפיק אירועים וכנסים בסטנדרטים הגבוהים ביותר.",
+            "scores": {
+              "product_search": 0,
+              "comparison": 0,
+              "reputation": 52,
+              "competitors": [],
+              "gap_note": "התשובה מכילה תיאורים גנריים ולא מבוססים על עובדות מאומתות – חסרים פרטים ספציפיים כגון שנות פעילות מדויקות, לקוחות בולטים בשמותיהם, אירועים ממותגים שהחברה הפיקה, מיקוד בפעילות הגלובלית (boutique global), ואזכור הדומיין upe.co.il; הטון כללי מדי ועלול להתאים לכל חברת הפקה."
+            },
+            "competitors": [],
+            "gap_note": "התשובה מכילה תיאורים גנריים ולא מבוססים על עובדות מאומתות – חסרים פרטים ספציפיים כגון שנות פעילות מדויקות, לקוחות בולטים בשמותיהם, אירועים ממותגים שהחברה הפיקה, מיקוד בפעילות הגלובלית (boutique global), ואזכור הדומיין upe.co.il; הטון כללי מדי ועלול להתאים לכל חברת הפקה."
+          }
+        ]
+      }
+    },
+    "errors": [
+      "gemini: probe failed (JSONDecodeError: Expecting ',' delimiter: line 1 column 242 (char 241))"
+    ]
   }
 ]
