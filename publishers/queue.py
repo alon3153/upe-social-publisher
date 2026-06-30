@@ -70,3 +70,11 @@ def get_oauth(provider):
 def upsert_oauth(provider, **fields):
     return _req("POST", "oauth_tokens", body={"provider": provider, **fields},
                 prefer="resolution=merge-duplicates,return=minimal")
+
+
+def get_advocate(account):
+    """Per-advocate personal-LinkedIn token row (li_natalia / li_danielle).
+    Returns {access_token, member_urn, ...} or None for non-advocate accounts."""
+    rows = _req("GET", "linkedin_advocate_tokens",
+                params={"select": "*", "account": f"eq.{account}", "limit": "1"})
+    return rows[0] if rows else None
