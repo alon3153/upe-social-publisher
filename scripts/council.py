@@ -77,9 +77,23 @@ def build_scorecard(cur, prev, leads):
     else:
         grade("לידים מוסמכים/חודש", "לא מחובר", lead_target, False)
 
+    # Lead-source attribution: a real dominant source is a SIGNAL (double down), an
+    # unattributed-default concentration is a GAP (fix data entry). Ported 02.07.
+    if leads.get("ok") and leads.get("dominant_source"):
+        if leads.get("attribution_gap"):
+            grade("ייחוס לידים", "לא-מיוחס", "מקור אמיתי", False)
+        else:
+            grade(f"ערוץ ממיר ({leads['dominant_source']})",
+                  leads.get("dominant_share_pct", 0), "↑", True, "%")
+
     passed = sum(1 for r in rows if r["status"] == "✅")
     return {"rows": rows, "passed": passed, "total": len(rows),
-            "impressions_growth_pct": imp_growth, "posts_per_week": posts_week}
+            "impressions_growth_pct": imp_growth, "posts_per_week": posts_week,
+            "lead_attribution": {"by_source": leads.get("by_source", {}),
+                                 "dominant_source": leads.get("dominant_source"),
+                                 "dominant_share_pct": leads.get("dominant_share_pct", 0),
+                                 "attribution_gap": leads.get("attribution_gap", False),
+                                 "note": leads.get("attribution_note", "")}}
 
 
 # ---------------------------------------------------------------- the council --
@@ -108,6 +122,12 @@ DATA:
 
 DETERMINISTIC SCORECARD:
 {scorecard}
+
+LEAD ATTRIBUTION: the scorecard's "lead_attribution" shows where this month's pipeline actually
+came from. If a REAL source dominates (e.g. Web/Linkedin/Word of mouth), treat it as the proven
+converting channel and make "leads_actions" DOUBLE DOWN on it (Web ⇒ accelerate Hebrew commercial
+SEO/content). Only if the dominant bucket is unattributed default (Advertisement/none) flag it as a
+data-entry gap — do NOT recommend UTM tracking otherwise (UPE's deals are relationship/inbound B2B).
 
 Use web_search to find what is working RIGHT NOW (2026) for B2B/MICE organic growth and for the
 specific networks where UPE is weakest. Be concrete and brutally honest about the weak numbers.
