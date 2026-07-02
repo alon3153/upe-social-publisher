@@ -8,10 +8,13 @@ from publishers import queue, facebook, instagram, linkedin
 from publishers.content import find_image_path, find_image_url
 
 # Anti-flood throttle: a personal LinkedIn PROFILE (Alon's, or an advocate's) must
-# never receive a burst of back-to-back posts in one run — it kills reach and reads
-# as spam (founder-led strategy = spaced, golden-hour posting). Cap how many posts a
-# single personal profile may publish per run; the rest stay 'approved' and go out on
-# the next 2-hourly run. Company pages (English/Spain) are NOT throttled.
+# never receive a burst of posts — it kills reach and reads as spam (founder-led
+# strategy = spaced, golden-hour posting). Two caps guard each personal profile:
+#   * PER_DAY — total posts allowed per UTC day, counted against already-published
+#     rows in the DB so it holds across the day's 2-hourly runs (conservative default 1)
+#   * PER_RUN — extra safety cap within a single run
+# Excess rows stay 'approved' and go out on a later run/day. Company pages unaffected.
+LI_PERSONAL_MAX_PER_DAY = int(os.environ.get("LI_PERSONAL_MAX_PER_DAY", "1"))
 LI_PERSONAL_MAX_PER_RUN = int(os.environ.get("LI_PERSONAL_MAX_PER_RUN", "1"))
 
 
@@ -26,6 +29,25 @@ def _personal_profile_key(r):
             return None
         return acc
     return None
+
+
+def _personal_published_today():
+    """Count today's (UTC) already-published personal-profile posts, keyed by profile.
+    Lets the per-day cap survive across the multiple 2-hourly runs. Fails open (empty)
+    so a transient DB hiccup never blocks publishing — the per-run cap still applies."""
+    counts = {}
+    try:
+        start = datetime.datetime.utcnow().strftime("%Y-%m-%dT00:00:00")
+        rows = queue._req("GET", "post_approvals", params={
+            "select": "account,network", "status": "eq.published",
+            "network": "eq.linkedin", "published_at": f"gte.{start}"})
+        for r in rows:
+            k = _personal_profile_key(r)
+            if k:
+                counts[k] = counts.get(k, 0) + 1
+    except Exception as e:
+        print(f"WARN could not read today's personal-post count (per-day cap degraded): {e}")
+    return counts
 
 
 def publish_row(r):
@@ -67,18 +89,25 @@ def main():
     rows = queue.list_approved_unpublished()  # ordered day.asc -> oldest personal post goes first
     print(f"Approved & unpublished: {len(rows)}")
     ok = 0
-    personal_count = {}   # personal-profile key -> posts published to it this run
+    published_today = _personal_published_today()  # personal key -> already published today (UTC)
+    run_count = {}                                 # personal key -> published to it this run
     deferred = 0
     for r in rows:
         label = f"day{r['day']} {r['network']}/{r['account']}"
         pkey = _personal_profile_key(r)
-        if pkey is not None and personal_count.get(pkey, 0) >= LI_PERSONAL_MAX_PER_RUN:
-            deferred += 1
-            print(f"HOLD {label} -> personal-profile throttle ({LI_PERSONAL_MAX_PER_RUN}/run); stays approved for next run")
-            continue
+        if pkey is not None:
+            day_total = published_today.get(pkey, 0) + run_count.get(pkey, 0)
+            if day_total >= LI_PERSONAL_MAX_PER_DAY:
+                deferred += 1
+                print(f"HOLD {label} -> personal-profile cap ({LI_PERSONAL_MAX_PER_DAY}/day reached); stays approved for a later day")
+                continue
+            if run_count.get(pkey, 0) >= LI_PERSONAL_MAX_PER_RUN:
+                deferred += 1
+                print(f"HOLD {label} -> personal-profile cap ({LI_PERSONAL_MAX_PER_RUN}/run); stays approved for next run")
+                continue
         if dry:
             if pkey is not None:
-                personal_count[pkey] = personal_count.get(pkey, 0) + 1
+                run_count[pkey] = run_count.get(pkey, 0) + 1
             print(f"[DRY] would publish {label}"); continue
         try:
             res = publish_row(r)
@@ -89,7 +118,7 @@ def main():
                        published_at=datetime.datetime.utcnow().isoformat() + "Z",
                        post_id=str(res.get("post_id", "")))
             if pkey is not None:
-                personal_count[pkey] = personal_count.get(pkey, 0) + 1
+                run_count[pkey] = run_count.get(pkey, 0) + 1
             print(f"OK  {label} -> {res.get('post_id')}"); ok += 1
         else:
             queue.mark(r["id"], status="failed", error=str(res.get("error"))[:400])
