@@ -1,58 +1,58 @@
 {
-  "updated_at": "2026-07-01",
+  "updated_at": "2026-07-02",
   "source": "daily-council",
   "directives": [
     {
       "category": "safe_auto",
-      "action": "שינוי קיצוני בפורמט LinkedIn: מעבר לפוסטי טקסט נייטיב עמוקים (800-1,500 תווים) עם שאלות ספציפיות בסוף, ירידה ל-4-5 פוסטים שבועיים ממוקדים",
-      "detail": "אלגוריתם LinkedIn יוני 2026 מעדיף פוסטי טקסט נייטיב על פני כל פורמט אחר (28% reach גבוה יותר), ו-'dwell time' של 15+ שניות נותן 40% בונוס הפצה. יותר פוסטים אינו שווה יותר צמיחה — עקביות 4-5/שבוע עדיפה על 19.",
+      "action": "הפחת LinkedIn מ-24 פוסטים ל-4-5 בשבוע, עם שעות פרסום ג'-ה' 8:00-10:00 שעון ישראל/אירופה",
+      "detail": "אלגוריתם LinkedIn 2026 מתגמל Dwell Time (+40% reach לפוסטים שנקראים 15+ שניות) ו-Saves (+35%); פרסום יתר בלי מעורבות פוגע בחשבון — quality beats quantity לפי עדכון יוני 2026",
       "channel": "linkedin"
     },
     {
       "category": "safe_auto",
-      "action": "פרופילים אישיים של מנהלי UPE (CEO/Creative Director): הנחיית זווית תוכן ו-POV לפוסטים אישיים שמתייגים את עמוד החברה",
-      "detail": "פרופיל אישי ב-LinkedIn מייצר 8x יותר engagement מעמוד חברה; פרסום מהפרופיל האישי עם תיוג UPE ירחיב חשיפה אורגנית בלי עלות.",
+      "action": "הגדר 3 עמודי תוכן LinkedIn ספציפיים: Incentive Travel Insights / Event Production Behind-The-Scenes / ROI של אירועי חברה",
+      "detail": "מחקר LinkedIn 2026 מציג שנייטיב טקסט-פוסטים עם נקודת מבט ייחודית (POV-driven) ופרמיות מעניינות מניבים 28% reach יותר ממצגות PDF — UPE צריכה ״לתבוע שטח מנטלי״ ב-MICE",
       "channel": "linkedin"
     },
     {
       "category": "safe_auto",
-      "action": "Instagram: מיקוד ב-Reels קצרים (15-30 שניות) של רגעי שיא מאירועים — כולל hook ב-3 השניות הראשונות שמכוון ל-'sends per reach'",
-      "detail": "אלגוריתם Instagram 2026 מוביל ב-'sends per reach' (שיתוף ב-DM) ו-saves כסיגנלים הכי חזקים. Reels מייצרים 2x reach לעומת פוסטים סטטיים. תוכן של 'behind the scenes' מאירועי לקוחות מעורר שיתוף.",
-      "channel": "instagram"
+      "action": "הפסק פרסום ב-TikTok עד לגיבוש אסטרטגיה מוגדרת; הסט משאבים ל-Instagram Reels",
+      "detail": "TikTok מדווח Reach (לא Impressions) עם 0 אינטראקציות — ה-ROI שלילי. Instagram Reels מייצרות 2x reach ביחס לתמונות סטטיות בממוצע ב-2026 לפי Socialinsider",
+      "channel": "tiktok"
     },
     {
       "category": "safe_auto",
-      "action": "YouTube: הגדרת 3 עמודי תוכן קבועים ('destination showcase', 'how we build it', 'client story') ושיפור מטא-דאטה (כותרות/תיאורים/פרקים) לכל הסרטים",
-      "detail": "YouTube עם 6,329 חשיפות אבל CTR ואינטראקציות אפסיות — הבעיה היא misalignment בין כותרת לתוכן, ואין מבנה ערוץ עם topical authority. מטא-דאטה חזק + playlists לפי נושא מגדילים distribution.",
-      "channel": "youtube"
+      "action": "קבע מדיניות hashtag LinkedIn: 3-5 תגיות בלבד, שילוב של 1-2 niche (#IncentiveTravel, #CorporateEvents) + 1-2 industry (#EventProduction, #MICE)",
+      "detail": "תגיות עם מיליון+ עוקבים מדללות את התוכן בפיד רווי; LinkedIn 2026 מדגיש relevance על פני volume בתגיות",
+      "channel": "linkedin"
     },
     {
       "category": "safe_auto",
-      "action": "Google Search: בנייה מיידית של דפי נחיתה SEO-ייעודיים לביטויי ה-top opportunities — 'הפקת נופש חברה' (1,184 חשיפות, pos 11.4), 'virtual events' (918, pos 6.9)",
-      "detail": "upe.co.il יורדת דרמטית בקליקים (-69%). דפים ייעודיים לכל keyword cluster עם תוכן E-E-A-T (ניסיון, מומחיות, סמכות) יחזירו CTR. AI Overviews מעניקות +120% קליקים לברנדים שמצוטטים בהן.",
+      "action": "עדכן GSC baseline: הוסף annotation ל-13 במאי 2025 – 27 באפריל 2026 בכל דשבורד שמשתמש ב-Impressions של Google Search Console",
+      "detail": "Google אישרה באפריל 2026 שגיאת logging שניפחה impressions ו-CTR במשך 50 שבועות — ירידת הקליקים הנראית ב-UPE.co.il (281 → 86) חלקה הטעיה מדידה, הקליקים הם הנתון האמין",
       "channel": "google_organic_geo"
     },
     {
       "category": "safe_auto",
-      "action": "הפסקת השקעת תוכן ב-Facebook אורגני; ניתוב משאבים לLinkedIn ו-Instagram; Facebook ישמש רק לרימרקטינג ממומן בעתיד",
-      "detail": "Facebook מדורג ב-0.07% ER חציוני ב-2026 ל-B2B, ו-UPE מקבלת 197 חשיפות מ-12 פוסטים. הפלטפורמה היא pay-to-play לחלוטין לתוכן עסקי — אורגני כמעט מת.",
-      "channel": "facebook"
+      "action": "בנה YouTube Content Clusters: 3-4 סרטונים קצרים (60-90 שנ') מקובצים לפי נושא (יעד, אירוע, טיפ הפקה), מקושרים ב-Playlist ו-End Screens",
+      "detail": "YouTube 2026 מתגמל Session Time — מי שצופה בכמה סרטונים ברצף מעביר לאלגוריתם אות הכי חזק; לחשבון UPE יש 7 פוסטים ו-7,988 impressions אבל 1 אינטראקציה בלבד — בעיית Retention/CTR",
+      "channel": "youtube"
     }
   ],
   "follower_growth_plan": [
-    "שנה 1 — בניית בסיס: הגדלת follower base אורגנית ב-LinkedIn דרך פרופילים אישיים של מנהלים (8x reach מעמוד חברה) + LinkedIn Newsletter עם 500+ מנויים תוך 6 חודשים — target LinkedIn: 2,000 עוקבים חדשים/חודש.",
-    "שנה 1 — YouTube Authority: 4 סרטי 'Event Lab' בחודש; בניית topical authority סביב corporate events + incentive travel; target: 1,000 subscribers עם 50,000 impressions/חודש.",
-    "שנה 1-2 — Instagram Reels Growth Engine: Reels שבועיים בפורמט 'destination drop' + 'behind the scenes build'; שיתוף UGC מאירועי לקוחות (בהסכמה); target: 500 עוקבים חדשים/חודש.",
-    "שנה 2 — Employee Advocacy Program: גיוס 5-8 עובדי UPE לפרסם תוכן אישי מאירועים בשטח; כל עובד עם 300+ חיבורים מכפיל חשיפה אורגנית ב-LinkedIn ללא עלות נוספת.",
-    "שנה 2 — SEO Compound Growth: 20 דפי תוכן SEO בעברית + 10 באנגלית; נוכחות ב-AI Overviews; target: 500+ קליקים שבועיים אורגניים לאתר ב-2027.",
-    "שנה 3 — Influencer x MICE: שיתופי פעולה עם מיקרו-אינפלואנסרים (5K-50K) בתחום HR/corporate travel; אירוע UPE שנתי שמייצר UGC ויראלי; target: הגעה ל-500K cumulative followers על כלל הפלטפורמות."
+    "שלב 1 (חודשים 1-3) — ייסוד סמכות LinkedIn: הפחת לפוסטים 4-5/שבוע בפרופילים אישיים (מנכ\"ל + בכירים), מתמקד ב-3 עמודי תוכן MICE. מדד: Engagement Rate > 3% לפוסט, 50+ followers חדשים/חודש.",
+    "שלב 2 (חודשים 2-4) — Instagram Reels Engine: בנה ספריית Reels של יעדים ואירועים (2-3/שבוע), אחסן UGC מלקוחות לשיתוף מחדש עם רשות. מדד: Reach > 1,000/שבוע ו-Saves/Shares עולים 20%.",
+    "שלב 3 (חודשים 3-6) — YouTube Authority Channel: 1-2 סרטונים/שבוע בסדרות מוגדרות (יעד חודשי, Behind-The-Scenes הפקה, טיפ MICE), עם Playlists ו-End Screens לסשן ארוך. מדד: Watch Time וSubscribers חדשים.",
+    "שלב 4 (חודשים 4-8) — LinkedIn Newsletter + Cross-Promotion: השק Newsletter חדשי, הפנה אליו מכל הערוצים. מדד: 500+ Subscribers ב-6 חודשים, Open Rate > 40%.",
+    "שלב 5 (חודשים 6-12) — אסטרטגיית Collab ו-Employee Network: הרחב Employee Advocacy לצוות בינוני (5-10 עובדים נוספים), שתף פעולה עם speakers/influencers ב-MICE ישראל ואירופה. מדד: Follower velocity x2 לעומת 6 חודשים ראשונים.",
+    "שלב 6 (שנה 2-3) — SEO + GEO Compounding: עם SEO חזק (top-5 ל-5+ ביטויים) ו-AI citations גדל, אורגני Search מזין Followers חדשים. יעד: חשיפה גאוגרפית לשווקים Israel + Spain + DACH; Organic כנקודת ״Day One List\" ב-LLMs עבור MICE."
   ],
   "leads_actions": [
-    "מיפוי מקורות 11 הלידים הקיימים מ-Salesforce: לזהות מאיזה ערוץ/תוכן הגיעו — ולהכפיל השקעה בדיוק שם; ללא מידע זה כל שאר הפעולות הן השערה.",
-    "LinkedIn Thought Leadership → Lead Magnet: כל פוסט של מנהל יסתיים ב-CTA רך ('שלח לי הודעה אם אתה מתכנן אירוע ב-2026') — שיחות DM הן מסלול הלידים הכי חם ב-LinkedIn B2B.",
-    "Google Search: דפי נחיתה ייעודיים לכל keyword transactional עם טופס 'קבל הצעת מחיר ל-[סוג אירוע]' — כל קליק אורגני על ביטוי commercial צריך להגיע לדף שממיר.",
-    "YouTube End Screens + Description CTA: כל סרט יסתיים ב-'רוצים לקבל הצעה לאירוע שלכם?' עם קישור לדף ייעודי — ה-6,329 חשיפות הקיימות לא ממנפות שום conversion כרגע.",
-    "Retargeting LinkedIn: כל מי שהגיב/שמר/ביקר בפרופיל LinkedIn → sequence אישי של DM + InMail; אלו warm leads שכבר יצרו אינטראקציה עם תוכן UPE.",
-    "Case Study Content עם CTA מוטמע: כל case study פומבי (ישראל/ספרד) יסתיים ב-'האירוע הבא שלכם?' + קישור לדף הצעת מחיר — decision-makers מחפשים ראיות חברתיות לפני שהם מתקשרים."
+    "הפעל LinkedIn Message + Comment Nurturing: כל תגובה משמעותית על פוסטים בפרופיל החברה/האישי מקבלת Follow-Up DM ממנהל מכירות תוך 24 שעות — Warm Lead pipeline ישיר ממדיה חברתית.",
+    "בנה 'MICE Budget Calculator' כ-Lead Magnet ב-upe.co.il ו-upe-spain.com: טופס פשוט שמחשב ROI מנופש תמריץ — מייצר Lead Gen Form עם כוונת רכישה גבוהה ומאפשר CRM tracking ב-Salesforce.",
+    "פתח 'Request a Quote' CTA בכל Reel ו-LinkedIn Post: קישור ישיר ל-Landing Page ייעודי, לא לדף הבית. בכל אחד מביטויי SEO-Opportunity הוסף CTA מיידי בעמוד.",
+    "צור Case Study Content ב-LinkedIn: 1 Case Study/חודש בפורמט 'לקוח X עשה Y — התוצאה הייתה Z' עם מספרים אמיתיים — מניע Inbound מ-CMO/HR שמזהים עצמם בסיטואציה.",
+    "הפעל LinkedIn Outreach ממוקד (Gated — ב-approval): רשימת 50 חברות/חודש מ-ICP (חברות 200+ עובדים ישראל ואירופה) + DM אישי מהמנכ\"ל אחרי אינטראקציה אורגנית — Multi-touch sequence שמגדיל Response Rate פי 3.5 לפי נתוני 2026.",
+    "הכנס UTM tracking לכל קישור ב-Social ו-Email: כדי לדעת מאיזה ערוץ מגיעים הלידים האמיתיים ל-Salesforce, בצע Attribution נכון ו-Double Down על מה שעובד בפועל."
   ]
 }
