@@ -281,7 +281,7 @@
       }
     ],
     "created": "2026-06-28",
-    "updated": "2026-07-03",
+    "updated": "2026-07-04",
     "kind": "recommendation",
     "priority": "P0",
     "channel": "linkedin",
@@ -300,7 +300,7 @@
       }
     ],
     "created": "2026-06-28",
-    "updated": "2026-07-03",
+    "updated": "2026-07-04",
     "kind": "recommendation",
     "priority": "P1",
     "channel": "youtube",
@@ -747,7 +747,7 @@
       }
     ],
     "created": "2026-06-30",
-    "updated": "2026-07-03",
+    "updated": "2026-07-04",
     "kind": "recommendation",
     "priority": "P0",
     "channel": "linkedin",
@@ -766,7 +766,7 @@
       }
     ],
     "created": "2026-06-30",
-    "updated": "2026-07-03",
+    "updated": "2026-07-04",
     "kind": "recommendation",
     "priority": "P0",
     "channel": "tiktok",
@@ -785,7 +785,7 @@
       }
     ],
     "created": "2026-06-30",
-    "updated": "2026-07-03",
+    "updated": "2026-07-04",
     "kind": "recommendation",
     "priority": "P0",
     "channel": "linkedin",
@@ -804,7 +804,7 @@
       }
     ],
     "created": "2026-06-30",
-    "updated": "2026-07-03",
+    "updated": "2026-07-04",
     "kind": "recommendation",
     "priority": "P1",
     "channel": "linkedin",
@@ -823,7 +823,7 @@
       }
     ],
     "created": "2026-06-30",
-    "updated": "2026-07-03",
+    "updated": "2026-07-04",
     "kind": "recommendation",
     "priority": "P1",
     "channel": "youtube",
@@ -842,7 +842,7 @@
       }
     ],
     "created": "2026-06-30",
-    "updated": "2026-07-03",
+    "updated": "2026-07-04",
     "kind": "recommendation",
     "priority": "P2",
     "channel": "youtube",
@@ -1087,7 +1087,7 @@
       }
     ],
     "created": "2026-07-01",
-    "updated": "2026-07-03",
+    "updated": "2026-07-04",
     "kind": "recommendation",
     "priority": "P2",
     "channel": "instagram",
@@ -1498,7 +1498,7 @@
   "959658d3": {
     "id": "959658d3",
     "title": "צור 4-6 דפי Landing BOFU חדשים בעברית ב-upe.co.il לכל שירות ליבה: 'הפקת כנס חברה', 'נופש תמריץ לעובדים', 'הפקת אירוע השקת מוצר', 'כנסים בחו\"ל' — כל דף עם CTA ברור, עדויות לקוח, מחיר אינדיקטיבי",
-    "status": "awaiting_approval",
+    "status": "approved",
     "revisions": 1,
     "history": [
       {
@@ -1508,7 +1508,7 @@
       }
     ],
     "created": "2026-07-03",
-    "updated": "2026-07-03",
+    "updated": "2026-07-04",
     "kind": "recommendation",
     "priority": "P0",
     "channel": "google_organic_geo",
@@ -1517,7 +1517,7 @@
   "909d67a6": {
     "id": "909d67a6",
     "title": "הפעל advocacy אישי של מנהלי UPE בלינקדאין: CEO/מנהל הפקה יפרסמו 3x/שבוע מ-פרופיל אישי — סיפורי לקוח, תובנות מאחורי הקלעים, דעות על תעשיית MICE",
-    "status": "awaiting_approval",
+    "status": "archived",
     "revisions": 1,
     "history": [
       {
@@ -1527,7 +1527,7 @@
       }
     ],
     "created": "2026-07-03",
-    "updated": "2026-07-03",
+    "updated": "2026-07-04",
     "kind": "recommendation",
     "priority": "P0",
     "channel": "linkedin",
@@ -1536,7 +1536,7 @@
   "2b03df8d": {
     "id": "2b03df8d",
     "title": "הפק 1 קרוסל B2B בשבוע (PDF 8-12 שקפים) לדף לינקדאין של UPE: נושאים כגון 'כך בחרנו יעד לנופש תמריץ ל-X חברה', 'צ'קליסט הפקת כנס בחו\"ל', '5 מיתוסים על עלות הפקת אירוע'",
-    "status": "awaiting_approval",
+    "status": "archived",
     "revisions": 1,
     "history": [
       {
@@ -1546,7 +1546,7 @@
       }
     ],
     "created": "2026-07-03",
-    "updated": "2026-07-03",
+    "updated": "2026-07-04",
     "kind": "recommendation",
     "priority": "P1",
     "channel": "linkedin",
@@ -1555,7 +1555,7 @@
   "e19eb5d8": {
     "id": "e19eb5d8",
     "title": "בנה newsletter חודשי בלינקדאין בשם 'MICE Insider' — תובנות חודשיות על שוק אירועי B2B, יעדים חמים, מגמות incentive travel 2026; פרסם כל פרק גם כ-article",
-    "status": "awaiting_approval",
+    "status": "archived",
     "revisions": 1,
     "history": [
       {
@@ -1565,7 +1565,7 @@
       }
     ],
     "created": "2026-07-03",
-    "updated": "2026-07-03",
+    "updated": "2026-07-04",
     "kind": "recommendation",
     "priority": "P1",
     "channel": "linkedin",
@@ -1574,7 +1574,7 @@
   "97986e8f": {
     "id": "97986e8f",
     "title": "לאתר upe-spain.com: כתוב 3 דפי שירות חדשים באנגלית עם targeting ל-'incentive travel spain' (עמדה 9.2), 'new hire team building' (עמדה 15.7), 'international product launch event' (עמדה 13.5) — הם כבר בTop20, צריך דחיפה ל-Top10",
-    "status": "awaiting_approval",
+    "status": "archived",
     "revisions": 1,
     "history": [
       {
@@ -1584,7 +1584,7 @@
       }
     ],
     "created": "2026-07-03",
-    "updated": "2026-07-03",
+    "updated": "2026-07-04",
     "kind": "recommendation",
     "priority": "P1",
     "channel": "google_organic_geo",
@@ -1593,7 +1593,7 @@
   "64d56048": {
     "id": "64d56048",
     "title": "הפק 2 סרטוני YouTube/חודש בפורמט 'Event Breakdown': מבט מאחורי הקלעים על הפקה ספציפית שהושלמה — תקציב, אתגרים, תוצאות; עם כתוביות עברית ואנגלית",
-    "status": "awaiting_approval",
+    "status": "archived",
     "revisions": 1,
     "history": [
       {
@@ -1603,7 +1603,7 @@
       }
     ],
     "created": "2026-07-03",
-    "updated": "2026-07-03",
+    "updated": "2026-07-04",
     "kind": "recommendation",
     "priority": "P2",
     "channel": "youtube",
@@ -1612,11 +1612,11 @@
   "7a8c5970": {
     "id": "7a8c5970",
     "title": "כפל השקעה ב-SEO עברית BOFU: צור דפי שירות ייעודיים ל-'הפקת נופש חברה' (1,184 impressions, עמדה 11.4) ו-'הפקות אירועים לחברות' (392 impressions, עמדה 11.0) — אלה הביטויים הקרובים ביותר לTop10 עם נפח חיפוש משמעותי",
-    "status": "todo",
+    "status": "archived",
     "revisions": 0,
     "history": [],
     "created": "2026-07-03",
-    "updated": "2026-07-03",
+    "updated": "2026-07-04",
     "kind": "leads_action",
     "priority": "leads",
     "channel": "leads"
@@ -1624,11 +1624,11 @@
   "f3284c41": {
     "id": "f3284c41",
     "title": "שפר CTR של upe.co.il: כתוב meta titles ו-descriptions שמדגישים USP ('130+ יעדים', 'הפקה מלאה', 'ניסיון גלובלי') — כל 1% שיפור ב-CTR מ-30,901 impressions = ~309 קליקים נוספים/חודש",
-    "status": "todo",
+    "status": "archived",
     "revisions": 0,
     "history": [],
     "created": "2026-07-03",
-    "updated": "2026-07-03",
+    "updated": "2026-07-04",
     "kind": "leads_action",
     "priority": "leads",
     "channel": "leads"
@@ -1636,11 +1636,11 @@
   "7f2ce54e": {
     "id": "7f2ce54e",
     "title": "הוסף Schema markup (LocalBusiness + Event) לדפי שירות ב-upe.co.il ו-upe-spain.com — מגדיל CTR בRich Snippets ומשפר GEO citation rate מ-28.6% הנוכחי",
-    "status": "todo",
+    "status": "archived",
     "revisions": 0,
     "history": [],
     "created": "2026-07-03",
-    "updated": "2026-07-03",
+    "updated": "2026-07-04",
     "kind": "leads_action",
     "priority": "leads",
     "channel": "leads"
@@ -1648,11 +1648,11 @@
   "8bde2d68": {
     "id": "8bde2d68",
     "title": "בנה דפי השוואה: 'UPE לעומת מתחרים' ו-'מדוע להעדיף חברת הפקה על DMC מקומי' — תוכן BOFU שמושך מחפשים בשלב החלטה; מתחרים pinchevents/arbelpro כבר שם, UPE צריכה להיות שם",
-    "status": "todo",
+    "status": "archived",
     "revisions": 0,
     "history": [],
     "created": "2026-07-03",
-    "updated": "2026-07-03",
+    "updated": "2026-07-04",
     "kind": "leads_action",
     "priority": "leads",
     "channel": "leads"
@@ -1660,11 +1660,11 @@
   "9bb22882": {
     "id": "9bb22882",
     "title": "הוסף CTA חזק בכל נכס דיגיטלי (YouTube descriptions, LinkedIn bio, Instagram bio) לדף יצירת קשר ספציפי עם הצעת ערך ברורה: 'קבל הצעת מחיר ל-[סוג אירוע] תוך 24 שעות' — כל Web lead מתחיל בנגיעה דיגיטלית כלשהי",
-    "status": "todo",
+    "status": "archived",
     "revisions": 0,
     "history": [],
     "created": "2026-07-03",
-    "updated": "2026-07-03",
+    "updated": "2026-07-04",
     "kind": "leads_action",
     "priority": "leads",
     "channel": "leads"
@@ -1672,11 +1672,11 @@
   "fcdf6efc": {
     "id": "fcdf6efc",
     "title": "uepe-spain.com: כתוב case study אחד מלא באנגלית של אירוע בספרד עם ROI מוכח — זהו הנכס שיכול להופיע ב-AI Overviews ובGEO ולהביא לידים אירופאיים חדשים שלא מגיעים כיום",
-    "status": "todo",
+    "status": "archived",
     "revisions": 0,
     "history": [],
     "created": "2026-07-03",
-    "updated": "2026-07-03",
+    "updated": "2026-07-04",
     "kind": "leads_action",
     "priority": "leads",
     "channel": "leads"
@@ -1684,11 +1684,11 @@
   "ab7cb484": {
     "id": "ab7cb484",
     "title": "שנה 1 (בסיס): הפעל advocacy מנהלים בלינקדאין (3 אנשי מפתח × 3 פוסטים/שבוע = 36 פוסטים/חודש ממותגי אנשים); צפי: ×5-×15 בengagement, +500-1,000 followers/חודש אורגני לדף החברה עצמו",
-    "status": "todo",
+    "status": "archived",
     "revisions": 0,
     "history": [],
     "created": "2026-07-03",
-    "updated": "2026-07-03",
+    "updated": "2026-07-04",
     "kind": "follower_plan",
     "priority": "follower",
     "channel": "growth"
@@ -1696,11 +1696,11 @@
   "778a5679": {
     "id": "778a5679",
     "title": "שנה 1 (תוכן): בנה library של 12 קרוסל LinkedIn + 24 סרטוני YouTube ב-12 חודשים; כל נכס מניב long-tail impressions ומושך followers חדשים מחוץ לרשת הקיימת",
-    "status": "todo",
+    "status": "archived",
     "revisions": 0,
     "history": [],
     "created": "2026-07-03",
-    "updated": "2026-07-03",
+    "updated": "2026-07-04",
     "kind": "follower_plan",
     "priority": "follower",
     "channel": "growth"
@@ -1708,11 +1708,11 @@
   "848de538": {
     "id": "848de538",
     "title": "שנה 1-2 (SEO→Social): כל דף BOFU שעולה ל-Top5 מביא organic traffic שחלקו מבקר את הלינקדאין — פרסם CTA ב-footer של כל דף אתר לעקוב אחרי עמוד לינקדאין UPE",
-    "status": "todo",
+    "status": "archived",
     "revisions": 0,
     "history": [],
     "created": "2026-07-03",
-    "updated": "2026-07-03",
+    "updated": "2026-07-04",
     "kind": "follower_plan",
     "priority": "follower",
     "channel": "growth"
@@ -1720,11 +1720,11 @@
   "d5dd298d": {
     "id": "d5dd298d",
     "title": "שנה 2 (Instagram): בנה brand identity חזותי עקבי סביב destinations + behind-the-scenes; כל פרויקט מניב 5-8 reels קצרים; target Instagram Reels לקהל מנהלי HR/מרקטינג בישראל וספרד",
-    "status": "todo",
+    "status": "archived",
     "revisions": 0,
     "history": [],
     "created": "2026-07-03",
-    "updated": "2026-07-03",
+    "updated": "2026-07-04",
     "kind": "follower_plan",
     "priority": "follower",
     "channel": "growth"
@@ -1732,11 +1732,11 @@
   "33dbaea2": {
     "id": "33dbaea2",
     "title": "שנה 2-3 (Collaborations): שתף פעולה עם influencers ו-thought leaders בתחום MICE בישראל ואירופה — takeovers, co-posts, interviews; כל שיתוף פעולה מביא חשיפה לרשתות קיימות חדשות",
-    "status": "todo",
+    "status": "archived",
     "revisions": 0,
     "history": [],
     "created": "2026-07-03",
-    "updated": "2026-07-03",
+    "updated": "2026-07-04",
     "kind": "follower_plan",
     "priority": "follower",
     "channel": "growth"
@@ -1744,11 +1744,257 @@
   "ad218684": {
     "id": "ad218684",
     "title": "שנה 3 (Scale): כשbase מגיע ל-10K+ followers ב-LinkedIn ו-YouTube, ה-algorithm מתחיל להפיץ תוכן ל-'broader network' — בשלב זה engagement compounding מאיץ צמיחה ל-500K horizon",
-    "status": "todo",
+    "status": "archived",
     "revisions": 0,
     "history": [],
     "created": "2026-07-03",
-    "updated": "2026-07-03",
+    "updated": "2026-07-04",
+    "kind": "follower_plan",
+    "priority": "follower",
+    "channel": "growth"
+  },
+  "03c5c41c": {
+    "id": "03c5c41c",
+    "title": "הפעלת thought leadership אישי דרך פרופילי מנהלי UPE (CEO/Creative Director) ב-LinkedIn — לא רק דף חברה",
+    "status": "awaiting_approval",
+    "revisions": 1,
+    "history": [
+      {
+        "date": "2026-07-04",
+        "summary": "הופק playbook מלא של thought leadership אישי ב-LinkedIn עבור CEO וCreative Director של UPE, כולל 6 טיוטות פוסטים מוכנות לפרסום (עברית + אנגלית), 4 עמודי תוכן, לוח שבועי, 40 רעיונות לתוכן, פרוטוקול engagement ו-KPIs — מבוסס על נתוני 2026.",
+        "ready": true
+      }
+    ],
+    "created": "2026-07-04",
+    "updated": "2026-07-04",
+    "kind": "recommendation",
+    "priority": "P0",
+    "channel": "linkedin",
+    "expected_impact": "פרופיל אישי מניב פי 8 engagement מדף חברה (Socialinsider 2026); אם מנהל ממוצע יפרסם 3 פוסטים שבועיים על behind-the-scenes של אירועים ונופשי תמריץ — ניתן לצפות ל-3-5% engagement ולחשיפה אורגנית של אלפי דציזיון-מייקרים בישראל ובאירופה."
+  },
+  "9e58b630": {
+    "id": "9e58b630",
+    "title": "כתיבה ופרסום של 3 דפי שירות מסחריים חדשים בעברית ב-upe.co.il על המונחים: 'הפקת נופש חברה', 'הפקות אירועים לחברות', 'ארגון טיולים לחברות'",
+    "status": "awaiting_approval",
+    "revisions": 1,
+    "history": [
+      {
+        "date": "2026-07-04",
+        "summary": "נוצרו 3 דפי שירות מסחריים מלאים בעברית עבור upe.co.il על המונחים 'הפקת נופש חברה', 'הפקות אירועים לחברות' ו'ארגון טיולים לחברות' — כולל Meta Title, Meta Description, H1, מבנה תוכן מלא, FAQ, CTA ולינקים פנימיים, מוכנים לאישור ולהעלאה.",
+        "ready": true
+      }
+    ],
+    "created": "2026-07-04",
+    "updated": "2026-07-04",
+    "kind": "recommendation",
+    "priority": "P0",
+    "channel": "google_organic_geo",
+    "expected_impact": "כל 3 המונחים בעמדות 10-12 עם מאות חשיפות חודשיות — שיפור ל-Top 5 עשוי לשלש CTR ולהוסיף 3-5 לידים/חודש מהערוץ שכבר מביא 100% מהלידים הקיימים."
+  },
+  "48360d40": {
+    "id": "48360d40",
+    "title": "יצירת LinkedIn Newsletter חודשי בעברית ובאנגלית: 'The MICE Insider — מה שמנהלי אירועים צריכים לדעת'",
+    "status": "awaiting_approval",
+    "revisions": 1,
+    "history": [
+      {
+        "date": "2026-07-04",
+        "summary": "הכנתי ערכת השקה מלאה ומוכנה לאישור עבור ה-LinkedIn Newsletter החודשי של UPE — כולל גיליון פותח בעברית ואנגלית, לוח תוכן שנתי ל-12 חודשים, פוסטי השקה בשתי שפות, אסטרטגיית גיוס 500 מנויים ב-3 חודשים, checklist טכני, ו-KPIs מדידים לכל רבעון.",
+        "ready": true
+      }
+    ],
+    "created": "2026-07-04",
+    "updated": "2026-07-04",
+    "kind": "recommendation",
+    "priority": "P1",
+    "channel": "linkedin",
+    "expected_impact": "LinkedIn Newsletter שולח push notifications לכל המנויים — open rate של 40-60% לעומת 20-25% לאימייל (Socialinsider 2026); צבירת 500+ מנויים תוך 3 חודשים תיצור ערוץ owned-media לדציזיון-מייקרים ותזרז pipeline."
+  },
+  "6bac20a3": {
+    "id": "6bac20a3",
+    "title": "בניית 4 דפי שירות ייעודיים באנגלית ב-upe-spain.com על: 'incentive travel spain', 'international product launch event', 'new hire team building', 'corporate events barcelona'",
+    "status": "awaiting_approval",
+    "revisions": 1,
+    "history": [
+      {
+        "date": "2026-07-04",
+        "summary": "נוצרו 4 דפי שירות מלאים באנגלית עבור upe-spain.com — כולל H1, meta title+description, תוכן גוף מלא, טבלת מיפוי מילות מפתח, לינקים פנימיים בין הדפים, ו-JSON-LD Schema לכל דף — מוכנים לאישור ולהטמעה ב-CMS.",
+        "ready": true
+      }
+    ],
+    "created": "2026-07-04",
+    "updated": "2026-07-04",
+    "kind": "recommendation",
+    "priority": "P1",
+    "channel": "google_organic_geo",
+    "expected_impact": "upe-spain.com כרגע אינו מופיע על אף אחד מהמונחים התחרותיים האירופאיים; כל 4 המונחים בעמדה 13-16 — כניסה לטופ-10 פותחת שוק אירופאי חדש שמהווה הזדמנות לידים נוספת מחוץ לישראל."
+  },
+  "e9b319db": {
+    "id": "e9b319db",
+    "title": "הפקת 2 סרטוני YouTube חודשיים: case study של אירוע/נופש תמריץ שהושלם — פורמט 3-5 דקות עם כתוביות",
+    "status": "awaiting_approval",
+    "revisions": 1,
+    "history": [
+      {
+        "date": "2026-07-04",
+        "summary": "הופקה מסגרת YouTube מלאה הכוללת שני סקריפטים מוכנים להפקה עם כותרות מאופטמות (HE+EN), תיאורים ב-300+ מילים, timestamps, CTAs, הנחיות הפקה וטבלת תכנון ל-4-6 סרטונים חודשיים — הכל מבוסס best practices 2026.",
+        "ready": true
+      }
+    ],
+    "created": "2026-07-04",
+    "updated": "2026-07-04",
+    "kind": "recommendation",
+    "priority": "P1",
+    "channel": "youtube",
+    "expected_impact": "YouTube כבר מספק 21,349 מתוך 24,095 החשיפות הכוללות (88%); הגדלה ל-4-6 סרטונים/חודש תכפיל את החשיפות בערוץ הגדול ביותר, ותשמש גם כתוכן ל-LinkedIn וכ-social proof בדפי הנחיתה."
+  },
+  "890d88e0": {
+    "id": "890d88e0",
+    "title": "ריענון מלא של דפי ה-Google Business Profile עבור UPE ישראל וספרד — תמונות, שירותים, FAQ, ביקורות לקוחות",
+    "status": "awaiting_approval",
+    "revisions": 1,
+    "history": [
+      {
+        "date": "2026-07-04",
+        "summary": "הופק דרפט מלא וממוכן לאישור לריענון Google Business Profile של UPE בישראל ובספרד — כולל תיאורי עסק, 10 שירותים מוזנים, 10 שאלות Q&A לכל פרופיל (עברית/ספרדית/אנגלית), מפרט תמונות מפורט, לוח פוסטים 8-שבועות, תבניות ביקורות ותגובות, Schema JSON-LD מוכן להדבקה ו-KPIs למדידה — הכל מבוסס על best practices GBP 2026 עם דגש על GEO/AI Overviews.",
+        "ready": true
+      }
+    ],
+    "created": "2026-07-04",
+    "updated": "2026-07-04",
+    "kind": "recommendation",
+    "priority": "P2",
+    "channel": "google_organic_geo",
+    "expected_impact": "GEO citation rate עומד על 28.6% בלבד (2/7 מיקומים); אופטימיזציית GBP מלאה עשויה לשפר נוכחות ב-AI Overviews ובחיפוש מקומי ולהגדיל CTR על שאילתות 'הפקת אירועים [עיר]' ו-'corporate events [city]'."
+  },
+  "95aaf035": {
+    "id": "95aaf035",
+    "title": "פעולה 1 — IMMEDIATE: להפנות 80% ממאמץ הכתיבה לתוכן SEO מסחרי בעברית ב-upe.co.il; כל ליד חדש ב-30 הימים האחרונים הגיע מ-Web בלבד — להכפיל את ההשקעה בערוץ הממיר היחיד.",
+    "status": "todo",
+    "revisions": 0,
+    "history": [],
+    "created": "2026-07-04",
+    "updated": "2026-07-04",
+    "kind": "leads_action",
+    "priority": "leads",
+    "channel": "leads"
+  },
+  "2aeafab9": {
+    "id": "2aeafab9",
+    "title": "פעולה 2 — שבוע 1: לפרסם דפי נחיתה ייעודיים ל-'הפקת נופש חברה' ו-'הפקות אירועים לחברות' עם CTA ברור (טופס ייעוץ/שיחה), לאחר אישור — אלה הם שני המונחים עם הכי הרבה impressions וה-CTR הנמוך ביותר.",
+    "status": "todo",
+    "revisions": 0,
+    "history": [],
+    "created": "2026-07-04",
+    "updated": "2026-07-04",
+    "kind": "leads_action",
+    "priority": "leads",
+    "channel": "leads"
+  },
+  "f67b456c": {
+    "id": "f67b456c",
+    "title": "פעולה 3 — חודש 1: להטמיע Event Schema ו-LocalBusiness Schema על כל דפי השירות ב-upe.co.il כדי לשפר נוכחות ב-AI Overviews ו-Rich Snippets שיגדילו CTR אורגני ללא צורך בדירוג גבוה יותר.",
+    "status": "todo",
+    "revisions": 0,
+    "history": [],
+    "created": "2026-07-04",
+    "updated": "2026-07-04",
+    "kind": "leads_action",
+    "priority": "leads",
+    "channel": "leads"
+  },
+  "1928a44c": {
+    "id": "1928a44c",
+    "title": "פעולה 4 — חודש 1-2: לבנות 'Lead Magnet' קצר בעברית — מדריך PDF '5 שאלות שחייבים לשאול לפני שבוחרים חברת הפקה' — להפיץ ב-LinkedIn (document post) ולהוסיף ל-blog post SEO; מייצר leads qualified גבוהים.",
+    "status": "todo",
+    "revisions": 0,
+    "history": [],
+    "created": "2026-07-04",
+    "updated": "2026-07-04",
+    "kind": "leads_action",
+    "priority": "leads",
+    "channel": "leads"
+  },
+  "9a3d42e2": {
+    "id": "9a3d42e2",
+    "title": "פעולה 5 — חודש 2: לתעד ב-Salesforce את מקור כל ליד בדיוק רב יותר (איזה דף נחיתה, איזה keyword) כדי לדעת אילו תכנים SEO ממירים — ולהכפיל רק אותם; כרגע כל 11 הלידים 'Web' בלי פירוט.",
+    "status": "todo",
+    "revisions": 0,
+    "history": [],
+    "created": "2026-07-04",
+    "updated": "2026-07-04",
+    "kind": "leads_action",
+    "priority": "leads",
+    "channel": "leads"
+  },
+  "150bd35a": {
+    "id": "150bd35a",
+    "title": "פעולה 6 — חודש 2-3: הפעלת LinkedIn Newsletter לדציזיון-מייקרים (CMO/HR/CEO) עם תוכן 'MICE ROI' מוכח; open rate של 40-60% ב-Newsletter לעומת 20-25% באימייל הופך אותו לערוץ nurturing יעיל ביותר בדרך ל-15+ לידים/חודש.",
+    "status": "todo",
+    "revisions": 0,
+    "history": [],
+    "created": "2026-07-04",
+    "updated": "2026-07-04",
+    "kind": "leads_action",
+    "priority": "leads",
+    "channel": "leads"
+  },
+  "08d1cbeb": {
+    "id": "08d1cbeb",
+    "title": "שלב 1 (חודשים 1-3): הפעלת thought leadership אישי — לפחות 2 מנהלים מ-UPE מתחילים לפרסם 3x/שבוע מפרופיל אישי ב-LinkedIn; מטרה: הכפלת followers של דף החברה ל-2,000+ וכניסת 500+ מנויים ל-Newsletter.",
+    "status": "todo",
+    "revisions": 0,
+    "history": [],
+    "created": "2026-07-04",
+    "updated": "2026-07-04",
+    "kind": "follower_plan",
+    "priority": "follower",
+    "channel": "growth"
+  },
+  "79877e76": {
+    "id": "79877e76",
+    "title": "שלב 2 (חודשים 3-6): בניית authority בנישה — פרסום 1 case study מפורט לחודש (carousel LinkedIn + YouTube video + blog post SEO); מטרה: 5,000 followers LinkedIn, 50,000 YouTube impressions/חודש.",
+    "status": "todo",
+    "revisions": 0,
+    "history": [],
+    "created": "2026-07-04",
+    "updated": "2026-07-04",
+    "kind": "follower_plan",
+    "priority": "follower",
+    "channel": "growth"
+  },
+  "dc6eec59": {
+    "id": "dc6eec59",
+    "title": "שלב 3 (חודשים 6-12): הרחבה אירופאית — פרסום תוכן באנגלית ובספרדית על upe-spain.com ו-LinkedIn, מיקוד ב-MICE buyers בצרפת/גרמניה/ספרד; מטרה: 10,000 LinkedIn followers, כניסה ל-Top 5 על 3 מונחים ספרדיים.",
+    "status": "todo",
+    "revisions": 0,
+    "history": [],
+    "created": "2026-07-04",
+    "updated": "2026-07-04",
+    "kind": "follower_plan",
+    "priority": "follower",
+    "channel": "growth"
+  },
+  "00d9a84d": {
+    "id": "00d9a84d",
+    "title": "שלב 4 (שנה 2): סקייל דרך employee advocacy — כל צוות UPE (10+ אנשים) מפרסם תוכן שבועי מפרופיל אישי; לפי נתוני 2026 חברות עם employee advocacy רואות 89% יותר engagement מדף חברה בלבד.",
+    "status": "todo",
+    "revisions": 0,
+    "history": [],
+    "created": "2026-07-04",
+    "updated": "2026-07-04",
+    "kind": "follower_plan",
+    "priority": "follower",
+    "channel": "growth"
+  },
+  "fffc0a1a": {
+    "id": "fffc0a1a",
+    "title": "שלב 5 (שנה 2-3): Instagram Reels + YouTube Shorts — ייצור 4-6 Reels/חודש מאחורי הקלעים של הפקות אמיתיות; Instagram הוא ערוץ הגיוס העתידי של דציזיון-מייקרים צעירים (HR/Event Managers Gen-Z) בדרך ל-500K.",
+    "status": "todo",
+    "revisions": 0,
+    "history": [],
+    "created": "2026-07-04",
+    "updated": "2026-07-04",
     "kind": "follower_plan",
     "priority": "follower",
     "channel": "growth"
