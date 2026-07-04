@@ -1,58 +1,57 @@
 {
-  "updated_at": "2026-07-03",
+  "updated_at": "2026-07-04",
   "source": "daily-council",
   "directives": [
     {
       "category": "safe_auto",
-      "action": "צמצם לינקדאין ל-4-5 פוסטים איכותיים בשבוע (ולא יותר מפוסט אחד ל-12 שעות), תוך רוטציה של פורמטים: טקסט עמוק, קרוסל PDF, וידאו נייטיב, פול",
-      "detail": "אלגוריתם לינקדאין 2026 מתגמל Depth Score ו-dwell time ומעניש volume-chasing; קרוסלים מניבים 6.6–7% engagement לעומת 0.14% הנוכחי; רוטציית פורמטים מגדילה reach ב-27%+ לפי נתוני meet-lea",
+      "action": "הפחתת תדירות LinkedIn מ-24 לפוסט 4-5 פוסטים איכותיים בשבוע בלבד",
+      "detail": "האלגוריתם של LinkedIn 2026 מענישה volume-chasing; מחקרי Socialinsider מראים דימינישינג ריטרן מעבר ל-7-10 פוסטים/שבוע. לייצר לוח תוכן של 4-5 פוסטים שבועיים עם עומק אמיתי במקום 24 פוסטים שטחיים.",
       "channel": "linkedin"
     },
     {
       "category": "safe_auto",
-      "action": "פרסם את כל וידאו לינקדאין כ-native upload ישירות לפלטפורמה (לא קישור YouTube), קצר מ-90 שניות, עם כתוביות",
-      "detail": "וידאו נייטיב ב-לינקדאין מניב 312% יותר impressions מקישור YouTube חיצוני; 80% מהצפיות ב-LinkedIn ללא קול — כתוביות חובה; הפוסט הובא כ-top בYouTube (6,338 חשיפות) אך אין לו reach ב-LinkedIn",
+      "action": "מעבר לפורמט carousel/document posts ב-LinkedIn — מינימום 2 מתוך 4-5 פוסטים שבועיים",
+      "detail": "פורמט document/carousel מניב 7% engagement לפי Socialinsider 2026 — פי 58 מה-0.12% הנוכחי; להמיר case studies ורשימות טיפים לסליידים swipeable, לשים קישורים תמיד בתגובה הראשונה בלבד.",
       "channel": "linkedin"
     },
     {
       "category": "safe_auto",
-      "action": "הגדר 3 עמודי תוכן לכל ערוץ: (1) Behind-the-scenes הפקות, (2) Case study לקוח עם ROI מספרי, (3) טרנדי תעשייה MICE/incentive travel — הפסק לפרסם תוכן קידום מכירות ישיר",
-      "detail": "אלגוריתם LinkedIn 2026 מוריד reach לתוכן פרסומי-בלבד; 'specific lessons, real stories, clear frameworks' — אלה הפורמטים שמרחיבים distribution; topic consistency מגדילה niche authority",
+      "action": "פרסום LinkedIn בשעות 08:00-10:00 בימים ג'-ה' ומענה לתגובות תוך 60 דקות מהפרסום",
+      "detail": "האלגוריתם מעריך כל פוסט ב-60 הדקות הראשונות; מעורבות מהירה מכפילה את ה-reach; ימי שני-שישי בשעות הבוקר הם הפיק לקהל B2B ישראלי ואירופאי.",
       "channel": "linkedin"
     },
     {
       "category": "safe_auto",
-      "action": "קבע תזמון פרסום לינקדאין לימות שלישי-חמישי, שעות 08:00-10:00 (שעון ישראל), ודאג שמישהו מהצוות זמין לענות על תגובות ב-60 הדקות הראשונות",
-      "detail": "90-60 דקות ראשונות הן 'Golden Window' — תגובה מהירה של המפרסם בתגובות מגדילה distribution ב-40%+; לינקדאין שולחת תחילה ל-5-10% מהרשת ומרחיבה רק אם יש אינטראקציה מהירה",
-      "channel": "linkedin"
+      "action": "זיהוי ה-5 מונחי SEO עם הפוטנציאל הגבוה ביותר ובניית דפי נחיתה ייעודיים בעברית",
+      "detail": "\"הפקת נופש חברה\" (pos 11.4, 1,184 impressions) ו-\"הפקות אירועים לחברות\" (pos 11.0, 392 imp) — עמידה בדף ראשון על שניהם עשויה להכפיל CTR. להוסיף schema markup מסוג LocalBusiness ו-Event לכל דפי שירות.",
+      "channel": "google_organic_geo"
     },
     {
       "category": "safe_auto",
-      "action": "עדכן מיידית את מטא-תיאורים וH1/H2 של דפי השירות הראשיים ב-upe.co.il לכלול ביטויי BOFU מתוך top_opportunities: 'הפקת נופש חברה', 'הפקות אירועים לחברות', 'ארגון טיולים לחברות'",
-      "detail": "upe.co.il במיקום ממוצע 33.3 עם 30,901 impressions — אין בעיה בnvisibility, יש בעיה ב-CTR ורלוונטיות דפים; ביטוי 'הפקת נופש חברה' עמדה 11.4 עם 1,184 impressions — שיפור לעמדה 5-8 יכפיל קליקים",
-      "channel": "instagram"
-    },
-    {
-      "category": "safe_auto",
-      "action": "הפסק לחלוטין פרסום TikTok — הפנה את שעות העבודה לחיזוק לינקדאין ו-SEO; אם TikTok נשמר — מינימום 3 סרטונים/שבוע ותוכן ייעודי B2B, לא תוכן מועבר מאינסטגרם",
-      "detail": "TikTok ב-7 ימים: reach 170, 0 אינטראקציות, 0% engagement — ROI שלילי על זמן הצוות; קהל B2B/CMO/HR אינו בTikTok בישראל; משאבים אלה שווים מאוד יותר ב-LinkedIn/SEO",
+      "action": "הפסקת השקעה ב-TikTok עד לבניית אסטרטגיה מוגדרת — להסיט תקציב זמן ל-LinkedIn ו-SEO",
+      "detail": "2 פוסטים, 0 חשיפות, 0 אינטראקציות — TikTok אינו ערוץ B2B/MICE בשל קהל יעד שגוי; זמן הצוות יניב ROI גבוה בהרבה ב-LinkedIn ובכתיבת תוכן SEO בעברית.",
       "channel": "tiktok"
+    },
+    {
+      "category": "safe_auto",
+      "action": "בניית לוח hashtag strategy ל-LinkedIn: מקסימום 3 hashtags, 1-2 נישתיים בלבד (#IncentiveTravel, #EventProduction, #MICE)",
+      "detail": "LinkedIn 2026 מענישה hashtag stuffing; שימוש ב-3 hashtags נישתיים בלבד מגדיל reach; להימנע לחלוטין מ-hashtags בעלי מיליון+ עוקבים שמדללים את התוכן בפיד רווי.",
+      "channel": "linkedin"
     }
   ],
   "follower_growth_plan": [
-    "שנה 1 (בסיס): הפעל advocacy מנהלים בלינקדאין (3 אנשי מפתח × 3 פוסטים/שבוע = 36 פוסטים/חודש ממותגי אנשים); צפי: ×5-×15 בengagement, +500-1,000 followers/חודש אורגני לדף החברה עצמו",
-    "שנה 1 (תוכן): בנה library של 12 קרוסל LinkedIn + 24 סרטוני YouTube ב-12 חודשים; כל נכס מניב long-tail impressions ומושך followers חדשים מחוץ לרשת הקיימת",
-    "שנה 1-2 (SEO→Social): כל דף BOFU שעולה ל-Top5 מביא organic traffic שחלקו מבקר את הלינקדאין — פרסם CTA ב-footer של כל דף אתר לעקוב אחרי עמוד לינקדאין UPE",
-    "שנה 2 (Instagram): בנה brand identity חזותי עקבי סביב destinations + behind-the-scenes; כל פרויקט מניב 5-8 reels קצרים; target Instagram Reels לקהל מנהלי HR/מרקטינג בישראל וספרד",
-    "שנה 2-3 (Collaborations): שתף פעולה עם influencers ו-thought leaders בתחום MICE בישראל ואירופה — takeovers, co-posts, interviews; כל שיתוף פעולה מביא חשיפה לרשתות קיימות חדשות",
-    "שנה 3 (Scale): כשbase מגיע ל-10K+ followers ב-LinkedIn ו-YouTube, ה-algorithm מתחיל להפיץ תוכן ל-'broader network' — בשלב זה engagement compounding מאיץ צמיחה ל-500K horizon"
+    "שלב 1 (חודשים 1-3): הפעלת thought leadership אישי — לפחות 2 מנהלים מ-UPE מתחילים לפרסם 3x/שבוע מפרופיל אישי ב-LinkedIn; מטרה: הכפלת followers של דף החברה ל-2,000+ וכניסת 500+ מנויים ל-Newsletter.",
+    "שלב 2 (חודשים 3-6): בניית authority בנישה — פרסום 1 case study מפורט לחודש (carousel LinkedIn + YouTube video + blog post SEO); מטרה: 5,000 followers LinkedIn, 50,000 YouTube impressions/חודש.",
+    "שלב 3 (חודשים 6-12): הרחבה אירופאית — פרסום תוכן באנגלית ובספרדית על upe-spain.com ו-LinkedIn, מיקוד ב-MICE buyers בצרפת/גרמניה/ספרד; מטרה: 10,000 LinkedIn followers, כניסה ל-Top 5 על 3 מונחים ספרדיים.",
+    "שלב 4 (שנה 2): סקייל דרך employee advocacy — כל צוות UPE (10+ אנשים) מפרסם תוכן שבועי מפרופיל אישי; לפי נתוני 2026 חברות עם employee advocacy רואות 89% יותר engagement מדף חברה בלבד.",
+    "שלב 5 (שנה 2-3): Instagram Reels + YouTube Shorts — ייצור 4-6 Reels/חודש מאחורי הקלעים של הפקות אמיתיות; Instagram הוא ערוץ הגיוס העתידי של דציזיון-מייקרים צעירים (HR/Event Managers Gen-Z) בדרך ל-500K."
   ],
   "leads_actions": [
-    "כפל השקעה ב-SEO עברית BOFU: צור דפי שירות ייעודיים ל-'הפקת נופש חברה' (1,184 impressions, עמדה 11.4) ו-'הפקות אירועים לחברות' (392 impressions, עמדה 11.0) — אלה הביטויים הקרובים ביותר לTop10 עם נפח חיפוש משמעותי",
-    "שפר CTR של upe.co.il: כתוב meta titles ו-descriptions שמדגישים USP ('130+ יעדים', 'הפקה מלאה', 'ניסיון גלובלי') — כל 1% שיפור ב-CTR מ-30,901 impressions = ~309 קליקים נוספים/חודש",
-    "הוסף Schema markup (LocalBusiness + Event) לדפי שירות ב-upe.co.il ו-upe-spain.com — מגדיל CTR בRich Snippets ומשפר GEO citation rate מ-28.6% הנוכחי",
-    "בנה דפי השוואה: 'UPE לעומת מתחרים' ו-'מדוע להעדיף חברת הפקה על DMC מקומי' — תוכן BOFU שמושך מחפשים בשלב החלטה; מתחרים pinchevents/arbelpro כבר שם, UPE צריכה להיות שם",
-    "הוסף CTA חזק בכל נכס דיגיטלי (YouTube descriptions, LinkedIn bio, Instagram bio) לדף יצירת קשר ספציפי עם הצעת ערך ברורה: 'קבל הצעת מחיר ל-[סוג אירוע] תוך 24 שעות' — כל Web lead מתחיל בנגיעה דיגיטלית כלשהי",
-    "uepe-spain.com: כתוב case study אחד מלא באנגלית של אירוע בספרד עם ROI מוכח — זהו הנכס שיכול להופיע ב-AI Overviews ובGEO ולהביא לידים אירופאיים חדשים שלא מגיעים כיום"
+    "פעולה 1 — IMMEDIATE: להפנות 80% ממאמץ הכתיבה לתוכן SEO מסחרי בעברית ב-upe.co.il; כל ליד חדש ב-30 הימים האחרונים הגיע מ-Web בלבד — להכפיל את ההשקעה בערוץ הממיר היחיד.",
+    "פעולה 2 — שבוע 1: לפרסם דפי נחיתה ייעודיים ל-'הפקת נופש חברה' ו-'הפקות אירועים לחברות' עם CTA ברור (טופס ייעוץ/שיחה), לאחר אישור — אלה הם שני המונחים עם הכי הרבה impressions וה-CTR הנמוך ביותר.",
+    "פעולה 3 — חודש 1: להטמיע Event Schema ו-LocalBusiness Schema על כל דפי השירות ב-upe.co.il כדי לשפר נוכחות ב-AI Overviews ו-Rich Snippets שיגדילו CTR אורגני ללא צורך בדירוג גבוה יותר.",
+    "פעולה 4 — חודש 1-2: לבנות 'Lead Magnet' קצר בעברית — מדריך PDF '5 שאלות שחייבים לשאול לפני שבוחרים חברת הפקה' — להפיץ ב-LinkedIn (document post) ולהוסיף ל-blog post SEO; מייצר leads qualified גבוהים.",
+    "פעולה 5 — חודש 2: לתעד ב-Salesforce את מקור כל ליד בדיוק רב יותר (איזה דף נחיתה, איזה keyword) כדי לדעת אילו תכנים SEO ממירים — ולהכפיל רק אותם; כרגע כל 11 הלידים 'Web' בלי פירוט.",
+    "פעולה 6 — חודש 2-3: הפעלת LinkedIn Newsletter לדציזיון-מייקרים (CMO/HR/CEO) עם תוכן 'MICE ROI' מוכח; open rate של 40-60% ב-Newsletter לעומת 20-25% באימייל הופך אותו לערוץ nurturing יעיל ביותר בדרך ל-15+ לידים/חודש."
   ]
 }

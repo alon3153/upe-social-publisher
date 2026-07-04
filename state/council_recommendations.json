@@ -1,72 +1,71 @@
 {
-  "updated_at": "2026-07-03",
+  "updated_at": "2026-07-04",
   "scores": {
     "instagram": 42,
-    "facebook": 30,
-    "tiktok": 8,
+    "facebook": 35,
+    "tiktok": 10,
     "linkedin": 12,
-    "youtube": 35,
-    "google_organic_geo": 38,
-    "overall": 41
+    "youtube": 38,
+    "google_organic_geo": 48,
+    "overall": 36
   },
   "recommendations": [
     {
       "category": "gated",
       "priority": "P0",
-      "action": "צור 4-6 דפי Landing BOFU חדשים בעברית ב-upe.co.il לכל שירות ליבה: 'הפקת כנס חברה', 'נופש תמריץ לעובדים', 'הפקת אירוע השקת מוצר', 'כנסים בחו\"ל' — כל דף עם CTA ברור, עדויות לקוח, מחיר אינדיקטיבי",
-      "expected_impact": "הכפלת קליקים מ-86 ל-150+ בחודש; שיפור שיעור המרה; הגנה על ה-100% Web lead source",
-      "channel": "google_organic_geo"
+      "action": "הפעלת thought leadership אישי דרך פרופילי מנהלי UPE (CEO/Creative Director) ב-LinkedIn — לא רק דף חברה",
+      "expected_impact": "פרופיל אישי מניב פי 8 engagement מדף חברה (Socialinsider 2026); אם מנהל ממוצע יפרסם 3 פוסטים שבועיים על behind-the-scenes של אירועים ונופשי תמריץ — ניתן לצפות ל-3-5% engagement ולחשיפה אורגנית של אלפי דציזיון-מייקרים בישראל ובאירופה.",
+      "channel": "linkedin"
     },
     {
       "category": "gated",
       "priority": "P0",
-      "action": "הפעל advocacy אישי של מנהלי UPE בלינקדאין: CEO/מנהל הפקה יפרסמו 3x/שבוע מ-פרופיל אישי — סיפורי לקוח, תובנות מאחורי הקלעים, דעות על תעשיית MICE",
-      "expected_impact": "פרופילים אישיים מקבלים 8x יותר engagement מדף חברה; engagement rate צפוי לקפוץ מ-0.14% ל-2-4% תוך 60 יום",
-      "channel": "linkedin"
-    },
-    {
-      "category": "gated",
-      "priority": "P1",
-      "action": "הפק 1 קרוסל B2B בשבוע (PDF 8-12 שקפים) לדף לינקדאין של UPE: נושאים כגון 'כך בחרנו יעד לנופש תמריץ ל-X חברה', 'צ'קליסט הפקת כנס בחו\"ל', '5 מיתוסים על עלות הפקת אירוע'",
-      "expected_impact": "קרוסלים מניבים 6.6-7% engagement בממוצע ב-2026 (לעומת 0.14% נוכחי); dwell-time גבוה מאפשר הגעה לקהל חדש שאינו follower",
-      "channel": "linkedin"
-    },
-    {
-      "category": "gated",
-      "priority": "P1",
-      "action": "בנה newsletter חודשי בלינקדאין בשם 'MICE Insider' — תובנות חודשיות על שוק אירועי B2B, יעדים חמים, מגמות incentive travel 2026; פרסם כל פרק גם כ-article",
-      "expected_impact": "Open rate של LinkedIn newsletters עומד על 40-60% לעומת 20-25% אימייל; ייצר captive B2B audience ויגביר brand authority",
-      "channel": "linkedin"
-    },
-    {
-      "category": "gated",
-      "priority": "P1",
-      "action": "לאתר upe-spain.com: כתוב 3 דפי שירות חדשים באנגלית עם targeting ל-'incentive travel spain' (עמדה 9.2), 'new hire team building' (עמדה 15.7), 'international product launch event' (עמדה 13.5) — הם כבר בTop20, צריך דחיפה ל-Top10",
-      "expected_impact": "upe-spain.com בTop10 ל-incentive travel spain = ~87 חיפושים/חודש עם CTR גבוה; פוטנציאל 15-25 קליקים/חודש חדשים ממשתמשי אירופה",
+      "action": "כתיבה ופרסום של 3 דפי שירות מסחריים חדשים בעברית ב-upe.co.il על המונחים: 'הפקת נופש חברה', 'הפקות אירועים לחברות', 'ארגון טיולים לחברות'",
+      "expected_impact": "כל 3 המונחים בעמדות 10-12 עם מאות חשיפות חודשיות — שיפור ל-Top 5 עשוי לשלש CTR ולהוסיף 3-5 לידים/חודש מהערוץ שכבר מביא 100% מהלידים הקיימים.",
       "channel": "google_organic_geo"
     },
     {
       "category": "gated",
-      "priority": "P2",
-      "action": "הפק 2 סרטוני YouTube/חודש בפורמט 'Event Breakdown': מבט מאחורי הקלעים על הפקה ספציפית שהושלמה — תקציב, אתגרים, תוצאות; עם כתוביות עברית ואנגלית",
-      "expected_impact": "YouTube כבר מניב 7,738 חשיפות/שבוע — הפלטפורמה עובדת; סרטוני case study מושכים decision-makers בשלב חקר ספקים ומחזקים SEO דרך חיפושי YouTube",
+      "priority": "P1",
+      "action": "יצירת LinkedIn Newsletter חודשי בעברית ובאנגלית: 'The MICE Insider — מה שמנהלי אירועים צריכים לדעת'",
+      "expected_impact": "LinkedIn Newsletter שולח push notifications לכל המנויים — open rate של 40-60% לעומת 20-25% לאימייל (Socialinsider 2026); צבירת 500+ מנויים תוך 3 חודשים תיצור ערוץ owned-media לדציזיון-מייקרים ותזרז pipeline.",
+      "channel": "linkedin"
+    },
+    {
+      "category": "gated",
+      "priority": "P1",
+      "action": "בניית 4 דפי שירות ייעודיים באנגלית ב-upe-spain.com על: 'incentive travel spain', 'international product launch event', 'new hire team building', 'corporate events barcelona'",
+      "expected_impact": "upe-spain.com כרגע אינו מופיע על אף אחד מהמונחים התחרותיים האירופאיים; כל 4 המונחים בעמדה 13-16 — כניסה לטופ-10 פותחת שוק אירופאי חדש שמהווה הזדמנות לידים נוספת מחוץ לישראל.",
+      "channel": "google_organic_geo"
+    },
+    {
+      "category": "gated",
+      "priority": "P1",
+      "action": "הפקת 2 סרטוני YouTube חודשיים: case study של אירוע/נופש תמריץ שהושלם — פורמט 3-5 דקות עם כתוביות",
+      "expected_impact": "YouTube כבר מספק 21,349 מתוך 24,095 החשיפות הכוללות (88%); הגדלה ל-4-6 סרטונים/חודש תכפיל את החשיפות בערוץ הגדול ביותר, ותשמש גם כתוכן ל-LinkedIn וכ-social proof בדפי הנחיתה.",
       "channel": "youtube"
+    },
+    {
+      "category": "gated",
+      "priority": "P2",
+      "action": "ריענון מלא של דפי ה-Google Business Profile עבור UPE ישראל וספרד — תמונות, שירותים, FAQ, ביקורות לקוחות",
+      "expected_impact": "GEO citation rate עומד על 28.6% בלבד (2/7 מיקומים); אופטימיזציית GBP מלאה עשויה לשפר נוכחות ב-AI Overviews ובחיפוש מקומי ולהגדיל CTR על שאילתות 'הפקת אירועים [עיר]' ו-'corporate events [city]'.",
+      "channel": "google_organic_geo"
     }
   ],
   "follower_growth_plan": [
-    "שנה 1 (בסיס): הפעל advocacy מנהלים בלינקדאין (3 אנשי מפתח × 3 פוסטים/שבוע = 36 פוסטים/חודש ממותגי אנשים); צפי: ×5-×15 בengagement, +500-1,000 followers/חודש אורגני לדף החברה עצמו",
-    "שנה 1 (תוכן): בנה library של 12 קרוסל LinkedIn + 24 סרטוני YouTube ב-12 חודשים; כל נכס מניב long-tail impressions ומושך followers חדשים מחוץ לרשת הקיימת",
-    "שנה 1-2 (SEO→Social): כל דף BOFU שעולה ל-Top5 מביא organic traffic שחלקו מבקר את הלינקדאין — פרסם CTA ב-footer של כל דף אתר לעקוב אחרי עמוד לינקדאין UPE",
-    "שנה 2 (Instagram): בנה brand identity חזותי עקבי סביב destinations + behind-the-scenes; כל פרויקט מניב 5-8 reels קצרים; target Instagram Reels לקהל מנהלי HR/מרקטינג בישראל וספרד",
-    "שנה 2-3 (Collaborations): שתף פעולה עם influencers ו-thought leaders בתחום MICE בישראל ואירופה — takeovers, co-posts, interviews; כל שיתוף פעולה מביא חשיפה לרשתות קיימות חדשות",
-    "שנה 3 (Scale): כשbase מגיע ל-10K+ followers ב-LinkedIn ו-YouTube, ה-algorithm מתחיל להפיץ תוכן ל-'broader network' — בשלב זה engagement compounding מאיץ צמיחה ל-500K horizon"
+    "שלב 1 (חודשים 1-3): הפעלת thought leadership אישי — לפחות 2 מנהלים מ-UPE מתחילים לפרסם 3x/שבוע מפרופיל אישי ב-LinkedIn; מטרה: הכפלת followers של דף החברה ל-2,000+ וכניסת 500+ מנויים ל-Newsletter.",
+    "שלב 2 (חודשים 3-6): בניית authority בנישה — פרסום 1 case study מפורט לחודש (carousel LinkedIn + YouTube video + blog post SEO); מטרה: 5,000 followers LinkedIn, 50,000 YouTube impressions/חודש.",
+    "שלב 3 (חודשים 6-12): הרחבה אירופאית — פרסום תוכן באנגלית ובספרדית על upe-spain.com ו-LinkedIn, מיקוד ב-MICE buyers בצרפת/גרמניה/ספרד; מטרה: 10,000 LinkedIn followers, כניסה ל-Top 5 על 3 מונחים ספרדיים.",
+    "שלב 4 (שנה 2): סקייל דרך employee advocacy — כל צוות UPE (10+ אנשים) מפרסם תוכן שבועי מפרופיל אישי; לפי נתוני 2026 חברות עם employee advocacy רואות 89% יותר engagement מדף חברה בלבד.",
+    "שלב 5 (שנה 2-3): Instagram Reels + YouTube Shorts — ייצור 4-6 Reels/חודש מאחורי הקלעים של הפקות אמיתיות; Instagram הוא ערוץ הגיוס העתידי של דציזיון-מייקרים צעירים (HR/Event Managers Gen-Z) בדרך ל-500K."
   ],
   "leads_actions": [
-    "כפל השקעה ב-SEO עברית BOFU: צור דפי שירות ייעודיים ל-'הפקת נופש חברה' (1,184 impressions, עמדה 11.4) ו-'הפקות אירועים לחברות' (392 impressions, עמדה 11.0) — אלה הביטויים הקרובים ביותר לTop10 עם נפח חיפוש משמעותי",
-    "שפר CTR של upe.co.il: כתוב meta titles ו-descriptions שמדגישים USP ('130+ יעדים', 'הפקה מלאה', 'ניסיון גלובלי') — כל 1% שיפור ב-CTR מ-30,901 impressions = ~309 קליקים נוספים/חודש",
-    "הוסף Schema markup (LocalBusiness + Event) לדפי שירות ב-upe.co.il ו-upe-spain.com — מגדיל CTR בRich Snippets ומשפר GEO citation rate מ-28.6% הנוכחי",
-    "בנה דפי השוואה: 'UPE לעומת מתחרים' ו-'מדוע להעדיף חברת הפקה על DMC מקומי' — תוכן BOFU שמושך מחפשים בשלב החלטה; מתחרים pinchevents/arbelpro כבר שם, UPE צריכה להיות שם",
-    "הוסף CTA חזק בכל נכס דיגיטלי (YouTube descriptions, LinkedIn bio, Instagram bio) לדף יצירת קשר ספציפי עם הצעת ערך ברורה: 'קבל הצעת מחיר ל-[סוג אירוע] תוך 24 שעות' — כל Web lead מתחיל בנגיעה דיגיטלית כלשהי",
-    "uepe-spain.com: כתוב case study אחד מלא באנגלית של אירוע בספרד עם ROI מוכח — זהו הנכס שיכול להופיע ב-AI Overviews ובGEO ולהביא לידים אירופאיים חדשים שלא מגיעים כיום"
+    "פעולה 1 — IMMEDIATE: להפנות 80% ממאמץ הכתיבה לתוכן SEO מסחרי בעברית ב-upe.co.il; כל ליד חדש ב-30 הימים האחרונים הגיע מ-Web בלבד — להכפיל את ההשקעה בערוץ הממיר היחיד.",
+    "פעולה 2 — שבוע 1: לפרסם דפי נחיתה ייעודיים ל-'הפקת נופש חברה' ו-'הפקות אירועים לחברות' עם CTA ברור (טופס ייעוץ/שיחה), לאחר אישור — אלה הם שני המונחים עם הכי הרבה impressions וה-CTR הנמוך ביותר.",
+    "פעולה 3 — חודש 1: להטמיע Event Schema ו-LocalBusiness Schema על כל דפי השירות ב-upe.co.il כדי לשפר נוכחות ב-AI Overviews ו-Rich Snippets שיגדילו CTR אורגני ללא צורך בדירוג גבוה יותר.",
+    "פעולה 4 — חודש 1-2: לבנות 'Lead Magnet' קצר בעברית — מדריך PDF '5 שאלות שחייבים לשאול לפני שבוחרים חברת הפקה' — להפיץ ב-LinkedIn (document post) ולהוסיף ל-blog post SEO; מייצר leads qualified גבוהים.",
+    "פעולה 5 — חודש 2: לתעד ב-Salesforce את מקור כל ליד בדיוק רב יותר (איזה דף נחיתה, איזה keyword) כדי לדעת אילו תכנים SEO ממירים — ולהכפיל רק אותם; כרגע כל 11 הלידים 'Web' בלי פירוט.",
+    "פעולה 6 — חודש 2-3: הפעלת LinkedIn Newsletter לדציזיון-מייקרים (CMO/HR/CEO) עם תוכן 'MICE ROI' מוכח; open rate של 40-60% ב-Newsletter לעומת 20-25% באימייל הופך אותו לערוץ nurturing יעיל ביותר בדרך ל-15+ לידים/חודש."
   ]
 }
