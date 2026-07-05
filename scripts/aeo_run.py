@@ -2,7 +2,8 @@
 import os, sys, json, argparse, datetime
 from pathlib import Path
 
-import aeo_models, aeo_probe, aeo_gaps, aeo_generate, aeo_publish, aeo_report
+import aeo_models, aeo_probe, aeo_gaps, aeo_generate, aeo_guards, aeo_publish, aeo_report
+import citations_pipeline
 
 ROOT = Path(__file__).resolve().parent
 HISTORY = ROOT / "aeo_history.json"
@@ -38,6 +39,22 @@ def run(repo, dry_run, ask_fn=None, judge_fn=None, send_fn=None, runner=None, to
 
     briefs, deferred = aeo_gaps.briefs_with_overflow(scorecard, prev, TARGETS,
                                                      cap=TARGETS.get("briefs_per_run", 3))
+
+    # Citation gate (council decision 05.07): marginal value of another self-published
+    # page is ~0 until third-party corroboration exists. Verify the external pipeline,
+    # and pause on-site generation while verified citations < 3 — the weekly email
+    # carries the approval digest + outreach targets instead.
+    citations_status = ""
+    try:
+        advanced = citations_pipeline.verify()
+        if advanced:
+            failures.append("citations advanced: " + ", ".join(advanced))  # informational
+        citations_status = citations_pipeline.digest_html()
+        if citations_pipeline.verified_count() < 3:
+            briefs, deferred = [], deferred + len(briefs)
+    except FileNotFoundError:
+        pass  # no pipeline state — behave as before
+
     pages = []
     for brief in briefs:
         try:
@@ -49,6 +66,10 @@ def run(repo, dry_run, ask_fn=None, judge_fn=None, send_fn=None, runner=None, to
             if page["violations"]:
                 failures.append(f"guard rejected {page['slug']}: {page['violations']}")
                 continue
+            comp = aeo_guards.names_competitor(page.get("body", ""))
+            if comp:  # founder veto window — never auto-merge competitor-naming pages
+                failures.append(f"held for founder veto (names competitors {comp}): {page['slug']}")
+                continue
             pages.append(page)
 
     astro_repo = repo if dry_run else os.environ.get("ASTRO_REPO", "/Users/alonouanine/dev/uproduction-astro")
@@ -59,7 +80,8 @@ def run(repo, dry_run, ask_fn=None, judge_fn=None, send_fn=None, runner=None, to
         {"branch": None, "files": [], "pr_url": None, "dry_run": dry_run}
 
     shipped = [{"title": p["frontmatter"]["title"], "url": p["frontmatter"]["canonical"]} for p in pages]
-    subject, html = aeo_report.build_email(scorecard, prev, shipped, deferred, failures, publish.get("pr_url"))
+    subject, html = aeo_report.build_email(scorecard, prev, shipped, deferred, failures,
+                                           publish.get("pr_url"), citations_status=citations_status)
     email_sent = False
     if not dry_run or send_fn:
         ok, _ = aeo_report.send(subject, html, send_fn=send_fn)

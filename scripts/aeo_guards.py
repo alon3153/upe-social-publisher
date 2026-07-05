@@ -27,3 +27,17 @@ def check_content(text):
     if _EVENT_YEAR_RE.search(text):
         violations.append("event year adjacency (a year 2011-2024 next to event/case wording)")
     return violations
+
+
+# Pages that name a competitor carry brand/legal risk and get a founder veto
+# window instead of straight auto-merge (council decision 05.07).
+COMPETITOR_NAMES = [
+    "george p. johnson", "jack morton", "freeman", "encore", "uniplan", "mci group",
+    "momentum worldwide", "sparks", "czarnowski", "bcd meetings", "maritz",
+    "ita group", "bi worldwide", "one10", "creative group", "brightspot", "cwt",
+]
+
+
+def names_competitor(text):
+    low = (text or "").lower()
+    return [c for c in COMPETITOR_NAMES if c in low]

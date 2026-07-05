@@ -26,6 +26,8 @@ def test_full_loop_dry_run(tmp_path, monkeypatch):
         sent["subject"] = subject
         return True, "ok"
 
+    # citation gate open (>=3 verified) so generation proceeds in this test
+    monkeypatch.setattr(run_mod.citations_pipeline, "verified_count", lambda data=None: 3)
     out = run_mod.run(str(tmp_path), dry_run=True, ask_fn=ask_fn, judge_fn=judge_fn,
                       send_fn=send_fn, today="2026-06-28")
     assert out["scorecard"]["models"]["claude"]["product_search"] == 30
@@ -66,3 +68,20 @@ def test_main_smoke(monkeypatch, capsys):
                         "deferred": 0, "pages": [], "publish": {"dry_run": True}, "email_sent": False})
     run_mod.main()
     assert "AEO" in capsys.readouterr().out
+
+
+def test_citation_gate_pauses_generation(tmp_path, monkeypatch):
+    monkeypatch.setenv("ANTHROPIC_API_KEY", "x")
+    ask_fn = lambda model, prompt: "Some answer that omits the brand."
+
+    def judge_fn(prompt):
+        return json.dumps({"product_search": 10, "comparison": 0, "reputation": 0,
+                           "competitors": [], "gap_note": "gap"})
+
+    monkeypatch.setattr(run_mod.citations_pipeline, "verified_count", lambda data=None: 0)
+    monkeypatch.setattr(run_mod.citations_pipeline, "verify", lambda: [])
+    monkeypatch.setattr(run_mod.citations_pipeline, "digest_html", lambda: "<h3>digest</h3>")
+    out = run_mod.run(str(tmp_path), dry_run=True, ask_fn=ask_fn, judge_fn=judge_fn,
+                      send_fn=lambda s, h: (True, "ok"), today="2026-07-05")
+    assert out["pages"] == [] and out["briefs"] == []
+    assert out["deferred"] >= 1                     # paused briefs counted as deferred

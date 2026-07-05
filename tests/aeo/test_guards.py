@@ -29,3 +29,9 @@ def test_tenure_since_2010_not_flagged():
     # the real dry-run false-positive: tenure phrasing near "events" must NOT be flagged
     assert gd.check_content("We have produced 1,500+ events since 2010 across 130+ destinations.") == []
     assert gd.check_content("16 שנות ניסיון בהפקת אירועים מאז 2010.") == []
+
+
+def test_names_competitor_detects_and_clean_passes():
+    import scripts.aeo_guards as g
+    assert g.names_competitor("We compared Jack Morton and Freeman.") == ["jack morton", "freeman"]
+    assert g.names_competitor("Uproduction produces global events.") == []

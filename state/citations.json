@@ -1,0 +1,17 @@
+{
+  "updated": "2026-07-05",
+  "note": "External-citation pipeline. States: drafted -> awaiting_founder -> submitted -> live -> verified_cited. The weekly crawler advances submitted->live->verified_cited automatically; awaiting_founder items older than 72h are nagged in the daily email.",
+  "items": [
+    {"id": "press_bizbash", "title": "פיץ' BizBash (טיוטה פתוחה באאוטלוק)", "state": "awaiting_founder", "since": "2026-07-05", "action": "לחץ שלח על הטיוטה באאוטלוק", "target_url": "", "kind": "press"},
+    {"id": "press_eventmarketer", "title": "פיץ' Event Marketer (טיוטה פתוחה באאוטלוק)", "state": "awaiting_founder", "since": "2026-07-05", "action": "לחץ שלח על הטיוטה באאוטלוק", "target_url": "", "kind": "press"},
+    {"id": "press_globes", "title": "פיץ' גלובס/דה-מרקר (טיוטה פתוחה באאוטלוק)", "state": "awaiting_founder", "since": "2026-07-05", "action": "השלם נמען עיתונאי + שלח", "target_url": "", "kind": "press"},
+    {"id": "press_ctech", "title": "פיץ' CTech/NoCamels (טיוטה פתוחה באאוטלוק)", "state": "awaiting_founder", "since": "2026-07-05", "action": "השלם נמען + שלח", "target_url": "", "kind": "press"},
+    {"id": "dir_cvent", "title": "פרופיל ספק Cvent", "state": "awaiting_founder", "since": "2026-07-05", "action": "צור חשבון והגש לפי AEO-GEO/01-cvent-supplier-profile.md", "target_url": "https://www.cvent.com/venues", "kind": "directory"},
+    {"id": "dir_clutch", "title": "פרופיל Clutch", "state": "awaiting_founder", "since": "2026-07-05", "action": "הגש לפי AEO-GEO/03-clutch-g2-profiles.md", "target_url": "https://clutch.co", "kind": "directory"},
+    {"id": "dir_g2", "title": "פרופיל G2", "state": "awaiting_founder", "since": "2026-07-05", "action": "הגש לפי AEO-GEO/03-clutch-g2-profiles.md", "target_url": "https://www.g2.com", "kind": "directory"},
+    {"id": "dir_icca_mpi_hb", "title": "מדריכי ICCA / IAPCO / MPI / HelmsBriscoe", "state": "awaiting_founder", "since": "2026-07-05", "action": "הגש לפי AEO-GEO/05-icca-iapco-mpi-helmsbriscoe-directories.md", "target_url": "", "kind": "directory"},
+    {"id": "entity_crunchbase", "title": "פרופיל Crunchbase", "state": "awaiting_founder", "since": "2026-07-05", "action": "צור פרופיל חברה עם העובדות הקנוניות", "target_url": "https://www.crunchbase.com", "kind": "entity"},
+    {"id": "entity_wikidata", "title": "ישות Wikidata + sameAs", "state": "drafted", "since": "2026-07-05", "action": "ממתין לציטוט עיתונאי ראשון (notability), אז יצירה לפי AEO-GEO/02-wikidata-entry.md", "target_url": "https://www.wikidata.org", "kind": "entity"},
+    {"id": "li_articles", "title": "2 מאמרי LinkedIn (טיוטות קיימות)", "state": "awaiting_founder", "since": "2026-07-05", "action": "אשר פרסום מתיקיית AEO-GEO/linkedin", "target_url": "", "kind": "content"}
+  ]
+}
