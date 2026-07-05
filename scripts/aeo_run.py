@@ -4,6 +4,7 @@ from pathlib import Path
 
 import aeo_models, aeo_probe, aeo_gaps, aeo_generate, aeo_guards, aeo_publish, aeo_report
 import citations_pipeline
+import indexnow_ping
 
 ROOT = Path(__file__).resolve().parent
 HISTORY = ROOT / "aeo_history.json"
@@ -80,6 +81,11 @@ def run(repo, dry_run, ask_fn=None, judge_fn=None, send_fn=None, runner=None, to
         {"branch": None, "files": [], "pr_url": None, "dry_run": dry_run}
 
     shipped = [{"title": p["frontmatter"]["title"], "url": p["frontmatter"]["canonical"]} for p in pages]
+    if shipped and not dry_run:
+        try:  # pages auto-merge+deploy within minutes; IndexNow tolerates the lag
+            indexnow_ping.ping([s["url"] for s in shipped])
+        except Exception as e:
+            failures.append(f"indexnow ping failed ({type(e).__name__})")
     subject, html = aeo_report.build_email(scorecard, prev, shipped, deferred, failures,
                                            publish.get("pr_url"), citations_status=citations_status)
     email_sent = False
