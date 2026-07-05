@@ -94,3 +94,42 @@ def test_gemini_joins_multiple_parts(monkeypatch):
         return json.dumps({"candidates": [{"content": {"parts": [{"text": "a "}, {"text": "b"}]}}]})
 
     assert m.ask("gemini", "hi", _http=fake_http) == "a b"
+
+
+def test_ask_meta_claude_extracts_citations(monkeypatch):
+    import json
+    m = load(monkeypatch, {"ANTHROPIC_API_KEY": "x"})
+
+    def fake_http(url, data, headers):
+        return json.dumps({"content": [
+            {"type": "web_search_tool_result", "content": [{"url": "https://bizbash.com/a"}]},
+            {"type": "text", "text": "answer", "citations": [{"url": "https://cvent.com/b"}]}]})
+
+    out = m.ask_meta("claude", "hi", _http=fake_http, grounded=True)
+    assert out["text"] == "answer"
+    assert set(out["citations"]) == {"https://bizbash.com/a", "https://cvent.com/b"}
+
+
+def test_ask_meta_chatgpt_extracts_annotations(monkeypatch):
+    import json
+    m = load(monkeypatch, {"OPENAI_API_KEY": "y"})
+
+    def fake_http(url, data, headers):
+        return json.dumps({"choices": [{"message": {"content": "answer", "annotations": [
+            {"type": "url_citation", "url_citation": {"url": "https://eventmarketer.com/t"}}]}}]})
+
+    out = m.ask_meta("chatgpt", "hi", _http=fake_http, grounded=True)
+    assert out["citations"] == ["https://eventmarketer.com/t"]
+
+
+def test_ask_meta_gemini_extracts_grounding_chunks(monkeypatch):
+    import json
+    m = load(monkeypatch, {"GEMINI_API_KEY": "z"})
+
+    def fake_http(url, data, headers):
+        return json.dumps({"candidates": [{"content": {"parts": [{"text": "answer"}]},
+                                           "groundingMetadata": {"groundingChunks": [
+                                               {"web": {"uri": "https://clutch.co/x"}}]}}]})
+
+    out = m.ask_meta("gemini", "hi", _http=fake_http, grounded=True)
+    assert out["citations"] == ["https://clutch.co/x"]

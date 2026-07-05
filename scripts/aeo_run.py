@@ -24,7 +24,7 @@ def run(repo, dry_run, ask_fn=None, judge_fn=None, send_fn=None, runner=None, to
     # Probes ask with live web search (AEO_GROUNDED=0 reverts to training-data recall);
     # generation and judging stay ungrounded.
     grounded = os.environ.get("AEO_GROUNDED", "1") != "0"
-    probe_fn = probe_fn or ask_fn or (lambda model, text: aeo_models.ask(model, text, grounded=grounded))
+    probe_fn = probe_fn or ask_fn or (lambda model, text: aeo_models.ask_meta(model, text, grounded=grounded))
     ask_fn = ask_fn or (lambda model, text: aeo_models.ask(model, text))
     judge_fn = judge_fn or (lambda prompt: aeo_models.ask("claude", prompt, system=aeo_probe.JUDGE_SYSTEM))
     models = aeo_models.available_models() or ["claude"]

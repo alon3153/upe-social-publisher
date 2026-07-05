@@ -110,3 +110,32 @@ def test_run_probe_isolates_flaky_question():
     assert len(out["models"]["claude"]["answers"]) == 2
     assert any("claude/q2" in e for e in out["errors"])
     assert out["models"]["claude"]["product_search"] == 50
+
+
+def test_run_probe_binary_mention_metrics_and_citations():
+    import scripts.aeo_probe as probe
+
+    def ask(model, text):
+        if "best" in text:
+            return {"text": "Top firms include Uproduction Events (upe.co.il).",
+                    "citations": ["https://upe.co.il/en/x/", "https://bizbash.com/list"]}
+        return {"text": "GPJ and Freeman lead.", "citations": ["https://eventmarketer.com/top"]}
+
+    judge = lambda p: '{"product_search":10,"comparison":0,"reputation":0,"competitors":[],"gap_note":""}'
+    questions = [{"id": "q1", "dimension": "product_search", "text": "best companies?"},
+                 {"id": "q2", "dimension": "product_search", "text": "other question"}]
+    out = probe.run_probe(questions, ["claude"], ask, judge)
+    m = out["models"]["claude"]
+    assert m["mention_rate"] == 50 and m["citation_rate"] == 50
+    a1 = m["answers"][0]
+    assert a1["upe_mentioned"] and a1["upe_cited"] and len(a1["cited_urls"]) == 2
+
+
+def test_outreach_targets_ranks_external_domains():
+    import scripts.aeo_probe as probe
+    sc = {"models": {"claude": {"answers": [
+        {"cited_urls": ["https://www.bizbash.com/a", "https://upe.co.il/x", "https://cvent.com/y"]},
+        {"cited_urls": ["https://bizbash.com/b"]}]}}}
+    t = probe.outreach_targets(sc)
+    assert t[0]["domain"] == "bizbash.com" and t[0]["citations"] == 2
+    assert all("upe.co.il" not in x["domain"] for x in t)

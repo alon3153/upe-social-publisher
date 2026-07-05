@@ -42,6 +42,18 @@ def score_answer(question, answer, judge_fn):
     }
 
 
+_UPE_RE = re.compile(r"uproduction|upe\.co\.il", re.I)
+
+
+def _mention_fields(text, citations):
+    """Deterministic binary metrics — the primary KPI (LLM judge stays secondary color)."""
+    return {
+        "upe_mentioned": bool(_UPE_RE.search(text or "")),
+        "upe_cited": any("upe.co.il" in (u or "") for u in citations),
+        "cited_urls": list(citations),
+    }
+
+
 def run_probe(questions, models, ask_fn, judge_fn):
     date = datetime.date.today().isoformat()
     battery_version = ""
@@ -54,24 +66,50 @@ def run_probe(questions, models, ask_fn, judge_fn):
             answers, per_dim = [], {d: [] for d in DIMS}
             for q in questions:
                 try:
-                    ans = ask_fn(model, q["text"])
+                    res = ask_fn(model, q["text"])
+                    # ask_fn may return plain text or {"text", "citations"} (ask_meta)
+                    ans = res["text"] if isinstance(res, dict) else res
+                    citations = (res.get("citations") or []) if isinstance(res, dict) else []
                     sc = score_answer(q, ans, judge_fn)
                 except Exception as e:  # one flaky question must not sink the whole model battery
                     out["errors"].append(f"{model}/{q['id']}: {type(e).__name__}: {str(e)[:200]}")
                     continue
                 per_dim[q["dimension"]].append(sc[q["dimension"]])
                 answers.append({"id": q["id"], "question": q["text"], "answer": ans,
-                                "scores": sc, "competitors": sc["competitors"], "gap_note": sc["gap_note"]})
+                                "dimension": q["dimension"],
+                                "scores": sc, "competitors": sc["competitors"], "gap_note": sc["gap_note"],
+                                **_mention_fields(ans, citations)})
             if not answers:  # nothing succeeded — drop the model instead of reporting fake zeros
                 out["errors"].append(f"{model}: probe failed (all questions failed)")
                 continue
             dim_scores = {d: (round(mean(per_dim[d])) if per_dim[d] else 0) for d in DIMS}
+            mentioned = sum(1 for a in answers if a["upe_mentioned"])
+            cited = sum(1 for a in answers if a["upe_cited"])
             out["models"][model] = {**dim_scores,
                                     "aeo": round(mean(dim_scores.values())),
+                                    "mention_rate": round(100 * mentioned / len(answers)),
+                                    "citation_rate": round(100 * cited / len(answers)),
                                     "answers": answers}
         except Exception as e:  # a model with a bad/unbilled key must not crash the whole loop
             out["errors"].append(f"{model}: probe failed ({type(e).__name__}: {str(e)[:500]})")
     return out
+
+
+def outreach_targets(scorecard, top=15):
+    """Rank the third-party pages answer engines actually cite (excluding our own domain).
+    This IS the outreach target list: get UPE onto these pages/domains."""
+    from collections import Counter
+    from urllib.parse import urlparse
+    counts, examples = Counter(), {}
+    for md in scorecard.get("models", {}).values():
+        for a in md.get("answers", []):
+            for u in a.get("cited_urls", []):
+                host = (urlparse(u).netloc or "").replace("www.", "")
+                if not host or "upe.co.il" in host:
+                    continue
+                counts[host] += 1
+                examples.setdefault(host, u)
+    return [{"domain": d, "citations": n, "example": examples[d]} for d, n in counts.most_common(top)]
 
 
 def append_history(scorecard, path):

@@ -26,12 +26,27 @@ def _post(url, data, headers):
 
 
 def ask(model, prompt, system="", max_tokens=4096, _http=None, grounded=False):
+    return ask_meta(model, prompt, system, max_tokens, _http, grounded)["text"]
+
+
+def ask_meta(model, prompt, system="", max_tokens=4096, _http=None, grounded=False):
+    """Like ask(), but returns {"text": str, "citations": [url, ...]} so probes can
+    see WHICH sources the engine retrieved (the outreach target list)."""
     if grounded:
         try:
             return _ask_once(model, prompt, system, max_tokens, _http, grounded=True)
         except Exception:
             pass  # grounded path failed (tool not enabled / model gone) -> plain call below
     return _ask_once(model, prompt, system, max_tokens, _http, grounded=False)
+
+
+def _dedup(urls):
+    seen, out = set(), []
+    for u in urls:
+        if u and u not in seen:
+            seen.add(u)
+            out.append(u)
+    return out
 
 
 def _ask_once(model, prompt, system, max_tokens, _http, grounded):
@@ -50,7 +65,17 @@ def _ask_once(model, prompt, system, max_tokens, _http, grounded):
                    "anthropic-version": "2023-06-01", "content-type": "application/json"}
         raw = http("https://api.anthropic.com/v1/messages", json.dumps(body).encode(), headers)
         data = json.loads(raw)
-        return "".join(b.get("text", "") for b in data.get("content", []) if b.get("type") == "text").strip()
+        text, cites = [], []
+        for b in data.get("content", []):
+            if b.get("type") == "text":
+                text.append(b.get("text", ""))
+                for c in b.get("citations") or []:
+                    cites.append(c.get("url", ""))
+            elif b.get("type") == "web_search_tool_result":
+                for r in b.get("content") or []:
+                    if isinstance(r, dict):
+                        cites.append(r.get("url", ""))
+        return {"text": "".join(text).strip(), "citations": _dedup(cites)}
     if model == "chatgpt":
         if grounded:
             mdl = os.environ.get("AEO_OPENAI_SEARCH_MODEL") or "gpt-4o-search-preview"
@@ -66,7 +91,10 @@ def _ask_once(model, prompt, system, max_tokens, _http, grounded):
                                 [{"role": "user", "content": prompt}]}
         headers = {"authorization": f"Bearer {os.environ.get('OPENAI_API_KEY','')}", "content-type": "application/json"}
         data = json.loads(http("https://api.openai.com/v1/chat/completions", json.dumps(body).encode(), headers))
-        return data["choices"][0]["message"]["content"].strip()
+        msg = data["choices"][0]["message"]
+        cites = [a.get("url_citation", {}).get("url", "") for a in msg.get("annotations") or []
+                 if a.get("type") == "url_citation"]
+        return {"text": msg["content"].strip(), "citations": _dedup(cites)}
     if model == "gemini":
         mdl = os.environ.get("AEO_GEMINI_MODEL") or "gemini-2.5-flash"
         key = os.environ.get("GEMINI_API_KEY", "")
@@ -76,6 +104,9 @@ def _ask_once(model, prompt, system, max_tokens, _http, grounded):
         if grounded:
             body["tools"] = [{"google_search": {}}]
         data = json.loads(http(url, json.dumps(body).encode(), {"content-type": "application/json"}))
-        parts = data["candidates"][0]["content"]["parts"]
-        return "".join(p.get("text", "") for p in parts).strip()
+        cand = data["candidates"][0]
+        parts = cand["content"]["parts"]
+        chunks = (cand.get("groundingMetadata") or {}).get("groundingChunks") or []
+        cites = [(c.get("web") or {}).get("uri", "") for c in chunks]
+        return {"text": "".join(p.get("text", "") for p in parts).strip(), "citations": _dedup(cites)}
     raise ValueError(f"unknown model {model}")
