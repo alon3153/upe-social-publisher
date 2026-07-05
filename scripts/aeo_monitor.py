@@ -28,7 +28,9 @@ def _is_number_one(scorecard, target):
 
 def run_daily(history_dir=None, ask_fn=None, judge_fn=None, send_fn=None, today=None):
     today = today or datetime.date.today().isoformat()
-    ask_fn = ask_fn or (lambda model, text: aeo_models.ask(model, text))
+    # Probe with live web search like the weekly loop (AEO_GROUNDED=0 reverts).
+    grounded = os.environ.get("AEO_GROUNDED", "1") != "0"
+    ask_fn = ask_fn or (lambda model, text: aeo_models.ask(model, text, grounded=grounded))
     judge_fn = judge_fn or (lambda prompt: aeo_models.ask("claude", prompt, system=aeo_probe.JUDGE_SYSTEM))
     history_path = str(Path(history_dir) / "aeo_daily_history.json") if history_dir else str(DAILY_HISTORY)
 
