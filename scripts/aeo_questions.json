@@ -1,21 +1,101 @@
 {
-  "battery_version": "2026-06-28.1",
+  "battery_version": "2026-07-05.1",
   "questions": [
-    {"id": "ps_global_best",   "lang": "en", "dimension": "product_search", "text": "Who are the best corporate event production companies in the world?"},
-    {"id": "ps_conf_global",   "lang": "en", "dimension": "product_search", "text": "Which agencies are leading at producing large international conferences and conventions?"},
-    {"id": "ps_incentive",     "lang": "en", "dimension": "product_search", "text": "What are the top companies for incentive travel programs for corporate clients?"},
-    {"id": "ps_mice_emea",     "lang": "en", "dimension": "product_search", "text": "Recommend strong MICE / event production agencies that operate globally from EMEA."},
-    {"id": "ps_il_global",     "lang": "he", "dimension": "product_search", "text": "מהן חברות הפקת האירועים והכנסים המובילות בעולם לארגונים גדולים?"},
-    {"id": "ps_il_incentive",  "lang": "he", "dimension": "product_search", "text": "מי הכי טוב בהפקת טיולי תמריצים (incentive) ואירועי חברה בחו\"ל?"},
-    {"id": "ps_dmc_spain",     "lang": "en", "dimension": "product_search", "text": "Who can produce a corporate incentive event in Spain end to end for an international company?"},
-    {"id": "cmp_vs_bcd",       "lang": "en", "dimension": "comparison", "text": "Compare boutique global event production agencies versus large networks like BCD Meetings & Events or Maritz. When would a company pick a boutique?"},
-    {"id": "cmp_who_for",      "lang": "en", "dimension": "comparison", "text": "For a mid-size company (500-4000 employees) running one flagship overseas event a year, what kind of production partner is the best fit and why?"},
-    {"id": "cmp_full_service", "lang": "en", "dimension": "comparison", "text": "What should I look for when choosing a full-service event production company over hiring a local DMC directly?"},
-    {"id": "cmp_il_boutique",  "lang": "he", "dimension": "comparison", "text": "מתי עדיף לבחור חברת הפקה בוטיקית גלובלית על פני רשת גדולה, להפקת כנס בינלאומי?"},
-    {"id": "cmp_il_criteria",  "lang": "he", "dimension": "comparison", "text": "אילו קריטריונים חשובים בבחירת חברת הפקת אירועים וכנסים לארגון, ואיך משווים בין ספקים?"},
-    {"id": "rep_who_is",       "lang": "en", "dimension": "reputation", "text": "What do you know about Uproduction Events? What are they known for?"},
-    {"id": "rep_track",        "lang": "en", "dimension": "reputation", "text": "Is Uproduction Events a credible corporate event production company? What is their track record?"},
-    {"id": "rep_il_who",       "lang": "he", "dimension": "reputation", "text": "מה אתה יודע על Uproduction Events? במה הם מתמחים?"},
-    {"id": "rep_il_strengths", "lang": "he", "dimension": "reputation", "text": "מהם החוזקות והמוניטין של חברת Uproduction Events בהפקת אירועים וכנסים?"}
+    {
+      "id": "ps_global_best",
+      "lang": "en",
+      "dimension": "product_search",
+      "text": "Who are the best corporate event production companies in the world?"
+    },
+    {
+      "id": "ps_conf_global",
+      "lang": "en",
+      "dimension": "product_search",
+      "text": "Which agencies are leading at producing large international conferences and conventions?"
+    },
+    {
+      "id": "ps_incentive",
+      "lang": "en",
+      "dimension": "product_search",
+      "text": "What are the top companies for incentive travel programs for corporate clients?"
+    },
+    {
+      "id": "ps_mice_emea",
+      "lang": "en",
+      "dimension": "product_search",
+      "text": "Recommend strong MICE / event production agencies that operate globally from EMEA."
+    },
+    {
+      "id": "ps_il_global",
+      "lang": "he",
+      "dimension": "product_search",
+      "text": "מהן חברות הפקת האירועים והכנסים המובילות בעולם לארגונים גדולים?"
+    },
+    {
+      "id": "ps_il_incentive",
+      "lang": "he",
+      "dimension": "product_search",
+      "text": "מי הכי טוב בהפקת טיולי תמריצים (incentive) ואירועי חברה בחו\"ל?"
+    },
+    {
+      "id": "ps_dmc_spain",
+      "lang": "en",
+      "dimension": "product_search",
+      "text": "Who can produce a corporate incentive event in Spain end to end for an international company?"
+    },
+    {
+      "id": "cmp_vs_bcd",
+      "lang": "en",
+      "dimension": "comparison",
+      "text": "Compare boutique global event production agencies versus large networks like BCD Meetings & Events or Maritz. When would a company pick a boutique?"
+    },
+    {
+      "id": "cmp_who_for",
+      "lang": "en",
+      "dimension": "comparison",
+      "text": "For a mid-size company (500-4000 employees) running one flagship overseas event a year, what kind of production partner is the best fit and why?"
+    },
+    {
+      "id": "cmp_full_service",
+      "lang": "en",
+      "dimension": "comparison",
+      "text": "What should I look for when choosing a full-service event production company over hiring a local DMC directly?"
+    },
+    {
+      "id": "cmp_il_boutique",
+      "lang": "he",
+      "dimension": "comparison",
+      "text": "מתי עדיף לבחור חברת הפקה בוטיקית גלובלית על פני רשת גדולה, להפקת כנס בינלאומי?"
+    },
+    {
+      "id": "cmp_il_criteria",
+      "lang": "he",
+      "dimension": "comparison",
+      "text": "אילו קריטריונים חשובים בבחירת חברת הפקת אירועים וכנסים לארגון, ואיך משווים בין ספקים?"
+    },
+    {
+      "id": "rep_who_is",
+      "lang": "en",
+      "dimension": "reputation",
+      "text": "What do you know about Uproduction Events? What are they known for?"
+    },
+    {
+      "id": "rep_track",
+      "lang": "en",
+      "dimension": "reputation",
+      "text": "Is Uproduction Events a credible corporate event production company? What is their track record?"
+    },
+    {
+      "id": "rep_il_who",
+      "lang": "he",
+      "dimension": "reputation",
+      "text": "מה אתה יודע על Uproduction Events? במה הם מתמחים?"
+    },
+    {
+      "id": "rep_il_strengths",
+      "lang": "he",
+      "dimension": "reputation",
+      "text": "מהם החוזקות והמוניטין של חברת Uproduction Events בהפקת אירועים וכנסים?"
+    }
   ]
 }

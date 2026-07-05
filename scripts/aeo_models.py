@@ -1,4 +1,10 @@
-"""Pluggable answer-engine adapters. Claude is live; OpenAI/Gemini are gated on key presence."""
+"""Pluggable answer-engine adapters. Claude is live; OpenAI/Gemini are gated on key presence.
+
+`grounded=True` asks each engine with live web search enabled (Claude web_search tool,
+OpenAI *-search-preview model, Gemini google_search tool) so probes measure what real
+answer engines return today, not frozen training-data recall. A grounded call that fails
+falls back to the plain (ungrounded) call so a provider-side tool outage never kills a run.
+"""
 import os, json, urllib.request, urllib.error
 
 MODEL_LABELS = {"claude": "Claude", "chatgpt": "ChatGPT", "gemini": "Gemini"}
@@ -12,14 +18,23 @@ def available_models():
 def _post(url, data, headers):
     req = urllib.request.Request(url, data=data, headers=headers, method="POST")
     try:
-        with urllib.request.urlopen(req, timeout=120) as r:
+        with urllib.request.urlopen(req, timeout=180) as r:
             return r.read().decode("utf-8")
     except urllib.error.HTTPError as e:
         body = e.read().decode("utf-8", errors="replace")[:400]
         raise RuntimeError(f"HTTP {e.code} from {url}: {body}") from None
 
 
-def ask(model, prompt, system="", max_tokens=4096, _http=None):
+def ask(model, prompt, system="", max_tokens=4096, _http=None, grounded=False):
+    if grounded:
+        try:
+            return _ask_once(model, prompt, system, max_tokens, _http, grounded=True)
+        except Exception:
+            pass  # grounded path failed (tool not enabled / model gone) -> plain call below
+    return _ask_once(model, prompt, system, max_tokens, _http, grounded=False)
+
+
+def _ask_once(model, prompt, system, max_tokens, _http, grounded):
     http = _http or _post
     if model == "claude":
         body = {
@@ -29,16 +44,26 @@ def ask(model, prompt, system="", max_tokens=4096, _http=None):
         }
         if system:
             body["system"] = system
+        if grounded:
+            body["tools"] = [{"type": "web_search_20250305", "name": "web_search", "max_uses": 3}]
         headers = {"x-api-key": os.environ.get("ANTHROPIC_API_KEY", ""),
                    "anthropic-version": "2023-06-01", "content-type": "application/json"}
         raw = http("https://api.anthropic.com/v1/messages", json.dumps(body).encode(), headers)
         data = json.loads(raw)
         return "".join(b.get("text", "") for b in data.get("content", []) if b.get("type") == "text").strip()
     if model == "chatgpt":
-        body = {"model": os.environ.get("AEO_OPENAI_MODEL") or "gpt-4o",
-                "max_tokens": max_tokens,
-                "messages": ([{"role": "system", "content": system}] if system else []) +
-                            [{"role": "user", "content": prompt}]}
+        if grounded:
+            mdl = os.environ.get("AEO_OPENAI_SEARCH_MODEL") or "gpt-4o-search-preview"
+            body = {"model": mdl,
+                    "web_search_options": {},
+                    "max_tokens": max_tokens,
+                    "messages": ([{"role": "system", "content": system}] if system else []) +
+                                [{"role": "user", "content": prompt}]}
+        else:
+            body = {"model": os.environ.get("AEO_OPENAI_MODEL") or "gpt-4o",
+                    "max_tokens": max_tokens,
+                    "messages": ([{"role": "system", "content": system}] if system else []) +
+                                [{"role": "user", "content": prompt}]}
         headers = {"authorization": f"Bearer {os.environ.get('OPENAI_API_KEY','')}", "content-type": "application/json"}
         data = json.loads(http("https://api.openai.com/v1/chat/completions", json.dumps(body).encode(), headers))
         return data["choices"][0]["message"]["content"].strip()
@@ -48,6 +73,9 @@ def ask(model, prompt, system="", max_tokens=4096, _http=None):
         url = f"https://generativelanguage.googleapis.com/v1beta/models/{mdl}:generateContent?key={key}"
         body = {"contents": [{"parts": [{"text": (system + "\n\n" + prompt) if system else prompt}]}],
                 "generationConfig": {"maxOutputTokens": max_tokens}}
+        if grounded:
+            body["tools"] = [{"google_search": {}}]
         data = json.loads(http(url, json.dumps(body).encode(), {"content-type": "application/json"}))
-        return data["candidates"][0]["content"]["parts"][0]["text"].strip()
+        parts = data["candidates"][0]["content"]["parts"]
+        return "".join(p.get("text", "") for p in parts).strip()
     raise ValueError(f"unknown model {model}")
