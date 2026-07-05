@@ -29,8 +29,10 @@ def score_answer(question, answer, judge_fn):
         f'qid="{question["id"]}"\nDIMENSION: {question["dimension"]}\n'
         f'QUESTION: {question["text"]}\n\nANSWER:\n{answer}\n'
     )
-    raw = judge_fn(prompt)
-    data = _extract_json(raw)
+    try:
+        data = _extract_json(judge_fn(prompt))
+    except (ValueError, json.JSONDecodeError):  # judge emitted malformed JSON — one retry
+        data = _extract_json(judge_fn(prompt))
     return {
         "product_search": int(data.get("product_search", 0)),
         "comparison": int(data.get("comparison", 0)),
@@ -51,11 +53,18 @@ def run_probe(questions, models, ask_fn, judge_fn):
         try:
             answers, per_dim = [], {d: [] for d in DIMS}
             for q in questions:
-                ans = ask_fn(model, q["text"])
-                sc = score_answer(q, ans, judge_fn)
+                try:
+                    ans = ask_fn(model, q["text"])
+                    sc = score_answer(q, ans, judge_fn)
+                except Exception as e:  # one flaky question must not sink the whole model battery
+                    out["errors"].append(f"{model}/{q['id']}: {type(e).__name__}: {str(e)[:200]}")
+                    continue
                 per_dim[q["dimension"]].append(sc[q["dimension"]])
                 answers.append({"id": q["id"], "question": q["text"], "answer": ans,
                                 "scores": sc, "competitors": sc["competitors"], "gap_note": sc["gap_note"]})
+            if not answers:  # nothing succeeded — drop the model instead of reporting fake zeros
+                out["errors"].append(f"{model}: probe failed (all questions failed)")
+                continue
             dim_scores = {d: (round(mean(per_dim[d])) if per_dim[d] else 0) for d in DIMS}
             out["models"][model] = {**dim_scores,
                                     "aeo": round(mean(dim_scores.values())),

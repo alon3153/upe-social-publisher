@@ -71,3 +71,42 @@ def test_append_history_creates_and_appends(tmp_path):
     p.append_history({"date": "2026-07-05"}, str(f))
     data = json.loads(f.read_text())
     assert len(data) == 2 and data[1]["date"] == "2026-07-05"
+
+
+def test_score_answer_retries_judge_once_on_bad_json():
+    import scripts.aeo_probe as probe
+    calls = []
+
+    def judge(prompt):
+        calls.append(1)
+        if len(calls) == 1:
+            return '{"product_search": 5, broken'
+        return '{"product_search":5,"comparison":0,"reputation":0,"competitors":[],"gap_note":""}'
+
+    q = {"id": "x", "dimension": "product_search", "text": "q?"}
+    sc = probe.score_answer(q, "ans", judge)
+    assert sc["product_search"] == 5 and len(calls) == 2
+
+
+def test_run_probe_isolates_flaky_question():
+    import scripts.aeo_probe as probe
+
+    def ask(model, text):
+        return "answer"
+
+    state = {"n": 0}
+
+    def judge(prompt):
+        state["n"] += 1
+        if 'qid="q2"' in prompt:
+            raise RuntimeError("boom")
+        return '{"product_search":50,"comparison":0,"reputation":0,"competitors":[],"gap_note":""}'
+
+    questions = [{"id": "q1", "dimension": "product_search", "text": "a"},
+                 {"id": "q2", "dimension": "product_search", "text": "b"},
+                 {"id": "q3", "dimension": "product_search", "text": "c"}]
+    out = probe.run_probe(questions, ["claude"], ask, judge)
+    assert "claude" in out["models"]
+    assert len(out["models"]["claude"]["answers"]) == 2
+    assert any("claude/q2" in e for e in out["errors"])
+    assert out["models"]["claude"]["product_search"] == 50
