@@ -66,4 +66,5 @@ jobs:
           git config user.email "alon@upe.co.il"
           git add scripts/aeo_history.json 2>/dev/null || true
           git commit -m "chore(aeo): scorecard history $(date -u +%F)" || echo "no history change"
-          git push || echo "nothing to push"
+          git pull --rebase origin main
+          git push

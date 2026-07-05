@@ -39,4 +39,5 @@ jobs:
           git config user.email "alon@upe.co.il"
           git add scripts/aeo_daily_history.json 2>/dev/null || true
           git commit -m "chore(aeo): daily monitor history $(date -u +%F)" || echo "no change"
-          git push || echo "nothing to push"
+          git pull --rebase origin main
+          git push
