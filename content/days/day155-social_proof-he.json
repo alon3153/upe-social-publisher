@@ -1,0 +1,30 @@
+{
+  "day": 155,
+  "category": "social_proof",
+  "language": "he",
+  "date": "",
+  "weekday": "",
+  "theme": "Scale That Speaks for Itself",
+  "linkedin": {
+    "profile": "Uproduction Events (Company Page)",
+    "text": "שאלה אחת שכדאי לכל מנהל HR או מנהל שיווק לשאול לפני שבוחרים שותף להפקת אירועים: כמה מהלקוחות שלכם חוזרים?\n\nכולם יכולים להציג תיק עבודות מרשים. מעטים יכולים להראות שהלקוח חזר — ואחר כך חזר שוב.\n\nב-Uproduction Events, מעל 1,500 אירועים שהפקנו ומעל 25,000 משתתפים ב-130+ יעדים הם לא מספרים שיווקיים. הם 16 שנה של אמון שנצבר — מכנסים שהחזיקו קהל, טיולי תמריץ ששינו את האופן שבו צוותים מרגישים כלפי החברה שלהם, ואירועי גאלה שגרמו לבכירים להיראות טוב.\n\nאם אתם היום בשלב הערכת שותפים לכנס, לכינוס או לטיול תמריץ — תתחילו מהרקורד שלהם, לא מהמצגת.\n\nמה הדבר הראשון שאתם בודקים כשאתם מעריכים ספק הפקה חדש? מעניין לשמוע בתגובות."
+  },
+  "instagram": {
+    "profile": "@uproductionevents",
+    "text": "מעל 1,500 אירועים. מעל 25,000 משתתפים. מעל 130 יעדים.\n\nהמספר שאנחנו הכי גאים בו לא מופיע בשום אינפוגרפיקה — הוא הלקוחות שבחרו לחזור אלינו.\n\n16 שנה בהפקת אירועים קורפורייט לימדו אותנו שאין הוכחה חברתית חזקה יותר מזו.\n\nמתכננים טיול תמריץ או אירוע בינלאומי? תשאירו 🌍 בתגובות ונחזור אליכם.\n\n#IncentiveTravel #EventProduction #MICE"
+  },
+  "facebook": {
+    "profile": "Uproduction Events (Page)",
+    "text": "כשלקוחות שואלים אותנו איך אנחנו יודעים שהאירועים שלנו באמת עובדים — אנחנו מצביעים על המספרים.\n\nמעל 1,500 אירועים שהפקנו. מעל 25,000 משתתפים. מעל 130 יעדים ברחבי העולם.\n\nאבל המספר שהכי מדבר אלינו הוא אחר לגמרי: הלקוחות שחזרו. פעם שנייה, שלישית, חמישית.\n\nלקוח שחוזר לא עושה את זה כי קיבל הצעה זולה. הוא חוזר כי הכנס רץ חלק, טיול התמריץ באמת הזיז משהו, וארוחת הגאלה הפכה לסיפור שעדיין מספרים אותו במשרד.\n\nמתכננים אירוע לשנה הקרובה? ספרו לנו מה אתם בונים — נשמח לחשוב יחד."
+  },
+  "image_prompt": "A wide-angle photograph of 400 corporate guests in elegant evening attire filling a grand open-air terrace overlooking a lit Mediterranean coastline, candid conversations and laughter captured mid-moment, warm golden lighting, cinematic depth.",
+  "image_style": "photorealistic, editorial, documentary, 35mm film grain",
+  "brand": {
+    "colors": [
+      "#1C1C1C",
+      "#FBCE0A"
+    ],
+    "font": "Comfortaa",
+    "logo": "uproduction_official_logo.png"
+  }
+}

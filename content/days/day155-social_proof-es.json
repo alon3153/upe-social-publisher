@@ -1,0 +1,30 @@
+{
+  "day": 155,
+  "category": "social_proof",
+  "language": "es",
+  "date": "",
+  "weekday": "",
+  "theme": "Scale That Speaks for Itself",
+  "linkedin": {
+    "profile": "Uproduction Events (Company Page)",
+    "text": "Hay una pregunta que todo responsable de RRHH o marketing debería hacer antes de contratar a un partner de eventos: ¿cuántos de sus clientes repiten?\n\nCualquier empresa puede presentar un portafolio atractivo. Pocas pueden demostrar que sus clientes volvieron — y que siguieron volviendo.\n\nEn Uproduction Events, más de 1.500 eventos entregados y más de 25.000 participantes en más de 130 destinos representan 16 años de confianza acumulada. Cada convención que mantuvo la atención de la sala. Cada viaje de incentivo que cambió cómo un equipo percibe a su empresa. Cada producción que hizo quedar bien a la dirección.\n\nSi estás evaluando partners para tu próximo evento corporativo, empieza por su historial — no por su presentación comercial.\n\n¿Qué es lo primero que revisas cuando valoras un nuevo proveedor de eventos? Te leo en los comentarios."
+  },
+  "instagram": {
+    "profile": "@uproductionevents",
+    "text": "Más de 1.500 eventos. Más de 25.000 participantes. Más de 130 destinos.\n\nEl número que más nos enorgullece no aparece en ningún ranking: es la cantidad de clientes que repiten con nosotros.\n\n16 años produciendo eventos corporativos nos enseñaron que la mejor prueba social es la que no necesita explicación.\n\n¿Tienes un evento internacional en mente? Déjanos un 🌍 en los comentarios.\n\n#IncentiveTravel #EventProduction #MICE"
+  },
+  "facebook": {
+    "profile": "Uproduction Events (Page)",
+    "text": "Cuando alguien nos pregunta cómo sabemos que nuestros eventos realmente funcionan, señalamos los números.\n\nMás de 1.500 eventos realizados. Más de 25.000 participantes. Más de 130 destinos en todo el mundo.\n\nPero el dato que más nos importa es otro: los clientes que volvieron. Una vez, dos, cinco.\n\nEsa fidelidad no se compra con un buen catálogo. Se gana cuando el congreso fluye sin fricciones, el viaje de incentivo emociona de verdad y la cena de gala se convierte en una historia que el equipo sigue contando.\n\n¿Estás planificando algo para tu empresa este año? Cuéntanos qué tienes en mente."
+  },
+  "image_prompt": "A wide-angle photograph of 400 corporate guests in elegant evening attire filling a grand open-air terrace overlooking a lit Mediterranean coastline, candid conversations and laughter captured mid-moment, warm golden lighting, cinematic depth.",
+  "image_style": "photorealistic, editorial, documentary, 35mm film grain",
+  "brand": {
+    "colors": [
+      "#1C1C1C",
+      "#FBCE0A"
+    ],
+    "font": "Comfortaa",
+    "logo": "uproduction_official_logo.png"
+  }
+}
