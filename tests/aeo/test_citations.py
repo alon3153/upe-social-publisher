@@ -49,3 +49,11 @@ def test_verify_survives_fetch_errors(tmp_path):
         raise RuntimeError("timeout")
 
     assert cp.verify(path=str(p), fetch=fetch) == []
+
+
+def test_press_followup_reminders_day5():
+    d = {"items": [{"id": "p", "title": "P", "state": "submitted", "since": "2026-07-01",
+                    "action": "sent", "target_url": "", "kind": "press"}]}
+    now = datetime.datetime(2026, 7, 6, 12, 0)
+    rem = cp.overdue_reminders(d, now=now)
+    assert len(rem) == 1 and "follow-up" in rem[0]

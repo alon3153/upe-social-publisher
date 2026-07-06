@@ -63,8 +63,12 @@ def verify(data=None, path=None, fetch=_fetch, today=None):
     return changed
 
 
+PRESS_FOLLOWUP_DAYS = (5, 10)
+
+
 def overdue_reminders(data=None, now=None):
-    """awaiting_founder items pending more than REMIND_HOURS — for the daily nag."""
+    """Daily-email nags: awaiting_founder items older than REMIND_HOURS, plus
+    day-5/day-10 follow-up prompts for press pitches that were sent (submitted)."""
     try:
         data = data or load()
     except FileNotFoundError:
@@ -72,12 +76,13 @@ def overdue_reminders(data=None, now=None):
     now = now or datetime.datetime.now()
     out = []
     for item in data["items"]:
-        if item["state"] != "awaiting_founder":
-            continue
         since = datetime.datetime.fromisoformat(item["since"])
         hours = (now - since).total_seconds() / 3600
-        if hours >= REMIND_HOURS:
-            out.append(f'{item["title"]} — {item["action"]} (ממתין {int(hours // 24)} ימים)')
+        days = int(hours // 24)
+        if item["state"] == "awaiting_founder" and hours >= REMIND_HOURS:
+            out.append(f'{item["title"]} — {item["action"]} (ממתין {days} ימים)')
+        elif item["state"] == "submitted" and item.get("kind") == "press" and days in PRESS_FOLLOWUP_DAYS:
+            out.append(f'📨 follow-up לפיץ\' {item["title"]} — יום {days} ללא מענה, שלח תזכורת')
     return out
 
 
