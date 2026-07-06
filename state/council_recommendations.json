@@ -1,71 +1,7 @@
 {
-  "updated_at": "2026-07-05",
-  "scores": {
-    "instagram": 42,
-    "facebook": 18,
-    "tiktok": 5,
-    "linkedin": 28,
-    "youtube": 45,
-    "google_organic_geo": 31,
-    "overall": 38
-  },
-  "recommendations": [
-    {
-      "category": "gated",
-      "priority": "P0",
-      "action": "בניית 5 דפי נחיתה מסחריים חדשים ב-upe.co.il עבור ה-keyword clusters המובילים (הפקת נופש חברה, הפקות אירועים לחברות, ארגון טיולים לחברות, virtual events, אירועי קונספט) — כל דף 1,500+ מילים, FAQ, CTA ברור",
-      "expected_impact": "שיפור CTR מ-0.28% ל-1%+ על clusters אלה צפוי להכפיל קליקים ולייצר 3-5 לידים נוספים/חודש; upe.co.il איבד 69% מהקליקים — תיקון דחוף",
-      "channel": "google_organic_geo"
-    },
-    {
-      "category": "gated",
-      "priority": "P0",
-      "action": "הפעלת personal branding ב-LinkedIn לבכירי UPE (CEO/MD): 3 פוסטים/שבוע מחשבון אישי — case studies אמיתיים, POV על שוק האירועים, behind-the-scenes ייצור",
-      "expected_impact": "פרופילים אישיים מייצרים 8x יותר engagement מעמודי חברה; thought leadership ב-LinkedIn מוכיח בפועל כמנוע הלידים הישיר ביותר ב-B2B 2026",
-      "channel": "linkedin"
-    },
-    {
-      "category": "gated",
-      "priority": "P1",
-      "action": "יצירת lead magnet ספציפי לאתר: 'מדריך מלא להפקת נופש תמריץ ב-130 יעדים' — PDF מקצועי, טופס capture מוכוון לCMO/HR, CRM אוטומטי",
-      "expected_impact": "gated assets ב-B2B ממירים ב-15-25% לקהל TOFU; ייצור שכבת leads נוספת מעל הטופס הנוכחי ויגדיל pipeline ב-20-30%",
-      "channel": "google_organic_geo"
-    },
-    {
-      "category": "gated",
-      "priority": "P1",
-      "action": "בניית LinkedIn Newsletter שבועי בעברית ובאנגלית: 'Uproduction Insider' — תובנות שוק MICE, case study אחד/חודש, טרנד אחד מהתעשייה",
-      "expected_impact": "Newsletter ב-LinkedIn מייצר push notification לכל מנוי; open rates 40-60% לעומת 20-25% באימייל — בניית קהל captive של decision-makers",
-      "channel": "linkedin"
-    },
-    {
-      "category": "gated",
-      "priority": "P1",
-      "action": "קמפיין תוכן ל-upe-spain.com סביב keywords עם potential גבוה: 'incentive travel spain' (pos. 9.2), 'international product launch event' (pos. 13.5) — דפי שירות מסחריים באנגלית/ספרדית",
-      "expected_impact": "upe-spain.com יציבה אך לא גדלה — דפים מסחריים ממוקדים יכולים להביא את הדומיין לעמוד 1 ולייצר לידים אירופאיים נוספים ב-3-6 חודשים",
-      "channel": "google_organic_geo"
-    },
-    {
-      "category": "gated",
-      "priority": "P2",
-      "action": "הפעלת TikTok בשיטת 'behind-the-scenes production': 3 סרטונים/שבוע, 30-60 שניות, מה שקורה מאחורי הקלעים של הפקה גדולה — עם כתוביות בעברית ובאנגלית",
-      "expected_impact": "TikTok אפסי כרגע; תוכן B2B aspirational (incentive travel destinations, event setups) מגיע לעובדים שמשפיעים על החלטות HR/CMO; גוגל מאנדקס סרטוני TikTok",
-      "channel": "tiktok"
-    }
-  ],
-  "follower_growth_plan": [
-    "שלב 1 (חודשים 1-3): ייצוב בסיס — הפחתת תדירות ל-quality threshold: LinkedIn 4x/שבוע, Instagram 5x/שבוע, TikTok 3x/שבוע; הגדרת 4 content pillars: הפקת אירועים, נופש תמריץ, behind-the-scenes, thought leadership תעשייתי.",
-    "שלב 2 (חודשים 3-6): הפעלת employee advocacy — כל עובד/ת בכיר מפרסם מחשבון אישי שתוכן חוזר לעמוד UPE; פרופילים אישיים מייצרים 5-10x reach מעמוד חברה.",
-    "שלב 3 (חודשים 6-12): LinkedIn Newsletter 'Uproduction Insider' + Carousel series 'כמה עולה לארגן...' — כל פוסט עם proprietary data שיוצר saves ושיתופים ומגדיל follower count אורגני.",
-    "שלב 4 (חודשים 12-18): שיתופי פעולה עם DMCs, venue partners ו-speaker agencies — co-content וtag/mention strategy שמכפיל חשיפה לקהלים חדשים ב-LinkedIn ו-Instagram.",
-    "שלב 5 (חודשים 18-36): YouTube כמנוע growth ראשי — series מקצועי 'Event Production Masterclass' (עברית+אנגלית), SEO-optimized לכל פרק; YouTube shorts מוזן ל-Instagram Reels ול-TikTok לקהל 500K."
-  ],
-  "leads_actions": [
-    "דחוף — תיקון SEO upe.co.il: בדיקת טכנית מיידית (crawl errors, Core Web Vitals, דפים שנפלו מאינדקס) לאיתור סיבת נפילת 69% בקליקים — זהו emergency כי 100% מהלידים מגיעים משם.",
-    "בניית 5 דפי שירות מסחריים חדשים בעברית סביב top keyword opportunities ('הפקת נופש חברה', 'הפקות אירועים לחברות') — כל דף עם CTA ברור ו-social proof (case studies, לוגואים של לקוחות).",
-    "הוספת lead magnet לאתר (מדריך PDF 'נופש תמריץ 2026: המדריך המלא למנהלי HR ו-CMO') עם טופס capture מוכוון — gated assets ב-B2B ממירים ב-15-25% לקהל TOFU.",
-    "הפעלת LinkedIn personal branding לבכירים: 3 פוסטים/שבוע מחשבונות אישיים עם case studies אמיתיים וייחוס ל-UPE — LinkedIn מוביל 80% מכלל לידי B2B ברשתות חברתיות.",
-    "מיפוי וסגירת פער attribution: לבקש מ-sales team לשאול כל ליד חדש 'איך מצאת אותנו?' ולתעד ב-Salesforce — כרגע 100% 'Web' הוא bucket רחב מדי; הבנת ה-sub-source תאפשר הכפלת השקעה בנכון.",
-    "יצירת תוכן YouTube/LinkedIn מכוון B2B-decision-makers: 'ROI של נופש תמריץ: כמה זה באמת עולה ומה מקבלים' — content שעונה על שאלות קניה ישירות מייצר high-intent leads מוכנים לשיחה."
-  ]
+  "updated_at": "2026-07-06",
+  "scores": {},
+  "recommendations": [],
+  "follower_growth_plan": [],
+  "leads_actions": []
 }
