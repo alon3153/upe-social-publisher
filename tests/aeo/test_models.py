@@ -133,3 +133,18 @@ def test_ask_meta_gemini_extracts_grounding_chunks(monkeypatch):
 
     out = m.ask_meta("gemini", "hi", _http=fake_http, grounded=True)
     assert out["citations"] == ["https://clutch.co/x"]
+
+
+def test_ask_meta_gemini_unmasks_vertexai_redirects(monkeypatch):
+    import json
+    m = load(monkeypatch, {"GEMINI_API_KEY": "z"})
+
+    def fake_http(url, data, headers):
+        return json.dumps({"candidates": [{"content": {"parts": [{"text": "a"}]},
+            "groundingMetadata": {"groundingChunks": [
+                {"web": {"uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/xyz",
+                         "title": "clutch.co"}},
+                {"web": {"uri": "https://real.com/page", "title": "real.com"}}]}}]})
+
+    out = m.ask_meta("gemini", "hi", _http=fake_http, grounded=True)
+    assert out["citations"] == ["clutch.co", "https://real.com/page"]

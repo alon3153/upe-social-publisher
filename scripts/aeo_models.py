@@ -107,6 +107,11 @@ def _ask_once(model, prompt, system, max_tokens, _http, grounded):
         cand = data["candidates"][0]
         parts = cand["content"]["parts"]
         chunks = (cand.get("groundingMetadata") or {}).get("groundingChunks") or []
-        cites = [(c.get("web") or {}).get("uri", "") for c in chunks]
+        cites = []
+        for c in chunks:
+            web = c.get("web") or {}
+            uri, title = web.get("uri", ""), web.get("title", "")
+            # gemini masks sources behind a vertexaisearch redirect; title carries the real domain
+            cites.append(title if ("vertexaisearch" in uri and title) else uri)
         return {"text": "".join(p.get("text", "") for p in parts).strip(), "citations": _dedup(cites)}
     raise ValueError(f"unknown model {model}")
