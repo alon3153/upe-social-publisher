@@ -1,58 +1,57 @@
 {
-  "updated_at": "2026-07-08",
+  "updated_at": "2026-07-09",
   "source": "daily-council",
   "directives": [
     {
       "category": "safe_auto",
-      "action": "הגדרת אסטרטגיית Depth Score ל-LinkedIn: החלף 20 פוסטים קצרים בשבוע ב-4-5 פוסטים ארוכים (800-1,500 תווים) עם hook חזק ב-3 שורות הראשונות",
-      "detail": "אלגוריתם LinkedIn יוני 2026 מעניש תפוקה גבוהה ומתגמל dwell-time: פוסטים עם 61+ שניות קריאה מקבלים boost משמעותי; native text posts עולים ב-28% reach על carousels בניתוח של 147 חשבונות B2B",
+      "action": "צמצום תדירות הפרסום ל-3-5 פוסטים שבועיים בלינקדאין, תוך מיקוד בפורמטים עמוקים",
+      "detail": "האלגוריתם של LinkedIn ב-2026 מעניש כמות ומתגמל dwell time; פוסטים בין 800-1,500 תווים מקבלים בונוס reach של 40%; הפחתה מ-14 ל-4-5 פוסטים שבועיים תגדיל חשיפה לכל פוסט; לסובב פורמטים: carousel → native video → text opinion post → poll מקצועי",
       "channel": "linkedin"
     },
     {
       "category": "safe_auto",
-      "action": "בנה קלנדר תוכן שבועי Instagram עם 3-4 Reels (30-60 שנ') ו-2 carousels; הפסק פוסטים סטטיים רגילים לחלוטין",
-      "detail": "Instagram Reels מייצרים organic reach של 30-50% מהעוקבים לעומת 3-8% לפוסטים; הפורמט מאפשר גילוי ע\"י non-followers — מנוע הצמיחה הנדרש ל-500K",
+      "action": "הגדרת 3 pillars תוכן ל-Instagram עם דגש על Reels ל-discovery וCarousels ל-engagement",
+      "detail": "Reels מגיעים ל-2x יותר non-followers ממשפחת פוסטים סטטיים; carousels מייצרים 109% יותר engagement per impression; pillar 1: behind-the-scenes production ('כך נראית ההפקה מאחורי הקלעים'), pillar 2: incentive trip inspiration עם location tags (+34% engagement), pillar 3: 'Q&A with the event lead' בפורמט carousel",
       "channel": "instagram"
     },
     {
       "category": "safe_auto",
-      "action": "הפסק פרסום ל-TikTok לחלוטין; הסט את משאבי התוכן ל-YouTube Shorts (3 Shorts/שבוע) שמוזנים מהחומר הקיים",
-      "detail": "TikTok: 0 חשיפות ו-0 אינטראקציות — B2B decision-makers לא נמצאים שם; YouTube Shorts מגיעים ל-5-20x יותר non-subscribers ומחזקים את אלגוריתם הערוץ שכבר מוכיח 9,859 חשיפות",
-      "channel": "tiktok"
-    },
-    {
-      "category": "safe_auto",
-      "action": "צור 5 עמודי תוכן SEO בעברית לביטויי ה-opportunity המובילים: 'הפקת נופש חברה' (1,709 חשיפות, פוזיציה 9), 'הפקות אירועים לחברות' (403 חשיפות, פוז' 11), 'אירועי קונספט' (213 חשיפות, פוז' 19.9)",
-      "detail": "ה-CTR של UPE.co.il נפל 55%; ביטויים אלה הם בטווח 'קרוב לדף 1' עם נפח גבוה — תוכן ממוקד יכול לאחד CTR ולהניב לידים ישירות מה-Web (ערוץ 75% מהלידים)",
-      "channel": "google_organic_geo"
-    },
-    {
-      "category": "safe_auto",
-      "action": "הפעל 'שעת הזהב' ב-LinkedIn: תזמן פוסטים לשלוח בין ג'-ה' 8:00-10:00 ובקש מהצוות להגיב תוך 60 דקות ראשונות",
-      "detail": "אלגוריתם LinkedIn 2026 מעריך כל פוסט בשעה הראשונה; פוסטים שמקבלים engagement מהיר מקבלים הפצה רחבה לרמה 2-3; הגבה ב-comments בתוך החלון הזה — critical",
+      "action": "תזמון פרסום LinkedIn: ימי שלישי-חמישי, 08:00-10:00 שעון ישראל/מרכז אירופה, עם תגובה אקטיבית בשעה הראשונה",
+      "detail": "האלגוריתם מחשב engagement בשעה הראשונה לאחר הפרסום — אם הפוסט לא מייצר אינטראקציה מהירה הוא נקבר; יש לוודא שמישהו מהצוות זמין לתגובה מיידית על תגובות; peak days are Tue-Thu 8-10am for B2B audiences",
       "channel": "linkedin"
     },
     {
       "category": "safe_auto",
-      "action": "הוסף YouTube Shorts funnel: קצר כל long-form video ל-3 Shorts של 30-60 שנ' עם CTA מילולי לערוץ; הוסף end screens ו-cards בכל סרטון",
-      "detail": "YouTube מגביר discovery דרך Shorts → long-form → playlist funnel; 19,702 חשיפות בסרטון מוביל מוכיחות שיש תוכן שעובד — Shorts יפיצו אותו לקהל חדש ללא עלות נוספת",
-      "channel": "youtube"
+      "action": "תיוג מיקום + keyword SEO בקאפשן Instagram לכל פוסט הפקה/נסיעה",
+      "detail": "Instagram הפכה למנוע חיפוש חצי-חברתי; קאפשנים עם שם היעד, סוג האירוע, ושאלות שמנהלי HR/CMO שואלים (כגון 'נסיעת תמריץ לצוות ניהול') מגדילים discoverability ללא פרסום; alt text לתמונות עם תיאור ספציפי ביותר",
+      "channel": "instagram"
+    },
+    {
+      "category": "safe_auto",
+      "action": "הפסקת פרסום אקטיבי ב-TikTok עד לגיבוש אסטרטגיה ממוקדת B2B/MICE",
+      "detail": "7 פוסטים, 0 חשיפות, 0 אינטראקציות — TikTok מדווח על reach ולא impressions; הקהל של UPE (CMO/HR/CEO) אינו מגיע מ-TikTok כשהוא בתהליך RFP; להשתמש במשאבי הפרסום שנחסכים לשיפור YouTube ו-LinkedIn",
+      "channel": "tiktok"
+    },
+    {
+      "category": "safe_auto",
+      "action": "בניית content cluster סביב 5 מילות המפתח המובילות ב-upe.co.il (הפקת נופש חברה, virtual events, הפקות אירועים לחברות הייטק)",
+      "detail": "כל מילת מפתח ברשימת top_opportunities ממוצבת בעמדה 9-19 עם נפח 165-1,709 חיפושים — שיפור ל-TOP-3 יכפיל קליקים; ליצור עמודי service נפרדים לכל keyword cluster עם FAQ, case study, ו-schema markup; internal linking בין הדפים לחיזוק authority",
+      "channel": "google_organic_geo"
     }
   ],
   "follower_growth_plan": [
-    "שלב 1 — בסיס (חודשים 1-3): הפסק TikTok לחלוטין; ייצור LinkedIn 4-5 פוסטים/שבוע במקום 20; הפעל Reels ב-Instagram (3-4/שבוע); הגדר 3-4 pillars קבועים לכל ערוץ — algorithm צריך 30 יום ללמוד את המיתוג",
-    "שלב 2 — Executive Advocacy (חודש 2+): הפעל 2-3 מנהלים בכירים לפרסם מפרופיל אישי ב-LinkedIn; פרופיל אישי מייצר 5-8x engagement מדף חברה — זהו מנוע הצמיחה העיקרי ל-B2B",
-    "שלב 3 — YouTube Shorts Flywheel (חודש 3+): כל long-form video → 3 Shorts → פרסום LinkedIn + Instagram; funnel Shorts→long-form→playlist מכפיל subscribers ומושך subscribers חדשים מ-non-followers",
-    "שלב 4 — Collab & Social Proof (חודש 4-6): השתמש ב-Instagram Collab Feature עם לקוחות ושותפים; UGC ותגיות לקוח מייצרות reach כפול ללא עלות; Social proof מפחית friction ב-B2B decision cycle",
-    "שלב 5 — SEO→Social Loop (חודש 6+): כל עמוד SEO חדש שמדורג → יוצר Reel + LinkedIn post + YouTube Short; תוכן שמניב קליקים אורגניים מאשש relevance ומגדיל followers מהקהל הנכון",
-    "שלב 6 — Scale & Compound (שנה 2-3): LinkedIn Newsletter לבניית קהל subscriber נאמן; 12 חודשי פרסום עקבי ב-4-5x/שבוע יכולים להוביל ל-5x-15x גדילה בעוקבים מ-baseline; 500K דורש viral moments מתוכן אותנטי של הפקות בולטות"
+    "שלב 1 (0-3 חודשים): מיקוד LinkedIn — הפעלת personal branding של 2-3 מנהלים בכירים עם 4x פוסטים שבועיים; פרופילים אישיים ב-B2B מייצרים 5-8x reach מדף חברה; מטרה: x3 impressions ו-+500 followers רלוונטיים",
+    "שלב 2 (3-6 חודשים): YouTube SEO — אופטימיזציה של כותרות, תיאורים, ו-chapters לכל הוידאו הקיים; יצירת 2 case study videos חודשיים; YouTube מייצר כבר 88% מהחשיפות ויש למנף זאת לגדילת subscribers",
+    "שלב 3 (6-12 חודשים): Instagram Reels engine — 3 Reels שבועיים ממוקדי incentive travel ו-BTS production; שימוש ב-location tags ו-keyword captions להגדלת discoverability; מטרה: הגעה ל-5,000+ followers עם 2%+ engagement rate",
+    "שלב 4 (12-18 חודשים): LinkedIn Newsletter + Community — השקת newsletter עם 500+ נרשמים; הפיכת LinkedIn ל-authority hub לאנשי HR/CMO בישראל ואירופה; collaborations עם thought leaders בתעשיית האירועים",
+    "שלב 5 (18-36 חודשים): Cross-channel amplification — UGC ממשתתפים באירועים ונסיעות תמריץ; partnerships עם venue brands ו-DMC partners אירופאים; SEO GEO coverage מ-28.6% ל-60%+ להגברת AI search visibility; נורת' סטאר 500K followers מבוסס על LinkedIn+YouTube+Instagram במשולב"
   ],
   "leads_actions": [
-    "הכפל תוכן SEO עברית מסחרי ב-upe.co.il: 3 עמודי landing page חדשים לביטויים 'הפקת נופש חברה' + 'הפקות אירועים לחברות הייטק' + 'הפקת כנסים' — Web מייצר 75% מהלידים, זה ה-ROI הגבוה ביותר",
-    "הוסף CTA ברור בכל עמוד ופוסט: כל עמוד SEO + כל פוסט LinkedIn + כל bio של ערוץ חייב להפנות ל-landing page ייעודי עם טופס 'קבל הצעת מחיר לאירוע 2027' — לא לדף הבית הכללי",
-    "הפעל LinkedIn personal outreach מקהל engagement: כל מי שמגיב/שומר פוסט של executive → בתוך 24 שעות, תגובה אישית + DM עם ערך (לינק למדריך/case study) — אחד מכל 10 שיחות הופך לפגישה",
-    "בנה סדרת 'Social Proof' חודשית ב-LinkedIn: case study קצר (3 פסקאות) עם לקוח אמיתי, מספרים, ו-quote — social proof מפחית perceived risk ב-B2B ומאיץ החלטת רכישה",
-    "טפל בפער הייחוס '(none)': 2 לידים מ-'none' ו-1 מ-'Word of mouth' — צור שאלה ב-intake form 'איך שמעת עלינו?' ובקש מהצוות לתייג כל ליד חדש ב-Salesforce; נתון זה יחשוף ערוצים נסתרים",
-    "Target 2027 Urgency Content: הפוסט המוביל ב-Instagram גע ב-'תאריכי 2027 נעלמים' — הרחב אסטרטגיה זו ל-LinkedIn ו-YouTube Shorts: 'Venue Availability 2027' content יוצר FOMO אצל CMOs/Event Leads ומאיץ יצירת קשר"
+    "להאיץ את ה-SEO העברי: upe.co.il קליקים ירדו ב-55% — לייצר דפי שירות ממוקדים ל'הפקת נופש חברה' (1,709 חיפושים, עמדה 9) ו'הפקות אירועים לחברות הייטק' (165 חיפושים, עמדה 9.4) כדי לחזור לנפח קליקים של 190+; זהו הערוץ שמייצר 70% מהלידים",
+    "GEO/AI Visibility: רק 2/7 אתרים מצוינים ב-AI Search — לכתוב תוכן מבנה E-E-A-T (ניסיון, מומחיות, סמכות, אמינות) עם FAQ schema, client quotes, ו-specific case data כדי להיכלל בתשובות ChatGPT/Perplexity/Google AI Overview לשאילתות כמו 'best corporate event company Israel'",
+    "LinkedIn Lead Magnet: ליצור מדריך להורדה 'ROI Calculator — כמה שווה נסיעת תמריץ לצוות של 50 איש?' ולשתף מפרופילים אישיים של מנהלים; B2B decision makers שמורידים תוכן כזה הם qualified prospects שנמצאים בשלב בחינה פעילה",
+    "Case Study Pipeline: לכל פרויקט שמסתיים לייצר מיד mini case study (challenge / solution / outcome) — לפרסם ב-LinkedIn ול-embed ב-upe.co.il; תוכן זה גם בונה SEO authority וגם מקצר sales cycle כי הפרוספקט רואה תוצאות דומות לשלו",
+    "upe-spain.com Lead Funnel: לבנות contact form ייעודי לשוק האירופי עם 'Request a Proposal for International Event' — לקשר אליו מדפי ה-keyword החדשים; 43 קליקים שבועיים בשוק אירופי = פוטנציאל גבוה יותר ל-deal size מהממוצע הישראלי",
+    "Word-of-mouth amplification: ליד מ-Word of Mouth כבר קיים — לבנות תהליך מסודר לבקשת referrals אחרי כל אירוע מוצלח; להוסיף testimonial request אוטומטי 2 שבועות אחרי סיום פרויקט עם לינק לדף case study; referrals ממוקדים מגדילים close rate ב-B2B ב-30-50% ביחס ל-inbound קר"
   ]
 }
