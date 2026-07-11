@@ -166,13 +166,15 @@ def pick_next_day():
         published |= queue.published_days()
     except Exception as e:
         print(f"warn: could not read published_days from Supabase: {e}")
-    today = datetime.date.today().isoformat()
     for day in range(1, 131):
         if not glob.glob(os.path.join(ROOT, "content", "days", f"*day{day}-*.json")):
             continue
         if day in published:
             continue
-        if queue.day_enqueued(day, today):
+        # Any-date check: a day still pending/approved from a previous morning
+        # must not be enqueued again (duplicate rows → approve_all publishes twice).
+        # Stuck pending days are re-surfaced by scripts/resend_pending.py, not here.
+        if queue.day_awaiting(day):
             continue
         return day
     return None

@@ -34,6 +34,17 @@ def day_enqueued(day, scheduled_date):
     return len(r) > 0
 
 
+def day_awaiting(day):
+    """Day already has live rows (pending/approved/published) on ANY date.
+    A day awaiting approval must not be re-enqueued the next morning — that
+    creates duplicate rows, and one approve_all click then double-publishes
+    (happened with day 75, 10-11.07.2026). Rejected-only days stay eligible."""
+    r = _req("GET", "post_approvals",
+             params={"select": "id", "day": f"eq.{day}",
+                     "status": "in.(pending,approved,published)", "limit": "1"})
+    return len(r) > 0
+
+
 def list_approved_unpublished():
     return _req("GET", "post_approvals",
                 params={"select": "*", "status": "eq.approved", "order": "day.asc"})
