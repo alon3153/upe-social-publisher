@@ -116,6 +116,11 @@ HARD CONSTRAINTS (UPE iron rules) — respect these when classifying actions:
 
 Here is this period's real data (Metricool). Note caveats: some networks under-report impressions
 (FB engagement_rate flagged unreliable; TikTok reports reach not impressions).
+METHODOLOGY CAVEAT — impressions growth: post metrics are LIFETIME values bucketed by publish date
+(current 7d window vs the 7d before it). A single viral post rolling out of the current window
+produces a mechanical cliff in "growth" that is NOT a real audience collapse. Before declaring a
+systemic crash, check whether most of the delta comes from one network / one top post (typically
+YouTube) and say so explicitly in the verdict.
 
 DATA:
 {data}
