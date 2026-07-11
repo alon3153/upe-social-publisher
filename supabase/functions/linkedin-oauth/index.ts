@@ -36,17 +36,13 @@ async function loadConfig() {
 }
 
 function page(title: string, body: string, ok = true): Response {
-  const color = ok ? "#1a7f4b" : "#b00020";
-  const html = `<!doctype html><html dir="rtl" lang="he"><head><meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>${title}</title></head>
-<body style="font-family:Arial,Helvetica,sans-serif;direction:rtl;text-align:center;background:#faf8f3;padding:40px 20px;">
-<div style="max-width:460px;margin:0 auto;background:#fff;border-radius:16px;padding:32px;box-shadow:0 4px 20px rgba(0,0,0,.08);">
-<div style="font-size:48px;margin-bottom:12px;">${ok ? "✅" : "⚠️"}</div>
-<h1 style="color:${color};font-size:22px;margin:0 0 12px;">${title}</h1>
-<p style="color:#444;font-size:16px;line-height:1.6;">${body}</p>
-</div></body></html>`;
-  return new Response(html, { status: 200, headers: { "Content-Type": "text/html; charset=utf-8" } });
+  // Supabase serves all edge-function responses on *.supabase.co as text/plain
+  // (anti-phishing). So return CLEAN plain text — HTML would show as raw tags.
+  const plain = body.replace(/<br\s*\/?>/gi, "\n").replace(/<[^>]+>/g, "");
+  const text = `${ok ? "✅" : "⚠️"}  ${title}\n\n${plain}\n`;
+  const headers = new Headers();
+  headers.set("content-type", "text/plain; charset=utf-8");
+  return new Response(text, { status: 200, headers });
 }
 
 async function exchangeCode(cfg: { cid: string; csec: string; redir: string }, code: string) {
