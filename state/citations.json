@@ -7,36 +7,48 @@
       "title": "פיץ' BizBash (טיוטה פתוחה באאוטלוק)",
       "state": "submitted",
       "since": "2026-07-06",
-      "action": "נשלח ל-editor@bizbash.com — follow-up אוטומטי ביום 5 וביום 10",
+      "action": "נשלח ל-editor@bizbash.com (⚠️ נשלח 3 פעמים 06-07.07 — לא לשלוח שוב עד תשובה; follow-up יום 10 בלבד)",
       "target_url": "",
-      "kind": "press"
+      "kind": "press",
+      "followups_handled": [
+        5
+      ]
     },
     {
       "id": "press_eventmarketer",
       "title": "פיץ' Event Marketer (טיוטה פתוחה באאוטלוק)",
       "state": "submitted",
       "since": "2026-07-06",
-      "action": "נשלח ל-editorial@eventmarketer.com — follow-up אוטומטי ביום 5 וביום 10",
+      "action": "נשלח ל-editorial@eventmarketer.com (⚠️ נשלח 4 פעמים 06-08.07 — לא לשלוח שוב עד תשובה; follow-up יום 10 בלבד)",
       "target_url": "",
-      "kind": "press"
+      "kind": "press",
+      "followups_handled": [
+        5
+      ]
     },
     {
       "id": "press_globes",
       "title": "פיץ' גלובס/דה-מרקר (טיוטה פתוחה באאוטלוק)",
       "state": "submitted",
       "since": "2026-07-06",
-      "action": "נשלח ל-editor@globes.co.il — follow-up אוטומטי ביום 5 וביום 10",
+      "action": "נשלח ל-editor@globes.co.il — טיוטת follow-up יום 5 נוצרה 11.07 באאוטלוק, ממתינה לשליחת אלון",
       "target_url": "",
-      "kind": "press"
+      "kind": "press",
+      "followups_handled": [
+        5
+      ]
     },
     {
       "id": "press_ctech",
       "title": "פיץ' CTech/NoCamels (טיוטה פתוחה באאוטלוק)",
       "state": "submitted",
       "since": "2026-07-06",
-      "action": "נשלח ל-ctech@calcalist.co.il — follow-up אוטומטי ביום 5 וביום 10",
+      "action": "נשלח ל-ctech@calcalist.co.il — טיוטת follow-up יום 5 נוצרה 11.07 באאוטלוק, ממתינה לשליחת אלון",
       "target_url": "",
-      "kind": "press"
+      "kind": "press",
+      "followups_handled": [
+        5
+      ]
     },
     {
       "id": "dir_cvent",

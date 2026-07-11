@@ -81,7 +81,9 @@ def overdue_reminders(data=None, now=None):
         days = int(hours // 24)
         if item["state"] == "awaiting_founder" and hours >= REMIND_HOURS:
             out.append(f'{item["title"]} — {item["action"]} (ממתין {days} ימים)')
-        elif item["state"] == "submitted" and item.get("kind") == "press" and days in PRESS_FOLLOWUP_DAYS:
+        elif (item["state"] == "submitted" and item.get("kind") == "press"
+              and days in PRESS_FOLLOWUP_DAYS
+              and days not in item.get("followups_handled", [])):
             out.append(f'📨 follow-up לפיץ\' {item["title"]} — יום {days} ללא מענה, שלח תזכורת')
     return out
 

@@ -57,3 +57,13 @@ def test_press_followup_reminders_day5():
     now = datetime.datetime(2026, 7, 6, 12, 0)
     rem = cp.overdue_reminders(d, now=now)
     assert len(rem) == 1 and "follow-up" in rem[0]
+
+
+def test_press_followup_skipped_when_handled():
+    d = {"items": [{"id": "p", "title": "P", "state": "submitted", "since": "2026-07-01",
+                    "action": "sent", "target_url": "", "kind": "press",
+                    "followups_handled": [5]}]}
+    now = datetime.datetime(2026, 7, 6, 12, 0)
+    assert cp.overdue_reminders(d, now=now) == []
+    now10 = datetime.datetime(2026, 7, 11, 12, 0)
+    assert len(cp.overdue_reminders(d, now=now10)) == 1
