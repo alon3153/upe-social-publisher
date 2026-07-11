@@ -75,6 +75,25 @@ def _num(v):
         return 0.0
 
 
+def _impressions(p):
+    # Field names differ per network: TikTok uses viewCount; the rest use
+    # impressionsTotal / impressions / views.
+    return _num(p.get("impressionsTotal") or p.get("impressions")
+                or p.get("views") or p.get("viewCount"))
+
+
+def _interactions(p):
+    # TikTok uses likeCount/commentCount/shareCount; FB reports reactions.
+    explicit = _num(p.get("interactions"))
+    if explicit:
+        return explicit
+    total = (_num(p.get("likes") or p.get("likeCount") or p.get("reactions"))
+             + _num(p.get("comments") or p.get("commentCount"))
+             + _num(p.get("shares") or p.get("shareCount"))
+             + _num(p.get("saved")))
+    return max(0.0, total)  # Metricool occasionally returns negatives (seen on YT)
+
+
 def summarize(posts):
     """Aggregate a network's posts into headline numbers."""
     if not posts:
@@ -82,10 +101,10 @@ def summarize(posts):
                 "engagement_rate_pct": 0.0, "top": None}
     impressions = reach = interactions = 0.0
     for p in posts:
-        impressions += _num(p.get("impressionsTotal") or p.get("impressions") or p.get("views"))
-        reach += _num(p.get("reach"))
-        interactions += _num(p.get("interactions") or
-                             (_num(p.get("likes")) + _num(p.get("comments")) + _num(p.get("shares")) + _num(p.get("saved"))))
+        impressions += _impressions(p)
+        # FB has no "reach" key — its unique-viewers field is impressionsUnique
+        reach += _num(p.get("reach") or p.get("impressionsUnique"))
+        interactions += _interactions(p)
     # Per-network field gaps: some networks (e.g. TikTok) report reach but not
     # impressions. Use reach as the impressions denominator when impressions is 0.
     denom = impressions if impressions > 0 else reach
@@ -96,7 +115,7 @@ def summarize(posts):
         er = min(er, 100.0)
 
     def _score(p):
-        return _num(p.get("interactions")) + _num(p.get("impressionsTotal") or p.get("impressions") or p.get("views"))
+        return _interactions(p) + _impressions(p)
     top = max(posts, key=_score)
     return {
         "posts": len(posts),
@@ -108,8 +127,8 @@ def summarize(posts):
         "top": {
             "url": top.get("url"),
             "content": (top.get("content") or "")[:160],
-            "impressions": int(_num(top.get("impressionsTotal") or top.get("impressions") or top.get("views"))),
-            "interactions": int(_num(top.get("interactions"))),
+            "impressions": int(_impressions(top)),
+            "interactions": int(_interactions(top)),
         },
     }
 
