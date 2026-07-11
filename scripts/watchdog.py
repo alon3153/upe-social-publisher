@@ -79,6 +79,26 @@ def check_backlog():
     return [f"🟠 {len(rows)} פוסטים תקועים בהמתנה לאישור מעל {BACKLOG_AGE_DAYS} ימים (ימים: {days}). אשר/דחה במייל היומי."]
 
 
+def check_duplicates():
+    """Same day+network+lang alive more than once (pending/approved) — a
+    re-enqueue bug symptom; one approve_all click then publishes twice."""
+    try:
+        rows = queue._req("GET", "post_approvals", params={
+            "select": "day,network,lang", "status": "in.(pending,approved)"})
+    except Exception as e:
+        return [f"⚠️ לא ניתן לבדוק שכפולים בתור: {e}"]
+    counts = {}
+    for r in rows:
+        k = (r.get("day"), r.get("network"), r.get("lang"))
+        counts[k] = counts.get(k, 0) + 1
+    dups = {k: v for k, v in counts.items() if v > 1 and k[0] is not None}
+    if not dups:
+        return []
+    days = sorted({k[0] for k in dups})
+    return [f"🔴 שכפול בתור האישורים: {len(dups)} צירופי יום/רשת/שפה חיים יותר מפעם אחת (ימים: {days}). "
+            f"סכנת פרסום כפול — לדחות (reject) את הסט הישן לפני אישור/פרסום."]
+
+
 def send_graph(subject, body_text):
     tenant = os.environ.get("MS_GRAPH_TENANT_ID"); cid = os.environ.get("MS_GRAPH_CLIENT_ID")
     secret = os.environ.get("MS_GRAPH_CLIENT_SECRET"); sender = os.environ.get("MS_GRAPH_FROM")
@@ -106,7 +126,7 @@ def send_graph(subject, body_text):
 
 
 def main():
-    issues = check_runway() + check_failures() + check_backlog()
+    issues = check_runway() + check_failures() + check_backlog() + check_duplicates()
     if not issues:
         print("✅ watchdog: all healthy (runway ok, no failures, no backlog)")
         return 0
