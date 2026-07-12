@@ -59,12 +59,15 @@ jobs:
             python scripts/aeo_run.py
           fi
 
-      - name: Persist scorecard history
+      - name: Persist scorecard history + citation/veto state
         if: ${{ inputs.dry_run != true }}
         run: |
           git config user.name "upe-aeo-bot"
           git config user.email "alon@upe.co.il"
-          git add scripts/aeo_history.json 2>/dev/null || true
-          git commit -m "chore(aeo): scorecard history $(date -u +%F)" || echo "no history change"
+          # held_pages.json carries the founder-veto window; citations.json the
+          # external-citation states — both MUST persist across runs or the veto
+          # window never accumulates and citations re-verify from scratch.
+          git add scripts/aeo_history.json state/held_pages.json state/citations.json 2>/dev/null || true
+          git commit -m "chore(aeo): scorecard + citation/veto state $(date -u +%F)" || echo "no change"
           git pull --rebase origin main
           git push
