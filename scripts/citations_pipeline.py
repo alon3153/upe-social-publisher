@@ -36,9 +36,19 @@ def verified_count(data=None):
 
 
 def _fetch(url):
+    # Directory/entity hosts (Crunchbase, Clutch, G2, Cvent) bot-block plain
+    # urllib with a 403, which would make the citation gate permanently
+    # unreachable. Fall back to the keyless r.jina.ai reader (same technique the
+    # digital-maintenance doctor uses) so a live profile can still be verified.
     req = urllib.request.Request(url, headers=UA)
-    with urllib.request.urlopen(req, timeout=30) as r:
-        return r.read().decode("utf-8", errors="replace")
+    try:
+        with urllib.request.urlopen(req, timeout=30) as r:
+            return r.read().decode("utf-8", errors="replace")
+    except Exception:
+        proxied = "https://r.jina.ai/" + url
+        req2 = urllib.request.Request(proxied, headers=UA)
+        with urllib.request.urlopen(req2, timeout=45) as r:
+            return r.read().decode("utf-8", errors="replace")
 
 
 def verify(data=None, path=None, fetch=_fetch, today=None):

@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-06",
+  "updated": "2026-07-12",
   "note": "External-citation pipeline. States: drafted -> awaiting_founder -> submitted -> live -> verified_cited. The weekly crawler advances submitted->live->verified_cited automatically; awaiting_founder items older than 72h are nagged in the daily email.",
   "items": [
     {
@@ -89,10 +89,10 @@
     {
       "id": "entity_crunchbase",
       "title": "פרופיל Crunchbase",
-      "state": "awaiting_founder",
-      "since": "2026-07-05",
-      "action": "צור פרופיל חברה עם העובדות הקנוניות",
-      "target_url": "https://www.crunchbase.com",
+      "state": "verified_cited",
+      "since": "2026-07-12",
+      "action": "פרופיל נוצר ונשמר (11.07) — הסורק מאמת אוטומטית",
+      "target_url": "https://www.crunchbase.com/organization/uproduction-events",
       "kind": "entity"
     },
     {
