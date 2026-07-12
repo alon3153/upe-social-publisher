@@ -112,6 +112,15 @@
       "action": "אשר פרסום מתיקיית AEO-GEO/linkedin",
       "target_url": "",
       "kind": "content"
+    },
+    {
+      "id": "dir_themanifest",
+      "title": "פרופיל The Manifest (מירור Clutch)",
+      "state": "verified_cited",
+      "since": "2026-07-12",
+      "action": "פרופיל קיים חי (established 2010, Barcelona) — הסורק מאמת אוטומטית",
+      "target_url": "https://themanifest.com/company/uproduction-events",
+      "kind": "directory"
     }
   ]
 }
