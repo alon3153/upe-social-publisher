@@ -4,55 +4,55 @@
   "directives": [
     {
       "category": "safe_auto",
-      "action": "LinkedIn: הגדרת 3 pillars של תוכן לחשבון החברה + הנחיית posting-cadence",
-      "detail": "3-5 פוסטים שבועיים בימים ג'-ה' בין 8-10 בבוקר; פורמטים ברוטציה: טקסט-עמוק (800-1,500 תווים), carousel, וידאו קצר (<90 שניות). האלגוריתם 2026 מתגמל dwell-time ועומק — לא תדירות.",
-      "channel": "linkedin"
-    },
-    {
-      "category": "safe_auto",
-      "action": "LinkedIn: הוספת 3-5 hashtags נישתיים בפוסטים עסקיים",
-      "detail": "להימנע מ-hashtags מעל מיליון עוקבים; לשלב #IncentiveTravel #CorporateEvents #MICEIsrael עם 1-2 niche tags ספציפיים לתוכן — מגדיל relevance score ללא שינוי תוכן.",
-      "channel": "linkedin"
-    },
-    {
-      "category": "safe_auto",
-      "action": "Instagram: הפחתה ל-4-5 פוסטים שבועיים + פרוטוקול Reels-first",
-      "detail": "Reels ממשיכות להוביל organic reach עם עלייה של 20% ב-views; static posts ירדו 40% YoY. כל פוסט צריך hook ויזואלי בשנייה הראשונה, מוזיקה טרנדינג, כיתובים מלאים — מספר הפוסטים הנוכחי מדלל התקשרות.",
+      "action": "מעבר ל-Reels-first ב-Instagram: 60-70% Reels, 20-30% Carousels",
+      "detail": "ב-Q1 2026 ה-Reels מחזיקים reach rate של 30.81% ו-55% מהצפיות מגיעים מ-non-followers; Carousels מייצרים 109% יותר engagement per impression — שני הפורמטים חיוניים לגילוי B2B. יש להגדיר קדנציית 3-4 Reels + 2-3 Carousels שבועיים (לא יותר, להימנע מ-audience fatigue).",
       "channel": "instagram"
     },
     {
       "category": "safe_auto",
-      "action": "TikTok: מיפוי content-calendar ל-'behind-the-scenes event production' בפורמט 15-30 שניות",
-      "detail": "פוסטים 3-5 שבועיים; hook תוך שנייה אחת; שימוש ב-trending audio ישראלי. תוכן אירועים אותנטי (time-lapse בניית במה, logistics מצחיק) מבצע טוב יותר מ-corporate messaging על TikTok.",
-      "channel": "tiktok"
+      "action": "הפעלת LinkedIn Newsletter + posting מפרופילים אישיים של מנהלים",
+      "detail": "ב-2026 פרופילים אישיים מייצרים 8x יותר engagement מדפי חברה; LinkedIn Newsletter שולח push notification ישיר עם open rate של 40-60%. יש להגדיר 2-3 קולות אישיים פנימיים (מנהלים) שיפרסמו thought leadership 3-4 פעמים/שבוע, בין ג'-ה' בשעות 8:00-10:00.",
+      "channel": "linkedin"
     },
     {
       "category": "safe_auto",
-      "action": "GSC: מיפוי Top 5 ביטויי הזדמנות לדפי נחיתה ייעודיים",
-      "detail": "'הפקת נופש חברה' (פוזיציה 9, 1,709 חיפושים) — יצירת דף שירות ייעודי מובנה + CTA ברור יגדיל CTR ויפחית bounce; כרגע avg position 34.7 מסמן שהאתר אינו ממפה תוכן לכוונת חיפוש.",
-      "channel": "google_organic_geo"
-    },
-    {
-      "category": "safe_auto",
-      "action": "YouTube: תבנית posting-cadence של 2-3 ווידאו שבועיים עם מבנה קצר + ארוך",
-      "detail": "ווידאו קצר (60-90 שניות Shorts) למשיכת גילוי; ווידאו ארוך (3-8 דקות) לסמכות ו-SEO. הנתונים מראים שמותגי תיירות שמפרסמים פחות אבל ממוקדים רואים עלייה של 181% ב-views — איכות > כמות.",
+      "action": "הוספת YouTube Shorts: מינימום 4 Shorts/שבוע מחומרי גלם קיימים",
+      "detail": "74% מצפיות Shorts מגיעות מ-non-subscribers; ערוצים שמשתמשים ב-Shorts + long-form גדלים 41% מהר יותר. יש לחלץ 60-90 שניות מכל אירוע שמצולם ממילא — behind-the-scenes, logistical reveal, before/after — ולפרסם כ-Shorts נפרדים עם hook חזק ב-1.5 שניות הראשונות.",
       "channel": "youtube"
+    },
+    {
+      "category": "safe_auto",
+      "action": "SEO עברי: מיקוד מיידי ב-3 מילות מפתח long-tail עם הזדמנות גבוהה",
+      "detail": "הביטוי 'הפקת נופש חברה' (position 9, 1,709 חיפושים) הוא המנוף הגדול ביותר — מדירוג 9 לטופ-3 יכפיל clicks ביחס גבוה. יש לבנות cluster pages ייעודיות לכל ביטוי עם intent מסחרי + schema Event/LocalBusiness לשיפור CTR.",
+      "channel": "instagram"
+    },
+    {
+      "category": "safe_auto",
+      "action": "ביטול פוסטים יומיים מ-Facebook ומעבר ל-2 פוסטים/שבוע בלבד",
+      "detail": "Facebook מביא 205 חשיפות ל-13 פוסטים — ROI שלילי על זמן תוכן. עדיף להפנות 80% ממשאבי Facebook לטובת LinkedIn ו-Instagram. לפוסטים שיפורסמו ב-FB — רק repurpose של תוכן שהצליח בפלטפורמה אחרת.",
+      "channel": "facebook"
+    },
+    {
+      "category": "safe_auto",
+      "action": "LinkedIn: posting schedule Tue-Thu 08:00-10:00 + engagement בשעה הראשונה אחרי פרסום",
+      "detail": "אלגוריתם LinkedIn 2026 מעריך כל פוסט ב-60 הדקות הראשונות — engagement מהיר = distribution רחב יותר; posts של 800-1,500 תווים עם dwell time של 15+ שניות מקבלים 40% bonus reach. על נציג UPE להגיב לכל תגובה תוך שעה מהפרסום.",
+      "channel": "linkedin"
     }
   ],
   "follower_growth_plan": [
-    "שנה 1 (בסיס): Employee Advocacy של 3-5 אנשי מפתח ב-LinkedIn (מנכ\"ל + 2 מנהלי הפקה) — פרסום קבוע 2-3x שבוע עם case studies אמיתיים; יעד: 5,000 followers אורגניים על הדפים האישיים המשולבים.",
-    "שנה 1 (וידאו): בנייה שיטתית של ספריית YouTube — 2 ווידאו שבועיים; Shorts למשיכת גילוי + ווידאו מלא לסמכות; YouTube הוא ה-engine האמיתי של UPE עם 85% מהחשיפות — להגביר ייצור לא להקטין.",
-    "שנה 1-2 (Instagram): מעבר ל-Reels-first strategy עם 4 פוסטים שבועיים איכותיים; תוכן 'מאחורי הקלעים' ב-9:16 מיועד לשיתוף ב-Stories של לקוחות וצוותים — לנצל UGC מאירועים.",
-    "שנה 2 (TikTok): בניית קהל ישראלי של מנהלי HR/CMO עם סדרת 'event logistics fails & wins' — תוכן בידורי-מקצועי, לא פרסומי; micro-influencer collaboration עם content creators בתחום הארגוני.",
-    "שנה 2-3 (LinkedIn Newsletter + GEO): הפיכת Newsletter ל-1,000+ subscribers; LinkedIn posts מתחילים להיות מצוטטים ב-AI Search (Perplexity/ChatGPT) — ממצב את UPE כ-thought leader שמופיע גם בחיפוש גנרטיבי.",
-    "שנה 3 (Compounding): תוכן ה-LinkedIn + YouTube + SEO יוצרים flywheel — כל ליד חדש מקבל nurture דיגיטלי מוכן; יעד 500K followers מגיע מצמיחה משולבת של כלל הרשתות עם LinkedIn+YouTube כ-anchors."
+    "שנה 1 (בסיס) — LinkedIn: הפעלת 3 קולות אישיים פנימיים + דף חברה ב-3 פוסטים/שבוע; מיקוד ב-thought leadership MICE ישראלי ואירופאי; יעד: 5,000 followers LinkedIn + 3,000 Instagram",
+    "שנה 1 (בסיס) — YouTube: מעבר ל-70% Shorts / 30% long-form; 4+ Shorts/שבוע מחומרי אירועים קיימים; יעד: 500 subscribers + channel watch time קבוע",
+    "שנה 1-2 (גדילה) — Instagram: Reels-first mix (60-70% Reels, 20-30% Carousels); פרסום קבוע 4-5 פעמים/שבוע; Collabs עם industry accounts באירופה; יעד: 15,000 followers עם 3%+ ER",
+    "שנה 2 (האצה) — LinkedIn Newsletter לאנשי HR ו-Event leads בישראל + ספרד: תוכן ייעודי bi-weekly; newsletter open rate של 40-60% = קהל captive איכותי",
+    "שנה 2-3 (סקייל) — cross-platform flywheel: תוכן YouTube Shorts → repurpose ל-Reels + LinkedIn native video + TikTok (רק אם KPIs משתפרים); GEO citations מגדילות brand authority ומושכות followers אורגניים",
+    "שנה 3 (500K north-star) — employee advocacy program: כל עובד UPE שיתף 1 פוסט/שבוע מרחיב reach ב-factor משמעותי; שיתופי פעולה עם MICE industry accounts (IMEX, SITE) מניעים cross-follower growth"
   ],
   "leads_actions": [
-    "עדיפות 1 — האצת SEO עברי: לכתוב ולהעלות דף ייעודי ל'הפקת נופש חברה' תוך 2 שבועות עם CTA לפגישת ייעוץ חינם — הביטוי כבר בפוזיציה 9 עם 1,709 חיפושים ו-5 לידי Web הוכיחו שהמסלול הזה ממיר.",
-    "עדיפות 2 — LinkedIn Personal Branding של מנכ\"ל: פוסט אישי שבועי על case study אמיתי (אירוע, לוגיסטיקה, לקח) — פרופילים אישיים ב-B2B יוצרים pipeline ישיר ומניבים פי 8 engagement מדף חברה.",
-    "עדיפות 3 — Reactivation של פייפליין קיים: LinkedIn DM אישי מהמנכ\"ל ל-20 prospects ישנים שעקבו אחרי תוכן אבל לא המירו — הודעה בגוף ראשון עם insight רלוונטי, לא פיץ'; מחקרים מראים 3.5x יותר תגובות כשמשלבים LinkedIn עם outreach אישי.",
-    "עדיפות 4 — Case Study Content Machine: כל אירוע שהסתיים → פוסט LinkedIn + דף באתר + YouTube short תוך 72 שעות; case studies סוגרים עסקאות בתחתית הפונל ומשפיעים ישירות על החלטת רכש.",
-    "עדיפות 5 — תיקון attribution ב-Salesforce: הכשרת 30 דקות לצוות המכירות על חיוב מילוי שדה 'Lead Source' — כדי לדעת אם LinkedIn/YouTube/Instagram מתחיל לעבוד לפני שנבצע שינויי תקציב.",
-    "עדיפות 6 — upe-spain.com לידים אירופאיים: יצירת landing page ייעודי ל'incentive travel Spain' עם טופס פגישה; ביטויים בפוזיציות 11-15 עם ביקוש MICE בינלאומי — quick win פוטנציאלי של 1-2 לידים אירופאיים נוספים בחודש."
+    "הכפלת תוכן SEO עברי מסחרי: 4 דפי שירות + cluster pages לביטויים 'הפקת נופש חברה' (position 9, 1,709 חיפושים) ו-'הפקות אירועים לחברות' (position 11, 403 חיפושים) — ה-Web הוא מקור 62% מהלידים הקיימים; שיפור ל-טופ-3 = הגדלה ישירה של volume",
+    "LinkedIn thought leadership אישי: CEO/מנהל בכיר — פוסט שבועי אחד עם case study אנונימי + CTA לשיחת ייעוץ; B2B LinkedIn מייצר 78% מלידי B2B; אחרי 90 יום עקביים ניתן לצפות ל-2-3 לידים/חודש מהערוץ",
+    "הוספת CTA ברור לכל תוכן YouTube: 'לפרטים על הפקת האירוע הבא שלכם — לינק בביו'; engagement rate של 0.03% מוכיח שאין שום conversion architecture; YouTube משפיע על brand search שמוביל ל-Web leads",
+    "שיפור conversion rate של traffic קיים: הוספת contact form מקוצר + live chat ב-upe.co.il; 88 clicks שבועיים עם unknown conversion rate — גם שיפור של 2% = ליד+ חודש",
+    "פולו-אפ שיטתי על '(none)' ו-word-of-mouth leads: 3 מתוך 8 לידים ממקורות לא ידועים — הוספת שדה 'איך שמעת עלינו' בטופס הצור-קשר ישפר attribution ויחשוף ערוצים חבויים שיש לחזק",
+    "upe-spain.com: פיתוח 2 landing pages ב-אנגלית לביטויים 'international product launch event' (position 11, 198 חיפושים) ו-'new hire team building' (position 14.8, 162 חיפושים) — כל ליד אירופאי שווה pipeline גבוה משמעותית"
   ]
 }
