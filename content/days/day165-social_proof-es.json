@@ -1,0 +1,30 @@
+{
+  "day": 165,
+  "category": "social_proof",
+  "language": "es",
+  "date": "",
+  "weekday": "",
+  "theme": "Scale of Trust: 25,000 Participants Don't Lie",
+  "linkedin": {
+    "profile": "Uproduction Events (Company Page)",
+    "text": "En producción de eventos corporativos, la mejor prueba no es un portfolio — es el cliente que regresa para planificar el siguiente.\n\nEn 16 años hemos producido más de 1.500 eventos en más de 130 destinos, con 25.000 participantes que vivieron experiencias diseñadas para dejar huella: desde convenciones multitudinarias hasta viajes de incentivo en destinos de primer nivel.\n\nLo que nos dicen los datos internos es claro: cuando los responsables de RRHH, marketing y ventas tienen un evento de alto impacto que gestionar, vuelven. Eso es el estándar que nos importa mantener.\n\nSi estás definiendo el alcance de un evento corporativo importante para 2026 o 2027, hablemos con detalle — destino, formato, objetivos de negocio.\n\n#EventosCorporativos #IncentiveTravel #ProduccionEventos #B2BEvents"
+  },
+  "instagram": {
+    "profile": "@uproductionevents",
+    "text": "25.000 participantes. 130+ destinos. 1.500+ eventos producidos.\n\nCada número representa una empresa que necesitaba que todo saliera bien — y salió bien.\n\nSi tienes un evento corporativo o un programa de incentivos en mente, queremos escucharte. 👇\n\n#EventosCorporativos #VialesDeIncentivo #ProduccionDeEventos #B2BEvents #EventosGlobales"
+  },
+  "facebook": {
+    "profile": "Uproduction Events (Page)",
+    "text": "25.000 participantes en más de 130 destinos no es un número de marketing — es el resultado de 16 años tomando en serio cada evento que se nos confió.\n\nDetrás de cada cifra hay un director de RRHH o un CMO que apostó por nosotros para algo que importaba de verdad: la convención anual, el viaje de incentivo, el lanzamiento de producto.\n\n¿Estás planificando algo grande para tu equipo? Cuéntanos en los comentarios o escríbenos directamente."
+  },
+  "image_prompt": "A wide-angle candid photograph of several hundred corporate attendees filling a grand ballroom, caught mid-applause under warm amber lighting with a dramatic chandelier overhead and an exotic architectural backdrop, shot from the back of the room toward the stage.",
+  "image_style": "photorealistic, editorial, documentary, 35mm film grain",
+  "brand": {
+    "colors": [
+      "#1C1C1C",
+      "#FBCE0A"
+    ],
+    "font": "Comfortaa",
+    "logo": "uproduction_official_logo.png"
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "day": 165,
+  "category": "social_proof",
+  "language": "he",
+  "date": "",
+  "weekday": "",
+  "theme": "Scale of Trust: 25,000 Participants Don't Lie",
+  "linkedin": {
+    "profile": "Uproduction Events (Company Page)",
+    "text": "בתחום הפקת האירועים הארגוניים, הוכחה אמיתית לביצועים אינה פרס — זה הלקוח שחוזר לברפינג הבא.\n\nב-16 שנות פעילות הפקנו 1,500+ אירועים ב-130+ יעדים, עם 25,000 משתתפים שהיו חלק מחוויות שחברות בחרו להשקיע בהן ברצינות: כנסים שנתיים, טיולי תמריץ, השקות מוצר, ערבי גאלה.\n\nמה שאנחנו רואים שוב ושוב: מנהלי HR, CMOs ומנהלי מכירות שעמדו מולנו בפעם הראשונה — חוזרים לתכנן את הפעם הבאה. זה הבנצ'מרק שמעניין אותנו לשמר.\n\nאם אתם בשלב של הגדרת היקף לאירוע ארגוני משמעותי — כנס, נסיעת תמריץ, השקה — שווה לדבר על הפרטים. אפשר בהודעה ישירה.\n\n#הפקתאירועים #IncentiveTravel #B2BEvents #CorporateEvents"
+  },
+  "instagram": {
+    "profile": "@uproductionevents",
+    "text": "25,000 משתתפים. 130+ יעדים. 1,500+ אירועים שהועברו.\n\nהמספרים האלה לא נולדו בפעם אחת — הם נבנו אירוע אחרי אירוע, עם חברות שרצו שדברים יצאו טוב ויצאו טוב.\n\nאם יש לכם אירוע גדול באופק — ספרו לנו עליו בתגובות. 👇\n\n#הפקתאירועים #נסיעותתמריץ #אירועיםעסקיים #B2BEvents #CorporateEvents"
+  },
+  "facebook": {
+    "profile": "Uproduction Events (Page)",
+    "text": "25,000 משתתפים ב-130+ יעדים — זה לא נתון שיווקי, זה מה שקורה כשחברות חוזרות אליך שוב ושוב כדי להפקיד בידיך את האירוע הכי חשוב שלהן בשנה.\n\n16 שנה. 1,500+ אירועים. כל אחד מהם התחיל בהחלטה של מנהל משאבי אנוש, CMO או מנהל מכירות לסמוך עלינו עם משהו שבאמת משנה.\n\nמה אתם מתכננים עכשיו? כתבו לנו בתגובות או שלחו הודעה ישירה."
+  },
+  "image_prompt": "A wide-angle candid photograph of several hundred corporate attendees filling a grand ballroom, caught mid-applause under warm amber lighting with a dramatic chandelier overhead and an exotic architectural backdrop, shot from the back of the room toward the stage.",
+  "image_style": "photorealistic, editorial, documentary, 35mm film grain",
+  "brand": {
+    "colors": [
+      "#1C1C1C",
+      "#FBCE0A"
+    ],
+    "font": "Comfortaa",
+    "logo": "uproduction_official_logo.png"
+  }
+}
