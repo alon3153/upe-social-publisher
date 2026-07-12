@@ -4,6 +4,7 @@ from pathlib import Path
 
 import aeo_models, aeo_probe, aeo_gaps, aeo_generate, aeo_guards, aeo_publish, aeo_report
 import citations_pipeline
+import held_pages
 import indexnow_ping
 
 ROOT = Path(__file__).resolve().parent
@@ -57,6 +58,7 @@ def run(repo, dry_run, ask_fn=None, judge_fn=None, send_fn=None, runner=None, to
         pass  # no pipeline state — behave as before
 
     pages = []
+    held_now = []
     for brief in briefs:
         try:
             rendered = aeo_generate.render_brief(brief, ask_fn, today)
@@ -68,10 +70,23 @@ def run(repo, dry_run, ask_fn=None, judge_fn=None, send_fn=None, runner=None, to
                 failures.append(f"guard rejected {page['slug']}: {page['violations']}")
                 continue
             comp = aeo_guards.names_competitor(page.get("body", ""))
-            if comp:  # founder veto window — never auto-merge competitor-naming pages
+            if comp:  # founder-veto window — hold (don't drop); auto-merges after the window unless vetoed
+                page["_competitors"] = comp
+                held_now.append(page)
                 failures.append(f"held for founder veto (names competitors {comp}): {page['slug']}")
                 continue
             pages.append(page)
+
+    # Founder-veto window (council 05.07): persist newly-held competitor-naming
+    # pages instead of discarding them, and merge any prior-held page whose 24h
+    # window has elapsed and that Alon did not veto. The weekly email surfaces
+    # what's held + when it will merge.
+    merged_from_hold = []
+    if not dry_run:
+        held_pages.hold(held_now, today)
+        merged_from_hold = held_pages.due_for_merge(today)
+        pages.extend(merged_from_hold)
+    citations_status += held_pages.digest_html(today)
 
     astro_repo = repo if dry_run else os.environ.get("ASTRO_REPO", "/Users/alonouanine/dev/uproduction-astro")
     pub_kwargs = {"dry_run": dry_run}
@@ -79,6 +94,8 @@ def run(repo, dry_run, ask_fn=None, judge_fn=None, send_fn=None, runner=None, to
         pub_kwargs["runner"] = runner
     publish = aeo_publish.publish(astro_repo, pages, f"aeo/{today}", today, **pub_kwargs) if pages else \
         {"branch": None, "files": [], "pr_url": None, "dry_run": dry_run}
+    if merged_from_hold and not dry_run and (publish.get("pr_url") or publish.get("files")):
+        held_pages.release([p["slug"] for p in merged_from_hold])
 
     shipped = [{"title": p["frontmatter"]["title"], "url": p["frontmatter"]["canonical"]} for p in pages]
     if shipped and not dry_run:
