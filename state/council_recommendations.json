@@ -1,72 +1,71 @@
 {
-  "updated_at": "2026-07-12",
+  "updated_at": "2026-07-13",
   "scores": {
-    "instagram": 12,
-    "facebook": 20,
-    "tiktok": 25,
-    "linkedin": 15,
-    "youtube": 48,
-    "google_organic_geo": 35,
-    "overall": 26
+    "instagram": 18,
+    "facebook": 22,
+    "tiktok": 20,
+    "linkedin": 12,
+    "youtube": 35,
+    "google_organic_geo": 38,
+    "overall": 27
   },
   "recommendations": [
     {
       "category": "gated",
       "priority": "P0",
-      "action": "בניית 3 landing pages SEO עבריות ייעודיות: 'הפקת נופש חברה', 'הפקות אירועים לחברות' ו-'הפקת כנסים' — כל עמוד עם case study, תמחור אינדיקטיבי ו-CTA ליצירת קשר",
-      "expected_impact": "מעבר ממדרגה 9-11 לטופ-3 בביטויי ה-core יכול להכפיל clicks מ-88 ל-200+ לשבוע; כל 10% עלייה ב-clicks = כ-1 ליד נוסף/חודש בהנחת conversion rate Web קיים",
-      "channel": "google_organic"
+      "action": "הפעלת קולות אישיים של ההנהלה ב-LinkedIn: CEO/מנהל ביצוע יפרסמו 3 פוסטים שבועיים מפרופיל אישי — POV על תעשיית האירועים, סיפור מהשטח, שאלה פתוחה לקהל",
+      "expected_impact": "פרופילים אישיים מניבים 5-8 פעמים יותר reach מדף חברה; מגמת 2026 ברורה — decision-makers מגיבים לבני אדם לא ללוגו. צפי: +200-400% חשיפות LinkedIn תוך 60 ימים.",
+      "channel": "linkedin"
     },
     {
       "category": "gated",
       "priority": "P0",
-      "action": "השקת LinkedIn thought leadership מפרופיל אישי של CEO/מנהל בכיר: פוסט שבועי אחד בפורמט 'לקחים מאחורי הקלעים' עם מקרי לקוח אנונימיים",
-      "expected_impact": "פרופילים אישיים מייצרים עד 8x יותר engagement מדפי חברה; B2B LinkedIn הוא מקור 78% מכלל לידי B2B — פוסט אחד איכותי/שבוע יכול לייצר 2-3 לידים חדשים/חודש תוך 3-6 חודשים",
+      "action": "דף שירות ייעודי 'הפקת נופש חברה' ב-upe.co.il: 1,500+ מילים עברית, H1-H3 מותאמים, FAQ schema, internal linking, CTA ברור לטופס ייעוץ",
+      "expected_impact": "ביטוי עם 1,709 חיפושים ב-Google בדירוג 9 — קידום לטופ-3 יכפיל CTR מ-~0.5% ל-~10%+, ועל פי נתוני 5 לידים/חודש מ-Web, דף מותאם יכול להוסיף 2-3 לידים חדשים חודשיים.",
       "channel": "linkedin"
     },
     {
       "category": "gated",
       "priority": "P1",
-      "action": "פיתוח סדרת Reels ב-Instagram: 'מה קורה 48 שעות לפני כנס של 500 איש' — 4-6 אפיזודות, הפקת behind-the-scenes מאירועים קיימים",
-      "expected_impact": "Reels מגיעים ל-55% non-followers ומשפרים engagement ב-80-130% לעומת פוסטים סטטיים; פורמט behind-the-scenes מוכיח social proof ישיר לקהל CMO/HR שמחפש הפקה אמינה",
+      "action": "LinkedIn Newsletter חודשי בעברית: 'מבט מאחורי הקלעים — בניית אירועי חברה שמניעים תוצאות'. ניוזלטר עם תוכן 80% educational, 20% case study",
+      "expected_impact": "ניוזלטרים ב-LinkedIn שולחים push notification למנויים ומגיעים ל-40-60% open rate לעומת 20-25% בדוא\"ל רגיל. יוצר opted-in audience שמקבלי ההחלטות ידעו לחכות לו.",
+      "channel": "linkedin"
+    },
+    {
+      "category": "gated",
+      "priority": "P1",
+      "action": "Instagram Reels תחת פורמט קבוע: 'אירוע אחד, 60 שניות' — קליפ מהיר ממאחורי הקלעים של הפקה אמיתית, עם subtitle עברי/אנגלי, 2 פעמים בשבוע",
+      "expected_impact": "תוכן וידאו native עם consistency מסוג אחד מייצר expectation אצל הקהל ו-algorithmic preference. פוטנציאל להכפיל חשיפות Instagram מ-474 ל-1,000+ תוך 30 ימים.",
       "channel": "instagram"
     },
     {
       "category": "gated",
       "priority": "P1",
-      "action": "השקת GEO strategy: כתיבת 2 מאמרי authority בחודש על נושאים כ-'כמה עולה נסיעת תמריץ ל-200 עובדים' ו-'איך בוחרים חברת הפקה לכנס בינלאומי' — מובנים לcitation בתוצאות AI",
-      "expected_impact": "UPE מצוטטת ב-2/7 שאילתות GEO (28.6% rate) — שיפור ל-50%+ יגדיל traffic from AI-powered search שמחליף חיפוש מסורתי; כל citation = חשיפה ישירה למקבל החלטות שמחפש פתרון",
-      "channel": "google_organic"
+      "action": "upe-spain.com: יצירת דפי שירות ייעודיים ל-'international product launch event' ו-'new hire team building' — שני ביטויים בדירוג 11-14 עם נפח חיפושים רלוונטי",
+      "expected_impact": "upe-spain.com כבר מראה יציבות ומגמת עלייה. שני דפים ייעודיים עם keyword targeting מדויק יכולים לדחוף את שני הביטויים לטופ-5 תוך 3-6 חודשים ולייצר לידים אירופאים.",
+      "channel": "linkedin"
     },
     {
       "category": "gated",
       "priority": "P2",
-      "action": "בניית YouTube Shorts content series: 'Event Production 60 Seconds' — חלוצת ידע מקצועי קצר (setup logistics, vendor negotiation tips, AV troubleshooting) לאנשי HR ו-event leads",
-      "expected_impact": "ערוצים עם Shorts + long-form גדלים 41% מהר יותר; Shorts מניעים גילוי non-subscriber שמוביל ל-channel growth לטווח ארוך; תוכן מקצועי מבסס authority בקרב קהל מקבלי ההחלטות",
-      "channel": "youtube"
-    },
-    {
-      "category": "gated",
-      "priority": "P2",
-      "action": "הפסקת פרסום TikTok אקטיבי ואיחוד התוכן ל-Instagram Reels + YouTube Shorts בלבד — ה-reach מגיע מ-non-B2B audience שאינו ממיר",
-      "expected_impact": "חיסכון של 8 פוסטים/שבוע שמופנים לערוצים ממירים; TikTok מייצר reach עם 0 interactions B2B רלוונטיות — עלות ההזדמנות גבוהה מהתועלת",
+      "action": "TikTok: reframe מלידים לבניית קהל — תוכן 'facts מהתעשייה' ו-'מה לא רואים באירועי חברה', פורמט עקבי עם hook ב-2 שניות הראשונות",
+      "expected_impact": "TikTok מציג 726 reach על 7 פוסטים — הפלטפורמה מגיעה לקהל אך לא מניבה engagement. תוכן B2B חינוכי ועקבי מאפשר לגנרציה הצעירה של מקבלי ההחלטות לגלות את UPE בשלב מוקדם.",
       "channel": "tiktok"
     }
   ],
   "follower_growth_plan": [
-    "שנה 1 (בסיס) — LinkedIn: הפעלת 3 קולות אישיים פנימיים + דף חברה ב-3 פוסטים/שבוע; מיקוד ב-thought leadership MICE ישראלי ואירופאי; יעד: 5,000 followers LinkedIn + 3,000 Instagram",
-    "שנה 1 (בסיס) — YouTube: מעבר ל-70% Shorts / 30% long-form; 4+ Shorts/שבוע מחומרי אירועים קיימים; יעד: 500 subscribers + channel watch time קבוע",
-    "שנה 1-2 (גדילה) — Instagram: Reels-first mix (60-70% Reels, 20-30% Carousels); פרסום קבוע 4-5 פעמים/שבוע; Collabs עם industry accounts באירופה; יעד: 15,000 followers עם 3%+ ER",
-    "שנה 2 (האצה) — LinkedIn Newsletter לאנשי HR ו-Event leads בישראל + ספרד: תוכן ייעודי bi-weekly; newsletter open rate של 40-60% = קהל captive איכותי",
-    "שנה 2-3 (סקייל) — cross-platform flywheel: תוכן YouTube Shorts → repurpose ל-Reels + LinkedIn native video + TikTok (רק אם KPIs משתפרים); GEO citations מגדילות brand authority ומושכות followers אורגניים",
-    "שנה 3 (500K north-star) — employee advocacy program: כל עובד UPE שיתף 1 פוסט/שבוע מרחיב reach ב-factor משמעותי; שיתופי פעולה עם MICE industry accounts (IMEX, SITE) מניעים cross-follower growth"
+    "שלב 1 — בסיס (0-3 חודשים): הפעלת 2-3 פרופילים אישיים של הנהלת UPE ב-LinkedIn עם פרסום 3x/שבוע, תחת 3 עמודי תוכן ברורים; מדד הצלחה: 200+ חשיפות לפוסט ב-LinkedIn.",
+    "שלב 2 — מינוף (3-6 חודשים): הצלבת תוכן — קטעי YouTube לוחצים ל-Shorts, Shorts לוחצים לאינסטגרם Reels, Reels לוחצים לדף upe.co.il; כל פורמט תומך בפורמטים האחרים.",
+    "שלב 3 — SEO + GEO (6-12 חודשים): בניית 6 דפי עמוד ייעודיים ב-upe.co.il ו-upe-spain.com לביטויי ה-top opportunities; דירוג לטופ-5 על 'הפקת נופש חברה' יניע traffic אורגני קבוע.",
+    "שלב 4 — Authority (12-24 חודשים): LinkedIn Newsletter עם 500+ מנויים, YouTube Shorts שגורמים לגידול channel subscribers, ו-GEO citations (נוכחי: 2 מתוך 7) מוכפלים ל-5+ — UPE מוזכרת ב-AI search כ-go-to supplier.",
+    "שלב 5 — Scale (24-36 חודשים): employee advocacy program — כל עובד UPE משתף תוכן מקצועי 1x/שבוע; הדבר כובש reach אורגני שאפילו תקציב פרסום לא יכול לקנות, לפי נתוני 2026 על ה-power של personal profiles."
   ],
   "leads_actions": [
-    "הכפלת תוכן SEO עברי מסחרי: 4 דפי שירות + cluster pages לביטויים 'הפקת נופש חברה' (position 9, 1,709 חיפושים) ו-'הפקות אירועים לחברות' (position 11, 403 חיפושים) — ה-Web הוא מקור 62% מהלידים הקיימים; שיפור ל-טופ-3 = הגדלה ישירה של volume",
-    "LinkedIn thought leadership אישי: CEO/מנהל בכיר — פוסט שבועי אחד עם case study אנונימי + CTA לשיחת ייעוץ; B2B LinkedIn מייצר 78% מלידי B2B; אחרי 90 יום עקביים ניתן לצפות ל-2-3 לידים/חודש מהערוץ",
-    "הוספת CTA ברור לכל תוכן YouTube: 'לפרטים על הפקת האירוע הבא שלכם — לינק בביו'; engagement rate של 0.03% מוכיח שאין שום conversion architecture; YouTube משפיע על brand search שמוביל ל-Web leads",
-    "שיפור conversion rate של traffic קיים: הוספת contact form מקוצר + live chat ב-upe.co.il; 88 clicks שבועיים עם unknown conversion rate — גם שיפור של 2% = ליד+ חודש",
-    "פולו-אפ שיטתי על '(none)' ו-word-of-mouth leads: 3 מתוך 8 לידים ממקורות לא ידועים — הוספת שדה 'איך שמעת עלינו' בטופס הצור-קשר ישפר attribution ויחשוף ערוצים חבויים שיש לחזק",
-    "upe-spain.com: פיתוח 2 landing pages ב-אנגלית לביטויים 'international product launch event' (position 11, 198 חיפושים) ו-'new hire team building' (position 14.8, 162 חיפושים) — כל ליד אירופאי שווה pipeline גבוה משמעותית"
+    "דאבל-דאון על Web (הערוץ הדומיננטי ב-62%): תעדוף מיידי של קידום 'הפקת נופש חברה' לטופ-5 ב-Google — דף ייעודי, FAQ schema, internal links. כל עלייה בדירוג = עוד לידים Web ישירים.",
+    "LinkedIn → Web funnel: בכל פוסט LinkedIn של הנהלה — הוספת 'הלינק בתגובה הראשונה' לדף שירות רלוונטי; הפניית decision-makers ישירות לנקודות המרה ב-upe.co.il.",
+    "YouTube CTA מובנה: כל וידאו ב-YouTube מסתיים ב-CTA מפורש — 'רוצים הצעת מחיר? הלינק בתיאור'; הוספת דף נחיתה ייעודי מ-YouTube שמדיד בנפרד ב-Salesforce.",
+    "Word of Mouth (12.5% מהלידים): פורמליזציה של תוכנית referral — לכל לקוח מרוצה לאחר אירוע, בקשה מובנית להפניה + תוכן שקל לשתף ב-WhatsApp ו-LinkedIn.",
+    "לידים '(none)' (2 ליד): תיוג מיידי בתהליך הכניסה — בשיחת הגילוי הראשונה שאלו 'איך שמעתם עלינו?'; עדכון Salesforce manually. מידע זה קריטי לדעת אם הם מגיעים מסושיאל לא מתוייג.",
+    "upe-spain.com פייפליין: הוספת CTA ברור בדפי השירות הספרדיים + טופס פנייה קצר באנגלית; כיום ה-site מקבלת 43 קליקים/שבוע ללא conversion path ברור — זהו ליד פוטנציאלי שהולך לאיבוד."
   ]
 }
