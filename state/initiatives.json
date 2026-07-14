@@ -281,7 +281,7 @@
       }
     ],
     "created": "2026-06-28",
-    "updated": "2026-07-09",
+    "updated": "2026-07-14",
     "kind": "recommendation",
     "priority": "P0",
     "channel": "linkedin",
@@ -300,7 +300,7 @@
       }
     ],
     "created": "2026-06-28",
-    "updated": "2026-07-09",
+    "updated": "2026-07-14",
     "kind": "recommendation",
     "priority": "P1",
     "channel": "youtube",
@@ -502,7 +502,7 @@
       }
     ],
     "created": "2026-06-29",
-    "updated": "2026-06-30",
+    "updated": "2026-07-14",
     "kind": "recommendation",
     "priority": "P0",
     "channel": "linkedin",
@@ -521,7 +521,7 @@
       }
     ],
     "created": "2026-06-29",
-    "updated": "2026-06-30",
+    "updated": "2026-07-14",
     "kind": "recommendation",
     "priority": "P0",
     "channel": "youtube",
@@ -540,7 +540,7 @@
       }
     ],
     "created": "2026-06-29",
-    "updated": "2026-06-30",
+    "updated": "2026-07-14",
     "kind": "recommendation",
     "priority": "P1",
     "channel": "linkedin",
@@ -577,7 +577,7 @@
       }
     ],
     "created": "2026-06-29",
-    "updated": "2026-06-30",
+    "updated": "2026-07-14",
     "kind": "recommendation",
     "priority": "P1",
     "channel": "tiktok",
@@ -596,7 +596,7 @@
       }
     ],
     "created": "2026-06-29",
-    "updated": "2026-06-30",
+    "updated": "2026-07-14",
     "kind": "recommendation",
     "priority": "P2",
     "channel": "facebook",
@@ -747,7 +747,7 @@
       }
     ],
     "created": "2026-06-30",
-    "updated": "2026-07-09",
+    "updated": "2026-07-14",
     "kind": "recommendation",
     "priority": "P0",
     "channel": "linkedin",
@@ -766,7 +766,7 @@
       }
     ],
     "created": "2026-06-30",
-    "updated": "2026-07-09",
+    "updated": "2026-07-14",
     "kind": "recommendation",
     "priority": "P0",
     "channel": "tiktok",
@@ -785,7 +785,7 @@
       }
     ],
     "created": "2026-06-30",
-    "updated": "2026-07-09",
+    "updated": "2026-07-14",
     "kind": "recommendation",
     "priority": "P0",
     "channel": "linkedin",
@@ -804,7 +804,7 @@
       }
     ],
     "created": "2026-06-30",
-    "updated": "2026-07-09",
+    "updated": "2026-07-14",
     "kind": "recommendation",
     "priority": "P1",
     "channel": "linkedin",
@@ -823,7 +823,7 @@
       }
     ],
     "created": "2026-06-30",
-    "updated": "2026-07-09",
+    "updated": "2026-07-14",
     "kind": "recommendation",
     "priority": "P1",
     "channel": "youtube",
@@ -842,7 +842,7 @@
       }
     ],
     "created": "2026-06-30",
-    "updated": "2026-07-09",
+    "updated": "2026-07-14",
     "kind": "recommendation",
     "priority": "P2",
     "channel": "youtube",
@@ -993,7 +993,7 @@
       }
     ],
     "created": "2026-07-01",
-    "updated": "2026-07-02",
+    "updated": "2026-07-14",
     "kind": "recommendation",
     "priority": "P0",
     "channel": "linkedin",
@@ -1030,7 +1030,7 @@
       }
     ],
     "created": "2026-07-01",
-    "updated": "2026-07-02",
+    "updated": "2026-07-14",
     "kind": "recommendation",
     "priority": "P1",
     "channel": "youtube",
@@ -1049,7 +1049,7 @@
       }
     ],
     "created": "2026-07-01",
-    "updated": "2026-07-02",
+    "updated": "2026-07-14",
     "kind": "recommendation",
     "priority": "P1",
     "channel": "linkedin",
@@ -1068,7 +1068,7 @@
       }
     ],
     "created": "2026-07-01",
-    "updated": "2026-07-02",
+    "updated": "2026-07-14",
     "kind": "recommendation",
     "priority": "P2",
     "channel": "google_organic_geo",
@@ -1087,7 +1087,7 @@
       }
     ],
     "created": "2026-07-01",
-    "updated": "2026-07-09",
+    "updated": "2026-07-14",
     "kind": "recommendation",
     "priority": "P2",
     "channel": "instagram",
@@ -1250,7 +1250,7 @@
       }
     ],
     "created": "2026-07-02",
-    "updated": "2026-07-03",
+    "updated": "2026-07-14",
     "kind": "recommendation",
     "priority": "P0",
     "channel": "linkedin",
@@ -1269,7 +1269,7 @@
       }
     ],
     "created": "2026-07-02",
-    "updated": "2026-07-03",
+    "updated": "2026-07-14",
     "kind": "recommendation",
     "priority": "P0",
     "channel": "linkedin",
@@ -1288,7 +1288,7 @@
       }
     ],
     "created": "2026-07-02",
-    "updated": "2026-07-03",
+    "updated": "2026-07-14",
     "kind": "recommendation",
     "priority": "P1",
     "channel": "google_organic_geo",
@@ -1307,7 +1307,7 @@
       }
     ],
     "created": "2026-07-02",
-    "updated": "2026-07-03",
+    "updated": "2026-07-14",
     "kind": "recommendation",
     "priority": "P1",
     "channel": "instagram",
@@ -1326,7 +1326,7 @@
       }
     ],
     "created": "2026-07-02",
-    "updated": "2026-07-03",
+    "updated": "2026-07-14",
     "kind": "recommendation",
     "priority": "P1",
     "channel": "google_organic_geo",
@@ -1345,7 +1345,7 @@
       }
     ],
     "created": "2026-07-02",
-    "updated": "2026-07-03",
+    "updated": "2026-07-14",
     "kind": "recommendation",
     "priority": "P2",
     "channel": "facebook",
@@ -1508,7 +1508,7 @@
       }
     ],
     "created": "2026-07-03",
-    "updated": "2026-07-09",
+    "updated": "2026-07-14",
     "kind": "recommendation",
     "priority": "P0",
     "channel": "google_organic_geo",
@@ -1527,7 +1527,7 @@
       }
     ],
     "created": "2026-07-03",
-    "updated": "2026-07-04",
+    "updated": "2026-07-14",
     "kind": "recommendation",
     "priority": "P0",
     "channel": "linkedin",
@@ -1546,7 +1546,7 @@
       }
     ],
     "created": "2026-07-03",
-    "updated": "2026-07-04",
+    "updated": "2026-07-14",
     "kind": "recommendation",
     "priority": "P1",
     "channel": "linkedin",
@@ -1565,7 +1565,7 @@
       }
     ],
     "created": "2026-07-03",
-    "updated": "2026-07-04",
+    "updated": "2026-07-14",
     "kind": "recommendation",
     "priority": "P1",
     "channel": "linkedin",
@@ -1584,7 +1584,7 @@
       }
     ],
     "created": "2026-07-03",
-    "updated": "2026-07-04",
+    "updated": "2026-07-14",
     "kind": "recommendation",
     "priority": "P1",
     "channel": "google_organic_geo",
@@ -1603,7 +1603,7 @@
       }
     ],
     "created": "2026-07-03",
-    "updated": "2026-07-04",
+    "updated": "2026-07-14",
     "kind": "recommendation",
     "priority": "P2",
     "channel": "youtube",
@@ -1766,7 +1766,7 @@
       }
     ],
     "created": "2026-07-04",
-    "updated": "2026-07-09",
+    "updated": "2026-07-14",
     "kind": "recommendation",
     "priority": "P0",
     "channel": "linkedin",
@@ -1785,7 +1785,7 @@
       }
     ],
     "created": "2026-07-04",
-    "updated": "2026-07-09",
+    "updated": "2026-07-14",
     "kind": "recommendation",
     "priority": "P0",
     "channel": "google_organic_geo",
@@ -1804,7 +1804,7 @@
       }
     ],
     "created": "2026-07-04",
-    "updated": "2026-07-09",
+    "updated": "2026-07-14",
     "kind": "recommendation",
     "priority": "P1",
     "channel": "linkedin",
@@ -1823,7 +1823,7 @@
       }
     ],
     "created": "2026-07-04",
-    "updated": "2026-07-09",
+    "updated": "2026-07-14",
     "kind": "recommendation",
     "priority": "P1",
     "channel": "google_organic_geo",
@@ -1842,7 +1842,7 @@
       }
     ],
     "created": "2026-07-04",
-    "updated": "2026-07-06",
+    "updated": "2026-07-14",
     "kind": "recommendation",
     "priority": "P1",
     "channel": "youtube",
@@ -1861,7 +1861,7 @@
       }
     ],
     "created": "2026-07-04",
-    "updated": "2026-07-09",
+    "updated": "2026-07-14",
     "kind": "recommendation",
     "priority": "P2",
     "channel": "google_organic_geo",
@@ -2030,7 +2030,7 @@
       }
     ],
     "created": "2026-07-07",
-    "updated": "2026-07-09",
+    "updated": "2026-07-14",
     "kind": "recommendation",
     "priority": "P0",
     "channel": "linkedin",
@@ -2049,7 +2049,7 @@
       }
     ],
     "created": "2026-07-07",
-    "updated": "2026-07-08",
+    "updated": "2026-07-14",
     "kind": "recommendation",
     "priority": "P1",
     "channel": "linkedin",
@@ -2068,7 +2068,7 @@
       }
     ],
     "created": "2026-07-07",
-    "updated": "2026-07-08",
+    "updated": "2026-07-14",
     "kind": "recommendation",
     "priority": "P1",
     "channel": "youtube",
@@ -2087,7 +2087,7 @@
       }
     ],
     "created": "2026-07-07",
-    "updated": "2026-07-08",
+    "updated": "2026-07-14",
     "kind": "recommendation",
     "priority": "P1",
     "channel": "google_organic_geo",
@@ -2106,7 +2106,7 @@
       }
     ],
     "created": "2026-07-07",
-    "updated": "2026-07-08",
+    "updated": "2026-07-14",
     "kind": "recommendation",
     "priority": "P2",
     "channel": "instagram",
@@ -2269,7 +2269,7 @@
       }
     ],
     "created": "2026-07-08",
-    "updated": "2026-07-09",
+    "updated": "2026-07-14",
     "kind": "recommendation",
     "priority": "P0",
     "channel": "linkedin",
@@ -2288,7 +2288,7 @@
       }
     ],
     "created": "2026-07-08",
-    "updated": "2026-07-09",
+    "updated": "2026-07-14",
     "kind": "recommendation",
     "priority": "P0",
     "channel": "google_organic_geo",
@@ -2307,7 +2307,7 @@
       }
     ],
     "created": "2026-07-08",
-    "updated": "2026-07-09",
+    "updated": "2026-07-14",
     "kind": "recommendation",
     "priority": "P1",
     "channel": "instagram",
@@ -2326,7 +2326,7 @@
       }
     ],
     "created": "2026-07-08",
-    "updated": "2026-07-09",
+    "updated": "2026-07-14",
     "kind": "recommendation",
     "priority": "P1",
     "channel": "youtube",
@@ -2345,7 +2345,7 @@
       }
     ],
     "created": "2026-07-08",
-    "updated": "2026-07-09",
+    "updated": "2026-07-14",
     "kind": "recommendation",
     "priority": "P2",
     "channel": "linkedin",
@@ -2364,7 +2364,7 @@
       }
     ],
     "created": "2026-07-08",
-    "updated": "2026-07-09",
+    "updated": "2026-07-14",
     "kind": "recommendation",
     "priority": "P2",
     "channel": "google_organic_geo",
@@ -2527,7 +2527,7 @@
       }
     ],
     "created": "2026-07-09",
-    "updated": "2026-07-10",
+    "updated": "2026-07-14",
     "kind": "recommendation",
     "priority": "P0",
     "channel": "linkedin",
@@ -2546,7 +2546,7 @@
       }
     ],
     "created": "2026-07-09",
-    "updated": "2026-07-10",
+    "updated": "2026-07-14",
     "kind": "recommendation",
     "priority": "P0",
     "channel": "google_organic_geo",
@@ -2565,7 +2565,7 @@
       }
     ],
     "created": "2026-07-09",
-    "updated": "2026-07-10",
+    "updated": "2026-07-14",
     "kind": "recommendation",
     "priority": "P1",
     "channel": "linkedin",
@@ -2584,7 +2584,7 @@
       }
     ],
     "created": "2026-07-09",
-    "updated": "2026-07-10",
+    "updated": "2026-07-14",
     "kind": "recommendation",
     "priority": "P1",
     "channel": "youtube",
@@ -2603,7 +2603,7 @@
       }
     ],
     "created": "2026-07-09",
-    "updated": "2026-07-10",
+    "updated": "2026-07-14",
     "kind": "recommendation",
     "priority": "P1",
     "channel": "google_organic_geo",
@@ -2622,7 +2622,7 @@
       }
     ],
     "created": "2026-07-09",
-    "updated": "2026-07-10",
+    "updated": "2026-07-14",
     "kind": "recommendation",
     "priority": "P2",
     "channel": "instagram",
@@ -2773,7 +2773,7 @@
       }
     ],
     "created": "2026-07-10",
-    "updated": "2026-07-11",
+    "updated": "2026-07-14",
     "kind": "recommendation",
     "priority": "P0",
     "channel": "google_organic_geo",
@@ -2792,7 +2792,7 @@
       }
     ],
     "created": "2026-07-10",
-    "updated": "2026-07-11",
+    "updated": "2026-07-14",
     "kind": "recommendation",
     "priority": "P0",
     "channel": "linkedin",
@@ -2811,7 +2811,7 @@
       }
     ],
     "created": "2026-07-10",
-    "updated": "2026-07-11",
+    "updated": "2026-07-14",
     "kind": "recommendation",
     "priority": "P1",
     "channel": "youtube",
@@ -2830,7 +2830,7 @@
       }
     ],
     "created": "2026-07-10",
-    "updated": "2026-07-11",
+    "updated": "2026-07-14",
     "kind": "recommendation",
     "priority": "P1",
     "channel": "google_organic_geo",
@@ -2849,7 +2849,7 @@
       }
     ],
     "created": "2026-07-10",
-    "updated": "2026-07-11",
+    "updated": "2026-07-14",
     "kind": "recommendation",
     "priority": "P2",
     "channel": "instagram",
@@ -2868,7 +2868,7 @@
       }
     ],
     "created": "2026-07-10",
-    "updated": "2026-07-11",
+    "updated": "2026-07-14",
     "kind": "recommendation",
     "priority": "P2",
     "channel": "google_organic_geo",
@@ -3031,7 +3031,7 @@
       }
     ],
     "created": "2026-07-11",
-    "updated": "2026-07-13",
+    "updated": "2026-07-14",
     "kind": "recommendation",
     "priority": "P0",
     "channel": "google_organic_geo",
@@ -3050,7 +3050,7 @@
       }
     ],
     "created": "2026-07-11",
-    "updated": "2026-07-13",
+    "updated": "2026-07-14",
     "kind": "recommendation",
     "priority": "P0",
     "channel": "linkedin",
@@ -3069,7 +3069,7 @@
       }
     ],
     "created": "2026-07-11",
-    "updated": "2026-07-13",
+    "updated": "2026-07-14",
     "kind": "recommendation",
     "priority": "P1",
     "channel": "linkedin",
@@ -3088,7 +3088,7 @@
       }
     ],
     "created": "2026-07-11",
-    "updated": "2026-07-13",
+    "updated": "2026-07-14",
     "kind": "recommendation",
     "priority": "P1",
     "channel": "youtube",
@@ -3107,7 +3107,7 @@
       }
     ],
     "created": "2026-07-11",
-    "updated": "2026-07-13",
+    "updated": "2026-07-14",
     "kind": "recommendation",
     "priority": "P1",
     "channel": "google_organic_geo",
@@ -3126,7 +3126,7 @@
       }
     ],
     "created": "2026-07-11",
-    "updated": "2026-07-13",
+    "updated": "2026-07-14",
     "kind": "recommendation",
     "priority": "P2",
     "channel": "tiktok",
@@ -3267,7 +3267,7 @@
   "f4e7764d": {
     "id": "f4e7764d",
     "title": "הפעלת קולות אישיים של ההנהלה ב-LinkedIn: CEO/מנהל ביצוע יפרסמו 3 פוסטים שבועיים מפרופיל אישי — POV על תעשיית האירועים, סיפור מהשטח, שאלה פתוחה לקהל",
-    "status": "awaiting_approval",
+    "status": "approved",
     "revisions": 1,
     "history": [
       {
@@ -3277,7 +3277,7 @@
       }
     ],
     "created": "2026-07-13",
-    "updated": "2026-07-13",
+    "updated": "2026-07-14",
     "kind": "recommendation",
     "priority": "P0",
     "channel": "linkedin",
@@ -3286,7 +3286,7 @@
   "edad1ee7": {
     "id": "edad1ee7",
     "title": "דף שירות ייעודי 'הפקת נופש חברה' ב-upe.co.il: 1,500+ מילים עברית, H1-H3 מותאמים, FAQ schema, internal linking, CTA ברור לטופס ייעוץ",
-    "status": "awaiting_approval",
+    "status": "approved",
     "revisions": 1,
     "history": [
       {
@@ -3296,7 +3296,7 @@
       }
     ],
     "created": "2026-07-13",
-    "updated": "2026-07-13",
+    "updated": "2026-07-14",
     "kind": "recommendation",
     "priority": "P0",
     "channel": "linkedin",
@@ -3305,7 +3305,7 @@
   "604aecbb": {
     "id": "604aecbb",
     "title": "LinkedIn Newsletter חודשי בעברית: 'מבט מאחורי הקלעים — בניית אירועי חברה שמניעים תוצאות'. ניוזלטר עם תוכן 80% educational, 20% case study",
-    "status": "awaiting_approval",
+    "status": "approved",
     "revisions": 1,
     "history": [
       {
@@ -3315,7 +3315,7 @@
       }
     ],
     "created": "2026-07-13",
-    "updated": "2026-07-13",
+    "updated": "2026-07-14",
     "kind": "recommendation",
     "priority": "P1",
     "channel": "linkedin",
@@ -3324,7 +3324,7 @@
   "cbed485a": {
     "id": "cbed485a",
     "title": "Instagram Reels תחת פורמט קבוע: 'אירוע אחד, 60 שניות' — קליפ מהיר ממאחורי הקלעים של הפקה אמיתית, עם subtitle עברי/אנגלי, 2 פעמים בשבוע",
-    "status": "awaiting_approval",
+    "status": "approved",
     "revisions": 1,
     "history": [
       {
@@ -3334,7 +3334,7 @@
       }
     ],
     "created": "2026-07-13",
-    "updated": "2026-07-13",
+    "updated": "2026-07-14",
     "kind": "recommendation",
     "priority": "P1",
     "channel": "instagram",
@@ -3343,7 +3343,7 @@
   "03609b2f": {
     "id": "03609b2f",
     "title": "upe-spain.com: יצירת דפי שירות ייעודיים ל-'international product launch event' ו-'new hire team building' — שני ביטויים בדירוג 11-14 עם נפח חיפושים רלוונטי",
-    "status": "awaiting_approval",
+    "status": "approved",
     "revisions": 1,
     "history": [
       {
@@ -3353,7 +3353,7 @@
       }
     ],
     "created": "2026-07-13",
-    "updated": "2026-07-13",
+    "updated": "2026-07-14",
     "kind": "recommendation",
     "priority": "P1",
     "channel": "linkedin",
@@ -3362,7 +3362,7 @@
   "28806a2d": {
     "id": "28806a2d",
     "title": "TikTok: reframe מלידים לבניית קהל — תוכן 'facts מהתעשייה' ו-'מה לא רואים באירועי חברה', פורמט עקבי עם hook ב-2 שניות הראשונות",
-    "status": "awaiting_approval",
+    "status": "approved",
     "revisions": 1,
     "history": [
       {
@@ -3372,7 +3372,7 @@
       }
     ],
     "created": "2026-07-13",
-    "updated": "2026-07-13",
+    "updated": "2026-07-14",
     "kind": "recommendation",
     "priority": "P2",
     "channel": "tiktok",
@@ -3381,11 +3381,11 @@
   "d351034c": {
     "id": "d351034c",
     "title": "דאבל-דאון על Web (הערוץ הדומיננטי ב-62%): תעדוף מיידי של קידום 'הפקת נופש חברה' לטופ-5 ב-Google — דף ייעודי, FAQ schema, internal links. כל עלייה בדירוג = עוד לידים Web ישירים.",
-    "status": "todo",
+    "status": "archived",
     "revisions": 0,
     "history": [],
     "created": "2026-07-13",
-    "updated": "2026-07-13",
+    "updated": "2026-07-14",
     "kind": "leads_action",
     "priority": "leads",
     "channel": "leads"
@@ -3393,11 +3393,11 @@
   "5d3824f0": {
     "id": "5d3824f0",
     "title": "LinkedIn → Web funnel: בכל פוסט LinkedIn של הנהלה — הוספת 'הלינק בתגובה הראשונה' לדף שירות רלוונטי; הפניית decision-makers ישירות לנקודות המרה ב-upe.co.il.",
-    "status": "todo",
+    "status": "archived",
     "revisions": 0,
     "history": [],
     "created": "2026-07-13",
-    "updated": "2026-07-13",
+    "updated": "2026-07-14",
     "kind": "leads_action",
     "priority": "leads",
     "channel": "leads"
@@ -3405,11 +3405,11 @@
   "9f97beb1": {
     "id": "9f97beb1",
     "title": "YouTube CTA מובנה: כל וידאו ב-YouTube מסתיים ב-CTA מפורש — 'רוצים הצעת מחיר? הלינק בתיאור'; הוספת דף נחיתה ייעודי מ-YouTube שמדיד בנפרד ב-Salesforce.",
-    "status": "todo",
+    "status": "archived",
     "revisions": 0,
     "history": [],
     "created": "2026-07-13",
-    "updated": "2026-07-13",
+    "updated": "2026-07-14",
     "kind": "leads_action",
     "priority": "leads",
     "channel": "leads"
@@ -3417,11 +3417,11 @@
   "6c9822b1": {
     "id": "6c9822b1",
     "title": "Word of Mouth (12.5% מהלידים): פורמליזציה של תוכנית referral — לכל לקוח מרוצה לאחר אירוע, בקשה מובנית להפניה + תוכן שקל לשתף ב-WhatsApp ו-LinkedIn.",
-    "status": "todo",
+    "status": "archived",
     "revisions": 0,
     "history": [],
     "created": "2026-07-13",
-    "updated": "2026-07-13",
+    "updated": "2026-07-14",
     "kind": "leads_action",
     "priority": "leads",
     "channel": "leads"
@@ -3429,11 +3429,11 @@
   "4b6d7d2d": {
     "id": "4b6d7d2d",
     "title": "לידים '(none)' (2 ליד): תיוג מיידי בתהליך הכניסה — בשיחת הגילוי הראשונה שאלו 'איך שמעתם עלינו?'; עדכון Salesforce manually. מידע זה קריטי לדעת אם הם מגיעים מסושיאל לא מתוייג.",
-    "status": "todo",
+    "status": "archived",
     "revisions": 0,
     "history": [],
     "created": "2026-07-13",
-    "updated": "2026-07-13",
+    "updated": "2026-07-14",
     "kind": "leads_action",
     "priority": "leads",
     "channel": "leads"
@@ -3441,11 +3441,11 @@
   "0b2caa99": {
     "id": "0b2caa99",
     "title": "upe-spain.com פייפליין: הוספת CTA ברור בדפי השירות הספרדיים + טופס פנייה קצר באנגלית; כיום ה-site מקבלת 43 קליקים/שבוע ללא conversion path ברור — זהו ליד פוטנציאלי שהולך לאיבוד.",
-    "status": "todo",
+    "status": "archived",
     "revisions": 0,
     "history": [],
     "created": "2026-07-13",
-    "updated": "2026-07-13",
+    "updated": "2026-07-14",
     "kind": "leads_action",
     "priority": "leads",
     "channel": "leads"
@@ -3453,11 +3453,11 @@
   "2b22726d": {
     "id": "2b22726d",
     "title": "שלב 1 — בסיס (0-3 חודשים): הפעלת 2-3 פרופילים אישיים של הנהלת UPE ב-LinkedIn עם פרסום 3x/שבוע, תחת 3 עמודי תוכן ברורים; מדד הצלחה: 200+ חשיפות לפוסט ב-LinkedIn.",
-    "status": "todo",
+    "status": "archived",
     "revisions": 0,
     "history": [],
     "created": "2026-07-13",
-    "updated": "2026-07-13",
+    "updated": "2026-07-14",
     "kind": "follower_plan",
     "priority": "follower",
     "channel": "growth"
@@ -3465,11 +3465,11 @@
   "21052ac4": {
     "id": "21052ac4",
     "title": "שלב 2 — מינוף (3-6 חודשים): הצלבת תוכן — קטעי YouTube לוחצים ל-Shorts, Shorts לוחצים לאינסטגרם Reels, Reels לוחצים לדף upe.co.il; כל פורמט תומך בפורמטים האחרים.",
-    "status": "todo",
+    "status": "archived",
     "revisions": 0,
     "history": [],
     "created": "2026-07-13",
-    "updated": "2026-07-13",
+    "updated": "2026-07-14",
     "kind": "follower_plan",
     "priority": "follower",
     "channel": "growth"
@@ -3477,11 +3477,11 @@
   "ad5b452a": {
     "id": "ad5b452a",
     "title": "שלב 3 — SEO + GEO (6-12 חודשים): בניית 6 דפי עמוד ייעודיים ב-upe.co.il ו-upe-spain.com לביטויי ה-top opportunities; דירוג לטופ-5 על 'הפקת נופש חברה' יניע traffic אורגני קבוע.",
-    "status": "todo",
+    "status": "archived",
     "revisions": 0,
     "history": [],
     "created": "2026-07-13",
-    "updated": "2026-07-13",
+    "updated": "2026-07-14",
     "kind": "follower_plan",
     "priority": "follower",
     "channel": "growth"
@@ -3489,11 +3489,11 @@
   "8e46af15": {
     "id": "8e46af15",
     "title": "שלב 4 — Authority (12-24 חודשים): LinkedIn Newsletter עם 500+ מנויים, YouTube Shorts שגורמים לגידול channel subscribers, ו-GEO citations (נוכחי: 2 מתוך 7) מוכפלים ל-5+ — UPE מוזכרת ב-AI search כ-go-to supplier.",
-    "status": "todo",
+    "status": "archived",
     "revisions": 0,
     "history": [],
     "created": "2026-07-13",
-    "updated": "2026-07-13",
+    "updated": "2026-07-14",
     "kind": "follower_plan",
     "priority": "follower",
     "channel": "growth"
@@ -3501,11 +3501,244 @@
   "de0836de": {
     "id": "de0836de",
     "title": "שלב 5 — Scale (24-36 חודשים): employee advocacy program — כל עובד UPE משתף תוכן מקצועי 1x/שבוע; הדבר כובש reach אורגני שאפילו תקציב פרסום לא יכול לקנות, לפי נתוני 2026 על ה-power של personal profiles.",
-    "status": "todo",
+    "status": "archived",
     "revisions": 0,
     "history": [],
     "created": "2026-07-13",
-    "updated": "2026-07-13",
+    "updated": "2026-07-14",
+    "kind": "follower_plan",
+    "priority": "follower",
+    "channel": "growth"
+  },
+  "36e9fcd5": {
+    "id": "36e9fcd5",
+    "title": "הפעל personal brand LinkedIn עבור 2-3 מנהלים בכירים ב-UPE: CEO/Founder + VP Events + VP Spain — כל אחד מפרסם 3x שבועיים מפרופיל אישי (לא דף חברה) עם thought leadership על הפקות מורכבות",
+    "status": "awaiting_approval",
+    "revisions": 1,
+    "history": [
+      {
+        "date": "2026-07-14",
+        "summary": "הופקו 9 פוסטי LinkedIn מוכנים לתיזמון (עברית/אנגלית/ספרדית) עבור CEO, VP Events ו-VP Spain של UPE, כולל לוח פרסום שבועי, אסטרטגיית engagement, פרמטרי אופטימיזציה לפרופיל ו-KPIs ל-60/90 יום — הכל כטיוטה לאישור אנושי.",
+        "ready": true
+      }
+    ],
+    "created": "2026-07-14",
+    "updated": "2026-07-14",
+    "kind": "recommendation",
+    "priority": "P0",
+    "channel": "linkedin",
+    "expected_impact": "Personal profiles מייצרים 5-10x יותר organic reach מדף חברה; employee posts מייצרים 14x יותר engagement; צפי להכפלת LinkedIn impressions תוך 60 יום ולידים ישירים מ-DMs ב-90 יום"
+  },
+  "70e2967f": {
+    "id": "70e2967f",
+    "title": "צור 3 landing pages SEO עבריות ממוקדות (הפקת נופש חברה / הפקת כנסים לחברות הייטק / אירועי תמריץ לעובדים) עם עומק תוכן, case studies, FAQ ו-CTA ברור לטופס יצירת קשר",
+    "status": "todo",
+    "revisions": 0,
+    "history": [
+      {
+        "date": "2026-07-14",
+        "error": "anthropic The read operation timed out"
+      }
+    ],
+    "created": "2026-07-14",
+    "updated": "2026-07-14",
+    "kind": "recommendation",
+    "priority": "P0",
+    "channel": "linkedin",
+    "expected_impact": "upe.co.il ב-position 8.5-13.9 על מילות מפתח אלו עם עשרות אלפי חשיפות חודשיות; שיפור ל-top 5 יכול להביא 50-100 קליקים נוספים חודשיים ו-2-4 לידים נוספים; Web כבר ה-dominant lead source"
+  },
+  "87f1e7ef": {
+    "id": "87f1e7ef",
+    "title": "הפק 2 YouTube case study videos (5-8 דקות) בעברית עם כתוביות אנגליות — תבנית: 'הלקוח ביקש X, האתגר היה Y, הפתרון שלנו היה Z, התוצאה' — אחד על אירוע בינלאומי רב-מדינות, אחד על incentive travel ספרד",
+    "status": "awaiting_approval",
+    "revisions": 1,
+    "history": [
+      {
+        "date": "2026-07-14",
+        "summary": "הופקו שני חבילות סרטוני YouTube Case Study מלאות לUPE — סרטון #1 על אירוע בינלאומי רב-מדינות וסרטון #2 על Incentive Travel ספרד — כולל תסריטים מלאים בעברית, כותרות ותיאורים מותאמי SEO, briefs לתמונות ממוזערות עם אסטרטגיית A/B, פרקי זמן, checklist לפרסום ו-6 שאלות פתוחות לאישור.",
+        "ready": true
+      }
+    ],
+    "created": "2026-07-14",
+    "updated": "2026-07-14",
+    "kind": "recommendation",
+    "priority": "P1",
+    "channel": "youtube",
+    "expected_impact": "YouTube כבר מייצר 80% מהחשיפות; case study videos עם keyword-optimized titles וthumbnails מושכים organic search traffic לשנים; מעלים אמינות אצל decision-makers pre-sale"
+  },
+  "09b772a4": {
+    "id": "09b772a4",
+    "title": "השק LinkedIn Newsletter חודשי בשם 'Behind the Event' — ניתוח מקרה הפקה אחת לחודש, challenges, lessons learned, data מהשטח — בעברית לשוק ישראלי",
+    "status": "awaiting_approval",
+    "revisions": 1,
+    "history": [
+      {
+        "date": "2026-07-14",
+        "summary": "נוצר kit מלא להשקת LinkedIn Newsletter 'Behind the Event' של UPE: הגדרות ניוזלטר, template קבוע, גיליון #1 מלא (מוכן להחלפת נתונים אמיתיים), פוסטי teaser בעברית ובאנגלית, לוח עריכה שנתי ל-12 חודשים, roadmap השקה שלבי, KPIs, מערכת תוכן פנימית ומדיניות פרטיות — הכל מבוסס על best practices עדכניים ל-2026.",
+        "ready": true
+      }
+    ],
+    "created": "2026-07-14",
+    "updated": "2026-07-14",
+    "kind": "recommendation",
+    "priority": "P1",
+    "channel": "linkedin",
+    "expected_impact": "LinkedIn newsletters שולחים push notification לנרשמים; open rates של 40-60% לעומת 20-25% בדוא\"ל; בונה opted-in audience של decision-makers שהם בדיוק ICP של UPE"
+  },
+  "04124221": {
+    "id": "04124221",
+    "title": "upe-spain.com: פתח 2 service pages ייעודיות על 'international product launch event' (position 10.1, 198 חשיפות) ו-'new hire team building' (position 14.8, 160 חשיפות) עם תוכן עמוק, pricing guidance ו-social proof",
+    "status": "awaiting_approval",
+    "revisions": 1,
+    "history": [
+      {
+        "date": "2026-07-14",
+        "summary": "נוצרו שני דפי שירות SEO מלאים ומוכנים לאישור עבור upe-spain.com: 'International Product Launch Event' ו-'New Hire Team Building' — כולל H1, מטא-טייטל, תיאור, תוכן מעמיק ~2,000 מילים לכל עמוד, טבלאות תמחור, social proof, FAQ, סכמת JSON-LD, וצ'קליסט יישום.",
+        "ready": true
+      }
+    ],
+    "created": "2026-07-14",
+    "updated": "2026-07-14",
+    "kind": "recommendation",
+    "priority": "P1",
+    "channel": "linkedin",
+    "expected_impact": "Spain site כבר מציג צמיחה חיובית; שיפור 2 מילות מפתח מ-position 10-14 ל-top 5 יוסיף 30-60 קליקים חודשיים מ-high-intent European B2B buyers"
+  },
+  "b5cb72eb": {
+    "id": "b5cb72eb",
+    "title": "בקש מ-2 לקוחות מרוצים תגובת וידאו קצרה (60-90 שניות) בעברית/אנגלית לשימוש ב-LinkedIn, YouTube ואתר — testimonials אותנטיים הם social proof שמאיץ החלטות רכש",
+    "status": "in_progress",
+    "revisions": 1,
+    "history": [
+      {
+        "date": "2026-07-14",
+        "summary": "(no summary)",
+        "ready": false
+      }
+    ],
+    "created": "2026-07-14",
+    "updated": "2026-07-14",
+    "kind": "recommendation",
+    "priority": "P2",
+    "channel": "youtube",
+    "expected_impact": "B2B buyers מחפשים validation לפני פנייה; video testimonials מעלים conversion rate מביקור באתר לפנייה; אפס עלות הפקה אם מצולמים במכשיר הלקוח"
+  },
+  "fe1e4e22": {
+    "id": "fe1e4e22",
+    "title": "פעולה 1 (מיידית — safe_auto): הכפל תוכן SEO עברי על 'הפקת נופש חברה' — Web הוא הלid source הדומיננטי (62%); שיפור מ-position 8.5 ל-top 3 הוא הדרך הישירה ביותר לסגור את הפער מ-8 ל-10 לידים חודשיים",
+    "status": "todo",
+    "revisions": 0,
+    "history": [],
+    "created": "2026-07-14",
+    "updated": "2026-07-14",
+    "kind": "leads_action",
+    "priority": "leads",
+    "channel": "leads"
+  },
+  "8e6a5d98": {
+    "id": "8e6a5d98",
+    "title": "פעולה 2 (שבועיים): בקש ממנהלי UPE לפרסם 1 LinkedIn post שבועי מפרופיל אישי בנושא case study ספציפי — LinkedIn הוא הערוץ שבו 78% מלידי B2B נוצרים; פרופיל אישי מגיע לICP ישירות",
+    "status": "todo",
+    "revisions": 0,
+    "history": [],
+    "created": "2026-07-14",
+    "updated": "2026-07-14",
+    "kind": "leads_action",
+    "priority": "leads",
+    "channel": "leads"
+  },
+  "9836147e": {
+    "id": "9836147e",
+    "title": "פעולה 3 (30 יום): תקן attribution ב-Salesforce עבור 2 לידים מ-(none) — בדוק מול לקוחות פוטנציאליים אלה כיצד הגיעו; ידע זה יגיד לנו אם יש ערוץ נסתר שמשתלם לחזק",
+    "status": "todo",
+    "revisions": 0,
+    "history": [],
+    "created": "2026-07-14",
+    "updated": "2026-07-14",
+    "kind": "leads_action",
+    "priority": "leads",
+    "channel": "leads"
+  },
+  "b01d58bc": {
+    "id": "b01d58bc",
+    "title": "פעולה 4 (60 יום): הוסף CTA ברור בסוף כל YouTube video ('לקבלת הצעת מחיר — לינק בביאור') + end screen ל-contact page; YouTube מייצר חשיפות אך עם 0.05% engagement — חסר conversion bridge",
+    "status": "todo",
+    "revisions": 0,
+    "history": [],
+    "created": "2026-07-14",
+    "updated": "2026-07-14",
+    "kind": "leads_action",
+    "priority": "leads",
+    "channel": "leads"
+  },
+  "65f86d5b": {
+    "id": "65f86d5b",
+    "title": "פעולה 5 (90 יום): פרסם pillar page 'הפקת כנסים לחברות הייטק' (position 9.2, 157 חשיפות) — קהל הייטק ישראלי הוא ICP מדויק עם תקציבי אירועים גדולים; long-tail keywords בנישה זו ממירים גבוה",
+    "status": "todo",
+    "revisions": 0,
+    "history": [],
+    "created": "2026-07-14",
+    "updated": "2026-07-14",
+    "kind": "leads_action",
+    "priority": "leads",
+    "channel": "leads"
+  },
+  "b0e2d3dd": {
+    "id": "b0e2d3dd",
+    "title": "שלב 1 (חודשים 1-3): הקם personal brand infrastructure — 2-3 מנהלים עם Creator Mode, פרסום 3x שבועיים מפרופיל אישי; מטרה: 500 followers חדשים ב-LinkedIn למנהל ראשי + הכפלת organic reach",
+    "status": "todo",
+    "revisions": 0,
+    "history": [],
+    "created": "2026-07-14",
+    "updated": "2026-07-14",
+    "kind": "follower_plan",
+    "priority": "follower",
+    "channel": "growth"
+  },
+  "13658ca7": {
+    "id": "13658ca7",
+    "title": "שלב 2 (חודשים 3-6): בנה YouTube content architecture עם 3 pillars; פרסם 1 long-form case study + 2 YouTube Shorts שבועיים; YouTube Shorts מניע discovery ו-long-form בונה trust ו-watch time",
+    "status": "todo",
+    "revisions": 0,
+    "history": [],
+    "created": "2026-07-14",
+    "updated": "2026-07-14",
+    "kind": "follower_plan",
+    "priority": "follower",
+    "channel": "growth"
+  },
+  "534d52e9": {
+    "id": "534d52e9",
+    "title": "שלב 3 (חודשים 6-12): הפעל LinkedIn Newsletter עם 1,000+ נרשמים תוך 6 חודשים; כל newsletter מביא subscribers חדשים דרך shares של existing readers — flywheel אורגני",
+    "status": "todo",
+    "revisions": 0,
+    "history": [],
+    "created": "2026-07-14",
+    "updated": "2026-07-14",
+    "kind": "follower_plan",
+    "priority": "follower",
+    "channel": "growth"
+  },
+  "68a0c36b": {
+    "id": "68a0c36b",
+    "title": "שלב 4 (חודשים 12-18): content repurposing systematic — כל YouTube video מניב 3 Instagram Reels, 2 LinkedIn posts, 1 TikTok; 50 פוסטים שבועיים ← 15 פוסטים איכותיים רב-ערוציים",
+    "status": "todo",
+    "revisions": 0,
+    "history": [],
+    "created": "2026-07-14",
+    "updated": "2026-07-14",
+    "kind": "follower_plan",
+    "priority": "follower",
+    "channel": "growth"
+  },
+  "121a2e90": {
+    "id": "121a2e90",
+    "title": "שלב 5 (חודשים 18-36): collaborations עם 2-3 micro-influencers MICE/HR ישראלים ואירופאים (5K-50K followers); partnership content מגדיל reach ל-new audiences מדויקים ללא paid spend",
+    "status": "todo",
+    "revisions": 0,
+    "history": [],
+    "created": "2026-07-14",
+    "updated": "2026-07-14",
     "kind": "follower_plan",
     "priority": "follower",
     "channel": "growth"
