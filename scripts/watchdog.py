@@ -80,25 +80,73 @@ def check_backlog():
 
 
 def check_duplicates():
-    """Same day+network+account+lang alive more than once (pending/approved) — a
-    re-enqueue bug symptom; one approve_all click then publishes twice. Keyed on
-    ACCOUNT too: the 3 HE LinkedIn advocates legitimately share (day,network,lang)
-    with distinct accounts — that is by design, not a duplicate."""
+    """Same day+network+account+lang alive more than once — a re-enqueue bug
+    symptom; one approve_all click then publishes twice. Keyed on ACCOUNT too:
+    the 3 HE LinkedIn advocates legitimately share (day,network,lang) with
+    distinct accounts — that is by design, not a duplicate.
+
+    SELF-HEALING (per the Iron Rule 'reject the old set before publishing'):
+      · A copy already `published` under a key → any still-live copy of the same
+        key would double-post → auto-reject the live copies (the system never
+        intentionally republishes a day: pick_next_day skips published days).
+      · Two live copies (different dates) → keep one, auto-reject the stale
+        `pending` copies. Keeper preference: an `approved` row (Alon acted on it)
+        wins over `pending`; among same status, newest scheduled_date wins.
+      · Never silently undo an approval we can't supersede: two `approved` copies
+        of one key = genuine double-approve → alert for human handling, no auto-act."""
     try:
         rows = queue._req("GET", "post_approvals", params={
-            "select": "day,network,account,lang", "status": "in.(pending,approved)"})
+            "select": "id,day,network,account,lang,status,scheduled_date,created_at",
+            "status": "in.(pending,approved,published)"})
     except Exception as e:
         return [f"⚠️ לא ניתן לבדוק שכפולים בתור: {e}"]
-    counts = {}
+    groups = {}
     for r in rows:
-        k = (r.get("day"), r.get("network"), r.get("account"), r.get("lang"))
-        counts[k] = counts.get(k, 0) + 1
-    dups = {k: v for k, v in counts.items() if v > 1 and k[0] is not None}
-    if not dups:
-        return []
-    days = sorted({k[0] for k in dups})
-    return [f"🔴 שכפול בתור האישורים: {len(dups)} צירופי יום/רשת/שפה חיים יותר מפעם אחת (ימים: {days}). "
-            f"סכנת פרסום כפול — לדחות (reject) את הסט הישן לפני אישור/פרסום."]
+        if r.get("day") is None:
+            continue
+        k = (r["day"], r.get("network"), r.get("account"), r.get("lang"))
+        groups.setdefault(k, []).append(r)
+
+    def _reject(r, why):
+        queue.mark(r["id"], status="rejected", error=f"auto-rejected: {why} (watchdog)")
+
+    auto, unresolved = [], []
+    for k, grp in groups.items():
+        if len(grp) < 2:
+            continue
+        published = [r for r in grp if r.get("status") == "published"]
+        live = [r for r in grp if r.get("status") in ("pending", "approved")]
+        try:
+            if published:
+                # content already went out under this key — any live copy re-posts it
+                for r in live:
+                    _reject(r, "duplicate of an already-published post")
+                    auto.append((k, r.get("scheduled_date")))
+                continue
+            if len(live) < 2:
+                continue
+            # keeper: approved beats pending; then newest scheduled_date/created_at
+            live.sort(key=lambda r: (1 if r.get("status") == "approved" else 0,
+                                     r.get("scheduled_date") or "", r.get("created_at") or ""))
+            keeper = live[-1]
+            for r in live[:-1]:
+                if r.get("status") == "pending":
+                    _reject(r, f"stale duplicate; kept {keeper.get('scheduled_date')}")
+                    auto.append((k, r.get("scheduled_date")))
+                else:  # a second approved copy — don't silently discard Alon's click
+                    unresolved.append(
+                        f"🔴 יום {k[0]} {k[1]}/{k[2]}/{k[3]} — שני עותקים מאושרים (double-approve). "
+                        f"סכנת פרסום כפול — טיפול ידני נדרש.")
+        except Exception as e:
+            unresolved.append(f"🔴 יום {k[0]} {k[1]}/{k[2]} — כשל בטיפול אוטומטי בכפילות: {e}")
+
+    out = []
+    if auto:
+        days = sorted({k[0] for k, _ in auto})
+        out.append(f"🟢 שכפולים בתור טופלו אוטומטית: {len(auto)} עותקים ישנים נדחו "
+                   f"(ימים: {days}). נשמר העותק העדכני בכל צירוף — אין סכנת פרסום כפול.")
+    out.extend(unresolved)
+    return out
 
 
 def check_workflows():
