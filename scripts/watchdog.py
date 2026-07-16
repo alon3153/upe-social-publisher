@@ -99,6 +99,55 @@ def check_duplicates():
             f"סכנת פרסום כפול — לדחות (reject) את הסט הישן לפני אישור/פרסום."]
 
 
+def check_workflows():
+    """Catch WORKFLOW-LEVEL failures (GitHub Actions run conclusions) — the gap
+    that let the approval email die quietly for days: the run crashed BEFORE any
+    row was inserted, so there were zero failed/pending rows and runway looked
+    fine. This checks the run conclusions directly."""
+    token = os.environ.get("GITHUB_TOKEN", "")
+    repo = os.environ.get("GITHUB_REPOSITORY", "alon3153/upe-social-publisher")
+    if not token:
+        print("check_workflows: no GITHUB_TOKEN — skipping workflow-run check")
+        return []
+    # workflow file -> (label, max hours since last run before "silent")
+    # NOTE: daily-publish.yml is legacy (retired ~2026-05-29) — FB/IG now publish
+    # through publish-approved.yml (handles all networks). Do not monitor it.
+    critical = {
+        "approval-email.yml":   ("מייל אישור יומי", 26),
+        "publish-approved.yml": ("פרסום מאושרים (כל הרשתות)", 5),
+        "daily-council.yml":    ("מועצת שיווק יומית", 26),
+        "aeo-daily.yml":        ("AEO יומי", 26),
+    }
+    bad = {"failure", "cancelled", "timed_out", "startup_failure"}
+    now = datetime.datetime.now(datetime.timezone.utc)
+    issues = []
+    for wf, (label, max_age_h) in critical.items():
+        try:
+            req = urllib.request.Request(
+                f"https://api.github.com/repos/{repo}/actions/workflows/{wf}/runs?per_page=1",
+                headers={"Authorization": f"Bearer {token}",
+                         "Accept": "application/vnd.github+json",
+                         "User-Agent": "upe-watchdog/1.0"})
+            with urllib.request.urlopen(req, timeout=30) as r:
+                runs = json.loads(r.read().decode()).get("workflow_runs") or []
+        except Exception as e:
+            issues.append(f"⚠️ לא ניתן לבדוק את {label} ({wf}): {e}")
+            continue
+        if not runs:
+            issues.append(f"🔴 {label} ({wf}) — אין ריצות כלל")
+            continue
+        run = runs[0]
+        concl, status = run.get("conclusion"), run.get("status")
+        created = run.get("created_at", "1970-01-01T00:00:00Z")
+        age_h = (now - datetime.datetime.fromisoformat(created.replace("Z", "+00:00"))).total_seconds() / 3600.0
+        url = run.get("html_url", "")
+        if status == "completed" and concl in bad:
+            issues.append(f"🔴 {label} — הריצה האחרונה נכשלה ({concl}). {url}")
+        elif age_h > max_age_h:
+            issues.append(f"🔴 {label} — אין ריצה מזה {age_h:.0f} שעות (סף {max_age_h}). ה-cron אולי מת. {url}")
+    return issues
+
+
 def send_graph(subject, body_text):
     tenant = os.environ.get("MS_GRAPH_TENANT_ID"); cid = os.environ.get("MS_GRAPH_CLIENT_ID")
     secret = os.environ.get("MS_GRAPH_CLIENT_SECRET"); sender = os.environ.get("MS_GRAPH_FROM")
@@ -126,7 +175,17 @@ def send_graph(subject, body_text):
 
 
 def main():
-    issues = check_runway() + check_failures() + check_backlog() + check_duplicates()
+    # Immediate mode: called from an if:failure() step so a crashing workflow
+    # alerts within seconds, not at the next 13:00 watchdog sweep.
+    if len(sys.argv) > 2 and sys.argv[1] == "--immediate":
+        msg = sys.argv[2]
+        print("immediate alert:", msg)
+        send_graph(f"🚨 UPE Watchdog — {msg}",
+                   f"ריצת workflow נכשלה זה עתה:\n\n🔴 {msg}\n\n"
+                   f"בדוק את ה-Actions ב-{os.environ.get('GITHUB_REPOSITORY','upe-social-publisher')} וטפל — זה חוסם פרסום.")
+        return 0
+    issues = (check_workflows() + check_runway() + check_failures()
+              + check_backlog() + check_duplicates())
     if not issues:
         print("✅ watchdog: all healthy (runway ok, no failures, no backlog)")
         return 0

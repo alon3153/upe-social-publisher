@@ -8,6 +8,7 @@ on:
 
 permissions:
   contents: read
+  actions: read
 
 jobs:
   watchdog:
@@ -21,6 +22,8 @@ jobs:
       - run: pip install -r requirements.txt
       - name: Run watchdog
         env:
+          GITHUB_TOKEN:              ${{ github.token }}
+          GITHUB_REPOSITORY:         ${{ github.repository }}
           SUPABASE_URL:              ${{ secrets.SUPABASE_URL }}
           SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
           APPROVAL_TO:               ${{ secrets.APPROVAL_TO }}
