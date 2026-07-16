@@ -1,0 +1,248 @@
+{
+  "generated_at": "2026-07-16T07:35:49",
+  "period_days": 7,
+  "networks": {
+    "instagram": {
+      "posts": 13,
+      "impressions": 721,
+      "reach": 427,
+      "interactions": 7,
+      "engagement_rate_pct": 0.97,
+      "caveat": null,
+      "top": {
+        "url": "https://www.instagram.com/p/Dar16-onIfP/",
+        "content": "כמה שווה נופש חברה? מספרים אמיתיים מ-16 שנות ניסיון\n\nלא נדבר על תחושות. נדבר על מספרים.\n\nהעלות הממוצעת של החלפת עובד בחברה ישראלית עומדת על 4–6 חודשי שכר — כולל",
+        "impressions": 104,
+        "interactions": 1
+      }
+    },
+    "facebook": {
+      "posts": 13,
+      "impressions": 505,
+      "reach": 316,
+      "interactions": 25,
+      "engagement_rate_pct": 4.95,
+      "caveat": null,
+      "top": {
+        "url": null,
+        "content": "",
+        "impressions": 394,
+        "interactions": 21
+      }
+    },
+    "tiktok": {
+      "posts": 2,
+      "impressions": 176,
+      "reach": 87,
+      "interactions": 4,
+      "engagement_rate_pct": 2.27,
+      "caveat": null,
+      "top": {
+        "url": null,
+        "content": "",
+        "impressions": 91,
+        "interactions": 2
+      }
+    },
+    "linkedin": {
+      "posts": 5,
+      "impressions": 42,
+      "reach": 0,
+      "interactions": 3,
+      "engagement_rate_pct": 7.14,
+      "caveat": null,
+      "top": {
+        "url": "https://www.linkedin.com/feed/update/urn:li:share:7481736584199929857",
+        "content": "",
+        "impressions": 13,
+        "interactions": 0
+      }
+    },
+    "youtube": {
+      "posts": 9,
+      "impressions": 6579,
+      "reach": 0,
+      "interactions": 3,
+      "engagement_rate_pct": 0.05,
+      "caveat": null,
+      "top": {
+        "url": null,
+        "content": "",
+        "impressions": 5157,
+        "interactions": 1
+      }
+    }
+  },
+  "totals": {
+    "posts": 42,
+    "impressions": 8023,
+    "reach": 830,
+    "interactions": 42,
+    "engagement_rate_pct": 0.52
+  },
+  "leads": {
+    "ok": true,
+    "qualified_leads": 6,
+    "new_opportunities": 6,
+    "lead_object_count": 0,
+    "period_days": 30,
+    "source": "salesforce",
+    "definition": "new Opportunities created (all)",
+    "by_source": {
+      "Web": 2,
+      "Word of mouth": 1,
+      "(none)": 3
+    },
+    "dominant_source": "(none)",
+    "dominant_share_pct": 50,
+    "attribution_gap": false,
+    "attribution_note": "הייחוס מפוזר בין מספר מקורות"
+  },
+  "seo_geo": {
+    "generated_at": "2026-07-13",
+    "sites": [
+      {
+        "site": "https://upe.co.il/",
+        "clicks": 101,
+        "impressions": 33160,
+        "avg_position": 36.1,
+        "clicks_prev": 124,
+        "impressions_prev": 39127,
+        "top_opportunities": [
+          [
+            "הפקת נופש חברה",
+            8.5,
+            1591
+          ],
+          [
+            "הפקות אירועים לחברות",
+            13.9,
+            362
+          ],
+          [
+            "נופש חברה",
+            16.6,
+            303
+          ],
+          [
+            "virtual events",
+            6.4,
+            168
+          ],
+          [
+            "הפקות אירועים לחברות הייטק",
+            9.2,
+            157
+          ]
+        ]
+      },
+      {
+        "site": "https://upe-spain.com/",
+        "clicks": 47,
+        "impressions": 14350,
+        "avg_position": 22.7,
+        "clicks_prev": 41,
+        "impressions_prev": 12436,
+        "top_opportunities": [
+          [
+            "international product launch event",
+            10.1,
+            198
+          ],
+          [
+            "global product launch event",
+            10.1,
+            166
+          ],
+          [
+            "new hire team building",
+            14.8,
+            160
+          ],
+          [
+            "evento neutro en carbono",
+            12.0,
+            123
+          ],
+          [
+            "how to insure event liability",
+            10.8,
+            103
+          ]
+        ]
+      }
+    ],
+    "geo": {
+      "status": "ok",
+      "cited": 4,
+      "total": 7,
+      "rate": 57.1
+    },
+    "competitors": [
+      {
+        "term": "הפקת אירועים עסקיים",
+        "pos": null,
+        "top3": [
+          "pinchevents.co.il",
+          "www.arbelpro.co.il",
+          "mantver.co.il"
+        ]
+      },
+      {
+        "term": "חברת הפקת אירועים",
+        "pos": null,
+        "top3": [
+          "www.arbelpro.co.il",
+          "pinchevents.co.il",
+          "mantver.co.il"
+        ]
+      },
+      {
+        "term": "הפקת כנסים",
+        "pos": null,
+        "top3": [
+          "www.eron.co.il",
+          "rtspro.co.il",
+          "www.ortra.co.il"
+        ]
+      },
+      {
+        "term": "טיולי תמריץ לעובדים",
+        "pos": 4,
+        "top3": [
+          "www.elateva.co.il",
+          "mspirit.co.il",
+          "www.boutiqo.co.il"
+        ]
+      },
+      {
+        "term": "eventos corporativos españa",
+        "pos": null,
+        "top3": [
+          "www.eventoplus.com",
+          "www.creagroupevents.com",
+          "factoryevents.es"
+        ]
+      },
+      {
+        "term": "incentive travel spain",
+        "pos": null,
+        "top3": [
+          "www.uyuni-incentivetravels.com",
+          "madridexpert.com",
+          "www.g20corporation.com"
+        ]
+      },
+      {
+        "term": "corporate events barcelona",
+        "pos": null,
+        "top3": [
+          "www.eventbrite.com",
+          "www.barcelona-life.com",
+          "wearecloudworks.com"
+        ]
+      }
+    ],
+    "ok": true
+  }
+}

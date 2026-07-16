@@ -1,58 +1,58 @@
 {
-  "updated_at": "2026-07-15",
+  "updated_at": "2026-07-16",
   "source": "daily-council",
   "directives": [
     {
       "category": "safe_auto",
-      "action": "הגדרת 3 עמודי תוכן LinkedIn שבועיים לפרופילים אישיים של מנהלי UPE",
-      "detail": "פרופילים אישיים מייצרים 8x יותר מעורבות מעמוד חברה; פרסום מנקודת מבט אישית (lessons מ-16 שנות הפקה, כשלים ולקחים, ROI של אירועים) מגדיל חשיפה אורגנית משמעותית לקהל CMO/HR",
+      "action": "שינוי קדנס LinkedIn: מ-5 פוסטים/שבוע ל-3 פוסטים איכותיים בימים ג'-ה', 8:00-10:00 שעון ישראל",
+      "detail": "אלגוריתם LinkedIn 2026 מתגמל dwell time ועומק — פוסט של 800-1,500 תווים עם takeaway אמיתי מקבל 40% bonus reach; 3 פוסטים חזקים מנצחים 7 חלשים. יש לוודא שמישהו מהצוות זמין לענות על תגובות בשעה הראשונה לאחר פרסום.",
       "channel": "linkedin"
     },
     {
       "category": "safe_auto",
-      "action": "יצירת YouTube Shorts שבועי (60 שניות) מ-recycled content קיים",
-      "detail": "87% ממשווקי B2B מדווחים שתוכן קצר מייצר engagement גבוה יותר; Shorts משמשים כמנוע גילוי שמזין צפיות לvideo ארוכים — נדרש חיתוך של רגעי שיא מהפקות קיימות ללא צילום נוסף",
-      "channel": "youtube"
+      "action": "הגדרת 4 עמודי תוכן (content pillars) לכל הרשתות: ROI של אירוע, behind-the-scenes הפקה, מגמות incentive travel 2026, case study בלי שם לקוח",
+      "detail": "אלגוריתם 2026 מתגמל עקביות נושאית (interest graph); חשבונות עם pillars ברורים מקבלים distribution רחב יותר. LinkedIn בפרט מתגמל 'knowledge exchange' ולא תוכן שיווקי גנרי.",
+      "channel": "linkedin"
     },
     {
       "category": "safe_auto",
-      "action": "בניית keyword cluster סביב הזדמנות ה-SEO הגדולה: 'הפקת נופש חברה' (pos 8.5, 1,591 impressions)",
-      "detail": "דף נחיתה ייעודי + 3 מאמרי blog תומכים (עלות נופש חברה, ROI, תכנון) יחזקו topical authority ויורידו מיקום לטופ 5; הקליק הממוצע עדיין נמוך ביחס לנפח החיפוש",
+      "action": "הוספת 3 hashtags ממוקדים ל-LinkedIn: מקסימום 1 רחב (#EventProfs), 1 ענפי (#IncentiveTravel), 1 גיאוגרפי (#IsraelBusiness) — ולא יותר",
+      "detail": "LinkedIn 2026: יותר מ-5 hashtags מדלל; hashtags עם מיליון+ עוקבים מאבדים תוכן בפיד רווי. 3 hashtags ממוקדים מגדילים discoverability לקהל CMO/HR הרלוונטי.",
+      "channel": "linkedin"
+    },
+    {
+      "category": "safe_auto",
+      "action": "הוספת keyword 'הפקת נופש חברה' לתגיות SEO, H2, ו-meta description בעמוד הייעודי ב-upe.co.il",
+      "detail": "המילה נמצאת ב-avg pos 8.5 עם 1,591 חשיפות — מרחק של אופטימיזציה אחת מ-top 5 ומהגדלה דרמטית של קליקים. זהו ה-highest-ROI keyword הישראלי של UPE כרגע.",
       "channel": "instagram"
     },
     {
       "category": "safe_auto",
-      "action": "קביעת חלון תגובה של 60 דקות לכל פרסום LinkedIn",
-      "detail": "האלגוריתם של LinkedIn מעריך פוסטים בשעה הראשונה; מענה מהיר לתגובות ראשונות מכפיל את החשיפה; יש לתזמן פרסום כשאיש הצוות זמין להגיב מיד (בנצ'מרק: Tue-Thu, 8-10am)",
-      "channel": "linkedin"
-    },
-    {
-      "category": "safe_auto",
-      "action": "הוספת CTA ברור בכל video YouTube: 'ספר לנו על האירוע שלך' + קישור ב-Description",
-      "detail": "YouTube B2B: ללא call-to-action ומסע קונה מוגדר, אפשר לצבור קהל גדול ולא לייצר pipeline; engagement rate 0.03% מצביע על היעדר מוחלט של הנחיה לפעולה בתוכן הקיים",
+      "action": "הוספת keyword cluster לספרד: 'international product launch event' + 'global product launch event' (avg pos 10.1, 364 חשיפות משולב) כ-blog cluster ב-upe-spain.com",
+      "detail": "upe-spain.com צומחת — להאיץ עם תוכן בלוג ממוקד ב-2 keywords אלו שנמצאים ב-pos 10 (סף עמוד 1); מאמר אחד עם כותרת חזקה יכול להכניס לעמוד 1 ולגייס leads אירופאיים.",
       "channel": "youtube"
     },
     {
       "category": "safe_auto",
-      "action": "הפחתת תדירות Instagram מ-13 ל-5 פוסטים/שבוע, עם מיקוד ב-Reels",
-      "detail": "Instagram rewards quick visual cues — Reels מגיעות לחשיפה גבוהה יותר מstatic posts; הפחתת כמות ושיפור איכות תגדיל engagement rate מ-1.05% לבנצ'מרק הרצוי של 3-4%",
+      "action": "הגדרת קדנס Instagram: הפחתה מ-13 ל-5-6 פוסטים/שבוע, עם 2 Reels מינימום, 1-2 carousels, ו-Stories יומיות קצרות",
+      "detail": "Reels הן הפורמט היחיד שמגיע ל'קהל קר' ב-Instagram 2026; carousels עם slide ראשון חזק מניבים saves ו-shares. 13 פוסטים בשבוע עם engagement rate 0.97% = אלגוריתם מזהה low-quality broadcasting.",
       "channel": "instagram"
     }
   ],
   "follower_growth_plan": [
-    "שלב 1 (חודשים 1-3): הפעלת 2-3 מנהלים/מייסדים כ'פנים' של UPE ב-LinkedIn Personal — פרסום 3x/שבוע מנקודת מבט אישית; פרופילים אישיים מגיעים ל-5-10x reach מעמוד חברה ומהווים את מנוע הצמיחה המהיר ביותר עבור B2B.",
-    "שלב 2 (חודשים 2-4): השקת LinkedIn Newsletter ו-YouTube Shorts שבועי — שני ערוצים עם guaranteed delivery וחשיפה אלגוריתמית גבוהה; Newsletter subscribers ו-YouTube subscribers הם הfollowers האיכותיים ביותר.",
-    "שלב 3 (חודשים 3-6): בניית topical authority ב-SEO עברי — כל פוסט blog ב-upe.co.il שמדורג ב-top 5 מביא traffic ישיר שחלקו הופך לfollowers חברתיים; מיקוד ב-'הפקת נופש חברה' ו-'הפקת כנסים'.",
-    "שלב 4 (חודשים 4-8): תוכנית employee advocacy — כל עובד UPE מפרסם once/שבוע תוכן הקשור לאירוע שעבד עליו; זהו ה-multiplier האורגני החזק ביותר לchannels עסקיים B2B.",
-    "שלב 5 (חודשים 6-12): שיתופי פעולה עם גורמים משיקים — HR influencers ישראלים, נותני שירות בתחום הטכנולוגיה לאירועים, מובילי דעה בתחום ה-MICE; כל collaboration חושף UPE לקהל חדש ורלוונטי.",
-    "שלב 6 (חודשים 12+): הפוך ViralEvents ל-GEO authority — תוכן שמצוטט ב-AI search engines (ChatGPT, Perplexity) מגדיל brand awareness ב-awareness funnel; כרגע ציון GEO 57% הוא בסיס — יש להגיע ל-80%+ על ידי E-E-A-T content."
+    "שלב 1 (חודשים 1-3): הקמת personal brand ל-2 פנים מ-UPE ב-LinkedIn — 3 פוסטים/שבוע/אדם; מינוף 16 שנות ניסיון לתוכן thought leadership עם מספרים אמיתיים; מטרה: 500 followers חדשים/חודש per profile",
+    "שלב 2 (חודשים 2-6): הפיכת YouTube ל-SEO engine — כל סרטון הפקה מקבל keyword בכותרת (לדוג' 'הפקת כנס B2B 500 איש — מה שלא מראים מאחורי הקלעים'); מטרה: 10,000 חשיפות/שבוע ב-YouTube",
+    "שלב 3 (חודשים 3-9): LinkedIn Newsletter 'מפיקים בכיר' — מטרה 1,000 מנויים ב-6 חודשים; כל edition מכיל benchmark ייחודי ו-case study אנונימי; זהו ה-channel עם הגבוה delivery guarantee",
+    "שלב 4 (חודשים 4-12): Instagram Reels אסטרטגיה — 2 Reels/שבוע על הפקות, behind-the-scenes, trendפים של incentive travel 2026; שימוש ב-Collab feature עם ספקים ו-venues לhook לקהלים חדשים",
+    "שלב 5 (שנה 2): employee advocacy program — כל עובד UPE (אפילו 5-10 אנשים) מפרסם פוסט אחד/שבוע מפרופיל אישי; employee-shared content מקבל 5-10x יותר engagement מ-company page",
+    "שלב 6 (שנה 2-3): GEO/AEO targeting — בניית LinkedIn articles ו-blog posts ב-upe-spain.com שמצוטטים ב-AI search (Perplexity/ChatGPT) על queries כמו 'incentive travel Spain'; LinkedIn content מוביל כיום ישירות לציטוטים ב-AI search engines"
   ],
   "leads_actions": [
-    "הכפל השקעה ב-Web/SEO עברי (ערוץ #1 ב-50% מהלידים): כתוב 2 מאמרים/חודש ממוקדי keyword לביטויי 'הפקת נופש חברה' ו-'הפקת אירועים לחברות הייטק' — שני הביטויים ב-top impressions עם CTR נמוך מרמז על gap בין נוכחות לבין קליקים.",
-    "צור ROI Calculator להורדה באתר upe.co.il — ממיר visitors שמחפשים 'נופש חברה' לqualified leads עם פרטי קשר; בהתבסס על הפוסט המוצלח שכבר מדבר על עלות החלפת עובד, הcontent angle כבר מוכח.",
-    "הפעל LinkedIn Sales Navigator לoutreach אישי ל-CMO/HR/Event Leads בחברות הייטק 200+ עובדים בישראל — לאחר שלאיש הצוות יש LinkedIn personal profile פעיל (שלב 1 בתוכנית הצמיחה), outreach מדף אישי פעיל מקבל 3.5x יותר תגובות.",
-    "הוסף 'בקשת הצעת מחיר' ו-CTA ברור לכל YouTube video בDescription + End Screen — ה-engagement rate של 0.03% מצביע על אפס הנחיה לפעולה; ערוץ YouTube עם 9,564 חשיפות שבועיות יכול לייצר minimum 1-2 פניות/שבוע עם CTA נכון.",
-    "תקן את ה-attribution ב-Salesforce לביטול bucket 'none': שלושה לידים חודשיים ללא מקור = החלטות עיוורות; define mandatory Source field לכל Opportunity ותן dropdown של 5 אפשרויות ברורות (Web/LinkedIn/Instagram/YouTube/Referral).",
-    "בנה 'warm pipeline' מתוכן: כל לקוח שמגיב לLinkedIn Newsletter או שורד YouTube יותר מ-60 שניות — סמן ב-CRM לfollow-up ידני; ב-B2B MICE עסקאות נסגרות ביחסים, לא בlanding pages."
+    "פעולה מיידית — תיקון Salesforce: לחייב source field בכל Opportunity ולחזור לתת-חלוקה של 3 הליידים של '(none)' — ייחוס נכון יגלה ש-Web כנראה ממיר יותר מ-2 הנוכחיים; ללא זה אי אפשר לדעת מה לחזק",
+    "SEO לידים ישירים: יצירת 2 landing pages ממירים ב-upe.co.il — אחד על 'הפקת נופש חברה' (pos 8.5, 1,591 חשיפות) ואחד על 'הפקות אירועים לחברות היי-טק' (pos 9.2, 157 חשיפות) עם CTA לייעוץ; שני pages אלו הם הדרך המהירה ביותר לליד אורגני מכוון-קנייה",
+    "LinkedIn personal brand → outbound: לאחר 30 ימי פוסטינג, מנהלי UPE מתחילים לעקוב אחרי ולהגיב לתכנים של CMO/HR decision-makers ישראליים — engagement genuinely מעלה profile views ומוביל ל-DMs; זהו ה-sequence שמניב 3.5x יותר תגובות מ-email בלבד",
+    "LinkedIn Newsletter → lead magnet: כל edition מסתיים ב-CTA 'רוצים benchmark מחיר לאירוע של [X] אנשים? שלחו DM' — קהל opted-in עם open rate 40-50% הוא pipeline ישיר; מטרה: 3-4 ליידים/חודש מה-newsletter תוך 6 חודשים",
+    "upe-spain.com כמקור ליידים אירופאיים: בלוג post ממוקד ל-'international product launch event' (pos 10.1, 198 חשיפות) + 'new hire team building' (pos 14.8, 160 חשיפות) עם CTA לדף יצירת קשר ספרד; הסייט צומח — להאיץ ולנצל את המומנטום",
+    "Word of mouth amplification: 1 לידים הגיע מ-word of mouth — לבקש מכל לקוח קיים שיצרף UPE ל-1 קבוצת WhatsApp/Slack של CMOs/HR Directors ישראליים; referral אחד לחודש מכל לקוח שביע רצון = מקור ה-leads עם ה-CAC הנמוך ביותר האפשרי"
   ]
 }
