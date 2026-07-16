@@ -154,6 +154,11 @@ def send_graph_html(subject, html):
                 "subject": subject,
                 "body": {"contentType": "HTML", "content": html},
                 "toRecipients": [{"emailAddress": {"address": TO}}],
+                # High importance + a category so the actionable approval mail
+                # stands out from the ~5 daily automated reports and isn't lost
+                # (it self-sends alon->alon, which Exchange auto-marks read).
+                "importance": "high",
+                "categories": ["אישור פרסום"],
             },
             "saveToSentItems": True,
         }).encode()
