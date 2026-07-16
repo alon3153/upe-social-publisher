@@ -80,16 +80,18 @@ def check_backlog():
 
 
 def check_duplicates():
-    """Same day+network+lang alive more than once (pending/approved) — a
-    re-enqueue bug symptom; one approve_all click then publishes twice."""
+    """Same day+network+account+lang alive more than once (pending/approved) — a
+    re-enqueue bug symptom; one approve_all click then publishes twice. Keyed on
+    ACCOUNT too: the 3 HE LinkedIn advocates legitimately share (day,network,lang)
+    with distinct accounts — that is by design, not a duplicate."""
     try:
         rows = queue._req("GET", "post_approvals", params={
-            "select": "day,network,lang", "status": "in.(pending,approved)"})
+            "select": "day,network,account,lang", "status": "in.(pending,approved)"})
     except Exception as e:
         return [f"⚠️ לא ניתן לבדוק שכפולים בתור: {e}"]
     counts = {}
     for r in rows:
-        k = (r.get("day"), r.get("network"), r.get("lang"))
+        k = (r.get("day"), r.get("network"), r.get("account"), r.get("lang"))
         counts[k] = counts.get(k, 0) + 1
     dups = {k: v for k, v in counts.items() if v > 1 and k[0] is not None}
     if not dups:
