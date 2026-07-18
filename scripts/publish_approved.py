@@ -99,6 +99,16 @@ def main():
     dry = "--dry-run" in sys.argv
     rows = queue.list_approved_unpublished()  # ordered day.asc -> oldest personal post goes first
     print(f"Approved & unpublished: {len(rows)}")
+
+    # THROTTLING: only publish the LOWEST pending day per run.
+    # Without this, a backlog of approvals floods all networks at once.
+    if rows:
+        min_day = min(r["day"] for r in rows)
+        skipped = [r for r in rows if r["day"] != min_day]
+        rows = [r for r in rows if r["day"] == min_day]
+        print(f"Throttle: publishing day {min_day} only ({len(rows)} posts); "
+              f"deferring {len(skipped)} posts from later days to next run.")
+
     ok = 0
     published_today = _personal_published_today()  # personal key -> already published today (UTC)
     run_count = {}                                 # personal key -> published to it this run
