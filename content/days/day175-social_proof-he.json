@@ -1,0 +1,30 @@
+{
+  "day": 175,
+  "category": "social_proof",
+  "language": "he",
+  "date": "",
+  "weekday": "",
+  "theme": "Clients Keep Coming Back",
+  "linkedin": {
+    "profile": "Uproduction Events (Company Page)",
+    "text": "המבחן הכי אמיתי של חברת הפקת אירועים הוא לא תיק העבודות שלה.\n\nהוא כמה לקוחות חוזרים לבקש הצעת מחיר שנייה.\n\nב-Uproduction Events, חלק משמעותי מ-1,500+ האירועים שהפקנו הגיע מלקוחות שכבר ידעו מה אנחנו מסוגלים לעשות — כי הם ראו את זה בעצמם.\n\nאחרי 16 שנה בתחום, אני רואה דפוס ברור: מנהלים ברמת דירקטור ו-VP לא חוזרים לספק. הם חוזרים לשותף שהם סומכים עליו שישמור על המוניטין שלהם — מול ההנהלה שלהם ומול האנשים שלהם.\n\nהבחנה הזו — ספק מול שותף — מעצבת הכל: איך אנחנו מתכננים, איך אנחנו מתקשרים ואיך אנחנו מבצעים.\n\nלמי שמעריך שותפי הפקה לקראת מחזור התכנון הבא: מה הלקח הכי חשוב שלקחתם מחוויה קודמת, טובה או פחות טובה? מעניין אותי לשמוע."
+  },
+  "instagram": {
+    "profile": "@uproductionevents",
+    "text": "לקוחות חוזרים זה לא מקרה. 🔁\n\nמעל 1,500 אירועים. 130+ יעדים. 25,000+ משתתפים. אבל המדד שהכי גאים בו הוא מנהלי HR ושיווק שחוזרים אלינו שנה אחרי שנה.\n\nאמון כזה בונים אירוע אחד בכל פעם.\n\nמתכננים משהו? שלחו לנו DM. ✉️\n\n#הפקתאירועים #נופשחברה #אירועיםקורפורטיביים #הפקותאירועיםלחברות #נסיעותתמריץ #אירועיHR #teambuilding #incentivetravel #corporateevents"
+  },
+  "facebook": {
+    "profile": "Uproduction Events (Page)",
+    "text": "המספר שהכי אכפת לנו ממנו הוא לא מספר האירועים שהפקנו.\n\nהוא מספר הלקוחות שחזרו.\n\nאחרי יותר מ-1,500 אירועים ב-130+ יעדים ו-25,000+ משתתפים, הסימן הכי ברור לכך שעשינו את הדבר הנכון הוא כשמנהל\\.ת HR כותב\\.ת לנו לפני שמחזור התכנון השנתי בכלל מתחיל — כי הם כבר יודעים שהם רוצים לעבוד איתנו שוב.\n\nהפקנו אירועים לחברות שגדלו, שינו כיוון, והעלו את הרף כל שנה. וגם אנחנו גדלנו איתן.\n\nאם אתם מתכננים אירוע חברתי או נופש תמריץ ורוצים שותף שכבר יודע מה זה אומר 'מצוין' — שלחו לנו הודעה או השאירו תגובה. שמחים לדבר."
+  },
+  "image_prompt": "A wide-angle candid photograph of 200 formally dressed corporate guests networking on a candlelit rooftop terrace overlooking a dramatic Mediterranean coastline at dusk, glasses raised mid-toast, city lights beginning to glow below.",
+  "image_style": "photorealistic, editorial, documentary, 35mm film grain",
+  "brand": {
+    "colors": [
+      "#1C1C1C",
+      "#FBCE0A"
+    ],
+    "font": "Comfortaa",
+    "logo": "uproduction_official_logo.png"
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "day": 175,
+  "category": "social_proof",
+  "language": "es",
+  "date": "",
+  "weekday": "",
+  "theme": "Clients Keep Coming Back",
+  "linkedin": {
+    "profile": "Uproduction Events (Company Page)",
+    "text": "La medida más honesta de una empresa de producción de eventos no está en su catálogo. Está en cuántos clientes reservan una segunda vez.\n\nEn Uproduction Events, una parte significativa de los más de 1.500 eventos que hemos realizado proviene de clientes que ya sabían de lo que éramos capaces — porque lo habían visto con sus propios ojos.\n\nDespués de 16 años en este sector, he observado algo claro: los directores y vicepresidentes no vuelven a un proveedor. Vuelven a un socio en quien confían para proteger su reputación frente a su propia dirección y su propio equipo.\n\nEsa distinción — proveedor frente a socio — define todo: cómo diseñamos, cómo comunicamos y cómo ejecutamos.\n\nPara quienes estén evaluando socios para el próximo ciclo de planificación: ¿cuál es el aprendizaje irrenunciable que os ha dejado una experiencia anterior, buena o mala? Me interesa leerlo."
+  },
+  "instagram": {
+    "profile": "@uproductionevents",
+    "text": "Los clientes que repiten no son casualidad. 🔁\n\nMás de 1.500 eventos. Más de 130 destinos. Más de 25.000 participantes. Pero la cifra que más nos enorgullece es la de los líderes de RRHH y marketing que vuelven a confiar en nosotros año tras año.\n\nEsa confianza se gana evento a evento.\n\n¿Tienes algo en mente? Escríbenos por DM. ✉️\n\n#EventosCorporativos #ViajesDeIncentivo #ProducciónDeEventos #EventosB2B #EventosEmpresariales #TeamBuilding #RRHH #ViajesCorporativos #EventPlanning #IncentiveTravel"
+  },
+  "facebook": {
+    "profile": "Uproduction Events (Page)",
+    "text": "La métrica que más nos importa no está en ningún informe: es cuántos clientes vuelven.\n\nDespués de más de 1.500 eventos en más de 130 destinos y con más de 25.000 participantes, la señal más clara de que hicimos bien nuestro trabajo llega cuando un director de RRHH nos escribe antes de que empiece el ciclo de planificación anual, ya con ganas de repetir.\n\nHemos producido eventos para empresas que han crecido, cambiado de objetivos y elevado sus expectativas año tras año. Y nosotros hemos crecido con ellas.\n\nSi estás pensando en tu próximo evento corporativo o viaje de incentivo y quieres un socio que ya sabe lo que significa 'excelente', escríbenos o deja un comentario. Hablamos."
+  },
+  "image_prompt": "A wide-angle candid photograph of 200 formally dressed corporate guests networking on a candlelit rooftop terrace overlooking a dramatic Mediterranean coastline at dusk, glasses raised mid-toast, city lights beginning to glow below.",
+  "image_style": "photorealistic, editorial, documentary, 35mm film grain",
+  "brand": {
+    "colors": [
+      "#1C1C1C",
+      "#FBCE0A"
+    ],
+    "font": "Comfortaa",
+    "logo": "uproduction_official_logo.png"
+  }
+}
