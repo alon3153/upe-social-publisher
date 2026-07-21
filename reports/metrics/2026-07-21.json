@@ -1,0 +1,220 @@
+{
+  "generated_at": "2026-07-21T07:55:18",
+  "period_days": 7,
+  "networks": {
+    "instagram": {
+      "posts": 12,
+      "impressions": 506,
+      "reach": 310,
+      "interactions": 3,
+      "engagement_rate_pct": 0.59,
+      "caveat": null,
+      "top": {
+        "url": "https://www.instagram.com/p/Da2ir-hGbBb/",
+        "content": "An incentive trip people love vs. one they just tolerate?\nComes down to 5 rules. 👇\n\n✨ Reward, don't schedule — free time IS the gift\n🏆 One hero moment beats fiv",
+        "impressions": 69,
+        "interactions": 1
+      }
+    },
+    "facebook": {
+      "posts": 13,
+      "impressions": 62,
+      "reach": 42,
+      "interactions": 1,
+      "engagement_rate_pct": 1.61,
+      "caveat": null,
+      "top": {
+        "url": null,
+        "content": "",
+        "impressions": 19,
+        "interactions": 0
+      }
+    },
+    "tiktok": {
+      "posts": 5,
+      "impressions": 384,
+      "reach": 367,
+      "interactions": 4,
+      "engagement_rate_pct": 1.04,
+      "caveat": null,
+      "top": {
+        "url": null,
+        "content": "",
+        "impressions": 95,
+        "interactions": 2
+      }
+    },
+    "linkedin": {
+      "posts": 14,
+      "impressions": 97,
+      "reach": 0,
+      "interactions": 0,
+      "engagement_rate_pct": 0.0,
+      "caveat": null,
+      "top": {
+        "url": "https://www.linkedin.com/feed/update/urn:li:ugcPost:7484279849990365184",
+        "content": "",
+        "impressions": 16,
+        "interactions": 0
+      }
+    },
+    "youtube": {
+      "posts": 6,
+      "impressions": 6695,
+      "reach": 0,
+      "interactions": 9,
+      "engagement_rate_pct": 0.13,
+      "caveat": null,
+      "top": {
+        "url": null,
+        "content": "",
+        "impressions": 5192,
+        "interactions": 6
+      }
+    }
+  },
+  "totals": {
+    "posts": 50,
+    "impressions": 7744,
+    "reach": 719,
+    "interactions": 17,
+    "engagement_rate_pct": 0.22
+  },
+  "leads": {
+    "ok": true,
+    "qualified_leads": 8,
+    "new_opportunities": 8,
+    "lead_object_count": 0,
+    "period_days": 30,
+    "source": "salesforce",
+    "definition": "new Opportunities created (all)",
+    "by_source": {
+      "Web": 2,
+      "Word of mouth": 5,
+      "Existing Customer": 1
+    },
+    "dominant_source": "Word of mouth",
+    "dominant_share_pct": 62,
+    "attribution_gap": false,
+    "attribution_note": "הייחוס מפוזר בין מספר מקורות"
+  },
+  "seo_geo": {
+    "generated_at": "2026-07-20",
+    "sites": [
+      {
+        "site": "https://upe.co.il/",
+        "clicks": 121,
+        "impressions": 34238,
+        "avg_position": 36.9,
+        "clicks_prev": 97,
+        "impressions_prev": 32656,
+        "top_opportunities": [
+          [
+            "הפקת נופש חברה",
+            8.2,
+            1281
+          ],
+          [
+            "הפקות אירועים לחברות",
+            18.1,
+            323
+          ],
+          [
+            "נופש חברה",
+            14.8,
+            316
+          ],
+          [
+            "הפקות אירועים לחברות הייטק",
+            9.1,
+            143
+          ],
+          [
+            "ארגון טיולים לחברות",
+            10.8,
+            135
+          ]
+        ]
+      },
+      {
+        "site": "https://upe-spain.com/",
+        "clicks": 56,
+        "impressions": 14469,
+        "avg_position": 23.2,
+        "clicks_prev": 37,
+        "impressions_prev": 12467,
+        "top_opportunities": [
+          [
+            "international product launch event",
+            9.8,
+            204
+          ],
+          [
+            "global product launch event",
+            9.6,
+            155
+          ],
+          [
+            "new hire team building",
+            15.2,
+            147
+          ],
+          [
+            "evento neutro en carbono",
+            11.8,
+            123
+          ],
+          [
+            "how to insure event liability",
+            10.8,
+            85
+          ]
+        ]
+      }
+    ],
+    "geo": {
+      "status": "ok",
+      "cited": 3,
+      "total": 7,
+      "rate": 42.9
+    },
+    "competitors": [
+      {
+        "term": "הפקת אירועים עסקיים",
+        "pos": null,
+        "top3": []
+      },
+      {
+        "term": "חברת הפקת אירועים",
+        "pos": null,
+        "top3": []
+      },
+      {
+        "term": "הפקת כנסים",
+        "pos": null,
+        "top3": []
+      },
+      {
+        "term": "טיולי תמריץ לעובדים",
+        "pos": null,
+        "top3": []
+      },
+      {
+        "term": "eventos corporativos españa",
+        "pos": null,
+        "top3": []
+      },
+      {
+        "term": "incentive travel spain",
+        "pos": null,
+        "top3": []
+      },
+      {
+        "term": "corporate events barcelona",
+        "pos": null,
+        "top3": []
+      }
+    ],
+    "ok": true
+  }
+}

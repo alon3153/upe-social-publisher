@@ -1,57 +1,58 @@
 {
-  "updated_at": "2026-07-20",
+  "updated_at": "2026-07-21",
   "source": "daily-council",
   "directives": [
     {
       "category": "safe_auto",
-      "action": "תזמון LinkedIn לשלישי-חמישי, 8:00-10:00 בבוקר, מקסימום 4 פוסטים שבועיים עם engagement אקטיבי ב-60 דקות הראשונות",
-      "detail": "אלגוריתם LinkedIn 2026 מתגמל dwell-time (+40% reach) ו-saves (+35%); פרסום בשלישי-חמישי 8-10 בבוקר הוא חלון השיא ל-B2B; תגובה ב-60 הדקות הראשונות היא גורם מכריע לדיסטריביושן.",
+      "action": "שינוי תמהיל LinkedIn: מדף חברה לתוכן אישי של מייסדים/מנהלים",
+      "detail": "פרופילים אישיים מייצרים 5-10x יותר reach מעמוד חברה; לתזמן 3 פוסטים/שבוע של thought leadership אישי (ימים ב'-ד', 8-10 בבוקר) במקום 14 פוסטים שטחיים של מדף.",
       "channel": "linkedin"
     },
     {
       "category": "safe_auto",
-      "action": "הוספת English כתוביות לכל YouTube Short — מיקסט עברית/אנגלית בתיאורים ו-tags, בניית playlist נפרד 'Corporate Events Behind the Scenes'",
-      "detail": "YouTube מרחיב reach לקהלים בינלאומיים דרך captions מרובי-שפות; Shorts + Long-form מגדילים צמיחת channel ב-41% לעומת פורמט בודד; playlist מחייב session value.",
+      "action": "פורמט YouTube Shorts כ-funnel לסרטים ארוכים",
+      "detail": "לפרסם Shorts של 30-60 שניות ('hook' מאירועי לקוחות) שמכוונים לסרט מלא — מגדיל session value ומאיץ מנויים חדשים לפי אלגוריתם 2026.",
       "channel": "youtube"
     },
     {
       "category": "safe_auto",
-      "action": "עדכון meta-title ו-description לדפי upe.co.il עבור 'הפקת נופש חברה' (עמדה 8.2, 1,281 חשיפות) — שילוב מספר/תוצאה בכותרת לשיפור CTR",
-      "detail": "CTR הנוכחי 0.35% על 34,238 חשיפות — שיפור ל-2% מייצר 4x יותר קליקים ללא שינוי עמדה; מילת המפתח 'הפקת נופש חברה' בעמדה 8 עם 1,281 חשיפות היא ה-quick-win הגדול ביותר.",
-      "channel": "google_organic_geo"
-    },
-    {
-      "category": "safe_auto",
-      "action": "הפחתת תדירות Facebook ל-3 פוסטים שבועיים בלבד, ניתוב משאבי תוכן שהתפנו ל-LinkedIn",
-      "detail": "Facebook מציג 63 חשיפות על 10 פוסטים = 6.3 חשיפות/פוסט עם engagement flagged כבלתי-אמין; ROI נמוך משמעותית מ-LinkedIn שמייצר pipeline B2B.",
+      "action": "הפסקת פרסום ב-Facebook, ניתוב המשאבים ל-LinkedIn ו-YouTube",
+      "detail": "Facebook מייצר 62 חשיפות ו-1 אינטראקציה בשבוע — ערוץ מת לB2B MICE; חיסכון בזמן יאפשר 2-3 פוסטים LinkedIn איכותיים נוספים.",
       "channel": "facebook"
     },
     {
       "category": "safe_auto",
-      "action": "הגדרת 3 עמודי תוכן LinkedIn: (1) Case Study מהשטח, (2) Thought Leadership על טרנדים ב-MICE/Incentive Travel, (3) Behind-the-scenes ייצור אירועים — rotation שבועי",
-      "detail": "LinkedIn 2026 מתגמל 'knowledge exchange' ו-POV-driven insights; תוכן עם framework/case study מקבל saves שמגדילים reach; rotation פורמטים מונע ירידת אלגוריתם.",
+      "action": "בניית לוח hashtag/topic ל-LinkedIn: מיקוד ב-5 נושאי עוגן",
+      "detail": "נושאים: incentive travel ROI, corporate event production, MICE Israel, employee experience, event tech — להשתמש בהם בעקביות כדי לבנות authority topical בעיני האלגוריתם.",
       "channel": "linkedin"
     },
     {
       "category": "safe_auto",
-      "action": "הוספת Event Schema + LocalBusiness Schema לדפי שירות מרכזיים ב-upe.co.il ו-upe-spain.com לשיפור חשיפה ב-AI Overviews ו-Rich Snippets",
-      "detail": "GEO Rate עומד על 42.9% — מבנה schema מסודר מגדיל סיכוי ציטוט ב-AI engines; מנועי AI משתמשים ב-structured data כאשר מייצרים תשובות על שירותי events/travel.",
-      "channel": "google_organic_geo"
+      "action": "מיפוי SEO: יצירת דפי נחיתה ייעודיים לביטויי הזדמנות עברית",
+      "detail": "הביטויים 'הפקת נופש חברה' (pos 8.2, 1,281 חשיפות) ו-'הפקות אירועים לחברות הייטק' (pos 9.1) הם bottom-of-funnel ויכולים להניב קליקים מיידיים עם שיפור On-Page.",
+      "channel": "instagram"
+    },
+    {
+      "category": "safe_auto",
+      "action": "YouTube: שיפור thumbnails וכותרות לCTR מעל 2%",
+      "detail": "CTR benchmark בריא הוא 2-4%; לנתח את הסרטים הקיימים, לבדוק A/B על thumbnails ולהוסיף hook ראשוני חזק ב-3 שניות הראשונות לשיפור retention.",
+      "channel": "youtube"
     }
   ],
   "follower_growth_plan": [
-    "שלב 1 (0-3 חודשים): הפעלת Employee Advocacy — CEO + 2 מנהלים מפרסמים מפרופיל אישי ב-LinkedIn, יוצרים 'האדם מאחורי UPE'; מטרה: הכפלת LinkedIn reach מ-88 ל-500+ חשיפות/שבוע.",
-    "שלב 2 (1-6 חודשים): YouTube Shorts כ-Discovery Engine — 3 Shorts/שבוע מתוכן ייצור קיים; channels שמשלבים Shorts + Long-form גדלים 41% מהר יותר; מטרה: 500 subscribers חדשים לחודש.",
-    "שלב 3 (3-9 חודשים): SEO-driven LinkedIn Newsletter — פרסום Newsletter חודשי ב-LinkedIn + מיקום organically בחיפוש Google/AI ל-Hebrew keywords עם topical authority; GEO rate מ-42.9% ל-70%+.",
-    "שלב 4 (6-18 חודשים): Content Repurposing System — כל אירוע גדול → 1 YouTube ארוך + 5 Shorts + 2 LinkedIn posts + 1 מאמר SEO; מנוע תוכן מרובה ערוצים עם investment אחד.",
-    "שלב 5 (12-36 חודשים): B2B Community Building — קהילת LinkedIn סביב נושא 'Corporate Events Innovation' + שותפויות עם מנהלי HR/CMO בישראל ואירופה; אמפליפיקציה ויראלית של Word of Mouth הקיים."
+    "שלב 1 (0-3 חודשים): ריכוז אנרגיה ב-LinkedIn ו-YouTube בלבד — הפסקת Facebook, קיצוץ Instagram ל-4 פוסטים/שבוע; בניית קהל נישה איכותי מקבלי החלטות.",
+    "שלב 2 (3-6 חודשים): הפעלת employee advocacy — 3-5 עובדים מפרסמים אישית ב-LinkedIn ומגבירים תוכן החברה; personal profiles מייצרים reach הגבוה פי 5-10 מעמוד חברה.",
+    "שלב 3 (6-12 חודשים): LinkedIn Newsletter חודשי על MICE/תעשיית האירועים — בניית opted-in audience ישיר ומוגן מאלגוריתמים.",
+    "שלב 4 (12-18 חודשים): YouTube Shorts funnel — 8-12 Shorts/חודש מביאים לסרטים ארוכים, תוך שימוש בlocalised metadata לשווקים ישראל ואירופה.",
+    "שלב 5 (18-36 חודשים): cross-platform amplification — תוכן LinkedIn מובחר מועלה ל-Instagram Reels ו-TikTok עם עיבוד פורמט-native (לא copy-paste), תוך מדידת engagement per platform לאופטימיזציה.",
+    "מדד ביניים קריטי: אחוז חשבונות target-account (חברות היטאק/תאגידים >200 עובדים) שעוקבים אחרי UPE ב-LinkedIn — זה leading indicator יותר מסך הפולוארים."
   ],
   "leads_actions": [
-    "פעולה 1 (מיידי — P0): דף נחיתה ייעודי לייעוץ חינם ב-upe.co.il עם טופס פשוט + WhatsApp CTA — Word of Mouth ממיר 57%, דף נחיתה יאפשר ל-digital לחקות את ה-referral experience.",
-    "פעולה 2 (שבוע 1-2): הפעלת CEO כ-LinkedIn Personal Brand — פוסט שבועי של case study אמיתי מאירוע שהסתיים; Personal profiles מייצרים 8x יותר engagement; מצופה ל-2-3 inbound DMs/חודש ישירות.",
-    "פעולה 3 (שבוע 2-4): שיפור CTR ב-SEO — עדכון meta-titles ל-5 מילות המפתח המובילות ב-upe.co.il (הפקת נופש חברה, הפקות אירועים לחברות הייטק וכו') עם numbers ו-social proof; מעבר מ-0.35% ל-1.5% CTR = 3x קליקים.",
-    "פעולה 4 (חודש 1-2): הוספת Salesforce attribution מדויק לדיגיטל — כל Form Submission + WhatsApp מקבל source 'LinkedIn Organic' / 'YouTube' / 'Google Organic' — לא UTM, אלא שאלת מקור בטופס; ממצאי Word of Mouth ינותבו לדיגיטל.",
-    "פעולה 5 (חודש 1-3): יצירת 'Incentive Travel Checklist 2026' — PDF בחינם להורדה ב-upe.co.il ו-upe-spain.com; lead magnet שמשלים intent search ל-CMO/HR שמחפש 'טיולי תמריץ לעובדים'; מצופה ל-5+ leads/חודש חדשים.",
-    "פעולה 6 (חודש 2-4): LinkedIn Outreach מבוסס Content — לאחר 30 ימי employee advocacy, מנהלים מגיעים בעקבות engagement ל-CMO/HR שקיימו אינטראקציה עם פוסטים; שיחת ייעוץ כ-CTA; B2B multi-touch מייצר 3.5x יותר תגובות."
+    "הכפלת השקעה בSEO עברית: יצירת דפי שירות Bottom-of-Funnel ל-'הפקת נופש חברה' ו-'הפקות אירועים לחברות הייטק' — 2 הלידים מ-Web בחודש הנוכחי מגיעים מהאתר; נפח הביקושים קיים, הדפים חסרים.",
+    "פתיחת Salesforce Source לכל ליד דיגיטלי עם שם ערוץ ספציפי (LinkedIn / YouTube / Organic Search) — כרגע 62% מגיעים מפה-לאוזן ואי אפשר לזהות אם דיגיטל תרם לחימום הליד לפני הפנייה.",
+    "LinkedIn: CEO/מנהל מפרסם post אישי שבועי בנושא תוצאות עסקיות מאירועים (ROI, שיפור retention עובדים) עם CTA ל-'בואו נדבר' — שיחה מייצרת אמון שממיר לליד בB2B.",
+    "השקת LinkedIn Event רבעוני: 'איך לבחור חברת הפקה לאירוע חברתי' — אוסף מידע מגולשים שהם CMO/HR leads, מהווה ליד מוסמך ישיר.",
+    "הוספת CTA ברור בכל סרטוני YouTube ('השאירו פרטים לייעוץ ראשוני חינם') עם קישור לדף נחיתה ייעודי — כרגע 6,695 חשיפות/שבוע ביוטיוב ללא שום conversion path.",
+    "תוכנית הפנייה מובנית: ממוצע 5 לידים/חודש מגיעים מפה-לאוזן — ליצור תהליך רשמי לבקשת הפניות מלקוחות קיימים אחרי כל אירוע מוצלח, עם תמריץ (כגון הנחה על אירוע הבא)."
   ]
 }
