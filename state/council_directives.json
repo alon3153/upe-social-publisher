@@ -1,58 +1,58 @@
 {
-  "updated_at": "2026-07-21",
+  "updated_at": "2026-07-22",
   "source": "daily-council",
   "directives": [
     {
       "category": "safe_auto",
-      "action": "שינוי תמהיל LinkedIn: מדף חברה לתוכן אישי של מייסדים/מנהלים",
-      "detail": "פרופילים אישיים מייצרים 5-10x יותר reach מעמוד חברה; לתזמן 3 פוסטים/שבוע של thought leadership אישי (ימים ב'-ד', 8-10 בבוקר) במקום 14 פוסטים שטחיים של מדף.",
+      "action": "העברת תקציב תוכן מ-Facebook ל-LinkedIn: הפחתה ל-2 פוסטים/שבוע ב-Facebook ועלייה ל-5 פוסטים/שבוע ב-LinkedIn",
+      "detail": "Facebook מייצר 50 חשיפות ל-12 פוסטים — ROI שלילי. LinkedIn הוא הערוץ שמייצר 78% מלידי B2B, ו-15 פוסטים השיגו 201 חשיפות — ניתן לשפר דרמטית עם פורמטים נכונים.",
       "channel": "linkedin"
     },
     {
       "category": "safe_auto",
-      "action": "פורמט YouTube Shorts כ-funnel לסרטים ארוכים",
-      "detail": "לפרסם Shorts של 30-60 שניות ('hook' מאירועי לקוחות) שמכוונים לסרט מלא — מגדיל session value ומאיץ מנויים חדשים לפי אלגוריתם 2026.",
-      "channel": "youtube"
+      "action": "זיהוי 5 מילות מפתח עדיפות ל-upe.co.il: 'הפקת נופש חברה' (pos 8.2, 1,281 חיפושים), 'נופש חברה' (pos 14.8), 'הפקות אירועים לחברות הייטק' (pos 9.1) — יצירת brief לדפי נחיתה ייעודיים",
+      "detail": "שלוש מילות מפתח אלו בעמדות 8-15 עם נפחים גבוהים — מרחק קצר מעמוד 1. דף נחיתה מסחרי ייעודי לכל מילה יכול להכפיל קליקים תוך 60 יום.",
+      "channel": "google_organic_geo"
     },
     {
       "category": "safe_auto",
-      "action": "הפסקת פרסום ב-Facebook, ניתוב המשאבים ל-LinkedIn ו-YouTube",
-      "detail": "Facebook מייצר 62 חשיפות ו-1 אינטראקציה בשבוע — ערוץ מת לB2B MICE; חיסכון בזמן יאפשר 2-3 פוסטים LinkedIn איכותיים נוספים.",
-      "channel": "facebook"
-    },
-    {
-      "category": "safe_auto",
-      "action": "בניית לוח hashtag/topic ל-LinkedIn: מיקוד ב-5 נושאי עוגן",
-      "detail": "נושאים: incentive travel ROI, corporate event production, MICE Israel, employee experience, event tech — להשתמש בהם בעקביות כדי לבנות authority topical בעיני האלגוריתם.",
+      "action": "בניית לוח נושאים חודשי ל-LinkedIn המבוסס על 3 עמודות תוכן: מומחיות-תעשייה (טרנדים בתמריצים), Behind-the-scenes הפקה, Case study מספרים",
+      "detail": "האלגוריתם של LinkedIn ב-2026 מתגמל תוכן ידע ('knowledge exchange') ו-dwell time. פוסט טקסטואלי עם פתיח חזק ושאלת סגירה מוכיח את עצמו כפורמט המוביל.",
       "channel": "linkedin"
     },
     {
       "category": "safe_auto",
-      "action": "מיפוי SEO: יצירת דפי נחיתה ייעודיים לביטויי הזדמנות עברית",
-      "detail": "הביטויים 'הפקת נופש חברה' (pos 8.2, 1,281 חשיפות) ו-'הפקות אירועים לחברות הייטק' (pos 9.1) הם bottom-of-funnel ויכולים להניב קליקים מיידיים עם שיפור On-Page.",
-      "channel": "instagram"
+      "action": "הגדרת קדנציית YouTube Shorts: חיתוך 3-4 Shorts שבועיים מתוך סרטוני הlong-form הקיימים, עם keyword בכותרת ו-CTA לאתר",
+      "detail": "YouTube Shorts מוביל לגדילת subscribers מהירה ב-50-100% יחסית לערוצים ללא Shorts, ומשמש כ'טיזר' לlong-form — ממנף את נכס הוידאו הקיים.",
+      "channel": "youtube"
     },
     {
       "category": "safe_auto",
-      "action": "YouTube: שיפור thumbnails וכותרות לCTR מעל 2%",
-      "detail": "CTR benchmark בריא הוא 2-4%; לנתח את הסרטים הקיימים, לבדוק A/B על thumbnails ולהוסיף hook ראשוני חזק ב-3 שניות הראשונות לשיפור retention.",
-      "channel": "youtube"
+      "action": "קביעת חלון פרסום אופטימלי ל-LinkedIn: ימים ב'-ד', 8:00-10:00 או 12:00, עם נוכחות של מנהל ב-60 דקות לאחר פרסום לתגובה מהירה לתגובות",
+      "detail": "האלגוריתם מעריך כל פוסט ב-60 הדקות הראשונות — תגובה מהירה לתגובות מזניקה את ה-distribution. זה אפקט חינמי שלא דורש תוכן נוסף.",
+      "channel": "linkedin"
+    },
+    {
+      "category": "safe_auto",
+      "action": "הוספת structured data (Schema: Event, LocalBusiness, Service) לדפי השירות ב-upe.co.il ו-upe-spain.com לשיפור GEO (42.9% citation rate נוכחי)",
+      "detail": "Schema markup ישפר את הופעת UPE בתוצאות AI ו-rich snippets; כיום 3 מתוך 7 שאילתות GEO מביאות ל-UPE — יש מקום להכפיל.",
+      "channel": "google_organic_geo"
     }
   ],
   "follower_growth_plan": [
-    "שלב 1 (0-3 חודשים): ריכוז אנרגיה ב-LinkedIn ו-YouTube בלבד — הפסקת Facebook, קיצוץ Instagram ל-4 פוסטים/שבוע; בניית קהל נישה איכותי מקבלי החלטות.",
-    "שלב 2 (3-6 חודשים): הפעלת employee advocacy — 3-5 עובדים מפרסמים אישית ב-LinkedIn ומגבירים תוכן החברה; personal profiles מייצרים reach הגבוה פי 5-10 מעמוד חברה.",
-    "שלב 3 (6-12 חודשים): LinkedIn Newsletter חודשי על MICE/תעשיית האירועים — בניית opted-in audience ישיר ומוגן מאלגוריתמים.",
-    "שלב 4 (12-18 חודשים): YouTube Shorts funnel — 8-12 Shorts/חודש מביאים לסרטים ארוכים, תוך שימוש בlocalised metadata לשווקים ישראל ואירופה.",
-    "שלב 5 (18-36 חודשים): cross-platform amplification — תוכן LinkedIn מובחר מועלה ל-Instagram Reels ו-TikTok עם עיבוד פורמט-native (לא copy-paste), תוך מדידת engagement per platform לאופטימיזציה.",
-    "מדד ביניים קריטי: אחוז חשבונות target-account (חברות היטאק/תאגידים >200 עובדים) שעוקבים אחרי UPE ב-LinkedIn — זה leading indicator יותר מסך הפולוארים."
+    "שלב 1 (חודשים 1-3) — תשתית: הפעלת thought leadership אישי של 2 מנהלים ב-LinkedIn (3 פוסטים/שבוע כל אחד), הגדרת 3 עמודות תוכן ברורות לכל רשת, הפסקת פעילות Facebook.",
+    "שלב 2 (חודשים 3-6) — מנוף YouTube: יצירת Shorts שבועיים מתוך long-form קיים + אופטימיזציית SEO לכותרות ותיאורים — YouTube הוא מנוע הצמיחה המוכח של UPE עם 6,990 חשיפות.",
+    "שלב 3 (חודשים 6-12) — Community: השקת LinkedIn Newsletter + הגדלת engagement אקטיבי (תגובות על פוסטים של CMO/HR ישראלים ואירופאים) — LinkedIn מייצר 78% מלידי B2B.",
+    "שלב 4 (שנה 2) — Advocacy: תוכנית employee advocacy שבה 5-10 עובדים מפרסמים תוכן מקצועי אישי; פרופילים אישיים מייצרים 5-7x יותר reach מדפי חברה.",
+    "שלב 5 (שנה 2-3) — Scale: שיתופי פעולה עם influencers בתחום HR/Events ישראלי ואירופאי, הגשה לפרסים בתעשייה (SITE, MPI) ופרסום תוצאות — מייצר credibility ו-backlinks.",
+    "מדד מוביל שבועי: עקוב אחרי follower growth rate (לא מספר מוחלט), LinkedIn engagement per post ו-YouTube Shorts views — אלו האינדיקטורים המוקדמים לצמיחה לקראת 500K."
   ],
   "leads_actions": [
-    "הכפלת השקעה בSEO עברית: יצירת דפי שירות Bottom-of-Funnel ל-'הפקת נופש חברה' ו-'הפקות אירועים לחברות הייטק' — 2 הלידים מ-Web בחודש הנוכחי מגיעים מהאתר; נפח הביקושים קיים, הדפים חסרים.",
-    "פתיחת Salesforce Source לכל ליד דיגיטלי עם שם ערוץ ספציפי (LinkedIn / YouTube / Organic Search) — כרגע 62% מגיעים מפה-לאוזן ואי אפשר לזהות אם דיגיטל תרם לחימום הליד לפני הפנייה.",
-    "LinkedIn: CEO/מנהל מפרסם post אישי שבועי בנושא תוצאות עסקיות מאירועים (ROI, שיפור retention עובדים) עם CTA ל-'בואו נדבר' — שיחה מייצרת אמון שממיר לליד בB2B.",
-    "השקת LinkedIn Event רבעוני: 'איך לבחור חברת הפקה לאירוע חברתי' — אוסף מידע מגולשים שהם CMO/HR leads, מהווה ליד מוסמך ישיר.",
-    "הוספת CTA ברור בכל סרטוני YouTube ('השאירו פרטים לייעוץ ראשוני חינם') עם קישור לדף נחיתה ייעודי — כרגע 6,695 חשיפות/שבוע ביוטיוב ללא שום conversion path.",
-    "תוכנית הפנייה מובנית: ממוצע 5 לידים/חודש מגיעים מפה-לאוזן — ליצור תהליך רשמי לבקשת הפניות מלקוחות קיימים אחרי כל אירוע מוצלח, עם תמריץ (כגון הנחה על אירוע הבא)."
+    "פעולה 1 — מיידית: יצירת דפי נחיתה מסחריים ב-upe.co.il לשלוש מילות המפתח החמות (הפקת נופש חברה/אירועים לחייטק/ארגון טיולים) עם טופס 'בקשת הצעת מחיר' בולט — המקור היחיד שמייצר לידים Web הוא האתר.",
+    "פעולה 2 — שבוע 1: הפעלת CEO/מנהל בכיר לפרסם ב-LinkedIn פוסט שבועי בפרופיל האישי בנושאי ROI של טיולי תמריץ, שאלות שCMO צריך לשאול לפני בחירת חברת הפקה — פוסט ידע מוביל לפניות ישירות.",
+    "פעולה 3 — חודש 1: בניית רשימת 50 decision-makers (CMO/HR Director/Event Lead) בחברות היי-טק ישראליות ב-LinkedIn ומעורבות אורגנית אקטיבית בתוכן שלהם (תגובות, לייקים) לפני כל פנייה.",
+    "פעולה 4 — חודש 2: השקת 2 case studies כתובים באתר (עם מספרים: X משתתפים, Y% שביעות רצון, Z% חסכון) לשימוש כנכס SEO וכתוכן LinkedIn שמשכנע בשלב ה-consideration.",
+    "פעולה 5 — חודש 3: מינוף לקוחות קיימים — בקשה מ-5 לקוחות מרוצים לתייג את UPE בפוסטים על האירוע שלהם, ולהוסיף review ב-Google Business; Word of mouth דיגיטלי מכפיל את האפקט האורגני.",
+    "פעולה 6 — מתמשך: מדידה חודשית: כל ליד חדש חייב לקבל תיוג מקור ב-Salesforce (LinkedIn/Site/Referral) כדי לדעת מה עובד; ללא attribution נכון, לא ניתן לכוון תקציב לערוץ הממיר."
   ]
 }
