@@ -1,72 +1,72 @@
 {
-  "updated_at": "2026-07-22",
+  "updated_at": "2026-07-23",
   "scores": {
-    "instagram": 18,
+    "instagram": 28,
     "facebook": 5,
     "tiktok": 32,
-    "linkedin": 12,
+    "linkedin": 8,
     "youtube": 55,
-    "google_organic_geo": 38,
-    "overall": 28
+    "google_organic_geo": 52,
+    "overall": 31
   },
   "recommendations": [
     {
       "category": "gated",
       "priority": "P0",
-      "action": "הפעלת thought leadership אישי של CEO/מייסד ב-LinkedIn: 3 פוסטים אישיים/שבוע בפרופיל האישי, לא רק בדף החברה — סיפורי הפקה, לקחים מ-1,500 אירועים, דעות על טרנדים בתמריצים",
-      "expected_impact": "פרופילים אישיים מייצרים 5-7x יותר reach מדפי חברה; זהו המנוף הגדול ביותר להגדיל חשיפה ב-LinkedIn ולהביא לידים B2B בעלות אפסית",
+      "action": "הפעלת אסטרטגיית Personal Branding ל-LinkedIn: 2-3 מנהלים ב-UPE מפרסמים פוסטים אישיים 3x/שבוע",
+      "expected_impact": "פרופילים אישיים מניבים פי 8-14 engagement יותר מדפי חברה; צפי: מעבר מ-0 ל-50+ אינטרקציות/שבוע ב-LinkedIn תוך 60 יום, וחשיפה ראשונה ל-CMO/HR decision-makers",
       "channel": "linkedin"
     },
     {
       "category": "gated",
       "priority": "P0",
-      "action": "יצירת 3 דפי נחיתה מסחריים בעברית ל-upe.co.il: 'הפקת נופש חברה', 'הפקות אירועים לחברות הייטק', 'ארגון טיולים לחברות' — כל דף עם CTA ברור ותיאורי case studies",
-      "expected_impact": "שלושת המילות מפתח בעמדות 8-15 עם סה\"כ 1,700+ חיפושים חודשיים — דף נחיתה ממיר יכול להוסיף 3-5 לידים Web חודשיים, כפול מהנוכחי",
+      "action": "יצירת 2 דפי נחיתה מסחריים ייעודיים ב-upe.co.il לביטויים 'הפקת נופש חברה' ו-'הפקת אירועים לחברות הייטק'",
+      "expected_impact": "המיקום הנוכחי (8.2 ו-9.1) עם 1,281+143 חיפושים/חודש — דף נחיתה ייעודי עם CTA ברור יכול להניב 3-5 לידים web נוספים/חודש ישירות מ-Google",
       "channel": "google_organic_geo"
     },
     {
       "category": "gated",
       "priority": "P1",
-      "action": "השקת LinkedIn Newsletter חודשי בשם 'מאחורי הקלעים של הפקת אירועים': תוכן מקצועי לCMO/HR על טרנדים, ROI של תמריצים, ומקרי בוחן — עם כפתור 'בואו נדבר'",
-      "expected_impact": "LinkedIn Newsletter מקבל notification ישיר למנויים וחשיפה גבוהה משמעותית מפוסט רגיל; בונה רשימת subscribers מוסמכת שמהווה pipeline חם לאורך זמן",
+      "action": "הפקת סדרת YouTube 'Behind the Event' — 4-6 סרטונים המציגים תהליך הפקה מלא מהבריף ועד המיקום",
+      "expected_impact": "YouTube הוא ערוץ ה-SEO החזק ביותר של UPE; סרטוני evergreen על incentive travel ו-corporate events ב-upe-spain.com עונים על ביטויים עם pos 9.6-9.8 שיש להם כמות חיפושים בינלאומית",
+      "channel": "youtube"
+    },
+    {
+      "category": "gated",
+      "priority": "P1",
+      "action": "יצירת LinkedIn Newsletter חודשי — 'MICE Intelligence' — תובנות לקהל HR/CMO/Event Leads",
+      "expected_impact": "Newsletter ב-LinkedIn בונה קהל opted-in מקצועי שמקבל ישירות לתיבת הדואר; מייצר touchpoint חוזר עם decision-makers ללא תלות באלגוריתם",
       "channel": "linkedin"
     },
     {
       "category": "gated",
       "priority": "P1",
-      "action": "בניית תוכנית 'לקוח ממליץ' דיגיטלית: ביקוש ל-3 video testimonials קצרים מלקוחות מרוצים לשימוש ב-LinkedIn וב-YouTube, בשילוב עם 'case study' כתוב לאתר",
-      "expected_impact": "Word of mouth מייצר 71% מהלידים — מינוף זה לתוכן דיגיטלי מסוגל לשכפל את האפקט ולהביא לקוחות חדשים דרך ראיות חברתיות אותנטיות",
+      "action": "תוכנית 'לקוח ממליץ מובנית': בניית תהליך מובנה לאיסוף testimonials וידאו מלקוחות קיימים לשימוש ב-LinkedIn ו-YouTube",
+      "expected_impact": "Word of mouth מייצר 75% מהלידים — הפיכת המוניטין הסמוי לנכס דיגיטלי פומבי תאיץ גם את ה-SEO (social proof) וגם את שיעור הסגירה",
       "channel": "linkedin"
-    },
-    {
-      "category": "gated",
-      "priority": "P1",
-      "action": "יצירת סדרת תוכן לupe-spain.com סביב 'international product launch event' ו-'global product launch event' (עמדות 9-10, נפח 350+ חיפושים) — 2 מאמרי SEO + דף שירות",
-      "expected_impact": "upe-spain.com כבר מציג שיפור של 51% בקליקים; מיקוד במילות מפתח בעמדות 9-10 עם תוכן ייעודי יכול לשחרר קליקים אנגלוסאקסיים איכותיים ולידים אירופאים",
-      "channel": "google_organic_geo"
     },
     {
       "category": "gated",
       "priority": "P2",
-      "action": "הפסקה מלאה של פעילות Facebook אורגנית ומיחזור אותה אנרגיה ליצירת carousel posts ב-LinkedIn ו-Instagram Reels בפורמט 'טיפ מהשטח מ-16 שנות הפקה'",
-      "expected_impact": "Facebook מייצר 50 חשיפות ל-12 פוסטים — ROI שלילי מוחלט לקהל B2B. ריכוז המשאבים ב-LinkedIn ו-Instagram יגדיל את האפקט הכולל ללא עלות נוספת",
-      "channel": "facebook"
+      "action": "בניית אסטרטגיית תוכן לשוק הספרדי ב-upe-spain.com סביב 'international product launch event' ו-'incentive travel spain' (pos 9.6-9.8)",
+      "expected_impact": "שני הביטויים מתקרבים לדף ראשון; תוכן אנגלי ממוקד + בניית קישורים מאתרי MICE אירופאיים יכול להניב 20-30 קליקים/יום נוספים משוק בינלאומי בעל ערך עסקה גבוה",
+      "channel": "google_organic_geo"
     }
   ],
   "follower_growth_plan": [
-    "שלב 1 (חודשים 1-3) — תשתית: הפעלת thought leadership אישי של 2 מנהלים ב-LinkedIn (3 פוסטים/שבוע כל אחד), הגדרת 3 עמודות תוכן ברורות לכל רשת, הפסקת פעילות Facebook.",
-    "שלב 2 (חודשים 3-6) — מנוף YouTube: יצירת Shorts שבועיים מתוך long-form קיים + אופטימיזציית SEO לכותרות ותיאורים — YouTube הוא מנוע הצמיחה המוכח של UPE עם 6,990 חשיפות.",
-    "שלב 3 (חודשים 6-12) — Community: השקת LinkedIn Newsletter + הגדלת engagement אקטיבי (תגובות על פוסטים של CMO/HR ישראלים ואירופאים) — LinkedIn מייצר 78% מלידי B2B.",
-    "שלב 4 (שנה 2) — Advocacy: תוכנית employee advocacy שבה 5-10 עובדים מפרסמים תוכן מקצועי אישי; פרופילים אישיים מייצרים 5-7x יותר reach מדפי חברה.",
-    "שלב 5 (שנה 2-3) — Scale: שיתופי פעולה עם influencers בתחום HR/Events ישראלי ואירופאי, הגשה לפרסים בתעשייה (SITE, MPI) ופרסום תוצאות — מייצר credibility ו-backlinks.",
-    "מדד מוביל שבועי: עקוב אחרי follower growth rate (לא מספר מוחלט), LinkedIn engagement per post ו-YouTube Shorts views — אלו האינדיקטורים המוקדמים לצמיחה לקראת 500K."
+    "שלב 1 (0-3 חודשים) — בסיס LinkedIn: הפעלת 2-3 מנהלים כ-creators אישיים, פרסום 3x/שבוע כל אחד; ביצוע engagement פעיל בפוסטים של CMO/HR/Event leads ישראלים ואירופאיים — זו הדרך המהירה ביותר להגדיל followers B2B אמיתיים.",
+    "שלב 2 (1-4 חודשים) — YouTube SEO Engine: הפקת 2 סרטונים/חודש עם keyword research מקדים — לא 'create and hope'; focus על ביטויים כמו 'incentive travel spain' ו-'corporate event production israel' שנמצאים בpos 9-15.",
+    "שלב 3 (2-6 חודשים) — תוכן ויראלי מ-TikTok ל-Instagram Reels: הגדלת TikTok ל-5/שבוע, repurpose הסרטונים כ-Reels; content שמציג 'wow moments' מאירועים מגיע לקהל רחב ומניע follows.",
+    "שלב 4 (3-8 חודשים) — LinkedIn Newsletter + Community: הגדרת newsletter חודשי עם 500+ subscribers תוך 6 חודשים; כל subscriber הוא decision-maker opted-in שלא תלוי באלגוריתם.",
+    "שלב 5 (6-18 חודשים) — Amplification: Repurpose כל פיסת תוכן ב-3+ פורמטים (מאמר → carousel → short video → newsletter item); שיתופי תוכן עם איגודי MICE ישראלים ואירופאיים למיקסום חשיפה אורגנית.",
+    "שלב 6 (12-36 חודשים) — 500K North-star: YouTube עם 50+ סרטונים SEO-optimized + LinkedIn personal brands מבוססים + GEO citations ב-70%+ = הכפלת followers כל 6 חודשים; מדד מוביל: 10,000 followers LinkedIn + 5,000 YouTube subscribers תוך שנה."
   ],
   "leads_actions": [
-    "פעולה 1 — מיידית: יצירת דפי נחיתה מסחריים ב-upe.co.il לשלוש מילות המפתח החמות (הפקת נופש חברה/אירועים לחייטק/ארגון טיולים) עם טופס 'בקשת הצעת מחיר' בולט — המקור היחיד שמייצר לידים Web הוא האתר.",
-    "פעולה 2 — שבוע 1: הפעלת CEO/מנהל בכיר לפרסם ב-LinkedIn פוסט שבועי בפרופיל האישי בנושאי ROI של טיולי תמריץ, שאלות שCMO צריך לשאול לפני בחירת חברת הפקה — פוסט ידע מוביל לפניות ישירות.",
-    "פעולה 3 — חודש 1: בניית רשימת 50 decision-makers (CMO/HR Director/Event Lead) בחברות היי-טק ישראליות ב-LinkedIn ומעורבות אורגנית אקטיבית בתוכן שלהם (תגובות, לייקים) לפני כל פנייה.",
-    "פעולה 4 — חודש 2: השקת 2 case studies כתובים באתר (עם מספרים: X משתתפים, Y% שביעות רצון, Z% חסכון) לשימוש כנכס SEO וכתוכן LinkedIn שמשכנע בשלב ה-consideration.",
-    "פעולה 5 — חודש 3: מינוף לקוחות קיימים — בקשה מ-5 לקוחות מרוצים לתייג את UPE בפוסטים על האירוע שלהם, ולהוסיף review ב-Google Business; Word of mouth דיגיטלי מכפיל את האפקט האורגני.",
-    "פעולה 6 — מתמשך: מדידה חודשית: כל ליד חדש חייב לקבל תיוג מקור ב-Salesforce (LinkedIn/Site/Referral) כדי לדעת מה עובד; ללא attribution נכון, לא ניתן לכוון תקציב לערוץ הממיר."
+    "דאבל-דאון על Word of Mouth (75% מהלידים): בניית תוכנית referral מובנית — לאחר כל אירוע מוצלח, שליחת בקשה מובנית ל-testimonial וידאו + הפניית לקוח לאיש קשר אחד חדש; מטרה: להגדיל את ה-6 לידים הנוכחיים ל-8 דרך referrals מובנים.",
+    "הפיכת פוזיציה 8.2 ב-'הפקת נופש חברה' ל-TOP3: דף נחיתה ייעודי עם CTA ברור ('קבל הצעת מחיר לנופש חברה') — ביטוי עם 1,281 חיפושים/חודש ב-pos 8 צפוי להניב CTR של 3-5% = 40-65 כניסות/חודש, ומשם יחס המרה של 5% = 2-3 לידים נוספים.",
+    "LinkedIn Personal Branding → Lead Generation: כל פוסט אישי של מנהל UPE מסתיים ב-soft CTA ('מעוניין לדעת איך תכננו את זה? שלח הודעה') — זו השיטה היחידה שעובדת ב-B2B LinkedIn ב-2026 בלי תקציב פרסום.",
+    "יצירת Lead Magnet מסחרי: מדריך PDF 'צ׳קליסט 40 נקודות לבחירת יעד לנופש חברה' — מבוסס על תוכן הפוסט המוצלח בinstagram; הצעת הורדה בתמורה למייל עסקי + follow-up call בתוך 48 שעות.",
+    "upe-spain.com — ביטויים כמעט בדף ראשון: 'international product launch event' (pos 9.8) ו-'incentive travel spain' (pos 9.6) — עמוד שירות ייעודי עם case study אירופאי + טופס בקשת הצעה יכול לייצר 2-3 לידים אירופאיים/חודש תוך רבעון.",
+    "תיקון attribution ב-Salesforce: הוסף שדה 'ראה אותנו ב-' לטופס הליד (LinkedIn/Instagram/YouTube/Google) — לא UTM, אלא שאלה ידנית בשיחת גישוש; זה יאפשר להבין אילו ערוצים מייצרים pipeline ולהכפיל השקעה נכונה."
   ]
 }
