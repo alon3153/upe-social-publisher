@@ -4,55 +4,91 @@
   "directives": [
     {
       "category": "safe_auto",
-      "action": "עדכון אסטרטגיית hashtags ב-LinkedIn לפורמטים בעלי ביצועים גבוהים",
-      "detail": "להחליף עדכוני חברה גנריים בפורמטים carousel/document שמשיגים 6.6–7% engagement rate לעומת 0.5–2% לטקסט; לתת עדיפות לפוסטים שמייצרים 'dwell time' ותגובות ארוכות — אלו האותות שהאלגוריתם שוקל ב-2026.",
+      "action": "מיפוי עמודי תוכן ל-5 מילות המפתח המובילות ב-GSC ישראל",
+      "detail": "הפקת נופש חברה (pos 8.2, 1,281 חשיפות) ונופש חברה (pos 14.8) הן Low-Hanging Fruit — יצירת מאמרי עומק ייעודיים לכל מונח תזרים קליקים ישיר; מטרה: הגיע ל-Top 5 תוך 60 יום.",
+      "channel": "google_organic"
+    },
+    {
+      "category": "safe_auto",
+      "action": "הגדרת 3 עמודות תוכן ל-LinkedIn: תובנות שטח (מה קרה באירוע X), שאלות HR/CMO, ROI של הפקה מקצועית",
+      "detail": "האלגוריתם של LinkedIn 2026 מתגמל 'knowledge exchange' ו-dwell time — פוסטים קצרים עם insight חזק ושורת פתיחה עוצרת מייצרים הגעה אורגנית ללא תשלום.",
       "channel": "linkedin"
     },
     {
       "category": "safe_auto",
-      "action": "הגדרת קדנס פרסום LinkedIn: 3–4 פוסטים בשבוע, שלישי–חמישי, 9:00–10:00",
-      "detail": "ניתוח 1M+ פוסטים מראה שימי Tue–Thu בשעות 8–10 הם שיא הפעילות של קהל B2B; יש לתזמן ולהיות זמינים לתגובות בחלון ה-60 דקות הראשון — הפיקה הזו קריטית לדיסטריביושן האורגני.",
-      "channel": "linkedin"
-    },
-    {
-      "category": "safe_auto",
-      "action": "הוספת YouTube Shorts (30–60 שניות) כשכבת גילוי לכל סרטון ארוך",
-      "detail": "אחרי עדכון האלגוריתם של דצמבר 2025, Shorts מניעים 200 מיליארד צפיות יומיות ומהווים ערוץ גילוי עיקרי; לקצר כל Long-form video לקליפ Shorts עם CTA ברור לסרטון המלא — זה מגדיל session value ומשפר surfacing.",
+      "action": "הגדרת קדנס Shorts ביוטיוב: 2-3 Shorts בשבוע מחומרי Behind-the-Scenes של אירועים",
+      "detail": "YouTube Shorts מייצרים מעל 70 מיליארד צפיות יומיות ב-2026 וזהו הנתיב המהיר ביותר לגילוי מנויים חדשים; חשוב: 15-30 שניות עם hook ב-3 השניות הראשונות לשיעורי completion גבוהים.",
       "channel": "youtube"
     },
     {
       "category": "safe_auto",
-      "action": "מיפוי נושאי תוכן SEO ל-upe.co.il סביב מילות המפתח בעלות הפוטנציאל הגבוה",
-      "detail": "5 מילות מפתח מובילות ('הפקת נופש חברה' pos 8.2, 'הפקות אירועים לחברות' pos 18.1 ועוד) עם סה\"כ 2,198+ חשיפות חודשיות דורשות clusters של תוכן; לכל מילה לבנות עמוד Pillar + 3 פוסטי בלוג Supporting לשיפור דירוג.",
+      "action": "מיפוי hashtag strategy ל-Instagram: שימוש ב-5-8 hashtags נישתיים ב-B2B Events (#HREvents, #TeamBuilding, #IncentiveTravel, #הפקתאירועים)",
+      "detail": "Instagram 2026 מתגמל engagement עמוק ושיחות פרטיות; hashtags נישתיים ממקדים חשיפה ל-CMO/HR שמחפשים פתרונות — לא לקהל כללי.",
       "channel": "instagram"
     },
     {
       "category": "safe_auto",
-      "action": "הקפאת פעילות Facebook — הסטת משאבי תוכן ל-LinkedIn ו-YouTube",
-      "detail": "Facebook מציג 72 חשיפות ו-0 אינטראקציות; אין קהל B2B ישראלי/אירופי פעיל של מקבלי החלטות בפלטפורמה זו — כל פוסט שנכתב ל-Facebook הוא הפסד ישיר של זמן שיכול להשקע ב-LinkedIn שמייצר 78% מלידי B2B.",
-      "channel": "facebook"
+      "action": "הפעלת ניתוח שבועי ב-YouTube Studio (Reach tab): זיהוי הסרטונים עם CTR ו-Watch Time הגבוהים ביותר",
+      "detail": "האלגוריתם של YouTube 2026 מבוסס על 'Satisfaction Events' — יש לזהות אילו נושאים גורמים לצפייה עד הסוף ולהכפיל עליהם; זה ינחה את לוח התוכן הבא.",
+      "channel": "youtube"
     },
     {
       "category": "safe_auto",
-      "action": "הוספת YouTube SEO עברי וספרדי: keyword-rich title, תיאור 300+ מילים, 5–8 תגיות ממוקדות",
-      "detail": "YouTube הוא מנוע החיפוש השני בגודלו בעולם; כרגע הסרטונים חסרים אופטימיזציה בעברית/ספרדית שתתחבר למילות המפתח שהוגדרו ב-GSC — יש להוסיף keyword עיקרי ב-5 המילים הראשונות של הכותרת וב-2 המשפטים הראשונים של התיאור.",
+      "action": "הוספת metadata בעברית לכל סרטוני YouTube (כותרת, תיאור, tags) וכן timestamps/Key Moments",
+      "detail": "אופטימיזציה של YouTube SEO כולל timestamps מאפשרת למנוע של גוגל לאנדקס את הווידאו ב-AI Overviews ובחיפוש — זה הגדיל חשיפות ב-B2B בהיקף מדיד תוך 4-12 שבועות.",
       "channel": "youtube"
     }
   ],
+  "channel_cadence": {
+    "facebook": {
+      "max_posts_per_week": 2,
+      "reason": "72 חשיפות מ-15 פוסטים (4.8 חשיפות/פוסט) ו-0 אינטראקציות — ROI שלילי. הפחתה דרסטית תחסוך זמן צוות ותמנע ספאם תפיסתי. 2 פוסטים/שבוע לשמירה על נוכחות מינימלית בלבד."
+    },
+    "instagram": {
+      "max_posts_per_week": 5,
+      "reason": "הפלטפורמה מציגה פוטנציאל עם נושא ה-HR שעבד; 15 פוסטים/שבוע הוא יתר-פרסום שמדלל engagement. 5 פוסטים איכותיים (Reels + Carousels) עדיפים על 15 פוסטים חלשים."
+    },
+    "linkedin": {
+      "max_posts_per_week": 4,
+      "reason": "ערוץ B2B קריטי שנכשל לחלוטין כרגע. 3-4 פוסטים/שבוע הם המינימום לאוטוריטה אלגוריתמית, אך חייבים לכלול לפחות 2 מפרופילים אישיים של מנהלים — לא רק מדף החברה."
+    },
+    "tiktok": {
+      "max_posts_per_week": 3,
+      "reason": "2 פוסטים בשבוע שלם אינם מספיקים לאלגוריתם TikTok. 3 Shorts קצרים (15-30 שניות) בשבוע, בנושאי event-production BTS, הם הבסיס המינימלי לבדיקת פוטנציאל הפלטפורמה."
+    },
+    "youtube": {
+      "max_posts_per_week": 4,
+      "reason": "YouTube מוביל ב-87% מהחשיפות הכוללות עם 6 פוסטים. קדנס של 1-2 Long-Form + 2-3 Shorts בשבוע מאפשר גם discovery מהיר דרך Shorts וגם בניית סמכות תוכן ב-Long-Form."
+    }
+  },
+  "channel_priority": [
+    "youtube",
+    "instagram",
+    "linkedin",
+    "tiktok",
+    "facebook"
+  ],
+  "channel_plan_basis": [
+    "facebook: 72 חשיפות מ-15 פוסטים (4.8 חשיפות/פוסט) ו-0 אינטראקציות — ROI שלילי. הפחתה דרסטית תחסוך זמן צוות ותמנע ספאם תפיסתי. 2 פוסטים/שבוע לשמירה על נוכחות מינימלית בלבד.",
+    "instagram: הפלטפורמה מציגה פוטנציאל עם נושא ה-HR שעבד; 15 פוסטים/שבוע הוא יתר-פרסום שמדלל engagement. 5 פוסטים איכותיים (Reels + Carousels) עדיפים על 15 פוסטים חלשים.",
+    "linkedin: ערוץ B2B קריטי שנכשל לחלוטין כרגע. 3-4 פוסטים/שבוע הם המינימום לאוטוריטה אלגוריתמית, אך חייבים לכלול לפחות 2 מפרופילים אישיים של מנהלים — לא רק מדף החברה.",
+    "tiktok: 2 פוסטים בשבוע שלם אינם מספיקים לאלגוריתם TikTok. 3 Shorts קצרים (15-30 שניות) בשבוע, בנושאי event-production BTS, הם הבסיס המינימלי לבדיקת פוטנציאל הפלטפורמה.",
+    "youtube: YouTube מוביל ב-87% מהחשיפות הכוללות עם 6 פוסטים. קדנס של 1-2 Long-Form + 2-3 Shorts בשבוע מאפשר גם discovery מהיר דרך Shorts וגם בניית סמכות תוכן ב-Long-Form."
+  ],
   "follower_growth_plan": [
-    "חודשים 1–3 | תשתית: הפעלת Creator Mode ב-LinkedIn, אופטימיזציה של פרופילי המנהלים, הגדרת 4 עמודי תוכן קבועים (Behind the Scenes, HR/CMO Insights, Case Study, Industry Trends) — בלי בסיס איכותי אין צמיחה ב-2026.",
-    "חודשים 3–6 | מנוף: השקת LinkedIn Newsletter עברי + סדרת YouTube Case Studies + Shorts יומיים — כל פלטפורמה מזינה את השנייה; YouTube Shorts מפנים ל-LinkedIn, LinkedIn מפנה לאתר.",
-    "חודשים 6–12 | Employee Advocacy: גיוס 5–10 עובדי UPE לפרסם תוכן אישי שמזכיר את המותג — פרופילים אישיים מייצרים פי 8 reach מדפי חברה ומכפילים את החשיפה הכוללת ללא עלות.",
-    "חודשים 12–18 | B2B Influencer Partnerships: שיתופי פעולה עם HR Leaders, CMOs ומנהלי אירועים ישראלים שיש להם 10K+ עוקבים ב-LinkedIn — נישה ממוקדת עם 10,000 עוקבים מעורבים עדיפה על 100,000 כלליים.",
-    "חודשים 18–36 | SEO Compound Effect: 60+ עמודי תוכן SEO בעברית ובספרדית שמייצרים organic traffic קבוע; כל עמוד הוא 'follower magnet' — גולש שמוצא UPE בגוגל הופך לעוקב LinkedIn.",
-    "חודשים 24–36 | Scale: שימוש ב-data מהחלון הראשון לזיהוי הפוסטים הטובים ביותר ו-repurposing אגרסיבי — כל Case Study הופך ל-LinkedIn carousel, YouTube Short, פוסט Instagram, ופוסט בלוג; multiply content, not effort."
+    "שלב 1 (0-3 חודשים): הפעלת 2-3 מנהלים כ-LinkedIn Personal Creators עם פוסטים 3x/שבוע — פרופילים אישיים מייצרים 8x engagement לעומת דפי חברה ויהיו מנוע הגדילה העיקרי לקהל B2B.",
+    "שלב 2 (1-6 חודשים): YouTube Shorts Blitz — 3 Shorts/שבוע מחומרי אירועים קיימים (BTS, moments, tips); Shorts הם הנתיב המהיר לגילוי מנויים חדשים ב-2026 עם מיליארדי צפיות יומיות.",
+    "שלב 3 (3-9 חודשים): SEO Content Moat — 2 מאמרים עמוקים/חודש בעברית ל-upe.co.il על מונחי Top-5 GSC; תוכן SEO מייצר traffic מצטבר שמתורגם ל-followers דרך CTAs לרשתות.",
+    "שלב 4 (6-12 חודשים): LinkedIn Newsletter + Instagram Series — קהל opted-in חודשי בניוזלטר + סדרת Reels שבועית עם insight מקצועי; עקביות + ערך = follower retention ו-word-of-mouth דיגיטלי.",
+    "שלב 5 (12-24 חודשים): Repurposing Engine — כל אירוע אמיתי מייצר: 1 YouTube Long-Form + 3 Shorts + 1 LinkedIn post + 1 Instagram Reel + 1 SEO Blog; מכפיל תוכן ללא עלות ייצור נוספת.",
+    "שלב 6 (24-36 חודשים): Community & Collabs — שיתופי פעולה עם מגזינים מקצועיים ישראליים (HR, Marketing) ו-Guest appearances בפודקאסטים B2B; Distribution מחוץ לרשתות שלנו לחצות את ה-100K milestone בדרך ל-500K."
   ],
   "leads_actions": [
-    "פעולה מיידית — הכפלת ה-WoM: יצירת תוכנית הפניות מובנית עם 6 לקוחות WoM הקיימים; הצע ערך ברור (Early access, תוכן בלעדי, או הכרה פומבית) תמורת הפניה פעילה — ה-WoM הנוכחי לא מובנה ומפסיד leads שניתן לקצור.",
-    "חודש 1 — CTA בכל תוכן LinkedIn: לכל פוסט מנהל להוסיף CTA ברור ('DM לייעוץ חינמי של 20 דקות', 'קשר ישיר לתכנון האירוע הבא') — כרגע אין מסלול conversion מהתוכן לפגישה.",
-    "חודש 1–2 — LinkedIn Direct Outreach אורגני: מנהלי UPE יפנו ל-20 מנהלי HR/CMO ישראלים חדשים/שבוע עם Personalized Message (לא תבנית גנרית) אחרי שעסקו בתוכן UPE — זה מנצל את ה-interest signal ולא תקיפה קרה.",
-    "חודש 2–3 — SEO Lead Capture: הוספת Lead Magnet (מדריך PDF: '10 שאלות לבחירת חברת הפקה') לעמודי הנחיתה של מילות המפתח המובילות ב-upe.co.il — מייצר לידים אינבאונד מהגולשים שכבר יש ל-UPE: 121 קליקים/שבוע.",
-    "חודש 2–4 — LinkedIn Newsletter Subscriber Conversion: כל מנוי Newsletter מקבל דוא\"ל ריאקטיבציה בשבוע 4 עם הצעת ייעוץ ראשוני בלעדי — מנויים Newsletter הם הלידים החמים ביותר כי הם Opted-in.",
-    "חודש 3–6 — Case Study Distribution: כל Case Study YouTube/LinkedIn מופץ ישירות ל-50 מנהלים רלוונטיים ב-LinkedIn (לא ספאם — הפניה ספציפית: 'ידעתי שזה רלוונטי לאתגר שתיארת') — זה ממנף את ה-WoM הדיגיטלי ומייצר שיחות שמובילות לפגישות."
+    "הכפלת השקעה ב-Word of Mouth דיגיטלי: בניית מנגנון בקשת המלצות פעיל — בתום כל אירוע, שליחת בקשה מותאמת אישית ל-LinkedIn Recommendation + Google Review; WOM הוא 86% מהלידים הנוכחיים וחייב להפוך לסיסטמטי.",
+    "LinkedIn Outbound מבוסס-תוכן: לאחר כל פוסט thought leadership שמקבל engagement, לפנות ידנית (DM) לכל מי שלייק/הגיב עם הצעת שיחת ייעוץ קצרה ללא עלות — המיר engagement לפגישה.",
+    "יצירת Lead Magnet ל-upe.co.il: 'מדריך הכנת נופש חברה לחברות הייטק' להורדה חינמית בתמורה לאימייל + תפקיד; הכנס לפאנל retargeting email עם case studies + הצעת הצעת מחיר.",
+    "SEO → Lead Pipeline: דפי Landing Page לכל מונח מסחרי מוביל חייבים להכיל טופס 'קבל הצעת מחיר' בולט ו-WhatsApp CTA — CTR של 0.35% הנוכחי מ-34K חשיפות הוא בזבוז ענק ללא המרה.",
+    "Referral Program פנימי: הגדרת תמריץ ברור ללקוחות קיימים שמפנים לקוחות חדשים (upgrade שירות, תוספת ייחודית לאירוע הבא) — לקוח קיים אחד הביא ליד; מבנה פורמלי יכפיל את זה.",
+    "מדידה ואטריבוציה: הגדרת שדה 'כיצד שמעת עלינו' בטופס הצעת מחיר + עדכון Salesforce לכלול מקור דיגיטלי ספציפי (LinkedIn/YouTube/Instagram/Google) — ללא נתונים אטריבוציה נכונים, אי אפשר לדעת מה עובד."
   ]
 }
