@@ -194,10 +194,18 @@ def run_council(cur, prev, scorecard):
 
 
 def _extract_json(text):
-    if "```json" in text:
-        text = text.split("```json", 1)[1].split("```", 1)[0]
-    elif "```" in text:
-        text = text.split("```", 1)[1].split("```", 1)[0]
+    """Find the council's JSON. With web_search in the loop the reply is several
+    text blocks and may contain interim/partial fenced blocks — the real answer
+    is the LAST parseable one, so try fenced candidates last-first, then raw."""
+    import re
+    candidates = [m.group(1) for m in re.finditer(r"```(?:json)?\s*(.*?)```", text, re.S)]
+    for c in reversed(candidates) if candidates else []:
+        s, e = c.find("{"), c.rfind("}")
+        if s != -1 and e != -1:
+            try:
+                return json.loads(c[s:e + 1])
+            except json.JSONDecodeError:
+                pass
     s, e = text.find("{"), text.rfind("}")
     if s == -1 or e == -1:
         return None
