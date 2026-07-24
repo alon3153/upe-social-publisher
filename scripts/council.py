@@ -134,6 +134,11 @@ converting channel and make "leads_actions" DOUBLE DOWN on it (Web ⇒ accelerat
 SEO/content). Only if the dominant bucket is unattributed default (Advertisement/none) flag it as a
 data-entry gap — do NOT recommend UTM tracking otherwise (UPE's deals are relationship/inbound B2B).
 
+channel_cadence is MANDATORY and is a safe_auto-class decision (posting-cadence guidance): for EVERY
+network above, set the max posts/week the approval-gated pipeline should schedule, based on the
+measured data (integers 0-14). Local publishers enforce these caps mechanically, so be decisive —
+an over-posted weak network (e.g. Facebook) should get a LOW cap.
+
 Use web_search to find what is working RIGHT NOW (2026) for B2B/MICE organic growth and for the
 specific networks where UPE is weakest. Be concrete and brutally honest about the weak numbers.
 
@@ -148,6 +153,7 @@ in HEBREW, with EXACTLY these keys:
   "what_worked": ["..."],
   "what_failed": ["..."],
   "auto_fixes": [{{"category": "safe_auto", "action": "Hebrew action", "detail": "what+why", "channel": "instagram|..."}}],
+  "channel_cadence": {{"facebook": {{"max_posts_per_week": 2, "reason": "Hebrew"}}, "instagram": {{"max_posts_per_week": 7, "reason": "Hebrew"}}, "linkedin": {{"max_posts_per_week": 3, "reason": "Hebrew"}}, "tiktok": {{"max_posts_per_week": 3, "reason": "Hebrew"}}, "youtube": {{"max_posts_per_week": 2, "reason": "Hebrew"}}}},
   "recommendations": [{{"category": "gated", "priority": "P0|P1|P2", "action": "Hebrew", "expected_impact": "Hebrew", "channel": "..."}}],
   "follower_growth_plan": ["concrete Hebrew steps toward the 500K north-star, ordered"],
   "leads_actions": ["concrete Hebrew steps to hit 10 qualified leads/month, ordered"]
@@ -202,24 +208,58 @@ def _extract_json(text):
 
 
 # --------------------------------------------------------------- apply fixes ---
+CADENCE_NETWORKS = ("facebook", "instagram", "linkedin", "tiktok", "youtube")
+
+
+def validate_cadence(raw):
+    """Clamp the council's channel_cadence to known networks / sane ints (0-14).
+    Anything malformed is dropped — a missing cap fails open downstream."""
+    out = {}
+    for net, cfg in (raw or {}).items():
+        if net not in CADENCE_NETWORKS or not isinstance(cfg, dict):
+            continue
+        cap = cfg.get("max_posts_per_week")
+        if isinstance(cap, bool) or not isinstance(cap, (int, float)):
+            continue
+        out[net] = {"max_posts_per_week": max(0, min(14, int(cap))),
+                    "reason": str(cfg.get("reason", ""))[:200]}
+    return out
+
+
 def apply_auto_fixes(verdict, dry_run):
     """Write safe auto-fix directives for the next content-generation run to consume.
-    Does NOT publish — respects the approval gate. Returns the applied list."""
+    Does NOT publish — respects the approval gate. Returns (applied_fixes, cadence)."""
     fixes = [f for f in verdict.get("auto_fixes", []) if f.get("category") == "safe_auto"]
-    if not fixes or dry_run:
-        return fixes
+    cadence = validate_cadence(verdict.get("channel_cadence"))
+    if not cadence:
+        # one bad LLM day must not drop enforcement — carry yesterday's caps forward
+        prev = {}
+        try:
+            prev = json.loads(DIRECTIVES.read_text())
+        except Exception:
+            pass
+        cadence = validate_cadence(prev.get("channel_cadence"))
+    if (not fixes and not cadence) or dry_run:
+        return fixes, cadence
+    scores = verdict.get("scores", {})
+    channel_priority = sorted((n for n in CADENCE_NETWORKS if n in scores),
+                              key=lambda n: scores[n], reverse=True)
     STATE_DIR.mkdir(parents=True, exist_ok=True)
     payload = {"updated_at": _today(),
                "source": "daily-council",
                "directives": fixes,
+               # consumed by upe_council_directives.py (Mac bridge) → Metricool publisher caps
+               "channel_cadence": cadence,
+               "channel_priority": channel_priority,
+               "channel_plan_basis": [f"{n}: {c['reason']}" for n, c in cadence.items() if c.get("reason")],
                "follower_growth_plan": verdict.get("follower_growth_plan", []),
                "leads_actions": verdict.get("leads_actions", [])}
     DIRECTIVES.write_text(json.dumps(payload, ensure_ascii=False, indent=2))
-    return fixes
+    return fixes, cadence
 
 
 # ------------------------------------------------------------------- report ----
-def render_html(cur, scorecard, verdict, applied):
+def render_html(cur, scorecard, verdict, applied, cadence=None):
     d = _today()
     sc = verdict.get("scores", {})
     def chips(items):
@@ -258,6 +298,9 @@ def render_html(cur, scorecard, verdict, applied):
 
 <h3>✅ מה עבד</h3><ul>{chips(verdict.get('what_worked',[]))}</ul>
 <h3>❌ מה נכשל</h3><ul>{chips(verdict.get('what_failed',[]))}</ul>
+
+<h3>⏱️ קצב פרסום שבועי שנקבע (נאכף אוטומטית)</h3>
+<ul>{"".join(f"<li>{net}: עד {c['max_posts_per_week']}/שבוע <span style='color:#555'>— {c.get('reason','')}</span></li>" for net, c in (cadence or {}).items()) or '<li>—</li>'}</ul>
 
 <h3>🤖 תיקונים אוטומטיים שבוצעו ({len(applied)})</h3>
 <p style="color:#555;font-size:12px;">נכתבו ל-state/council_directives.json — נצרכים ע"י ייצור התוכן הבא. לא פורסם דבר ללא אישורך.</p>
@@ -315,8 +358,8 @@ def main():
         if verdict.get("error"):
             print(f"council LLM error: {verdict['error']}", file=sys.stderr)
 
-    applied = apply_auto_fixes(verdict, a.dry_run)
-    html = render_html(cur, scorecard, verdict, applied)
+    applied, cadence = apply_auto_fixes(verdict, a.dry_run)
+    html = render_html(cur, scorecard, verdict, applied, cadence)
     md = render_md(cur, scorecard, verdict, applied)
 
     if a.dry_run:
