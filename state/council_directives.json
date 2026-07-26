@@ -1,44 +1,7 @@
 {
-  "updated_at": "2026-07-25",
+  "updated_at": "2026-07-26",
   "source": "daily-council",
-  "directives": [
-    {
-      "category": "safe_auto",
-      "action": "תבנית פוסט LinkedIn: פרופיל אישי של בכיר + hook מספרי בשורה הראשונה",
-      "detail": "האלגוריתם של LinkedIn 2026 מעדיף פרופילים אישיים על דפי חברה (8x מעורבות יותר). לשלב פרסום מדף החברה עם re-post ממנהלי UPE (CEO/פרודקשן ליד) תוך שימוש ב-hook מספרי: 'הפקנו X כנסים ב-2025 — הנה מה שלמדנו על...'",
-      "channel": "linkedin"
-    },
-    {
-      "category": "safe_auto",
-      "action": "זיהוי 3 מילות מפתח עדיפות ל-SEO עברי ושיבוצן בכותרות ובתיאורים ביוטיוב",
-      "detail": "מילות המפתח 'הפקת נופש חברה' (פוזיציה 8.2, 1,281 חשיפות) ו-'הפקות אירועים לחברות הייטק' (פוזיציה 9.1) נמצאות בסף עמוד ראשון — כותרות YouTube וסיכומי פוסטים יש ליישר לפי ביטויים אלה כדי לדחוף CTR.",
-      "channel": "youtube"
-    },
-    {
-      "category": "safe_auto",
-      "action": "לוח תכנון שבועי: פורמט rotation לinkedIn — טקסט, קרוסלה, ווידאו קצר",
-      "detail": "האלגוריתם מתגמל על גיוון פורמטים; sequence מומלץ: שני — פוסט טקסט עם תובנה ענפית; רביעי — קרוסלה PDF (5 שקפים max); שישי — Shorts/ווידאו קצר. חזרה על אותו פורמט שבוע אחרי שבוע פוגעת בחשיפה.",
-      "channel": "linkedin"
-    },
-    {
-      "category": "safe_auto",
-      "action": "מיפוי hashtag strategy לאינסטגרם: 5 תגיות ענפיות + 2 מיקומיות + 1 branded",
-      "detail": "הפוסט המוביל (80 חשיפות, 0 אינטראקציות) מצביע על בעיית הפצה לא על בעיית תוכן. שימוש בתגיות ייעודיות כמו #נופשחברה #הפקתאירועים #incentivetravel ומיקומיות כמו #ישראל יגדיל את הגעה לקהל לא עוקב.",
-      "channel": "instagram"
-    },
-    {
-      "category": "safe_auto",
-      "action": "כיול קצב פרסום: הפחתת Facebook ל-1/שבוע, הגדלת YouTube Shorts ל-3/שבוע",
-      "detail": "YouTube מייצר 89% מהחשיפות עם 6 פוסטים; Facebook 97 חשיפות עם 19 פוסטים. ניתוב משאבי הכנת תוכן מ-Facebook ל-YouTube Shorts — על בסיס נתון שערוצי Shorts שמעלים תוכן קצר מגדילים subscribers ב-70%.",
-      "channel": "youtube"
-    },
-    {
-      "category": "safe_auto",
-      "action": "בניית keyword cluster עבור upe-spain.com סביב 'international product launch event' ו-'global product launch event'",
-      "detail": "שני הביטויים נמצאים בפוזיציה 9.6–9.8 עם 155–204 חשיפות — ב-SEO ספרד זו ההזדמנות הקרובה ביותר לעמוד ראשון. לבנות עמוד שירות ייעודי ופוסט בלוג שמקשרים ביניהם.",
-      "channel": "google_organic_geo"
-    }
-  ],
+  "directives": [],
   "channel_cadence": {
     "facebook": {
       "max_posts_per_week": 1,
@@ -61,13 +24,7 @@
       "reason": "89% מסך החשיפות עם 6 פוסטים בלבד — הערוץ הגבוה ביותר ב-ROI. להוסיף 2 YouTube Shorts שבועיים (discovery funnel) לצד 2 ווידאו בינוני/ארוך."
     }
   },
-  "channel_priority": [
-    "youtube",
-    "instagram",
-    "linkedin",
-    "tiktok",
-    "facebook"
-  ],
+  "channel_priority": [],
   "channel_plan_basis": [
     "facebook: 19 פוסטים הניבו 97 חשיפות ו-0 אינטראקציות — ערוץ מת לקהל B2B ישראלי. פוסט אחד שבועי לצורך נוכחות מינימלית בלבד.",
     "instagram: 19 פוסטים, 865 חשיפות — ביצועים חלשים אך ישנו פוטנציאל ל-decision-makers שצופים בסטוריז לפני פנייה. להתמקד באיכות עם CTA ברור ולא בכמות.",
@@ -75,20 +32,6 @@
     "tiktok: פוסט אחד בשבוע עם 0 אינטראקציות — עדיין לא הוכחת ערך לקהל B2B. 2 פוסטים/שבוע לבחינת זוויות תוכן לפני הגדלת השקעה.",
     "youtube: 89% מסך החשיפות עם 6 פוסטים בלבד — הערוץ הגבוה ביותר ב-ROI. להוסיף 2 YouTube Shorts שבועיים (discovery funnel) לצד 2 ווידאו בינוני/ארוך."
   ],
-  "follower_growth_plan": [
-    "שלב 1 (0-90 יום) — בניית עוגן LinkedIn אישי: גיוס 2-3 פרופילים של בכירי UPE לפרסום שבועי עקבי; מטרה: 500 עוקבים אורגניים חדשים/חודש לדף החברה דרך engage של פרופילים אישיים.",
-    "שלב 2 (30-120 יום) — YouTube Shorts כמנוע discovery: 2 Shorts/שבוע מחומרי הפקה קיימים; ערוצים שמעלים Shorts רואים גידול subscribers ב-70% — צפי 200-400 subscribers חדשים/חודש.",
-    "שלב 3 (60-180 יום) — SEO עברי כ-flywheel: 4 עמודי שירות + 2 בלוג posts/חודש סביב מילות המפתח המזוהות; תוכן SEO לוקח 45-60 יום לתפוס תנופה אך מביא traffic מצטבר שלא נעצר.",
-    "שלב 4 (90-365 יום) — אפקט ה'פה לאוזן הדיגיטלי': case study videos + client testimonials מפה לאוזן ממשי (86% מהלידים) → לכד בווידאו LinkedIn/YouTube → ממיר לקהל עוקב אמיתי.",
-    "שלב 5 (שנה 2-3) — erspain.com כצמח נפרד: keyword cluster סביב 'international product launch' ו-'corporate events barcelona' — uerope SEO מתחיל לתרום 30-50% מהחשיפות הכוללות.",
-    "מדד leading indicator: לא לעקוב אחרי ספירת עוקבים אלא אחרי — (a) LinkedIn impressions per post, (b) YouTube Shorts subscriber lift/month, (c) Google organic clicks/month. כשכל אחד מהם גדל ב-15%+ חודש אחרי חודש, ה-500K עוקבים הם תוצאה בלתי נמנעת."
-  ],
-  "leads_actions": [
-    "פעולה 1 — הכפלת אפקט פה לאוזן דיגיטלי (דחיפות: מיידי): לבקש מ-6 לקוחות שהפנו לידים החודש להשאיר ביקורת ב-Google ו-LinkedIn, ולשתף case study קצר בדף שלהם — זה ממיר ב-86% כבר היום.",
-    "פעולה 2 — landing pages עם CTA ממיר (דחיפות: 2 שבועות): כל ביטוי SEO עם >100 חשיפות ופוזיציה <20 צריך עמוד ייעודי עם טופס 'קבל הצעת מחיר ב-24 שעות' — אין כרגע שום נקודת כניסה ישירה מחיפוש אורגני.",
-    "פעולה 3 — LinkedIn personal posting של בכירים (דחיפות: שבוע): תובנה אחת/שבוע עם CTA 'DM לשיחת 15 דקות' — מומלץ ע\"י כל מחקרי B2B 2026 כנתיב הממיר ביותר ב-LinkedIn ללא תקציב פרסום.",
-    "פעולה 4 — LinkedIn Newsletter כ-nurture engine (דחיפות: 30 יום): מנויים ל-Newsletter = opt-in qualified audience; 200-500 מנויים בחודשיים הראשונים = 3-5 לידים פוטנציאליים/חודש עפ\"י בנצ'מרק ענף MICE.",
-    "פעולה 5 — reactivation של pipeline קיים דרך YouTube case study (דחיפות: 45 יום): שליחת ווידאו case study ל-prospects שהיו ב-pipeline ולא סגרו — ווידאו שמראה תוצאות אירוע מקביל מקצר objections ומפעיל מחדש עסקאות תקועות.",
-    "פעולה 6 — מדידת attribution מלאה (דחיפות: 30 יום): לוודא שכל ליד ב-Salesforce מקבל שדה 'first touch digital' (YouTube view / LinkedIn post / Google search) לצד 'Word of mouth' — כרגע 0 לידים מיוחסים לדיגיטלי, מה שמסתיר ROI אמיתי ומונע קבלת החלטות נכונה."
-  ]
+  "follower_growth_plan": [],
+  "leads_actions": []
 }
