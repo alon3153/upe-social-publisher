@@ -1,0 +1,30 @@
+{
+  "day": 185,
+  "category": "social_proof",
+  "language": "en",
+  "date": "",
+  "weekday": "",
+  "theme": "Client Trust Built Across 130+ Destinations",
+  "linkedin": {
+    "profile": "Uproduction Events (Company Page)",
+    "text": "Produced 1,500+ corporate events across 130+ destinations — here's what that number actually means: most of those destinations were booked by clients who had already worked with us before. In B2B event production, a repeat booking is the only social proof that can't be faked. No survey, no review form replaces a client who calls you first when budget opens for the next incentive trip or annual conference. If you're an HR, marketing or sales leader evaluating production partners for your next event, I'd rather show you our track record in a 15-minute conversation than write about it here. DM me directly."
+  },
+  "instagram": {
+    "profile": "@uproductionevents",
+    "text": "1,500+ events. 130+ destinations. 25,000+ participants. The number we're most proud of? The clients who came back. Repeat business is the most honest review in corporate events — and ours speaks for itself. If you're planning a conference, incentive trip or gala and want a team with a track record, DM us. ✈️\n#הפקתאירועים #incentivetravel #נופשחברה #corporateevents #eventprofs #galadinner #Israel #teamretreat #UproductionEvents"
+  },
+  "facebook": {
+    "profile": "Uproduction Events (Page)",
+    "text": "When a client books their fifth event with you, they're not just satisfied — they're telling their peers. That's the kind of trust that takes 1,500+ events and 130+ destinations to build. What does your events partner do to earn that call-back? Drop a comment or send us a message — we'd love to hear what matters most to you when choosing a production team."
+  },
+  "image_prompt": "A wide-angle candid photograph of 200+ corporate attendees in elegant evening wear mingling on a sweeping open-air terrace overlooking a sun-drenched Mediterranean coastline, golden hour light catching champagne glasses and genuine laughter, shot on film with warm grain.",
+  "image_style": "photorealistic, editorial, documentary, 35mm film grain",
+  "brand": {
+    "colors": [
+      "#1C1C1C",
+      "#FBCE0A"
+    ],
+    "font": "Comfortaa",
+    "logo": "uproduction_official_logo.png"
+  }
+}

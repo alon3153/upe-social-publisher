@@ -1,0 +1,30 @@
+{
+  "day": 186,
+  "category": "incentive_travel",
+  "language": "es",
+  "date": "",
+  "weekday": "",
+  "theme": "Incentive Travel as a Retention Strategy",
+  "linkedin": {
+    "profile": "Uproduction Events (Company Page)",
+    "text": "Hemos producido viajes de incentivo para más de 25.000 participantes en más de 130 destinos. Lo que los líderes de RRHH nos dicen sistemáticamente después: justificar la inversión ante dirección se vuelve más fácil cada año. No porque los viajes sean más baratos — no lo son — sino porque los datos de retención hablan por sí solos. Cada talento clave que decide quedarse después de un programa de incentivo representa una búsqueda ejecutiva que no ocurre, una curva de aprendizaje que no se repite, un riesgo de transferencia de conocimiento que se evita. Si estás construyendo el business case para un programa de incentivo internacional, puedo compartirte cómo estructuramos la propuesta desde el lado de producción. Un DM es suficiente para empezar."
+  },
+  "instagram": {
+    "profile": "@uproductionevents",
+    "text": "El bono se gasta. El viaje se recuerda. Más de 25.000 participantes. Más de 130 destinos. Un resultado constante: la gente se queda. Si el viaje de incentivo forma parte de tu plan de retención, cuéntanos qué tienes en mente. Escríbenos por DM. #incentivetravel #viajesdeincentivoempresarial #eventoscorporativos #retencióndetalento #teamretreat #productlaunch #b2bevents #uproductionevents"
+  },
+  "facebook": {
+    "profile": "Uproduction Events (Page)",
+    "text": "Los mejores talentos de tu equipo ya tienen otras ofertas encima de la mesa. ¿Qué los retiene? No es otra ronda de bonificaciones — es una experiencia que no podrían organizar por sí mismos. Hemos llevado a más de 25.000 participantes a más de 130 destinos, y el patrón se repite: las empresas que invierten en viajes de incentivo retienen mejor a su talento clave. El viaje termina. La fidelidad, no. Si estás diseñando la estrategia de retención del próximo año, escríbenos o deja un comentario. Con gusto conversamos."
+  },
+  "image_prompt": "A candid wide-angle photograph of a group of about thirty professionals in smart-casual attire raising glasses at a long outdoor terrace dinner table overlooking a sun-drenched Mediterranean coastal village, with warm golden-hour light catching the cliffs and turquoise water below.",
+  "image_style": "photorealistic, editorial, documentary, 35mm film grain",
+  "brand": {
+    "colors": [
+      "#1C1C1C",
+      "#FBCE0A"
+    ],
+    "font": "Comfortaa",
+    "logo": "uproduction_official_logo.png"
+  }
+}

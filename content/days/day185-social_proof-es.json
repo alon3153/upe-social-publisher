@@ -1,0 +1,30 @@
+{
+  "day": 185,
+  "category": "social_proof",
+  "language": "es",
+  "date": "",
+  "weekday": "",
+  "theme": "Client Trust Built Across 130+ Destinations",
+  "linkedin": {
+    "profile": "Uproduction Events (Company Page)",
+    "text": "Hemos producido más de 1.500 eventos corporativos en más de 130 destinos. El dato que más pesa no es el volumen — es que una parte significativa de esos eventos fueron encargados por clientes que ya habían trabajado con nosotros. En producción de eventos B2B, la repetición es el indicador de confianza más honesto que existe. No hay formulario de satisfacción que lo iguale. Si eres responsable de RRHH, marketing o ventas y estás evaluando socios de producción para tu próxima convención, viaje de incentivo o lanzamiento global, prefiero demostrártelo en 15 minutos que convencerte con adjetivos. Escríbeme por DM."
+  },
+  "instagram": {
+    "profile": "@uproductionevents",
+    "text": "Más de 1.500 eventos. Más de 130 destinos. Más de 25.000 participantes. Pero la métrica que más nos importa es cuántos clientes repiten. En eventos corporativos, la lealtad es la única reseña que no se puede comprar. Si estás planificando un lanzamiento de producto, viaje de incentivo o convención y quieres un equipo con historial real, escríbenos por DM. ✈️\n#incentivetravel #eventoscorporativos #viagedeincentivo #producciondeeventos #galadinner #conferenciaempresarial #Israel #UproductionEvents"
+  },
+  "facebook": {
+    "profile": "Uproduction Events (Page)",
+    "text": "Cuando un cliente confía en ti para su quinto evento, ya no es satisfacción — es recomendación activa. Más de 1.500 eventos en más de 130 destinos nos han enseñado que la mejor prueba de calidad no está en los catálogos, sino en las llamadas que recibes de vuelta. ¿Qué valoras más al elegir un equipo de producción para tus eventos corporativos? Cuéntanos en los comentarios o escríbenos por mensaje privado."
+  },
+  "image_prompt": "A wide-angle candid photograph of 200+ corporate attendees in elegant evening wear mingling on a sweeping open-air terrace overlooking a sun-drenched Mediterranean coastline, golden hour light catching champagne glasses and genuine laughter, shot on film with warm grain.",
+  "image_style": "photorealistic, editorial, documentary, 35mm film grain",
+  "brand": {
+    "colors": [
+      "#1C1C1C",
+      "#FBCE0A"
+    ],
+    "font": "Comfortaa",
+    "logo": "uproduction_official_logo.png"
+  }
+}

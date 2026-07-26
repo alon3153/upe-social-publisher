@@ -1,0 +1,30 @@
+{
+  "day": 185,
+  "category": "social_proof",
+  "language": "he",
+  "date": "",
+  "weekday": "",
+  "theme": "Client Trust Built Across 130+ Destinations",
+  "linkedin": {
+    "profile": "Uproduction Events (Company Page)",
+    "text": "הפקנו מעל 1,500 אירועים תאגידיים ב-130 יעדים ויותר — והנה מה שלמדנו על אמון בעסקים: החלק הגדול מהאירועים האלה הגיע מלקוחות שכבר עבדו איתנו לפני כן. בהפקת אירועים B2B, חזרה של לקוח היא הראיה היחידה שאי אפשר לזייף. אין שאלון שווה יותר מלקוח שמתקשר אליך ראשון כשנפתח תקציב לנופש החברה הבא או לוועידה השנתית. אם אתה מנהל משאבי אנוש, שיווק או מכירות ואתה שוקל שותפי הפקה לאירוע הבא שלך — אשמח להראות לך את הרקורד ב-15 דקות שיחה. שלח לי DM ישירות. 💬"
+  },
+  "instagram": {
+    "profile": "@uproductionevents",
+    "text": "מעל 1,500 אירועים. 130 יעדים ויותר. 25,000 משתתפים ויותר. אבל המספר שאנחנו הכי גאים בו הוא הלקוחות שחזרו. בהפקת אירועים לחברות, חזרה של לקוח היא הביקורת הכי כנה שיש — ואי אפשר לקנות אותה. אם אתם מתכננים נופש חברה, כנס שנתי או אירוע השקה ורוצים צוות עם רקורד מוכח — שלחו לנו DM. ✈️\n#הפקתאירועים #נופשחברה #incentivetravel #הפקותאירועיםלחברותהייטק #כנסחברה #ישראל #אירועיםעסקיים #UproductionEvents"
+  },
+  "facebook": {
+    "profile": "Uproduction Events (Page)",
+    "text": "כשלקוח מזמין אצלך אירוע בפעם החמישית, זה כבר לא סיפור של שביעות רצון — זה סיפור של אמון שנבנה בשטח. מעל 1,500 אירועים ב-130 יעדים ויותר לימדו אותנו שהביקורת הכי טובה היא הטלפון שמגיע לפני שפתחת הצעת מחיר. מה הכי חשוב לכם בבחירת חברת הפקה לאירוע הבא? ספרו לנו בתגובות או שלחו הודעה פרטית. 🙌"
+  },
+  "image_prompt": "A wide-angle candid photograph of 200+ corporate attendees in elegant evening wear mingling on a sweeping open-air terrace overlooking a sun-drenched Mediterranean coastline, golden hour light catching champagne glasses and genuine laughter, shot on film with warm grain.",
+  "image_style": "photorealistic, editorial, documentary, 35mm film grain",
+  "brand": {
+    "colors": [
+      "#1C1C1C",
+      "#FBCE0A"
+    ],
+    "font": "Comfortaa",
+    "logo": "uproduction_official_logo.png"
+  }
+}
