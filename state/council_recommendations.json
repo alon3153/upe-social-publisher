@@ -1,7 +1,72 @@
 {
-  "updated_at": "2026-07-26",
-  "scores": {},
-  "recommendations": [],
-  "follower_growth_plan": [],
-  "leads_actions": []
+  "updated_at": "2026-07-27",
+  "scores": {
+    "instagram": 14,
+    "facebook": 4,
+    "tiktok": 0,
+    "linkedin": 28,
+    "youtube": 52,
+    "google_organic_geo": 38,
+    "overall": 22
+  },
+  "recommendations": [
+    {
+      "category": "gated",
+      "priority": "P0",
+      "action": "הפעל אסטרטגיית LinkedIn Personal Branding: 2-3 מנהלי UPE מפרסמים 3x/שבוע מפרופיל אישי — תוכן thought leadership על הפקת אירועים, נופש תמריץ, ו-ROI של כנסים",
+      "expected_impact": "הגדלת חשיפת LinkedIn מ-133 ל-2,000+ impressions/שבוע תוך 60 יום; יצירת 2-3 לידים חמים/חודש ישירות מ-DMs ותגובות של decision-makers",
+      "channel": "linkedin"
+    },
+    {
+      "category": "gated",
+      "priority": "P0",
+      "action": "כתוב ופרסם 4 מאמרי SEO ממוקדי כוונת קנייה בעברית ל-upe.co.il: 'הפקת נופש חברה', 'ארגון טיולים לחברות', 'טיולי תמריץ לעובדים', 'הפקת כנסים' — כל מאמר 1,500+ מילה עם FAQ schema",
+      "expected_impact": "דחיפה מעמדה 9-19 לעמוד 1 תוך 8-14 שבועות; פוטנציאל של 300+ קליקים אורגניים נוספים/חודש מקהל עם כוונת רכישה גבוהה",
+      "channel": "google_organic"
+    },
+    {
+      "category": "gated",
+      "priority": "P1",
+      "action": "השק LinkedIn Newsletter חודשי בשם 'אירועים שעובדים' — ניוזלטר מקצועי ל-CMO/HR/CEO ישראלי עם תובנות מדידות על הפקת אירועים ונופש תמריץ",
+      "expected_impact": "בניית קהל opted-in מקצועי שמגיע ישירות ל-inbox של decision-makers; ניוזלטרי LinkedIn מניעים open rate של 40-50% לעומת 20% במייל",
+      "channel": "linkedin"
+    },
+    {
+      "category": "gated",
+      "priority": "P1",
+      "action": "צור 2 סרטוני YouTube long-form (8-12 דקות) עם כתוביות ו-SEO מלא: 'איך מתכננים נופש חברה בחו\"ל' ו-'5 טעויות יקרות בהפקת כנס עסקי' — כל סרטון יוצר 4 Shorts",
+      "expected_impact": "שמירה ועמקות של 8,000+ impressions/שבוע מ-YouTube; Shorts מגדיל discovery לקהל חדש שלא מכיר את UPE",
+      "channel": "youtube"
+    },
+    {
+      "category": "gated",
+      "priority": "P1",
+      "action": "upe-spain.com: פרסם 3 מאמרים בספרדית/אנגלית למונחים 'international product launch event' (pos 9.0) ו-'global product launch event' (pos 9.1) — שניהם סמוך לעמוד 1",
+      "expected_impact": "פוטנציאל של 50-100 קליקים נוספים/חודש מקהל אירופאי בעל ערך גבוה; כל ליד אירופאי שווה 3-5x ממוצע ישראלי",
+      "channel": "google_organic"
+    },
+    {
+      "category": "gated",
+      "priority": "P2",
+      "action": "הפעל TikTok for Business עם 3 סרטונים/שבוע ממוחזרים מ-YouTube Shorts — מיקוד על תוכן מאחורי הקלעים של הפקת אירועים בפורמט ורטיקלי",
+      "expected_impact": "גילוי קהל CMO/HR צעיר; TikTok for Business מניע awareness לקראת 500K follower north-star ומשמש כ-top-of-funnel לפני LinkedIn",
+      "channel": "tiktok"
+    }
+  ],
+  "follower_growth_plan": [
+    "שלב 1 (0-90 יום) — LinkedIn Personal Branding: הפעל 3 מנהלים שמפרסמים 3x/שבוע מפרופיל אישי; פרופילים אישיים מניעים 8x יותר engagement מדפי חברה ומהווים את מנוע הצמיחה המהיר ביותר ל-B2B.",
+    "שלב 2 (30-120 יום) — YouTube Shorts Engine: כל סרטון long-form מייצר 3-5 Shorts; Shorts הם מנוע הגילוי העיקרי ב-YouTube ב-2026 ומוציאים את UPE לקהל חדש שלא מכיר את המותג.",
+    "שלב 3 (60-180 יום) — SEO כ-follower magnet: מאמרי עומק בעברית מביאים גולשים עם כוונת קנייה ל-upe.co.il; הוסף CTA ל-LinkedIn newsletter בכל מאמר להמיר גולשים ל-followers מוסמכים.",
+    "שלב 4 (90-180 יום) — TikTok Discovery Layer: 3 Shorts/שבוע ממוחזרים מ-YouTube; TikTok משמש כ-awareness engine ל-CMO/HR צעירים שיגיעו לאחר מכן ל-LinkedIn ול-YouTube.",
+    "שלב 5 (180+ יום) — LinkedIn Newsletter כ-flywheel: ניוזלטר חודשי בונה קהל opted-in; כל subscriber הוא follower אפקטיבי עם open rate גבוה פי 2 ממדיה חברתית רגילה.",
+    "מדד מוביל (leading indicator) לכל שלב: LinkedIn impressions/שבוע (יעד: 2,000+ תוך 60 יום), YouTube subscribers (יעד: +50/חודש), ו-SEO clicks (יעד: 300+/חודש) — אלה יוסיפו followers בקצב מצטבר לקראת 500K."
+  ],
+  "leads_actions": [
+    "הכפל השקעה ב-Word of Mouth: בנה תוכנית referral פורמלית — בקש מ-6 הלקוחות שהפנו לנו השנה להפוך ל-'שגרירי UPE' עם תמריץ ברור (שדרוג שירות, הכרה פומבית בפוסט LinkedIn); זהו ערוץ ההמרה הוכח ב-86%.",
+    "LinkedIn Outbound מ-Personal Profiles: המנהלים שמפרסמים thought leadership ישלחו 10-15 connection requests שבועיות ל-CMO/HR/CEO בחברות 200+ עובדים בישראל ואירופה — 'אני מפרסם תוכן על X, אשמח לחבר'; זה inbound outreach שלא נוגד כللי UTM.",
+    "Case Study מניב לידים בגוגל: צור 3 עמודי case study ב-upe.co.il עם שמות ענף (לא לקוח) + תוצאות מדידות + CTA ל-'נשמח לשמוע על האירוע שלכם'; עמודים אלה ממירים גולשים עם כוונת קנייה ישירות לשיחה.",
+    "LinkedIn Newsletter CTA: בכל גיליון ניוזלטר, הוסף שאלה אחת ('האירוע הבא שלכם מתי? כתבו לי') — open rate גבוה של ניוזלטרי LinkedIn יוצר שיחות ישירות עם decision-makers ללא חסם פרסום.",
+    "upe-spain.com Lead Funnel: הוסף טופס 'קבל הצעת מחיר ראשונית תוך 24 שעות' לעמודי הנחיתה של spain בסמוך לכל מאמר SEO — לידים אירופאיים מחפשים 'international product launch event' הם high-intent ועשויים לשלש ערך עסקה.",
+    "אירועי Trigger — Outreach ממוקד: עקוב אחר LinkedIn על חברות ישראליות/אירופאיות שמפרסמות על גידול צוות, סבב גיוס, או מינוי מנכ\"ל חדש — אלה trigger events להפקת אירוע חברה; שלח הודעה אישית תוך 48 שעות עם הצעת ערך ספציפית."
+  ]
 }

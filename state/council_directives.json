@@ -1,37 +1,94 @@
 {
-  "updated_at": "2026-07-26",
+  "updated_at": "2026-07-27",
   "source": "daily-council",
-  "directives": [],
+  "directives": [
+    {
+      "category": "safe_auto",
+      "action": "מסגרת עמודי תוכן ל-LinkedIn: 3 נושאי ליבה שבועיים",
+      "detail": "הגדר 3 עמודי תוכן ל-LinkedIn company page: (1) מאחורי הקלעים של הפקת אירוע, (2) טיפ מדיד להצלחת אירוע חברה, (3) case study ממוקד ROI. האלגוריתם ב-2026 מתגמל 'knowledge exchange' ו-dwell time — פוסטים עם insight עמוק מניעים 47% יותר reach מתוכן גנרי.",
+      "channel": "linkedin"
+    },
+    {
+      "category": "safe_auto",
+      "action": "אסטרטגיית personal branding למנהלי UPE — מיפוי קולות פנימיים",
+      "detail": "זהה 2-3 מנהלים ב-UPE שיפרסמו בפרופיל אישי (לא company page) — פרופילים אישיים מניעים 8x יותר engagement מדפי חברה ב-2026; כלול בהנחיות תוכן: אורך פוסט, קו פתיחה חזק, שאלת סגירה.",
+      "channel": "linkedin"
+    },
+    {
+      "category": "safe_auto",
+      "action": "מתכון YouTube Shorts → Long-form: 3-5 Shorts לכל סרטון ארוך",
+      "detail": "כל סרטון long-form ב-YouTube צריך לייצר 3-5 Shorts אורגניים (45-90 שניות) שמפנים לסרטון המלא. Shorts הם מנוע הגילוי העיקרי ב-YouTube ב-2026 עם 200 מיליארד צפיות יומיות — זה מכפיל את החשיפה בלי עלות הפקה נוספת.",
+      "channel": "youtube"
+    },
+    {
+      "category": "safe_auto",
+      "action": "קלאסטר מילות מפתח לישראל: מיקוד ב-5 הזדמנויות ה-SEO הבוערות",
+      "detail": "המונחים 'הפקת נופש חברה' (pos 9.2, 757 impressions) ו-'ארגון טיולים לחברות' (pos 9.4, 142) קרובים מאוד לעמוד 1 — כתוב 2 מאמרי עומק בעברית (1,500+ מילה) שפותחים בכל אחד מהמונחים, כולל FAQ ו-schema markup.",
+      "channel": "google_organic"
+    },
+    {
+      "category": "safe_auto",
+      "action": "Israel & Spain SEO GEO: העלאת ציטוט AI מ-43% ל-70%+",
+      "detail": "ציטוט GEO עומד על 42.9% (3/7 sites) — הוסף structured data מסוג FAQPage ו-HowTo לעמודי שירות ראשיים, וכתוב תוכן שעונה ישירות על שאלות נפוצות בפורמט AI-readable כדי להגדיל חשיפה ב-AI Search.",
+      "channel": "google_organic"
+    },
+    {
+      "category": "safe_auto",
+      "action": "Instagram: מעבר מ-Feed בלבד ל-Reels + Stories polls",
+      "detail": "16 פוסטי feed ייצרו 1 אינטראקציה — Stories עם stickers (poll, countdown, question) ו-Reels של 30-60 שניות מאחורי הקלעים הם הפורמטים עם engagement הגבוה ביותר לאירועים ב-2026; שנה את mix הפורמטים ל-40% Reels, 40% Stories, 20% Feed.",
+      "channel": "instagram"
+    }
+  ],
   "channel_cadence": {
     "facebook": {
       "max_posts_per_week": 1,
-      "reason": "19 פוסטים הניבו 97 חשיפות ו-0 אינטראקציות — ערוץ מת לקהל B2B ישראלי. פוסט אחד שבועי לצורך נוכחות מינימלית בלבד."
+      "reason": "71 חשיפות ו-0 אינטראקציות על 16 פוסטים — הפלטפורמה מתה לקהל B2B של UPE; הפחת ל-1 פוסט סינדיקציה שבועי בלבד כדי לשמור נוכחות מינימלית מבלי לבזבז משאבי הפקה."
     },
     "instagram": {
       "max_posts_per_week": 5,
-      "reason": "19 פוסטים, 865 חשיפות — ביצועים חלשים אך ישנו פוטנציאל ל-decision-makers שצופים בסטוריז לפני פנייה. להתמקד באיכות עם CTA ברור ולא בכמות."
+      "reason": "הפלטפורמה בעלת פוטנציאל ויזואלי לאירועים אך מבוזבזת על feed בלבד; 5 פריטים/שבוע (2 Reels + 2 Stories + 1 Feed) מאפשרים עומק פורמטים מבלי לדלל איכות."
     },
     "linkedin": {
       "max_posts_per_week": 4,
-      "reason": "0 אינטראקציות על 15 פוסטים — בעיית פורמט ולא כמות. 3-4 פוסטים איכותיים (כולל מפרופילים אישיים של בכירים) עדיפים על 15 פוסטים גנריים מדף החברה."
+      "reason": "האלגוריתם מתגמל עקביות ו-dwell time; 4 פוסטים/שבוע (Tue-Thu + Mon) בשעות 8-10 בבוקר מאפשרים תדירות ראויה עם זמן תגובה לתגובות בשעה הראשונה — שעת פריצה קריטית לחשיפה."
     },
     "tiktok": {
-      "max_posts_per_week": 2,
-      "reason": "פוסט אחד בשבוע עם 0 אינטראקציות — עדיין לא הוכחת ערך לקהל B2B. 2 פוסטים/שבוע לבחינת זוויות תוכן לפני הגדלת השקעה."
+      "max_posts_per_week": 3,
+      "reason": "UPE לא פעילה כלל — התחל בהדרגה עם 3 Shorts/שבוע מתוכן מוכן ממוחזר מ-YouTube; TikTok for Business יכול להיות מנוע גילוי לקהל CMO/HR צעיר ברגע שהפורמט מכוון נכון."
     },
     "youtube": {
-      "max_posts_per_week": 4,
-      "reason": "89% מסך החשיפות עם 6 פוסטים בלבד — הערוץ הגבוה ביותר ב-ROI. להוסיף 2 YouTube Shorts שבועיים (discovery funnel) לצד 2 ווידאו בינוני/ארוך."
+      "max_posts_per_week": 3,
+      "reason": "פוסט בודד ייצר 8,681 חשיפות — הפלטפורמה החזקה ביותר; 1 long-form + 2 Shorts/שבוע יוצרת funnel Shorts→Long-form שמגדיל session value ו-subscriber growth בו-זמנית."
     }
   },
-  "channel_priority": [],
-  "channel_plan_basis": [
-    "facebook: 19 פוסטים הניבו 97 חשיפות ו-0 אינטראקציות — ערוץ מת לקהל B2B ישראלי. פוסט אחד שבועי לצורך נוכחות מינימלית בלבד.",
-    "instagram: 19 פוסטים, 865 חשיפות — ביצועים חלשים אך ישנו פוטנציאל ל-decision-makers שצופים בסטוריז לפני פנייה. להתמקד באיכות עם CTA ברור ולא בכמות.",
-    "linkedin: 0 אינטראקציות על 15 פוסטים — בעיית פורמט ולא כמות. 3-4 פוסטים איכותיים (כולל מפרופילים אישיים של בכירים) עדיפים על 15 פוסטים גנריים מדף החברה.",
-    "tiktok: פוסט אחד בשבוע עם 0 אינטראקציות — עדיין לא הוכחת ערך לקהל B2B. 2 פוסטים/שבוע לבחינת זוויות תוכן לפני הגדלת השקעה.",
-    "youtube: 89% מסך החשיפות עם 6 פוסטים בלבד — הערוץ הגבוה ביותר ב-ROI. להוסיף 2 YouTube Shorts שבועיים (discovery funnel) לצד 2 ווידאו בינוני/ארוך."
+  "channel_priority": [
+    "youtube",
+    "linkedin",
+    "instagram",
+    "facebook",
+    "tiktok"
   ],
-  "follower_growth_plan": [],
-  "leads_actions": []
+  "channel_plan_basis": [
+    "facebook: 71 חשיפות ו-0 אינטראקציות על 16 פוסטים — הפלטפורמה מתה לקהל B2B של UPE; הפחת ל-1 פוסט סינדיקציה שבועי בלבד כדי לשמור נוכחות מינימלית מבלי לבזבז משאבי הפקה.",
+    "instagram: הפלטפורמה בעלת פוטנציאל ויזואלי לאירועים אך מבוזבזת על feed בלבד; 5 פריטים/שבוע (2 Reels + 2 Stories + 1 Feed) מאפשרים עומק פורמטים מבלי לדלל איכות.",
+    "linkedin: האלגוריתם מתגמל עקביות ו-dwell time; 4 פוסטים/שבוע (Tue-Thu + Mon) בשעות 8-10 בבוקר מאפשרים תדירות ראויה עם זמן תגובה לתגובות בשעה הראשונה — שעת פריצה קריטית לחשיפה.",
+    "tiktok: UPE לא פעילה כלל — התחל בהדרגה עם 3 Shorts/שבוע מתוכן מוכן ממוחזר מ-YouTube; TikTok for Business יכול להיות מנוע גילוי לקהל CMO/HR צעיר ברגע שהפורמט מכוון נכון.",
+    "youtube: פוסט בודד ייצר 8,681 חשיפות — הפלטפורמה החזקה ביותר; 1 long-form + 2 Shorts/שבוע יוצרת funnel Shorts→Long-form שמגדיל session value ו-subscriber growth בו-זמנית."
+  ],
+  "follower_growth_plan": [
+    "שלב 1 (0-90 יום) — LinkedIn Personal Branding: הפעל 3 מנהלים שמפרסמים 3x/שבוע מפרופיל אישי; פרופילים אישיים מניעים 8x יותר engagement מדפי חברה ומהווים את מנוע הצמיחה המהיר ביותר ל-B2B.",
+    "שלב 2 (30-120 יום) — YouTube Shorts Engine: כל סרטון long-form מייצר 3-5 Shorts; Shorts הם מנוע הגילוי העיקרי ב-YouTube ב-2026 ומוציאים את UPE לקהל חדש שלא מכיר את המותג.",
+    "שלב 3 (60-180 יום) — SEO כ-follower magnet: מאמרי עומק בעברית מביאים גולשים עם כוונת קנייה ל-upe.co.il; הוסף CTA ל-LinkedIn newsletter בכל מאמר להמיר גולשים ל-followers מוסמכים.",
+    "שלב 4 (90-180 יום) — TikTok Discovery Layer: 3 Shorts/שבוע ממוחזרים מ-YouTube; TikTok משמש כ-awareness engine ל-CMO/HR צעירים שיגיעו לאחר מכן ל-LinkedIn ול-YouTube.",
+    "שלב 5 (180+ יום) — LinkedIn Newsletter כ-flywheel: ניוזלטר חודשי בונה קהל opted-in; כל subscriber הוא follower אפקטיבי עם open rate גבוה פי 2 ממדיה חברתית רגילה.",
+    "מדד מוביל (leading indicator) לכל שלב: LinkedIn impressions/שבוע (יעד: 2,000+ תוך 60 יום), YouTube subscribers (יעד: +50/חודש), ו-SEO clicks (יעד: 300+/חודש) — אלה יוסיפו followers בקצב מצטבר לקראת 500K."
+  ],
+  "leads_actions": [
+    "הכפל השקעה ב-Word of Mouth: בנה תוכנית referral פורמלית — בקש מ-6 הלקוחות שהפנו לנו השנה להפוך ל-'שגרירי UPE' עם תמריץ ברור (שדרוג שירות, הכרה פומבית בפוסט LinkedIn); זהו ערוץ ההמרה הוכח ב-86%.",
+    "LinkedIn Outbound מ-Personal Profiles: המנהלים שמפרסמים thought leadership ישלחו 10-15 connection requests שבועיות ל-CMO/HR/CEO בחברות 200+ עובדים בישראל ואירופה — 'אני מפרסם תוכן על X, אשמח לחבר'; זה inbound outreach שלא נוגד כللי UTM.",
+    "Case Study מניב לידים בגוגל: צור 3 עמודי case study ב-upe.co.il עם שמות ענף (לא לקוח) + תוצאות מדידות + CTA ל-'נשמח לשמוע על האירוע שלכם'; עמודים אלה ממירים גולשים עם כוונת קנייה ישירות לשיחה.",
+    "LinkedIn Newsletter CTA: בכל גיליון ניוזלטר, הוסף שאלה אחת ('האירוע הבא שלכם מתי? כתבו לי') — open rate גבוה של ניוזלטרי LinkedIn יוצר שיחות ישירות עם decision-makers ללא חסם פרסום.",
+    "upe-spain.com Lead Funnel: הוסף טופס 'קבל הצעת מחיר ראשונית תוך 24 שעות' לעמודי הנחיתה של spain בסמוך לכל מאמר SEO — לידים אירופאיים מחפשים 'international product launch event' הם high-intent ועשויים לשלש ערך עסקה.",
+    "אירועי Trigger — Outreach ממוקד: עקוב אחר LinkedIn על חברות ישראליות/אירופאיות שמפרסמות על גידול צוות, סבב גיוס, או מינוי מנכ\"ל חדש — אלה trigger events להפקת אירוע חברה; שלח הודעה אישית תוך 48 שעות עם הצעת ערך ספציפית."
+  ]
 }
