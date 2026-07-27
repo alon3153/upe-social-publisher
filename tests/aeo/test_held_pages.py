@@ -4,10 +4,12 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[2] / "scripts"))
 import held_pages as hp
+import aeo_publish
 
 
-def _page(slug, comps, title=None):
-    return {"slug": slug, "frontmatter": {"title": title or slug, "canonical": f"/{slug}/"},
+def _page(slug, comps, title=None, collection="blog", lang="he"):
+    return {"slug": slug, "collection": collection, "lang": lang,
+            "frontmatter": {"title": title or slug, "canonical": f"/{slug}/"},
             "body": "x", "violations": [], "_competitors": comps}
 
 
@@ -34,6 +36,27 @@ def test_due_after_window(tmp_path):
     due = hp.due_for_merge("2026-07-14", path=p)
     assert [d["slug"] for d in due] == ["a"]
     assert due[0]["frontmatter"]["title"] == "a"  # publishable shape
+
+
+def test_due_page_is_publishable(tmp_path):
+    """A released page goes straight into aeo_publish, which paths it by
+    collection+lang — both must survive the hold (26.07.26: KeyError killed the run)."""
+    p = tmp_path / "held.json"
+    hp.hold([_page("a", ["freeman"], collection="services", lang="es")], "2026-07-12", path=p)
+    due = hp.due_for_merge("2026-07-14", path=p)[0]
+    assert aeo_publish.page_path("/repo", due) == "/repo/src/content/services/es/a.md"
+
+
+def test_legacy_entry_without_collection_still_publishable(tmp_path):
+    """Entries persisted before collection/lang were stored recover them from
+    the frontmatter instead of crashing the weekly run."""
+    p = tmp_path / "held.json"
+    hp.save({"held": [{"slug": "a", "frontmatter": {"schemaType": "WebPage", "language": "en"},
+                       "body": "x", "violations": [], "competitors": ["freeman"],
+                       "held_since": "2026-07-12", "state": "awaiting_veto"}],
+             "vetoed": []}, path=p)
+    due = hp.due_for_merge("2026-07-14", path=p)[0]
+    assert aeo_publish.page_path("/repo", due) == "/repo/src/content/services/en/a.md"
 
 
 def test_veto_blocks_merge_and_reholding(tmp_path):

@@ -22,6 +22,10 @@ ROOT = Path(__file__).resolve().parent
 STATE = ROOT.parent / "state" / "held_pages.json"
 VETO_DAYS = 1  # council: 24h founder-veto window before auto-merge
 
+# aeo_publish.page_path() needs collection+lang, so both must survive the hold.
+# Entries persisted before 27.07.2026 lack them; recover from the frontmatter.
+_SCHEMA_COLLECTION = {"WebPage": "services"}
+
 
 def load(path=None):
     p = Path(path) if path else STATE
@@ -55,6 +59,8 @@ def hold(pages, today, path=None):
             continue
         data["held"].append({
             "slug": slug,
+            "collection": page.get("collection"),
+            "lang": page.get("lang"),
             "frontmatter": page.get("frontmatter", {}),
             "body": page.get("body", ""),
             "violations": page.get("violations", []),
@@ -72,6 +78,17 @@ def _days_between(a, b):
     return (datetime.date.fromisoformat(b) - datetime.date.fromisoformat(a)).days
 
 
+def _collection(h):
+    """Collection the page belongs to, recovered from the frontmatter when the
+    entry predates persisting it (see _SCHEMA_COLLECTION)."""
+    return h.get("collection") or _SCHEMA_COLLECTION.get(
+        h.get("frontmatter", {}).get("schemaType"), "blog")
+
+
+def _lang(h):
+    return h.get("lang") or h.get("frontmatter", {}).get("language", "he")
+
+
 def due_for_merge(today, path=None, window_days=VETO_DAYS):
     data = load(path)
     vetoed = set(data.get("vetoed", []))
@@ -81,7 +98,8 @@ def due_for_merge(today, path=None, window_days=VETO_DAYS):
             continue
         if _days_between(h["held_since"], today) >= window_days:
             # shape it back into a publishable page dict
-            out.append({"slug": h["slug"], "frontmatter": h["frontmatter"],
+            out.append({"slug": h["slug"], "collection": _collection(h), "lang": _lang(h),
+                        "frontmatter": h["frontmatter"],
                         "body": h["body"], "violations": h.get("violations", [])})
     return out
 
