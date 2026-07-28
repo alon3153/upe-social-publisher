@@ -1,36 +1,37 @@
 {
-  "day": 40,
-  "category": "cta_discovery",
-  "language": "en",
-  "date": "2026-05-10",
-  "weekday": "Sunday",
-  "theme": "One conversation. That's all it takes.",
-  "linkedin": {
-    "profile": "Uproduction Events (Company Page)",
-    "text": "The best discovery call I run starts with me saying \"I don't know yet if we can help you.\"\n\nThat's not false modesty. It's the only honest way to begin.\n\nMost event vendors open with a deck. We open with a question: what are you actually trying to move — retention, morale, a sales target, a brand moment? Until we know that, a destination is just a guess.\n\n16 years. 200+ events. 20+ countries. The throughline isn't a place or a package — it's that we design backwards from your objective, not forwards from our catalog.\n\nIf a team event is on your 2026 radar — incentive trip, company offsite, a conference with a real experience built in — let's spend 30 honest minutes on it. No deck, no pressure. If we're the right fit, we'll both feel it. If not, I'll point you somewhere better.\n\nFrom business to pleasure — it starts with one conversation.\n\n📩 alon@upe.co.il · 🌐 upe.co.il · or DM me here.\n\n#CorporateEvents #IncentiveTravel #EventProduction",
-    "dimensions": "1:1",
-    "cta": "DM or visit upe.co.il to start planning"
-  },
-  "instagram": {
-    "profile": "@uproductionevents",
-    "text": "One conversation. That's the whole pitch. ☎️\n\nNo deck. No package. No pressure.\nJust one question: what are you actually trying to achieve?\n\nHere's how we work 👇\n🎯 We start with your objective, not our catalog\n🌍 16 years · 200+ events · 20+ countries\n✨ We design experiences, not itineraries\n🤝 From business to pleasure\n\n📌 Save this for your 2026 planning.\n🏷️ Tag the colleague who owns your next team event.\n\nThinking about an offsite, incentive trip, or conference? DM us \"PLAN\" or 📩 alon@upe.co.il and let's talk.\n\n#CorporateEvents #IncentiveTravel #UproductionEvents #MICE #EventPlanning #EventProfs #CorporateTravel #TeamBuilding #DiscoveryCall #HRLeadership #LetsTalk #EventDesign",
-    "dimensions": "1:1",
-    "cta": "Link in bio"
-  },
-  "facebook": {
-    "profile": "Uproduction Events (Page)",
-    "text": "One conversation. That's honestly all it takes to know if we're the right fit.\n\nWe don't open with a sales deck — we open with a question: what are you actually trying to achieve with your team? After 16 years, 200+ events, and 20+ countries, we've learned the destination comes last. Your objective comes first.\n\nPlanning a team trip, incentive program, or conference for 2026? What would make it unforgettable for your people?\n\n💬 DM us \"PLAN\" and let's design it together — from business to pleasure.\n\n#CorporateEvents #IncentiveTravel #UproductionEvents #EventPlanning",
-    "dimensions": "1.91:1",
-    "cta": "Send us a message"
-  },
-  "image_prompt": "Corporate event scene: One conversation. That's all it takes., luxury, professional, gold accents",
-  "image_style": "photorealistic, editorial, luxury event magazine",
-  "brand": {
-    "colors": [
-      "#1C1C1C",
-      "#FBCE0A"
-    ],
-    "font": "Comfortaa",
-    "logo": "uproduction_official_logo.png"
-  }
+ "day": 40,
+ "category": "cta_discovery",
+ "language": "en",
+ "date": "2026-05-10",
+ "weekday": "Sunday",
+ "theme": "One conversation. That's all it takes.",
+ "linkedin": {
+  "profile": "Uproduction Events (Company Page)",
+  "text": "The best discovery call I run starts with me saying \"I don't know yet if we can help you.\"\n\nThat's not false modesty. It's the only honest way to begin.\n\nMost event vendors open with a deck. We open with a question: what are you actually trying to move — retention, morale, a sales target, a brand moment? Until we know that, a destination is just a guess.\n\n16 years. 1,500+ events. 130+ destinations. The throughline isn't a place or a package — it's that we design backwards from your objective, not forwards from our catalog.\n\nIf a team event is on your 2026 radar — incentive trip, company offsite, a conference with a real experience built in — let's spend 30 honest minutes on it. No deck, no pressure. If we're the right fit, we'll both feel it. If not, I'll point you somewhere better.\n\nFrom business to pleasure — it starts with one conversation.\n\n📩 alon@upe.co.il · 🌐 upe.co.il · or DM me here.\n\n#CorporateEvents #IncentiveTravel #EventProduction",
+  "dimensions": "1:1",
+  "cta": "DM or visit upe.co.il to start planning"
+ },
+ "instagram": {
+  "profile": "@uproductionevents",
+  "text": "One conversation. That's the whole pitch. ☎️\n\nNo deck. No package. No pressure.\nJust one question: what are you actually trying to achieve?\n\nHere's how we work 👇\n🎯 We start with your objective, not our catalog\n🌍 16 years · 1,500+ events · 130+ destinations\n✨ We design experiences, not itineraries\n🤝 From business to pleasure\n\n📌 Save this for your 2026 planning.\n🏷️ Tag the colleague who owns your next team event.\n\nThinking about an offsite, incentive trip, or conference? DM us \"PLAN\" or 📩 alon@upe.co.il and let's talk.\n\n#CorporateEvents #IncentiveTravel #UproductionEvents #MICE #EventPlanning #EventProfs #CorporateTravel #TeamBuilding #DiscoveryCall #HRLeadership #LetsTalk #EventDesign",
+  "dimensions": "1:1",
+  "cta": "Link in bio"
+ },
+ "facebook": {
+  "profile": "Uproduction Events (Page)",
+  "text": "One conversation. That's honestly all it takes to know if we're the right fit.\n\nWe don't open with a sales deck — we open with a question: what are you actually trying to achieve with your team? After 16 years, 1,500+ events, and 130+ destinations, we've learned the destination comes last. Your objective comes first.\n\nPlanning a team trip, incentive program, or conference for 2026? What would make it unforgettable for your people?\n\n💬 DM us \"PLAN\" and let's design it together — from business to pleasure.\n\n#CorporateEvents #IncentiveTravel #UproductionEvents #EventPlanning",
+  "dimensions": "1.91:1",
+  "cta": "Send us a message"
+ },
+ "brand": {
+  "colors": [
+   "#1C1C1C",
+   "#FBCE0A"
+  ],
+  "font": "Comfortaa",
+  "logo": "uproduction_official_logo.png"
+ },
+ "image_file": "content/images/one_convo_real.jpg",
+ "image_source": "real_archive",
+ "image_origin": "2023/אירועים בחול/יוניט מרוקו ינואר 2023/100EOS7D/IMG_1236.JPG"
 }
