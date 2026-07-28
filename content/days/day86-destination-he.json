@@ -1,36 +1,39 @@
 {
-  "day": 86,
-  "category": "destination",
-  "language": "he",
-  "date": "2026-07-20",
-  "weekday": "Monday",
-  "theme": "Bali spiritual luxury for transformative team journeys",
-  "linkedin": {
-    "profile": "Uproduction Events (Company Page)",
-    "text": "לא כל תמריץ צריך להיות רועש. יש כאלה שעניינם חיבור מחדש. באלי משלבת מדרגות אורז ירוקות, בריכות אינסוף על צוקים, טקסי מקדש ובריאות ברמה עולמית — מסע שמטעין את הצוות בנפש לא פחות מאשר מתגמל אותו. יוגת זריחה, וילות ג'ונגל, גאלות חוף תחת הכוכבים — אנחנו מתכננים תוכניות שמרגישות כמו טרנספורמציה, לא רק נסיעה. מסקרן אתכם מה באלי יכולה לעשות לצוות? שלחו הודעה. #UproductionEvents #טיוליתמריץ #באלי #אירועיםעסקיים #FromBusinessToPleasure",
-    "dimensions": "1:1",
-    "cta": "DM us or book a call"
-  },
-  "instagram": {
-    "profile": "@uproductionevents",
-    "text": "לא כל תמריץ צריך להיות רועש. יש כאלה שעניינם חיבור מחדש. באלי משלבת מדרגות אורז ירוקות, בריכות אינסוף על צוקים, טקסי מקדש ובריאות ברמה עולמית — מסע שמטעין את הצוות בנפש לא פחות מאשר מתגמל אותו. יוגת זריחה, וילות ג'ונגל, גאלות חוף תחת הכוכבים — אנחנו מתכננים תוכניות שמרגישות כמו טרנספורמציה, לא רק נסיעה. מסקרן אתכם מה באלי יכולה לעשות לצוות? שלחו הודעה. #UproductionEvents #טיוליתמריץ #באלי #אירועיםעסקיים #FromBusinessToPleasure",
-    "dimensions": "1:1",
-    "cta": "Link in bio"
-  },
-  "facebook": {
-    "profile": "Uproduction Events (Page)",
-    "text": "לא כל תמריץ צריך להיות רועש. יש כאלה שעניינם חיבור מחדש. באלי משלבת מדרגות אורז ירוקות, בריכות אינסוף על צוקים, טקסי מקדש ובריאות ברמה עולמית — מסע שמטעין את הצוות בנפש לא פחות מאשר מתגמל אותו. יוגת זריחה, וילות ג'ונגל, גאלות חוף תחת הכוכבים — אנחנו מתכננים תוכניות שמרגישות כמו טרנספורמציה, לא רק נסיעה. מסקרן אתכם מה באלי יכולה לעשות לצוות? שלחו הודעה. #UproductionEvents #טיוליתמריץ #באלי #אירועיםעסקיים #FromBusinessToPleasure",
-    "dimensions": "1.91:1",
-    "cta": "Send us a message"
-  },
-  "image_prompt": "Aerial view over the emerald rice terraces of Bali at sunrise, sculpted green steps cascading down a valley with mist rising, a lone infinity-edge resort pool perched on a jungle ridge, tiny figures doing sunrise yoga on a wooden deck far below, palm canopy stretching to distant volcano. Photorealistic, 35mm film grain, no CGI, no text, no logos.",
-  "image_style": "photorealistic, editorial, documentary, 35mm film grain",
-  "brand": {
-    "colors": [
-      "#1C1C1C",
-      "#FBCE0A"
-    ],
-    "font": "Comfortaa",
-    "logo": "uproduction_official_logo.png"
-  }
+ "day": 86,
+ "category": "destination",
+ "language": "he",
+ "date": "2026-07-20",
+ "weekday": "Monday",
+ "theme": "הטיול שמאט אנשים",
+ "linkedin": {
+  "profile": "Uproduction Events (Company Page)",
+  "text": "רוב מסלולי התמריץ עמוסים מדי. האינסטינקט מובן — מוציאים כסף אמיתי, אז ממלאים את הימים. התוצאה היא קבוצה שחוזרת עייפה וזוכרת טשטוש.\n\nאלה הפיליפינים, מתוך תוכנית שהפקנו עם רווח מכוון בתוכה. שני ימי עוגן, אחר צהריים ארוך על סירה, וערבים שהורשו להתגלגל בלי לוח זמנים.\n\nהטיעון הוא לא רכות. הוא זכירות. אנשים יוצרים את הקשרים שאתם משלמים עליהם בשעות הלא מובנות — ההפלגה, ההליכה חזרה, הכוסית השנייה — ולא בפעילות הגיבוש שהזמנתם כדי לייצר אותם.\n\nלעשות את זה נכון קשה יותר משזה נשמע. אחר צהריים פנוי צריך להרגיש כמו נדיבות, לא כמו הזנחה. זה אומר אפשרויות שזמינות בשקט, צוות שיודע איפה כולם, ודבר אחד מצוין באמת שמעגן כל יום כדי שאף אחד לא ירגיש שהטיול דליל.\n\nרוצים תוכנית עם מקום לנשום? תגידו לנו מה הצוות שלכם סוחב השנה.\n\nUproduction Events — from business to pleasure\n\n📩 alon@upe.co.il",
+  "dimensions": "1:1",
+  "cta": "alon@upe.co.il"
+ },
+ "instagram": {
+  "profile": "@uproductionevents",
+  "text": "רוב מסלולי התמריץ עמוסים מדי. האינסטינקט מובן — מוציאים כסף אמיתי, אז ממלאים את הימים. התוצאה היא קבוצה שחוזרת עייפה וזוכרת טשטוש.\n\nאלה הפיליפינים, מתוך תוכנית שהפקנו עם רווח מכוון בתוכה. שני ימי עוגן, אחר צהריים ארוך על סירה, וערבים שהורשו להתגלגל בלי לוח זמנים.\n\n📩 alon@upe.co.il\n\n#אירועיחברה #טיוליתמריץ #UproductionEvents #משאביאנוש #הפקתאירועים",
+  "dimensions": "1:1",
+  "cta": "alon@upe.co.il"
+ },
+ "facebook": {
+  "profile": "Uproduction Events (Page)",
+  "text": "רוב מסלולי התמריץ עמוסים מדי. האינסטינקט מובן — מוציאים כסף אמיתי, אז ממלאים את הימים. התוצאה היא קבוצה שחוזרת עייפה וזוכרת טשטוש.\n\nאלה הפיליפינים, מתוך תוכנית שהפקנו עם רווח מכוון בתוכה. שני ימי עוגן, אחר צהריים ארוך על סירה, וערבים שהורשו להתגלגל בלי לוח זמנים.\n\nהטיעון הוא לא רכות. הוא זכירות. אנשים יוצרים את הקשרים שאתם משלמים עליהם בשעות הלא מובנות — ההפלגה, ההליכה חזרה, הכוסית השנייה — ולא בפעילות הגיבוש שהזמנתם כדי לייצר אותם.\n\nלעשות את זה נכון קשה יותר משזה נשמע. אחר צהריים פנוי צריך להרגיש כמו נדיבות, לא כמו הזנחה. זה אומר אפשרויות שזמינות בשקט, צוות שיודע איפה כולם, ודבר אחד מצוין באמת שמעגן כל יום כדי שאף אחד לא ירגיש שהטיול דליל.\n\nרוצים תוכנית עם מקום לנשום? תגידו לנו מה הצוות שלכם סוחב השנה.\n\nUproduction Events — from business to pleasure\n\n#אירועיחברה #טיוליתמריץ #UproductionEvents #משאביאנוש #הפקתאירועים",
+  "dimensions": "1.91:1",
+  "cta": "alon@upe.co.il"
+ },
+ "brand": {
+  "colors": [
+   "#1C1C1C",
+   "#FBCE0A"
+  ],
+  "font": "Comfortaa",
+  "logo": "uproduction_official_logo.png"
+ },
+ "image_file": "content/images/slower_journey_real.jpg",
+ "image_source": "real_archive",
+ "image_origin": "2017/יוניליוור פליפינים/IMG_5122.jpg",
+ "retargeted_from": "Bali",
+ "_retarget_note": "Original copy sold Bali, a destination UPE has never produced in. Image and copy both replaced with real archive material."
 }

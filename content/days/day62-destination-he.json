@@ -1,36 +1,39 @@
 {
-  "day": 62,
-  "category": "destination",
-  "language": "he",
-  "date": "2026-06-26",
-  "weekday": "Friday",
-  "theme": "Rome turns business into living history",
-  "linkedin": {
-    "profile": "Uproduction Events (Company Page)",
-    "text": "רומא לא מארחת אירועים — היא מרוממת אותם. דמיינו את ארוחת הגאלה שלכם מטרים מאלפיים שנות היסטוריה, הצוות מרים כוסית מתחת לחורבות מוארות. ב-UPE אנחנו מפיקים חוויות עסקיות ברומא שמשלבות אסטרטגיה עם פאר. מוכנים להפוך את האירוע הבא לנצחי? דברו איתנו היום. #UproductionEvents #רומא #אירועיחברה #טיוליתמרוץ #גאלה #איטליה",
-    "dimensions": "1:1",
-    "cta": "DM us or book a call"
-  },
-  "instagram": {
-    "profile": "@uproductionevents",
-    "text": "רומא לא מארחת אירועים — היא מרוממת אותם. דמיינו את ארוחת הגאלה שלכם מטרים מאלפיים שנות היסטוריה, הצוות מרים כוסית מתחת לחורבות מוארות. ב-UPE אנחנו מפיקים חוויות עסקיות ברומא שמשלבות אסטרטגיה עם פאר. מוכנים להפוך את האירוע הבא לנצחי? דברו איתנו היום. #UproductionEvents #רומא #אירועיחברה #טיוליתמרוץ #גאלה #איטליה",
-    "dimensions": "1:1",
-    "cta": "Link in bio"
-  },
-  "facebook": {
-    "profile": "Uproduction Events (Page)",
-    "text": "רומא לא מארחת אירועים — היא מרוממת אותם. דמיינו את ארוחת הגאלה שלכם מטרים מאלפיים שנות היסטוריה, הצוות מרים כוסית מתחת לחורבות מוארות. ב-UPE אנחנו מפיקים חוויות עסקיות ברומא שמשלבות אסטרטגיה עם פאר. מוכנים להפוך את האירוע הבא לנצחי? דברו איתנו היום. #UproductionEvents #רומא #אירועיחברה #טיוליתמרוץ #גאלה #איטליה",
-    "dimensions": "1.91:1",
-    "cta": "Send us a message"
-  },
-  "image_prompt": "Sweeping aerial drone shot of Rome at dusk, the Colosseum and ancient ruins glowing amber, terracotta rooftops sprawling toward the horizon, the dome of a basilica catching the last light, no people visible up close, vast cinematic scale. Photorealistic, 35mm film grain, no CGI, no text, no logos.",
-  "image_style": "photorealistic, editorial, documentary, 35mm film grain",
-  "brand": {
-    "colors": [
-      "#1C1C1C",
-      "#FBCE0A"
-    ],
-    "font": "Comfortaa",
-    "logo": "uproduction_official_logo.png"
-  }
+ "day": 62,
+ "category": "destination",
+ "language": "he",
+ "date": "2026-06-26",
+ "weekday": "Friday",
+ "theme": "אתונה: עסקים בתוך היסטוריה חיה",
+ "linkedin": {
+  "profile": "Uproduction Events (Company Page)",
+  "text": "הצוות שלכם לא יזכור את מושב הפיצול. הוא יזכור את הרגע שעמד באגורה הרומית בשעת הזהב, שם העמודים מחזיקים את האור הזה כבר אלפיים שנה.\n\nזו אתונה, מתוך תוכנית שהפקנו שם. העיר נותנת לאירוע עסקי משהו שאי אפשר לבנות באולם: משקל. אנשים מתנהגים אחרת במקום שהיה חשוב הרבה לפני שהחברה שלהם נולדה.\n\nגם הצד המעשי חזק. טיסה ישירה מתל אביב בפחות משעתיים. מרכז עיר קומפקטי שבו מלון, ארוחה ופעילות יושבים ברדיוס של רבע שעה — כמעט בלי בזבוז זמן על הסעות. ועונת ביניים — אפריל, מאי, אוקטובר — שבה גם מזג האוויר וגם המחירים משתפים פעולה.\n\nמה שדורש טיפול: לאתרים ארכיאולוגיים יש חלונות היתר נוקשים ותקרה קשיחה לגודל קבוצה. זו בעיית תכנון, לא מכשול, והיא שלנו.\n\nשוקלים יוון ל-2026? תגידו לנו גודל קבוצה ונגיד לכם מה באמת אפשרי.\n\nUproduction Events — from business to pleasure\n\n📩 alon@upe.co.il",
+  "dimensions": "1:1",
+  "cta": "alon@upe.co.il"
+ },
+ "instagram": {
+  "profile": "@uproductionevents",
+  "text": "הצוות שלכם לא יזכור את מושב הפיצול. הוא יזכור את הרגע שעמד באגורה הרומית בשעת הזהב, שם העמודים מחזיקים את האור הזה כבר אלפיים שנה.\n\nזו אתונה, מתוך תוכנית שהפקנו שם. העיר נותנת לאירוע עסקי משהו שאי אפשר לבנות באולם: משקל. אנשים מתנהגים אחרת במקום שהיה חשוב הרבה לפני שהחברה שלהם נולדה.\n\n📩 alon@upe.co.il\n\n#אירועיחברה #טיוליתמריץ #UproductionEvents #משאביאנוש #הפקתאירועים",
+  "dimensions": "1:1",
+  "cta": "alon@upe.co.il"
+ },
+ "facebook": {
+  "profile": "Uproduction Events (Page)",
+  "text": "הצוות שלכם לא יזכור את מושב הפיצול. הוא יזכור את הרגע שעמד באגורה הרומית בשעת הזהב, שם העמודים מחזיקים את האור הזה כבר אלפיים שנה.\n\nזו אתונה, מתוך תוכנית שהפקנו שם. העיר נותנת לאירוע עסקי משהו שאי אפשר לבנות באולם: משקל. אנשים מתנהגים אחרת במקום שהיה חשוב הרבה לפני שהחברה שלהם נולדה.\n\nגם הצד המעשי חזק. טיסה ישירה מתל אביב בפחות משעתיים. מרכז עיר קומפקטי שבו מלון, ארוחה ופעילות יושבים ברדיוס של רבע שעה — כמעט בלי בזבוז זמן על הסעות. ועונת ביניים — אפריל, מאי, אוקטובר — שבה גם מזג האוויר וגם המחירים משתפים פעולה.\n\nמה שדורש טיפול: לאתרים ארכיאולוגיים יש חלונות היתר נוקשים ותקרה קשיחה לגודל קבוצה. זו בעיית תכנון, לא מכשול, והיא שלנו.\n\nשוקלים יוון ל-2026? תגידו לנו גודל קבוצה ונגיד לכם מה באמת אפשרי.\n\nUproduction Events — from business to pleasure\n\n#אירועיחברה #טיוליתמריץ #UproductionEvents #משאביאנוש #הפקתאירועים",
+  "dimensions": "1.91:1",
+  "cta": "alon@upe.co.il"
+ },
+ "brand": {
+  "colors": [
+   "#1C1C1C",
+   "#FBCE0A"
+  ],
+  "font": "Comfortaa",
+  "logo": "uproduction_official_logo.png"
+ },
+ "image_file": "content/images/athens_history_real.jpg",
+ "image_source": "real_archive",
+ "image_origin": "2025/AOI עוד אתונה/AMAZING RACE PHOTOS/20251101 Plaka-79.jpg",
+ "retargeted_from": "Rome",
+ "_retarget_note": "Original copy sold Rome, a destination UPE has never produced in. Image and copy both replaced with real archive material."
 }

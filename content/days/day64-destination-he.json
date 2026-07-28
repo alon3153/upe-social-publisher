@@ -1,36 +1,39 @@
 {
-  "day": 64,
-  "category": "destination",
-  "language": "he",
-  "date": "2026-06-28",
-  "weekday": "Sunday",
-  "theme": "Lake Como rewards your boldest achievers",
-  "linkedin": {
-    "profile": "Uproduction Events (Company Page)",
-    "text": "יש פרסים שלוחשים יוקרה. אגם קומו צועק אותה — בשקט. דמיינו ריטריט הנהלה בווילה על שפת המים, מפגשי אסטרטגיה על מרפסות מעל האגם, וערבים של שיט מתחת לאלפים. ב-UPE אנחנו מעצבים בריחות תמרוץ שמרגישות פרטיות ומפוארות כאחד. ככה מתגמלים את מי שמניע את העסק קדימה. בואו נעצב את שלכם. #UproductionEvents #אגםקומו #טיוליתמרוץ #אירועיחברה #יוקרה #איטליה",
-    "dimensions": "1:1",
-    "cta": "DM us or book a call"
-  },
-  "instagram": {
-    "profile": "@uproductionevents",
-    "text": "יש פרסים שלוחשים יוקרה. אגם קומו צועק אותה — בשקט. דמיינו ריטריט הנהלה בווילה על שפת המים, מפגשי אסטרטגיה על מרפסות מעל האגם, וערבים של שיט מתחת לאלפים. ב-UPE אנחנו מעצבים בריחות תמרוץ שמרגישות פרטיות ומפוארות כאחד. ככה מתגמלים את מי שמניע את העסק קדימה. בואו נעצב את שלכם. #UproductionEvents #אגםקומו #טיוליתמרוץ #אירועיחברה #יוקרה #איטליה",
-    "dimensions": "1:1",
-    "cta": "Link in bio"
-  },
-  "facebook": {
-    "profile": "Uproduction Events (Page)",
-    "text": "יש פרסים שלוחשים יוקרה. אגם קומו צועק אותה — בשקט. דמיינו ריטריט הנהלה בווילה על שפת המים, מפגשי אסטרטגיה על מרפסות מעל האגם, וערבים של שיט מתחת לאלפים. ב-UPE אנחנו מעצבים בריחות תמרוץ שמרגישות פרטיות ומפוארות כאחד. ככה מתגמלים את מי שמניע את העסק קדימה. בואו נעצב את שלכם. #UproductionEvents #אגםקומו #טיוליתמרוץ #אירועיחברה #יוקרה #איטליה",
-    "dimensions": "1.91:1",
-    "cta": "Send us a message"
-  },
-  "image_prompt": "Cinematic aerial view of Lake Como at sunrise, mist drifting over deep blue water, grand lakeside villas with manicured gardens descending to private docks, alpine foothills rising steeply behind, a single boat carving a thin wake across the mirror surface. Photorealistic, 35mm film grain, no CGI, no text, no logos.",
-  "image_style": "photorealistic, editorial, documentary, 35mm film grain",
-  "brand": {
-    "colors": [
-      "#1C1C1C",
-      "#FBCE0A"
-    ],
-    "font": "Comfortaa",
-    "logo": "uproduction_official_logo.png"
-  }
+ "day": 64,
+ "category": "destination",
+ "language": "he",
+ "date": "2026-06-28",
+ "weekday": "Sunday",
+ "theme": "החוף שהמצטיינים שלכם הרוויחו",
+ "linkedin": {
+  "profile": "Uproduction Events (Company Page)",
+  "text": "יש רגע מסוים בטיול מצטיינים שבו הפרס מפסיק להיות מופשט. בדרך כלל זו לא הארוחה ולא המתנה. זו הפעם הראשונה שקו החוף נכנס לתמונה ומישהו משתתק.\n\nזו דרום איטליה, מתוך תוכנית שהפקנו שם. מרפסת מעל הים הטירני, כל הקבוצה מול אותו מים.\n\nשכבת המצטיינים היא הבריף הקשה ביותר בטיולי תמריץ, כי הקהל קטן, בכיר וקשה להרשמה — הם כבר היו במקום יפה על חשבונם. מה שעובד זה לא עוד יוקרה. זו נגישות: שולחן שאי אפשר להזמין אונליין, סירה שיוצאת לפני שמגיעים מטיילי היום, ארוחה במקום שמכיל ארבעים איש ולא מפרסם את עצמו.\n\nזו השכבה שאנחנו בונים. החוף כבר עושה את העבודה שלו.\n\nמתכננים טיול מצטיינים ל-2026? תגידו לנו מי נוסע ונתכנן אחורה מהם.\n\nUproduction Events — from business to pleasure\n\n📩 alon@upe.co.il",
+  "dimensions": "1:1",
+  "cta": "alon@upe.co.il"
+ },
+ "instagram": {
+  "profile": "@uproductionevents",
+  "text": "יש רגע מסוים בטיול מצטיינים שבו הפרס מפסיק להיות מופשט. בדרך כלל זו לא הארוחה ולא המתנה. זו הפעם הראשונה שקו החוף נכנס לתמונה ומישהו משתתק.\n\nזו דרום איטליה, מתוך תוכנית שהפקנו שם. מרפסת מעל הים הטירני, כל הקבוצה מול אותו מים.\n\n📩 alon@upe.co.il\n\n#אירועיחברה #טיוליתמריץ #UproductionEvents #משאביאנוש #הפקתאירועים",
+  "dimensions": "1:1",
+  "cta": "alon@upe.co.il"
+ },
+ "facebook": {
+  "profile": "Uproduction Events (Page)",
+  "text": "יש רגע מסוים בטיול מצטיינים שבו הפרס מפסיק להיות מופשט. בדרך כלל זו לא הארוחה ולא המתנה. זו הפעם הראשונה שקו החוף נכנס לתמונה ומישהו משתתק.\n\nזו דרום איטליה, מתוך תוכנית שהפקנו שם. מרפסת מעל הים הטירני, כל הקבוצה מול אותו מים.\n\nשכבת המצטיינים היא הבריף הקשה ביותר בטיולי תמריץ, כי הקהל קטן, בכיר וקשה להרשמה — הם כבר היו במקום יפה על חשבונם. מה שעובד זה לא עוד יוקרה. זו נגישות: שולחן שאי אפשר להזמין אונליין, סירה שיוצאת לפני שמגיעים מטיילי היום, ארוחה במקום שמכיל ארבעים איש ולא מפרסם את עצמו.\n\nזו השכבה שאנחנו בונים. החוף כבר עושה את העבודה שלו.\n\nמתכננים טיול מצטיינים ל-2026? תגידו לנו מי נוסע ונתכנן אחורה מהם.\n\nUproduction Events — from business to pleasure\n\n#אירועיחברה #טיוליתמריץ #UproductionEvents #משאביאנוש #הפקתאירועים",
+  "dimensions": "1.91:1",
+  "cta": "alon@upe.co.il"
+ },
+ "brand": {
+  "colors": [
+   "#1C1C1C",
+   "#FBCE0A"
+  ],
+  "font": "Comfortaa",
+  "logo": "uproduction_official_logo.png"
+ },
+ "image_file": "content/images/boldest_coast_real.jpg",
+ "image_source": "real_archive",
+ "image_origin": "2017/ebay italy/IMG_20170708_143322.jpg",
+ "retargeted_from": "Lake Como",
+ "_retarget_note": "Original copy sold Lake Como, a destination UPE has never produced in. Image and copy both replaced with real archive material."
 }
