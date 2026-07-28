@@ -23,7 +23,7 @@ Usage:
   python3 scripts/council.py --dry-run       # no email, no file writes, print report
   python3 scripts/council.py --no-llm        # scorecard only (skip Claude) — cheap smoke test
 """
-import os, sys, json, argparse, datetime, urllib.request, urllib.error
+import os, sys, json, re, argparse, datetime, urllib.request, urllib.error
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -193,26 +193,57 @@ def run_council(cur, prev, scorecard):
     return {"error": "could not parse council JSON", "raw": text[:800]}
 
 
+_INVALID_ESCAPE = re.compile(r'\\(?!["\\/bfnrtu])')
+_TRAILING_COMMA = re.compile(r",(\s*[}\]])")
+
+
+def _repair_json(blob):
+    """Repair the JSON quirks Claude actually emits, then re-parse.
+
+    Real failure, 24.07 + 26.07.2026: the council answered correctly and in full
+    (stop_reason=end_turn, ~10.3k chars) but wrote Hebrew quotes as \\' inside
+    strings — e.g. \\'האם יש לך קולגה...\\'. \\' is NOT a valid JSON escape
+    (JSON allows only \\" \\\\ \\/ \\b \\f \\n \\r \\t \\uXXXX), so json.loads
+    rejected the whole document and Alon got 'ציון —/100' with an empty verdict
+    on an otherwise perfect run. Two wasted council days, no signal that
+    anything had broken.
+
+    Strips stray backslashes before non-escape characters and trailing commas.
+    Returns None if it still will not parse."""
+    try:
+        return json.loads(_TRAILING_COMMA.sub(r"\1", _INVALID_ESCAPE.sub("", blob)))
+    except json.JSONDecodeError:
+        return None
+
+
 def _extract_json(text):
     """Find the council's JSON. With web_search in the loop the reply is several
     text blocks and may contain interim/partial fenced blocks — the real answer
-    is the LAST parseable one, so try fenced candidates last-first, then raw."""
-    import re
+    is the LAST parseable one, so try fenced candidates last-first, then raw.
+    Each candidate gets a strict parse first, then a repair pass."""
     candidates = [m.group(1) for m in re.finditer(r"```(?:json)?\s*(.*?)```", text, re.S)]
     for c in reversed(candidates) if candidates else []:
         s, e = c.find("{"), c.rfind("}")
         if s != -1 and e != -1:
+            blob = c[s:e + 1]
             try:
-                return json.loads(c[s:e + 1])
+                return json.loads(blob)
             except json.JSONDecodeError:
-                pass
+                repaired = _repair_json(blob)
+                if repaired is not None:
+                    sys.stderr.write("[council] recovered fenced JSON via repair pass\n")
+                    return repaired
     s, e = text.find("{"), text.rfind("}")
     if s == -1 or e == -1:
         return None
+    blob = text[s:e + 1]
     try:
-        return json.loads(text[s:e + 1])
+        return json.loads(blob)
     except json.JSONDecodeError:
-        return None
+        repaired = _repair_json(blob)
+        if repaired is not None:
+            sys.stderr.write("[council] recovered raw JSON via repair pass\n")
+        return repaired
 
 
 # --------------------------------------------------------------- apply fixes ---
@@ -287,10 +318,21 @@ def render_html(cur, scorecard, verdict, applied, cadence=None):
         f"<span dir='ltr' style='color:#888'>({r.get('channel','')})</span></li>"
         for r in verdict.get("recommendations", []))
     applied_li = "".join(f"<li>{f.get('action','')} <span dir='ltr' style='color:#888'>({f.get('channel','')})</span></li>" for f in applied)
+    # A failed LLM verdict used to render as a bare 'ציון —/100' with an empty
+    # summary, which reads like a quiet day rather than a broken run (24.07,
+    # 26.07.2026). Say so out loud instead — the scorecard below is still real.
+    err_banner = ""
+    if verdict.get("error"):
+        err_banner = (
+            "<p style=\"background:#fdecea;border-right:4px solid #c0392b;padding:10px;\">"
+            "⚠️ <b>חוות דעת המועצה (LLM) נכשלה בריצה הזו — הציון והסיכום למטה ריקים.</b><br>"
+            f"<span dir='ltr' style='color:#555;font-size:12px;'>{str(verdict.get('error'))[:300]}</span><br>"
+            "מספרי ה-scorecard והערוצים למטה תקינים ונמדדו כרגיל.</p>")
     return f"""<html dir="rtl" lang="he"><head><meta charset="utf-8"></head>
 <body dir="rtl" style="font-family:Arial,Helvetica,sans-serif;font-size:14px;direction:rtl;text-align:right;color:#111;">
 <div dir="rtl" style="direction:rtl;text-align:right;max-width:680px;">
 <h2>🏛️ מועצת השיווק — דוח יומי {d}</h2>
+{err_banner}
 <p style="font-size:16px;"><b>ציון כולל: {sc.get('overall','—')}/100</b> · scorecard עבר {scorecard['passed']}/{scorecard['total']}</p>
 <p style="background:#f6f6f6;padding:10px;border-right:3px solid #333;">{verdict.get('verdict_summary','—')}</p>
 
@@ -390,7 +432,9 @@ def main():
         "leads_actions": verdict.get("leads_actions", []),
     }, ensure_ascii=False, indent=2))
 
-    subj = f"🏛️ מועצת השיווק — דוח יומי {_today()} · ציון {verdict.get('scores',{}).get('overall','—')}/100"
+    subj = (f"🏛️ מועצת השיווק — דוח יומי {_today()} · "
+            + ("⚠️ חוות הדעת נכשלה" if verdict.get("error")
+               else f"ציון {verdict.get('scores', {}).get('overall', '—')}/100"))
     try:
         from daily_email import send_graph_html
         ok, info = send_graph_html(subj, html)
