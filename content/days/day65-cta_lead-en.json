@@ -1,36 +1,37 @@
 {
-  "day": 65,
-  "category": "cta_lead",
-  "language": "en",
-  "date": "2026-06-29",
-  "weekday": "Monday",
-  "theme": "Stop planning events alone start producing",
-  "linkedin": {
-    "profile": "Uproduction Events (Company Page)",
-    "text": "Planning your own corporate event is a second full-time job you never applied for.\n\nMost leaders try to run the business AND produce the offsite. Then the venue falls through, the transport runs late, and the \"small surprise\" eats the whole week.\n\nThat's the part we take off your plate. Uproduction (UPE) handles the brief end to end — venues, logistics, production, talent, transport, and the unexpected — across Italy and beyond.\n\nSince 2010: 200+ events delivered across 120+ countries. You set the goals. We deliver the standing ovation. From business to pleasure.\n\nPlanning something for the team? DM us \"EVENT\" or book a call — let's pressure-test your next one.\n\n#CorporateEvents #IncentiveTravel #EventProduction",
-    "dimensions": "1:1",
-    "cta": "DM us or book a call"
-  },
-  "instagram": {
-    "profile": "@uproductionevents",
-    "text": "Stop planning your event alone. Start producing. 🎤\n\nRunning the business AND building the offsite? That's two full-time jobs.\n\nHere's what we take off your plate ⬇️\n🎯 Venues + logistics, handled\n🚌 Talent + transport, sorted\n✨ The unexpected? Covered\n\nYou bring the goals. We bring the standing ovation. From business to pleasure.\n\n📌 Save this for your next planning meeting\n👥 Tag the colleague drowning in event logistics\n\n200+ events · 120+ countries · since 2010 🌍\n\n💬 DM us \"EVENT\" — link in bio to book a call.\n\n#UproductionEvents #CorporateEvents #IncentiveTravel #EventProduction #EventPlanning #EventManagement #CorporateTravel #B2BMarketing #TeamOffsite #EventProfs #FromBusinessToPleasure",
-    "dimensions": "1:1",
-    "cta": "Link in bio"
-  },
-  "facebook": {
-    "profile": "Uproduction Events (Page)",
-    "text": "Planning a corporate event while running your business is basically two full-time jobs. 😅\n\nHand us the brief and reclaim your focus — Uproduction (UPE) handles venues, logistics, production, talent, transport, and every \"what do we do now?\" moment, across Italy and beyond. 200+ events, 120+ countries, since 2010. You bring the goals, we bring the standing ovation. From business to pleasure.\n\nWhat's the one part of event planning you'd happily never touch again? 👇\n\nGot something on the calendar? Send us a message and let's talk.\n\n#CorporateEvents #IncentiveTravel #EventProduction #FromBusinessToPleasure",
-    "dimensions": "1.91:1",
-    "cta": "Send us a message"
-  },
-  "image_prompt": "Wide overhead shot of a massive corporate conference audience from behind, thousands of seated heads filling a vast modern hall, a distant stage glowing at the far end, dramatic uplighting washing the side walls, immense sense of scale, tiny faces. Photorealistic, 35mm film grain, no CGI, no text, no logos.",
-  "image_style": "photorealistic, editorial, documentary, 35mm film grain",
-  "brand": {
-    "colors": [
-      "#1C1C1C",
-      "#FBCE0A"
-    ],
-    "font": "Comfortaa",
-    "logo": "uproduction_official_logo.png"
-  }
+ "day": 65,
+ "category": "cta_lead",
+ "language": "en",
+ "date": "2026-06-29",
+ "weekday": "Monday",
+ "theme": "Stop planning events alone start producing",
+ "linkedin": {
+  "profile": "Uproduction Events (Company Page)",
+  "text": "Planning your own corporate event is a second full-time job you never applied for.\n\nMost leaders try to run the business AND produce the offsite. Then the venue falls through, the transport runs late, and the \"small surprise\" eats the whole week.\n\nThat's the part we take off your plate. Uproduction (UPE) handles the brief end to end — venues, logistics, production, talent, transport, and the unexpected — across Italy and beyond.\n\nSince 2010: 1,500+ events delivered across 130+ destinations. You set the goals. We deliver the standing ovation. From business to pleasure.\n\nPlanning something for the team? DM us \"EVENT\" or book a call — let's pressure-test your next one.\n\n#CorporateEvents #IncentiveTravel #EventProduction",
+  "dimensions": "1:1",
+  "cta": "DM us or book a call"
+ },
+ "instagram": {
+  "profile": "@uproductionevents",
+  "text": "Stop planning your event alone. Start producing. 🎤\n\nRunning the business AND building the offsite? That's two full-time jobs.\n\nHere's what we take off your plate ⬇️\n🎯 Venues + logistics, handled\n🚌 Talent + transport, sorted\n✨ The unexpected? Covered\n\nYou bring the goals. We bring the standing ovation. From business to pleasure.\n\n📌 Save this for your next planning meeting\n👥 Tag the colleague drowning in event logistics\n\n1,500+ events · 130+ destinations · since 2010 🌍\n\n💬 DM us \"EVENT\" — link in bio to book a call.\n\n#UproductionEvents #CorporateEvents #IncentiveTravel #EventProduction #EventPlanning #EventManagement #CorporateTravel #B2BMarketing #TeamOffsite #EventProfs #FromBusinessToPleasure",
+  "dimensions": "1:1",
+  "cta": "Link in bio"
+ },
+ "facebook": {
+  "profile": "Uproduction Events (Page)",
+  "text": "Planning a corporate event while running your business is basically two full-time jobs. 😅\n\nHand us the brief and reclaim your focus — Uproduction (UPE) handles venues, logistics, production, talent, transport, and every \"what do we do now?\" moment, across Italy and beyond. 1,500+ events, 130+ destinations, since 2010. You bring the goals, we bring the standing ovation. From business to pleasure.\n\nWhat's the one part of event planning you'd happily never touch again? 👇\n\nGot something on the calendar? Send us a message and let's talk.\n\n#CorporateEvents #IncentiveTravel #EventProduction #FromBusinessToPleasure",
+  "dimensions": "1.91:1",
+  "cta": "Send us a message"
+ },
+ "brand": {
+  "colors": [
+   "#1C1C1C",
+   "#FBCE0A"
+  ],
+  "font": "Comfortaa",
+  "logo": "uproduction_official_logo.png"
+ },
+ "image_file": "content/images/stop_alone_real.jpg",
+ "image_source": "real_archive",
+ "image_origin": "2025/duda summit amsterdam/דודא חומרים צלם/DAY 2/M87A2963 copy.jpg"
 }

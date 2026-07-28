@@ -1,36 +1,37 @@
 {
-  "day": 93,
-  "category": "cta_lead",
-  "language": "es",
-  "date": "2026-07-27",
-  "weekday": "Monday",
-  "theme": "Limited 2026 production slots remaining",
-  "linkedin": {
-    "profile": "Uproduction Events (Company Page)",
-    "text": "Esta es la verdad que muchos descubren tarde: los mejores espacios, las mejores fechas y los mejores equipos de producción se reservan con 9 a 12 meses de antelación. Solo aceptamos un número limitado de grandes producciones al año para dar a cada cliente toda nuestra dedicación. Quedan pocas plazas para 2026 y 2027 ya está abriendo. Si tienes un congreso, gala o incentivo en el horizonte, este es el momento. Envíanos tus fechas y confirmaremos disponibilidad en 24 horas. #UproductionEvents #IncentiveTravel #CorporateEvents #Eventos #Congresos #ReservaYa",
-    "dimensions": "1:1",
-    "cta": "DM us or book a call"
-  },
-  "instagram": {
-    "profile": "@uproductionevents",
-    "text": "Los mejores eventos no se improvisan. Se reservan con meses de antelación.\n\nCada año aceptamos solo un número limitado de grandes producciones. Para darle a cada cliente todo lo que merece.\n\n✨ Espacios top\n📅 Fechas clave\n🎬 Equipo de producción dedicado\n\nQuedan pocas plazas para 2026. Y 2027 ya está abriendo.\n\n📌 Guarda esto si tienes un congreso, gala o incentivo en el horizonte.\n👉 Mándanos tus fechas por DM y confirmamos disponibilidad en 24h.\n\nfrom business to pleasure ✦ Uproduction\n\n#UproductionEvents #IncentiveTravel #CorporateEvents #EventProduction #Eventos #Congresos #EventPlanner #B2BEvents #Incentivos #EventDesign",
-    "dimensions": "1:1",
-    "cta": "Link in bio"
-  },
-  "facebook": {
-    "profile": "Uproduction Events (Page)",
-    "text": "Lo que muchos descubren demasiado tarde: los mejores espacios y fechas se reservan con meses de antelación.\n\nCada año aceptamos solo un número limitado de grandes producciones, para dedicarle a cada cliente toda nuestra atención. Quedan pocas plazas para 2026 y 2027 ya está abriendo.\n\n¿Tienes un congreso, gala o incentivo en el horizonte? Mándanos tus fechas por mensaje y confirmamos disponibilidad en 24h.\n\nfrom business to pleasure ✦ Uproduction\n\n#UproductionEvents #CorporateEvents #IncentiveTravel #Eventos",
-    "dimensions": "1.91:1",
-    "cta": "Send us a message"
-  },
-  "image_prompt": "High overhead shot of thousands of conference attendees seated in a vast arena auditorium, seen from directly above as a sea of tiny heads in neat curved rows, warm amber lighting washing the crowd, scale emphasized by the sheer density. Photorealistic, 35mm film grain, no CGI, no text, no logos.",
-  "image_style": "photorealistic, editorial, documentary, 35mm film grain",
-  "brand": {
-    "colors": [
-      "#1C1C1C",
-      "#FBCE0A"
-    ],
-    "font": "Comfortaa",
-    "logo": "uproduction_official_logo.png"
-  }
+ "day": 93,
+ "category": "cta_lead",
+ "language": "es",
+ "date": "2026-07-27",
+ "weekday": "Monday",
+ "theme": "Limited 2026 production slots remaining",
+ "linkedin": {
+  "profile": "Uproduction Events (Company Page)",
+  "text": "Esta es la verdad que muchos descubren tarde: los mejores espacios, las mejores fechas y los mejores equipos de producción se reservan con 9 a 12 meses de antelación. Solo aceptamos un número limitado de grandes producciones al año para dar a cada cliente toda nuestra dedicación. Quedan pocas plazas para 2026 y 2027 ya está abriendo. Si tienes un congreso, gala o incentivo en el horizonte, este es el momento. Envíanos tus fechas y confirmaremos disponibilidad en 24 horas. #UproductionEvents #IncentiveTravel #CorporateEvents #Eventos #Congresos #ReservaYa",
+  "dimensions": "1:1",
+  "cta": "DM us or book a call"
+ },
+ "instagram": {
+  "profile": "@uproductionevents",
+  "text": "Los mejores eventos no se improvisan. Se reservan con meses de antelación.\n\nCada año aceptamos solo un número limitado de grandes producciones. Para darle a cada cliente todo lo que merece.\n\n✨ Espacios top\n📅 Fechas clave\n🎬 Equipo de producción dedicado\n\nQuedan pocas plazas para 2026. Y 2027 ya está abriendo.\n\n📌 Guarda esto si tienes un congreso, gala o incentivo en el horizonte.\n👉 Mándanos tus fechas por DM y confirmamos disponibilidad en 24h.\n\nfrom business to pleasure ✦ Uproduction\n\n#UproductionEvents #IncentiveTravel #CorporateEvents #EventProduction #Eventos #Congresos #EventPlanner #B2BEvents #Incentivos #EventDesign",
+  "dimensions": "1:1",
+  "cta": "Link in bio"
+ },
+ "facebook": {
+  "profile": "Uproduction Events (Page)",
+  "text": "Lo que muchos descubren demasiado tarde: los mejores espacios y fechas se reservan con meses de antelación.\n\nCada año aceptamos solo un número limitado de grandes producciones, para dedicarle a cada cliente toda nuestra atención. Quedan pocas plazas para 2026 y 2027 ya está abriendo.\n\n¿Tienes un congreso, gala o incentivo en el horizonte? Mándanos tus fechas por mensaje y confirmamos disponibilidad en 24h.\n\nfrom business to pleasure ✦ Uproduction\n\n#UproductionEvents #CorporateEvents #IncentiveTravel #Eventos",
+  "dimensions": "1.91:1",
+  "cta": "Send us a message"
+ },
+ "brand": {
+  "colors": [
+   "#1C1C1C",
+   "#FBCE0A"
+  ],
+  "font": "Comfortaa",
+  "logo": "uproduction_official_logo.png"
+ },
+ "image_file": "content/images/limited_slots_real.jpg",
+ "image_source": "real_archive",
+ "image_origin": "2014/הונג קומג מקאו שופרסל/2014-06-26 19.37.46.jpg"
 }

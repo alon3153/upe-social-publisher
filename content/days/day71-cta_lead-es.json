@@ -1,36 +1,37 @@
 {
-  "day": 71,
-  "category": "cta_lead",
-  "language": "es",
-  "date": "2026-07-05",
-  "weekday": "Sunday",
-  "theme": "Your team deserves the unforgettable trip",
-  "linkedin": {
-    "profile": "Uproduction Events (Company Page)",
-    "text": "No recordarán el bono en la nómina. Recordarán la noche en que toda la empresa vio caer el sol tras el horizonte, juntos. Un programa de incentivos compra lealtad que no cabe en un balance. Desde 2010 hemos producido más de 200 experiencias así en más de 120 países. Dinos a quién quieres premiar y diseñaremos la experiencia de la que hablarán durante años. From business to pleasure. Agenda una llamada esta semana. #UproductionEvents #IncentiveTravel #CorporateEvents #ViajesDeIncentivo #Eventos #Liderazgo #B2B #EquiposDeAltoRendimiento",
-    "dimensions": "1:1",
-    "cta": "DM us or book a call"
-  },
-  "instagram": {
-    "profile": "@uproductionevents",
-    "text": "Nadie recuerda el bono que llegó en la nómina.\n\nPero esa noche en que todo el equipo vio caer el sol tras el horizonte… esa no se olvida jamás.\n\nUn programa de incentivos no es un gasto. Es lealtad que ningún balance puede comprar.\n\n✨ Desde 2010: +200 experiencias producidas\n🌍 En +120 países\n🤝 B2B, de principio a fin\n\nDiseñamos el viaje del que tu equipo hablará durante años.\n\nGuarda esto para tu próxima reunión de liderazgo 📌\nEtiqueta a quien decide los incentivos de tu empresa 👇\n\nDinos a quién quieres premiar y lo hacemos realidad. From business to pleasure.\n\n📩 Escríbenos por DM o reserva una llamada esta semana.\n\n#Uproduction #UproductionEvents #ViajesDeIncentivo #IncentiveTravel #EventosCorporativos #CorporateEvents #B2B #Liderazgo #EquiposDeAltoRendimiento #FromBusinessToPleasure #IncentivosLaborales #EventPlanning",
-    "dimensions": "1:1",
-    "cta": "Link in bio"
-  },
-  "facebook": {
-    "profile": "Uproduction Events (Page)",
-    "text": "Nadie recuerda el bono que llegó en la nómina. Pero esa noche en que todo el equipo vio caer el sol tras el horizonte, juntos, esa no se olvida jamás.\n\nUn buen programa de incentivos compra algo que no cabe en ningún balance: lealtad. Desde 2010 hemos producido más de 200 experiencias así en más de 120 países, y seguimos creyendo que un equipo premiado es un equipo que se queda.\n\n¿A quién premiarías tú si pudieras diseñar el viaje perfecto? Cuéntanoslo y lo convertimos en realidad. From business to pleasure.\n\n📩 Escríbenos o reserva una llamada esta semana.\n\n#Uproduction #ViajesDeIncentivo #EventosCorporativos #B2B",
-    "dimensions": "1.91:1",
-    "cta": "Send us a message"
-  },
-  "image_prompt": "Aerial view from directly above a sweeping rooftop terrace at golden hour, hundreds of guests in elegant attire seen from behind and above as tiny figures gathered around glowing dinner tables, a vast city skyline stretching to the horizon, warm string lights threading across the open-air space, shallow depth of field on the distant cityscape. Photorealistic, 35mm film grain, no CGI, no text, no logos.",
-  "image_style": "photorealistic, editorial, documentary, 35mm film grain",
-  "brand": {
-    "colors": [
-      "#1C1C1C",
-      "#FBCE0A"
-    ],
-    "font": "Comfortaa",
-    "logo": "uproduction_official_logo.png"
-  }
+ "day": 71,
+ "category": "cta_lead",
+ "language": "es",
+ "date": "2026-07-05",
+ "weekday": "Sunday",
+ "theme": "Your team deserves the unforgettable trip",
+ "linkedin": {
+  "profile": "Uproduction Events (Company Page)",
+  "text": "No recordarán el bono en la nómina. Recordarán la noche en que toda la empresa vio caer el sol tras el horizonte, juntos. Un programa de incentivos compra lealtad que no cabe en un balance. Desde 2010 hemos producido más de 200 experiencias así en más de 120 países. Dinos a quién quieres premiar y diseñaremos la experiencia de la que hablarán durante años. From business to pleasure. Agenda una llamada esta semana. #UproductionEvents #IncentiveTravel #CorporateEvents #ViajesDeIncentivo #Eventos #Liderazgo #B2B #EquiposDeAltoRendimiento",
+  "dimensions": "1:1",
+  "cta": "DM us or book a call"
+ },
+ "instagram": {
+  "profile": "@uproductionevents",
+  "text": "Nadie recuerda el bono que llegó en la nómina.\n\nPero esa noche en que todo el equipo vio caer el sol tras el horizonte… esa no se olvida jamás.\n\nUn programa de incentivos no es un gasto. Es lealtad que ningún balance puede comprar.\n\n✨ Desde 2010: +200 experiencias producidas\n🌍 En +120 países\n🤝 B2B, de principio a fin\n\nDiseñamos el viaje del que tu equipo hablará durante años.\n\nGuarda esto para tu próxima reunión de liderazgo 📌\nEtiqueta a quien decide los incentivos de tu empresa 👇\n\nDinos a quién quieres premiar y lo hacemos realidad. From business to pleasure.\n\n📩 Escríbenos por DM o reserva una llamada esta semana.\n\n#Uproduction #UproductionEvents #ViajesDeIncentivo #IncentiveTravel #EventosCorporativos #CorporateEvents #B2B #Liderazgo #EquiposDeAltoRendimiento #FromBusinessToPleasure #IncentivosLaborales #EventPlanning",
+  "dimensions": "1:1",
+  "cta": "Link in bio"
+ },
+ "facebook": {
+  "profile": "Uproduction Events (Page)",
+  "text": "Nadie recuerda el bono que llegó en la nómina. Pero esa noche en que todo el equipo vio caer el sol tras el horizonte, juntos, esa no se olvida jamás.\n\nUn buen programa de incentivos compra algo que no cabe en ningún balance: lealtad. Desde 2010 hemos producido más de 200 experiencias así en más de 120 países, y seguimos creyendo que un equipo premiado es un equipo que se queda.\n\n¿A quién premiarías tú si pudieras diseñar el viaje perfecto? Cuéntanoslo y lo convertimos en realidad. From business to pleasure.\n\n📩 Escríbenos o reserva una llamada esta semana.\n\n#Uproduction #ViajesDeIncentivo #EventosCorporativos #B2B",
+  "dimensions": "1.91:1",
+  "cta": "Send us a message"
+ },
+ "brand": {
+  "colors": [
+   "#1C1C1C",
+   "#FBCE0A"
+  ],
+  "font": "Comfortaa",
+  "logo": "uproduction_official_logo.png"
+ },
+ "image_file": "content/images/unforgettable_real.jpg",
+ "image_source": "real_archive",
+ "image_origin": "2016/ברלין שופרסל קולד פליי/2016-06-29 22.17.51.jpg"
 }
