@@ -1,36 +1,40 @@
 {
-  "day": 92,
-  "category": "destination",
-  "language": "es",
-  "date": "2026-07-26",
-  "weekday": "Sunday",
-  "theme": "Monaco glamour for elite incentives",
-  "linkedin": {
-    "profile": "Uproduction Events (Company Page)",
-    "text": "Mónaco no susurra: anuncia. Galas frente al puerto, emociones de Gran Premio y un skyline hecho para recompensar. Cuando quieres que tus mejores talentos sientan todo el peso del reconocimiento, pocos escenarios igualan al principado. Nosotros resolvemos la logística imposible para que tu equipo solo viva la magia: terrazas privadas, veladas en yate, mesas con estrella Michelin. ¿Planeas un incentivo 2026 o 2027 que deba impactar? Diseñemos el tuyo. Escríbenos hoy. #UproductionEvents #IncentiveTravel #CorporateEvents #Monaco #ViajesDeLujo #ViajeIncentivo",
-    "dimensions": "1:1",
-    "cta": "DM us or book a call"
-  },
-  "instagram": {
-    "profile": "@uproductionevents",
-    "text": "Mónaco no se visita. Se conquista. 🏆\n\nEl destino que convierte un incentivo en una historia que tu equipo contará durante años.\n\n✨ Galas frente al puerto de superyates\n🥂 Veladas privadas a bordo\n⭐ Mesas con estrella Michelin\n🏎️ La adrenalina del Gran Premio\n\nNosotros resolvemos la logística imposible. Tu equipo solo vive la magia.\n\n📌 Guarda esto para tu próximo viaje de incentivo.\n\n¿Premiarás a tus mejores en 2026 o 2027? Escríbenos por DM y diseñamos el tuyo.\n\nUproduction (UPE) — from business to pleasure.\n\n#UproductionEvents #IncentiveTravel #ViajeIncentivo #CorporateEvents #Monaco #EventosCorporativos #ViajesDeLujo #LuxuryTravel #B2BEvents #MICE #EventPlanning",
-    "dimensions": "1:1",
-    "cta": "Link in bio"
-  },
-  "facebook": {
-    "profile": "Uproduction Events (Page)",
-    "text": "Hay destinos que dicen \"buen trabajo\". Y luego está Mónaco. 🏆\n\nGalas frente al puerto, veladas en yate y mesas con estrella Michelin: el escenario perfecto para que tus mejores talentos sientan el peso real del reconocimiento. Nosotros resolvemos la logística imposible para que tu equipo solo viva la magia.\n\n¿Cuál sería el destino soñado para premiar a tu equipo? Cuéntanos y diseñemos tu incentivo 2026 o 2027. Escríbenos por mensaje.\n\nUproduction (UPE) — from business to pleasure.\n\n#UproductionEvents #ViajeIncentivo #EventosCorporativos #Monaco",
-    "dimensions": "1.91:1",
-    "cta": "Send us a message"
-  },
-  "image_prompt": "Sweeping aerial drone view of Monaco at golden hour, the harbour packed with white superyachts, terracotta rooftops climbing the cliff, the Mediterranean glittering deep blue, distant mountains, no people visible up close. Photorealistic, 35mm film grain, no CGI, no text, no logos.",
-  "image_style": "photorealistic, editorial, documentary, 35mm film grain",
-  "brand": {
-    "colors": [
-      "#1C1C1C",
-      "#FBCE0A"
-    ],
-    "font": "Comfortaa",
-    "logo": "uproduction_official_logo.png"
-  }
+ "day": 92,
+ "category": "destination",
+ "language": "es",
+ "date": "2026-07-26",
+ "weekday": "Sunday",
+ "theme": "Glamour que además tiene que funcionar",
+ "linkedin": {
+  "profile": "Uproduction Events (Company Page)",
+  "text": "Todo incentivo para directivos acaba con la misma petición: un sitio que se sienta como un acontecimiento. La trampa es elegir un lugar que fotografía como un acontecimiento y funciona como una pesadilla.\n\nEsto es Macao, de un programa que produjimos en Asia. Resorts integrados a una escala que las ciudades europeas no igualan: hotel, teatro, salón, restauración y el espacio de la velada bajo un mismo techo, lo que significa que tu grupo de 200 personas se mueve entre ellos sin autocar, sin ventana de traslado y sin que nadie se pierda.\n\nEsa es la parte infravalorada del glamour: los mejores espacios de lujo para grupos corporativos son aquellos donde nada está a veinte minutos.\n\nLo que no es: íntimo. Si tu brief es un grupo sénior pequeño que quiere sentirse en un sitio privado, este es el registro equivocado, y te lo diremos.\n\n¿Construyes un programa directivo para 2026? Dinos seniority y número, y ajustaremos el registro.\n\nUproduction Events — From Business to Pleasure\n\n📩 alon@upe.co.il\n\n📷 Una imagen real de una producción nuestra · Macao",
+  "dimensions": "1:1",
+  "cta": "alon@upe.co.il"
+ },
+ "instagram": {
+  "profile": "@uproductionevents",
+  "text": "Todo incentivo para directivos acaba con la misma petición: un sitio que se sienta como un acontecimiento. La trampa es elegir un lugar que fotografía como un acontecimiento y funciona como una pesadilla.\n\nEsto es Macao, de un programa que produjimos en Asia. Resorts integrados a una escala que las ciudades europeas no igualan: hotel, teatro, salón, restauración y el espacio de la velada bajo un mismo techo, lo que significa que tu grupo de 200 personas se mueve entre ellos sin autocar, sin ventana de traslado y sin que nadie se pierda.\n\n📩 alon@upe.co.il\n\n📷 Una imagen real de una producción nuestra · Macao\n\n#ViajesDeIncentivo #EventosCorporativos #UproductionEvents #RRHH",
+  "dimensions": "1:1",
+  "cta": "alon@upe.co.il"
+ },
+ "facebook": {
+  "profile": "Uproduction Events (Page)",
+  "text": "Todo incentivo para directivos acaba con la misma petición: un sitio que se sienta como un acontecimiento. La trampa es elegir un lugar que fotografía como un acontecimiento y funciona como una pesadilla.\n\nEsto es Macao, de un programa que produjimos en Asia. Resorts integrados a una escala que las ciudades europeas no igualan: hotel, teatro, salón, restauración y el espacio de la velada bajo un mismo techo, lo que significa que tu grupo de 200 personas se mueve entre ellos sin autocar, sin ventana de traslado y sin que nadie se pierda.\n\nEsa es la parte infravalorada del glamour: los mejores espacios de lujo para grupos corporativos son aquellos donde nada está a veinte minutos.\n\nLo que no es: íntimo. Si tu brief es un grupo sénior pequeño que quiere sentirse en un sitio privado, este es el registro equivocado, y te lo diremos.\n\n¿Construyes un programa directivo para 2026? Dinos seniority y número, y ajustaremos el registro.\n\nUproduction Events — From Business to Pleasure\n\n📷 Una imagen real de una producción nuestra · Macao\n\n#ViajesDeIncentivo #EventosCorporativos #UproductionEvents #RRHH",
+  "dimensions": "1.91:1",
+  "cta": "alon@upe.co.il"
+ },
+ "brand": {
+  "colors": [
+   "#1C1C1C",
+   "#FBCE0A"
+  ],
+  "font": "Comfortaa",
+  "logo": "uproduction_official_logo.png"
+ },
+ "image_file": "content/images/elite_glamour_real.jpg",
+ "image_source": "real_archive",
+ "image_origin": "2014/הונג קומג מקאו שופרסל/2014-06-25 15.20.53.jpg",
+ "retargeted_from": "Monaco",
+ "_retarget_note": "Original copy sold Monaco, a destination UPE has never produced in. Image and copy both replaced with real archive material.",
+ "image_credit": "📷 Una imagen real de una producción nuestra · Macao"
 }

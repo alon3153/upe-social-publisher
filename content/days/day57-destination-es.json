@@ -1,36 +1,40 @@
 {
-  "day": 57,
-  "category": "destination",
-  "language": "es",
-  "date": "2026-06-21",
-  "weekday": "Sunday",
-  "theme": "Saint-Tropez, Quietly Spectacular",
-  "linkedin": {
-    "profile": "Uproduction Events (Company Page)",
-    "text": "Saint-Tropez susurra lujo — nunca grita. ⛵ Clubes de playa privados, recepciones en cubierta de yate, villas en la ladera con vistas al mar que dejan una sala en silencio. Para un grupo selecto de altos talentos o un retiro VIP de directivos, nada dice recompensa como esto. Conseguimos el acceso que otras agencias solo sueñan y coreografiamos cada momento. ¿Considerando la Costa Azul para 2026? Diseñemos un programa exclusivo para tu nivel más alto. ✨ #UproductionEvents #IncentiveTravel #CorporateEvents #SaintTropez #ViajesDeLujo #MICE #EventosVIP #CostaAzul",
-    "dimensions": "1:1",
-    "cta": "DM us or book a call"
-  },
-  "instagram": {
-    "profile": "@uproductionevents",
-    "text": "Saint-Tropez no grita lujo. Lo susurra. 🤫\n\nY eso es exactamente lo que recuerda tu mejor talento.\n\nImagina premiarlos con esto:\n\n⛵ Recepciones en cubierta de yate al atardecer\n🏖️ Clubes de playa privados, solo para tu grupo\n🍷 Villas en la ladera con vistas al mar que dejan la sala en silencio\n🔑 Accesos que otras agencias ni sueñan\n\nEn Uproduction (UPE) no organizamos un viaje. Coreografiamos cada momento — from business to pleasure.\n\nGuarda esto para tu próximo incentivo VIP. 📌\nEtiqueta a quien decide el viaje de tu equipo. 👇\n\n¿Pensando en la Costa Azul para 2026? Escríbenos por DM y diseñamos un programa a la altura de tu gente.\n\n#UproductionEvents #ViajesDeIncentivo #EventosCorporativos #SaintTropez #ViajesDeLujo #MICE #EventosVIP #CostaAzul #IncentiveTravel #TravelDeLujo #EquiposDeAltoRendimiento #FromBusinessToPleasure",
-    "dimensions": "1:1",
-    "cta": "Link in bio"
-  },
-  "facebook": {
-    "profile": "Uproduction Events (Page)",
-    "text": "Saint-Tropez no grita lujo. Lo susurra. ⛵\n\nClubes de playa privados, recepciones en cubierta de yate y villas con vistas al mar que dejan a tu equipo sin palabras. En Uproduction (UPE) conseguimos los accesos que otras agencias solo sueñan y coreografiamos cada detalle — from business to pleasure.\n\nSi premiaras a tu mejor talento con un viaje inolvidable, ¿elegirías la Costa Azul?\n\nCuéntanos qué tienes en mente y diseñamos un programa VIP para 2026. Envíanos un mensaje. 👇\n\n#UproductionEvents #ViajesDeIncentivo #EventosCorporativos #SaintTropez",
-    "dimensions": "1.91:1",
-    "cta": "Send us a message"
-  },
-  "image_prompt": "Aerial drone view over the Saint-Tropez peninsula at midday, turquoise bays dotted with white yachts, pine-covered headlands meeting golden beaches, a sweep of Côte d'Azur coastline under brilliant blue sky, no people visible, luxurious and expansive. Photorealistic, 35mm film grain, no CGI, no text, no logos.",
-  "image_style": "photorealistic, editorial, documentary, 35mm film grain",
-  "brand": {
-    "colors": [
-      "#1C1C1C",
-      "#FBCE0A"
-    ],
-    "font": "Comfortaa",
-    "logo": "uproduction_official_logo.png"
-  }
+ "day": 57,
+ "category": "destination",
+ "language": "es",
+ "date": "2026-06-21",
+ "weekday": "Sunday",
+ "theme": "Espectacular sin ruido",
+ "linkedin": {
+  "profile": "Uproduction Events (Company Page)",
+  "text": "No todos los grupos quieren discoteca. Algunos quieren lo contrario, y ese brief es más difícil de ejecutar bien.\n\nEste es nuestro grupo en los acantilados de Amalfi, en un programa construido alrededor de comidas largas, barcos pequeños y una cena muy buena. Sin artista principal. Sin pantalla LED. El itinerario era deliberadamente ligero, porque la idea era devolverle a la gente su atención.\n\nLos programas tranquilos fallan cuando están poco producidos, no cuando están poco programados. El restaurante sigue teniendo que acoger al grupo entero. Los barcos siguen teniendo que salir a su hora. El hueco de la tarde sigue teniendo que ser una decisión, no un derrumbe.\n\nSi tu equipo está cansado y no aburrido, este es el tipo de viaje que debes pedirnos.\n\nUproduction Events — From Business to Pleasure\n\n📩 alon@upe.co.il\n\n📷 Una imagen real de una producción nuestra · la Costa Amalfitana",
+  "dimensions": "1:1",
+  "cta": "alon@upe.co.il"
+ },
+ "instagram": {
+  "profile": "@uproductionevents",
+  "text": "No todos los grupos quieren discoteca. Algunos quieren lo contrario, y ese brief es más difícil de ejecutar bien.\n\nEste es nuestro grupo en los acantilados de Amalfi, en un programa construido alrededor de comidas largas, barcos pequeños y una cena muy buena. Sin artista principal. Sin pantalla LED. El itinerario era deliberadamente ligero, porque la idea era devolverle a la gente su atención.\n\n📩 alon@upe.co.il\n\n📷 Una imagen real de una producción nuestra · la Costa Amalfitana\n\n#ViajesDeIncentivo #EventosCorporativos #UproductionEvents #RRHH #EventosEmpresariales",
+  "dimensions": "1:1",
+  "cta": "alon@upe.co.il"
+ },
+ "facebook": {
+  "profile": "Uproduction Events (Page)",
+  "text": "No todos los grupos quieren discoteca. Algunos quieren lo contrario, y ese brief es más difícil de ejecutar bien.\n\nEste es nuestro grupo en los acantilados de Amalfi, en un programa construido alrededor de comidas largas, barcos pequeños y una cena muy buena. Sin artista principal. Sin pantalla LED. El itinerario era deliberadamente ligero, porque la idea era devolverle a la gente su atención.\n\nLos programas tranquilos fallan cuando están poco producidos, no cuando están poco programados. El restaurante sigue teniendo que acoger al grupo entero. Los barcos siguen teniendo que salir a su hora. El hueco de la tarde sigue teniendo que ser una decisión, no un derrumbe.\n\nSi tu equipo está cansado y no aburrido, este es el tipo de viaje que debes pedirnos.\n\nUproduction Events — From Business to Pleasure\n\n📷 Una imagen real de una producción nuestra · la Costa Amalfitana\n\n#ViajesDeIncentivo #EventosCorporativos #UproductionEvents #RRHH #EventosEmpresariales",
+  "dimensions": "1.91:1",
+  "cta": "alon@upe.co.il"
+ },
+ "brand": {
+  "colors": [
+   "#1C1C1C",
+   "#FBCE0A"
+  ],
+  "font": "Comfortaa",
+  "logo": "uproduction_official_logo.png"
+ },
+ "image_file": "content/images/quietly_spec_real.jpg",
+ "image_source": "real_archive",
+ "image_origin": "2023/אירועים בחול/אורגון דרום איטלה 5.23/dji_fly_20230503_103424_181_1683103157493_photo.jpg",
+ "retargeted_from": "Saint-Tropez",
+ "_retarget_note": "Copy rewritten: original text sold Saint-Tropez, a destination UPE has never produced in. Text now describes the real archive photo attached.",
+ "image_credit": "📷 Una imagen real de una producción nuestra · la Costa Amalfitana"
 }

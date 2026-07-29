@@ -1,36 +1,40 @@
 {
-  "day": 49,
-  "category": "destination",
-  "language": "es",
-  "date": "2026-06-13",
-  "weekday": "Saturday",
-  "theme": "Ibiza Beyond The Clubs",
-  "linkedin": {
-    "profile": "Uproduction Events (Company Page)",
-    "text": "Olvida el cliché. La Ibiza que cierra negocios no es la de las 4 de la madrugada — es la villa privada en el acantilado, el catamarán al atardecer para tu equipo directivo, la gala en la playa que hace que un kickoff de ventas se sienta como una recompensa. 🌊 Aprovechamos la energía de la isla en tus términos: de alto impacto de día, inolvidable de noche, impecable desde la llegada hasta la salida. Es el destino que transmite ambición sin decir una palabra. ¿Listo para reimaginar tu brief en Ibiza? 🛥️ Escribe \"IBIZA\" o agenda una llamada en el enlace de la bio. #UproductionEvents #IncentiveTravel #CorporateEvents #Ibiza #Espana #EventosDeLujo #ViajesDeIncentivo #EventProduction",
-    "dimensions": "1:1",
-    "cta": "DM us or book a call"
-  },
-  "instagram": {
-    "profile": "@uproductionevents",
-    "text": "La Ibiza que cierra negocios no abre a las 4 de la madrugada.\n\nAbre con la vista desde tu villa privada en el acantilado. 🌊\n\nEsta es la isla en tus términos:\n\n🛥️ Catamarán al atardecer para tu equipo directivo\n🏝️ Gala en la playa que convierte un kickoff en una recompensa\n✨ De alto impacto de día, inolvidable de noche\n🤝 Impecable desde la llegada hasta la salida\n\nEs el destino que transmite ambición sin decir una palabra.\n\n📌 Guarda esto para tu próximo brief.\n👇 Etiqueta al colega que necesita un evento así.\n\n¿Reimaginamos tu Ibiza? Escríbenos \"IBIZA\" por DM.\n\nUproduction (UPE) — from business to pleasure.\n\n#UproductionEvents #IncentiveTravel #CorporateEvents #Ibiza #Espana #EventosDeLujo #ViajesDeIncentivo #EventProduction #TeamOffsite #BusinessTravel",
-    "dimensions": "1:1",
-    "cta": "Link in bio"
-  },
-  "facebook": {
-    "profile": "Uproduction Events (Page)",
-    "text": "La Ibiza que cierra negocios no es la de las 4 de la madrugada. 🌊\n\nEs la villa privada en el acantilado, el catamarán al atardecer para tu equipo y la gala en la playa que convierte un kickoff de ventas en una verdadera recompensa. De alto impacto de día, inolvidable de noche, impecable de principio a fin.\n\nEn Uproduction (UPE) reimaginamos tu brief para que el destino transmita ambición sin decir una palabra. From business to pleasure.\n\n¿Tu próximo evento de equipo lo ves más en una sala de juntas o frente al mar? 🛥️ Escríbenos \"IBIZA\" y lo hacemos realidad.\n\n#UproductionEvents #IncentiveTravel #Ibiza #EventosDeLujo",
-    "dimensions": "1.91:1",
-    "cta": "Send us a message"
-  },
-  "image_prompt": "Aerial golden-hour view of the Ibiza coastline, rugged cliffs and pine-covered hills meeting a glittering turquoise sea, a secluded bay below hosting a large beachfront corporate gathering of hundreds, tiny figures from above arranged around white cabanas and a long dinner setup, soft warm light across the water. Photorealistic, 35mm film grain, no CGI, no text, no logos.",
-  "image_style": "photorealistic, editorial, documentary, 35mm film grain",
-  "brand": {
-    "colors": [
-      "#1C1C1C",
-      "#FBCE0A"
-    ],
-    "font": "Comfortaa",
-    "logo": "uproduction_official_logo.png"
-  }
+ "day": 49,
+ "category": "destination",
+ "language": "es",
+ "date": "2026-06-13",
+ "weekday": "Saturday",
+ "theme": "Más allá del destino obvio",
+ "linkedin": {
+  "profile": "Uproduction Events (Company Page)",
+  "text": "Toda lista corta empieza igual: las mismas cuatro ciudades europeas, las mismas cadenas hoteleras, el mismo itinerario que tu gente ya hizo con su anterior empresa.\n\nEsta es la alternativa: un campamento en el desierto a las afueras de Marrakech, montado para un grupo corporativo completo y fotografiado en el viaje que produjimos allí.\n\nEl argumento no es el exotismo. Es el contraste. Un equipo que pasa el año en salas de reuniones reacciona distinto en un lugar que no se parece en nada a una sala de reuniones. Ese es todo el mecanismo del viaje de incentivo, y una ciudad conocida lo diluye.\n\nLo que lo hace viable: vuelo corto, sin fricción de visados para la mayoría de pasaportes e infraestructura capaz de mover a más de 200 personas sin improvisar.\n\n¿Quieres una lista que no sean las mismas cuatro ciudades? Envíanos el brief.\n\nUproduction Events — From Business to Pleasure\n\n📩 alon@upe.co.il\n\n📷 Una imagen real de una producción nuestra · el desierto de Agafay, Marrakech",
+  "dimensions": "1:1",
+  "cta": "alon@upe.co.il"
+ },
+ "instagram": {
+  "profile": "@uproductionevents",
+  "text": "Toda lista corta empieza igual: las mismas cuatro ciudades europeas, las mismas cadenas hoteleras, el mismo itinerario que tu gente ya hizo con su anterior empresa.\n\nEsta es la alternativa: un campamento en el desierto a las afueras de Marrakech, montado para un grupo corporativo completo y fotografiado en el viaje que produjimos allí.\n\n📩 alon@upe.co.il\n\n📷 Una imagen real de una producción nuestra · el desierto de Agafay, Marrakech\n\n#ViajesDeIncentivo #EventosCorporativos #UproductionEvents #RRHH #EventosEmpresariales",
+  "dimensions": "1:1",
+  "cta": "alon@upe.co.il"
+ },
+ "facebook": {
+  "profile": "Uproduction Events (Page)",
+  "text": "Toda lista corta empieza igual: las mismas cuatro ciudades europeas, las mismas cadenas hoteleras, el mismo itinerario que tu gente ya hizo con su anterior empresa.\n\nEsta es la alternativa: un campamento en el desierto a las afueras de Marrakech, montado para un grupo corporativo completo y fotografiado en el viaje que produjimos allí.\n\nEl argumento no es el exotismo. Es el contraste. Un equipo que pasa el año en salas de reuniones reacciona distinto en un lugar que no se parece en nada a una sala de reuniones. Ese es todo el mecanismo del viaje de incentivo, y una ciudad conocida lo diluye.\n\nLo que lo hace viable: vuelo corto, sin fricción de visados para la mayoría de pasaportes e infraestructura capaz de mover a más de 200 personas sin improvisar.\n\n¿Quieres una lista que no sean las mismas cuatro ciudades? Envíanos el brief.\n\nUproduction Events — From Business to Pleasure\n\n📷 Una imagen real de una producción nuestra · el desierto de Agafay, Marrakech\n\n#ViajesDeIncentivo #EventosCorporativos #UproductionEvents #RRHH #EventosEmpresariales",
+  "dimensions": "1.91:1",
+  "cta": "alon@upe.co.il"
+ },
+ "brand": {
+  "colors": [
+   "#1C1C1C",
+   "#FBCE0A"
+  ],
+  "font": "Comfortaa",
+  "logo": "uproduction_official_logo.png"
+ },
+ "image_file": "content/images/beyond_clubs_real.jpg",
+ "image_source": "real_archive",
+ "image_origin": "2023/אירועים בחול/יוניט מרוקו ינואר 2023/101EOS7D/IMG_0890.JPG",
+ "retargeted_from": "Ibiza",
+ "_retarget_note": "Copy rewritten: original text sold Ibiza, a destination UPE has never produced in. Text now describes the real archive photo attached.",
+ "image_credit": "📷 Una imagen real de una producción nuestra · el desierto de Agafay, Marrakech"
 }

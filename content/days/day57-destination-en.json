@@ -1,36 +1,40 @@
 {
-  "day": 57,
-  "category": "destination",
-  "language": "en",
-  "date": "2026-06-21",
-  "weekday": "Sunday",
-  "theme": "Saint-Tropez, Quietly Spectacular",
-  "linkedin": {
-    "profile": "Uproduction Events (Company Page)",
-    "text": "The best incentive trips don't impress your top performers. They silence them.\n\nThat's Saint-Tropez. It never shouts — and that's exactly why it works.\n\nA yacht-deck reception at golden hour. A private beach club that feels like it was reserved for your team alone. A hillside villa where the sea view makes the whole room go quiet. For a tight group of high achievers or a VIP board retreat, few rewards land harder.\n\nAt Uproduction we've spent 15+ years securing the access most agencies only ask about, then choreographing every moment around it — from business to pleasure. The result is a program your people say yes to before you finish the sentence.\n\nPlanning the Côte d'Azur for 2026? Let's design something for your top tier. DM me or book a call.\n\n#IncentiveTravel #CorporateEvents #MICE",
-    "dimensions": "1:1",
-    "cta": "DM us or book a call"
-  },
-  "instagram": {
-    "profile": "@uproductionevents",
-    "text": "Saint-Tropez doesn't shout luxury.\nIt whispers — and the whole room goes quiet. ⛵\n\nThe reward your top team will never stop talking about:\n\n🥂 Yacht-deck receptions at golden hour\n🏖️ Private beach clubs, reserved for you alone\n🌅 Hillside villas with sea views that stop conversation\n🔑 The kind of access most agencies only dream of\n\nFrom business to pleasure — that's what we do.\n\n📌 Save this for your 2026 incentive shortlist\n👥 Tag the colleague who's planning next year's trip\n✨ Dreaming up the Côte d'Azur? DM us \"TROPEZ\" or tap the link in bio\n\n#IncentiveTravel #CorporateEvents #SaintTropez #LuxuryTravel #MICE #VIPEvents #CotedAzur #IncentiveTrip #CorporateTravel #EventPlanning",
-    "dimensions": "1:1",
-    "cta": "Link in bio"
-  },
-  "facebook": {
-    "profile": "Uproduction Events (Page)",
-    "text": "Some places impress your team. Saint-Tropez makes them go quiet. ⛵\n\nYacht-deck receptions, private beach clubs, hillside villas with sea views that stop a conversation mid-sentence — it's the kind of reward your top performers never forget. We handle the access and choreograph every moment, from business to pleasure.\n\nIf you were sending your best people anywhere on the Côte d'Azur in 2026, where would it be? 👇\n\nThinking about it for real? Send us a message and let's design it.\n\n#IncentiveTravel #CorporateEvents #SaintTropez #MICE",
-    "dimensions": "1.91:1",
-    "cta": "Send us a message"
-  },
-  "image_prompt": "Aerial drone view over the Saint-Tropez peninsula at midday, turquoise bays dotted with white yachts, pine-covered headlands meeting golden beaches, a sweep of Côte d'Azur coastline under brilliant blue sky, no people visible, luxurious and expansive. Photorealistic, 35mm film grain, no CGI, no text, no logos.",
-  "image_style": "photorealistic, editorial, documentary, 35mm film grain",
-  "brand": {
-    "colors": [
-      "#1C1C1C",
-      "#FBCE0A"
-    ],
-    "font": "Comfortaa",
-    "logo": "uproduction_official_logo.png"
-  }
+ "day": 57,
+ "category": "destination",
+ "language": "en",
+ "date": "2026-06-21",
+ "weekday": "Sunday",
+ "theme": "Quietly spectacular",
+ "linkedin": {
+  "profile": "Uproduction Events (Company Page)",
+  "text": "Not every group wants a nightclub. Some want the opposite — and that brief is harder to deliver well.\n\nThis is our group on the Amalfi cliffs, on a programme built around long lunches, small boats and one very good dinner. No headline act. No LED wall. The itinerary was deliberately thin, because the point was to give people back their attention.\n\nQuiet programmes fail when they are under-produced rather than under-scheduled. The restaurant still has to hold the whole group. The boats still have to leave on time. The gap in the afternoon still has to be a choice, not a collapse.\n\nIf your team is tired rather than under-entertained, this is the shape of trip to ask us for.\n\nUproduction Events — From Business to Pleasure\n\n📩 alon@upe.co.il\n\n📷 A real frame from a Uproduction production · the Amalfi Coast",
+  "dimensions": "1:1",
+  "cta": "alon@upe.co.il"
+ },
+ "instagram": {
+  "profile": "@uproductionevents",
+  "text": "Not every group wants a nightclub. Some want the opposite — and that brief is harder to deliver well.\n\nThis is our group on the Amalfi cliffs, on a programme built around long lunches, small boats and one very good dinner. No headline act. No LED wall. The itinerary was deliberately thin, because the point was to give people back their attention.\n\n📩 alon@upe.co.il\n\n📷 A real frame from a Uproduction production · the Amalfi Coast\n\n#IncentiveTravel #CorporateEvents #EventPlanning #UproductionEvents #B2B #HR #TeamExperience",
+  "dimensions": "1:1",
+  "cta": "alon@upe.co.il"
+ },
+ "facebook": {
+  "profile": "Uproduction Events (Page)",
+  "text": "Not every group wants a nightclub. Some want the opposite — and that brief is harder to deliver well.\n\nThis is our group on the Amalfi cliffs, on a programme built around long lunches, small boats and one very good dinner. No headline act. No LED wall. The itinerary was deliberately thin, because the point was to give people back their attention.\n\nQuiet programmes fail when they are under-produced rather than under-scheduled. The restaurant still has to hold the whole group. The boats still have to leave on time. The gap in the afternoon still has to be a choice, not a collapse.\n\nIf your team is tired rather than under-entertained, this is the shape of trip to ask us for.\n\nUproduction Events — From Business to Pleasure\n\n📷 A real frame from a Uproduction production · the Amalfi Coast\n\n#IncentiveTravel #CorporateEvents #EventPlanning #UproductionEvents #B2B #HR #TeamExperience",
+  "dimensions": "1.91:1",
+  "cta": "alon@upe.co.il"
+ },
+ "brand": {
+  "colors": [
+   "#1C1C1C",
+   "#FBCE0A"
+  ],
+  "font": "Comfortaa",
+  "logo": "uproduction_official_logo.png"
+ },
+ "image_file": "content/images/quietly_spec_real.jpg",
+ "image_source": "real_archive",
+ "image_origin": "2023/אירועים בחול/אורגון דרום איטלה 5.23/dji_fly_20230503_103424_181_1683103157493_photo.jpg",
+ "retargeted_from": "Saint-Tropez",
+ "_retarget_note": "Copy rewritten: original text sold Saint-Tropez, a destination UPE has never produced in. Text now describes the real archive photo attached.",
+ "image_credit": "📷 A real frame from a Uproduction production · the Amalfi Coast"
 }

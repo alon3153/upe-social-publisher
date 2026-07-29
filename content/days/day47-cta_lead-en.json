@@ -1,36 +1,38 @@
 {
-  "day": 47,
-  "category": "cta_lead",
-  "language": "en",
-  "date": "2026-06-11",
-  "weekday": "Thursday",
-  "theme": "DM Us To Start Your Brief",
-  "linkedin": {
-    "profile": "Uproduction Events (Company Page)",
-    "text": "The best events almost never start with a 40-page RFP.\n\nMost of the 200+ events we've produced began with a single line: a destination idea and a headcount. That's it. From two pieces of information, we can come back with a realistic direction, a ballpark budget, and the few questions actually worth answering next.\n\nHere's what 15+ years in corporate event production and incentive travel taught us: the hardest part of any great event isn't the logistics, the venue, or the budget. It's simply beginning. Teams stall for months waiting until the brief feels \"ready.\" It never does.\n\nSo make that part take 10 seconds. DM us \"[Destination] + [number of people]\" and we'll take it from there — from business to pleasure.\n\n#IncentiveTravel #CorporateEvents #EventProduction",
-    "dimensions": "1:1",
-    "cta": "DM us or book a call"
-  },
-  "instagram": {
-    "profile": "@uproductionevents",
-    "text": "Stop waiting until your brief feels \"ready.\" 🚫\n\nIt never will. And the best events don't start with a 40-page RFP anyway.\n\nHere's all we actually need to get you moving 👇\n\n📍 a destination idea\n👥 a headcount\n\nThat's it. From two lines we come back with:\n\n✨ a realistic direction\n💶 a ballpark budget\n❓ the questions worth answering next\n\n200+ events. Many of them started exactly this loosely.\n\n📌 Save this for the next time your team says \"we'll plan it later.\"\n🔁 Tag the colleague who's been sitting on that off-site idea for months.\n\n📲 DM us \"[Destination] + [number of people]\" and we'll take it from there. From business to pleasure.\n\n#IncentiveTravel #CorporateEvents #EventPlanning #EventProduction #B2BEvents #IncentiveTrip #EventDesign #OffSite #CorporateTravel #EventProfs",
-    "dimensions": "1:1",
-    "cta": "Link in bio"
-  },
-  "facebook": {
-    "profile": "Uproduction Events (Page)",
-    "text": "You don't need a 40-page RFP to start your next event. You need two things.\n\nA destination idea and a headcount — that's genuinely enough for us to come back with a realistic direction, a ballpark budget, and the questions worth answering next. We've built 200+ events from briefs that started exactly this loosely.\n\nThe hardest part is always just beginning, so let's make it take 10 seconds.\n\nWhat's the destination that's been on your mind? Drop us a message with \"[Destination] + [number of people]\" and we'll take it from there. From business to pleasure.\n\n#IncentiveTravel #CorporateEvents #EventProduction",
-    "dimensions": "1.91:1",
-    "cta": "Send us a message"
-  },
-  "image_prompt": "Drone shot looking straight down on a huge crowd of corporate guests mingling at an evening reception across a Mediterranean piazza, hundreds of tiny figures from directly above scattered around glowing cocktail stations and long banquet tables, warm pools of light on dark stone paving. Photorealistic, 35mm film grain, no CGI, no text, no logos.",
-  "image_style": "photorealistic, editorial, documentary, 35mm film grain",
-  "brand": {
-    "colors": [
-      "#1C1C1C",
-      "#FBCE0A"
-    ],
-    "font": "Comfortaa",
-    "logo": "uproduction_official_logo.png"
-  }
+ "day": 47,
+ "category": "cta_lead",
+ "language": "en",
+ "date": "2026-06-11",
+ "weekday": "Thursday",
+ "theme": "DM Us To Start Your Brief",
+ "linkedin": {
+  "profile": "Uproduction Events (Company Page)",
+  "text": "The best events almost never start with a 40-page RFP.\n\nMost of the 1,500+ events we've produced began with a single line: a destination idea and a headcount. That's it. From two pieces of information, we can come back with a realistic direction, a ballpark budget, and the few questions actually worth answering next.\n\nHere's what 15+ years in corporate event production and incentive travel taught us: the hardest part of any great event isn't the logistics, the venue, or the budget. It's simply beginning. Teams stall for months waiting until the brief feels \"ready.\" It never does.\n\nSo make that part take 10 seconds. DM us \"[Destination] + [number of people]\" and we'll take it from there — from business to pleasure.\n\n📷 A real frame from a Uproduction production · the Agafay desert, Marrakesh\n\n#IncentiveTravel #CorporateEvents #EventProduction",
+  "dimensions": "1:1",
+  "cta": "DM us or book a call"
+ },
+ "instagram": {
+  "profile": "@uproductionevents",
+  "text": "Stop waiting until your brief feels \"ready.\" 🚫\n\nIt never will. And the best events don't start with a 40-page RFP anyway.\n\nHere's all we actually need to get you moving 👇\n\n📍 a destination idea\n👥 a headcount\n\nThat's it. From two lines we come back with:\n\n✨ a realistic direction\n💶 a ballpark budget\n❓ the questions worth answering next\n\n1,500+ events. Many of them started exactly this loosely.\n\n📌 Save this for the next time your team says \"we'll plan it later.\"\n🔁 Tag the colleague who's been sitting on that off-site idea for months.\n\n📲 DM us \"[Destination] + [number of people]\" and we'll take it from there. From business to pleasure.\n\n📷 A real frame from a Uproduction production · the Agafay desert, Marrakesh\n\n#IncentiveTravel #CorporateEvents #EventPlanning #EventProduction #B2BEvents #IncentiveTrip #EventDesign #OffSite #CorporateTravel #EventProfs",
+  "dimensions": "1:1",
+  "cta": "Link in bio"
+ },
+ "facebook": {
+  "profile": "Uproduction Events (Page)",
+  "text": "You don't need a 40-page RFP to start your next event. You need two things.\n\nA destination idea and a headcount — that's genuinely enough for us to come back with a realistic direction, a ballpark budget, and the questions worth answering next. We've built 1,500+ events from briefs that started exactly this loosely.\n\nThe hardest part is always just beginning, so let's make it take 10 seconds.\n\nWhat's the destination that's been on your mind? Drop us a message with \"[Destination] + [number of people]\" and we'll take it from there. From business to pleasure.\n\n📷 A real frame from a Uproduction production · the Agafay desert, Marrakesh\n\n#IncentiveTravel #CorporateEvents #EventProduction",
+  "dimensions": "1.91:1",
+  "cta": "Send us a message"
+ },
+ "brand": {
+  "colors": [
+   "#1C1C1C",
+   "#FBCE0A"
+  ],
+  "font": "Comfortaa",
+  "logo": "uproduction_official_logo.png"
+ },
+ "image_file": "content/images/dm_brief_real.jpg",
+ "image_source": "real_archive",
+ "image_origin": "2023/אירועים בחול/יוניט מרוקו ינואר 2023/100EOS7D/IMG_1149.JPG",
+ "image_credit": "📷 A real frame from a Uproduction production · the Agafay desert, Marrakesh"
 }

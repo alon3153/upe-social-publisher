@@ -1,36 +1,40 @@
 {
-  "day": 122,
-  "category": "destination",
-  "language": "es",
-  "date": "2026-08-25",
-  "weekday": "Tuesday",
-  "theme": "Seville: flamenco nights and palatial event spaces",
-  "linkedin": {
-    "profile": "Uproduction Events (Company Page)",
-    "text": "Hay ciudades que alojan un evento. Sevilla lo protagoniza. Imagina una recepción de bienvenida dentro de un palacio mudéjar, los invitados cruzando patios de azulejos donde los naranjos perfuman la noche cálida, y después una cena de gala bajo arcos tallados a mano que llevan cinco siglos enmarcando celebraciones. Cierra la velada con un espectáculo de flamenco privado: ese que enmudece la sala antes del primer taconeo y luego estalla. Para un programa de incentivos, Sevilla entrega lo que ninguna presentación puede: una sensación de acontecimiento que los invitados se llevan en el cuerpo. Nosotros gestionamos los accesos, los espacios palaciegos, la logística y el talento, con un solo equipo responsable. From business to pleasure. ¿Pensando en Andalucía para 2026? Escríbenos o agenda una llamada. #UproductionEvents #ViajesDeIncentivo #EventosCorporativos #Sevilla #Congresos",
-    "dimensions": "1:1",
-    "cta": "DM us or book a call"
-  },
-  "instagram": {
-    "profile": "@uproductionevents",
-    "text": "Sevilla no aloja tu evento. Lo protagoniza. 💃\n\nImagina tu incentivo 2026 así 👇\n🏛️ Recepción de bienvenida en un palacio mudéjar\n🍊 Patios de azulejos perfumados de azahar\n🥂 Cena de gala bajo arcos tallados de 500 años\n🔥 Una noche de flamenco privada que para la sala\n\nEs el tipo de velada que los invitados cuentan a su familia antes incluso de volar de vuelta.\n\nNosotros gestionamos el acceso al palacio, la logística y el talento, con un solo equipo responsable. From business to pleasure. ✨\n\n📌 Guarda esto para tu lista de destinos.\n👥 Etiqueta a tu comité de incentivos.\n💬 Mándanos un DM con \"SEVILLA\".\n\n#ViajesDeIncentivo #EventosCorporativos #Sevilla #Andalucia #Flamenco #EventDestinations #CorporateTravel #EventProfs #SpainEvents #Congresos #UproductionEvents #LuxuryTravel",
-    "dimensions": "1:1",
-    "cta": "Link in bio"
-  },
-  "facebook": {
-    "profile": "Uproduction Events (Page)",
-    "text": "Hay ciudades que alojan tu evento. Sevilla lo protagoniza. 💃\n\nPiensa en una recepción en un palacio mudéjar, patios de azulejos perfumados de azahar, una cena de gala bajo arcos tallados de 500 años y una noche de flamenco privada que enmudece la sala antes del primer taconeo. Para un viaje de incentivo, es la clase de acontecimiento que los invitados cuentan a su familia antes de aterrizar de vuelta. Nosotros gestionamos espacios, logística y talento. From business to pleasure.\n\n¿Entraría Andalucía en tu lista para 2026? Cuéntanos abajo o mándanos un mensaje. 👇\n\n#ViajesDeIncentivo #Sevilla #EventosCorporativos #UproductionEvents",
-    "dimensions": "1.91:1",
-    "cta": "Send us a message"
-  },
-  "image_prompt": "A grand tiled courtyard of an Andalusian Mudéjar palace at dusk, horseshoe arches and intricate stucco walls glowing under warm uplighting, orange trees in the foreground, an elegant evening reception table set for dinner, soft lantern light reflecting on glazed tilework. Photorealistic, 35mm film grain, no CGI, no text, no logos.",
-  "image_style": "photorealistic, editorial, documentary, 35mm film grain",
-  "brand": {
-    "colors": [
-      "#1C1C1C",
-      "#FBCE0A"
-    ],
-    "font": "Comfortaa",
-    "logo": "uproduction_official_logo.png"
-  }
+ "day": 122,
+ "category": "destination",
+ "language": "es",
+ "date": "2026-08-25",
+ "weekday": "Tuesday",
+ "theme": "Noches cálidas, espacios palaciegos",
+ "linkedin": {
+  "profile": "Uproduction Events (Company Page)",
+  "text": "Las mejores veladas que producimos suelen tener algo en común: el espacio tiene patio y la noche es lo bastante cálida para usarlo.\n\nEsto es el sur de Marruecos, de un viaje que produjimos. Patios interiores, faroles y una temperatura que permite que una cena pase de medianoche sin que nadie busque la chaqueta.\n\nLos espacios con patio resuelven un problema real. Las salas cerradas imponen plano de mesas y programa fijo. Un patio deja que el grupo se mueva, se reagrupe y encuentre su ritmo, que es donde ocurre la conexión de verdad. El catering es más difícil y el sonido también, y merece la pena.\n\nLa limitación es la temporada. Funciona de abril a junio y de septiembre a principios de noviembre. En pleno verano no, y quien insiste en julio compra una foto bonita y una velada incómoda.\n\n¿Quieres una velada que se alargue en 2026? Dinos primero el mes.\n\nUproduction Events — From Business to Pleasure\n\n📩 alon@upe.co.il\n\n📷 Una imagen real de una producción nuestra · una de nuestras producciones",
+  "dimensions": "1:1",
+  "cta": "alon@upe.co.il"
+ },
+ "instagram": {
+  "profile": "@uproductionevents",
+  "text": "Las mejores veladas que producimos suelen tener algo en común: el espacio tiene patio y la noche es lo bastante cálida para usarlo.\n\nEsto es el sur de Marruecos, de un viaje que produjimos. Patios interiores, faroles y una temperatura que permite que una cena pase de medianoche sin que nadie busque la chaqueta.\n\n📩 alon@upe.co.il\n\n📷 Una imagen real de una producción nuestra · una de nuestras producciones\n\n#ViajesDeIncentivo #EventosCorporativos #UproductionEvents #RRHH",
+  "dimensions": "1:1",
+  "cta": "alon@upe.co.il"
+ },
+ "facebook": {
+  "profile": "Uproduction Events (Page)",
+  "text": "Las mejores veladas que producimos suelen tener algo en común: el espacio tiene patio y la noche es lo bastante cálida para usarlo.\n\nEsto es el sur de Marruecos, de un viaje que produjimos. Patios interiores, faroles y una temperatura que permite que una cena pase de medianoche sin que nadie busque la chaqueta.\n\nLos espacios con patio resuelven un problema real. Las salas cerradas imponen plano de mesas y programa fijo. Un patio deja que el grupo se mueva, se reagrupe y encuentre su ritmo, que es donde ocurre la conexión de verdad. El catering es más difícil y el sonido también, y merece la pena.\n\nLa limitación es la temporada. Funciona de abril a junio y de septiembre a principios de noviembre. En pleno verano no, y quien insiste en julio compra una foto bonita y una velada incómoda.\n\n¿Quieres una velada que se alargue en 2026? Dinos primero el mes.\n\nUproduction Events — From Business to Pleasure\n\n📷 Una imagen real de una producción nuestra · una de nuestras producciones\n\n#ViajesDeIncentivo #EventosCorporativos #UproductionEvents #RRHH",
+  "dimensions": "1.91:1",
+  "cta": "alon@upe.co.il"
+ },
+ "brand": {
+  "colors": [
+   "#1C1C1C",
+   "#FBCE0A"
+  ],
+  "font": "Comfortaa",
+  "logo": "uproduction_official_logo.png"
+ },
+ "retargeted_from": "Seville",
+ "_retarget_note": "Original copy sold Seville, a destination UPE has never produced in. Image and copy both replaced with real archive material.",
+ "image_file": "content/images/d122_real.jpg",
+ "image_source": "real_archive",
+ "image_origin": "2023/אירועים בחול/יוניט מרוקו ינואר 2023/101EOS7D/IMG_0553.JPG",
+ "image_credit": "📷 Una imagen real de una producción nuestra · una de nuestras producciones"
 }

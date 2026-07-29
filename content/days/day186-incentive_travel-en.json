@@ -1,30 +1,32 @@
 {
-  "day": 186,
-  "category": "incentive_travel",
-  "language": "en",
-  "date": "",
-  "weekday": "",
-  "theme": "Incentive Travel as a Retention Strategy",
-  "linkedin": {
-    "profile": "Uproduction Events (Company Page)",
-    "text": "We've produced incentive trips for 25,000+ participants across 130+ destinations. Here's the one thing HR leaders consistently tell us afterward: the ROI conversation gets easier every year. Not because the trips get cheaper — they don't — but because the retention data gets clearer. When a high performer chooses to stay after an incentive trip, that's one fewer executive search fee, one fewer 6-month ramp period, one fewer knowledge-transfer risk. The math tends to work in your favor. If you're building the business case for incentive travel right now, I'm happy to share what the structure looks like from the production side. DM me for a 15-minute conversation."
-  },
-  "instagram": {
-    "profile": "@uproductionevents",
-    "text": "The bonus gets spent. The trip gets remembered. 25,000+ participants. 130+ destinations. One consistent result: people stay. If incentive travel is part of your retention plan for next year, we'd love to talk through what that looks like for your team. DM us. #incentivetravel #נופשחברה #הפקתאירועים #corporateevents #teamretreat #ישראל #b2bevents #uproductionevents"
-  },
-  "facebook": {
-    "profile": "Uproduction Events (Page)",
-    "text": "Your top performers already have competing offers in their inbox. What keeps them? Not another bonus cycle — an experience they genuinely could not plan for themselves. We've taken 25,000+ participants across 130+ destinations, and the pattern is consistent: companies that invest in incentive travel report stronger retention than those that don't. The trip ends. The loyalty doesn't. If you're planning next year's retention strategy and want a grounded conversation about what works, drop a comment or send us a message."
-  },
-  "image_prompt": "A candid wide-angle photograph of a group of about thirty professionals in smart-casual attire raising glasses at a long outdoor terrace dinner table overlooking a sun-drenched Mediterranean coastal village, with warm golden-hour light catching the cliffs and turquoise water below.",
-  "image_style": "photorealistic, editorial, documentary, 35mm film grain",
-  "brand": {
-    "colors": [
-      "#1C1C1C",
-      "#FBCE0A"
-    ],
-    "font": "Comfortaa",
-    "logo": "uproduction_official_logo.png"
-  }
+ "day": 186,
+ "category": "incentive_travel",
+ "language": "en",
+ "date": "",
+ "weekday": "",
+ "theme": "Incentive Travel as a Retention Strategy",
+ "linkedin": {
+  "profile": "Uproduction Events (Company Page)",
+  "text": "We've produced incentive trips for 25,000+ participants across 130+ destinations. Here's the one thing HR leaders consistently tell us afterward: the ROI conversation gets easier every year. Not because the trips get cheaper — they don't — but because the retention data gets clearer. When a high performer chooses to stay after an incentive trip, that's one fewer executive search fee, one fewer 6-month ramp period, one fewer knowledge-transfer risk. The math tends to work in your favor. If you're building the business case for incentive travel right now, I'm happy to share what the structure looks like from the production side. DM me for a 15-minute conversation.\n\n📷 A real frame from a Uproduction production · one of our productions"
+ },
+ "instagram": {
+  "profile": "@uproductionevents",
+  "text": "The bonus gets spent. The trip gets remembered. 25,000+ participants. 130+ destinations. One consistent result: people stay. If incentive travel is part of your retention plan for next year, we'd love to talk through what that looks like for your team. DM us. #incentivetravel #נופשחברה #הפקתאירועים #corporateevents #teamretreat #ישראל #b2bevents #uproductionevents\n\n📷 A real frame from a Uproduction production · one of our productions"
+ },
+ "facebook": {
+  "profile": "Uproduction Events (Page)",
+  "text": "Your top performers already have competing offers in their inbox. What keeps them? Not another bonus cycle — an experience they genuinely could not plan for themselves. We've taken 25,000+ participants across 130+ destinations, and the pattern is consistent: companies that invest in incentive travel report stronger retention than those that don't. The trip ends. The loyalty doesn't. If you're planning next year's retention strategy and want a grounded conversation about what works, drop a comment or send us a message.\n\n📷 A real frame from a Uproduction production · one of our productions"
+ },
+ "brand": {
+  "colors": [
+   "#1C1C1C",
+   "#FBCE0A"
+  ],
+  "font": "Comfortaa",
+  "logo": "uproduction_official_logo.png"
+ },
+ "image_file": "content/images/d186_real.jpg",
+ "image_source": "real_archive",
+ "image_origin": "2023/אירועים בארץ/ARC/20230615103733_SM1_4677.JPG",
+ "image_credit": "📷 A real frame from a Uproduction production · one of our productions"
 }

@@ -1,36 +1,40 @@
 {
-  "day": 82,
-  "category": "destination",
-  "language": "es",
-  "date": "2026-07-16",
-  "weekday": "Thursday",
-  "theme": "Maldives overwater incentive that rewards top performers",
-  "linkedin": {
-    "profile": "Uproduction Events (Company Page)",
-    "text": "Algunos bonos se gastan y se olvidan. Este se enmarca. Imagina a tus mejores empleados despertando sobre una laguna turquesa en Maldivas: villas sobre el agua, cruceros al atardecer y una cena de gala en un banco de arena en medio del Índico. Nosotros gestionamos los vuelos, los hidroaviones y la logística — tú entregas el premio de su vida. Recompensa a los mejores. Escríbenos. #UproductionEvents #IncentiveTravel #Maldivas #ViajesDeIncentivo #CorporateEvents #FromBusinessToPleasure",
-    "dimensions": "1:1",
-    "cta": "DM us or book a call"
-  },
-  "instagram": {
-    "profile": "@uproductionevents",
-    "text": "Un bono se gasta. Maldivas no se olvida. 🌊\n\nImagina a tu mejor vendedor despertando sobre una laguna turquesa, descalzo en su villa sobre el agua.\n\nEso es un incentivo que la gente persigue todo el año.\n\n✈️ Vuelos e hidroaviones, resueltos\n🏝️ Villas sobre el agua\n🌅 Cruceros al atardecer\n🍽️ Cena de gala en un banco de arena, en medio del Índico\n\nTú entregas el premio. Nosotros producimos la magia.\n\n📌 Guarda esto para tu próximo plan de incentivos.\n👥 Etiqueta al colega de RRHH que necesita verlo.\n\n¿Listos para premiar a los mejores? Escríbenos por DM. 💛\n\nUproduction — from business to pleasure.\n\n#ViajesDeIncentivo #IncentiveTravel #Maldivas #Maldives #EventosCorporativos #CorporateEvents #IncentivosB2B #TeamRewards #LuxuryTravel #UproductionEvents #FromBusinessToPleasure",
-    "dimensions": "1:1",
-    "cta": "Link in bio"
-  },
-  "facebook": {
-    "profile": "Uproduction Events (Page)",
-    "text": "Un bono se gasta y se olvida. Maldivas se queda para siempre. 🌊\n\nImagina a tus mejores empleados despertando en una villa sobre el agua: cruceros al atardecer, una cena de gala en un banco de arena y vuelos e hidroaviones que nosotros resolvemos por ti. Tú solo entregas el premio de su vida.\n\n¿Cómo recompensas tú a tu equipo este año? Hablemos. Escríbenos un mensaje. 💛\n\nUproduction — from business to pleasure.\n\n#ViajesDeIncentivo #Maldivas #EventosCorporativos #UproductionEvents",
-    "dimensions": "1.91:1",
-    "cta": "Send us a message"
-  },
-  "image_prompt": "Sweeping aerial of a Maldives private atoll at golden hour, a curving row of overwater villas on stilts above impossibly turquoise lagoon, a long wooden jetty trailing into deep blue ocean, tiny figures walking the boardwalk far below, coral reef shadows visible through clear water. Photorealistic, 35mm film grain, no CGI, no text, no logos.",
-  "image_style": "photorealistic, editorial, documentary, 35mm film grain",
-  "brand": {
-    "colors": [
-      "#1C1C1C",
-      "#FBCE0A"
-    ],
-    "font": "Comfortaa",
-    "logo": "uproduction_official_logo.png"
-  }
+ "day": 82,
+ "category": "destination",
+ "language": "es",
+ "date": "2026-07-16",
+ "weekday": "Thursday",
+ "theme": "El mar que se ganaron tus mejores",
+ "linkedin": {
+  "profile": "Uproduction Events (Company Page)",
+  "text": "Pregunta a un alto desempeño qué recuerda del premio del año pasado y la mayoría nombrará un lugar, no una cifra.\n\nEsto es Filipinas, en un programa de incentivo que produjimos. Acantilados de caliza, agua que no necesita filtro y un grupo que se había ganado de verdad estar allí.\n\nEl Sudeste Asiático está infrautilizado por los grupos israelíes y europeos, y la razón suele ser el tiempo de vuelo, no el coste. Una vez en tierra, las cuentas salen: resorts de isla que costarían una fortuna en el Caribe, chárteres privados a una fracción de las tarifas mediterráneas y una cultura de servicio que hace que un grupo se sienta cuidado sin sentirse gestionado.\n\nLo que exige planificación real es el agua. Capacidad de las embarcaciones, estado del mar y un plan de verdad para las dos horas en que el tiempo cambia, porque en esta zona cambia, y rápido, y un grupo bajo un techado sin nada que hacer es como un buen viaje se desinfla.\n\n¿Piensas en largo radio para 2026? Hablemos con honestidad de si encaja.\n\nUproduction Events — From Business to Pleasure\n\n📩 alon@upe.co.il\n\n📷 Una imagen real de una producción nuestra · Filipinas",
+  "dimensions": "1:1",
+  "cta": "alon@upe.co.il"
+ },
+ "instagram": {
+  "profile": "@uproductionevents",
+  "text": "Pregunta a un alto desempeño qué recuerda del premio del año pasado y la mayoría nombrará un lugar, no una cifra.\n\nEsto es Filipinas, en un programa de incentivo que produjimos. Acantilados de caliza, agua que no necesita filtro y un grupo que se había ganado de verdad estar allí.\n\n📩 alon@upe.co.il\n\n📷 Una imagen real de una producción nuestra · Filipinas\n\n#ViajesDeIncentivo #EventosCorporativos #UproductionEvents #RRHH",
+  "dimensions": "1:1",
+  "cta": "alon@upe.co.il"
+ },
+ "facebook": {
+  "profile": "Uproduction Events (Page)",
+  "text": "Pregunta a un alto desempeño qué recuerda del premio del año pasado y la mayoría nombrará un lugar, no una cifra.\n\nEsto es Filipinas, en un programa de incentivo que produjimos. Acantilados de caliza, agua que no necesita filtro y un grupo que se había ganado de verdad estar allí.\n\nEl Sudeste Asiático está infrautilizado por los grupos israelíes y europeos, y la razón suele ser el tiempo de vuelo, no el coste. Una vez en tierra, las cuentas salen: resorts de isla que costarían una fortuna en el Caribe, chárteres privados a una fracción de las tarifas mediterráneas y una cultura de servicio que hace que un grupo se sienta cuidado sin sentirse gestionado.\n\nLo que exige planificación real es el agua. Capacidad de las embarcaciones, estado del mar y un plan de verdad para las dos horas en que el tiempo cambia, porque en esta zona cambia, y rápido, y un grupo bajo un techado sin nada que hacer es como un buen viaje se desinfla.\n\n¿Piensas en largo radio para 2026? Hablemos con honestidad de si encaja.\n\nUproduction Events — From Business to Pleasure\n\n📷 Una imagen real de una producción nuestra · Filipinas\n\n#ViajesDeIncentivo #EventosCorporativos #UproductionEvents #RRHH",
+  "dimensions": "1.91:1",
+  "cta": "alon@upe.co.il"
+ },
+ "brand": {
+  "colors": [
+   "#1C1C1C",
+   "#FBCE0A"
+  ],
+  "font": "Comfortaa",
+  "logo": "uproduction_official_logo.png"
+ },
+ "image_file": "content/images/water_reward_real.jpg",
+ "image_source": "real_archive",
+ "image_origin": "2017/יוניליוור פליפינים/IMG_5120.jpg",
+ "retargeted_from": "Maldives",
+ "_retarget_note": "Original copy sold Maldives, a destination UPE has never produced in. Image and copy both replaced with real archive material.",
+ "image_credit": "📷 Una imagen real de una producción nuestra · Filipinas"
 }

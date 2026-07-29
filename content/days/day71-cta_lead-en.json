@@ -1,36 +1,38 @@
 {
-  "day": 71,
-  "category": "cta_lead",
-  "language": "en",
-  "date": "2026-07-05",
-  "weekday": "Sunday",
-  "theme": "Your team deserves the unforgettable trip",
-  "linkedin": {
-    "profile": "Uproduction Events (Company Page)",
-    "text": "Loyalty doesn't show up on a balance sheet. It shows up on a rooftop at golden hour.\n\nBonuses get spent and forgotten. The trip where colleagues became a team gets retold for years — and that's the retention strategy most companies underestimate.\n\nSince 2010 we've produced 200+ events across 120+ countries. The pattern is always the same: the moment people stop performing and start belonging is the moment they decide to stay.\n\nTell us who you want to reward. We'll design the experience they'll still talk about long after the flight home. From business to pleasure.\n\nDM us or book a discovery call this week.\n\n#IncentiveTravel #CorporateEvents #EmployeeRetention",
-    "dimensions": "1:1",
-    "cta": "DM us or book a call"
-  },
-  "instagram": {
-    "profile": "@uproductionevents",
-    "text": "Your team won't remember the bonus. They'll remember the sunset. 🌇\n\nThe trip that turns colleagues into a team isn't a perk — it's the story they retell for years.\n\n✨ 200+ events\n🌍 120+ countries\n🥂 Since 2010\n\n📌 Save this for your next planning meeting\n👯 Tag the colleague who deserves this trip\n\nTell us who you want to reward — we'll design the rest. From business to pleasure.\n\n📩 DM us \"TRIP\" or tap the link in bio.\n\n#IncentiveTravel #CorporateEvents #TeamBuilding #EmployeeRewards #CorporateRetreat #EventProduction #WorkPerks #CompanyCulture #LeadershipRetreat #B2B",
-    "dimensions": "1:1",
-    "cta": "Link in bio"
-  },
-  "facebook": {
-    "profile": "Uproduction Events (Page)",
-    "text": "Nobody frames a bonus check. But they'll remember the night the whole company watched the sun drop behind the skyline together. 🌇\n\nThat's what an incentive trip really buys you — the kind of loyalty you can't put on a balance sheet. Since 2010 we've designed 200+ of these moments across 120+ countries.\n\nWho on your team has earned a trip like this? Tell us — we'll handle the rest. From business to pleasure.\n\n📩 Send us a message to start planning.\n\n#IncentiveTravel #CorporateEvents #TeamBuilding",
-    "dimensions": "1.91:1",
-    "cta": "Send us a message"
-  },
-  "image_prompt": "Aerial view from directly above a sweeping rooftop terrace at golden hour, hundreds of guests in elegant attire seen from behind and above as tiny figures gathered around glowing dinner tables, a vast city skyline stretching to the horizon, warm string lights threading across the open-air space, shallow depth of field on the distant cityscape. Photorealistic, 35mm film grain, no CGI, no text, no logos.",
-  "image_style": "photorealistic, editorial, documentary, 35mm film grain",
-  "brand": {
-    "colors": [
-      "#1C1C1C",
-      "#FBCE0A"
-    ],
-    "font": "Comfortaa",
-    "logo": "uproduction_official_logo.png"
-  }
+ "day": 71,
+ "category": "cta_lead",
+ "language": "en",
+ "date": "2026-07-05",
+ "weekday": "Sunday",
+ "theme": "Your team deserves the unforgettable trip",
+ "linkedin": {
+  "profile": "Uproduction Events (Company Page)",
+  "text": "Loyalty doesn't show up on a balance sheet. It shows up on a rooftop at golden hour.\n\nBonuses get spent and forgotten. The trip where colleagues became a team gets retold for years — and that's the retention strategy most companies underestimate.\n\nSince 2010 we've produced 1,500+ events across 130+ destinations. The pattern is always the same: the moment people stop performing and start belonging is the moment they decide to stay.\n\nTell us who you want to reward. We'll design the experience they'll still talk about long after the flight home. From business to pleasure.\n\nDM us or book a discovery call this week.\n\n📷 A real frame from a Uproduction production · Berlin\n\n#IncentiveTravel #CorporateEvents #EmployeeRetention",
+  "dimensions": "1:1",
+  "cta": "DM us or book a call"
+ },
+ "instagram": {
+  "profile": "@uproductionevents",
+  "text": "Your team won't remember the bonus. They'll remember the sunset. 🌇\n\nThe trip that turns colleagues into a team isn't a perk — it's the story they retell for years.\n\n✨ 1,500+ events\n🌍 130+ destinations\n🥂 Since 2010\n\n📌 Save this for your next planning meeting\n👯 Tag the colleague who deserves this trip\n\nTell us who you want to reward — we'll design the rest. From business to pleasure.\n\n📩 DM us \"TRIP\" or tap the link in bio.\n\n📷 A real frame from a Uproduction production · Berlin\n\n#IncentiveTravel #CorporateEvents #TeamBuilding #EmployeeRewards #CorporateRetreat #EventProduction #WorkPerks #CompanyCulture #LeadershipRetreat #B2B",
+  "dimensions": "1:1",
+  "cta": "Link in bio"
+ },
+ "facebook": {
+  "profile": "Uproduction Events (Page)",
+  "text": "Nobody frames a bonus check. But they'll remember the night the whole company watched the sun drop behind the skyline together. 🌇\n\nThat's what an incentive trip really buys you — the kind of loyalty you can't put on a balance sheet. Since 2010 we've designed 200+ of these moments across 130+ destinations.\n\nWho on your team has earned a trip like this? Tell us — we'll handle the rest. From business to pleasure.\n\n📩 Send us a message to start planning.\n\n📷 A real frame from a Uproduction production · Berlin\n\n#IncentiveTravel #CorporateEvents #TeamBuilding",
+  "dimensions": "1.91:1",
+  "cta": "Send us a message"
+ },
+ "brand": {
+  "colors": [
+   "#1C1C1C",
+   "#FBCE0A"
+  ],
+  "font": "Comfortaa",
+  "logo": "uproduction_official_logo.png"
+ },
+ "image_file": "content/images/unforgettable_real.jpg",
+ "image_source": "real_archive",
+ "image_origin": "2016/ברלין שופרסל קולד פליי/2016-06-29 22.17.51.jpg",
+ "image_credit": "📷 A real frame from a Uproduction production · Berlin"
 }

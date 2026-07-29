@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """UPE branded post compositor — real photo bg + pixel-perfect logo/text overlay."""
 import argparse, os
-from PIL import Image, ImageDraw, ImageFont, ImageFilter
+from PIL import Image, ImageDraw, ImageFont, ImageFilter, ImageOps
 
 BRAND_DARK = (28, 28, 28)      # #1C1C1C
 BRAND_YELLOW = (251, 206, 10)  # #FBCE0A
@@ -23,6 +23,9 @@ def key_black(img, thresh=45):
 
 
 def crop_square(im):
+    # Camera JPEGs carry rotation in EXIF only; without this the composite ships
+    # sideways for every portrait-held frame in the archive.
+    im = ImageOps.exif_transpose(im)
     w, h = im.size
     m = min(w, h)
     im = im.crop(((w - m) // 2, (h - m) // 2, (w - m) // 2 + m, (h - m) // 2 + m))

@@ -1,36 +1,40 @@
 {
-  "day": 97,
-  "category": "destination",
-  "language": "en",
-  "date": "2026-07-31",
-  "weekday": "Friday",
-  "theme": "Lake Bled fairytale corporate retreat",
-  "linkedin": {
-    "profile": "Uproduction Events (Company Page)",
-    "text": "The best strategy decisions rarely happen in a boardroom.\n\nThey happen somewhere that makes leaders slow down, drop the armor, and actually listen to each other.\n\nLake Bled does this. A clifftop castle, an island church, glassy emerald water ringed by the Julian Alps — quiet enough for deep strategy, stunning enough to feel like a genuine reward. We've spent 15+ years producing corporate events and incentive travel across 120+ countries, and few destinations move executive teams the way this one does.\n\nWe design the whole program end to end: castle dinners, private boat ceremonies on the lake, alpine excursions — from business to pleasure, handled.\n\nPlanning a 2026 leadership retreat with real depth? DM us \"BLED\" or book a call — let's design yours.\n\n#IncentiveTravel #ExecutiveRetreat #CorporateEvents",
-    "dimensions": "1:1",
-    "cta": "DM us or book a call"
-  },
-  "instagram": {
-    "profile": "@uproductionevents",
-    "text": "Some places make leaders slow down, open up, and think bigger. ✨\nLake Bled is one of them. 🏰\n\nA fairytale that doubles as your best offsite yet:\n\n🏔️ Clifftop castle dinners\n⛵ Private boat ceremonies on emerald water\n⛰️ Alpine excursions through the Julian Alps\n🤫 Quiet enough for real strategy, stunning enough to feel like a reward\n\nfrom business to pleasure — we produce the whole thing, end to end.\n\n📌 Save this for your 2026 retreat planning.\n👉 Tag the colleague who needs to see this.\n💬 DM us \"BLED\" and we'll design yours.\n\n#IncentiveTravel #CorporateEvents #ExecutiveRetreat #Offsite #LakeBled #Slovenia #LeadershipRetreat #CorporateTravel #EventProduction #Uproduction #TravelInspo #JulianAlps",
-    "dimensions": "1:1",
-    "cta": "Link in bio"
-  },
-  "facebook": {
-    "profile": "Uproduction Events (Page)",
-    "text": "Some places just make people slow down, open up, and think bigger — and Lake Bled is one of them. 🏰\n\nPicture it: a clifftop castle, an island church, emerald water, the Julian Alps in the mist. Quiet enough for real strategy, stunning enough to feel like a reward. We produce the whole program — castle dinners, private boat ceremonies, alpine excursions — from business to pleasure.\n\nWhere would your team think their biggest thoughts in 2026? 💬\n\nSend us a message and let's design your retreat.\n\n#IncentiveTravel #CorporateEvents #LakeBled #ExecutiveRetreat",
-    "dimensions": "1.91:1",
-    "cta": "Send us a message"
-  },
-  "image_prompt": "Aerial view of Lake Bled at soft morning light, the tiny island church mid-lake ringed by emerald water, a medieval castle on the cliff, alpine forests and distant Julian Alps wrapped in mist, a lone rowboat as a speck for scale. Photorealistic, 35mm film grain, no CGI, no text, no logos.",
-  "image_style": "photorealistic, editorial, documentary, 35mm film grain",
-  "brand": {
-    "colors": [
-      "#1C1C1C",
-      "#FBCE0A"
-    ],
-    "font": "Comfortaa",
-    "logo": "uproduction_official_logo.png"
-  }
+ "day": 97,
+ "category": "destination",
+ "language": "en",
+ "date": "2026-07-31",
+ "weekday": "Friday",
+ "theme": "A retreat that actually restores",
+ "linkedin": {
+  "profile": "Uproduction Events (Company Page)",
+  "text": "Most corporate retreats are conferences with better scenery. The agenda is still full, the days still start at eight, and people come home having rested exactly not at all.\n\nThis is a quiet cove on a programme we produced. It was chosen for one reason: there is nowhere to be.\n\nIf the goal is genuine recovery — after a hard year, a merger, a period of sustained overtime — the design rules are different. Sessions in the morning only. No evening programme on at least two nights. Rooms that are actually quiet. And crucially, leadership visibly doing the same thing, because a team will not switch off while the executives are on laptops in the lobby.\n\nThe hardest part is not the venue. It is holding the line on the agenda when someone suggests adding just one more session.\n\nIf your team needs restoring rather than motivating in 2026, say so in the brief and we will build for that instead.\n\nUproduction Events — From Business to Pleasure\n\n📩 alon@upe.co.il\n\n📷 A real frame from a Uproduction production · the Philippines",
+  "dimensions": "1:1",
+  "cta": "alon@upe.co.il"
+ },
+ "instagram": {
+  "profile": "@uproductionevents",
+  "text": "Most corporate retreats are conferences with better scenery. The agenda is still full, the days still start at eight, and people come home having rested exactly not at all.\n\nThis is a quiet cove on a programme we produced. It was chosen for one reason: there is nowhere to be.\n\n📩 alon@upe.co.il\n\n📷 A real frame from a Uproduction production · the Philippines\n\n#IncentiveTravel #CorporateEvents #EventPlanning #UproductionEvents #B2B #HR",
+  "dimensions": "1:1",
+  "cta": "alon@upe.co.il"
+ },
+ "facebook": {
+  "profile": "Uproduction Events (Page)",
+  "text": "Most corporate retreats are conferences with better scenery. The agenda is still full, the days still start at eight, and people come home having rested exactly not at all.\n\nThis is a quiet cove on a programme we produced. It was chosen for one reason: there is nowhere to be.\n\nIf the goal is genuine recovery — after a hard year, a merger, a period of sustained overtime — the design rules are different. Sessions in the morning only. No evening programme on at least two nights. Rooms that are actually quiet. And crucially, leadership visibly doing the same thing, because a team will not switch off while the executives are on laptops in the lobby.\n\nThe hardest part is not the venue. It is holding the line on the agenda when someone suggests adding just one more session.\n\nIf your team needs restoring rather than motivating in 2026, say so in the brief and we will build for that instead.\n\nUproduction Events — From Business to Pleasure\n\n📷 A real frame from a Uproduction production · the Philippines\n\n#IncentiveTravel #CorporateEvents #EventPlanning #UproductionEvents #B2B #HR",
+  "dimensions": "1.91:1",
+  "cta": "alon@upe.co.il"
+ },
+ "brand": {
+  "colors": [
+   "#1C1C1C",
+   "#FBCE0A"
+  ],
+  "font": "Comfortaa",
+  "logo": "uproduction_official_logo.png"
+ },
+ "image_file": "content/images/quiet_retreat_real.jpg",
+ "image_source": "real_archive",
+ "image_origin": "2017/יוניליוור פליפינים/IMG_5177.jpg",
+ "retargeted_from": "Lake Bled",
+ "_retarget_note": "Original copy sold Lake Bled, a destination UPE has never produced in. Image and copy both replaced with real archive material.",
+ "image_credit": "📷 A real frame from a Uproduction production · the Philippines"
 }

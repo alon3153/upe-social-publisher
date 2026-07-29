@@ -1,30 +1,32 @@
 {
-  "day": 188,
-  "category": "seasonal_hook",
-  "language": "es",
-  "date": "",
-  "weekday": "",
-  "theme": "Back-to-Business Season: Lock In Q4 Before the Rush",
-  "linkedin": {
-    "profile": "Uproduction Events (Company Page)",
-    "text": "Cada septiembre se repite el mismo patrón: los responsables de RRHH y marketing que confirman su evento corporativo de Q4 en la primera quincena aseguran el espacio, las fechas y la capacidad creativa que realmente necesitan. Los que lo dejan para octubre negocian sobre reservas ya confirmadas. Con más de 1.500 eventos producidos en 130+ destinos, sabemos qué formatos — conferencias internacionales, viajes de incentivo, galas de cierre de año — tienen margen real de ejecución de calidad antes de diciembre, y cuáles ya están ajustados. Si tienes un evento en el roadmap de Q4, una conversación de 15 minutos ahora evita semanas de complicaciones. Escríbeme directamente."
-  },
-  "instagram": {
-    "profile": "@uproductionevents",
-    "text": "El arranque de temporada es corto y los mejores espacios se van primero. ✈️ Más de 1.500 eventos en 130+ destinos nos enseñaron que quien mueve ficha en septiembre llega al Q4 con todo confirmado. Quien espera, negocia con lo que sobra. Si tienes un evento corporativo de fin de año en el radar, escríbenos por DM antes de que el calendario se cierre. #incentivetravel #eventosempresariales #producciondeeventos #viajesdeincentiво #corporateevents #eventplanner #españa #israel #UproductionEvents"
-  },
-  "facebook": {
-    "profile": "Uproduction Events (Page)",
-    "text": "Septiembre arranca y los calendarios corporativos se llenan en cuestión de días. Lo hemos visto en más de 1.500 eventos: las empresas que confirman su conferencia o viaje de incentivo para el último trimestre en estas semanas son las que consiguen el espacio que quieren, las fechas que necesitan y un equipo de producción con capacidad real para entregar algo memorable. Las que esperan eligen entre lo que queda. Si tienes un evento de fin de año en mente — convención, cena de gala, viaje de incentivo — este es el momento. Escríbenos y te contamos qué disponibilidad real tenemos."
-  },
-  "image_prompt": "A wide-angle photograph of a sleek rooftop venue at golden hour, 80 professionals in business-casual attire networking across candlelit tables with a sprawling city skyline behind them, warm ambient light casting long shadows across the crowd.",
-  "image_style": "photorealistic, editorial, documentary, 35mm film grain",
-  "brand": {
-    "colors": [
-      "#1C1C1C",
-      "#FBCE0A"
-    ],
-    "font": "Comfortaa",
-    "logo": "uproduction_official_logo.png"
-  }
+ "day": 188,
+ "category": "seasonal_hook",
+ "language": "es",
+ "date": "",
+ "weekday": "",
+ "theme": "Back-to-Business Season: Lock In Q4 Before the Rush",
+ "linkedin": {
+  "profile": "Uproduction Events (Company Page)",
+  "text": "Cada septiembre se repite el mismo patrón: los responsables de RRHH y marketing que confirman su evento corporativo de Q4 en la primera quincena aseguran el espacio, las fechas y la capacidad creativa que realmente necesitan. Los que lo dejan para octubre negocian sobre reservas ya confirmadas. Con más de 1.500 eventos producidos en 130+ destinos, sabemos qué formatos — conferencias internacionales, viajes de incentivo, galas de cierre de año — tienen margen real de ejecución de calidad antes de diciembre, y cuáles ya están ajustados. Si tienes un evento en el roadmap de Q4, una conversación de 15 minutos ahora evita semanas de complicaciones. Escríbeme directamente.\n\n📷 Una imagen real de una producción nuestra · una de nuestras producciones"
+ },
+ "instagram": {
+  "profile": "@uproductionevents",
+  "text": "El arranque de temporada es corto y los mejores espacios se van primero. ✈️ Más de 1.500 eventos en 130+ destinos nos enseñaron que quien mueve ficha en septiembre llega al Q4 con todo confirmado. Quien espera, negocia con lo que sobra. Si tienes un evento corporativo de fin de año en el radar, escríbenos por DM antes de que el calendario se cierre. #incentivetravel #eventosempresariales #producciondeeventos #viajesdeincentiво #corporateevents #eventplanner #españa #israel #UproductionEvents\n\n📷 Una imagen real de una producción nuestra · una de nuestras producciones"
+ },
+ "facebook": {
+  "profile": "Uproduction Events (Page)",
+  "text": "Septiembre arranca y los calendarios corporativos se llenan en cuestión de días. Lo hemos visto en más de 1.500 eventos: las empresas que confirman su conferencia o viaje de incentivo para el último trimestre en estas semanas son las que consiguen el espacio que quieren, las fechas que necesitan y un equipo de producción con capacidad real para entregar algo memorable. Las que esperan eligen entre lo que queda. Si tienes un evento de fin de año en mente — convención, cena de gala, viaje de incentivo — este es el momento. Escríbenos y te contamos qué disponibilidad real tenemos.\n\n📷 Una imagen real de una producción nuestra · una de nuestras producciones"
+ },
+ "brand": {
+  "colors": [
+   "#1C1C1C",
+   "#FBCE0A"
+  ],
+  "font": "Comfortaa",
+  "logo": "uproduction_official_logo.png"
+ },
+ "image_file": "content/images/d188_real.jpg",
+ "image_source": "real_archive",
+ "image_origin": "2023/אירועים בארץ/ARC/20230615121325_SM1_4773.JPG",
+ "image_credit": "📷 Una imagen real de una producción nuestra · una de nuestras producciones"
 }
