@@ -1,64 +1,64 @@
 {
-  "updated_at": "2026-07-28",
+  "updated_at": "2026-07-29",
   "source": "daily-council",
   "directives": [
     {
       "category": "safe_auto",
-      "action": "זיהוי 3 עמודי תוכן ל-LinkedIn ותזמון פוסטים ב-Tue–Thu בין 08:00–10:00",
-      "detail": "האלגוריתם של 2026 מתגמל consistency ו-'knowledge exchange'; פוסטים בימים וזמנים אלה מגיעים לקהל בזמן 'discovery mode' ולא לחץ עבודה. עמודים מומלצים: (1) behind-the-scenes הפקה, (2) נתוני ROI של אירועי תמריץ, (3) טיפ מקצועי שבועי מבכיר UPE.",
+      "action": "מיפוי קוורי SEO דחוף לעמוד ראשון — 'הפקת נופש חברה' (מיקום 9.2, 757 חשיפות)",
+      "detail": "כתיבת עמוד נחיתה ייעודי ו-3 מאמרי בלוג בעברית שמטרגטים 'הפקת נופש חברה', 'נופש חברה בארץ' ו-'ארגון טיולים לחברות'. המיקומים 9–15 עם נפח קיים — מעבר לעמוד ראשון יכפיל CTR פי 3–5 לפי benchmark של 27.6.",
+      "channel": "google_organic"
+    },
+    {
+      "category": "safe_auto",
+      "action": "פיבוט LinkedIn מדף חברה לפרופילים אישיים של מנהלי UPE — 3 פוסטים/שבוע",
+      "detail": "פרופילים אישיים מניבים 8x יותר engagement מדפי חברה ב-2026; תוכן מסוג 'תובנה קצרה + שורת פתיחה חזקה' הוא הפורמט המנצח כרגע. לתזמן תגובות מיידיות בשעה הראשונה לאחר פרסום — האלגוריתם מחליט על פצ'ר בשעת הפרסום.",
       "channel": "linkedin"
     },
     {
       "category": "safe_auto",
-      "action": "הגדרת אסטרטגיית YouTube Shorts: 3 Shorts/שבוע מתוך חיתוכי long-form קיימים",
-      "detail": "YouTube Shorts מגיעים ל-5–20x יותר צופים מ-regular uploads ומשמשים כמנוע גילוי; יש לחתוך קטעי 30–60 שניות מסרטוני הפקה קיימים עם hook בשנייה הראשונה ו-CTA לסרטון המלא.",
+      "action": "אסטרטגיית YouTube Shorts→Long-form funnel: 3 Shorts/שבוע מתוך הסרטים הקיימים",
+      "detail": "חתוך 30–60 שניות מכל סרטון ארוך קיים לפורמט Shorts. Shorts מגיעים ל-5–20x קהל רחב יותר מהסרטונים הרגילים ומייצרים discovery. כפי שנמדד, פוסט בודד כבר הניב 6,430 חשיפות — יש בסיס לבנות עליו.",
       "channel": "youtube"
     },
     {
       "category": "safe_auto",
-      "action": "בניית רשימת keyword clusters עברית סביב 'הפקת נופש חברה' (pos 9.2, 757 imp) ו'ארגון טיולים לחברות' (pos 9.4, 142 imp)",
-      "detail": "שתי מילות המפתח הללו קרובות לעמוד 1 — content brief לעמודי שירות ייעודיים ופוסטי בלוג תומכים יכול להעלות לטופ-3 תוך 45–60 יום ולהניע קליקים מסחריים.",
-      "channel": "google_organic_geo"
-    },
-    {
-      "category": "safe_auto",
-      "action": "הכנת מדריך hashtag strategy ל-LinkedIn: 5 תגיות קבועות לכל פוסט B2B MICE",
-      "detail": "תגיות מומלצות לפי נפח ורלוונטיות: #IncentiveTravel #CorporateEvents #הפקתאירועים #MICE #EventPlanning — שימוש עקבי בונה נישה ומגביר discoverability ב-LinkedIn search.",
-      "channel": "linkedin"
-    },
-    {
-      "category": "safe_auto",
-      "action": "הפחתת קצב Instagram ל-3–4 פוסטים/שבוע עם מיקוד ב-Reels (לא סטטיק)",
-      "detail": "13 פוסטים סטטיים הניבו 1 אינטראקציה — בזבוז approve-pipeline. Reels מקבלים חשיפה אורגנית גבוהה יותר ב-2026 בהשוואה לתמונות; יש להפנות את קיבולת האישור לפורמטים עם ROI גבוה יותר.",
+      "action": "הפחתת תדירות Instagram ל-5 פוסטים/שבוע עם פיבוט לפורמט Reels ו-Carousels",
+      "detail": "15 פוסטים ב-7 ימים עם ממוצע 52 חשיפות כל אחד = בזבוז אישורים. מעבר ל-5 פוסטים איכותיים עם Reels (discovery) ו-Carousels (engagement) יגדיל reach. Reels מקבלים חשיפה לקהל חדש שלא עוקב עדיין.",
       "channel": "instagram"
     },
     {
       "category": "safe_auto",
-      "action": "הגדרת Google Search Console alerts על 5 keyword opportunities ב-upe-spain.com",
-      "detail": "המילות 'international product launch event' (pos 9.0), 'global product launch event' (pos 9.1) קרובות מאוד לעמוד 1 — מעקב שבועי על תנועה ו-CTR יאפשר לזהות מתי לדחוף תוכן תומך.",
-      "channel": "google_organic_geo"
+      "action": "הוספת Schema Markup + hreflang לupe.co.il ו-upe-spain.com",
+      "detail": "אכיפת Event schema, LocalBusiness schema, ו-FAQ schema על עמודי השירות. upe-spain.com בפוזיציה 23 על קוורי ענייניים ב-ספרד — תיוג hreflang נכון ו-Schema ישפרו את ה-GEO citation rate מ-42.9% לכיוון 70%.",
+      "channel": "google_organic"
+    },
+    {
+      "category": "safe_auto",
+      "action": "קלנדר תוכן LinkedIn: 3 עמודות תוכן שבועיות לקהל B2B ישראלי ואירופאי",
+      "detail": "עמודה 1: 'Behind the event' — תהליך ייצור אירוע (builds trust); עמודה 2: 'מדדים ותוצאות' — ROI של incentive travel לארגונים; עמודה 3: case study קצר של לקוח (anonymized). תדירות 3x/שבוע ימקסם את ה-1.49% engagement rate הקיים.",
+      "channel": "linkedin"
     }
   ],
   "channel_cadence": {
     "facebook": {
-      "max_posts_per_week": 2,
-      "reason": "13 פוסטים הניבו 64 חשיפות ו-0 אינטראקציות — ערוץ מת עבור B2B. 2 פוסטים/שבוע מינימליים רק לשמירת נוכחות, ללא השקעת תוכן ייחודי."
+      "max_posts_per_week": 1,
+      "reason": "69 חשיפות ו-0 אינטראקציות על 15 פוסטים — ערוץ מת לקהל B2B. פוסט 1 שבועי מינימלי לנוכחות בלבד, לא להשקעת זמן אישור."
     },
     "instagram": {
-      "max_posts_per_week": 4,
-      "reason": "יש לרדת מ-13 ל-4 פוסטים/שבוע ולמקד אך ורק ב-Reels; איכות ורלוונטיות ויזואלית גוברות על כמות בפני האלגוריתם ובפני pipeline approval."
+      "max_posts_per_week": 5,
+      "reason": "ירידה מ-15 ל-5 פוסטים איכותיים (Reels + Carousels) תשפר ממוצע חשיפות ותחסוך קיבולת אישור. פחות = יותר בנסיבות אלו."
     },
     "linkedin": {
-      "max_posts_per_week": 5,
-      "reason": "הערוץ היחיד עם engagement חיובי (1.68%); האלגוריתם מתגמל 3–5 פוסטים/שבוע מפרופילים פעילים — יש להגדיל בהדרגה תוך שמירה על quality-gate."
+      "max_posts_per_week": 4,
+      "reason": "ה-engagement rate הגבוה ביותר (1.49%) מצדיק הגדלה זהירה מ-12 ל-~4/שבוע — מקסימום לפי best practice B2B 2026 של 3–5 פוסטים, עם דגש על פרופילים אישיים."
     },
     "tiktok": {
       "max_posts_per_week": 3,
-      "reason": "כרגע 0 פוסטים — יש לפתוח ערוץ עם 3 Shorts/שבוע שממחזרים תוכן YouTube קיים (Reels-first re-edit); השקעה נמוכה, פוטנציאל גילוי גבוה לקהל HR/event-leads."
+      "reason": "אפס נוכחות כרגע — להתחיל בהדרגה עם 3 Shorts/שבוע (תוכן קיים מ-YouTube ו-Instagram) לפני השקעת ייצור ייעודי."
     },
     "youtube": {
       "max_posts_per_week": 5,
-      "reason": "2 long-form + 3 Shorts/שבוע — Shorts מייצרים discovery, long-form בונה authority ו-watch-time; הפורמט הוכיח 91% מהחשיפות ויש להרחיב ולא לצמצם."
+      "reason": "2 סרטונים ארוכים + 3 Shorts (תוך ניצול חומר קיים). Shorts הם מנוע ה-discovery העיקרי ב-2026 ו-UPE כבר הוכיח יכולת ייצור וידאו."
     }
   },
   "channel_priority": [
@@ -69,25 +69,26 @@
     "tiktok"
   ],
   "channel_plan_basis": [
-    "facebook: 13 פוסטים הניבו 64 חשיפות ו-0 אינטראקציות — ערוץ מת עבור B2B. 2 פוסטים/שבוע מינימליים רק לשמירת נוכחות, ללא השקעת תוכן ייחודי.",
-    "instagram: יש לרדת מ-13 ל-4 פוסטים/שבוע ולמקד אך ורק ב-Reels; איכות ורלוונטיות ויזואלית גוברות על כמות בפני האלגוריתם ובפני pipeline approval.",
-    "linkedin: הערוץ היחיד עם engagement חיובי (1.68%); האלגוריתם מתגמל 3–5 פוסטים/שבוע מפרופילים פעילים — יש להגדיל בהדרגה תוך שמירה על quality-gate.",
-    "tiktok: כרגע 0 פוסטים — יש לפתוח ערוץ עם 3 Shorts/שבוע שממחזרים תוכן YouTube קיים (Reels-first re-edit); השקעה נמוכה, פוטנציאל גילוי גבוה לקהל HR/event-leads.",
-    "youtube: 2 long-form + 3 Shorts/שבוע — Shorts מייצרים discovery, long-form בונה authority ו-watch-time; הפורמט הוכיח 91% מהחשיפות ויש להרחיב ולא לצמצם."
+    "facebook: 69 חשיפות ו-0 אינטראקציות על 15 פוסטים — ערוץ מת לקהל B2B. פוסט 1 שבועי מינימלי לנוכחות בלבד, לא להשקעת זמן אישור.",
+    "instagram: ירידה מ-15 ל-5 פוסטים איכותיים (Reels + Carousels) תשפר ממוצע חשיפות ותחסוך קיבולת אישור. פחות = יותר בנסיבות אלו.",
+    "linkedin: ה-engagement rate הגבוה ביותר (1.49%) מצדיק הגדלה זהירה מ-12 ל-~4/שבוע — מקסימום לפי best practice B2B 2026 של 3–5 פוסטים, עם דגש על פרופילים אישיים.",
+    "tiktok: אפס נוכחות כרגע — להתחיל בהדרגה עם 3 Shorts/שבוע (תוכן קיים מ-YouTube ו-Instagram) לפני השקעת ייצור ייעודי.",
+    "youtube: 2 סרטונים ארוכים + 3 Shorts (תוך ניצול חומר קיים). Shorts הם מנוע ה-discovery העיקרי ב-2026 ו-UPE כבר הוכיח יכולת ייצור וידאו."
   ],
   "follower_growth_plan": [
-    "שלב 1 (0–3 חודשים): הפעלת 2 פרופילים אישיים של בכירי UPE בלינקדאין עם 3 פוסטים/שבוע כל אחד — זה ה-single highest-leverage action עפ\"י נתוני 2026; מקבילית: פתיחת TikTok וסנכרון Shorts עם YouTube.",
-    "שלב 2 (3–6 חודשים): השקת YouTube Shorts שגרתית (3/שבוע) עם Shorts→Long-form funnel; מיחזור כל Short גם ל-Instagram Reels וגם ל-TikTok — מכפיל חשיפה ב-3 ערוצים מתוכן אחד.",
-    "שלב 3 (6–12 חודשים): LinkedIn Newsletter עם 500+ מנויים כיעד; Podcast/series אודיו קצר בנושא MICE ישראל לחיזוק thought leadership ו-GEO visibility בכלי AI.",
-    "שלב 4 (12–24 חודשים): שיתופי פעולה עם 3–5 influencers ישראלים בתחום HR/ניהול (nano/micro, 5K–50K עוקבים) לתוכן משותף — הוכח כמגדיל 16M+ impressions בקמפיינים דומים.",
-    "שלב 5 (24–36 חודשים): SEO עברי ואירופאי בשל מספיק כדי להניע 2,000+ קליקים/חודש אורגניים; צבירת UGC מלקוחות מרוצים המפרסמים תכנים מאירועי UPE — flywheel אורגני אמיתי."
+    "שנה 1 — בסיס (0→50K): הפעלת ambassador program ב-LinkedIn (2–3 פרופילים אישיים) + YouTube Shorts ממוחזרים 3x/שבוע — מנוע ה-discovery המהיר ביותר כרגע. יעד: 10K LinkedIn + 5K YouTube Subscribers.",
+    "שנה 1 — SEO compound: פרסום 2 מאמרי בלוג עברית/חודש על קוורי top-5 (נופש חברה, הפקת כנסים) — תנועה אורגנית גוגל תגדל ל-500+ קליקים/שבוע ותזין את כל שאר הערוצים.",
+    "שנה 1–2 — Instagram pivot: מעבר מ-15 פוסטים/שבוע ל-5 Reels איכותיים — 'before & after' של הפקות, time-lapse אירועים, ו-testimonial קצר. Reels הם מנוע ה-reach האורגני של Instagram.",
+    "שנה 2 — TikTok scale: לאחר 3 חודשי ניסיון, העלאת תדירות TikTok ל-5/שבוע עם תוכן ייעודי. הפלטפורמה מאפשרת viral discovery שאין לה אח ורע לצורך הגעה ל-CMOs/HR צעירים.",
+    "שנה 2–3 — Community flywheel: הקמת LinkedIn Newsletter (500→5,000 מנויים) + שותפויות תוכן עם גופי MICE ישראליים/אירופאיים (cross-promotion) — כל שיתוף פעולה מוסיף 500–2,000 followers רלוונטיים.",
+    "שנה 3 — 500K north-star: שילוב כל הערוצים עם SEO שמוביל אליהם, YouTube כ-authority hub, ו-LinkedIn כ-lead gen. 500K מצריך minimum 2 ערוצים ב-100K+ כל אחד — YouTube ו-LinkedIn הם המועמדים הריאליים."
   ],
   "leads_actions": [
-    "מיידי — הכפלת השקעה ב'מפה לאוזן': יצירת תוכנית referral מובנית ללקוחות קיימים (6/7 לידים משם) — בקשה פעילה להמלצות ו-case studies גלויים עם ציטוט לקוח; זהו הערוץ הממיר היחיד כרגע.",
-    "30 יום — הוספת CTA ברור לכל פוסט LinkedIn וכל סרטון YouTube: 'רוצים לשמוע איך זה נראה עבור האירוע שלכם? 15 דקות שיחה ←' עם קישור לדף פגישה ישיר — כרגע 0 conversion paths.",
-    "45 יום — פרסום 2 case studies עם נתוני ROI אמיתיים (לקוח, גודל קהל, תקציב, תוצאות) ב-LinkedIn ובאתר; תוכן proof-based הוא הטריגר הגדול ביותר ל-B2B inbound inquiry.",
-    "60 יום — קידום SEO ממוקד על 'הפקת נופש חברה' (pos 9.2) ו-'international product launch event' (pos 9.0) — שני ביטויים במרחק <10 מ-top-3, עם intent מסחרי גבוה ו-decision-maker search.",
-    "90 יום — ייזום 5 שיחות LinkedIn אישיות/שבוע מפרופיל בכיר UPE עם CMO/HR leads ישראלים רלוונטיים — B2B deals הם relational; organic social + direct outreach = pipeline בלי תקציב פרסום.",
-    "שוטף — הכנסת UTM-lite לטפסי יצירת קשר באתר (שדה 'איך שמעת עלינו?') כדי לנתב attribution נכון ב-Salesforce; כרגע 0 attribution דיגיטלי — לא ניתן לדעת מה עובד."
+    "P0 — להכפיל השקעה ב-Word of Mouth: לבנות תוכנית הפניות מובנית ללקוחות קיימים — 6/7 לידים מגיעים משם. email חצי-שנתי ללקוחות עם בקשת הפניה + תמריץ (upgrade, תוכן בלעדי) יכול להכפיל לידים ללא עלות נוספת.",
+    "P0 — SEO commercial pages: 3 עמודי שירות מסחריים בעברית (נופש חברה / הפקת כנסים / incentive travel) עם CTA לפגישת ייעוץ. הקוורי הקיימים בגוגל הם בכוונת רכישה — המרתם לליד היא המנוף הישיר ביותר.",
+    "P1 — Lead magnet + nurture: מדריך PDF להורדה (ROI של נופש חברה) מחבר לסדרת 3 emails אוטומטיים עם case studies. כך הופכים 145 קליקים/שבוע מגוגל לפייפליין מדיד.",
+    "P1 — LinkedIn personal outreach מ-ambassador profiles: לאחר כל פוסט שמושך תגובות, לפנות ישירות ב-DM למגיבים רלוונטיים עם הצעת שיחת ייעוץ קצרה — B2B inbound closes ב-14.6% לעומת 1.7% outbound.",
+    "P2 — upe-spain.com conversion: הוספת עמוד 'Request a Quote' ו-Calendly embed ל-upe-spain.com. עם 60 קליקים/שבוע ומיקום ממוצע 23, המרה של 5% = 3 לידים אירופאיים חדשים/חודש.",
+    "P2 — YouTube end-screen CTA: הוספת CTA מפורש ('דברו איתנו על האירוע הבא שלכם') לכל סרטון YouTube קיים ועתידי עם קישור ל-landing page — מנצל את החשיפות הקיימות (7,692/שבוע) שכרגע מייצרות 0 לידים ישירים."
   ]
 }
