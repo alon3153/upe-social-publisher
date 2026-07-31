@@ -1,6 +1,6 @@
 {
   "updated": "2026-07-12",
-  "note": "External-citation pipeline. States: drafted -> awaiting_founder -> submitted -> live -> verified_cited. The weekly crawler advances submitted->live->verified_cited automatically; awaiting_founder items older than 72h are nagged in the daily email.",
+  "note": "External-citation pipeline. States: drafted -> awaiting_founder -> submitted -> live -> verified_cited. The weekly crawler advances awaiting_founder/submitted/live->verified_cited automatically (awaiting_founder only when the page actually mentions us); awaiting_founder items older than 72h are nagged in the daily email.",
   "items": [
     {
       "id": "press_bizbash",
@@ -53,36 +53,36 @@
     {
       "id": "dir_cvent",
       "title": "פרופיל ספק Cvent",
-      "state": "awaiting_founder",
-      "since": "2026-07-05",
-      "action": "צור חשבון והגש לפי AEO-GEO/01-cvent-supplier-profile.md",
-      "target_url": "https://www.cvent.com/venues",
+      "state": "submitted",
+      "since": "2026-07-18",
+      "action": "הוגש 18.07 בטופס הספק הציבורי (cvent.com/RFP/NewSupplierRequest.aspx) — לא נדרש חשבון. אומת 31.07: עדיין אין דף פומבי (site:cvent.com \"uproduction\" ריק). אם אין דף עד סוף אוגוסט — לפנות שוב",
+      "target_url": "",
       "kind": "directory"
     },
     {
       "id": "dir_clutch",
       "title": "פרופיל Clutch",
       "state": "verified_cited",
-      "since": "2026-07-12",
-      "action": "פרופיל קיים חי (uproduction-events-spain) — הסורק מאמת אוטומטית",
-      "target_url": "https://clutch.co/profile/uproduction-events-spain",
+      "since": "2026-07-31",
+      "action": "חי (אומת 31.07). ⚠️ 0 ביקורות — בלי ביקורות הפרופיל לא מופיע בדפי הדירוג של Clutch, והם מה ש-AI מצטט, לא הפרופיל. ⚠️ מוצג Barcelona כ-HQ יחיד בלי ישראל — סותר את 'אין ישות משפטית ספרדית'",
+      "target_url": "https://clutch.co/profile/uproduction-events",
       "kind": "directory"
     },
     {
       "id": "dir_g2",
       "title": "פרופיל G2",
-      "state": "awaiting_founder",
-      "since": "2026-07-05",
-      "action": "הגש לפי AEO-GEO/03-clutch-g2-profiles.md",
-      "target_url": "https://www.g2.com",
+      "state": "verified_cited",
+      "since": "2026-07-31",
+      "action": "חי ואושר 18.07 (אומת 31.07). עובדות תקינות. ⚠️ 0/5 ביקורות",
+      "target_url": "https://www.g2.com/products/uproduction-events/reviews",
       "kind": "directory"
     },
     {
       "id": "dir_icca_mpi_hb",
       "title": "מדריכי ICCA / IAPCO / MPI / HelmsBriscoe",
       "state": "awaiting_founder",
-      "since": "2026-07-05",
-      "action": "הגש לפי AEO-GEO/05-icca-iapco-mpi-helmsbriscoe-directories.md",
+      "since": "2026-07-31",
+      "action": "אומת 31.07: ICCA/IAPCO/SITE/HelmsBriscoe — אין רישום פומבי באף אחד. HelmsBriscoe: מייל נשלח 18.07, אין תשובה. ⛔ MPI: שולם €485 ב-18.07 אבל המדריך חסום מאחורי login — אפס ערך לציטוט AI, לא להשקיע יותר",
       "target_url": "",
       "kind": "directory"
     },
@@ -98,19 +98,19 @@
     {
       "id": "entity_wikidata",
       "title": "ישות Wikidata + sameAs",
-      "state": "drafted",
-      "since": "2026-07-05",
-      "action": "ממתין לציטוט עיתונאי ראשון (notability), אז יצירה לפי AEO-GEO/02-wikidata-entry.md",
-      "target_url": "https://www.wikidata.org",
+      "state": "awaiting_founder",
+      "since": "2026-07-31",
+      "action": "אומת 31.07: אין פריט Wikidata. אין רף notability ל-Wikidata (בניגוד לויקיפדיה) — ניתן ליצור עכשיו. inception חייב להיות 2012, ח.פ 514802412",
+      "target_url": "",
       "kind": "entity"
     },
     {
       "id": "li_articles",
       "title": "2 מאמרי LinkedIn (טיוטות קיימות)",
-      "state": "awaiting_founder",
-      "since": "2026-07-05",
-      "action": "אשר פרסום מתיקיית AEO-GEO/linkedin",
-      "target_url": "",
+      "state": "verified_cited",
+      "since": "2026-07-31",
+      "action": "שני המאמרים פורסמו 18.07, אומתו HTTP 200 ב-31.07. מאמר 2: linkedin.com/pulse/boutique-vs-large-event-agency-which-right-ecfte/",
+      "target_url": "https://www.linkedin.com/pulse/how-choose-corporate-event-production-kq3re/",
       "kind": "content"
     },
     {
