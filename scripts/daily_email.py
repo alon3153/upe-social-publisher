@@ -225,7 +225,7 @@ def main():
     if day is None:
         print("Nothing to enqueue."); return 0
     today = datetime.date.today().isoformat()
-    _p = find_image_path(day)
+    _p = find_image_path(day, load_day_lang(day, "en"))  # honor real-archive image_file
     if not _p:
         print(f"No image for day {day}"); return 0
     image_url = f"{IMG_BASE}/{os.path.basename(_p)}"

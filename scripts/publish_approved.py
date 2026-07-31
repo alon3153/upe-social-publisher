@@ -5,7 +5,7 @@ import os, sys, datetime
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, ROOT)
 from publishers import queue, facebook, instagram, linkedin
-from publishers.content import find_image_path, find_image_url
+from publishers.content import find_image_path, find_image_url, get_day
 
 # Anti-flood throttle: a personal LinkedIn PROFILE (Alon's, or an advocate's) must
 # never receive a burst of posts — it kills reach and reads as spam (founder-led
@@ -53,19 +53,21 @@ def _personal_published_today():
 def publish_row(r):
     net, account, day = r["network"], r["account"], r["day"]
     text = r["caption"]
+    _entry = get_day(day)
+    _data = _entry["data"] if _entry else None  # honor real-archive image_file
     if net == "facebook":
-        path = find_image_path(day)
+        path = find_image_path(day, _data)
         return facebook.publish_post(account, text, path)
     if net == "instagram":
         ig_key = account.replace("ig_", "")
         video_url = r.get("video_url")
         if video_url:  # Sofia Reels (video posts)
             return instagram.publish_reel(ig_key, text, video_url, share_to_feed=True)
-        url = r.get("image_url") or find_image_url(day)
+        url = r.get("image_url") or find_image_url(day, _data)
         return instagram.publish_post(ig_key, text, url)
     if net == "linkedin":
         video_url = r.get("video_url")
-        url = r.get("image_url") or find_image_url(day)
+        url = r.get("image_url") or find_image_url(day, _data)
         # Route by account to one of 3 destinations:
         #   li_personal  -> Alon's personal profile (HE)
         #   *spain*      -> Uproduction Spain company page (ES)
