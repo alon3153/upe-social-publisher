@@ -1,0 +1,241 @@
+{
+  "generated_at": "2026-08-02T07:49:46",
+  "period_days": 7,
+  "networks": {
+    "instagram": {
+      "posts": 11,
+      "impressions": 386,
+      "reach": 246,
+      "interactions": 0,
+      "engagement_rate_pct": 0.0,
+      "caveat": null,
+      "top": {
+        "url": "https://www.instagram.com/p/DbfeY6wkdQQ/",
+        "content": "Every executive incentive eventually gets the same request: somewhere that feels like an occasion. The trap is choosing a place that photographs like an occasio",
+        "impressions": 50,
+        "interactions": 0
+      }
+    },
+    "facebook": {
+      "posts": 9,
+      "impressions": 18,
+      "reach": 16,
+      "interactions": 0,
+      "engagement_rate_pct": 0.0,
+      "caveat": null,
+      "top": {
+        "url": null,
+        "content": "",
+        "impressions": 9,
+        "interactions": 0
+      }
+    },
+    "tiktok": {
+      "posts": 0,
+      "impressions": 0,
+      "reach": 0,
+      "interactions": 0,
+      "engagement_rate_pct": 0.0,
+      "top": null
+    },
+    "linkedin": {
+      "posts": 11,
+      "impressions": 118,
+      "reach": 0,
+      "interactions": 2,
+      "engagement_rate_pct": 1.69,
+      "caveat": null,
+      "top": {
+        "url": "https://www.linkedin.com/feed/update/urn:li:share:7487029891960434689",
+        "content": "",
+        "impressions": 22,
+        "interactions": 0
+      }
+    },
+    "youtube": {
+      "posts": 4,
+      "impressions": 15287,
+      "reach": 0,
+      "interactions": 1,
+      "engagement_rate_pct": 0.01,
+      "caveat": null,
+      "top": {
+        "url": null,
+        "content": "",
+        "impressions": 12828,
+        "interactions": 0
+      }
+    }
+  },
+  "totals": {
+    "posts": 35,
+    "impressions": 15809,
+    "reach": 262,
+    "interactions": 3,
+    "engagement_rate_pct": 0.02
+  },
+  "leads": {
+    "ok": true,
+    "qualified_leads": 7,
+    "new_opportunities": 7,
+    "lead_object_count": 0,
+    "period_days": 30,
+    "source": "salesforce",
+    "definition": "new Opportunities created (all)",
+    "by_source": {
+      "Word of mouth": 6,
+      "Existing Customer": 1
+    },
+    "dominant_source": "Word of mouth",
+    "dominant_share_pct": 86,
+    "attribution_gap": false,
+    "attribution_note": "6/7 מקורם 'Word of mouth' — זה הערוץ הממיר. להכפיל בו את ההשקעה."
+  },
+  "seo_geo": {
+    "generated_at": "2026-07-27",
+    "sites": [
+      {
+        "site": "https://upe.co.il/",
+        "clicks": 145,
+        "impressions": 35656,
+        "avg_position": 36.7,
+        "clicks_prev": 89,
+        "impressions_prev": 32957,
+        "top_opportunities": [
+          [
+            "הפקת נופש חברה",
+            9.2,
+            757
+          ],
+          [
+            "נופש חברה",
+            14.1,
+            338
+          ],
+          [
+            "incentive travel companies",
+            15.8,
+            216
+          ],
+          [
+            "ארגון טיולים לחברות",
+            9.4,
+            142
+          ],
+          [
+            "נופש חברה בארץ",
+            18.9,
+            104
+          ]
+        ]
+      },
+      {
+        "site": "https://upe-spain.com/",
+        "clicks": 60,
+        "impressions": 13246,
+        "avg_position": 23.3,
+        "clicks_prev": 38,
+        "impressions_prev": 13191,
+        "top_opportunities": [
+          [
+            "international product launch event",
+            9.0,
+            184
+          ],
+          [
+            "global product launch event",
+            9.1,
+            136
+          ],
+          [
+            "new hire team building",
+            15.3,
+            126
+          ],
+          [
+            "evento neutro en carbono",
+            11.6,
+            117
+          ],
+          [
+            "how to insure event liability",
+            10.7,
+            69
+          ]
+        ]
+      }
+    ],
+    "geo": {
+      "status": "ok",
+      "cited": 3,
+      "total": 7,
+      "rate": 42.9
+    },
+    "competitors": [
+      {
+        "term": "הפקת אירועים עסקיים",
+        "pos": null,
+        "top3": [
+          "pinchevents.co.il",
+          "mantver.co.il",
+          "www.arbelpro.co.il"
+        ]
+      },
+      {
+        "term": "חברת הפקת אירועים",
+        "pos": null,
+        "top3": [
+          "www.arbelpro.co.il",
+          "pinchevents.co.il",
+          "allplaces.co.il"
+        ]
+      },
+      {
+        "term": "הפקת כנסים",
+        "pos": null,
+        "top3": [
+          "rtspro.co.il",
+          "www.eron.co.il",
+          "www.ortra.co.il"
+        ]
+      },
+      {
+        "term": "טיולי תמריץ לעובדים",
+        "pos": 4,
+        "top3": [
+          "www.elateva.co.il",
+          "mspirit.co.il",
+          "www.boutiqo.co.il"
+        ]
+      },
+      {
+        "term": "eventos corporativos españa",
+        "pos": null,
+        "top3": [
+          "www.eventoplus.com",
+          "www.sortlist.es",
+          "factoryevents.es"
+        ]
+      },
+      {
+        "term": "incentive travel spain",
+        "pos": null,
+        "top3": [
+          "madridexpert.com",
+          "tusetdmc.com",
+          "www.uyuni-incentivetravels.com"
+        ]
+      },
+      {
+        "term": "corporate events barcelona",
+        "pos": null,
+        "top3": [
+          "www.barcelona-life.com",
+          "www.eventbrite.com",
+          "letsdrunch.com"
+        ]
+      }
+    ],
+    "ok": true
+  }
+}
