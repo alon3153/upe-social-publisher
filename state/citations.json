@@ -79,10 +79,10 @@
     },
     {
       "id": "dir_icca_mpi_hb",
-      "title": "מדריכי ICCA / IAPCO / MPI / HelmsBriscoe",
+      "title": "חברות ICCA + IAPCO (בתשלום — החלטת אלון)",
       "state": "awaiting_founder",
       "since": "2026-07-31",
-      "action": "אומת 31.07: ICCA/IAPCO/SITE/HelmsBriscoe — אין רישום פומבי באף אחד. HelmsBriscoe: מייל נשלח 18.07, אין תשובה. ⛔ MPI: שולם €485 ב-18.07 אבל המדריך חסום מאחורי login — אפס ערך לציטוט AI, לא להשקיע יותר",
+      "action": "MPI ✅ שולם 18.07 (המדריך חסום login — אפס ערך ציטוט AI, לא להשקיע יותר). HelmsBriscoe ✅ נשלח 18.07, אין תשובה. נותר להחלטה בלבד: ICCA (~€2,000/שנה, ועדת קבלה) + IAPCO (תהליך ארוך, דורש תיק עבודות + 2 ממליצים). אין רישום פומבי באף אחד מהם.",
       "target_url": "",
       "kind": "directory"
     },
