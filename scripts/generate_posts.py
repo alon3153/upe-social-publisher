@@ -60,20 +60,44 @@ CATEGORIES = [
     "destination", "cta_lead", "testimonial", "behind_the_scenes", "expert_tip",
     "social_proof", "incentive_travel", "problem_solution", "seasonal_hook", "founder_insight",
 ]
-IMAGE_STYLE = "photorealistic, editorial, documentary, 35mm film grain"
+# Real-archive imagery only. Client feedback: AI images made UPE look like it has
+# no real events (see PR #30). New posts reuse a vetted real photo from the archive
+# pool instead of generating an AI image. Provenance stays generic (no invented
+# place label) and image_source is tagged 'real_archive_reused' for auditability.
+IMAGES_DIR = os.path.join(ROOT, "content", "images")
+REAL_CREDIT = {
+    "en": "📷 A real frame from a Uproduction production",
+    "es": "📷 Un fotograma real de una producción de Uproduction",
+    "he": "📷 פריים אמיתי מהפקה של Uproduction",
+}
+
+
+def real_photo_pool():
+    """Vetted real archive photos already committed to the repo (the *_real.jpg set
+    from the real-photo campaign). Excludes legacy AI 'day{N}_*_branded.png'."""
+    pool = sorted(
+        f"content/images/{os.path.basename(p)}"
+        for p in glob.glob(os.path.join(IMAGES_DIR, "*_real.jpg"))
+    )
+    return pool
+
+
+def pick_real_photo(day, pool):
+    """Deterministic round-robin so assignment is stable across re-runs and spreads
+    across the pool rather than clustering."""
+    return pool[day % len(pool)] if pool else ""
+
 
 RULES = """HARD RULES:
 - NEVER state the year/date an event took place; events read timeless.
 - Use only the canonical facts above (2010 / 16 years / 1,500+ events / 130+ destinations / 25,000+ participants). Never invent other numbers.
 - Hebrew (he) must be natural spoken Hebrew, not literary; correct for RTL; keep emojis at END of a line, never start.
 - Each network text is self-contained with a clear hook + soft CTA (DM/comment). Instagram may add hashtags; LinkedIn peer-to-peer; Facebook conversational.
-- image_prompt: a real photographic scene (scale/exotic locations, candid people, no LED screens, no AI-look, no single-person studio shots), one vivid sentence.
 - Do NOT reuse wording across days; vary angle, hook and structure."""
 
 SCHEMA_HINT = """Return ONLY a JSON object (no markdown) with this exact shape:
 {
   "theme": "<short English theme title>",
-  "image_prompt": "<one photographic sentence>",
   "en": {"facebook": "<text>", "instagram": "<text>", "linkedin": "<text>"},
   "es": {"facebook": "<text>", "instagram": "<text>", "linkedin": "<text>"},
   "he": {"facebook": "<text>", "instagram": "<text>", "linkedin": "<text>"}
@@ -115,7 +139,10 @@ Each network/language version conveys the same idea, adapted to that platform an
     return json.loads(text)
 
 
-def write_day(day, category, data, dry_run):
+def write_day(day, category, data, dry_run, pool=None):
+    if pool is None:
+        pool = real_photo_pool()
+    image_file = pick_real_photo(day, pool)
     written = []
     for lang in ("en", "es", "he"):
         block = data.get(lang, {})
@@ -125,7 +152,8 @@ def write_day(day, category, data, dry_run):
             "linkedin":  {"profile": PROFILES["linkedin"],  "text": block.get("linkedin", "")},
             "instagram": {"profile": PROFILES["instagram"], "text": block.get("instagram", "")},
             "facebook":  {"profile": PROFILES["facebook"],  "text": block.get("facebook", "")},
-            "image_prompt": data.get("image_prompt", ""), "image_style": IMAGE_STYLE,
+            "image_file": image_file, "image_source": "real_archive_reused",
+            "image_credit": REAL_CREDIT[lang],
             "brand": {"colors": ["#1C1C1C", "#FBCE0A"], "font": "Comfortaa",
                       "logo": "uproduction_official_logo.png"},
         }
@@ -149,14 +177,18 @@ def main():
         print("ANTHROPIC_API_KEY not set"); return 1
 
     start = a.start or next_day()
+    pool = real_photo_pool()
+    if not pool:
+        print("WARN: no *_real.jpg archive photos found — new posts would have no image");
     total = 0
     for i in range(a.count):
         day = start + i
         category = CATEGORIES[day % len(CATEGORIES)]
         try:
             data = call_claude(category, day)
-            files = write_day(day, category, data, a.dry_run)
-            print(f"✅ day {day} ({category}) — theme: {data.get('theme','')[:50]}")
+            files = write_day(day, category, data, a.dry_run, pool)
+            print(f"✅ day {day} ({category}) — theme: {data.get('theme','')[:50]} "
+                  f"| 📷 {os.path.basename(pick_real_photo(day, pool))}")
             total += 1
         except urllib.error.HTTPError as e:
             print(f"❌ day {day}: HTTP {e.code} {e.read().decode()[:200]}")

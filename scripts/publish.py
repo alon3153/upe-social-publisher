@@ -132,8 +132,8 @@ def publish_day(day: int, dry_run: bool = False, platform_filter: str = None) ->
 
     data = entry["data"]
     carousel_paths = get_carousel_paths_for_data(data)
-    image_path = find_image_path(day) if not carousel_paths else carousel_paths[0]
-    image_url = find_image_url(day)
+    image_path = find_image_path(day, data) if not carousel_paths else carousel_paths[0]
+    image_url = find_image_url(day, data)
     if not image_path and not carousel_paths:
         log(f"ERROR: No image or carousel for day {day}")
         return False

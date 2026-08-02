@@ -27,6 +27,34 @@ def test_verify_advances_states(tmp_path):
     assert len(changed) == 2
 
 
+def test_verify_self_heals_awaiting_founder_already_live(tmp_path):
+    """A submission Alon completed outside the pipeline must stop nagging by itself."""
+    d = _data()
+    d["items"][0]["target_url"] = "https://dir.com/uproduction"
+    p = tmp_path / "citations.json"
+    p.write_text(json.dumps(d), encoding="utf-8")
+
+    changed = cp.verify(path=str(p), fetch=lambda u: "Uproduction Events profile",
+                        today="2026-07-31")
+    states = {i["id"]: i["state"] for i in json.loads(p.read_text())["items"]}
+    assert states["a"] == "verified_cited"
+    assert "a → verified_cited" in changed
+
+
+def test_verify_keeps_nagging_when_directory_page_lacks_us(tmp_path):
+    """A reachable directory homepage proves nothing — the item must stay awaiting."""
+    d = _data()
+    d["items"][0]["target_url"] = "https://www.g2.com"
+    p = tmp_path / "citations.json"
+    p.write_text(json.dumps(d), encoding="utf-8")
+
+    changed = cp.verify(path=str(p), fetch=lambda u: "<html>G2 home</html>",
+                        today="2026-07-31")
+    states = {i["id"]: i["state"] for i in json.loads(p.read_text())["items"]}
+    assert states["a"] == "awaiting_founder"
+    assert not any(c.startswith("a →") for c in changed)
+
+
 def test_verified_count_and_overdue():
     d = _data()
     d["items"][2]["state"] = "verified_cited"

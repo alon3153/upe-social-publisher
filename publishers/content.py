@@ -66,7 +66,27 @@ def get_today_day(today: Optional[date] = None) -> Optional[int]:
     return None
 
 
-def find_image_path(day: int) -> Optional[str]:
+def _resolve_explicit_image(data: Optional[dict]) -> Optional[str]:
+    """Prefer the explicit real-archive image_file declared in the day JSON.
+
+    The real-photo campaign (PR #30) writes a repo-relative `image_file`
+    (e.g. "content/images/one_convo_real.jpg") plus `image_source: real_archive`.
+    Honor it so the publisher serves the real photo instead of falling back to
+    the legacy AI-generated `day{N}_*_branded.png` glob.
+    """
+    if not data:
+        return None
+    rel = data.get("image_file")
+    if not rel:
+        return None
+    path = rel if os.path.isabs(rel) else os.path.join(ROOT, rel)
+    return path if os.path.isfile(path) else None
+
+
+def find_image_path(day: int, data: Optional[dict] = None) -> Optional[str]:
+    explicit = _resolve_explicit_image(data)
+    if explicit:
+        return explicit
     if not os.path.isdir(CONTENT_IMAGES_DIR):
         return None
     for pat in (f"day{day}_*.png", f"day{day}_*.jpg", f"day{day}_*.jpeg"):
@@ -76,11 +96,11 @@ def find_image_path(day: int) -> Optional[str]:
     return None
 
 
-def find_image_url(day: int) -> Optional[str]:
+def find_image_url(day: int, data: Optional[dict] = None) -> Optional[str]:
     """Public URL for the day's image — required by Instagram Graph API."""
     if not IMAGE_BASE_URL:
         return None
-    path = find_image_path(day)
+    path = find_image_path(day, data)
     if not path:
         return None
     return f"{IMAGE_BASE_URL}/content/images/{os.path.basename(path)}"

@@ -1,36 +1,39 @@
 {
-  "day": 100,
-  "category": "cta_lead",
-  "language": "en",
-  "date": "2026-08-03",
-  "weekday": "Monday",
-  "theme": "Flagship close — design 2026 with us",
-  "linkedin": {
-    "profile": "Uproduction Events (Company Page)",
-    "text": "Most companies budget an event. The best ones build an instrument.\n\nFor 15 years we've produced corporate events and incentive travel across 120 countries — 200 productions and counting. The pattern is always the same: the events that move the business aren't the flashiest. They're the ones engineered around a goal before a single venue is booked.\n\nThat's the whole job. We take your business objective and turn it into an experience your people genuinely don't forget. From business to pleasure — by design, not by luck.\n\nThe strongest dates of 2026, and the first of 2027, are being claimed now. If your next event should finally match your company's ambition, let's design it together.\n\nReply \"STRATEGY\" or book a free call — we'll map yours.\n\n#IncentiveTravel #CorporateEvents #EventStrategy",
-    "dimensions": "1:1",
-    "cta": "DM us or book a call"
-  },
-  "instagram": {
-    "profile": "@uproductionevents",
-    "text": "15 years. 200 events. 120 countries. 👇\n\nHere's what we learned: a great event isn't planned — it's engineered.\n\n🎯 Start with the business goal\n✨ Design the experience backwards from it\n🌍 Drop your people somewhere unforgettable\n💛 From business to pleasure — every time\n\n📌 Save this for your next planning meeting.\n🏷️ Tag the colleague who owns your next offsite.\n\nThe best 2026 dates (and early 2027) are going fast.\n\nDM us \"STRATEGY\" or tap the link in bio to design yours. 🔗\n\n#IncentiveTravel #CorporateEvents #EventPlanner #CorporateTravel #TeamBuilding #B2BEvents #EventStrategy #LeadershipDevelopment #FromBusinessToPleasure #UproductionEvents",
-    "dimensions": "1:1",
-    "cta": "Link in bio"
-  },
-  "facebook": {
-    "profile": "Uproduction Events (Page)",
-    "text": "15 years, 200 events, 120 countries — and one lesson that never changes.\n\nThe events that actually move a business aren't the flashiest ones. They're the ones designed around a real goal from day one. That's what we do: take your business objective and turn it into an experience your people never forget. From business to pleasure.\n\nThe best dates of 2026 (and the first of 2027) are being claimed right now.\n\nWhat would your team remember a year from now? Send us a message and let's design it together.\n\n#IncentiveTravel #CorporateEvents #FromBusinessToPleasure",
-    "dimensions": "1.91:1",
-    "cta": "Send us a message"
-  },
-  "image_prompt": "Epic aerial night view from far above of thousands of guests gathered around a glowing central stage in a vast open arena, the crowd a dense galaxy of tiny lights and silhouettes radiating outward, fireworks bursting overhead, the whole scene conveying overwhelming scale and celebration. Photorealistic, 35mm film grain, no CGI, no text, no logos.",
-  "image_style": "photorealistic, editorial, documentary, 35mm film grain",
-  "brand": {
-    "colors": [
-      "#1C1C1C",
-      "#FBCE0A"
-    ],
-    "font": "Comfortaa",
-    "logo": "uproduction_official_logo.png"
-  }
+ "day": 100,
+ "category": "cta_lead",
+ "language": "en",
+ "date": "2026-08-03",
+ "weekday": "Monday",
+ "theme": "Flagship close — design 2026 with us",
+ "linkedin": {
+  "profile": "Uproduction Events (Company Page)",
+  "text": "Most companies budget an event. The best ones build an instrument.\n\nFor 15 years we've produced corporate events and incentive travel across 120 countries — 200 productions and counting. The pattern is always the same: the events that move the business aren't the flashiest. They're the ones engineered around a goal before a single venue is booked.\n\nThat's the whole job. We take your business objective and turn it into an experience your people genuinely don't forget. From business to pleasure — by design, not by luck.\n\nThe strongest dates of 2026, and the first of 2027, are being claimed now. If your next event should finally match your company's ambition, let's design it together.\n\nReply \"STRATEGY\" or book a free call — we'll map yours.\n\n#IncentiveTravel #CorporateEvents #EventStrategy",
+  "dimensions": "1:1",
+  "cta": "DM us or book a call"
+ },
+ "instagram": {
+  "profile": "@uproductionevents",
+  "text": "15 years. 200 events. 120 countries. 👇\n\nHere's what we learned: a great event isn't planned — it's engineered.\n\n🎯 Start with the business goal\n✨ Design the experience backwards from it\n🌍 Drop your people somewhere unforgettable\n💛 From business to pleasure — every time\n\n📌 Save this for your next planning meeting.\n🏷️ Tag the colleague who owns your next offsite.\n\nThe best 2026 dates (and early 2027) are going fast.\n\nDM us \"STRATEGY\" or tap the link in bio to design yours. 🔗\n\n#IncentiveTravel #CorporateEvents #EventPlanner #CorporateTravel #TeamBuilding #B2BEvents #EventStrategy #LeadershipDevelopment #FromBusinessToPleasure #UproductionEvents",
+  "dimensions": "1:1",
+  "cta": "Link in bio"
+ },
+ "facebook": {
+  "profile": "Uproduction Events (Page)",
+  "text": "15 years, 200 events, 120 countries — and one lesson that never changes.\n\nThe events that actually move a business aren't the flashiest ones. They're the ones designed around a real goal from day one. That's what we do: take your business objective and turn it into an experience your people never forget. From business to pleasure.\n\nThe best dates of 2026 (and the first of 2027) are being claimed right now.\n\nWhat would your team remember a year from now? Send us a message and let's design it together.\n\n#IncentiveTravel #CorporateEvents #FromBusinessToPleasure",
+  "dimensions": "1.91:1",
+  "cta": "Send us a message"
+ },
+ "image_prompt": "Epic aerial night view from far above of thousands of guests gathered around a glowing central stage in a vast open arena, the crowd a dense galaxy of tiny lights and silhouettes radiating outward, fireworks bursting overhead, the whole scene conveying overwhelming scale and celebration. Photorealistic, 35mm film grain, no CGI, no text, no logos.",
+ "image_style": "photorealistic, editorial, documentary, 35mm film grain",
+ "brand": {
+  "colors": [
+   "#1C1C1C",
+   "#FBCE0A"
+  ],
+  "font": "Comfortaa",
+  "logo": "uproduction_official_logo.png"
+ },
+ "image_file": "content/images/boldest_coast_real.jpg",
+ "image_source": "real_archive",
+ "image_credit": "📷 A real frame from a Uproduction production · Greek coast"
 }

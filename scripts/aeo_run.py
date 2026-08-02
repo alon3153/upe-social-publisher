@@ -29,9 +29,25 @@ def run(repo, dry_run, ask_fn=None, judge_fn=None, send_fn=None, runner=None, to
     grounded = os.environ.get("AEO_GROUNDED", "1") != "0"
     probe_fn = probe_fn or ask_fn or (lambda model, text: aeo_models.ask_meta(model, text, grounded=grounded))
     ask_fn = ask_fn or (lambda model, text: aeo_models.ask(model, text))
-    judge_fn = judge_fn or (lambda prompt: aeo_models.ask("claude", prompt, system=aeo_probe.JUDGE_SYSTEM))
     models = aeo_models.available_models() or ["claude"]
     failures = [f"{m}: no key" for m in ("chatgpt", "gemini") if m not in models]
+    # The judge scores EVERY model's answers, so pinning it to one provider made that
+    # provider a single point of failure for the whole battery: on 31.07.2026 the
+    # Anthropic balance ran dry and the run returned an empty scorecard even though the
+    # working ChatGPT and Gemini keys had answered. Fall through the other available
+    # providers instead, and surface which one actually did the judging.
+    judge_order = [m for m in ("claude", "gemini", "chatgpt") if m in models] or ["claude"]
+
+    def _judge(prompt):
+        errors = []
+        for m in judge_order:
+            try:
+                return aeo_models.ask(m, prompt, system=aeo_probe.JUDGE_SYSTEM)
+            except Exception as e:
+                errors.append(f"{m}: {type(e).__name__}: {str(e)[:120]}")
+        raise RuntimeError("all judges failed — " + " | ".join(errors))
+
+    judge_fn = judge_fn or _judge
 
     history_path = str(Path(repo) / "aeo_history.json") if dry_run else str(HISTORY)
     prev = _prev_scorecard(history_path)

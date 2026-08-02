@@ -1,8 +1,9 @@
 """External-citation pipeline: the state machine for third-party authority actions.
 
 States: drafted -> awaiting_founder -> submitted -> live -> verified_cited
-- verify() crawls target_url for items in submitted/live and advances them
-  automatically when the page exists and mentions Uproduction (no founder click needed).
+- verify() crawls target_url for items in awaiting_founder/submitted/live and advances
+  them automatically when the page exists and mentions Uproduction (no founder click
+  needed) — so a submission Alon completed outside the pipeline stops being nagged.
 - overdue_reminders() lists awaiting_founder items older than REMIND_HOURS for
   the daily email nag.
 - digest_html() renders the weekly one-look approval digest (RTL Hebrew).
@@ -53,18 +54,30 @@ def _fetch(url):
 
 def verify(data=None, path=None, fetch=_fetch, today=None):
     """Advance submitted->live->verified_cited by crawling target_url.
-    live = the page responds; verified_cited = it mentions Uproduction/upe.co.il."""
+    live = the page responds; verified_cited = it mentions Uproduction/upe.co.il.
+
+    awaiting_founder items are crawled too, but only ever jump straight to
+    verified_cited: Alon regularly completes a submission outside this pipeline
+    (Clutch, G2 and the LinkedIn articles all went live in July 2026 while their
+    items sat here), and without this the daily email nags him forever for work
+    already done. A merely-reachable page proves nothing for these — a directory
+    homepage responds whether or not we are listed — so a live page that does not
+    mention us leaves the item exactly where it was.
+    """
     data = data or load(path)
     today = today or datetime.date.today().isoformat()
     changed = []
     for item in data["items"]:
-        if item["state"] not in ("submitted", "live") or not item.get("target_url"):
+        if item["state"] not in ("awaiting_founder", "submitted", "live") or not item.get("target_url"):
             continue
         try:
             html = fetch(item["target_url"]).lower()
         except Exception:
             continue  # unreachable today — retry next run
-        new_state = "verified_cited" if ("uproduction" in html or "upe.co.il" in html) else "live"
+        cited = "uproduction" in html or "upe.co.il" in html
+        if item["state"] == "awaiting_founder" and not cited:
+            continue  # cannot conclude the founder acted; keep nagging
+        new_state = "verified_cited" if cited else "live"
         if new_state != item["state"]:
             item["state"], item["since"] = new_state, today
             changed.append(f'{item["id"]} → {new_state}')
