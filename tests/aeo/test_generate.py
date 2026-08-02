@@ -94,3 +94,43 @@ def test_to_markdown_roundtrip():
     md = gen.to_markdown({"title": "T", "language": "he"}, "## body")
     assert md.startswith("---")
     assert "title:" in md and "## body" in md
+
+
+def test_missing_h1_does_not_crash_and_is_derived():
+    # regression: 31.07 comparison brief died with KeyError: 'h1' when the model
+    # returned metadata without an h1. Must never crash; derive h1 from title.
+    def no_h1_ask(model, prompt):
+        meta = json.dumps({"title": "Boutique vs large event agencies",
+                           "description": "A comparison.", "slug": "boutique-vs-large", "faqs": []})
+        return meta + "\n===BODY===\n## Overview\nA fair comparison.\n"
+    page = gen.generate_page(BRIEF, "en", no_h1_ask, "2026-07-31")
+    assert page["frontmatter"]["h1"] == "Boutique vs large event agencies"
+    assert page["slug"] == "boutique-vs-large"
+
+
+def test_missing_keys_trigger_regeneration_before_fallback():
+    # first draft omits required keys -> a correction is fed back and a clean
+    # second draft is used instead of silently falling back.
+    calls = {"n": 0}
+
+    def flaky_ask(model, prompt):
+        calls["n"] += 1
+        if calls["n"] == 1:
+            return json.dumps({"description": "d"}) + "\n===BODY===\nbody"
+        assert "h1" in prompt  # correction named the missing field
+        meta = json.dumps({"title": "T", "description": "d", "h1": "Real H1",
+                           "slug": "real-slug", "faqs": []})
+        return meta + "\n===BODY===\nUproduction Events — 16 years.\n"
+
+    page = gen.generate_page(BRIEF, "en", flaky_ask, "2026-07-31")
+    assert page["frontmatter"]["h1"] == "Real H1"
+    assert calls["n"] == 2
+
+
+def test_totally_empty_metadata_still_builds():
+    def empty_ask(model, prompt):
+        return json.dumps({}) + "\n===BODY===\nbody"
+    page = gen.generate_page(BRIEF, "en", empty_ask, "2026-07-31")
+    # never crash; slug + h1 derived from the brief topic
+    assert page["frontmatter"]["h1"]
+    assert page["slug"]

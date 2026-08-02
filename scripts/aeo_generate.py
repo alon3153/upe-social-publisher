@@ -48,6 +48,38 @@ def _split_meta_body(raw):
     return payload, payload.get("body_markdown", "")
 
 
+REQUIRED_KEYS = ("title", "description", "h1", "slug")
+
+
+def _slugify(text):
+    return re.sub(r"[^a-z0-9-]+", "-", (text or "").lower()).strip("-")
+
+
+def _missing_keys(payload):
+    return [k for k in REQUIRED_KEYS if not str(payload.get(k) or "").strip()]
+
+
+def _normalize_payload(payload, brief):
+    """Never crash on a malformed model payload — derive sensible fallbacks so a
+    brief is always publishable (see MAX_GEN_ATTEMPTS / 'never drop a page')."""
+    p = dict(payload)
+    p.setdefault("faqs", [])
+    title = (p.get("title") or p.get("h1") or brief["topic"]).strip()
+    p["title"] = title
+    p["h1"] = (p.get("h1") or title).strip()
+    p["description"] = (p.get("description") or title).strip()
+    p["slug"] = _slugify(p.get("slug") or p.get("h1") or title) or f"aeo-{brief['target_dimension']}"
+    return p
+
+
+def _missing_correction(missing):
+    return (
+        "\n\nYOUR PREVIOUS METADATA JSON was missing required field(s): "
+        f"{', '.join(missing)}. Regenerate the ENTIRE page and include ALL of "
+        'these keys as non-empty strings: "title", "description", "h1", "slug".'
+    )
+
+
 def _build_page(brief, lang, payload, body, date):
     slug_base = re.sub(r"[^a-z0-9-]+", "-", payload["slug"].lower()).strip("-")
     fm = {
@@ -94,8 +126,14 @@ def generate_page(brief, lang, ask_fn, date):
     )
     correction = ""
     page = None
-    for _ in range(MAX_GEN_ATTEMPTS):
+    for attempt in range(MAX_GEN_ATTEMPTS):
         payload, body = _split_meta_body(ask_fn("claude", GEN_SYSTEM + "\n\n" + prompt + correction))
+        missing = _missing_keys(payload)
+        if missing and attempt < MAX_GEN_ATTEMPTS - 1:
+            # prefer a clean model draft; feed the missing fields back and retry
+            correction = _missing_correction(missing)
+            continue
+        payload = _normalize_payload(payload, brief)  # last resort: never crash / never drop a page
         page = _build_page(brief, lang, payload, body, date)
         if not page["violations"]:
             return page
