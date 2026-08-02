@@ -8,7 +8,7 @@
   "primary_kpi": {
     "qualified_leads_per_month": 10,
     "leads_definition": "Real NEW inbound leads from NEW potential clients for substantial events/conferences (not existing clients, not vendors).",
-    "leads_source": "UNWIRED — must connect Salesforce new-lead/opportunity count or website form source. Council flags until wired."
+    "leads_source": "WIRED via leads_source.py (Salesforce client-credentials); Opportunity CreatedDate LAST_N_DAYS."
   },
   "channels": ["instagram", "facebook", "tiktok", "linkedin", "youtube", "google_organic", "ai_geo"],
   "effectiveness_targets": {
@@ -24,5 +24,20 @@
     "_comment": "Targets for the weekly AEO/GEO loop. per_dimension_min = score below which a dimension is 'weak' and generates briefs.",
     "per_dimension_min": { "product_search": 70, "comparison": 70, "reputation": 90 },
     "briefs_per_run": 3
+  },
+  "scorecard_weights": {
+    "qualified_leads": 35,
+    "digital_leads": 20,
+    "organic": 20,
+    "aeo": 15,
+    "social_presence": 10
+  },
+  "digital_lead_sources": ["Web", "Website", "LinkedIn", "Google", "Organic Search", "Social", "Paid Search", "Email"],
+  "word_of_mouth_sources": ["Word of mouth", "Referral", "Existing Client", "Partner"],
+  "organic_targets": { "weekly_clicks_min": 300, "top3_keywords_min": 3 },
+  "context_metrics": {
+    "_comment": "Shown for visibility, NOT scored. Engagement/impressions no longer drag the headline.",
+    "engagement_rate_pct": 2.0,
+    "weekly_impressions_growth_pct": 10
   }
 }
