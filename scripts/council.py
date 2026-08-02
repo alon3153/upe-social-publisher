@@ -76,6 +76,7 @@ def build_scorecard(cur, prev, leads, seo_geo=None):
     move to context_rows (informational, not scored). Keeps rows/passed/total
     for backward compat (rows = scored_rows + context_rows; passed/total count
     scored_rows only)."""
+    leads = leads or {}
     t = TARGETS["effectiveness_targets"]
     W = TARGETS["scorecard_weights"]
     org_t = TARGETS["organic_targets"]
@@ -156,6 +157,12 @@ def build_scorecard(cur, prev, leads, seo_geo=None):
                 leads.get("dominant_share_pct", 0), "↑", True, "%")
 
     weighted = weighted_score(comp, W)
+    # Leads are the PRIMARY definition of winning (55% of intended weight). If BOTH
+    # lead components are unavailable (Salesforce dark), the headline cannot honestly
+    # read as a "winning" score no matter how the floor renormalizes — cap it so a
+    # data outage never emails Alon a false green. (final review 2026-08-02)
+    if comp.get("qualified_leads") is None and comp.get("digital_leads") is None:
+        weighted = min(weighted, 40)
     passed = sum(1 for r in scored if r["status"] == "✅")
     return {"rows": scored + context, "scored_rows": scored, "context_rows": context,
             "components": comp, "weighted": weighted,

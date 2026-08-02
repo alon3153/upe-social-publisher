@@ -64,3 +64,14 @@ def test_prompt_demotes_engagement():
     src = (ROOT / "scripts" / "council.py").read_text()
     assert "Maximize impressions, raise engagement" not in src
     assert "engagement/impressions are CONTEXT" in src
+
+def test_all_sources_unwired_does_not_inflate():
+    # Salesforce + GSC both dark, but posting continues (UPE posts ~41/wk).
+    # The social floor must NOT renormalize the headline to a false green.
+    cur = {"totals": {"impressions": 14000, "engagement_rate_pct": 0.04, "posts": 41},
+           "period_days": 7, "networks": {}}
+    prev = {"totals": {"impressions": 14700}}
+    sc = council.build_scorecard(cur, prev, {"ok": False}, {"ok": False})
+    assert sc["weighted"] <= 40  # capped — leads dark cannot be a winning score
+    # and it must not have crashed / must still produce the standard shape
+    assert "weighted" in sc and "scored_rows" in sc
