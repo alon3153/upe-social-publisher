@@ -56,6 +56,17 @@ def digital_attributed_leads(leads, digital_sources):
     return sum(n for src, n in by_source.items() if str(src).lower() in wanted)
 
 
+def weighted_score(components, weights):
+    """Deterministic 0-100. components[k] is a fraction-of-target in [0,1] or None
+    (unavailable). Unavailable components are dropped and their weight is renormalized
+    over what IS available, so a missing data source lowers confidence, not the score."""
+    avail = {k: max(0.0, min(1.0, v)) for k, v in components.items() if v is not None}
+    wsum = sum(weights[k] for k in avail)
+    if not wsum:
+        return 0
+    return round(sum(weights[k] * avail[k] for k in avail) / wsum * 100)
+
+
 # ---------------------------------------------------------------- scorecard ----
 def build_scorecard(cur, prev, leads):
     """Deterministic pass/fail vs targets. cur/prev are snapshot dicts."""
