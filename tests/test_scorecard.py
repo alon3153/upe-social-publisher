@@ -41,3 +41,21 @@ def test_weighted_score_caps_and_all_none():
     over = {k: 2.0 for k in w}  # over-achievement capped at 1.0
     assert council.weighted_score(over, w) == 100
     assert council.weighted_score({k: None for k in w}, w) == 0
+
+def test_build_scorecard_weighted_present_and_context_split():
+    cur = {"totals": {"impressions": 14000, "engagement_rate_pct": 0.04, "posts": 41}, "period_days": 7,
+           "networks": {}}
+    prev = {"totals": {"impressions": 14700}}
+    leads = {"ok": True, "qualified_leads": 7, "new_opportunities": 7,
+             "by_source": {"Word of mouth": 6, "Web": 1}, "dominant_source": "Word of mouth",
+             "dominant_share_pct": 86, "attribution_gap": False}
+    seo_geo = {"ok": True, "weekly_clicks": 145, "top3_keywords": 0, "aeo_cited_engines": 1}
+    sc = council.build_scorecard(cur, prev, leads, seo_geo)
+    assert 0 <= sc["weighted"] <= 100
+    # engagement + impressions-growth must be CONTEXT, not scored
+    scored_labels = " ".join(r["metric"] for r in sc["scored_rows"])
+    context_labels = " ".join(r["metric"] for r in sc["context_rows"])
+    assert "Engagement" in context_labels and "Engagement" not in scored_labels
+    assert "צמיחת חשיפות" in context_labels
+    # with 7/10 leads, 1 digital, weak organic/aeo — weighted should be well above the old 22
+    assert sc["weighted"] >= 30

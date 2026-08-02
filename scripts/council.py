@@ -68,46 +68,98 @@ def weighted_score(components, weights):
 
 
 # ---------------------------------------------------------------- scorecard ----
-def build_scorecard(cur, prev, leads):
-    """Deterministic pass/fail vs targets. cur/prev are snapshot dicts."""
+def build_scorecard(cur, prev, leads, seo_geo=None):
+    """Deterministic weighted 0-100 scorecard. cur/prev are snapshot dicts.
+
+    Five scored components (qualified_leads, digital_leads, organic, aeo,
+    social_presence) feed weighted_score(). Engagement and impressions-growth
+    move to context_rows (informational, not scored). Keeps rows/passed/total
+    for backward compat (rows = scored_rows + context_rows; passed/total count
+    scored_rows only)."""
     t = TARGETS["effectiveness_targets"]
-    ct, pt = cur["totals"], prev["totals"]
-    rows = []
-
-    def grade(label, value, target, ok, unit=""):
-        rows.append({"metric": label, "value": value, "target": target,
-                     "unit": unit, "status": "✅" if ok else "❌"})
-
-    imp_growth = round(((ct["impressions"] - pt["impressions"]) / pt["impressions"] * 100)
-                       if pt["impressions"] else 0.0, 1)
-    grade("חשיפות (תקופה)", ct["impressions"], "↑", ct["impressions"] > 0)
-    grade("צמיחת חשיפות", imp_growth, t["weekly_impressions_growth_pct"],
-          imp_growth >= t["weekly_impressions_growth_pct"], "%")
-    grade("Engagement rate", ct["engagement_rate_pct"], t["min_avg_engagement_rate_pct"],
-          ct["engagement_rate_pct"] >= t["min_avg_engagement_rate_pct"], "%")
-    posts_week = round(ct["posts"] / (cur["period_days"] / 7.0), 1) if cur["period_days"] else 0
-    grade("פוסטים/שבוע", posts_week, t["posts_per_week_min"],
-          posts_week >= t["posts_per_week_min"])
+    W = TARGETS["scorecard_weights"]
+    org_t = TARGETS["organic_targets"]
     lead_target = TARGETS["primary_kpi"]["qualified_leads_per_month"]
-    if leads.get("ok"):
-        ql = leads.get("qualified_leads", 0)
-        grade("לידים מוסמכים (30 ימים)", ql, lead_target, ql >= lead_target)
-        grade("הזדמנויות חדשות (30 ימים)", leads.get("new_opportunities", 0), "↑",
-              (leads.get("new_opportunities") or 0) > 0)
-    else:
-        grade("לידים מוסמכים/חודש", "לא מחובר", lead_target, False)
+    ct, pt = cur["totals"], prev["totals"]
+    scored, context = [], []
 
-    # Lead-source attribution: a real dominant source is a SIGNAL (double down), an
-    # unattributed-default concentration is a GAP (fix data entry). Ported 02.07.
+    def row(bucket, label, value, target, ok, unit=""):
+        bucket.append({"metric": label, "value": value, "target": target,
+                       "unit": unit, "status": "✅" if ok else "❌"})
+
+    comp = {}
+
+    # 1) qualified leads (scored)
+    if leads.get("ok"):
+        ql = leads.get("qualified_leads") or 0
+        comp["qualified_leads"] = ql / lead_target if lead_target else None
+        row(scored, "לידים מוסמכים (30 ימים)", ql, lead_target, ql >= lead_target)
+    else:
+        comp["qualified_leads"] = None
+        row(scored, "לידים מוסמכים/חודש", "לא מחובר", lead_target, False)
+
+    # 2) digital-attributed leads (scored) — target = 3 of the 10
+    dig_target = max(1, round(lead_target * 0.3))
+    if leads.get("ok"):
+        dl = digital_attributed_leads(leads, TARGETS["digital_lead_sources"])
+        comp["digital_leads"] = dl / dig_target
+        row(scored, "לידים מיוחסים לדיגיטל", dl, dig_target, dl >= dig_target)
+    else:
+        comp["digital_leads"] = None
+        row(scored, "לידים מיוחסים לדיגיטל", "לא מחובר", dig_target, False)
+
+    # 3) organic (scored) — clicks + top3 keywords, averaged
+    if seo_geo and seo_geo.get("ok"):
+        clicks = seo_geo.get("weekly_clicks") or 0
+        top3 = seo_geo.get("top3_keywords") or 0
+        f_clicks = min(1.0, clicks / org_t["weekly_clicks_min"])
+        f_top3 = min(1.0, top3 / org_t["top3_keywords_min"])
+        comp["organic"] = (f_clicks + f_top3) / 2
+        row(scored, "קליקים אורגניים/שבוע", clicks, org_t["weekly_clicks_min"],
+            clicks >= org_t["weekly_clicks_min"])
+        row(scored, "מונחים ב-Top-3", top3, org_t["top3_keywords_min"],
+            top3 >= org_t["top3_keywords_min"])
+    else:
+        comp["organic"] = None
+        row(scored, "אורגני (GSC)", "לא מחובר", org_t["weekly_clicks_min"], False)
+
+    # 4) AEO (scored) — cited in N engines out of 3
+    if seo_geo and seo_geo.get("ok") and seo_geo.get("aeo_cited_engines") is not None:
+        cited = seo_geo.get("aeo_cited_engines") or 0
+        comp["aeo"] = min(1.0, cited / 3)
+        row(scored, "נראות ב-AI (מנועים)", cited, 3, cited >= 3)
+    else:
+        comp["aeo"] = None
+        row(scored, "נראות ב-AI (מנועים)", "לא מחובר", 3, False)
+
+    # 5) social presence floor (scored) — cadence met, NOT growth
+    posts_week = round(ct["posts"] / (cur["period_days"] / 7.0), 1) if cur["period_days"] else 0
+    floor_ok = posts_week >= t["posts_per_week_min"]
+    comp["social_presence"] = 1.0 if floor_ok else min(1.0, posts_week / t["posts_per_week_min"])
+    row(scored, "נוכחות סושיאל (רצפה)", posts_week, t["posts_per_week_min"], floor_ok)
+
+    # CONTEXT (not scored): engagement + impressions growth
+    imp_growth = round(((ct["impressions"] - pt["impressions"]) / pt["impressions"] * 100)
+                       if pt.get("impressions") else 0.0, 1)
+    row(context, "צמיחת חשיפות", imp_growth, t["weekly_impressions_growth_pct"],
+        imp_growth >= t["weekly_impressions_growth_pct"], "%")
+    row(context, "Engagement rate", ct["engagement_rate_pct"], t["min_avg_engagement_rate_pct"],
+        ct["engagement_rate_pct"] >= t["min_avg_engagement_rate_pct"], "%")
+    row(context, "חשיפות (תקופה)", ct["impressions"], "↑", ct["impressions"] > 0)
+
+    # attribution note (kept from old scorecard) as a context row
     if leads.get("ok") and leads.get("dominant_source"):
         if leads.get("attribution_gap"):
-            grade("ייחוס לידים", "לא-מיוחס", "מקור אמיתי", False)
+            row(context, "ייחוס לידים", "לא-מיוחס", "מקור אמיתי", False)
         else:
-            grade(f"ערוץ ממיר ({leads['dominant_source']})",
-                  leads.get("dominant_share_pct", 0), "↑", True, "%")
+            row(context, f"ערוץ ממיר ({leads['dominant_source']})",
+                leads.get("dominant_share_pct", 0), "↑", True, "%")
 
-    passed = sum(1 for r in rows if r["status"] == "✅")
-    return {"rows": rows, "passed": passed, "total": len(rows),
+    weighted = weighted_score(comp, W)
+    passed = sum(1 for r in scored if r["status"] == "✅")
+    return {"rows": scored + context, "scored_rows": scored, "context_rows": context,
+            "components": comp, "weighted": weighted,
+            "passed": passed, "total": len(scored),
             "impressions_growth_pct": imp_growth, "posts_per_week": posts_week,
             "lead_attribution": {"by_source": leads.get("by_source", {}),
                                  "dominant_source": leads.get("dominant_source"),
@@ -417,7 +469,7 @@ def main():
     leads = leads_source.count(30)
     cur["leads"] = leads
     cur["seo_geo"] = seo_geo_source.fetch()
-    scorecard = build_scorecard(cur, prev, leads)
+    scorecard = build_scorecard(cur, prev, leads, cur.get("seo_geo"))
 
     if a.no_llm:
         verdict = {"verdict_summary": "(--no-llm) scorecard only", "scores": {}, "what_worked": [],
