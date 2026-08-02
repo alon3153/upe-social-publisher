@@ -175,10 +175,14 @@ incentive-travel company (Israel-based, global ops). Audience = decision-makers 
 leads) at companies in Israel and Europe that run events/conferences needing a production company
 or local supplier.
 
-GOALS:
-- North-star: 500,000 organic followers over ~3 years (leading indicators matter more than the count).
-- PRIMARY KPI: 10 real NEW qualified leads per month from NEW potential clients for substantial events.
-- Maximize impressions, raise engagement, continuous measurable improvement.
+GOALS (scored deterministically — do not invent your own overall number; the headline score
+is computed from business outcomes, your "overall" is an advisory second opinion):
+- PRIMARY: 10 real NEW qualified leads/month, of which >=3 are digital-attributed (LeadSource
+  not Word-of-Mouth). This is what winning means.
+- SECONDARY: Google-organic momentum (clicks + Top-3 Hebrew keywords) and AI/AEO citations.
+- CONTEXT ONLY — engagement/impressions are CONTEXT, not goals. A low engagement rate on
+  Israeli-B2B social is EXPECTED and must NOT dominate your assessment or the overall score.
+- North-star: 500,000 organic followers over ~3 years (leading indicator, not a near-term target).
 
 HARD CONSTRAINTS (UPE iron rules) — respect these when classifying actions:
 - Nothing publishes without human approval; all client-facing content is reviewed first.

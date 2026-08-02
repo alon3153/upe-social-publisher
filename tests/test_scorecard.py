@@ -59,3 +59,8 @@ def test_build_scorecard_weighted_present_and_context_split():
     assert "צמיחת חשיפות" in context_labels
     # with 7/10 leads, 1 digital, weak organic/aeo — weighted should be well above the old 22
     assert sc["weighted"] >= 30
+
+def test_prompt_demotes_engagement():
+    src = (ROOT / "scripts" / "council.py").read_text()
+    assert "Maximize impressions, raise engagement" not in src
+    assert "engagement/impressions are CONTEXT" in src
