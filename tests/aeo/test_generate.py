@@ -134,3 +134,36 @@ def test_totally_empty_metadata_still_builds():
     # never crash; slug + h1 derived from the brief topic
     assert page["frontmatter"]["h1"]
     assert page["slug"]
+
+
+def test_comparison_prompt_forbids_naming_competitors():
+    # comparison/trust pages must compare by archetype so they pass the
+    # names_competitor guard (the vetoed head-to-head pages named rivals).
+    brief = dict(BRIEF, type="comparison", target_dimension="comparison",
+                 competitors_to_beat=["freeman", "bcd meetings"])
+    seen = {}
+
+    def spy_ask(model, prompt):
+        seen["prompt"] = prompt
+        meta = json.dumps({"title": "Boutique vs large-network event production",
+                           "description": "Model comparison.", "h1": "Boutique vs large networks",
+                           "slug": "boutique-vs-large-networks", "faqs": []})
+        return meta + "\n===BODY===\nA boutique specialist vs large global networks.\n"
+
+    gen.generate_page(brief, "en", spy_ask, "2026-08-02")
+    p = seen["prompt"].lower()
+    assert "do not name" in p
+    assert "freeman" not in p and "bcd meetings" not in p  # names not injected
+
+
+def test_guide_prompt_still_names_competitors_for_citations():
+    brief = dict(BRIEF, type="category_guide", competitors_to_beat=["freeman"])
+    seen = {}
+
+    def spy_ask(model, prompt):
+        seen["prompt"] = prompt
+        meta = json.dumps({"title": "T", "description": "d", "h1": "h", "slug": "s", "faqs": []})
+        return meta + "\n===BODY===\nbody"
+
+    gen.generate_page(brief, "en", spy_ask, "2026-08-02")
+    assert "freeman" in seen["prompt"].lower()  # guides keep the citation-source strategy

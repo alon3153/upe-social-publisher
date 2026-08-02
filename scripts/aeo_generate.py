@@ -117,11 +117,33 @@ def _correction(violations):
     )
 
 
+# Head-to-head comparison/trust pages that NAME specific rivals were vetoed by
+# the founder (brand/legal risk of a direct named comparison). To still win the
+# "comparison" dimension, these page types differentiate by ARCHETYPE — the
+# boutique-specialist model vs the large global-network model — naming no firm,
+# so they pass names_competitor() and publish without a veto hold. Guide/list
+# pages keep naming competitors (that is the 05.07 citation-source strategy).
+_ARCHETYPE_TYPES = {"comparison", "trust"}
+
+
+def _differentiation_line(brief):
+    if brief["type"] in _ARCHETYPE_TYPES:
+        return (
+            "Differentiate the BOUTIQUE-SPECIALIST model (Uproduction Events) against the "
+            "LARGE GLOBAL EVENT-MANAGEMENT NETWORK model in general terms — senior ownership, "
+            "flexibility, single point of contact, cost structure. "
+            "CRITICAL: do NOT name, abbreviate, or allude to any specific competing company or brand; "
+            "refer to the alternative only as 'large global event-management networks' / "
+            "'big agency networks'. Compare the MODELS, never named firms."
+        )
+    return f"Competitors to differentiate against (do not disparage): {', '.join(brief['competitors_to_beat']) or 'n/a'}"
+
+
 def generate_page(brief, lang, ask_fn, date):
     prompt = (
         f"LANGUAGE: {lang}\nPAGE TYPE: {brief['type']}\nTOPIC: {brief['topic']}\n"
         f"TARGET: improve '{brief['target_dimension']}' visibility.\n"
-        f"Competitors to differentiate against (do not disparage): {', '.join(brief['competitors_to_beat']) or 'n/a'}\n"
+        f"{_differentiation_line(brief)}\n"
         f"Include 3-5 FAQs (40-80 word answers). Write the body in {lang}."
     )
     correction = ""
