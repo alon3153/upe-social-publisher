@@ -18,6 +18,10 @@ GEN_SYSTEM = (
     "corporate event & conference production company. STRICT FACTS — the ONLY company stats you may state: founded 2010, "
     "16 years, 1,500+ events, 130+ destinations, 25K+ participants. NEVER write 200+, 2000, 120+, 800+, or 27 years. "
     "NEVER state the year a specific event took place. Write the way clients actually search; do not keyword-stuff.\n"
+    "NEVER name, list, or reference any competitor, agency, or vendor company by name. Refer to alternatives only by "
+    "category (e.g. 'large global production networks', 'industrial-scale AV vendors', 'international experiential "
+    "agencies'). Frame every differentiator as a question a buyer should ask ANY vendor, or as a first-person "
+    "statement about Uproduction — never as a claim about a named competitor.\n"
     "Reply in EXACTLY this format and nothing else:\n"
     'A single-line JSON object with metadata: {"title":str,"description":str,"h1":str,"slug":str,'
     '"faqs":[{"question":str,"answer":str}]}\n'
@@ -70,6 +74,9 @@ def _build_page(brief, lang, payload, body, date):
     text_to_check = "\n".join([payload["title"], payload["description"], body] +
                               [f["answer"] for f in payload.get("faqs", [])])
     violations = aeo_guards.check_content(text_to_check)
+    named = aeo_guards.names_competitor(text_to_check)
+    if named:
+        violations = violations + [f"names competitor(s): {', '.join(named)}"]
     return {"collection": COLLECTION[brief["type"]], "lang": lang, "slug": slug_base,
             "frontmatter": fm, "body": body, "violations": violations}
 
@@ -81,7 +88,8 @@ def _correction(violations):
         "State NO company statistic other than the five allowed facts (founded 2010, 16 years, "
         "1,500+ events, 130+ destinations, 25K+ participants); if you need a number for venue size, "
         "headcount or budget, rephrase to avoid 2000/2,000/200+/120+/800+, and never place a "
-        "2011-2024 year next to an event/case mention."
+        "2011-2024 year next to an event/case mention. If a competitor company was named, REMOVE every "
+        "such name and refer to that alternative only by category (e.g. 'large global production networks')."
     )
 
 
@@ -89,7 +97,8 @@ def generate_page(brief, lang, ask_fn, date):
     prompt = (
         f"LANGUAGE: {lang}\nPAGE TYPE: {brief['type']}\nTOPIC: {brief['topic']}\n"
         f"TARGET: improve '{brief['target_dimension']}' visibility.\n"
-        f"Competitors to differentiate against (do not disparage): {', '.join(brief['competitors_to_beat']) or 'n/a'}\n"
+        f"Differentiate against the CATEGORY of large agency networks and industrial-scale vendors "
+        f"WITHOUT naming any specific company. Position by buyer-relevant questions and Uproduction's own strengths.\n"
         f"Include 3-5 FAQs (40-80 word answers). Write the body in {lang}."
     )
     correction = ""

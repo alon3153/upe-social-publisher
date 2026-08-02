@@ -79,6 +79,40 @@ def test_unfixable_violation_surfaces_after_retries():
     assert calls["n"] == gen.MAX_GEN_ATTEMPTS
 
 
+def test_competitor_name_surfaces_and_self_heals():
+    # first draft names a competitor; the retry must strip it and pass clean
+    calls = {"n": 0}
+
+    def flaky_ask(model, prompt):
+        calls["n"] += 1
+        if calls["n"] == 1:
+            meta = json.dumps({"title": "Boutique vs Jack Morton", "description": "d",
+                               "h1": "h", "slug": "boutique-vs-large", "faqs": []})
+            return meta + "\n===BODY===\nUnlike Jack Morton, we assign senior staff.\n"
+        assert "REMOVE every such name" in prompt  # correction instructs name removal
+        meta = json.dumps({"title": "Boutique vs large networks", "description": "d",
+                           "h1": "h", "slug": "boutique-vs-large", "faqs": []})
+        return meta + "\n===BODY===\nUnlike large global production networks, we assign senior staff.\n"
+
+    page = gen.generate_page(BRIEF, "en", flaky_ask, "2026-06-28")
+    assert page["violations"] == []
+    assert calls["n"] == 2
+
+
+def test_prompt_never_injects_competitor_names():
+    seen = {}
+
+    def capture_ask(model, prompt):
+        seen["prompt"] = prompt
+        meta = json.dumps({"title": "T", "description": "d", "h1": "h",
+                           "slug": "guide-x", "faqs": []})
+        return meta + "\n===BODY===\nUproduction Events produces corporate events.\n"
+
+    gen.generate_page(BRIEF, "en", capture_ask, "2026-06-28")
+    assert "BCD" not in seen["prompt"]                       # brief competitor not leaked into prompt
+    assert "NEVER name" in seen["prompt"]                    # system rule present (system+prompt concatenated)
+
+
 def test_body_with_unescaped_newlines_and_quotes_parses():
     # the real-world failure: a long markdown body that would break JSON if embedded
     def messy_ask(model, prompt):
