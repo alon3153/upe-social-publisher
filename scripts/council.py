@@ -383,7 +383,11 @@ def render_html(cur, scorecard, verdict, applied, cadence=None):
                      f"<td>{s['engagement_rate_pct']}%{cav}</td><td>{sc.get(net,'—')}</td></tr>")
     sb_rows = "".join(
         f"<tr><td>{r['metric']}</td><td>{r['value']}{r['unit']}</td>"
-        f"<td>{r['target']}{r['unit']}</td><td>{r['status']}</td></tr>" for r in scorecard["rows"])
+        f"<td>{r['target']}{r['unit']}</td><td>{r['status']}</td></tr>" for r in scorecard["scored_rows"])
+    ctx_rows = "".join(
+        f"<tr><td>{r['metric']}</td><td dir='ltr'>{r['value']}{r['unit']}</td>"
+        f"<td dir='ltr'>{r['target']}{r['unit']}</td><td>{r['status']}</td></tr>"
+        for r in scorecard.get("context_rows", []))
     recs = "".join(
         f"<li><b>[{r.get('priority','')}]</b> {r.get('action','')} "
         f"<span style='color:#555'>— {r.get('expected_impact','')}</span> "
@@ -405,7 +409,7 @@ def render_html(cur, scorecard, verdict, applied, cadence=None):
 <div dir="rtl" style="direction:rtl;text-align:right;max-width:680px;">
 <h2>🏛️ מועצת השיווק — דוח יומי {d}</h2>
 {err_banner}
-<p style="font-size:16px;"><b>ציון כולל: {sc.get('overall','—')}/100</b> · scorecard עבר {scorecard['passed']}/{scorecard['total']}</p>
+<p style="font-size:16px;"><b>ציון כולל: {scorecard['weighted']}/100</b> · scorecard עבר {scorecard['passed']}/{scorecard['total']} · <span style="color:#888">קריאת המועצה (LLM): {sc.get('overall','—')}/100</span></p>
 <p style="background:#f6f6f6;padding:10px;border-right:3px solid #333;">{verdict.get('verdict_summary','—')}</p>
 
 <h3>תוצאות לפי ערוץ ({cur['period_days']} ימים)</h3>
@@ -417,6 +421,11 @@ def render_html(cur, scorecard, verdict, applied, cadence=None):
 <table dir="rtl" border="0" cellpadding="6" style="border-collapse:collapse;width:100%;font-size:13px;">
 <tr style="background:#222;color:#fff;"><th>מדד</th><th>ערך</th><th>יעד</th><th></th></tr>
 {sb_rows}</table>
+
+<h3>הקשר (לא נספר בציון)</h3>
+<table dir="rtl" border="0" cellpadding="6" style="border-collapse:collapse;width:100%;font-size:13px;color:#555;">
+<tr style="background:#666;color:#fff;"><th>מדד</th><th>ערך</th><th>יעד</th><th></th></tr>
+{ctx_rows}</table>
 
 <h3>✅ מה עבד</h3><ul>{chips(verdict.get('what_worked',[]))}</ul>
 <h3>❌ מה נכשל</h3><ul>{chips(verdict.get('what_failed',[]))}</ul>
@@ -439,8 +448,7 @@ def render_html(cur, scorecard, verdict, applied, cadence=None):
 
 def render_md(cur, scorecard, verdict, applied):
     return (f"# UPE Marketing Council — {_today()}\n\n"
-            f"Overall: {verdict.get('scores',{}).get('overall','—')}/100 · "
-            f"scorecard {scorecard['passed']}/{scorecard['total']}\n\n"
+            f"Overall (weighted): {scorecard['weighted']}/100 · scorecard {scorecard['passed']}/{scorecard['total']} · LLM read {verdict.get('scores',{}).get('overall','—')}/100\n\n"
             f"## Verdict\n{verdict.get('verdict_summary','—')}\n\n"
             f"## Totals\n```json\n{json.dumps(cur['totals'], ensure_ascii=False, indent=2)}\n```\n\n"
             f"## Auto-fixes applied\n" + "\n".join(f"- {f.get('action')} ({f.get('channel')})" for f in applied) +
