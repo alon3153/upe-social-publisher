@@ -47,6 +47,15 @@ def _today():
     return datetime.datetime.utcnow().strftime("%Y-%m-%d")
 
 
+def digital_attributed_leads(leads, digital_sources):
+    """Count opportunities whose LeadSource is a digital channel (case-insensitive).
+    Digital = not Word-of-Mouth. Proves the digital engine converts (spec Part 3 metric,
+    computable today from Salesforce by_source without a new form field)."""
+    by_source = (leads or {}).get("by_source") or {}
+    wanted = {s.lower() for s in digital_sources}
+    return sum(n for src, n in by_source.items() if str(src).lower() in wanted)
+
+
 # ---------------------------------------------------------------- scorecard ----
 def build_scorecard(cur, prev, leads):
     """Deterministic pass/fail vs targets. cur/prev are snapshot dicts."""
