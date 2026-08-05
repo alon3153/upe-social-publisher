@@ -33,6 +33,7 @@ sys.path.insert(0, str(ROOT / "scripts"))
 import metricool_analytics as ma
 import leads_source
 import seo_geo_source
+import site_inventory
 
 API_KEY = os.environ.get("ANTHROPIC_API_KEY", "")
 MODEL = os.environ.get("COUNCIL_MODEL") or "claude-sonnet-4-6"
@@ -205,6 +206,17 @@ produces a mechanical cliff in "growth" that is NOT a real audience collapse. Be
 systemic crash, check whether most of the delta comes from one network / one top post (typically
 YouTube) and say so explicitly in the verdict.
 
+EXISTING SITE ASSETS (LIVE on upe.co.il — treat as GROUND TRUTH):
+{site_inventory}
+CRITICAL: every page listed above already EXISTS. Do NOT recommend "create/build/write" a page,
+service, Brand Hub, llms.txt, or FAQ that is already in this inventory — that produces a DUPLICATE
+that splits ranking signal and pushes the original further from Top-3 (a hard UPE anti-pattern).
+When a target keyword maps to an existing page, phrase the recommendation as OPTIMIZE it
+(H1/title/schema/word-count), build INTERNAL LINKS to it from the {blog_hint}+ existing blog
+articles, and pursue OFF-PAGE authority — never "create". Only recommend a brand-new page if NO
+listed asset covers that intent, and say which existing pages you checked. If the inventory is
+unavailable (ok=false), fall back to your prior behaviour but hedge creation recommendations.
+
 DATA:
 {data}
 
@@ -243,12 +255,16 @@ in HEBREW, with EXACTLY these keys:
 }}"""
 
 
-def run_council(cur, prev, scorecard):
+def run_council(cur, prev, scorecard, inventory=None):
     if not API_KEY:
         return {"error": "ANTHROPIC_API_KEY not set"}
+    inv = inventory if inventory is not None else {"ok": False, "reason": "not fetched"}
+    blog_hint = inv.get("blog_article_count", 100) if inv.get("ok") else 100
     prompt = COUNCIL_PROMPT.format(
         data=json.dumps({"current": cur, "previous_totals": prev["totals"]}, ensure_ascii=False),
-        scorecard=json.dumps(scorecard, ensure_ascii=False))
+        scorecard=json.dumps(scorecard, ensure_ascii=False),
+        site_inventory=json.dumps(inv, ensure_ascii=False),
+        blog_hint=blog_hint)
     body = {
         "model": MODEL,
         "max_tokens": 16000,
@@ -488,6 +504,7 @@ def main():
     leads = leads_source.count(30)
     cur["leads"] = leads
     cur["seo_geo"] = seo_geo_source.fetch()
+    cur["site_inventory"] = site_inventory.fetch()
     scorecard = build_scorecard(cur, prev, leads, cur.get("seo_geo"))
 
     if a.no_llm:
@@ -495,7 +512,7 @@ def main():
                    "what_failed": [], "auto_fixes": [], "recommendations": [],
                    "follower_growth_plan": [], "leads_actions": []}
     else:
-        verdict = run_council(cur, prev, scorecard)
+        verdict = run_council(cur, prev, scorecard, cur.get("site_inventory"))
         if verdict.get("error"):
             print(f"council LLM error: {verdict['error']}", file=sys.stderr)
 

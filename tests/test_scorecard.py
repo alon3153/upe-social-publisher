@@ -1,8 +1,34 @@
 import json, pathlib
 import council
 import seo_geo_source
+import site_inventory
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
+
+
+def test_council_prompt_has_site_inventory_guardrail():
+    # REGRESSION (05.08.2026): the council was site-blind and kept recommending to
+    # "create" pages (נופש-חברה / אירוע-קונספט / Brand Hub / llms.txt) that already
+    # exist, which would cannibalize rankings. The prompt must carry the live inventory
+    # AND the anti-duplication instruction, and must format without KeyError.
+    p = council.COUNCIL_PROMPT.format(
+        data="{}", scorecard="{}",
+        site_inventory=json.dumps({"ok": True, "service_pages": ["נופש-חברה"]}, ensure_ascii=False),
+        blog_hint=169)
+    assert "EXISTING SITE ASSETS" in p
+    assert "Do NOT recommend" in p and "DUPLICATE" in p
+    assert "נופש-חברה" in p
+
+
+def test_site_inventory_degrades_without_token():
+    import os
+    tok = os.environ.pop("GH_PAT", None)
+    try:
+        r = site_inventory.fetch()
+        assert r["ok"] is False and "GH_PAT" in r["reason"]  # never fabricates, never raises
+    finally:
+        if tok is not None:
+            os.environ["GH_PAT"] = tok
 
 def test_weights_present_and_sum_to_100():
     t = json.loads((ROOT / "scripts" / "kpi_targets.json").read_text())
