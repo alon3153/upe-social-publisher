@@ -1,71 +1,71 @@
 {
-  "updated_at": "2026-08-04",
+  "updated_at": "2026-08-05",
   "scores": {
     "instagram": 18,
     "facebook": 5,
     "tiktok": 0,
-    "linkedin": 28,
-    "youtube": 42,
-    "google_organic_geo": 35,
-    "overall": 22
+    "linkedin": 32,
+    "youtube": 45,
+    "google_organic_geo": 22,
+    "overall": 28
   },
   "recommendations": [
     {
       "category": "gated",
       "priority": "P0",
-      "action": "תקן מיידי לחיבור Salesforce (HTTP 400 invalid_grant) — רענון OAuth token וחיבור מחדש של integration",
-      "expected_impact": "ללא CRM מחובר, אין יכולת לדווח על לידים מוסמכים, לייחס ערוצים, או לדעת אם UPE מגיעה ל-10 לידים/חודש — זה ה-blocker הקריטי ביותר לניהול השיווק.",
-      "channel": "crm"
-    },
-    {
-      "category": "gated",
-      "priority": "P0",
-      "action": "יצירת 5 עמודי נחיתה ממירים (עברית) לביטויי ה-top_opportunities של upe.co.il עם CTA ברור לטופס יצירת קשר",
-      "expected_impact": "148 קליקים/שבוע כבר מגיעים לאתר — עמוד ממיר עם offer ספציפי (לדוגמה: 'קבלו הצעת מחיר לנופש חברה') יכול להפוך 3-5% מהם ללידים מוסמכים ישירות.",
+      "action": "בנייה מיידית של דף Brand Hub (עברית + אנגלית) ב-upe.co.il: מי אנחנו, שירותי ליבה, לקוחות ידועים, case studies עם מספרים, llms.txt בשורש הדומיין — לאשר ולהעלות תוך 14 יום.",
+      "expected_impact": "פתיחת ציטוטים ב-ChatGPT/Perplexity על שאילתות 'חברת הפקת אירועים ישראל' ו-'incentive travel Israel' — AEO מ-0 ל-3+ מנועים תוך 30-60 יום; תומך גם ב-Google E-E-A-T ומשפר CTR אורגני.",
       "channel": "google_organic_geo"
     },
     {
       "category": "gated",
-      "priority": "P1",
-      "action": "השקת LinkedIn Newsletter חודשי בעברית בשם 'MICE Insider Israel' — תוכן: מגמות, case studies מרוסנים, ו-destination spotlight",
-      "expected_impact": "Newsletter ב-LinkedIn בונה opted-in audience ישיר; B2B decision-makers שנרשמים לניוזלטר הם warm leads — ממוצע open rate של 40%+ לעומת 20% ב-email.",
+      "priority": "P0",
+      "action": "יצירת 3 עמודי נחיתה ייעודיים ב-Hebrew SEO: (1) 'הפקת נופש חברה' (pos 11.9, 390 impr), (2) 'אירועים לחברות' (pos 15, 444 impr), (3) 'אירועי קונספט' (pos 19.9, 262 impr) — כל עמוד עם H1 מדויק, 800+ מילים, FAQ schema, ו-CTA ברור לפגישת ייעוץ.",
+      "expected_impact": "שיפור דירוג מ-Top-15/20 ל-Top-5 בתוך 60-90 יום; קליקים שבועיים מ-148 ל-300+ (יעד הסקורקארד); כל קליק ממונחים אלו הוא qualified intent — מנהל HR/CMO שמחפש פתרון.",
+      "channel": "google_organic_geo"
+    },
+    {
+      "category": "gated",
+      "priority": "P0",
+      "action": "השקת LinkedIn Personal Branding לפחות לשני אנשי מפתח (CEO/מנהל הפקה): פרופיל מעודכן, 3 פוסטים/שבוע מהפרופיל האישי עם insight מקצועי מהשטח — לא תוכן שיווקי.",
+      "expected_impact": "פרופיל אישי מייצר 8x יותר engagement מעמוד חברה ב-2026; מאחר ש-WoM הוא הערוץ הממיר — LinkedIn personal branding הוא הגשר בין WoM לדיגיטל-אטריביוטד leads; יעד: ליד ראשון digital-attributed מ-LinkedIn תוך 60 יום.",
       "channel": "linkedin"
     },
     {
       "category": "gated",
       "priority": "P1",
-      "action": "בניית סדרת YouTube 'Behind the Production' — 6 פרקים שמראים הפקה מ-brief ועד delivery עם CMO/HR client interviews",
-      "expected_impact": "B2B buyers צופים ב-3-5 סרטונים לפני פנייה לספק; סדרה עם internal routing (playlists, end screens) מכפילה watch time ומייצרת trust — הערוץ עם הROI הגבוה ביותר של UPE.",
+      "action": "פיתוח סדרת YouTube 'Behind the Production' — 4-6 וידאו של 8-15 דקות שמראים הפקה אמיתית מ-brief ועד live event: כלול מספרים, אתגרים, ו-CTA לדף שירות בתיאור. כותרות ממוקדות keyword (עברית + אנגלית).",
+      "expected_impact": "YouTube הוא מנוע discovery שמנועי AI מצטטים; סדרה קוהרנטית בונה watch time ו-topical authority; לפי benchmark תעשייתי B2B buyers צופים ב-3-5 וידאו לפני פנייה — זה מנגנון pre-qualification שמקצר מחזור מכירה.",
       "channel": "youtube"
     },
     {
       "category": "gated",
       "priority": "P1",
-      "action": "כתיבת 4 מאמרי thought leadership בעברית לבלוג upe.co.il עם מבנה AEO (FAQ, הגדרות ברורות, structured answers) על: 'מה עולה הפקת כנס לחברה?', 'איך בוחרים חברת הפקת אירועים?'",
-      "expected_impact": "מאמרים בפורמט AEO מגדילים ציטוטים ב-AI Overviews ו-ChatGPT; 73% מרוכשי B2B משתמשים ב-AI בתהליך הבדיקה — כל ציטוט הוא חשיפת top-of-funnel ללא עלות מדיה.",
-      "channel": "google_organic_geo"
+      "action": "הוספת CTA מובנה לכל פוסט Instagram ו-LinkedIn: 'מעוניין לשמוע על הפקת [סוג אירוע]? השאר פרטים בקישור ב-bio' — עם landing page ייעודי שמוגדר כ-LeadSource='Social/Instagram' ו-'Social/LinkedIn' ב-Salesforce.",
+      "expected_impact": "יצירת מסלול attribution ברור מסושיאל לליד; אפילו 1-2 leads/month מסושיאל יעבירו את המטריקה 'לידים מיוחסים לדיגיטל' מ-0 ל-1-2 — צעד ראשון קריטי לעבור את יעד ה-3.",
+      "channel": "instagram"
     },
     {
       "category": "gated",
       "priority": "P2",
-      "action": "בניית personal brand LinkedIn לשני-שלושה בכירים ב-UPE (CEO/Creative Director/Head of Incentive) עם לוח פרסום שבועי עצמאי",
-      "expected_impact": "פרופילים אישיים מייצרים 8x יותר engagement מדף חברה; בשוק ה-B2B הישראלי שבנוי על אמון אישי, personal brand של הנהלה הוא הנכס הדיגיטלי בעל ה-ROI הגבוה ביותר לטווח בינוני.",
-      "channel": "linkedin"
+      "action": "בניית תוכנית referral מובנית ל-Word of Mouth: סיום כל פרויקט עם 'thank you card' דיגיטלי + בקשה מפורשת להמלצה ל-LinkedIn + review ב-Google Business — לתעד referrals ב-Salesforce כ-LeadSource='Referral-Digital'.",
+      "expected_impact": "WoM מייצר 83% מהלידים; מבניית תהליך referral פורמלי ניתן להגדיל נפח מ-5 ל-7-8 WoM leads/month וגם לתעד חלקם כ-digital-attributed (Google review = digital touchpoint).",
+      "channel": "google_organic_geo"
     }
   ],
   "follower_growth_plan": [
-    "שלב 1 — בסיס (0-3 חודשים): פתיחת personal brand ל-3 בכירים ב-LinkedIn עם פרסום קבוע 3x/שבוע — זהו ה-single highest-leverage action לצמיחת followers B2B אורגנית בשוק הישראלי.",
-    "שלב 2 — YouTube Shorts Engine (1-4 חודשים): כל פרק 'Behind the Production' מחולק ל-3 Shorts ומפוזר ל-TikTok, Instagram Reels ו-YouTube — תוכן אחד מניב 4 נכסים, מכפיל reach ללא עלות נוספת.",
-    "שלב 3 — SEO→Social flywheel (3-6 חודשים): כל מאמר בלוג שמגיע לעמוד 1 מתורגם ל-LinkedIn carousel + Instagram infographic — traffic אורגני מ-Google מזין followers חדשים בסושיאל.",
-    "שלב 4 — Community & UGC (6-12 חודשים): יצירת hashtag ייחודי לאירועי UPE ועידוד לקוחות לתייג — user-generated content מאירועים הוא הדלק הזול ביותר לצמיחת followers אורגנית.",
-    "שלב 5 — LinkedIn Newsletter + AEO authority (12-24 חודשים): newsletter עם 1,000+ מנויים מייצר מנוע referral אורגני; ציטוטי AI מחזקים brand search שמוביל לגידול followers ממותגנים."
+    "שלב 1 (0-3 חודשים) — בניית תשתית: הגדרת 5 content pillars, Brand Hub, llms.txt, ו-LinkedIn personal branding לאנשי מפתח; יעד: הכפלת LinkedIn impressions ל-300+/שבוע.",
+    "שלב 2 (3-6 חודשים) — YouTube כמנוע צמיחה: סדרת 'Behind the Production' עם Shorts, SEO keywords בעברית ואנגלית, CTA לדף שירות; יעד: 500 subscribers YouTube, 1,000 LinkedIn followers.",
+    "שלב 3 (6-12 חודשים) — תוכן UGC ו-advocacy: לקוחות מרוצים מצלמים 30 שניות 'why UPE' → פרסום עם אישורם; מפגינים social proof אמיתי ששובר חסם הכניסה ל-WoM דיגיטלי.",
+    "שלב 4 (12-24 חודשים) — SEO compounding + AEO authority: עמודי תוכן עבריים בTop-3 ל-5 מונחי ליבה, ציטוטים ב-3+ מנועי AI, LinkedIn Newsletter עם 2,000+ מנויים; יעד: 15,000 followers מצטברים.",
+    "שלב 5 (24-36 חודשים) — Scale: תוכן בסרטוני אירועים בינלאומיים (ספרד, אירופה), שיתופי פעולה עם influencers מעולם ה-MICE, ו-cross-promotion עם ספקים (venues, airlines) לחשיפות צולבות; יעד: 500,000 followers."
   ],
   "leads_actions": [
-    "תיקון URGENT — Salesforce HTTP 400: ללא CRM מחובר, UPE עיוורת לגמרי לגבי מקור הלידים — זהו ה-action הראשון והדחוף ביותר לפני כל שאר הפעולות.",
-    "בניית 5 עמודי שירות ממירים בעברית (אירועים לחברות, הפקת נופש, אירועי קונספט וכו') עם טופס מקוצר (שם + חברה + טלפון + 'סוג האירוע') — 148 קליקים שבועיים כבר מגיעים לאתר ואין לאן להמיר אותם.",
-    "הפעלת LinkedIn Newsletter 'MICE Insider Israel' עם CTA בכל גיליון ל-discovery call חינמי של 20 דקות — warm leads שנרשמו מרצונם הם pipeline הכי איכותי שיש בלי הוצאת תקציב פרסום.",
-    "SEO quick-win: יצירת תוכן ל-'הפקת נופש חברה' (pos 11.9, 390 impressions) ו-'נופש חברה' (pos 14.8, 336 impressions) — שני ביטויים שב-top-15 ועם nudge תוכני יכולים לקפוץ ל-top-5 תוך 60 יום.",
-    "אימות מקור לידים קיימים: לוודא שכל ליד שנסגר בשבועות האחרונים מקבל LeadSource בסייספורס (Web/LinkedIn/Referral) — ללא attribution data לא ניתן לדעת מה לכפול ומה לסגור.",
-    "בניית offer ספציפי ל-upe-spain.com סביב 'international product launch event' (pos 11.1, 171 impressions) — עמוד ייעודי באנגלית עם case study יוצר נכס שמושך לידים אירופאיים ישירות ללא תלות בפה לאוזן."
+    "P0 — SEO עברי מיידי: להעלות 3 עמודי נחיתה ממוקדים (נופש חברה / אירועים לחברות / אירועי קונספט) עם CTA ברור — אלו המונחים עם הכי הרבה impression volume ו-intent גבוה; כל קליק שממיר = ליד digital-attributed.",
+    "P0 — LinkedIn Personal Branding: CEO + מנהל הפקה מתחילים לפרסם 3x/שבוע מהפרופיל האישי; כל DM שמגיע בעקבות פוסט מוגדר ב-Salesforce כ-LeadSource='LinkedIn-Organic'.",
+    "P0 — Referral Process: לאחר כל אירוע לשלוח ללקוח email מובנה עם בקשה להמלצה ל-3 קולגות + קישור ל-Google Review; WoM = הערוץ הממיר — להכפיל בו את ההשקעה.",
+    "P1 — AEO Brand Hub: להעלות Brand Hub + FAQ schema על דפי שירות — ציטוט ב-ChatGPT/Perplexity על 'best incentive travel Israel' = inbound qualified lead ללא עלות פר-קליק.",
+    "P1 — YouTube CTA: בכל וידאו להוסיף בתיאור קישור ל-landing page עם טופס 'קבל הצעת מחיר' — לתעד ב-Salesforce כ-LeadSource='YouTube-Organic'; לפי benchmark, B2B buyers צופים 3-5 וידאו לפני יצירת קשר.",
+    "P2 — Social CTA Infrastructure: לבנות landing page ייעודי לסושיאל עם טופס קצר (שם + חברה + סוג אירוע) — לחבר לכל bio ו-post CTA; יוצר מסלול attribution שמאפשר לעקוב אחר digital leads לראשונה."
   ]
 }
