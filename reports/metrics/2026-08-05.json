@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-05T08:02:40",
+  "generated_at": "2026-08-05T11:17:23",
   "period_days": 7,
   "networks": {
     "instagram": {
@@ -236,6 +236,9 @@
         ]
       }
     ],
-    "ok": true
+    "ok": true,
+    "weekly_clicks": 202,
+    "top3_keywords": 0,
+    "aeo_cited_engines": 5
   }
 }
