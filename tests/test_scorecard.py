@@ -1,5 +1,6 @@
 import json, pathlib
 import council
+import seo_geo_source
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 
@@ -64,6 +65,31 @@ def test_prompt_demotes_engagement():
     src = (ROOT / "scripts" / "council.py").read_text()
     assert "Maximize impressions, raise engagement" not in src
     assert "engagement/impressions are CONTEXT" in src
+
+def test_normalize_maps_guardian_nested_schema_to_flat_fields():
+    # REGRESSION (05.08.2026): the guardian writes a NESTED schema (sites[].clicks,
+    # sites[].top_opportunities, geo.cited) but the scorecard reads FLAT fields
+    # (weekly_clicks / top3_keywords / aeo_cited_engines). The mismatch pinned the
+    # daily score at 36 with AI-visibility falsely "not connected". normalize() bridges it.
+    raw = {"ok": True,
+           "sites": [
+               {"site": "https://upe.co.il/", "clicks": 145,
+                "top_opportunities": [["a", 9.2, 757], ["b", 2.0, 300]]},
+               {"site": "https://upe-spain.com/", "clicks": 60,
+                "top_opportunities": [["c", 15.0, 184]]}],
+           "geo": {"status": "ok", "cited": 3, "total": 7}}
+    n = seo_geo_source.normalize(raw)
+    assert n["weekly_clicks"] == 205          # 145 + 60, not 0
+    assert n["top3_keywords"] == 1            # only "b" at pos 2.0 <= 3
+    assert n["aeo_cited_engines"] == 3        # from geo.cited, not "not connected"
+
+def test_normalize_never_fabricates_when_source_dark():
+    # ok=False (no GH_PAT / fetch error) must pass through untouched — no invented zeros.
+    assert seo_geo_source.normalize({"ok": False, "reason": "x"}) == {"ok": False, "reason": "x"}
+    # ok=True but no sites -> leave organic fields UNSET so the scorecard honestly
+    # renders "not connected" rather than a fabricated 0-clicks pass/fail.
+    n = seo_geo_source.normalize({"ok": True, "geo": {"cited": 5}})
+    assert "weekly_clicks" not in n and n["aeo_cited_engines"] == 5
 
 def test_all_sources_unwired_does_not_inflate():
     # Salesforce + GSC both dark, but posting continues (UPE posts ~41/wk).
