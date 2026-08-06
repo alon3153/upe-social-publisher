@@ -1,0 +1,279 @@
+{
+  "generated_at": "2026-08-06T08:01:10",
+  "period_days": 7,
+  "networks": {
+    "instagram": {
+      "posts": 11,
+      "impressions": 526,
+      "reach": 317,
+      "interactions": 1,
+      "engagement_rate_pct": 0.19,
+      "caveat": null,
+      "top": {
+        "url": "https://www.instagram.com/p/DbhvinPHIm1/",
+        "content": "LO QUE NADIE TE CUENTA SOBRE ORGANIZAR UN EVENTO PARA 150 PERSONAS\n\nLa imagen que ven los asistentes: cócteles de bienvenida al atardecer, traslados en autocar ",
+        "impressions": 80,
+        "interactions": 0
+      }
+    },
+    "facebook": {
+      "posts": 9,
+      "impressions": 24,
+      "reach": 19,
+      "interactions": 0,
+      "engagement_rate_pct": 0.0,
+      "caveat": null,
+      "top": {
+        "url": null,
+        "content": "",
+        "impressions": 15,
+        "interactions": 0
+      }
+    },
+    "tiktok": {
+      "posts": 0,
+      "impressions": 0,
+      "reach": 0,
+      "interactions": 0,
+      "engagement_rate_pct": 0.0,
+      "top": null
+    },
+    "linkedin": {
+      "posts": 11,
+      "impressions": 147,
+      "reach": 0,
+      "interactions": 4,
+      "engagement_rate_pct": 2.72,
+      "caveat": null,
+      "top": {
+        "url": "https://www.linkedin.com/feed/update/urn:li:share:7489651392622669826",
+        "content": "",
+        "impressions": 25,
+        "interactions": 0
+      }
+    },
+    "youtube": {
+      "posts": 3,
+      "impressions": 11059,
+      "reach": 0,
+      "interactions": 0,
+      "engagement_rate_pct": 0.0,
+      "caveat": null,
+      "top": {
+        "url": null,
+        "content": "",
+        "impressions": 8526,
+        "interactions": 0
+      }
+    }
+  },
+  "totals": {
+    "posts": 34,
+    "impressions": 11756,
+    "reach": 336,
+    "interactions": 5,
+    "engagement_rate_pct": 0.04
+  },
+  "leads": {
+    "ok": true,
+    "qualified_leads": 5,
+    "new_opportunities": 5,
+    "lead_object_count": 0,
+    "period_days": 30,
+    "source": "salesforce",
+    "definition": "new Opportunities created (all)",
+    "by_source": {
+      "Word of mouth": 4,
+      "Existing Customer": 1
+    },
+    "dominant_source": "Word of mouth",
+    "dominant_share_pct": 80,
+    "attribution_gap": false,
+    "attribution_note": "4/5 מקורם 'Word of mouth' — זה הערוץ הממיר. להכפיל בו את ההשקעה."
+  },
+  "seo_geo": {
+    "generated_at": "2026-08-03",
+    "sites": [
+      {
+        "site": "https://upe.co.il/",
+        "clicks": 148,
+        "impressions": 38564,
+        "avg_position": 36.5,
+        "clicks_prev": 96,
+        "impressions_prev": 35354,
+        "top_opportunities": [
+          [
+            "אירועים לחברות",
+            15.0,
+            444
+          ],
+          [
+            "הפקת נופש חברה",
+            11.9,
+            390
+          ],
+          [
+            "נופש חברה",
+            14.8,
+            336
+          ],
+          [
+            "incentive travel companies",
+            15.9,
+            300
+          ],
+          [
+            "אירועי קונספט",
+            19.9,
+            262
+          ]
+        ]
+      },
+      {
+        "site": "https://upe-spain.com/",
+        "clicks": 54,
+        "impressions": 12656,
+        "avg_position": 25.1,
+        "clicks_prev": 45,
+        "impressions_prev": 14078,
+        "top_opportunities": [
+          [
+            "international product launch event",
+            11.1,
+            171
+          ],
+          [
+            "global product launch event",
+            10.1,
+            136
+          ],
+          [
+            "evento neutro en carbono",
+            11.2,
+            114
+          ],
+          [
+            "new hire team building",
+            15.3,
+            105
+          ],
+          [
+            "objetivos de un congreso",
+            19.9,
+            71
+          ]
+        ]
+      }
+    ],
+    "geo": {
+      "status": "ok",
+      "cited": 5,
+      "total": 7,
+      "rate": 71.4
+    },
+    "competitors": [
+      {
+        "term": "הפקת אירועים עסקיים",
+        "pos": null,
+        "top3": [
+          "www.arbelpro.co.il",
+          "pinchevents.co.il",
+          "mantver.co.il"
+        ]
+      },
+      {
+        "term": "חברת הפקת אירועים",
+        "pos": null,
+        "top3": [
+          "www.arbelpro.co.il",
+          "www.t.co.il",
+          "mantver.co.il"
+        ]
+      },
+      {
+        "term": "הפקת כנסים",
+        "pos": null,
+        "top3": [
+          "www.eron.co.il",
+          "rtspro.co.il",
+          "www.ortra.co.il"
+        ]
+      },
+      {
+        "term": "טיולי תמריץ לעובדים",
+        "pos": 4,
+        "top3": [
+          "www.elateva.co.il",
+          "mspirit.co.il",
+          "www.boutiqo.co.il"
+        ]
+      },
+      {
+        "term": "eventos corporativos españa",
+        "pos": null,
+        "top3": [
+          "www.eventoplus.com",
+          "www.creagroupevents.com",
+          "aevea.es"
+        ]
+      },
+      {
+        "term": "incentive travel spain",
+        "pos": null,
+        "top3": [
+          "madridexpert.com",
+          "tusetdmc.com",
+          "www.g20corporation.com"
+        ]
+      },
+      {
+        "term": "corporate events barcelona",
+        "pos": null,
+        "top3": [
+          "www.eventbrite.com",
+          "www.barcelona-life.com",
+          "tuseteventos.com"
+        ]
+      }
+    ],
+    "ok": true,
+    "weekly_clicks": 202,
+    "top3_keywords": 0,
+    "aeo_cited_engines": 5
+  },
+  "site_inventory": {
+    "ok": true,
+    "service_pages": [
+      "why-uproduction-events-trust",
+      "אירוע-קונספט",
+      "אירועים-אקסלוסיביים",
+      "אירועים-עסקיים-מיוחדים",
+      "אירועים-קולינרים",
+      "ארגון-כנסים",
+      "הפקת-אירועי-חברה",
+      "הפקת-אירועי-חברה-בחול",
+      "הפקת-אירועים-לחברות-הייטק",
+      "הפקת-אירועים-עסקיים",
+      "הפקת-כנסים",
+      "חברת-הפקות",
+      "טיולי-חברה",
+      "טיולי-תמריץ-בחול",
+      "טיולי-תמריץ-לחברות",
+      "כנסים-לחברות-הייטק",
+      "כנסים-עסקיים",
+      "נופש-חברה",
+      "נופש-חברה-בחול",
+      "נופש-חברה-עם-חבילת-ספא-לעובדים",
+      "נופשים-וטיולי-תמריץ"
+    ],
+    "service_count": 21,
+    "key_pages": {
+      "llms.txt": true,
+      "llms-full.txt": true,
+      "faq": true,
+      "services_index": true,
+      "brand_hub_trust": true
+    },
+    "blog_article_count": 237
+  }
+}
