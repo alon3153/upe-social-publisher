@@ -1,64 +1,64 @@
 {
-  "updated_at": "2026-08-06",
+  "updated_at": "2026-08-07",
   "source": "daily-council",
   "directives": [
     {
       "category": "safe_auto",
-      "action": "אסטרטגיית עוגנים לעמוד הפקת-כנסים: הכנת מפת אנכרים פנימיים מ-15+ מאמרים קיימים לעמוד הפקת-כנסים ולעמוד ארגון-כנסים",
-      "detail": "עמודי הפקת-כנסים וארגון-כנסים קיימים אך מתחרים (eron, rtspro, ortra) שולטים ב-Top-3. בניית רשת קישורים פנימיים מ-237 המאמרים הקיימים תגביר את ה-PageRank הפנימי ללא יצירת דף חדש; יש לאתר 15 מאמרים עם נפח חיפוש רלוונטי ולעדכן את anchor text לכוון לעמוד.",
-      "channel": "google_organic"
-    },
-    {
-      "category": "safe_auto",
-      "action": "מיפוי פרסום לפי שפה: יצירת תבנית ופילוח תוכן — עברית לישראל, ספרדית ל-upe-spain.com בלבד",
-      "detail": "פוסט ספרדי שפורסם בערוץ Instagram הישראלי מדלל את הרלוונטיות לקהל ה-ICP העברי ופוגע ב-reach האלגוריתמי; יש לבנות checklist שפה שיקבל אישור לפני פרסום.",
-      "channel": "instagram"
-    },
-    {
-      "category": "safe_auto",
-      "action": "הכנת לוח תוכן LinkedIn מבוסס וידאו-נייטיב: 3 נושאי thought-leadership לפרסום מפרופילים אישיים של מנהלי UPE",
-      "detail": "פרופילים אישיים מייצרים 8x engagement מפרופיל חברה ב-LinkedIn 2026; יש להכין 3 angles (סיפור לקוח אנונימי, לקח מהפקה, insight על תקצוב אירועים) לאישור וסיוע ביצוע.",
+      "action": "אסטרטגיית קפסול-תוכן LinkedIn: Personal-Led Content מהמייסד/מנהלים",
+      "detail": "פרופילים אישיים עולים על דפי חברה ב-2026 — לתכנן 2 פוסטים/שבוע כ'נקודת מבט מנהל' (lesson-learned מפרויקט, שאלה לקהל, behind-the-scenes החלטה), לא פוסטי חברה. ממחקר: decision-makers מבלים ~1 שעה ביום ב-LinkedIn.",
       "channel": "linkedin"
     },
     {
       "category": "safe_auto",
-      "action": "תכנון schema FAQ + HowTo על עמודי נופש-חברה ו-טיולי-תמריץ-לחברות הקיימים",
-      "detail": "עמודים אלה קיימים ומדורגים בפוזיציה 11-15 — הוספת structured data מסוג FAQ+HowTo תגביר סיכוי ל-AI Overview ול-AEO citation ותגן על נראות ה-AI הקיימת.",
-      "channel": "google_organic"
+      "action": "SEO עברי: מיפוי כוונה ואופטימיזציה של 5 דפי שירות קיימים לפי GSC top-opportunities",
+      "detail": "המונחים 'אירועים לחברות' (444 impressions, מיקום 15), 'הפקת נופש חברה' (390, מיקום 11.9) ו-'נופש חברה' (336, מיקום 14.8) כבר ממופים לדפים קיימים — לאפטם H1/Title/schema/word-count בדפים הרלוונטיים ולבנות internal links מ-238 כתבות הבלוג אליהם. אין ליצור דפים חדשים.",
+      "channel": "google_organic_geo"
     },
     {
       "category": "safe_auto",
-      "action": "הכנת לוח YouTube: 2 פורמטים לאישור — 'Behind the Scenes' 60-90 שניות ו-Deep Dive 8-12 דקות",
-      "detail": "YouTube הוא ערוץ הנפח היחיד (11K חשיפות). B2B YouTube בעל פלייליסטים ממוקדים ותיוג SEO מניב discovery ארוך-טווח ו-LLM citations; יש לתכנן 2 פוסטים/שבוע עם keyword-rich titles בעברית ובאנגלית.",
+      "action": "אסטרטגיית YouTube: Playlists ממוקדות-buyer + keyword-rich titles בעברית",
+      "detail": "YouTube הוא מנוע גילוי ש-LLMs מצטטים ממנו — לארגן 3 פלייליסטים (כנסים, טיולי תמריץ, הפקות חברה) ולוודא שכל כותרת מכילה את מונח ה-SEO העברי המרכזי ב-40 התווים הראשונים. שומר על קצב 2-3 סרטונים/שבוע לצבירת compounding views.",
       "channel": "youtube"
     },
     {
       "category": "safe_auto",
-      "action": "ניתוח מתחרים Top-3 להפקת-אירועים-עסקיים (arbelpro, mantver) ומיפוי פערי תוכן ב-H1/title/word-count לעמוד הקיים",
-      "detail": "עמוד הפקת-אירועים-עסקיים קיים אך לא מדורג; השוואת ה-H1, title tag, ספירת מילים ו-schema מול arbelpro ו-mantver תחשוף gap ספציפי להגיש לאישור.",
-      "channel": "google_organic"
+      "action": "Instagram: מעבר לתוכן עברי מלא + פורמט Carousel B2B",
+      "detail": "הפוסט המוביל של השבוע הוא בספרדית (upe-spain.com) — בשוק הישראלי כל תוכן Instagram צריך להיות בעברית. לאמץ פורמט carousel ('5 דברים שלא ידעת על הפקת כנס ל-150 איש') שמוכח כממיר קהל B2B ישראלי.",
+      "channel": "instagram"
+    },
+    {
+      "category": "safe_auto",
+      "action": "AEO/GEO: הרחבת FAQ קיים עם שאלות conversational-intent לכיסוי AI-snippets",
+      "detail": "דף ה-FAQ קיים — לאפטם אותו עם 10-15 שאלות בפורמט 'מהי חברת הפקת אירועים המובילה בישראל?' ותשובות ישירות ב-40-60 מילה. מבנה FAQ Schema מוסיף על הציטוטים ב-5 מנועי AI הקיימים.",
+      "channel": "google_organic_geo"
+    },
+    {
+      "category": "safe_auto",
+      "action": "TikTok: קדנסת תוכן מינימלית של Reels/Shorts — רכבו על ויזואל אירועים קיים",
+      "detail": "תוצרי וידאו קיימים מ-YouTube ניתנים לחיתוך ל-Shorts/Reels (30-60 שניות) — לתכנן 2-3 קטעים/שבוע מחומר מצולם קיים. TikTok מייצר reach organically בניגוד ל-Facebook, ולאירועים ויזואליים כמו UPE יש פוטנציאל גבוה.",
+      "channel": "tiktok"
     }
   ],
   "channel_cadence": {
     "facebook": {
       "max_posts_per_week": 2,
-      "reason": "9 פוסטים הניבו 24 חשיפות ו-0 אינטראקציות — ROI אפסי. להפחית לתדירות מינימלית (פרסום ארכיב/מיתוג בלבד) ולא לבזבז קיבולת אישור על ערוץ שאינו ממיר."
+      "reason": "26 impressions ו-0 אינטראקציות ב-9 פוסטים — ערוץ כמעט מת לB2B ישראלי. 2 פוסטים/שבוע מספיקים לנוכחות מינימלית מבלי לבזבז משאבי אישור."
     },
     "instagram": {
       "max_posts_per_week": 5,
-      "reason": "11 פוסטים ל-317 reach — תדירות נוכחית גבוהה מדי יחסית לגודל הקהל; עדיף 5 פוסטים איכותיים בעברית עם visual מקצועי מאשר 11 פוסטים מעורבבי-שפה."
+      "reason": "544 impressions ל-11 פוסטים עם engagement נמוך — לצמצם תדירות ולהשקיע באיכות Carousel עברי. 5 פוסטים/שבוע שומרים על נוכחות בלי over-posting."
     },
     "linkedin": {
       "max_posts_per_week": 4,
-      "reason": "3-5 פוסטים/שבוע הוא ה-sweet spot לפרופיל B2B ב-2026; חלוקה: 2 מפרופיל חברה + 2 מפרופילים אישיים של מנהלים. פרסום יומי מרסן reach."
+      "reason": "LinkedIn הוא הערוץ B2B הממיר ביותר ב-2026 — 2.38% engagement rate מאשר קהל רלוונטי. 4 פוסטים/שבוע (2 חברה + 2 personal-led מנהלים) לצמיחה מואצת."
     },
     "tiktok": {
       "max_posts_per_week": 3,
-      "reason": "כרגע 0 — יש להפעיל בהדרגה עם 3 פוסטים/שבוע. קהל HR/CMO הצעיר נמצא ב-TikTok ו-Reels; ניתן לשחזר את תוכן ה-Instagram לפורמט אנכי ללא עלות ייצור גדולה."
+      "reason": "כרגע 0 פעילות — להתחיל בקדנסת 3/שבוע עם repurposed video כדי לבנות baseline ולמדוד reach organically לפני הגדלה."
     },
     "youtube": {
       "max_posts_per_week": 2,
-      "reason": "YouTube מניב את הנפח הגדול ביותר בפלטפורמה (11K חשיפות ל-3 פוסטים); 2 פוסטים/שבוע מאוזן בין עומס ייצור לתדירות שמייצרת discovery אורגני מצטבר."
+      "reason": "3 פוסטים ייצרו 9,725 impressions (93% מכלל החשיפות) — ROI הכי גבוה. 2 סרטונים/שבוע ריאליים עם approval gate ומספיקים לצמיחת channel ב-9-12 חודשים."
     }
   },
   "channel_priority": [
@@ -69,25 +69,26 @@
     "tiktok"
   ],
   "channel_plan_basis": [
-    "facebook: 9 פוסטים הניבו 24 חשיפות ו-0 אינטראקציות — ROI אפסי. להפחית לתדירות מינימלית (פרסום ארכיב/מיתוג בלבד) ולא לבזבז קיבולת אישור על ערוץ שאינו ממיר.",
-    "instagram: 11 פוסטים ל-317 reach — תדירות נוכחית גבוהה מדי יחסית לגודל הקהל; עדיף 5 פוסטים איכותיים בעברית עם visual מקצועי מאשר 11 פוסטים מעורבבי-שפה.",
-    "linkedin: 3-5 פוסטים/שבוע הוא ה-sweet spot לפרופיל B2B ב-2026; חלוקה: 2 מפרופיל חברה + 2 מפרופילים אישיים של מנהלים. פרסום יומי מרסן reach.",
-    "tiktok: כרגע 0 — יש להפעיל בהדרגה עם 3 פוסטים/שבוע. קהל HR/CMO הצעיר נמצא ב-TikTok ו-Reels; ניתן לשחזר את תוכן ה-Instagram לפורמט אנכי ללא עלות ייצור גדולה.",
-    "youtube: YouTube מניב את הנפח הגדול ביותר בפלטפורמה (11K חשיפות ל-3 פוסטים); 2 פוסטים/שבוע מאוזן בין עומס ייצור לתדירות שמייצרת discovery אורגני מצטבר."
+    "facebook: 26 impressions ו-0 אינטראקציות ב-9 פוסטים — ערוץ כמעט מת לB2B ישראלי. 2 פוסטים/שבוע מספיקים לנוכחות מינימלית מבלי לבזבז משאבי אישור.",
+    "instagram: 544 impressions ל-11 פוסטים עם engagement נמוך — לצמצם תדירות ולהשקיע באיכות Carousel עברי. 5 פוסטים/שבוע שומרים על נוכחות בלי over-posting.",
+    "linkedin: LinkedIn הוא הערוץ B2B הממיר ביותר ב-2026 — 2.38% engagement rate מאשר קהל רלוונטי. 4 פוסטים/שבוע (2 חברה + 2 personal-led מנהלים) לצמיחה מואצת.",
+    "tiktok: כרגע 0 פעילות — להתחיל בקדנסת 3/שבוע עם repurposed video כדי לבנות baseline ולמדוד reach organically לפני הגדלה.",
+    "youtube: 3 פוסטים ייצרו 9,725 impressions (93% מכלל החשיפות) — ROI הכי גבוה. 2 סרטונים/שבוע ריאליים עם approval gate ומספיקים לצמיחת channel ב-9-12 חודשים."
   ],
   "follower_growth_plan": [
-    "שנה 1 — בסיס: הפעלת thought leadership אישי ב-LinkedIn (CEO+מנהלים), YouTube סדרות בעברית ובאנגלית, ו-TikTok re-purpose — יעד: 5,000 followers cross-platform עם engagement אורגני מוכח.",
-    "שנה 1-2 — הגברה: כל פוסט YouTube/LinkedIn מוצלח (>500 views/impressions) מוגש לאישור להגברה ממומנת קטנה ($50-100) לקהל ICP מדויק (CMO/HR Israel+Europe) — ממנף את האורגני מבלי לבנות paid-dependency.",
-    "שנה 2 — שיתופי פעולה: partnerships עם influencers ישראלים בתחום HR/עסקים ו-MICE bloggers אירופאים לתוכן משותף — כל שיתוף חושף את UPE לעשרות אלפי followers חדשים.",
-    "שנה 2-3 — community: בניית קהילת LinkedIn Newsletter עברית 'אירוע עסקי חכם' — newsletter מניב subscriber notifications ו-reach גבוה משמעותית מפוסט רגיל.",
-    "לאורך כל הדרך: כל לקוח מרוצה מתבקש לתייג UPE בפוסט LinkedIn שלו לאחר האירוע — social proof אורגני שמוביל לגדילה ויראלית ב-B2B network effect."
+    "YouTube First: הגדלה ל-100+ subscribers ב-6 חודשים על-ידי 2 סרטונים/שבוע עם playlist architecture — YouTube מניע 93% מהחשיפות ויש בו פוטנציאל compounding growth ל-500K north-star.",
+    "LinkedIn Employee Advocacy Program: גיוס 5-10 עובדים לפרסם תוכן personal-led שבועי — כל עובד עם 500 חיבורים = 5,000 חשיפות אורגניות ללא תקציב.",
+    "Instagram Reels ויראליות: יצירת 1 Reel/שבוע מתוצרי אירועים ויזואליים ('60 שניות מהקלעים') — Reels מקבלים reach organi גבוה פי 3 מפוסט סטטי בAlgorithm הנוכחי.",
+    "TikTok Launch: הפעלת חשבון עם repurposed YouTube content — 3 פוסטים/שבוע ל-3 חודשים לבניית baseline algorithm seeding.",
+    "SEO Flywheel: כל Top-3 keyword שנכבש מייצר organic traffic שחלקו הופך לעוקבים ב-social דרך CTAs מוטמעים בדפי שירות ובכתבות בלוג.",
+    "Cross-Promotion: שיתופי תוכן עם לקוחות גדולים (tag mutual) ועם ספקי MICE ישראליים בלינקדאין — leverage קהלים קיימים של שותפים לבניית following מהיר."
   ],
   "leads_actions": [
-    "P0 — ייחוס WOM מיידי: הוספת שדה 'מי הפנה אותך' לטפסי יצירת קשר ולחתימות אימייל — הופך את 4 הלידים החודשיים הקיימים מ-dark לדיגיטל-attributed ומשיג את יעד ה-3 digital leads כבר בחודש הבא.",
-    "P0 — אופטימיזציית עמודי שירות לליד: הוספת CTA 'קבל הצעת מחיר לאירוע' + טופס קצר (שם, חברה, סוג אירוע, מועד) לכל אחד מ-21 עמודי השירות הקיימים — הסרת חיכוך מהמבקר האורגני.",
-    "P1 — LinkedIn outbound עם אינבאונד-hook: מנהל בכיר מגיב באופן אישי על כל תגובה/שאלה ב-LinkedIn ומזמין ל-call גילוי — ממנף את ה-WOM הקיים לדיגיטל.",
-    "P1 — SEO commercial quick-wins: אופטימיזציה של עמודי נופש-חברה (פוזיציה 14.8, 336 impressions) ו-הפקת-נופש-חברה (פוזיציה 11.9, 390 impressions) לתוך Top-5 — שני אלה הכי קרובים לדף 1 ויניבו קליקים מסחריים בתוך 30-45 יום.",
-    "P1 — תוכן AEO ממוקד: עדכון ה-FAQ הקיים ב-upe.co.il בשאלות שקהל ICP שואל ב-ChatGPT/Perplexity (למשל: 'כמה עולה הפקת כנס לחברות היי-טק?') — שומר ומגדיל את נראות ה-5 AI engines שכבר קיימת.",
-    "P2 — תהליך referral מובנה: אחרי כל אירוע מוצלח, שליחת הודעה אישית ללקוח עם בקשה להפנות קולגה + תמריץ (שדרוג קטן לאירוע הבא) — מגדיל את ערוץ ה-WOM הממיר מ-4 ל-6+ לידים/חודש."
+    "P0 — אופטימיזציה SEO של 3 דפי שירות קיימים לTop-3 (הפקת-כנסים, הפקת-אירועים-עסקיים, נופש-חברה): מיקום ממוצע 36.5 → Top-5 מייצר 10x קליקים לפי CTR curve, ומכאן לידים דיגיטליים ישירים דרך CTA קיים.",
+    "P0 — LinkedIn Personal-Led: 2 מנהלי UPE מפרסמים 2x/שבוע תוכן אישי מכוון ICP (CMO/HR ישראלי) — LinkedIn הוכח כהחזר הגבוה ביותר לB2B; decision-makers מבלים ~1 שעה יומית בפלטפורמה.",
+    "P1 — Word-of-Mouth מיסוד: הטמעת referral request ב-Salesforce flow אוטומטי 30 יום post-event — WOM כבר 80% מהלידים, מיסוד מכפיל את הקצב ל-6-8/חודש מבלי דיגיטל.",
+    "P1 — Case Study Pages (3 דפים חדשים לא בInventory): תוצאות מדידות מלקוחות אמיתיים + CTA — B2B buyers צורכים 13 pieces of content לפני engagement; case studies מקצרים את ה-funnel.",
+    "P1 — YouTube Intent Content: 2 סרטונים/חודש 'שאלות CMO/HR לפני בחירת חברת הפקה' — YouTube הפך למנוע גילוי שLLMs מצטטים ממנו, מייצר qualified-intent traffic.",
+    "P2 — Attribution Fix ב-Salesforce: לוסיף LeadSource = 'LinkedIn Organic' / 'Google Organic' / 'YouTube' לכל ליד דיגיטלי — כרגע 0 לידים מיוחסים לדיגיטל אך ייתכן שחלקם נכנסים כ'Word of Mouth' בהיעדר מיפוי; תיקון המיפוי יחשוף את הערוצים הדיגיטליים האמיתיים."
   ]
 }
