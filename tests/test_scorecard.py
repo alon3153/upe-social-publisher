@@ -20,15 +20,49 @@ def test_council_prompt_has_site_inventory_guardrail():
     assert "נופש-חברה" in p
 
 
-def test_site_inventory_degrades_without_token():
-    import os
-    tok = os.environ.pop("GH_PAT", None)
-    try:
-        r = site_inventory.fetch()
-        assert r["ok"] is False and "GH_PAT" in r["reason"]  # never fabricates, never raises
-    finally:
-        if tok is not None:
-            os.environ["GH_PAT"] = tok
+def test_site_inventory_degrades_without_token_or_checkout(monkeypatch):
+    # No token AND no local astro checkout → honest ok=False. Never fabricates, never raises.
+    monkeypatch.delenv("GH_PAT", raising=False)
+    monkeypatch.setenv("ASTRO_LOCAL_PATH", "/nonexistent/astro")
+    monkeypatch.setenv("ASTRO_REPO", "/nonexistent/astro")
+    monkeypatch.setattr(site_inventory, "PAT", "")
+    monkeypatch.setattr(site_inventory, "DEFAULT_LOCAL", "/nonexistent/astro-default")
+    r = site_inventory.fetch()
+    assert r["ok"] is False and "GH_PAT" in r["reason"]
+
+
+def test_site_inventory_reads_local_checkout_without_token(tmp_path, monkeypatch):
+    # REGRESSION (07.08.2026): GH_PAT is a cloud-only secret, so every local council run
+    # had the cannibalization guard silently OFF. A local astro checkout must satisfy it.
+    (tmp_path / site_inventory.SERVICES_DIR).mkdir(parents=True)
+    (tmp_path / site_inventory.SERVICES_DIR / "נופש-חברה.md").write_text("x", encoding="utf-8")
+    (tmp_path / site_inventory.SERVICES_DIR / "why-uproduction-events-trust.md").write_text("x", encoding="utf-8")
+    (tmp_path / site_inventory.PAGES_DIR).mkdir(parents=True)
+    for n in ("llms.txt.ts", "llms-full.txt.ts", "faq.astro", "[service].astro"):
+        (tmp_path / site_inventory.PAGES_DIR / n).write_text("x", encoding="utf-8")
+    (tmp_path / site_inventory.BLOG_DIRS[0]).mkdir(parents=True)
+    (tmp_path / site_inventory.BLOG_DIRS[0] / "a.md").write_text("x", encoding="utf-8")
+
+    monkeypatch.delenv("GH_PAT", raising=False)
+    monkeypatch.setattr(site_inventory, "PAT", "")
+    monkeypatch.setenv("ASTRO_LOCAL_PATH", str(tmp_path))
+    r = site_inventory.fetch()
+    assert r["ok"] is True
+    assert "נופש-חברה" in r["service_pages"] and r["service_count"] == 2
+    assert all(r["key_pages"].values())          # llms/faq/services index/brand hub all found
+    assert r["blog_article_count"] == 1          # missing en/es blog dirs must not crash
+    assert r["source"].startswith("local:")
+
+
+def test_site_inventory_ignores_half_cloned_checkout(tmp_path, monkeypatch):
+    # An empty dir must NOT be reported as "no service pages exist" — that would tell the
+    # council to create 21 duplicates of pages that are live.
+    monkeypatch.delenv("GH_PAT", raising=False)
+    monkeypatch.setattr(site_inventory, "PAT", "")
+    monkeypatch.setattr(site_inventory, "DEFAULT_LOCAL", "/nonexistent/astro-default")
+    monkeypatch.setenv("ASTRO_LOCAL_PATH", str(tmp_path))   # exists but has no services dir
+    monkeypatch.setenv("ASTRO_REPO", str(tmp_path))
+    assert site_inventory.fetch()["ok"] is False
 
 def test_weights_present_and_sum_to_100():
     t = json.loads((ROOT / "scripts" / "kpi_targets.json").read_text())

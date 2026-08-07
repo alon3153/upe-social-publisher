@@ -9,6 +9,16 @@ on:
         type: boolean
         default: false
 
+# Two overlapping runs both rewrite state/held_pages.json + aeo_history.json and then
+# race to push. On 02.08.2026 a manual dispatch and the scheduled run overlapped, the
+# second one hit "CONFLICT (content): state/held_pages.json" during `git pull --rebase`
+# and the whole persist step died — that week's scorecard was computed and then thrown
+# away. Serialise instead of cancelling: a probe that already burned API credit must be
+# allowed to finish and persist.
+concurrency:
+  group: aeo-state-write
+  cancel-in-progress: false
+
 jobs:
   aeo:
     runs-on: ubuntu-latest
@@ -69,5 +79,16 @@ jobs:
           # window never accumulates and citations re-verify from scratch.
           git add scripts/aeo_history.json state/held_pages.json state/citations.json 2>/dev/null || true
           git commit -m "chore(aeo): scorecard + citation/veto state $(date -u +%F)" || echo "no change"
-          git pull --rebase origin main
-          git push
+          # Retry the rebase+push: other jobs (daily monitor, council) push to main
+          # constantly, so a single attempt loses the race often enough to matter.
+          # Always abort a half-finished rebase before retrying, or the next attempt
+          # runs inside a broken rebase state and fails for the wrong reason.
+          for attempt in 1 2 3; do
+            if git pull --rebase origin main && git push; then
+              echo "persisted on attempt $attempt"; exit 0
+            fi
+            git rebase --abort || true
+            sleep $((attempt * 10))
+          done
+          echo "::error::AEO state could not be persisted after 3 attempts — this run's scorecard is NOT on main"
+          exit 1

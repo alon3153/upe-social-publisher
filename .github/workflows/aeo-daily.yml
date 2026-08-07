@@ -4,6 +4,12 @@ on:
     - cron: "0 6 * * *"        # every day 06:00 UTC
   workflow_dispatch:
 
+# Shares state/citations.json with the weekly loop — overlapping writers conflict on
+# `git pull --rebase` and the day's probe result is silently discarded (02.08.2026).
+concurrency:
+  group: aeo-state-write
+  cancel-in-progress: false
+
 jobs:
   monitor:
     runs-on: ubuntu-latest
@@ -40,5 +46,12 @@ jobs:
           # citations.json advances as the daily crawler verifies external pages
           git add scripts/aeo_daily_history.json state/citations.json 2>/dev/null || true
           git commit -m "chore(aeo): daily monitor history + citation state $(date -u +%F)" || echo "no change"
-          git pull --rebase origin main
-          git push
+          for attempt in 1 2 3; do
+            if git pull --rebase origin main && git push; then
+              echo "persisted on attempt $attempt"; exit 0
+            fi
+            git rebase --abort || true
+            sleep $((attempt * 10))
+          done
+          echo "::error::daily AEO history could not be persisted after 3 attempts"
+          exit 1
