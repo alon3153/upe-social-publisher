@@ -1,65 +1,70 @@
 {
-  "updated_at": "2026-08-07",
+  "updated_at": "2026-08-08",
   "scores": {
     "instagram": 22,
     "facebook": 5,
     "tiktok": 0,
     "linkedin": 38,
     "youtube": 55,
-    "google_organic_geo": 42,
-    "overall": 35
+    "google_organic_geo": 52,
+    "overall": 44
   },
   "recommendations": [
     {
       "category": "gated",
       "priority": "P0",
-      "action": "אופטימיזציה מיידית של 3 דפי שירות מרכזיים קיימים לTop-3: 'הפקת-אירועים-עסקיים', 'הפקת-כנסים', 'נופש-חברה' — H1 מדויק, title tag עם מונח ראשי, 1,200+ מילה, Schema Organization + Event, ו-5 internal links חדשים מכתבות בלוג קיימות לכל דף.",
-      "expected_impact": "מעבר ממיקום 12-16 לTop-3 תוך 60-90 יום — מייצר 3+ לידים דיגיטליים/חודש (GSC מראה 444-390 impressions לכל מונח ללא קליקים).",
-      "channel": "google_organic_geo"
+      "action": "אופטימיזציה מסחרית דחופה: עדכון H1/Title/Schema ב-5 דפי Top-Opportunity הקיימים (נופש-חברה, הפקת-אירועי-חברה, טיולי-תמריץ-לחברות, כנסים-עסקיים, הפקת-כנסים)",
+      "expected_impact": "מעבר ממיקום 12-16 ל-Top-3 ב-2-3 ביטויי ליבה תוך 60-90 יום — פוטנציאל של +150-200 קליקים אורגניים/שבוע ופתיחת מקור לידים דיגיטלי ראשון",
+      "channel": "google_organic"
     },
     {
       "category": "gated",
       "priority": "P0",
-      "action": "השקת LinkedIn Newsletter של UPE ('מאחורי הקלעים של הפקות') בתדירות חודשית + הפעלת employee advocacy: כל מנהל מפרסם תוכן אישי 2x/שבוע תחת פרופיל אישי.",
-      "expected_impact": "לפי מחקרי LinkedIn 2026 — personal-led content מייצר reach גבוה פי 5-7 מדף חברה; Newsletter צובר subscribers ישירות מ-ICP (CMO/HR).",
+      "action": "הפעלת מנוע לידים דיגיטלי: הוספת CTA ברור ('קבלו הצעת מחיר תוך 24 שעות') + טופס contact מקוצר לכל דף שירות קיים",
+      "expected_impact": "המרת תנועה אורגנית קיימת (148 קליקים/שבוע) ללידים מדידים ב-Salesforce — יצירת ייחוס דיגיטלי ראשון ומעבר מ-0 ל-3 לידים דיגיטליים/חודש",
+      "channel": "google_organic"
+    },
+    {
+      "category": "gated",
+      "priority": "P1",
+      "action": "LinkedIn Thought Leadership: גיוס 2-3 מנהלי UPE לפרסום 3 פוסטים/שבוע מסוג case study ו-behind-the-scenes — תוכן מאושר מראש לפי תהליך הגייטד",
+      "expected_impact": "הגדלת חשיפות LinkedIn פי 5-10x תוך 8 שבועות; פרופילים אישיים מייצרים אמון B2B ישיר ומשפיעים על pipeline לפי נתוני 2026",
       "channel": "linkedin"
     },
     {
       "category": "gated",
       "priority": "P1",
-      "action": "יצירת 3 Case Study Pages חדשות (לא קיימות ב-inventory) בפורמט 'לקוח + אתגר + פתרון + תוצאה מספרית' עבור כנסים, טיולי תמריץ ואירועי חברה — עם CTA ישיר לטופס פנייה.",
-      "expected_impact": "Case studies הם ה-trigger הסגירה העיקרי בB2B; דפים אלה ישמשו גם כ-AEO citations וגם כ-conversion pages עם organic traffic.",
-      "channel": "google_organic_geo"
-    },
-    {
-      "category": "gated",
-      "priority": "P1",
-      "action": "הפקת 2 סרטוני YouTube בחודש בפורמט 'שאלות שCMO שואל לפני שבוחר חברת הפקה' — עברית, 8-12 דקות, keyword-optimized title, description 300+ מילה.",
-      "expected_impact": "YouTube הוא מנוע שLLMs מצטטים ממנו — סרטונים כאלה מחזקים AEO ומייצרים intent-qualified traffic מ-CMOs/HRs בשלב research.",
+      "action": "YouTube: הפקת סדרת 6 סרטונים 'מאחורי הקלעים של אירוע חברה' — פלייליסט עם SEO מלא בעברית ובאנגלית",
+      "expected_impact": "חשיפות YouTube כבר מובילות (9,724/שבוע); תוכן עם search intent ('כיצד לארגן כנס לחברת הייטק') יפנה תנועה אורגנית לאתר ויהפוך לנכס חיפוש רב-שנתי",
       "channel": "youtube"
     },
     {
       "category": "gated",
       "priority": "P2",
-      "action": "קמפיין Word-of-Mouth מובנה: תוכנית referral פורמלית ללקוחות קיימים — בקשת הפניה מתוזמנת 30 יום אחרי אירוע, עם תמריץ ברור (upgrade, discount על אירוע הבא).",
-      "expected_impact": "WOM כבר 80% מהלידים — מיסוד המנגנון יכול להכפיל את קצב הפניות ל-6-8 לידים/חודש מהערוץ המוכח, בלי השקעת דיגיטל.",
-      "channel": "other"
+      "action": "upe-spain.com: אופטימיזציה SEO בספרדית/אנגלית לביטויים 'incentive travel spain' ו-'international product launch event' על הדפים הקיימים",
+      "expected_impact": "קליקים ספרדיים ירדו ב-14% למרות שהאתר קיים; טיפול בפערי Title/H1/Schema יכול להכפיל קליקים ב-upe-spain.com תוך 60 יום",
+      "channel": "google_organic"
+    },
+    {
+      "category": "gated",
+      "priority": "P2",
+      "action": "AEO/GEO: עדכון llms-full.txt ו-FAQ הקיימים עם case studies ממוספרים, תוצאות כמותיות ('הפקנו 40 אירועי חברה ב-2025 ב-12 מדינות') ו-structured data EventSeries",
+      "expected_impact": "שמירה ושיפור הנראות ב-5 מנועי AI; תוכן עם עובדות ספציפיות מוסמך יותר ל-AI citations ומגביר conversion rate של גולשים המגיעים מ-AI search",
+      "channel": "aeo"
     }
   ],
   "follower_growth_plan": [
-    "YouTube First: הגדלה ל-100+ subscribers ב-6 חודשים על-ידי 2 סרטונים/שבוע עם playlist architecture — YouTube מניע 93% מהחשיפות ויש בו פוטנציאל compounding growth ל-500K north-star.",
-    "LinkedIn Employee Advocacy Program: גיוס 5-10 עובדים לפרסם תוכן personal-led שבועי — כל עובד עם 500 חיבורים = 5,000 חשיפות אורגניות ללא תקציב.",
-    "Instagram Reels ויראליות: יצירת 1 Reel/שבוע מתוצרי אירועים ויזואליים ('60 שניות מהקלעים') — Reels מקבלים reach organi גבוה פי 3 מפוסט סטטי בAlgorithm הנוכחי.",
-    "TikTok Launch: הפעלת חשבון עם repurposed YouTube content — 3 פוסטים/שבוע ל-3 חודשים לבניית baseline algorithm seeding.",
-    "SEO Flywheel: כל Top-3 keyword שנכבש מייצר organic traffic שחלקו הופך לעוקבים ב-social דרך CTAs מוטמעים בדפי שירות ובכתבות בלוג.",
-    "Cross-Promotion: שיתופי תוכן עם לקוחות גדולים (tag mutual) ועם ספקי MICE ישראליים בלינקדאין — leverage קהלים קיימים של שותפים לבניית following מהיר."
+    "שלב 1 (0-3 חודשים): ביסוס — מנהלי UPE מפרסמים 3 פוסטים/שבוע ב-LinkedIn (thought leadership + case studies); כל אירוע מופק → Reel אינסטגרם + Short יוטיוב; יעד: 500 עוקבים לינקדאין חדשים/חודש",
+    "שלב 2 (3-9 חודשים): הגברה — כל Reel מצליח (>1,000 חשיפות) מועלה גם ל-YouTube Shorts וממוחזר ל-LinkedIn; לשתף פעולה עם 2-3 influencers ישראלים בתחום HR/event management; יעד: 1,000 עוקבים חדשים/חודש",
+    "שלב 3 (9-18 חודשים): הרחבה — Series ייעודית לYouTube 'אירועי חברה בעולם' (filming abroad events); ניוזלטר LinkedIn שבועי עם insights מהשוק; יעד: 2,500 עוקבים חדשים/חודש",
+    "שלב 4 (18-36 חודשים): Scale — UPE כ-media brand של תעשיית הפקת האירועים בישראל: Podcast, וובינרים ל-HR/CMO, partnership עם איגודים מקצועיים; יעד: 5,000+ עוקבים/חודש לכיוון 500K"
   ],
   "leads_actions": [
-    "P0 — אופטימיזציה SEO של 3 דפי שירות קיימים לTop-3 (הפקת-כנסים, הפקת-אירועים-עסקיים, נופש-חברה): מיקום ממוצע 36.5 → Top-5 מייצר 10x קליקים לפי CTR curve, ומכאן לידים דיגיטליים ישירים דרך CTA קיים.",
-    "P0 — LinkedIn Personal-Led: 2 מנהלי UPE מפרסמים 2x/שבוע תוכן אישי מכוון ICP (CMO/HR ישראלי) — LinkedIn הוכח כהחזר הגבוה ביותר לB2B; decision-makers מבלים ~1 שעה יומית בפלטפורמה.",
-    "P1 — Word-of-Mouth מיסוד: הטמעת referral request ב-Salesforce flow אוטומטי 30 יום post-event — WOM כבר 80% מהלידים, מיסוד מכפיל את הקצב ל-6-8/חודש מבלי דיגיטל.",
-    "P1 — Case Study Pages (3 דפים חדשים לא בInventory): תוצאות מדידות מלקוחות אמיתיים + CTA — B2B buyers צורכים 13 pieces of content לפני engagement; case studies מקצרים את ה-funnel.",
-    "P1 — YouTube Intent Content: 2 סרטונים/חודש 'שאלות CMO/HR לפני בחירת חברת הפקה' — YouTube הפך למנוע גילוי שLLMs מצטטים ממנו, מייצר qualified-intent traffic.",
-    "P2 — Attribution Fix ב-Salesforce: לוסיף LeadSource = 'LinkedIn Organic' / 'Google Organic' / 'YouTube' לכל ליד דיגיטלי — כרגע 0 לידים מיוחסים לדיגיטל אך ייתכן שחלקם נכנסים כ'Word of Mouth' בהיעדר מיפוי; תיקון המיפוי יחשוף את הערוצים הדיגיטליים האמיתיים."
+    "לידים דיגיטליים אפס → 3: הוספת CTA + טופס קצר לכל 21 דפי שירות קיימים (P0 urgent) — המרת 148 קליק/שבוע קיים לפחות ב-1-2% = 6-8 לידים דיגיטליים/חודש פוטנציאל",
+    "כפל WOM: לבנות תהליך post-project מסודר — אחרי כל אירוע מוצלח, שלחו ללקוח Email עם קישור לביקורת Google + LinkedIn Recommendation; לפי נתוני 2026, תוכנית הפניות מייצרת לידים מעולים ל-78% ממשווקי B2B",
+    "Hebrew SEO Sprint (60 יום): לאפטם H1/Title/Schema ב-5 דפי Top-Opportunity (נופש חברה, הפקת נופש חברה, אירועים לחברות, טיולי תמריץ, הפקת כנסים) — מעבר לTop-3 מייצר +100-200 קליקים/שבוע עם intent גבוה",
+    "LinkedIn Pipeline: CEO/מנהל בכיר מפרסם פוסט case study שבועי ('איך ארגנו כנס ל-300 עובדי הייטק') + CTA לשיחת ייעוץ; זהו ערוץ ה-B2B הדומיננטי ב-2026 עם 78% מלידי B2B",
+    "Salesforce Attribution: לוודא שכל ליד דיגיטלי חדש (מטופס האתר, מLinkedIn, מ-Google) נרשם ב-Salesforce עם LeadSource מדויק — ללא זה, לידים דיגיטליים יימדו כ-WOM ויסתרו את האפקטיביות האמיתית",
+    "WOM → Content: לבקש מ-4 לקוחות WOM קיימים לתת testimonial וידאו קצר (60 שניות) — להעלות ל-YouTube + LinkedIn + לשתב ב-Brand Hub הקיים; social proof מאמת המרה ומגביר CTR מדפי שירות"
   ]
 }
