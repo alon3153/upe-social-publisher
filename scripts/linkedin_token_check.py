@@ -1,13 +1,17 @@
 #!/usr/bin/env python3
 """LinkedIn token monitor: introspect the access token; if it is invalid or expires
-within EXPIRY_WARN_DAYS, email Alon to re-auth. Optionally auto-refresh if a
-LINKEDIN_REFRESH_TOKEN is present (LinkedIn 365-day refresh flow)."""
+within EXPIRY_WARN_DAYS, email Alon to re-auth.
+
+Token rotation is deliberately not attempted here. A GitHub Actions job cannot
+safely persist a rotated repository secret, and printing the replacement token
+would expose it in the job log. The separate refresh workflow persists tokens in
+Supabase for the publisher; this monitor owns only the manual re-auth alert.
+"""
 import os, sys, json, time, urllib.request, urllib.parse, urllib.error
 
 CID = os.environ.get("LINKEDIN_CLIENT_ID", "")
 CSECRET = os.environ.get("LINKEDIN_CLIENT_SECRET", "")
 TOKEN = os.environ.get("LINKEDIN_ACCESS_TOKEN", "")
-REFRESH = os.environ.get("LINKEDIN_REFRESH_TOKEN", "")
 RESEND_KEY = os.environ.get("RESEND_API_KEY", "")
 RESEND_FROM = os.environ.get("RESEND_FROM") or "uproduction <onboarding@resend.dev>"
 TO = os.environ.get("APPROVAL_TO") or "alon@upe.co.il"
@@ -26,14 +30,6 @@ def _post(url, fields):
 def introspect():
     return _post("https://www.linkedin.com/oauth/v2/introspectToken",
                  {"client_id": CID, "client_secret": CSECRET, "token": TOKEN})
-
-
-def refresh():
-    if not REFRESH:
-        return None
-    return _post("https://www.linkedin.com/oauth/v2/accessToken",
-                 {"grant_type": "refresh_token", "refresh_token": REFRESH,
-                  "client_id": CID, "client_secret": CSECRET})
 
 
 def email(subject, html):
@@ -74,21 +70,6 @@ def main():
 
     if active and (days_left is None or days_left > WARN_DAYS):
         print("token healthy"); return 0
-
-    # try silent refresh first
-    if REFRESH:
-        try:
-            t = refresh()
-            if t and t.get("access_token"):
-                print("REFRESHED. New access_token obtained (update LINKEDIN_ACCESS_TOKEN secret).")
-                print("NEW_ACCESS_TOKEN=" + t["access_token"])
-                if t.get("refresh_token"):
-                    print("NEW_REFRESH_TOKEN=" + t["refresh_token"])
-                email("✅ LinkedIn token חודש אוטומטית",
-                      reauth_html("הטוקן חודש — אמת שה-secret עודכן."))
-                return 0
-        except Exception as e:
-            print("refresh failed:", e)
 
     reason = "הטוקן לא תקף" if not active else f"הטוקן פג בעוד {days_left} ימים"
     email(f"⚠️ LinkedIn token — {reason}", reauth_html(reason))
