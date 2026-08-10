@@ -24,14 +24,17 @@ ACCOUNTS = [
     ("instagram", "ig_uproduction_spain", "instagram", "es"),
     ("linkedin",  "alon3153",    "linkedin", "en"),  # English company page (default org)
     ("linkedin",  "li_personal", "linkedin", "he"),  # Alon's personal profile (HE)
-    ("linkedin",  "li_natalia",  "linkedin", "he"),  # advocate — Natalia (personal, distinct HE variant)
-    ("linkedin",  "li_danielle", "linkedin", "he"),  # advocate — Danielle (personal, distinct HE variant)
+    ("linkedin",  "li_danielle", "linkedin", "he"),  # advocate — דניאל (personal, distinct HE variant)
+    ("linkedin",  "li_dorin",    "linkedin", "he"),  # advocate — דורין (personal, distinct HE variant)
     ("linkedin",  "li_spain",    "linkedin", "es"),  # Uproduction Spain company page (ES)
 ]
 
 # Employee-advocacy: each advocate posts a DISTINCT variant of the same HE topic
 # (never an identical copy of Alon's post — that would read as a pod and get throttled).
-ADVOCATE_NAMES = {"li_natalia": "נטליה", "li_danielle": "דניאל"}
+# li_dorin/li_danielle only actually publish once that person OAuth-connects their
+# own LinkedIn via the linkedin-oauth edge fn (?advocate=dorin / ?advocate=daniel);
+# until then publish_approved.py returns "advocate not connected" and skips them.
+ADVOCATE_NAMES = {"li_danielle": "דניאל", "li_dorin": "דורין"}
 ANTHROPIC_API_KEY = os.environ.get("ANTHROPIC_API_KEY", "")
 GEN_MODEL = os.environ.get("GEN_MODEL", "claude-sonnet-4-6")
 

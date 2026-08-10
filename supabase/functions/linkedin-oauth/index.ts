@@ -19,6 +19,8 @@ const SCOPES = "w_member_social r_basicprofile";
 const ADVOCATES: Record<string, string> = {
   natalia: "נטליה",
   danielle: "דניאל",
+  daniel: "דניאל",
+  dorin: "דורין",
 };
 
 async function loadConfig() {
