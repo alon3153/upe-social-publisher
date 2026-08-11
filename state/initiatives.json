@@ -281,7 +281,7 @@
       }
     ],
     "created": "2026-06-28",
-    "updated": "2026-08-10",
+    "updated": "2026-08-11",
     "kind": "recommendation",
     "priority": "P0",
     "channel": "linkedin",
@@ -300,7 +300,7 @@
       }
     ],
     "created": "2026-06-28",
-    "updated": "2026-08-10",
+    "updated": "2026-08-11",
     "kind": "recommendation",
     "priority": "P1",
     "channel": "youtube",
@@ -502,7 +502,7 @@
       }
     ],
     "created": "2026-06-29",
-    "updated": "2026-08-10",
+    "updated": "2026-08-11",
     "kind": "recommendation",
     "priority": "P0",
     "channel": "linkedin",
@@ -521,7 +521,7 @@
       }
     ],
     "created": "2026-06-29",
-    "updated": "2026-08-10",
+    "updated": "2026-08-11",
     "kind": "recommendation",
     "priority": "P0",
     "channel": "youtube",
@@ -540,7 +540,7 @@
       }
     ],
     "created": "2026-06-29",
-    "updated": "2026-08-10",
+    "updated": "2026-08-11",
     "kind": "recommendation",
     "priority": "P1",
     "channel": "linkedin",
@@ -577,7 +577,7 @@
       }
     ],
     "created": "2026-06-29",
-    "updated": "2026-08-10",
+    "updated": "2026-08-11",
     "kind": "recommendation",
     "priority": "P1",
     "channel": "tiktok",
@@ -596,7 +596,7 @@
       }
     ],
     "created": "2026-06-29",
-    "updated": "2026-08-10",
+    "updated": "2026-08-11",
     "kind": "recommendation",
     "priority": "P2",
     "channel": "facebook",
@@ -747,7 +747,7 @@
       }
     ],
     "created": "2026-06-30",
-    "updated": "2026-08-10",
+    "updated": "2026-08-11",
     "kind": "recommendation",
     "priority": "P0",
     "channel": "linkedin",
@@ -766,7 +766,7 @@
       }
     ],
     "created": "2026-06-30",
-    "updated": "2026-08-10",
+    "updated": "2026-08-11",
     "kind": "recommendation",
     "priority": "P0",
     "channel": "tiktok",
@@ -785,7 +785,7 @@
       }
     ],
     "created": "2026-06-30",
-    "updated": "2026-08-10",
+    "updated": "2026-08-11",
     "kind": "recommendation",
     "priority": "P0",
     "channel": "linkedin",
@@ -804,7 +804,7 @@
       }
     ],
     "created": "2026-06-30",
-    "updated": "2026-08-10",
+    "updated": "2026-08-11",
     "kind": "recommendation",
     "priority": "P1",
     "channel": "linkedin",
@@ -823,7 +823,7 @@
       }
     ],
     "created": "2026-06-30",
-    "updated": "2026-08-10",
+    "updated": "2026-08-11",
     "kind": "recommendation",
     "priority": "P1",
     "channel": "youtube",
@@ -842,7 +842,7 @@
       }
     ],
     "created": "2026-06-30",
-    "updated": "2026-08-10",
+    "updated": "2026-08-11",
     "kind": "recommendation",
     "priority": "P2",
     "channel": "youtube",
@@ -993,7 +993,7 @@
       }
     ],
     "created": "2026-07-01",
-    "updated": "2026-08-10",
+    "updated": "2026-08-11",
     "kind": "recommendation",
     "priority": "P0",
     "channel": "linkedin",
@@ -1030,7 +1030,7 @@
       }
     ],
     "created": "2026-07-01",
-    "updated": "2026-08-10",
+    "updated": "2026-08-11",
     "kind": "recommendation",
     "priority": "P1",
     "channel": "youtube",
@@ -1049,7 +1049,7 @@
       }
     ],
     "created": "2026-07-01",
-    "updated": "2026-08-10",
+    "updated": "2026-08-11",
     "kind": "recommendation",
     "priority": "P1",
     "channel": "linkedin",
@@ -1068,7 +1068,7 @@
       }
     ],
     "created": "2026-07-01",
-    "updated": "2026-08-10",
+    "updated": "2026-08-11",
     "kind": "recommendation",
     "priority": "P2",
     "channel": "google_organic_geo",
@@ -1087,7 +1087,7 @@
       }
     ],
     "created": "2026-07-01",
-    "updated": "2026-08-10",
+    "updated": "2026-08-11",
     "kind": "recommendation",
     "priority": "P2",
     "channel": "instagram",
@@ -1250,7 +1250,7 @@
       }
     ],
     "created": "2026-07-02",
-    "updated": "2026-08-10",
+    "updated": "2026-08-11",
     "kind": "recommendation",
     "priority": "P0",
     "channel": "linkedin",
@@ -1269,7 +1269,7 @@
       }
     ],
     "created": "2026-07-02",
-    "updated": "2026-08-10",
+    "updated": "2026-08-11",
     "kind": "recommendation",
     "priority": "P0",
     "channel": "linkedin",
@@ -1288,7 +1288,7 @@
       }
     ],
     "created": "2026-07-02",
-    "updated": "2026-08-10",
+    "updated": "2026-08-11",
     "kind": "recommendation",
     "priority": "P1",
     "channel": "google_organic_geo",
@@ -1307,7 +1307,7 @@
       }
     ],
     "created": "2026-07-02",
-    "updated": "2026-08-10",
+    "updated": "2026-08-11",
     "kind": "recommendation",
     "priority": "P1",
     "channel": "instagram",
@@ -1326,7 +1326,7 @@
       }
     ],
     "created": "2026-07-02",
-    "updated": "2026-08-10",
+    "updated": "2026-08-11",
     "kind": "recommendation",
     "priority": "P1",
     "channel": "google_organic_geo",
@@ -1345,7 +1345,7 @@
       }
     ],
     "created": "2026-07-02",
-    "updated": "2026-08-10",
+    "updated": "2026-08-11",
     "kind": "recommendation",
     "priority": "P2",
     "channel": "facebook",
@@ -1508,7 +1508,7 @@
       }
     ],
     "created": "2026-07-03",
-    "updated": "2026-08-10",
+    "updated": "2026-08-11",
     "kind": "recommendation",
     "priority": "P0",
     "channel": "google_organic_geo",
@@ -1527,7 +1527,7 @@
       }
     ],
     "created": "2026-07-03",
-    "updated": "2026-08-10",
+    "updated": "2026-08-11",
     "kind": "recommendation",
     "priority": "P0",
     "channel": "linkedin",
@@ -1546,7 +1546,7 @@
       }
     ],
     "created": "2026-07-03",
-    "updated": "2026-08-10",
+    "updated": "2026-08-11",
     "kind": "recommendation",
     "priority": "P1",
     "channel": "linkedin",
@@ -1565,7 +1565,7 @@
       }
     ],
     "created": "2026-07-03",
-    "updated": "2026-08-10",
+    "updated": "2026-08-11",
     "kind": "recommendation",
     "priority": "P1",
     "channel": "linkedin",
@@ -1584,7 +1584,7 @@
       }
     ],
     "created": "2026-07-03",
-    "updated": "2026-08-10",
+    "updated": "2026-08-11",
     "kind": "recommendation",
     "priority": "P1",
     "channel": "google_organic_geo",
@@ -1603,7 +1603,7 @@
       }
     ],
     "created": "2026-07-03",
-    "updated": "2026-08-10",
+    "updated": "2026-08-11",
     "kind": "recommendation",
     "priority": "P2",
     "channel": "youtube",
@@ -1766,7 +1766,7 @@
       }
     ],
     "created": "2026-07-04",
-    "updated": "2026-08-10",
+    "updated": "2026-08-11",
     "kind": "recommendation",
     "priority": "P0",
     "channel": "linkedin",
@@ -1785,7 +1785,7 @@
       }
     ],
     "created": "2026-07-04",
-    "updated": "2026-08-10",
+    "updated": "2026-08-11",
     "kind": "recommendation",
     "priority": "P0",
     "channel": "google_organic_geo",
@@ -1804,7 +1804,7 @@
       }
     ],
     "created": "2026-07-04",
-    "updated": "2026-08-10",
+    "updated": "2026-08-11",
     "kind": "recommendation",
     "priority": "P1",
     "channel": "linkedin",
@@ -1823,7 +1823,7 @@
       }
     ],
     "created": "2026-07-04",
-    "updated": "2026-08-10",
+    "updated": "2026-08-11",
     "kind": "recommendation",
     "priority": "P1",
     "channel": "google_organic_geo",
@@ -1842,7 +1842,7 @@
       }
     ],
     "created": "2026-07-04",
-    "updated": "2026-08-10",
+    "updated": "2026-08-11",
     "kind": "recommendation",
     "priority": "P1",
     "channel": "youtube",
@@ -1861,7 +1861,7 @@
       }
     ],
     "created": "2026-07-04",
-    "updated": "2026-08-10",
+    "updated": "2026-08-11",
     "kind": "recommendation",
     "priority": "P2",
     "channel": "google_organic_geo",
@@ -2030,7 +2030,7 @@
       }
     ],
     "created": "2026-07-07",
-    "updated": "2026-08-10",
+    "updated": "2026-08-11",
     "kind": "recommendation",
     "priority": "P0",
     "channel": "linkedin",
@@ -2049,7 +2049,7 @@
       }
     ],
     "created": "2026-07-07",
-    "updated": "2026-08-10",
+    "updated": "2026-08-11",
     "kind": "recommendation",
     "priority": "P1",
     "channel": "linkedin",
@@ -2068,7 +2068,7 @@
       }
     ],
     "created": "2026-07-07",
-    "updated": "2026-08-10",
+    "updated": "2026-08-11",
     "kind": "recommendation",
     "priority": "P1",
     "channel": "youtube",
@@ -2087,7 +2087,7 @@
       }
     ],
     "created": "2026-07-07",
-    "updated": "2026-08-10",
+    "updated": "2026-08-11",
     "kind": "recommendation",
     "priority": "P1",
     "channel": "google_organic_geo",
@@ -2106,7 +2106,7 @@
       }
     ],
     "created": "2026-07-07",
-    "updated": "2026-08-10",
+    "updated": "2026-08-11",
     "kind": "recommendation",
     "priority": "P2",
     "channel": "instagram",
@@ -2269,7 +2269,7 @@
       }
     ],
     "created": "2026-07-08",
-    "updated": "2026-08-10",
+    "updated": "2026-08-11",
     "kind": "recommendation",
     "priority": "P0",
     "channel": "linkedin",
@@ -2288,7 +2288,7 @@
       }
     ],
     "created": "2026-07-08",
-    "updated": "2026-08-10",
+    "updated": "2026-08-11",
     "kind": "recommendation",
     "priority": "P0",
     "channel": "google_organic_geo",
@@ -2307,7 +2307,7 @@
       }
     ],
     "created": "2026-07-08",
-    "updated": "2026-08-10",
+    "updated": "2026-08-11",
     "kind": "recommendation",
     "priority": "P1",
     "channel": "instagram",
@@ -2326,7 +2326,7 @@
       }
     ],
     "created": "2026-07-08",
-    "updated": "2026-08-10",
+    "updated": "2026-08-11",
     "kind": "recommendation",
     "priority": "P1",
     "channel": "youtube",
@@ -2345,7 +2345,7 @@
       }
     ],
     "created": "2026-07-08",
-    "updated": "2026-08-10",
+    "updated": "2026-08-11",
     "kind": "recommendation",
     "priority": "P2",
     "channel": "linkedin",
@@ -2364,7 +2364,7 @@
       }
     ],
     "created": "2026-07-08",
-    "updated": "2026-08-10",
+    "updated": "2026-08-11",
     "kind": "recommendation",
     "priority": "P2",
     "channel": "google_organic_geo",
@@ -2527,7 +2527,7 @@
       }
     ],
     "created": "2026-07-09",
-    "updated": "2026-08-10",
+    "updated": "2026-08-11",
     "kind": "recommendation",
     "priority": "P0",
     "channel": "linkedin",
@@ -2546,7 +2546,7 @@
       }
     ],
     "created": "2026-07-09",
-    "updated": "2026-08-10",
+    "updated": "2026-08-11",
     "kind": "recommendation",
     "priority": "P0",
     "channel": "google_organic_geo",
@@ -2565,7 +2565,7 @@
       }
     ],
     "created": "2026-07-09",
-    "updated": "2026-08-10",
+    "updated": "2026-08-11",
     "kind": "recommendation",
     "priority": "P1",
     "channel": "linkedin",
@@ -2584,7 +2584,7 @@
       }
     ],
     "created": "2026-07-09",
-    "updated": "2026-08-10",
+    "updated": "2026-08-11",
     "kind": "recommendation",
     "priority": "P1",
     "channel": "youtube",
@@ -2603,7 +2603,7 @@
       }
     ],
     "created": "2026-07-09",
-    "updated": "2026-08-10",
+    "updated": "2026-08-11",
     "kind": "recommendation",
     "priority": "P1",
     "channel": "google_organic_geo",
@@ -2622,7 +2622,7 @@
       }
     ],
     "created": "2026-07-09",
-    "updated": "2026-08-10",
+    "updated": "2026-08-11",
     "kind": "recommendation",
     "priority": "P2",
     "channel": "instagram",
@@ -2773,7 +2773,7 @@
       }
     ],
     "created": "2026-07-10",
-    "updated": "2026-08-10",
+    "updated": "2026-08-11",
     "kind": "recommendation",
     "priority": "P0",
     "channel": "google_organic_geo",
@@ -2792,7 +2792,7 @@
       }
     ],
     "created": "2026-07-10",
-    "updated": "2026-08-10",
+    "updated": "2026-08-11",
     "kind": "recommendation",
     "priority": "P0",
     "channel": "linkedin",
@@ -2811,7 +2811,7 @@
       }
     ],
     "created": "2026-07-10",
-    "updated": "2026-08-10",
+    "updated": "2026-08-11",
     "kind": "recommendation",
     "priority": "P1",
     "channel": "youtube",
@@ -2830,7 +2830,7 @@
       }
     ],
     "created": "2026-07-10",
-    "updated": "2026-08-10",
+    "updated": "2026-08-11",
     "kind": "recommendation",
     "priority": "P1",
     "channel": "google_organic_geo",
@@ -2849,7 +2849,7 @@
       }
     ],
     "created": "2026-07-10",
-    "updated": "2026-08-10",
+    "updated": "2026-08-11",
     "kind": "recommendation",
     "priority": "P2",
     "channel": "instagram",
@@ -2868,7 +2868,7 @@
       }
     ],
     "created": "2026-07-10",
-    "updated": "2026-08-10",
+    "updated": "2026-08-11",
     "kind": "recommendation",
     "priority": "P2",
     "channel": "google_organic_geo",
@@ -3031,7 +3031,7 @@
       }
     ],
     "created": "2026-07-11",
-    "updated": "2026-08-10",
+    "updated": "2026-08-11",
     "kind": "recommendation",
     "priority": "P0",
     "channel": "google_organic_geo",
@@ -3050,7 +3050,7 @@
       }
     ],
     "created": "2026-07-11",
-    "updated": "2026-08-10",
+    "updated": "2026-08-11",
     "kind": "recommendation",
     "priority": "P0",
     "channel": "linkedin",
@@ -3069,7 +3069,7 @@
       }
     ],
     "created": "2026-07-11",
-    "updated": "2026-08-10",
+    "updated": "2026-08-11",
     "kind": "recommendation",
     "priority": "P1",
     "channel": "linkedin",
@@ -3088,7 +3088,7 @@
       }
     ],
     "created": "2026-07-11",
-    "updated": "2026-08-10",
+    "updated": "2026-08-11",
     "kind": "recommendation",
     "priority": "P1",
     "channel": "youtube",
@@ -3107,7 +3107,7 @@
       }
     ],
     "created": "2026-07-11",
-    "updated": "2026-08-10",
+    "updated": "2026-08-11",
     "kind": "recommendation",
     "priority": "P1",
     "channel": "google_organic_geo",
@@ -3126,7 +3126,7 @@
       }
     ],
     "created": "2026-07-11",
-    "updated": "2026-08-10",
+    "updated": "2026-08-11",
     "kind": "recommendation",
     "priority": "P2",
     "channel": "tiktok",
@@ -3277,7 +3277,7 @@
       }
     ],
     "created": "2026-07-13",
-    "updated": "2026-08-10",
+    "updated": "2026-08-11",
     "kind": "recommendation",
     "priority": "P0",
     "channel": "linkedin",
@@ -3296,7 +3296,7 @@
       }
     ],
     "created": "2026-07-13",
-    "updated": "2026-08-10",
+    "updated": "2026-08-11",
     "kind": "recommendation",
     "priority": "P0",
     "channel": "linkedin",
@@ -3315,7 +3315,7 @@
       }
     ],
     "created": "2026-07-13",
-    "updated": "2026-08-10",
+    "updated": "2026-08-11",
     "kind": "recommendation",
     "priority": "P1",
     "channel": "linkedin",
@@ -3334,7 +3334,7 @@
       }
     ],
     "created": "2026-07-13",
-    "updated": "2026-08-10",
+    "updated": "2026-08-11",
     "kind": "recommendation",
     "priority": "P1",
     "channel": "instagram",
@@ -3353,7 +3353,7 @@
       }
     ],
     "created": "2026-07-13",
-    "updated": "2026-08-10",
+    "updated": "2026-08-11",
     "kind": "recommendation",
     "priority": "P1",
     "channel": "linkedin",
@@ -3372,7 +3372,7 @@
       }
     ],
     "created": "2026-07-13",
-    "updated": "2026-08-10",
+    "updated": "2026-08-11",
     "kind": "recommendation",
     "priority": "P2",
     "channel": "tiktok",
@@ -3523,7 +3523,7 @@
       }
     ],
     "created": "2026-07-14",
-    "updated": "2026-08-10",
+    "updated": "2026-08-11",
     "kind": "recommendation",
     "priority": "P0",
     "channel": "linkedin",
@@ -3560,7 +3560,7 @@
       }
     ],
     "created": "2026-07-14",
-    "updated": "2026-08-10",
+    "updated": "2026-08-11",
     "kind": "recommendation",
     "priority": "P1",
     "channel": "youtube",
@@ -3579,7 +3579,7 @@
       }
     ],
     "created": "2026-07-14",
-    "updated": "2026-08-10",
+    "updated": "2026-08-11",
     "kind": "recommendation",
     "priority": "P1",
     "channel": "linkedin",
@@ -3598,7 +3598,7 @@
       }
     ],
     "created": "2026-07-14",
-    "updated": "2026-08-10",
+    "updated": "2026-08-11",
     "kind": "recommendation",
     "priority": "P1",
     "channel": "linkedin",
@@ -3756,7 +3756,7 @@
       }
     ],
     "created": "2026-07-15",
-    "updated": "2026-08-10",
+    "updated": "2026-08-11",
     "kind": "recommendation",
     "priority": "P0",
     "channel": "linkedin",
@@ -3793,7 +3793,7 @@
       }
     ],
     "created": "2026-07-15",
-    "updated": "2026-08-10",
+    "updated": "2026-08-11",
     "kind": "recommendation",
     "priority": "P1",
     "channel": "youtube",
@@ -3812,7 +3812,7 @@
       }
     ],
     "created": "2026-07-15",
-    "updated": "2026-08-10",
+    "updated": "2026-08-11",
     "kind": "recommendation",
     "priority": "P1",
     "channel": "instagram",
@@ -3831,7 +3831,7 @@
       }
     ],
     "created": "2026-07-15",
-    "updated": "2026-08-10",
+    "updated": "2026-08-11",
     "kind": "recommendation",
     "priority": "P2",
     "channel": "linkedin",
@@ -3850,7 +3850,7 @@
       }
     ],
     "created": "2026-07-15",
-    "updated": "2026-08-10",
+    "updated": "2026-08-11",
     "kind": "recommendation",
     "priority": "P2",
     "channel": "facebook",
@@ -4013,7 +4013,7 @@
       }
     ],
     "created": "2026-07-16",
-    "updated": "2026-08-10",
+    "updated": "2026-08-11",
     "kind": "recommendation",
     "priority": "P0",
     "channel": "linkedin",
@@ -4032,7 +4032,7 @@
       }
     ],
     "created": "2026-07-16",
-    "updated": "2026-08-10",
+    "updated": "2026-08-11",
     "kind": "recommendation",
     "priority": "P0",
     "channel": "linkedin",
@@ -4051,7 +4051,7 @@
       }
     ],
     "created": "2026-07-16",
-    "updated": "2026-08-10",
+    "updated": "2026-08-11",
     "kind": "recommendation",
     "priority": "P1",
     "channel": "youtube",
@@ -4070,7 +4070,7 @@
       }
     ],
     "created": "2026-07-16",
-    "updated": "2026-08-10",
+    "updated": "2026-08-11",
     "kind": "recommendation",
     "priority": "P1",
     "channel": "linkedin",
@@ -4089,7 +4089,7 @@
       }
     ],
     "created": "2026-07-16",
-    "updated": "2026-08-10",
+    "updated": "2026-08-11",
     "kind": "recommendation",
     "priority": "P1",
     "channel": "instagram",
@@ -4108,7 +4108,7 @@
       }
     ],
     "created": "2026-07-16",
-    "updated": "2026-08-10",
+    "updated": "2026-08-11",
     "kind": "recommendation",
     "priority": "P2",
     "channel": "tiktok",
@@ -4271,7 +4271,7 @@
       }
     ],
     "created": "2026-07-17",
-    "updated": "2026-08-10",
+    "updated": "2026-08-11",
     "kind": "recommendation",
     "priority": "P0",
     "channel": "linkedin",
@@ -4308,7 +4308,7 @@
       }
     ],
     "created": "2026-07-17",
-    "updated": "2026-08-10",
+    "updated": "2026-08-11",
     "kind": "recommendation",
     "priority": "P1",
     "channel": "linkedin",
@@ -4327,7 +4327,7 @@
       }
     ],
     "created": "2026-07-17",
-    "updated": "2026-08-10",
+    "updated": "2026-08-11",
     "kind": "recommendation",
     "priority": "P1",
     "channel": "youtube",
@@ -4346,7 +4346,7 @@
       }
     ],
     "created": "2026-07-17",
-    "updated": "2026-08-10",
+    "updated": "2026-08-11",
     "kind": "recommendation",
     "priority": "P1",
     "channel": "google_organic_geo",
@@ -4365,7 +4365,7 @@
       }
     ],
     "created": "2026-07-17",
-    "updated": "2026-08-10",
+    "updated": "2026-08-11",
     "kind": "recommendation",
     "priority": "P2",
     "channel": "tiktok",
@@ -4774,7 +4774,7 @@
       }
     ],
     "created": "2026-07-19",
-    "updated": "2026-08-10",
+    "updated": "2026-08-11",
     "kind": "recommendation",
     "priority": "P0",
     "channel": "linkedin",
@@ -4811,7 +4811,7 @@
       }
     ],
     "created": "2026-07-19",
-    "updated": "2026-08-10",
+    "updated": "2026-08-11",
     "kind": "recommendation",
     "priority": "P1",
     "channel": "linkedin",
@@ -4830,7 +4830,7 @@
       }
     ],
     "created": "2026-07-19",
-    "updated": "2026-08-10",
+    "updated": "2026-08-11",
     "kind": "recommendation",
     "priority": "P1",
     "channel": "youtube",
@@ -4849,7 +4849,7 @@
       }
     ],
     "created": "2026-07-19",
-    "updated": "2026-08-10",
+    "updated": "2026-08-11",
     "kind": "recommendation",
     "priority": "P1",
     "channel": "google_organic_geo",
@@ -4868,7 +4868,7 @@
       }
     ],
     "created": "2026-07-19",
-    "updated": "2026-08-10",
+    "updated": "2026-08-11",
     "kind": "recommendation",
     "priority": "P2",
     "channel": "google_organic_geo",
@@ -5007,7 +5007,7 @@
       }
     ],
     "created": "2026-07-20",
-    "updated": "2026-08-10",
+    "updated": "2026-08-11",
     "kind": "recommendation",
     "priority": "P0",
     "channel": "linkedin",
@@ -5026,7 +5026,7 @@
       }
     ],
     "created": "2026-07-20",
-    "updated": "2026-08-10",
+    "updated": "2026-08-11",
     "kind": "recommendation",
     "priority": "P0",
     "channel": "google_organic_geo",
@@ -5045,7 +5045,7 @@
       }
     ],
     "created": "2026-07-20",
-    "updated": "2026-08-10",
+    "updated": "2026-08-11",
     "kind": "recommendation",
     "priority": "P1",
     "channel": "youtube",
@@ -5064,7 +5064,7 @@
       }
     ],
     "created": "2026-07-20",
-    "updated": "2026-08-10",
+    "updated": "2026-08-11",
     "kind": "recommendation",
     "priority": "P1",
     "channel": "google_organic_geo",
@@ -5083,7 +5083,7 @@
       }
     ],
     "created": "2026-07-20",
-    "updated": "2026-08-10",
+    "updated": "2026-08-11",
     "kind": "recommendation",
     "priority": "P1",
     "channel": "linkedin",
@@ -5102,7 +5102,7 @@
       }
     ],
     "created": "2026-07-20",
-    "updated": "2026-08-10",
+    "updated": "2026-08-11",
     "kind": "recommendation",
     "priority": "P2",
     "channel": "google_organic_geo",
@@ -5272,7 +5272,7 @@
       }
     ],
     "created": "2026-07-21",
-    "updated": "2026-08-10",
+    "updated": "2026-08-11",
     "kind": "recommendation",
     "priority": "P0",
     "channel": "google_organic_geo",
@@ -5291,7 +5291,7 @@
       }
     ],
     "created": "2026-07-21",
-    "updated": "2026-08-10",
+    "updated": "2026-08-11",
     "kind": "recommendation",
     "priority": "P1",
     "channel": "linkedin",
@@ -5310,7 +5310,7 @@
       }
     ],
     "created": "2026-07-21",
-    "updated": "2026-08-10",
+    "updated": "2026-08-11",
     "kind": "recommendation",
     "priority": "P1",
     "channel": "linkedin",
@@ -5329,7 +5329,7 @@
       }
     ],
     "created": "2026-07-21",
-    "updated": "2026-08-10",
+    "updated": "2026-08-11",
     "kind": "recommendation",
     "priority": "P1",
     "channel": "google_organic_geo",
@@ -5348,7 +5348,7 @@
       }
     ],
     "created": "2026-07-21",
-    "updated": "2026-08-10",
+    "updated": "2026-08-11",
     "kind": "recommendation",
     "priority": "P2",
     "channel": "youtube",
@@ -5511,7 +5511,7 @@
       }
     ],
     "created": "2026-07-22",
-    "updated": "2026-08-10",
+    "updated": "2026-08-11",
     "kind": "recommendation",
     "priority": "P0",
     "channel": "linkedin",
@@ -5530,7 +5530,7 @@
       }
     ],
     "created": "2026-07-22",
-    "updated": "2026-08-10",
+    "updated": "2026-08-11",
     "kind": "recommendation",
     "priority": "P0",
     "channel": "google_organic_geo",
@@ -5549,7 +5549,7 @@
       }
     ],
     "created": "2026-07-22",
-    "updated": "2026-08-10",
+    "updated": "2026-08-11",
     "kind": "recommendation",
     "priority": "P1",
     "channel": "linkedin",
@@ -5568,7 +5568,7 @@
       }
     ],
     "created": "2026-07-22",
-    "updated": "2026-08-10",
+    "updated": "2026-08-11",
     "kind": "recommendation",
     "priority": "P1",
     "channel": "linkedin",
@@ -5587,7 +5587,7 @@
       }
     ],
     "created": "2026-07-22",
-    "updated": "2026-08-10",
+    "updated": "2026-08-11",
     "kind": "recommendation",
     "priority": "P1",
     "channel": "google_organic_geo",
@@ -5606,7 +5606,7 @@
       }
     ],
     "created": "2026-07-22",
-    "updated": "2026-08-10",
+    "updated": "2026-08-11",
     "kind": "recommendation",
     "priority": "P2",
     "channel": "facebook",
@@ -6027,7 +6027,7 @@
       }
     ],
     "created": "2026-07-24",
-    "updated": "2026-08-10",
+    "updated": "2026-08-11",
     "kind": "recommendation",
     "priority": "P0",
     "channel": "linkedin",
@@ -6046,7 +6046,7 @@
       }
     ],
     "created": "2026-07-24",
-    "updated": "2026-08-10",
+    "updated": "2026-08-11",
     "kind": "recommendation",
     "priority": "P0",
     "channel": "linkedin",
@@ -6065,7 +6065,7 @@
       }
     ],
     "created": "2026-07-24",
-    "updated": "2026-08-10",
+    "updated": "2026-08-11",
     "kind": "recommendation",
     "priority": "P1",
     "channel": "linkedin",
@@ -6084,7 +6084,7 @@
       }
     ],
     "created": "2026-07-24",
-    "updated": "2026-08-10",
+    "updated": "2026-08-11",
     "kind": "recommendation",
     "priority": "P1",
     "channel": "youtube",
@@ -6121,7 +6121,7 @@
       }
     ],
     "created": "2026-07-24",
-    "updated": "2026-08-10",
+    "updated": "2026-08-11",
     "kind": "recommendation",
     "priority": "P2",
     "channel": "linkedin",
@@ -6284,7 +6284,7 @@
       }
     ],
     "created": "2026-07-25",
-    "updated": "2026-08-10",
+    "updated": "2026-08-11",
     "kind": "recommendation",
     "priority": "P0",
     "channel": "linkedin",
@@ -6303,7 +6303,7 @@
       }
     ],
     "created": "2026-07-25",
-    "updated": "2026-08-10",
+    "updated": "2026-08-11",
     "kind": "recommendation",
     "priority": "P0",
     "channel": "google_organic_geo",
@@ -6322,7 +6322,7 @@
       }
     ],
     "created": "2026-07-25",
-    "updated": "2026-08-10",
+    "updated": "2026-08-11",
     "kind": "recommendation",
     "priority": "P1",
     "channel": "youtube",
@@ -6341,7 +6341,7 @@
       }
     ],
     "created": "2026-07-25",
-    "updated": "2026-08-10",
+    "updated": "2026-08-11",
     "kind": "recommendation",
     "priority": "P1",
     "channel": "linkedin",
@@ -6379,7 +6379,7 @@
       }
     ],
     "created": "2026-07-25",
-    "updated": "2026-08-10",
+    "updated": "2026-08-11",
     "kind": "recommendation",
     "priority": "P2",
     "channel": "youtube",
@@ -6542,7 +6542,7 @@
       }
     ],
     "created": "2026-07-28",
-    "updated": "2026-08-10",
+    "updated": "2026-08-11",
     "kind": "recommendation",
     "priority": "P0",
     "channel": "linkedin",
@@ -6579,7 +6579,7 @@
       }
     ],
     "created": "2026-07-28",
-    "updated": "2026-08-10",
+    "updated": "2026-08-11",
     "kind": "recommendation",
     "priority": "P1",
     "channel": "linkedin",
@@ -6598,7 +6598,7 @@
       }
     ],
     "created": "2026-07-28",
-    "updated": "2026-08-10",
+    "updated": "2026-08-11",
     "kind": "recommendation",
     "priority": "P1",
     "channel": "youtube",
@@ -6617,7 +6617,7 @@
       }
     ],
     "created": "2026-07-28",
-    "updated": "2026-08-10",
+    "updated": "2026-08-11",
     "kind": "recommendation",
     "priority": "P2",
     "channel": "google_organic_geo",
@@ -6636,7 +6636,7 @@
       }
     ],
     "created": "2026-07-28",
-    "updated": "2026-08-10",
+    "updated": "2026-08-11",
     "kind": "recommendation",
     "priority": "P2",
     "channel": "linkedin",
@@ -6787,7 +6787,7 @@
       }
     ],
     "created": "2026-07-29",
-    "updated": "2026-08-10",
+    "updated": "2026-08-11",
     "kind": "recommendation",
     "priority": "P0",
     "channel": "google_organic",
@@ -6806,7 +6806,7 @@
       }
     ],
     "created": "2026-07-29",
-    "updated": "2026-08-10",
+    "updated": "2026-08-11",
     "kind": "recommendation",
     "priority": "P0",
     "channel": "linkedin",
@@ -6825,7 +6825,7 @@
       }
     ],
     "created": "2026-07-29",
-    "updated": "2026-08-10",
+    "updated": "2026-08-11",
     "kind": "recommendation",
     "priority": "P1",
     "channel": "youtube",
@@ -6844,7 +6844,7 @@
       }
     ],
     "created": "2026-07-29",
-    "updated": "2026-08-10",
+    "updated": "2026-08-11",
     "kind": "recommendation",
     "priority": "P1",
     "channel": "google_organic",
@@ -6863,7 +6863,7 @@
       }
     ],
     "created": "2026-07-29",
-    "updated": "2026-08-10",
+    "updated": "2026-08-11",
     "kind": "recommendation",
     "priority": "P2",
     "channel": "tiktok",
@@ -6882,7 +6882,7 @@
       }
     ],
     "created": "2026-07-29",
-    "updated": "2026-08-10",
+    "updated": "2026-08-11",
     "kind": "recommendation",
     "priority": "P2",
     "channel": "linkedin",
@@ -7045,7 +7045,7 @@
       }
     ],
     "created": "2026-07-30",
-    "updated": "2026-08-10",
+    "updated": "2026-08-11",
     "kind": "recommendation",
     "priority": "P0",
     "channel": "word_of_mouth",
@@ -7064,7 +7064,7 @@
       }
     ],
     "created": "2026-07-30",
-    "updated": "2026-08-10",
+    "updated": "2026-08-11",
     "kind": "recommendation",
     "priority": "P0",
     "channel": "google_organic",
@@ -7083,7 +7083,7 @@
       }
     ],
     "created": "2026-07-30",
-    "updated": "2026-08-10",
+    "updated": "2026-08-11",
     "kind": "recommendation",
     "priority": "P1",
     "channel": "linkedin",
@@ -7102,7 +7102,7 @@
       }
     ],
     "created": "2026-07-30",
-    "updated": "2026-08-10",
+    "updated": "2026-08-11",
     "kind": "recommendation",
     "priority": "P1",
     "channel": "linkedin",
@@ -7121,7 +7121,7 @@
       }
     ],
     "created": "2026-07-30",
-    "updated": "2026-08-10",
+    "updated": "2026-08-11",
     "kind": "recommendation",
     "priority": "P2",
     "channel": "linkedin",
@@ -7140,7 +7140,7 @@
       }
     ],
     "created": "2026-07-30",
-    "updated": "2026-08-10",
+    "updated": "2026-08-11",
     "kind": "recommendation",
     "priority": "P2",
     "channel": "tiktok",
@@ -7543,7 +7543,7 @@
       }
     ],
     "created": "2026-08-01",
-    "updated": "2026-08-10",
+    "updated": "2026-08-11",
     "kind": "recommendation",
     "priority": "P0",
     "channel": "linkedin",
@@ -7562,7 +7562,7 @@
       }
     ],
     "created": "2026-08-01",
-    "updated": "2026-08-10",
+    "updated": "2026-08-11",
     "kind": "recommendation",
     "priority": "P0",
     "channel": "google_organic_geo",
@@ -7581,7 +7581,7 @@
       }
     ],
     "created": "2026-08-01",
-    "updated": "2026-08-10",
+    "updated": "2026-08-11",
     "kind": "recommendation",
     "priority": "P1",
     "channel": "youtube",
@@ -7600,7 +7600,7 @@
       }
     ],
     "created": "2026-08-01",
-    "updated": "2026-08-10",
+    "updated": "2026-08-11",
     "kind": "recommendation",
     "priority": "P1",
     "channel": "linkedin",
@@ -7619,7 +7619,7 @@
       }
     ],
     "created": "2026-08-01",
-    "updated": "2026-08-10",
+    "updated": "2026-08-11",
     "kind": "recommendation",
     "priority": "P2",
     "channel": "instagram",
@@ -7638,7 +7638,7 @@
       }
     ],
     "created": "2026-08-01",
-    "updated": "2026-08-10",
+    "updated": "2026-08-11",
     "kind": "recommendation",
     "priority": "P2",
     "channel": "linkedin",
@@ -8065,7 +8065,7 @@
       }
     ],
     "created": "2026-08-03",
-    "updated": "2026-08-10",
+    "updated": "2026-08-11",
     "kind": "recommendation",
     "priority": "P0",
     "channel": "linkedin",
@@ -8084,7 +8084,7 @@
       }
     ],
     "created": "2026-08-03",
-    "updated": "2026-08-10",
+    "updated": "2026-08-11",
     "kind": "recommendation",
     "priority": "P1",
     "channel": "youtube",
@@ -8103,7 +8103,7 @@
       }
     ],
     "created": "2026-08-03",
-    "updated": "2026-08-10",
+    "updated": "2026-08-11",
     "kind": "recommendation",
     "priority": "P1",
     "channel": "google_organic",
@@ -8122,7 +8122,7 @@
       }
     ],
     "created": "2026-08-03",
-    "updated": "2026-08-10",
+    "updated": "2026-08-11",
     "kind": "recommendation",
     "priority": "P2",
     "channel": "google_organic",
@@ -8141,7 +8141,7 @@
       }
     ],
     "created": "2026-08-03",
-    "updated": "2026-08-10",
+    "updated": "2026-08-11",
     "kind": "leads_action",
     "priority": "leads",
     "channel": "leads"
@@ -8291,7 +8291,7 @@
       }
     ],
     "created": "2026-08-04",
-    "updated": "2026-08-10",
+    "updated": "2026-08-11",
     "kind": "recommendation",
     "priority": "P0",
     "channel": "crm",
@@ -8310,7 +8310,7 @@
       }
     ],
     "created": "2026-08-04",
-    "updated": "2026-08-10",
+    "updated": "2026-08-11",
     "kind": "recommendation",
     "priority": "P0",
     "channel": "google_organic_geo",
@@ -8329,7 +8329,7 @@
       }
     ],
     "created": "2026-08-04",
-    "updated": "2026-08-10",
+    "updated": "2026-08-11",
     "kind": "recommendation",
     "priority": "P1",
     "channel": "linkedin",
@@ -8348,7 +8348,7 @@
       }
     ],
     "created": "2026-08-04",
-    "updated": "2026-08-10",
+    "updated": "2026-08-11",
     "kind": "recommendation",
     "priority": "P1",
     "channel": "youtube",
@@ -8385,7 +8385,7 @@
       }
     ],
     "created": "2026-08-04",
-    "updated": "2026-08-10",
+    "updated": "2026-08-11",
     "kind": "recommendation",
     "priority": "P2",
     "channel": "linkedin",
@@ -8536,7 +8536,7 @@
       }
     ],
     "created": "2026-08-05",
-    "updated": "2026-08-10",
+    "updated": "2026-08-11",
     "kind": "recommendation",
     "priority": "P0",
     "channel": "google_organic_geo",
@@ -8573,7 +8573,7 @@
       }
     ],
     "created": "2026-08-05",
-    "updated": "2026-08-10",
+    "updated": "2026-08-11",
     "kind": "recommendation",
     "priority": "P0",
     "channel": "linkedin",
@@ -8592,7 +8592,7 @@
       }
     ],
     "created": "2026-08-05",
-    "updated": "2026-08-10",
+    "updated": "2026-08-11",
     "kind": "recommendation",
     "priority": "P1",
     "channel": "youtube",
@@ -8611,7 +8611,7 @@
       }
     ],
     "created": "2026-08-05",
-    "updated": "2026-08-10",
+    "updated": "2026-08-11",
     "kind": "recommendation",
     "priority": "P1",
     "channel": "instagram",
@@ -8630,7 +8630,7 @@
       }
     ],
     "created": "2026-08-05",
-    "updated": "2026-08-10",
+    "updated": "2026-08-11",
     "kind": "recommendation",
     "priority": "P2",
     "channel": "google_organic_geo",
@@ -8781,7 +8781,7 @@
       }
     ],
     "created": "2026-08-06",
-    "updated": "2026-08-10",
+    "updated": "2026-08-11",
     "kind": "recommendation",
     "priority": "P0",
     "channel": "google_organic",
@@ -8800,7 +8800,7 @@
       }
     ],
     "created": "2026-08-06",
-    "updated": "2026-08-10",
+    "updated": "2026-08-11",
     "kind": "recommendation",
     "priority": "P0",
     "channel": "linkedin",
@@ -8819,7 +8819,7 @@
       }
     ],
     "created": "2026-08-06",
-    "updated": "2026-08-10",
+    "updated": "2026-08-11",
     "kind": "recommendation",
     "priority": "P1",
     "channel": "website",
@@ -8838,7 +8838,7 @@
       }
     ],
     "created": "2026-08-06",
-    "updated": "2026-08-10",
+    "updated": "2026-08-11",
     "kind": "recommendation",
     "priority": "P1",
     "channel": "youtube",
@@ -8857,7 +8857,7 @@
       }
     ],
     "created": "2026-08-06",
-    "updated": "2026-08-10",
+    "updated": "2026-08-11",
     "kind": "recommendation",
     "priority": "P2",
     "channel": "google_organic",
@@ -8876,7 +8876,7 @@
       }
     ],
     "created": "2026-08-06",
-    "updated": "2026-08-10",
+    "updated": "2026-08-11",
     "kind": "recommendation",
     "priority": "P2",
     "channel": "tiktok",
@@ -9045,7 +9045,7 @@
       }
     ],
     "created": "2026-08-07",
-    "updated": "2026-08-10",
+    "updated": "2026-08-11",
     "kind": "recommendation",
     "priority": "P0",
     "channel": "linkedin",
@@ -9064,7 +9064,7 @@
       }
     ],
     "created": "2026-08-07",
-    "updated": "2026-08-10",
+    "updated": "2026-08-11",
     "kind": "recommendation",
     "priority": "P1",
     "channel": "google_organic_geo",
@@ -9083,7 +9083,7 @@
       }
     ],
     "created": "2026-08-07",
-    "updated": "2026-08-10",
+    "updated": "2026-08-11",
     "kind": "recommendation",
     "priority": "P1",
     "channel": "youtube",
@@ -9102,7 +9102,7 @@
       }
     ],
     "created": "2026-08-07",
-    "updated": "2026-08-10",
+    "updated": "2026-08-11",
     "kind": "recommendation",
     "priority": "P2",
     "channel": "other",
@@ -9121,7 +9121,7 @@
       }
     ],
     "created": "2026-08-07",
-    "updated": "2026-08-10",
+    "updated": "2026-08-11",
     "kind": "leads_action",
     "priority": "leads",
     "channel": "leads"
@@ -9271,7 +9271,7 @@
       }
     ],
     "created": "2026-08-08",
-    "updated": "2026-08-10",
+    "updated": "2026-08-11",
     "kind": "recommendation",
     "priority": "P0",
     "channel": "google_organic",
@@ -9290,7 +9290,7 @@
       }
     ],
     "created": "2026-08-08",
-    "updated": "2026-08-10",
+    "updated": "2026-08-11",
     "kind": "recommendation",
     "priority": "P0",
     "channel": "google_organic",
@@ -9309,7 +9309,7 @@
       }
     ],
     "created": "2026-08-08",
-    "updated": "2026-08-10",
+    "updated": "2026-08-11",
     "kind": "recommendation",
     "priority": "P1",
     "channel": "linkedin",
@@ -9328,7 +9328,7 @@
       }
     ],
     "created": "2026-08-08",
-    "updated": "2026-08-10",
+    "updated": "2026-08-11",
     "kind": "recommendation",
     "priority": "P1",
     "channel": "youtube",
@@ -9347,7 +9347,7 @@
       }
     ],
     "created": "2026-08-08",
-    "updated": "2026-08-10",
+    "updated": "2026-08-11",
     "kind": "recommendation",
     "priority": "P2",
     "channel": "google_organic",
@@ -9366,7 +9366,7 @@
       }
     ],
     "created": "2026-08-08",
-    "updated": "2026-08-10",
+    "updated": "2026-08-11",
     "kind": "recommendation",
     "priority": "P2",
     "channel": "aeo",
@@ -9505,7 +9505,7 @@
       }
     ],
     "created": "2026-08-09",
-    "updated": "2026-08-10",
+    "updated": "2026-08-11",
     "kind": "recommendation",
     "priority": "P0",
     "channel": "google_organic_geo",
@@ -9524,7 +9524,7 @@
       }
     ],
     "created": "2026-08-09",
-    "updated": "2026-08-10",
+    "updated": "2026-08-11",
     "kind": "recommendation",
     "priority": "P0",
     "channel": "linkedin",
@@ -9543,7 +9543,7 @@
       }
     ],
     "created": "2026-08-09",
-    "updated": "2026-08-10",
+    "updated": "2026-08-11",
     "kind": "recommendation",
     "priority": "P1",
     "channel": "google_organic_geo",
@@ -9562,7 +9562,7 @@
       }
     ],
     "created": "2026-08-09",
-    "updated": "2026-08-10",
+    "updated": "2026-08-11",
     "kind": "recommendation",
     "priority": "P1",
     "channel": "google_organic_geo",
@@ -9581,7 +9581,7 @@
       }
     ],
     "created": "2026-08-09",
-    "updated": "2026-08-10",
+    "updated": "2026-08-11",
     "kind": "recommendation",
     "priority": "P2",
     "channel": "tiktok",
@@ -9600,7 +9600,7 @@
       }
     ],
     "created": "2026-08-09",
-    "updated": "2026-08-10",
+    "updated": "2026-08-11",
     "kind": "leads_action",
     "priority": "leads",
     "channel": "leads"
@@ -9740,7 +9740,7 @@
   "0bfe6ac3": {
     "id": "0bfe6ac3",
     "title": "תיקון Salesforce OAuth (HTTP 400 invalid_grant): לחדש את ה-refresh token / credentials של חיבור ה-CRM בדחיפות",
-    "status": "awaiting_approval",
+    "status": "approved",
     "revisions": 1,
     "history": [
       {
@@ -9750,7 +9750,7 @@
       }
     ],
     "created": "2026-08-10",
-    "updated": "2026-08-10",
+    "updated": "2026-08-11",
     "kind": "recommendation",
     "priority": "P0",
     "channel": "crm",
@@ -9759,7 +9759,7 @@
   "b5d1b694": {
     "id": "b5d1b694",
     "title": "אופטימיזציה של עמוד /נופש-חברה לביטוי 'נופש חברה' (position 17.9, impressions 307): עדכון H1, title tag, schema LocalBusiness+Event, הוספת FAQ schema, word-count 800+ מילים",
-    "status": "awaiting_approval",
+    "status": "approved",
     "revisions": 1,
     "history": [
       {
@@ -9769,7 +9769,7 @@
       }
     ],
     "created": "2026-08-10",
-    "updated": "2026-08-10",
+    "updated": "2026-08-11",
     "kind": "recommendation",
     "priority": "P0",
     "channel": "google_organic_geo",
@@ -9778,7 +9778,7 @@
   "80dc162b": {
     "id": "80dc162b",
     "title": "אופטימיזציה של עמוד /הפקת-כנסים לביטוי 'הפקת כנסים' (מתחרים: eron, rtspro, ortra ב-Top-3): שדרוג H1 לכלול 'הפקת כנסים לחברות' + הוספת case study בעמוד + 3 internal links מהבלוג",
-    "status": "awaiting_approval",
+    "status": "approved",
     "revisions": 1,
     "history": [
       {
@@ -9788,7 +9788,7 @@
       }
     ],
     "created": "2026-08-10",
-    "updated": "2026-08-10",
+    "updated": "2026-08-11",
     "kind": "recommendation",
     "priority": "P1",
     "channel": "google_organic_geo",
@@ -9797,7 +9797,7 @@
   "da1f9d81": {
     "id": "da1f9d81",
     "title": "הפעלת LinkedIn Thought Leader Posts: המנכ\"ל/VP מפרסם 2×/שבוע מהפרופיל האישי — case study 'behind the brief' בפורמט text-heavy עם insight ייחודי",
-    "status": "awaiting_approval",
+    "status": "approved",
     "revisions": 1,
     "history": [
       {
@@ -9807,7 +9807,7 @@
       }
     ],
     "created": "2026-08-10",
-    "updated": "2026-08-10",
+    "updated": "2026-08-11",
     "kind": "recommendation",
     "priority": "P1",
     "channel": "linkedin",
@@ -9816,7 +9816,7 @@
   "5ed8959e": {
     "id": "5ed8959e",
     "title": "upe-spain.com: יצירת עמוד שירות חדש 'International Product Launch Events' (אין עמוד קיים שמכסה intent זה) עם עדויות לקוחות גלובליים, schema Event, ו-CTA מותאם אירופה",
-    "status": "awaiting_approval",
+    "status": "approved",
     "revisions": 1,
     "history": [
       {
@@ -9826,7 +9826,7 @@
       }
     ],
     "created": "2026-08-10",
-    "updated": "2026-08-10",
+    "updated": "2026-08-11",
     "kind": "recommendation",
     "priority": "P2",
     "channel": "google_organic_geo",
@@ -9835,7 +9835,7 @@
   "27863042": {
     "id": "27863042",
     "title": "הגדלת AEO מ-4/7 ל-7/7 מנועים: להוסיף תוכן Q&A מובנה (schema FAQPage) ב-3 עמודי השירות המרכזיים לשאלות כמו 'מי הספק הטוב ביותר להפקת אירועי חברה בישראל'",
-    "status": "awaiting_approval",
+    "status": "approved",
     "revisions": 1,
     "history": [
       {
@@ -9845,7 +9845,7 @@
       }
     ],
     "created": "2026-08-10",
-    "updated": "2026-08-10",
+    "updated": "2026-08-11",
     "kind": "recommendation",
     "priority": "P2",
     "channel": "google_organic_geo",
@@ -9854,11 +9854,11 @@
   "de07a8f2": {
     "id": "de07a8f2",
     "title": "דחיפות מיידית — תיקון Salesforce OAuth: ללא חיבור CRM אין ייחוס לידים, אין אפשרות לסגור את ה-feedback loop, ואין מה לדווח ללקוח הפנימי. זו המשימה הדחופה ביותר לפני כל פעולת שיווק.",
-    "status": "todo",
+    "status": "archived",
     "revisions": 0,
     "history": [],
     "created": "2026-08-10",
-    "updated": "2026-08-10",
+    "updated": "2026-08-11",
     "kind": "leads_action",
     "priority": "leads",
     "channel": "leads"
@@ -9866,11 +9866,11 @@
   "b65e39b0": {
     "id": "b65e39b0",
     "title": "SEO מסחרי עברי — אופטימיזציית 3 עמודים קיימים לביטויים בעלי position 10-20: /נופש-חברה ('נופש חברה', pos. 17.9), /הפקת-כנסים ('הפקת כנסים'), /טיולי-תמריץ-לחברות ('טיולי תמריץ לעובדים', pos. 5) — אלה הקרובים ביותר ל-Top-3 ויכולים לייצר inbound leads מסחריים ב-60-90 יום.",
-    "status": "todo",
+    "status": "archived",
     "revisions": 0,
     "history": [],
     "created": "2026-08-10",
-    "updated": "2026-08-10",
+    "updated": "2026-08-11",
     "kind": "leads_action",
     "priority": "leads",
     "channel": "leads"
@@ -9878,11 +9878,11 @@
   "847ca07a": {
     "id": "847ca07a",
     "title": "LinkedIn personal branding: לחבר את המנכ\"ל ו-VP לקמפיין Thought Leadership שבועי — case studies אמיתיים ('1,800 איש, 3 מדינות') בפורמט text-heavy; לבקש מכל לקוח מרוצה recommendation ב-LinkedIn מיד לאחר האירוע.",
-    "status": "todo",
+    "status": "archived",
     "revisions": 0,
     "history": [],
     "created": "2026-08-10",
-    "updated": "2026-08-10",
+    "updated": "2026-08-11",
     "kind": "leads_action",
     "priority": "leads",
     "channel": "leads"
@@ -9890,11 +9890,11 @@
   "16074e66": {
     "id": "16074e66",
     "title": "CTA ברור בכל נכס דיגיטלי: לוודא שכל עמוד שירות קיים כולל CTA ייעודי ('קבלו הצעת מחיר תוך 24 שעות') עם טופס ייעודי לכל segment (אירוע חברה / כנס / טיול תמריץ) — ללא CTA ממוקד, traffic אורגני גדל אך לא ממיר.",
-    "status": "todo",
+    "status": "archived",
     "revisions": 0,
     "history": [],
     "created": "2026-08-10",
-    "updated": "2026-08-10",
+    "updated": "2026-08-11",
     "kind": "leads_action",
     "priority": "leads",
     "channel": "leads"
@@ -9902,11 +9902,11 @@
   "d37ed3f9": {
     "id": "d37ed3f9",
     "title": "הפעלת case study pipeline: כל אירוע שמסתיים → אחרוורד מסמכם מיידית כ-blog post + LinkedIn post + YouTube short. 250 הבלוגים הקיימים מראים capacity — לתכנן 2 case studies/חודש חדשים שמתמקדים ב-ROI ולא בפרטי ההפקה.",
-    "status": "todo",
+    "status": "archived",
     "revisions": 0,
     "history": [],
     "created": "2026-08-10",
-    "updated": "2026-08-10",
+    "updated": "2026-08-11",
     "kind": "leads_action",
     "priority": "leads",
     "channel": "leads"
@@ -9914,11 +9914,11 @@
   "ff002382": {
     "id": "ff002382",
     "title": "follow-up מדוד לאחר כנסים ותערוכות: לשלוח email מותאם אישית ל-כל contact שנפגש ב-event עם קישור ל-case study רלוונטי מהאתר — שיטת inbound B2B שאינה מצריכה UTM ומתאימה לאופי deal-flow של UPE.",
-    "status": "todo",
+    "status": "archived",
     "revisions": 0,
     "history": [],
     "created": "2026-08-10",
-    "updated": "2026-08-10",
+    "updated": "2026-08-11",
     "kind": "leads_action",
     "priority": "leads",
     "channel": "leads"
@@ -9926,11 +9926,11 @@
   "3ce5188e": {
     "id": "3ce5188e",
     "title": "שלב 1 — בסיס (חודשים 1-3): הגדרת 3 content pillars ברורים (Case Study / BTS / Expert Tip) ו-employee advocacy: לפחות 2 בכירים מפרסמים באופן קבוע מהפרופיל האישי ב-LinkedIn — מנוע הצמיחה המהיר ביותר לקהל B2B.",
-    "status": "todo",
+    "status": "archived",
     "revisions": 0,
     "history": [],
     "created": "2026-08-10",
-    "updated": "2026-08-10",
+    "updated": "2026-08-11",
     "kind": "follower_plan",
     "priority": "follower",
     "channel": "growth"
@@ -9938,11 +9938,11 @@
   "22890bf1": {
     "id": "22890bf1",
     "title": "שלב 2 — YouTube כמנוע SEO (חודשים 2-6): להמיר כל case study גדול ל-Shorts (60 שניות) + long-form (3-5 דקות); לייעל כל וידאו עם keywords עבריים ב-title/description — YouTube הוא מנוע חיפוש שמניע subscribers אורגניים.",
-    "status": "todo",
+    "status": "archived",
     "revisions": 0,
     "history": [],
     "created": "2026-08-10",
-    "updated": "2026-08-10",
+    "updated": "2026-08-11",
     "kind": "follower_plan",
     "priority": "follower",
     "channel": "growth"
@@ -9950,11 +9950,11 @@
   "ffde8c9d": {
     "id": "ffde8c9d",
     "title": "שלב 3 — cross-platform distribution (חודשים 4-9): כל וידאו YouTube → Reel ב-Instagram → post ב-LinkedIn → clip ב-TikTok (כשיוחלט להיכנס). מערכת repurposing מבטיחה ROI מקסימלי מכל יחידת תוכן בלי הכפלת עומס הפקה.",
-    "status": "todo",
+    "status": "archived",
     "revisions": 0,
     "history": [],
     "created": "2026-08-10",
-    "updated": "2026-08-10",
+    "updated": "2026-08-11",
     "kind": "follower_plan",
     "priority": "follower",
     "channel": "growth"
@@ -9962,11 +9962,11 @@
   "030f5f09": {
     "id": "030f5f09",
     "title": "שלב 4 — קהילה וחשיפה חיצונית (חודשים 6-18): השתתפות פעילה ב-LinkedIn events ישראליים (OrgLI, מנהלי HR, Startup Nation events), ציטוטים בפורטלים של MICE, ו-PR דיגיטלי בהוצאות עסקיות (Calcalist, Globes) שיוצרים backlinks ו-brand mentions.",
-    "status": "todo",
+    "status": "archived",
     "revisions": 0,
     "history": [],
     "created": "2026-08-10",
-    "updated": "2026-08-10",
+    "updated": "2026-08-11",
     "kind": "follower_plan",
     "priority": "follower",
     "channel": "growth"
@@ -9974,11 +9974,269 @@
   "ff25e892": {
     "id": "ff25e892",
     "title": "שלב 5 — AEO/GEO כמכפיל (חודשים 12-36): עם צבירת 250+ בלוגים + FAQ schema + llms.txt מעודכן, UPE תהפוך ל-'default citation' של מנועי AI לשאילתות MICE עבריות — זה מביא חשיפה לקהלים שלא מחפשים אקטיבית ברשתות חברתיות.",
-    "status": "todo",
+    "status": "archived",
     "revisions": 0,
     "history": [],
     "created": "2026-08-10",
-    "updated": "2026-08-10",
+    "updated": "2026-08-11",
+    "kind": "follower_plan",
+    "priority": "follower",
+    "channel": "growth"
+  },
+  "e0d6300c": {
+    "id": "e0d6300c",
+    "title": "הפעלת LinkedIn Personal Branding: 2 מנהלי UPE יפרסמו 2 פוסטים/שבוע מהפרופיל האישי שלהם — case studies, תובנות MICE, סיפורי הפקה אמיתיים",
+    "status": "awaiting_approval",
+    "revisions": 1,
+    "history": [
+      {
+        "date": "2026-08-11",
+        "summary": "הופקו 8 פוסטים מלאים ומוכנים לפרסום (עברית + אנגלית) לתוכנית Personal Branding של 2 מנהלי UPE ב-LinkedIn ל-8 שבועות, כולל bank של 8 פוסטים נוספים לשבועות 5–8, לוח שידור, כללי זהב וKPIs — מבוסס על best practices 2026 ותובנות MICE עדכניות.",
+        "ready": true
+      }
+    ],
+    "created": "2026-08-11",
+    "updated": "2026-08-11",
+    "kind": "recommendation",
+    "priority": "P0",
+    "channel": "linkedin",
+    "expected_impact": "פרופילים אישיים מייצרים 8x יותר engagement מ-company page. ב-90 ימים: +200-400% reach ב-LinkedIn, ייחוס ראשון של לידים דיגיטליים מהרשת."
+  },
+  "596b29a4": {
+    "id": "596b29a4",
+    "title": "אופטימיזציה של 3 דפי שירות BOFU לTop-3: נופש-חברה, הפקת-אירועי-חברה, ארגון-כנסים — שיפור H1/title tag/word-count/schema + בניית off-page authority",
+    "status": "awaiting_approval",
+    "revisions": 1,
+    "history": [
+      {
+        "date": "2026-08-11",
+        "summary": "הופקו 3 דפי שירות BOFU מלאים ומוכנים לפרסום (נופש חברה, הפקת אירועי חברה, ארגון כנסים) — כל אחד עם Title tag, Meta description, H1, תוכן 1,200+ מילים, FAQ, CTA, קישורים פנימיים וSchema JSON-LD מלא (ProfessionalService + Service + FAQPage + BreadcrumbList), בתוספת תוכנית off-page authority ל-90 יום עם 5 tracks ולוח זמנים.",
+        "ready": true
+      }
+    ],
+    "created": "2026-08-11",
+    "updated": "2026-08-11",
+    "kind": "recommendation",
+    "priority": "P0",
+    "channel": "google_organic",
+    "expected_impact": "מונחים 'נופש חברה' ו-'הפקת נופש חברה' בפוזיציה 10-11 — כניסה לTop-3 בתוך 60-90 יום תניב +150-200 קליקים/שבוע ותשיג 2+ לידים דיגיטליים ישירים."
+  },
+  "2f9a05ea": {
+    "id": "2f9a05ea",
+    "title": "יצירת 4 סרטוני YouTube case study בחודש: כל סרטון מתאר הפקה אמיתית (1,800 אנשים/3 מדינות) עם מספרים, אתגרים ותוצאות — + Short 60 שניות לכל אחד",
+    "status": "awaiting_approval",
+    "revisions": 1,
+    "history": [
+      {
+        "date": "2026-08-11",
+        "summary": "הופק מסמך הפקה מלא ומוכן לאישור ל-8 יחידות תוכן YouTube חודשיות (4 סרטוני case study ארוכים + 4 YouTube Shorts) — כולל כותרות SEO-optimized בעברית ואנגלית, תיאורים מלאים 200–300 מילה, תסריטי hook וגוף וCTA, הנחיות thumbnail, מיפוי keywords, לוח שידורים, פרוטוקול הפקה יום-צילום-אחד, KPIs ו-upload checklist מלא.",
+        "ready": true
+      }
+    ],
+    "created": "2026-08-11",
+    "updated": "2026-08-11",
+    "kind": "recommendation",
+    "priority": "P1",
+    "channel": "youtube",
+    "expected_impact": "YouTube הוכיח ROI של 4,560 impressions מ-2 פוסטים. 8 יחידות תוכן/חודש (4 ארוך + 4 Shorts) יכפילו חשיפות ויתנו לאתר תנועה referral איכותית."
+  },
+  "1ab825fb": {
+    "id": "1ab825fb",
+    "title": "קמפיין digital PR: פרסום 2 מחקרים/נתוני-שוק מקוריים בשנה על שוק האירועים הישראלי — הפצה לפורטלים מקצועיים (מגזיני HR, כלכלה, הייטק) עם backlinks לדפי שירות",
+    "status": "awaiting_approval",
+    "revisions": 1,
+    "history": [
+      {
+        "date": "2026-08-11",
+        "summary": "הופקה תוכנית Digital PR מלאה הכוללת שני מחקרי שוק מקוריים מוכנים לביצוע — מדד האירוע הארגוני הישראלי ומדד Incentive Travel — עם מתודולוגיה, מבנה דוחות, רשימת פורטלים ממוקדת עם אסטרטגיית backlink, תבניות מייל הפצה בעברית ואנגלית, לו\"ז שנתי, אסטרטגיית Repurpose, KPIs ו-Schema Markup מוכן להדבקה.",
+        "ready": true
+      }
+    ],
+    "created": "2026-08-11",
+    "updated": "2026-08-11",
+    "kind": "recommendation",
+    "priority": "P1",
+    "channel": "google_organic",
+    "expected_impact": "backlinks מאתרים סמכותיים ישראליים יאיצו את כניסת UPE לTop-3 וישפרו ציטוטי AI — שיטה מוכחת לB2B שאין לו volume search גבוה."
+  },
+  "e7059181": {
+    "id": "e7059181",
+    "title": "הפעלת LinkedIn Newsletter חודשי: 'תובנות MICE ישראל' — ניוזלטר מקצועי לCMO/HR/CEO עם case study חודשי, מגמות ענף ו-1 call-to-action לקבלת ייעוץ",
+    "status": "awaiting_approval",
+    "revisions": 1,
+    "history": [
+      {
+        "date": "2026-08-11",
+        "summary": "הופק מסמך הפעלה מלא לניוזלטר LinkedIn חודשי 'תובנות MICE ישראל' — כולל לוח תכנים שנתי ל-12 גיליונות, גיליון #1 מוכן לפרסום עם case study, מגמות ענף ו-CTA, פוסטי השקה בעברית ובאנגלית, הגדרות טכניות ו-KPIs — מבוסס על best practices ל-2026 ונתוני ענף MICE עדכניים.",
+        "ready": true
+      }
+    ],
+    "created": "2026-08-11",
+    "updated": "2026-08-11",
+    "kind": "recommendation",
+    "priority": "P2",
+    "channel": "linkedin",
+    "expected_impact": "LinkedIn Newsletters בונים קהל opted-in ישיר. ב-6 חודשים: 500-1,000 מנויים פוטנציאליים מקרב decision-makers, עם ייחוס דיגיטלי ברור."
+  },
+  "667eeb4a": {
+    "id": "667eeb4a",
+    "title": "אופטימיזציה של upe-spain.com לTop-3 במונח 'international product launch event' (pos 10.3, 168 חשיפות) ו-'global product launch event' (pos 10.2, 129) — שני מונחים באנגלית שנמצאים ממש על הסף",
+    "status": "awaiting_approval",
+    "revisions": 1,
+    "history": [
+      {
+        "date": "2026-08-11",
+        "summary": "הופק דף SEO מלא ומוכן לפרסום עבור upe-spain.com — כולל H1, meta title ו-description, גוף טקסט של ~800 מילים המכוון למונחים 'international product launch event' ו-'global product launch event', 3+ internal links, ו-3 בלוקי JSON-LD (Organization + Service + FAQPage) — הכל ready-to-paste, pending human approval.",
+        "ready": true
+      }
+    ],
+    "created": "2026-08-11",
+    "updated": "2026-08-11",
+    "kind": "recommendation",
+    "priority": "P2",
+    "channel": "google_organic",
+    "expected_impact": "שני מונחים אלה בפוזיציה 10-11 — אופטימיזציה ממוקדת (H1, schema, 300+ מילים ייעודיות, 3 internal links) תביא לTop-3 בתוך 45-60 יום וחשיפה לשוק אירופאי."
+  },
+  "5246d6d5": {
+    "id": "5246d6d5",
+    "title": "פעולה 1 — IMMEDIATE: להכפיל את ה-Word of Mouth המוכח: לבקש מ-4 לקוחות WoM אקטיביים לפרסם המלצה ב-LinkedIn (לא Google Review) — כל המלצה כזו מייצרת exposure ל-300-1,000 קשרים רלוונטיים של decision-makers.",
+    "status": "todo",
+    "revisions": 0,
+    "history": [],
+    "created": "2026-08-11",
+    "updated": "2026-08-11",
+    "kind": "leads_action",
+    "priority": "leads",
+    "channel": "leads"
+  },
+  "629ce951": {
+    "id": "629ce951",
+    "title": "פעולה 2 — 30 יום: אופטימיזציה דחופה לTop-10 של 'נופש חברה' ו-'הפקת נופש חברה' (pos 10-11) — שני המונחים הקרובים ביותר לTop-10 עם 414-468 חשיפות. כניסה ל-Top-5 = 2-3 לידים אורגניים/חודש.",
+    "status": "todo",
+    "revisions": 0,
+    "history": [],
+    "created": "2026-08-11",
+    "updated": "2026-08-11",
+    "kind": "leads_action",
+    "priority": "leads",
+    "channel": "leads"
+  },
+  "c53abc5c": {
+    "id": "c53abc5c",
+    "title": "פעולה 3 — 30 יום: הוספת CTA ברור לדפי שירות הקיימים: 'קבלו הצעת מחיר תוך 24 שעות' עם טופס קצר (שם+חברה+גודל קהל+תאריך) — ללא CTA אין ייחוס דיגיטלי גם כשיש תנועה.",
+    "status": "todo",
+    "revisions": 0,
+    "history": [],
+    "created": "2026-08-11",
+    "updated": "2026-08-11",
+    "kind": "leads_action",
+    "priority": "leads",
+    "channel": "leads"
+  },
+  "66c0987f": {
+    "id": "66c0987f",
+    "title": "פעולה 4 — 60 יום: LinkedIn case study posts מפרופילים אישיים של מנהלים — כל פוסט מספר על הפקה בשמות מספרים (1,800 אנשים, 3 מדינות, 4 ימים) + שאלה פתוחה; זה מייצר inbound DMs שניתן לייחס לדיגיטל.",
+    "status": "todo",
+    "revisions": 0,
+    "history": [],
+    "created": "2026-08-11",
+    "updated": "2026-08-11",
+    "kind": "leads_action",
+    "priority": "leads",
+    "channel": "leads"
+  },
+  "2e907362": {
+    "id": "2e907362",
+    "title": "פעולה 5 — 60 יום: אופטימיזציה של upe-spain.com למונחי 'international product launch event' ו-'global product launch event' (pos ~10) — שוק אירופאי שמחפש supplier ישראלי-גלובלי עם ניסיון; Top-3 = 1-2 לידים/חודש מחו\"ל.",
+    "status": "todo",
+    "revisions": 0,
+    "history": [],
+    "created": "2026-08-11",
+    "updated": "2026-08-11",
+    "kind": "leads_action",
+    "priority": "leads",
+    "channel": "leads"
+  },
+  "4dbeef83": {
+    "id": "4dbeef83",
+    "title": "פעולה 6 — 90 יום: פרסום 1 case study מפורט (PDF + landing page קיימת) ממוקד בהפקת כנס חברת הייטק (הדף כנסים-לחברות-הייטק כבר קיים — לאופטמז ולחזק עם case study ממשי) + הפצה ב-LinkedIn לקהל CMO/HR ישראלי.",
+    "status": "todo",
+    "revisions": 0,
+    "history": [],
+    "created": "2026-08-11",
+    "updated": "2026-08-11",
+    "kind": "leads_action",
+    "priority": "leads",
+    "channel": "leads"
+  },
+  "22c01d60": {
+    "id": "22c01d60",
+    "title": "שלב 1 (0-3 חודשים): הפעלת Personal Branding של 2-3 מנהלים ב-LinkedIn — מחקר מראה שפרופילים אישיים מייצרים 8x יותר engagement ו-5x יותר לידים מ-company pages; זהו הצעד הבודד בעל ה-ROI הגבוה ביותר לקהל B2B.",
+    "status": "todo",
+    "revisions": 0,
+    "history": [],
+    "created": "2026-08-11",
+    "updated": "2026-08-11",
+    "kind": "follower_plan",
+    "priority": "follower",
+    "channel": "growth"
+  },
+  "b7aea214": {
+    "id": "b7aea214",
+    "title": "שלב 2 (1-4 חודשים): תוכנית YouTube Shorts שיטתית — לכל הפקה שמצולמת: 1 סרטון ארוך + 2 Shorts מחותכים; הפורמט מוכיח reach עצמאי ומושך subscribers רלוונטיים.",
+    "status": "todo",
+    "revisions": 0,
+    "history": [],
+    "created": "2026-08-11",
+    "updated": "2026-08-11",
+    "kind": "follower_plan",
+    "priority": "follower",
+    "channel": "growth"
+  },
+  "2916c375": {
+    "id": "2916c375",
+    "title": "שלב 3 (2-6 חודשים): הגדרת 3 עמודי תוכן ל-Instagram: (א) BTS הפקות, (ב) testimonials לקוחות, (ג) 'fact cards' על שוק האירועים — consistency בנישה בונה following איכותי.",
+    "status": "todo",
+    "revisions": 0,
+    "history": [],
+    "created": "2026-08-11",
+    "updated": "2026-08-11",
+    "kind": "follower_plan",
+    "priority": "follower",
+    "channel": "growth"
+  },
+  "f0947932": {
+    "id": "f0947932",
+    "title": "שלב 4 (3-9 חודשים): השקת TikTok עם תוכן ממוחזר מ-YouTube Shorts — רק לאחר שנבנה stock של 20+ Shorts; אז ניתן לפרסם 3/שבוע ללא עומס ייצור נוסף.",
+    "status": "todo",
+    "revisions": 0,
+    "history": [],
+    "created": "2026-08-11",
+    "updated": "2026-08-11",
+    "kind": "follower_plan",
+    "priority": "follower",
+    "channel": "growth"
+  },
+  "f5027f3f": {
+    "id": "f5027f3f",
+    "title": "שלב 5 (6-18 חודשים): LinkedIn Newsletter + Community Building — ניוזלטר חודשי מקצועי בונה קהל captive שניתן לשפך למעקב בכל הפלטפורמות.",
+    "status": "todo",
+    "revisions": 0,
+    "history": [],
+    "created": "2026-08-11",
+    "updated": "2026-08-11",
+    "kind": "follower_plan",
+    "priority": "follower",
+    "channel": "growth"
+  },
+  "8300aa91": {
+    "id": "8300aa91",
+    "title": "שלב 6 (12-36 חודשים): digital PR + media placements — ציטוטים בפורטלים מקצועיים ישראליים ואירופאיים יניעו branded search ויגדילו following אורגני ממקורות גבוהי-כוונה.",
+    "status": "todo",
+    "revisions": 0,
+    "history": [],
+    "created": "2026-08-11",
+    "updated": "2026-08-11",
     "kind": "follower_plan",
     "priority": "follower",
     "channel": "growth"
