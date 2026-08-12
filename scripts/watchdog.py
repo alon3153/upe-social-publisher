@@ -15,12 +15,17 @@ import os, re, sys, glob, datetime, json, urllib.request, urllib.parse, urllib.e
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, ROOT)
-from publishers import queue
+from publishers import queue, linkedin
 
 TO = os.environ.get("APPROVAL_TO") or "alon@upe.co.il"
 RUNWAY_WARN_DAYS = int(os.environ.get("RUNWAY_WARN_DAYS", "21"))
 FAIL_LOOKBACK_DAYS = int(os.environ.get("FAIL_LOOKBACK_DAYS", "3"))
 BACKLOG_AGE_DAYS = int(os.environ.get("BACKLOG_AGE_DAYS", "2"))
+LI_AUTH_ERROR_MARKERS = (
+    "http 401", "http 403", "not authorized", "organizationugcauthorizations",
+    "missing scope", "identity mismatch", "no approved posting role",
+    "advocate not connected", "auth_blocked",
+)
 
 
 def _iso(days_ago):
@@ -59,11 +64,66 @@ def check_failures():
         return [f"⚠️ לא ניתן לבדוק כשלי פרסום: {e}"]
     if not rows:
         return []
-    lines = [f"🔴 {len(rows)} כשלי פרסום ב-{FAIL_LOOKBACK_DAYS} הימים האחרונים:"]
-    for r in rows[:10]:
+    auth_rows = [r for r in rows if r.get("network") == "linkedin" and
+                 any(m in (r.get("error") or "").lower() for m in LI_AUTH_ERROR_MARKERS)]
+    other_rows = [r for r in rows if r not in auth_rows]
+    lines = []
+    if auth_rows:
+        days = sorted({r.get("day") for r in auth_rows if r.get("day") is not None})
+        lines.append(f"🟠 {len(auth_rows)} פוסטי LinkedIn מושהים עד תיקון ההרשאה "
+                     f"(ימים: {days}). הם יוחזרו אוטומטית לתור לאחר חיבור תקין.")
+    if other_rows:
+        lines.append(f"🔴 {len(other_rows)} כשלי פרסום אחרים ב-{FAIL_LOOKBACK_DAYS} הימים האחרונים:")
+    for r in other_rows[:10]:
         err = (r.get("error") or "")[:90]
         lines.append(f"   · יום {r.get('day')} {r.get('network')}/{r.get('account')} — {err}")
     return lines
+
+
+def check_linkedin_auth():
+    """Validate usable write authorization, not merely token expiration."""
+    issues = []
+    try:
+        token = linkedin._token()
+    except Exception as e:
+        return [f"🔴 LinkedIn: לא ניתן לטעון טוקן פרסום: {e}"]
+
+    shared_targets = [
+        ("הפרופיל האישי של אלון", "member", os.environ.get("LINKEDIN_MEMBER_URN", "")),
+        ("עמוד החברה באנגלית", "organization", os.environ.get("LINKEDIN_ORG_URN", "")),
+        ("עמוד החברה בספרד", "organization", os.environ.get("LINKEDIN_ORG_URN_SPAIN", "")),
+    ]
+    for label, kind, urn in shared_targets:
+        if not urn:
+            issues.append(f"🔴 LinkedIn — {label}: חסר URN בהגדרות")
+            continue
+        auth = (linkedin.preflight(token=token, member_urn_expected=urn)
+                if kind == "member" else linkedin.preflight(token=token, org_urn=urn))
+        if not auth.get("ok"):
+            issues.append(f"🔴 LinkedIn — {label}: {auth.get('code')} — {auth.get('message')}")
+
+    fn_base = os.environ.get("SUPABASE_URL", "").rstrip("/") + "/functions/v1/linkedin-oauth"
+    required_advocates = {
+        "li_danielle": ("דניאל", "daniel"),
+        "li_dorin": ("דורין", "dorin"),
+    }
+    try:
+        advocates = {r.get("account"): r for r in queue.list_advocates()}
+    except Exception as e:
+        issues.append(f"⚠️ LinkedIn — לא ניתן לבדוק חיבורי צוות: {e}")
+        return issues
+    for account, (display, slug) in required_advocates.items():
+        row = advocates.get(account)
+        reconnect = f"{fn_base}?advocate={slug}" if fn_base.startswith("http") else ""
+        if not row or not row.get("access_token") or not row.get("member_urn"):
+            issues.append(f"🔴 LinkedIn — {display} לא מחוברת. חיבור מחדש: {reconnect}")
+            continue
+        auth = linkedin.preflight(token=row["access_token"],
+                                  member_urn_expected=row["member_urn"])
+        if not auth.get("ok"):
+            issues.append(f"🔴 LinkedIn — החיבור של {display} אינו מורשה: "
+                          f"{auth.get('code')} — {auth.get('message')}. חיבור מחדש: {reconnect}")
+    return issues
 
 
 def check_backlog():
@@ -234,7 +294,7 @@ def main():
                    f"ריצת workflow נכשלה זה עתה:\n\n🔴 {msg}\n\n"
                    f"בדוק את ה-Actions ב-{os.environ.get('GITHUB_REPOSITORY','upe-social-publisher')} וטפל — זה חוסם פרסום.")
         return 0
-    issues = (check_workflows() + check_runway() + check_failures()
+    issues = (check_workflows() + check_runway() + check_linkedin_auth() + check_failures()
               + check_backlog() + check_duplicates())
     if not issues:
         print("✅ watchdog: all healthy (runway ok, no failures, no backlog)")

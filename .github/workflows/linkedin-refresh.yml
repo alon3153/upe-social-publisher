@@ -33,6 +33,8 @@ jobs:
           LINKEDIN_CLIENT_SECRET:   ${{ secrets.LINKEDIN_CLIENT_SECRET }}
           LINKEDIN_ACCESS_TOKEN:    ${{ secrets.LINKEDIN_ACCESS_TOKEN }}
           LINKEDIN_REFRESH_TOKEN:   ${{ secrets.LINKEDIN_REFRESH_TOKEN }}
+          GH_TOKEN:                 ${{ secrets.GH_PAT }}
+          GITHUB_REPOSITORY:        ${{ github.repository }}
         run: |
           if [ "${{ inputs.seed }}" = "true" ]; then
             python3 scripts/linkedin_refresh.py --seed

@@ -16,6 +16,13 @@ from publishers.content import find_image_path, find_image_url, get_day
 # Excess rows stay 'approved' and go out on a later run/day. Company pages unaffected.
 LI_PERSONAL_MAX_PER_DAY = int(os.environ.get("LI_PERSONAL_MAX_PER_DAY", "1"))
 LI_PERSONAL_MAX_PER_RUN = int(os.environ.get("LI_PERSONAL_MAX_PER_RUN", "1"))
+LI_COMPANY_ACCOUNTS = {"alon3153", "li_english", "linkedin", "company"}
+LI_SHARED_PERSONAL_ACCOUNTS = {"li_personal", "personal"}
+LI_AUTH_ERROR_MARKERS = (
+    "http 401", "http 403", "not authorized", "organizationugcauthorizations",
+    "missing scope", "identity mismatch", "no approved posting role",
+    "advocate not connected", "auth_blocked",
+)
 
 
 def _personal_profile_key(r):
@@ -50,7 +57,100 @@ def _personal_published_today():
     return counts
 
 
-def publish_row(r):
+def _linkedin_target(account):
+    """Resolve an account label to one exact credential + author destination.
+
+    Never let an unknown ``li_*`` advocate fall through to the company token:
+    that used to risk publishing employee copy on the Uproduction company page.
+    """
+    acc = (account or "").lower()
+    if acc in LI_SHARED_PERSONAL_ACCOUNTS:
+        expected = os.environ.get("LINKEDIN_MEMBER_URN", "")
+        if not expected:
+            return {"ok": False, "account": acc,
+                    "message": "LINKEDIN_MEMBER_URN not configured"}
+        return {"ok": True, "account": acc, "kind": "member", "token": None,
+                "author_urn": expected}
+    if "spain" in acc:
+        org = os.environ.get("LINKEDIN_ORG_URN_SPAIN", "")
+        if not org:
+            return {"ok": False, "account": acc,
+                    "message": "LINKEDIN_ORG_URN_SPAIN not configured"}
+        return {"ok": True, "account": acc, "kind": "organization", "token": None,
+                "author_urn": org}
+    if acc in LI_COMPANY_ACCOUNTS:
+        org = os.environ.get("LINKEDIN_ORG_URN", "")
+        if not org:
+            return {"ok": False, "account": acc,
+                    "message": "LINKEDIN_ORG_URN not configured"}
+        return {"ok": True, "account": acc, "kind": "organization", "token": None,
+                "author_urn": org}
+    if acc.startswith("li_"):
+        adv = queue.get_advocate(acc)
+        if not adv:
+            return {"ok": False, "account": acc,
+                    "message": f"advocate not connected: {acc}"}
+        tok, urn = adv.get("access_token"), adv.get("member_urn")
+        if not tok or not urn:
+            return {"ok": False, "account": acc,
+                    "message": f"advocate token incomplete: {acc}"}
+        return {"ok": True, "account": acc, "kind": "member", "token": tok,
+                "author_urn": urn}
+    return {"ok": False, "account": acc,
+            "message": f"unknown LinkedIn account route: {acc}"}
+
+
+def _auth_cache_key(target):
+    return (target.get("kind"), target.get("account"), target.get("author_urn"))
+
+
+def _linkedin_authorized(target, cache=None):
+    if not target.get("ok"):
+        return {"ok": False, "code": "route_error", "message": target.get("message", "bad route")}
+    key = _auth_cache_key(target)
+    if cache is not None and key in cache:
+        return cache[key]
+    if target["kind"] == "organization":
+        result = linkedin.preflight(token=target.get("token"), org_urn=target["author_urn"])
+    else:
+        result = linkedin.preflight(token=target.get("token"),
+                                    member_urn_expected=target["author_urn"])
+    if cache is not None:
+        cache[key] = result
+    return result
+
+
+def _is_linkedin_auth_error(error):
+    value = (error or "").lower()
+    return any(marker in value for marker in LI_AUTH_ERROR_MARKERS)
+
+
+def _recover_linkedin_auth_failures(auth_cache):
+    """Requeue old auth failures only after their exact target passes preflight."""
+    try:
+        failed = queue._req("GET", "post_approvals", params={
+            "select": "id,day,network,account,error", "status": "eq.failed",
+            "network": "eq.linkedin", "order": "day.asc"})
+    except Exception as e:
+        print(f"WARN could not inspect LinkedIn auth failures: {e}")
+        return 0
+    recovered = 0
+    for row in failed:
+        if not _is_linkedin_auth_error(row.get("error")):
+            continue
+        target = _linkedin_target(row.get("account"))
+        auth = _linkedin_authorized(target, auth_cache)
+        label = f"day{row.get('day')} linkedin/{row.get('account')}"
+        if auth.get("ok"):
+            queue.mark(row["id"], status="approved", error=None)
+            print(f"RECOVER {label} -> authorization restored; requeued")
+            recovered += 1
+        else:
+            print(f"AUTH-HOLD {label} -> {auth.get('code')}: {auth.get('message')}")
+    return recovered
+
+
+def publish_row(r, linkedin_target=None):
     net, account, day = r["network"], r["account"], r["day"]
     text = r["caption"]
     _entry = get_day(day)
@@ -68,45 +168,42 @@ def publish_row(r):
     if net == "linkedin":
         video_url = r.get("video_url")
         url = r.get("image_url") or find_image_url(day, _data)
-        # Route by account to one of 3 destinations:
-        #   li_personal  -> Alon's personal profile (HE)
-        #   *spain*      -> Uproduction Spain company page (ES)
-        #   else         -> English company page (LINKEDIN_ORG_URN); incl. legacy "alon3153"
-        acc = (account or "").lower()
-        # Advocate personal profiles (li_natalia / li_danielle): post with THEIR
-        # own token + member URN (bypasses the cached LINKEDIN_MEMBER_URN env,
-        # which is Alon's). One-click-connected via the linkedin-oauth edge fn.
-        adv = queue.get_advocate(acc)
-        if adv:
-            tok, urn = adv.get("access_token"), adv.get("member_urn")
-            if not tok or not urn:
-                return {"success": False, "error": f"advocate {acc} not connected"}
-            if video_url:
-                return linkedin.publish_post(text, video_url=video_url, token=tok, org_urn=urn)
-            return linkedin.publish_post(text, url, token=tok, org_urn=urn)
-        if acc in ("li_personal", "personal"):
-            org_urn = "__member__"
-        elif "spain" in acc:
-            org_urn = os.environ.get("LINKEDIN_ORG_URN_SPAIN")
-        else:
-            org_urn = os.environ.get("LINKEDIN_ORG_URN")
+        target = linkedin_target or _linkedin_target(account)
+        if not target.get("ok"):
+            return {"success": False, "error": target.get("message", "LinkedIn route failed")}
+        tok = target.get("token")
+        org_urn = target["author_urn"]
         if video_url:  # brand-film / Sofia video posts
-            return linkedin.publish_post(text, video_url=video_url, org_urn=org_urn)
-        return linkedin.publish_post(text, url, org_urn=org_urn)
+            return linkedin.publish_post(text, video_url=video_url, token=tok, org_urn=org_urn)
+        return linkedin.publish_post(text, url, token=tok, org_urn=org_urn)
     # tiktok: pending app audit
     return {"success": False, "error": f"{net} publisher not configured yet"}
 
 
 def main():
     dry = "--dry-run" in sys.argv
+    auth_cache = {}
+    recovered = _recover_linkedin_auth_failures(auth_cache) if not dry else 0
     rows = queue.list_approved_unpublished()  # ordered day.asc -> oldest personal post goes first
-    print(f"Approved & unpublished: {len(rows)}")
+    print(f"Approved & unpublished: {len(rows)} (recovered auth failures: {recovered})")
     ok = 0
     published_today = _personal_published_today()  # personal key -> already published today (UTC)
     run_count = {}                                 # personal key -> published to it this run
     deferred = 0
+    auth_held = 0
     for r in rows:
         label = f"day{r['day']} {r['network']}/{r['account']}"
+        li_target = None
+        if r.get("network") == "linkedin":
+            li_target = _linkedin_target(r.get("account"))
+            auth = _linkedin_authorized(li_target, auth_cache)
+            if not auth.get("ok"):
+                auth_held += 1
+                reason = f"AUTH_HOLD[{auth.get('code')}]: {auth.get('message')}"
+                if not dry:
+                    queue.mark(r["id"], status="approved", error=reason[:400])
+                print(f"AUTH-HOLD {label} -> {auth.get('code')}: {auth.get('message')}; stays approved")
+                continue
         pkey = _personal_profile_key(r)
         if pkey is not None:
             day_total = published_today.get(pkey, 0) + run_count.get(pkey, 0)
@@ -123,7 +220,7 @@ def main():
                 run_count[pkey] = run_count.get(pkey, 0) + 1
             print(f"[DRY] would publish {label}"); continue
         try:
-            res = publish_row(r)
+            res = publish_row(r, linkedin_target=li_target)
         except Exception as e:
             res = {"success": False, "error": str(e)}
         if res.get("success"):
@@ -134,10 +231,18 @@ def main():
                 run_count[pkey] = run_count.get(pkey, 0) + 1
             print(f"OK  {label} -> {res.get('post_id')}"); ok += 1
         else:
-            queue.mark(r["id"], status="failed", error=str(res.get("error"))[:400])
+            err = str(res.get("error"))
+            if r.get("network") == "linkedin" and _is_linkedin_auth_error(err):
+                err = "AUTH_BLOCKED: " + err
+            queue.mark(r["id"], status="failed", error=err[:400])
             print(f"ERR {label} -> {res.get('error')}")
-    tail = f" (held {deferred} personal-profile post(s) for next run)" if deferred else ""
-    print(f"Published {ok}/{len(rows) - deferred}{tail}")
+    holds = []
+    if deferred:
+        holds.append(f"held {deferred} personal-profile post(s) for next run")
+    if auth_held:
+        holds.append(f"held {auth_held} LinkedIn post(s) for authorization repair")
+    tail = f" ({'; '.join(holds)})" if holds else ""
+    print(f"Published {ok}/{len(rows) - deferred - auth_held}{tail}")
     return 0
 
 
