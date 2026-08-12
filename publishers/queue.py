@@ -80,6 +80,12 @@ def get_advocate(account):
     return rows[0] if rows else None
 
 
+def delete_advocate(account):
+    """Delete a temporary/per-advocate credential row by exact account key."""
+    return _req("DELETE", "linkedin_advocate_tokens",
+                params={"account": f"eq.{account}"}, prefer="return=minimal")
+
+
 def list_advocates():
     """Return all connected LinkedIn advocate credentials."""
     return _req("GET", "linkedin_advocate_tokens",
