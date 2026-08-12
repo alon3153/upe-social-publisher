@@ -9,9 +9,7 @@ PREREQUISITES (one-time, in the LinkedIn Developer app):
   1. App → Products → request **Community Management API** (grants
      w_organization_social / r_organization_social / rw_organization_admin).
   2. You must be an **ADMIN** of the Uproduction LinkedIn company page.
-  3. App → Auth → add an authorized **Redirect URL** and set it below
-     (env LINKEDIN_REDIRECT_URI), e.g.
-     https://alon3153.github.io/upe-social-publisher/linkedin-callback.html
+  3. App → Auth → add the Supabase callback as an authorized Redirect URL.
 
 USAGE:
   export LINKEDIN_CLIENT_ID=...        # from the app (Auth tab)
@@ -20,10 +18,10 @@ USAGE:
   # to also save the token to Supabase:
   export SUPABASE_URL=... SUPABASE_SERVICE_ROLE_KEY=...
   python3 scripts/linkedin_org_oauth.py --authorize-url
-  -> opens the browser, you authorize, LinkedIn redirects with ?code=... in the
-     address bar. The GitHub re-auth workflow exchanges the one-time code,
-     validates every target, and updates Supabase + GitHub Secrets without ever
-     printing a token.
+  -> authorize in the browser. The registered Supabase callback stores the
+     credential in a fixed temporary row (`li_main_callback`). The GitHub
+     re-auth workflow validates every target, promotes it to the main credential,
+     syncs GitHub Secrets, and deletes the temporary row without printing a token.
 """
 import os, sys, json, time, secrets, datetime, subprocess
 import urllib.parse, urllib.request, urllib.error, webbrowser
@@ -34,15 +32,21 @@ sys.path.insert(0, ROOT)
 CID = os.environ.get("LINKEDIN_CLIENT_ID", "")
 CSECRET = os.environ.get("LINKEDIN_CLIENT_SECRET", "")
 REDIRECT = os.environ.get("LINKEDIN_REDIRECT_URI",
-                          "https://alon3153.github.io/upe-social-publisher/linkedin-callback.html")
-SCOPES = "w_organization_social r_organization_social rw_organization_admin w_member_social openid profile"
+                          "https://nlcbjhpfneutjuscqkjx.supabase.co/functions/v1/linkedin-oauth")
+# r_basicprofile is retained because the currently deployed Supabase callback
+# resolves the authorizing member through /v2/me before staging the credential.
+SCOPES = "w_organization_social r_organization_social rw_organization_admin w_member_social openid profile r_basicprofile"
 UA = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36"
+CALLBACK_STATE = "main_callback"
+CALLBACK_ACCOUNT = "li_main_callback"
 
 
 def authorize_url():
     q = urllib.parse.urlencode({
         "response_type": "code", "client_id": CID, "redirect_uri": REDIRECT,
-        "scope": SCOPES, "state": secrets.token_hex(8)})
+        "scope": SCOPES,
+        # The Supabase callback uses state as the temporary account key.
+        "state": CALLBACK_STATE})
     return "https://www.linkedin.com/oauth/v2/authorization?" + q
 
 
@@ -127,6 +131,44 @@ def persist_token(tok):
           f"github_access={github_access}; github_refresh={github_refresh})")
 
 
+def promote_callback_token():
+    """Validate and promote the token captured by the registered callback.
+
+    The exact temporary account is intentionally hard-coded so a workflow input
+    can never overwrite/delete a real advocate's credential.
+    """
+    from publishers import queue
+    row = queue.get_advocate(CALLBACK_ACCOUNT)
+    if not row or not row.get("access_token"):
+        print("temporary LinkedIn callback credential was not found")
+        return 1
+    try:
+        ok, errors = validate_token(row["access_token"])
+        if not ok:
+            print("authorization rejected; existing credentials were NOT changed:")
+            for error in errors:
+                print(" -", error)
+            return 1
+
+        expires_in = 5184000
+        expires_at = row.get("expires_at")
+        if expires_at:
+            try:
+                parsed = datetime.datetime.fromisoformat(expires_at.replace("Z", "+00:00"))
+                expires_in = max(1, int(parsed.timestamp() - time.time()))
+            except (TypeError, ValueError):
+                pass
+        persist_token({
+            "access_token": row["access_token"],
+            "refresh_token": row.get("refresh_token", ""),
+            "expires_in": expires_in,
+        })
+        return 0
+    finally:
+        # Callback credentials are bearer secrets: never leave the staging copy.
+        queue.delete_advocate(CALLBACK_ACCOUNT)
+
+
 def main():
     if not CID:
         print("Set LINKEDIN_CLIENT_ID first."); return 1
@@ -134,6 +176,11 @@ def main():
     if "--authorize-url" in sys.argv:
         print(url)
         return 0
+    if "--promote-callback" in sys.argv:
+        if not (os.environ.get("SUPABASE_URL") and os.environ.get("SUPABASE_SERVICE_ROLE_KEY")):
+            print("SUPABASE_URL / SUPABASE_SERVICE_ROLE_KEY missing")
+            return 1
+        return promote_callback_token()
     if not CSECRET:
         print("Set LINKEDIN_CLIENT_SECRET first."); return 1
 
