@@ -19,14 +19,14 @@ USAGE:
   export LINKEDIN_REDIRECT_URI=...     # must exactly match the app's redirect
   # to also save the token to Supabase:
   export SUPABASE_URL=... SUPABASE_SERVICE_ROLE_KEY=...
-  python3 scripts/linkedin_org_oauth.py
+  python3 scripts/linkedin_org_oauth.py --authorize-url
   -> opens the browser, you authorize, LinkedIn redirects with ?code=... in the
-     address bar; paste that code back into the terminal.
-  -> prints the access token + organization URN. Set as GitHub secrets:
-       LINKEDIN_ACCESS_TOKEN  (refreshed value)
-       LINKEDIN_ORG_URN       (e.g. urn:li:organization:12345678)
+     address bar. The GitHub re-auth workflow exchanges the one-time code,
+     validates every target, and updates Supabase + GitHub Secrets without ever
+     printing a token.
 """
-import os, sys, json, time, secrets, datetime, urllib.parse, urllib.request, urllib.error, webbrowser
+import os, sys, json, time, secrets, datetime, subprocess
+import urllib.parse, urllib.request, urllib.error, webbrowser
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, ROOT)
@@ -78,18 +78,75 @@ def discover_org(token):
     return out
 
 
+def validate_token(access):
+    """Prove the token can post as Alon and to both configured company pages."""
+    from publishers import linkedin
+    member = os.environ.get("LINKEDIN_MEMBER_URN", "")
+    org_en = os.environ.get("LINKEDIN_ORG_URN", "")
+    org_es = os.environ.get("LINKEDIN_ORG_URN_SPAIN", "")
+    missing_config = [name for name, value in (
+        ("LINKEDIN_MEMBER_URN", member), ("LINKEDIN_ORG_URN", org_en),
+        ("LINKEDIN_ORG_URN_SPAIN", org_es)) if not value]
+    if missing_config:
+        return False, ["missing target config: " + ", ".join(missing_config)]
+    checks = [
+        ("member", linkedin.preflight(token=access, member_urn_expected=member)),
+        ("english org", linkedin.preflight(token=access, org_urn=org_en)),
+        ("spain org", linkedin.preflight(token=access, org_urn=org_es)),
+    ]
+    errors = [f"{label}: {result.get('code')} — {result.get('message')}"
+              for label, result in checks if not result.get("ok")]
+    return not errors, errors
+
+
+def _sync_github_secret(name, value):
+    """Update a repository secret through gh; the value travels only on stdin."""
+    repo = os.environ.get("GITHUB_REPOSITORY", "")
+    if not value or not repo or not os.environ.get("GH_TOKEN"):
+        return False
+    result = subprocess.run(
+        ["gh", "secret", "set", name, "--repo", repo], input=value,
+        text=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE, timeout=60,
+    )
+    if result.returncode != 0:
+        raise RuntimeError(f"could not update GitHub secret {name}: {result.stderr[:160]}")
+    return True
+
+
+def persist_token(tok):
+    access = tok["access_token"]
+    refresh = tok.get("refresh_token", "")
+    expires = int(tok.get("expires_in", 5184000))
+    exp = datetime.datetime.utcfromtimestamp(time.time() + expires).isoformat() + "Z"
+    from publishers import queue
+    queue.upsert_oauth("linkedin", access_token=access, refresh_token=refresh,
+                       expires_at=exp, updated_at=datetime.datetime.utcnow().isoformat() + "Z")
+    github_access = _sync_github_secret("LINKEDIN_ACCESS_TOKEN", access)
+    github_refresh = _sync_github_secret("LINKEDIN_REFRESH_TOKEN", refresh) if refresh else False
+    print(f"✅ saved authorized LinkedIn credential (expires_at={exp}; "
+          f"github_access={github_access}; github_refresh={github_refresh})")
+
+
 def main():
-    if not CID or not CSECRET:
-        print("Set LINKEDIN_CLIENT_ID and LINKEDIN_CLIENT_SECRET first."); return 1
+    if not CID:
+        print("Set LINKEDIN_CLIENT_ID first."); return 1
     url = authorize_url()
-    print("\n1) Authorize in the browser (opening now). If it doesn't open, visit:\n")
-    print(url, "\n")
-    try:
-        webbrowser.open(url)
-    except Exception:
-        pass
-    print(f"2) After approving, the browser lands on {REDIRECT}?code=...&state=...")
-    code = input("3) Paste the `code` value here: ").strip()
+    if "--authorize-url" in sys.argv:
+        print(url)
+        return 0
+    if not CSECRET:
+        print("Set LINKEDIN_CLIENT_SECRET first."); return 1
+
+    code = os.environ.get("LINKEDIN_AUTH_CODE", "").strip()
+    if not code:
+        print("\n1) Authorize in the browser (opening now). If it doesn't open, visit:\n")
+        print(url, "\n")
+        try:
+            webbrowser.open(url)
+        except Exception:
+            pass
+        print(f"2) After approving, the browser lands on {REDIRECT}?code=...&state=...")
+        code = input("3) Paste the one-time `code` value here: ").strip()
     if not code:
         print("no code provided"); return 1
 
@@ -97,34 +154,16 @@ def main():
     access = tok.get("access_token")
     if not access:
         print("token exchange failed:", tok); return 1
-    print("\n✅ access_token obtained (expires_in:", tok.get("expires_in"), "s)")
-
-    orgs = discover_org(access)
-    if orgs:
-        print("\nOrganizations you administer:")
-        for org, name in orgs:
-            print(f"   {org}   {name}")
-        org_urn = orgs[0][0]
-    else:
-        org_urn = input("\nCould not auto-detect. Paste org URN (urn:li:organization:NNN): ").strip()
-
-    # optionally persist to Supabase (same row the publisher reads)
-    if os.environ.get("SUPABASE_URL") and os.environ.get("SUPABASE_SERVICE_ROLE_KEY"):
-        try:
-            from publishers import queue
-            exp = datetime.datetime.utcfromtimestamp(time.time() + int(tok.get("expires_in", 5184000))).isoformat() + "Z"
-            queue.upsert_oauth("linkedin", access_token=access,
-                               refresh_token=tok.get("refresh_token", ""),
-                               expires_at=exp,
-                               updated_at=datetime.datetime.utcnow().isoformat() + "Z")
-            print("\n✅ token saved to Supabase oauth_tokens (provider=linkedin)")
-        except Exception as e:
-            print("  (Supabase save skipped:", e, ")")
-
-    print("\n=== SET THESE GITHUB SECRETS ===")
-    print("LINKEDIN_ACCESS_TOKEN =", access[:12] + "…(full value above flow)")
-    print("LINKEDIN_ORG_URN      =", org_urn)
-    print("\nOnce LINKEDIN_ORG_URN is set, the publisher posts to the company page automatically.")
+    ok, errors = validate_token(access)
+    if not ok:
+        print("authorization rejected; existing credentials were NOT changed:")
+        for error in errors:
+            print(" -", error)
+        return 1
+    if not (os.environ.get("SUPABASE_URL") and os.environ.get("SUPABASE_SERVICE_ROLE_KEY")):
+        print("SUPABASE_URL / SUPABASE_SERVICE_ROLE_KEY missing; token was NOT persisted")
+        return 1
+    persist_token(tok)
     return 0
 
 

@@ -78,3 +78,9 @@ def get_advocate(account):
     rows = _req("GET", "linkedin_advocate_tokens",
                 params={"select": "*", "account": f"eq.{account}", "limit": "1"})
     return rows[0] if rows else None
+
+
+def list_advocates():
+    """Return all connected LinkedIn advocate credentials."""
+    return _req("GET", "linkedin_advocate_tokens",
+                params={"select": "account,display_name,member_urn,access_token,expires_at"})

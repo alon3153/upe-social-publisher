@@ -24,6 +24,11 @@ jobs:
           LINKEDIN_CLIENT_ID:      ${{ secrets.LINKEDIN_CLIENT_ID }}
           LINKEDIN_CLIENT_SECRET:  ${{ secrets.LINKEDIN_CLIENT_SECRET }}
           LINKEDIN_ACCESS_TOKEN:   ${{ secrets.LINKEDIN_ACCESS_TOKEN }}
+          LINKEDIN_MEMBER_URN:     ${{ secrets.LINKEDIN_MEMBER_URN }}
+          LINKEDIN_ORG_URN:        ${{ secrets.LINKEDIN_ORG_URN }}
+          LINKEDIN_ORG_URN_SPAIN:  ${{ secrets.LINKEDIN_ORG_URN_SPAIN }}
+          SUPABASE_URL:            ${{ secrets.SUPABASE_URL }}
+          SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
           RESEND_API_KEY:          ${{ secrets.RESEND_API_KEY }}
           RESEND_FROM:             ${{ secrets.RESEND_FROM }}
           APPROVAL_TO:             ${{ secrets.APPROVAL_TO }}

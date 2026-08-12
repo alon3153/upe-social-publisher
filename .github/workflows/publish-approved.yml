@@ -39,6 +39,8 @@ jobs:
           IG_UPRODUCTION_SPAIN_USER_ID:      ${{ secrets.IG_UPRODUCTION_SPAIN_USER_ID }}
           IG_UPRODUCTION_SPAIN_ACCESS_TOKEN: ${{ secrets.IG_UPRODUCTION_SPAIN_ACCESS_TOKEN }}
           LINKEDIN_ACCESS_TOKEN:             ${{ secrets.LINKEDIN_ACCESS_TOKEN }}
+          LINKEDIN_CLIENT_ID:                ${{ secrets.LINKEDIN_CLIENT_ID }}
+          LINKEDIN_CLIENT_SECRET:            ${{ secrets.LINKEDIN_CLIENT_SECRET }}
           LINKEDIN_ORG_URN:                  ${{ secrets.LINKEDIN_ORG_URN }}
           LINKEDIN_ORG_URN_SPAIN:            ${{ secrets.LINKEDIN_ORG_URN_SPAIN }}
           LINKEDIN_MEMBER_URN:               ${{ secrets.LINKEDIN_MEMBER_URN }}

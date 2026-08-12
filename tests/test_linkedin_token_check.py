@@ -17,7 +17,7 @@ def test_inactive_token_alerts_without_emitting_replacement_token(monkeypatch, c
     monkeypatch.setattr(monitor, "CID", "client-id")
     monkeypatch.setattr(monitor, "CSECRET", "client-secret")
     monkeypatch.setattr(monitor, "TOKEN", "expired-token")
-    monkeypatch.setattr(monitor, "introspect", lambda: {"active": False})
+    monkeypatch.setattr(monitor, "introspect", lambda token=None: {"active": False})
 
     alerts = []
     monkeypatch.setattr(
@@ -41,7 +41,11 @@ def test_healthy_token_does_not_email(monkeypatch):
     monkeypatch.setattr(
         monitor,
         "introspect",
-        lambda: {"active": True, "expires_at": monitor.time.time() + 60 * 86400},
+        lambda token=None: {
+            "active": True,
+            "expires_at": monitor.time.time() + 60 * 86400,
+            "scope": "w_member_social w_organization_social",
+        },
     )
 
     alerts = []
@@ -49,3 +53,26 @@ def test_healthy_token_does_not_email(monkeypatch):
 
     assert monitor.main() == 0
     assert alerts == []
+
+
+def test_active_token_missing_write_scopes_alerts(monkeypatch):
+    monitor = _load_module()
+    monkeypatch.setattr(monitor, "CID", "client-id")
+    monkeypatch.setattr(monitor, "CSECRET", "client-secret")
+    monkeypatch.setattr(monitor, "TOKEN", "active-but-useless")
+    monkeypatch.setattr(
+        monitor,
+        "introspect",
+        lambda token=None: {
+            "active": True,
+            "expires_at": monitor.time.time() + 60 * 86400,
+            "scope": "openid profile",
+        },
+    )
+    alerts = []
+    monkeypatch.setattr(monitor, "email", lambda *args: alerts.append(args))
+
+    assert monitor.main() == 0
+    assert len(alerts) == 1
+    assert "w_member_social" in alerts[0][0]
+    assert "w_organization_social" in alerts[0][0]

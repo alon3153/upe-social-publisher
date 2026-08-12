@@ -5,10 +5,14 @@ urn:li:organization:12345) — requires a token with w_organization_social.
 Otherwise falls back to the authorizing member's personal profile
 (w_member_social). Run scripts/linkedin_org_oauth.py to obtain the org token+URN.
 """
-import os, json, time, urllib.request, urllib.error
+import os, json, time, urllib.request, urllib.parse, urllib.error
 
 API = "https://api.linkedin.com"
 UA = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36"
+ORG_POST_ROLES = {
+    "ADMINISTRATOR", "CONTENT_ADMINISTRATOR", "CONTENT_ADMIN",
+    "DIRECT_SPONSORED_CONTENT_POSTER",
+}
 
 
 def _token():
@@ -55,6 +59,112 @@ def member_urn(token=None):
     if not sub:
         raise RuntimeError(f"no sub in userinfo: {info}")
     return f"urn:li:person:{sub}"
+
+
+def _oauth_post(url, fields):
+    data = urllib.parse.urlencode(fields).encode()
+    req = urllib.request.Request(url, data=data, headers={
+        "Content-Type": "application/x-www-form-urlencoded", "User-Agent": UA}, method="POST")
+    with urllib.request.urlopen(req, timeout=30) as r:
+        return json.loads(r.read().decode())
+
+
+def introspect_token(token):
+    """Return LinkedIn's token metadata without ever logging the token."""
+    cid = os.environ.get("LINKEDIN_CLIENT_ID", "")
+    secret = os.environ.get("LINKEDIN_CLIENT_SECRET", "")
+    if not cid or not secret:
+        raise RuntimeError("LINKEDIN_CLIENT_ID / LINKEDIN_CLIENT_SECRET not set")
+    return _oauth_post("https://www.linkedin.com/oauth/v2/introspectToken", {
+        "client_id": cid, "client_secret": secret, "token": token,
+    })
+
+
+def _scope_set(info):
+    raw = info.get("scope") or info.get("scopes") or ""
+    if isinstance(raw, str):
+        decoded = urllib.parse.unquote_plus(raw)
+        return {s for s in decoded.replace(",", " ").split() if s}
+    if isinstance(raw, (list, tuple, set)):
+        return {str(s) for s in raw}
+    return set()
+
+
+def _member_urn_for_token(token):
+    """Resolve the member attached to *this* token (ignore cached env URNs)."""
+    try:
+        _, info = _req("GET", f"{API}/v2/userinfo", token)
+        if info.get("sub"):
+            return f"urn:li:person:{info['sub']}"
+    except urllib.error.HTTPError:
+        pass
+    _, info = _req("GET", f"{API}/v2/me", token)
+    if not info.get("id"):
+        raise RuntimeError(f"no member id in LinkedIn identity response: {info}")
+    return f"urn:li:person:{info['id']}"
+
+
+def _organization_roles(token):
+    """Return {organization_urn: approved roles} for the token's member."""
+    url = (f"{API}/v2/organizationAcls?q=roleAssignee&projection="
+           "(elements*(organization,role,state))")
+    _, data = _req("GET", url, token)
+    roles = {}
+    for item in data.get("elements") or []:
+        if str(item.get("state", "")).upper() != "APPROVED":
+            continue
+        org = item.get("organization")
+        role = str(item.get("role", "")).upper()
+        if org and role:
+            roles.setdefault(org, set()).add(role)
+    return roles
+
+
+def preflight(token=None, member_urn_expected=None, org_urn=None):
+    """Read-only authorization check for the exact target we are about to post.
+
+    An OAuth token being ``active`` is not sufficient: the Aug-10 rotation
+    produced an active token with no usable social-write authorization. This
+    verifies scopes, member identity, and company-page role before any upload or
+    post creation is attempted. The returned dict is safe to print/log.
+    """
+    try:
+        token = token or _token()
+        info = introspect_token(token)
+        if info.get("active") not in (True, "true"):
+            return {"ok": False, "code": "inactive", "message": "token is inactive"}
+        scopes = _scope_set(info)
+        required = {"w_organization_social"} if org_urn else {"w_member_social"}
+        missing = sorted(required - scopes)
+        if missing:
+            return {"ok": False, "code": "missing_scope",
+                    "message": "missing scope(s): " + ", ".join(missing),
+                    "scopes": sorted(scopes)}
+
+        if member_urn_expected:
+            actual = _member_urn_for_token(token)
+            expected = (member_urn_expected if member_urn_expected.startswith("urn:li:person:")
+                        else f"urn:li:person:{member_urn_expected}")
+            if actual != expected:
+                return {"ok": False, "code": "identity_mismatch",
+                        "message": f"token member {actual} does not match target {expected}",
+                        "member_urn": actual, "scopes": sorted(scopes)}
+
+        if org_urn:
+            roles = _organization_roles(token).get(org_urn, set())
+            if not roles.intersection(ORG_POST_ROLES):
+                return {"ok": False, "code": "org_role_missing",
+                        "message": f"no approved posting role for {org_urn}",
+                        "roles": sorted(roles), "scopes": sorted(scopes)}
+
+        return {"ok": True, "code": "ok", "message": "authorized",
+                "scopes": sorted(scopes)}
+    except urllib.error.HTTPError as e:
+        detail = e.read().decode(errors="replace")[:240]
+        return {"ok": False, "code": f"http_{e.code}",
+                "message": f"authorization probe HTTP {e.code}: {detail}"}
+    except Exception as e:
+        return {"ok": False, "code": "probe_error", "message": str(e)}
 
 
 def _author(token=None, org_urn=None):

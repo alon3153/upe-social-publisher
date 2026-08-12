@@ -5,7 +5,7 @@ import os, sys, json, glob, datetime, urllib.request, urllib.error, urllib.parse
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, ROOT)
-from publishers import queue
+from publishers import queue, linkedin
 from publishers.content import find_image_path
 from publishers.state import load_state, get_published_days
 
@@ -37,6 +37,30 @@ ACCOUNTS = [
 ADVOCATE_NAMES = {"li_danielle": "דניאל", "li_dorin": "דורין"}
 ANTHROPIC_API_KEY = os.environ.get("ANTHROPIC_API_KEY", "")
 GEN_MODEL = os.environ.get("GEN_MODEL", "claude-sonnet-4-6")
+
+
+def connected_advocates():
+    """Return advocates whose token can write to their own exact member URN.
+
+    Missing/broken connections are omitted from the approval batch, instead of
+    asking Alon to approve a post that is guaranteed to fail later.
+    """
+    ready = set()
+    for account in ADVOCATE_NAMES:
+        try:
+            row = queue.get_advocate(account)
+            if not row or not row.get("access_token") or not row.get("member_urn"):
+                print(f"SKIP {account}: advocate not connected")
+                continue
+            auth = linkedin.preflight(token=row["access_token"],
+                                      member_urn_expected=row["member_urn"])
+            if not auth.get("ok"):
+                print(f"SKIP {account}: {auth.get('code')} {auth.get('message')}")
+                continue
+            ready.add(account)
+        except Exception as e:
+            print(f"SKIP {account}: connection check failed: {e}")
+    return ready
 
 
 def advocate_variant(base_text, advocate_name):
@@ -232,8 +256,11 @@ def main():
     if not _p:
         print(f"No image for day {day}"); return 0
     image_url = f"{IMG_BASE}/{os.path.basename(_p)}"
+    advocates_ready = connected_advocates()
     rows = []
     for net, account, pkey, lang in ACCOUNTS:
+        if account in ADVOCATE_NAMES and account not in advocates_ready:
+            continue
         data = load_day_lang(day, lang)
         if not data:
             continue

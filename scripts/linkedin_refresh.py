@@ -5,7 +5,8 @@ Usage:
   python3 scripts/linkedin_refresh.py          # refresh if expiring within REFRESH_BEFORE_DAYS
 Requires: SUPABASE_URL, SUPABASE_SERVICE_ROLE_KEY, LINKEDIN_CLIENT_ID, LINKEDIN_CLIENT_SECRET.
 """
-import os, sys, json, time, datetime, urllib.request, urllib.parse, urllib.error
+import os, sys, json, time, datetime, subprocess
+import urllib.request, urllib.parse, urllib.error
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, ROOT)
 from publishers import queue
@@ -26,11 +27,27 @@ def _exchange(refresh_token):
         return json.loads(r.read().decode())
 
 
-def _save(access, refresh, expires_in):
+def _sync_github_secret(name, value):
+    repo = os.environ.get("GITHUB_REPOSITORY", "")
+    if not value or not repo or not os.environ.get("GH_TOKEN"):
+        return False
+    result = subprocess.run(["gh", "secret", "set", name, "--repo", repo],
+                            input=value, text=True, stdout=subprocess.PIPE,
+                            stderr=subprocess.PIPE, timeout=60)
+    if result.returncode != 0:
+        raise RuntimeError(f"could not sync {name}: {result.stderr[:160]}")
+    return True
+
+
+def _save(access, refresh, expires_in, sync_github=False):
     exp = datetime.datetime.utcfromtimestamp(time.time() + int(expires_in)).isoformat() + "Z"
     queue.upsert_oauth("linkedin", access_token=access, refresh_token=refresh,
                        expires_at=exp, updated_at=datetime.datetime.utcnow().isoformat() + "Z")
-    print(f"saved linkedin token, expires_at={exp}")
+    synced_access = _sync_github_secret("LINKEDIN_ACCESS_TOKEN", access) if sync_github else False
+    synced_refresh = (_sync_github_secret("LINKEDIN_REFRESH_TOKEN", refresh)
+                      if sync_github and refresh else False)
+    print(f"saved linkedin token, expires_at={exp}, "
+          f"github_access={synced_access}, github_refresh={synced_refresh}")
 
 
 def seed():
@@ -81,7 +98,8 @@ def main():
         print("refresh failed:", e.code, e.read().decode()[:200]); return 1
     if not t.get("access_token"):
         print("no access_token in refresh response:", t); return 1
-    _save(t["access_token"], t.get("refresh_token", row["refresh_token"]), t.get("expires_in", 5184000))
+    _save(t["access_token"], t.get("refresh_token", row["refresh_token"]),
+          t.get("expires_in", 5184000), sync_github=True)
     return 0
 
 

@@ -1,0 +1,40 @@
+name: LinkedIn Reauthorize
+
+# Human consent happens in the browser first. Codex stores the one-time callback
+# code as the short-lived LINKEDIN_AUTH_CODE repository secret, then dispatches
+# this workflow. The code is deleted on every outcome.
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  reauthorize:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    if: github.actor == 'alon3153'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Exchange, verify and persist credential
+        env:
+          LINKEDIN_AUTH_CODE:        ${{ secrets.LINKEDIN_AUTH_CODE }}
+          LINKEDIN_CLIENT_ID:        ${{ secrets.LINKEDIN_CLIENT_ID }}
+          LINKEDIN_CLIENT_SECRET:    ${{ secrets.LINKEDIN_CLIENT_SECRET }}
+          LINKEDIN_MEMBER_URN:       ${{ secrets.LINKEDIN_MEMBER_URN }}
+          LINKEDIN_ORG_URN:          ${{ secrets.LINKEDIN_ORG_URN }}
+          LINKEDIN_ORG_URN_SPAIN:    ${{ secrets.LINKEDIN_ORG_URN_SPAIN }}
+          LINKEDIN_REDIRECT_URI:     https://alon3153.github.io/upe-social-publisher/linkedin-callback.html
+          SUPABASE_URL:              ${{ secrets.SUPABASE_URL }}
+          SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
+          GH_TOKEN:                  ${{ secrets.GH_PAT }}
+          GITHUB_REPOSITORY:         ${{ github.repository }}
+        run: python3 scripts/linkedin_org_oauth.py
+      - name: Delete one-time authorization code
+        if: always()
+        env:
+          GH_TOKEN: ${{ secrets.GH_PAT }}
+        run: gh secret delete LINKEDIN_AUTH_CODE --repo "${{ github.repository }}"
