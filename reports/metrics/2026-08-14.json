@@ -1,0 +1,270 @@
+{
+  "generated_at": "2026-08-14T06:54:38",
+  "period_days": 7,
+  "networks": {
+    "instagram": {
+      "posts": 11,
+      "impressions": 556,
+      "reach": 327,
+      "interactions": 4,
+      "engagement_rate_pct": 0.72,
+      "caveat": null,
+      "top": {
+        "url": "https://www.instagram.com/p/Db75lNUG4Sh/",
+        "content": "Six vendors. Six contracts. Six versions of \"that's not our part.\" 🫠\n\nThe hidden cost of juggling suppliers:\n🧩 Info lost at every handoff\n📞 No single number whe",
+        "impressions": 86,
+        "interactions": 2
+      }
+    },
+    "facebook": {
+      "posts": 8,
+      "impressions": 25,
+      "reach": 14,
+      "interactions": 0,
+      "engagement_rate_pct": 0.0,
+      "caveat": null,
+      "top": {
+        "url": null,
+        "content": "",
+        "impressions": 17,
+        "interactions": 0
+      }
+    },
+    "tiktok": {
+      "posts": 0,
+      "impressions": 0,
+      "reach": 0,
+      "interactions": 0,
+      "engagement_rate_pct": 0.0,
+      "top": null
+    },
+    "linkedin": {
+      "posts": 9,
+      "impressions": 155,
+      "reach": 0,
+      "interactions": 12,
+      "engagement_rate_pct": 7.74,
+      "caveat": null,
+      "top": {
+        "url": "https://www.linkedin.com/feed/update/urn:li:ugcPost:7489942591703220225",
+        "content": "",
+        "impressions": 41,
+        "interactions": 11
+      }
+    },
+    "youtube": {
+      "posts": 4,
+      "impressions": 4537,
+      "reach": 0,
+      "interactions": 0,
+      "engagement_rate_pct": 0.0,
+      "caveat": null,
+      "top": {
+        "url": null,
+        "content": "",
+        "impressions": 4029,
+        "interactions": 0
+      }
+    }
+  },
+  "totals": {
+    "posts": 32,
+    "impressions": 5273,
+    "reach": 341,
+    "interactions": 16,
+    "engagement_rate_pct": 0.3
+  },
+  "leads": {
+    "ok": false,
+    "reason": "SF HTTP 400: {\"error\":\"invalid_grant\",\"error_description\":\"authentication failure\"}",
+    "qualified_leads": null,
+    "new_opportunities": null,
+    "source": "salesforce"
+  },
+  "seo_geo": {
+    "generated_at": "2026-08-10",
+    "sites": [
+      {
+        "site": "https://upe.co.il/",
+        "clicks": 146,
+        "impressions": 39358,
+        "avg_position": 36.1,
+        "clicks_prev": 114,
+        "impressions_prev": 37135,
+        "top_opportunities": [
+          [
+            "אירועים לחברות",
+            10.8,
+            468
+          ],
+          [
+            "הפקת נופש חברה",
+            10.6,
+            414
+          ],
+          [
+            "נופש חברה",
+            17.9,
+            307
+          ],
+          [
+            "incentive travel companies",
+            16.1,
+            274
+          ],
+          [
+            "אירועי קונספט",
+            20.0,
+            267
+          ]
+        ]
+      },
+      {
+        "site": "https://upe-spain.com/",
+        "clicks": 50,
+        "impressions": 10886,
+        "avg_position": 27.3,
+        "clicks_prev": 50,
+        "impressions_prev": 15848,
+        "top_opportunities": [
+          [
+            "international product launch event",
+            10.3,
+            168
+          ],
+          [
+            "global product launch event",
+            10.2,
+            129
+          ],
+          [
+            "evento neutro en carbono",
+            10.8,
+            113
+          ],
+          [
+            "new hire team building",
+            15.1,
+            98
+          ],
+          [
+            "coctel corporativo",
+            6.5,
+            54
+          ]
+        ]
+      }
+    ],
+    "geo": {
+      "status": "ok",
+      "cited": 4,
+      "total": 7,
+      "rate": 57.1
+    },
+    "competitors": [
+      {
+        "term": "הפקת אירועים עסקיים",
+        "pos": null,
+        "top3": [
+          "pinchevents.co.il",
+          "www.arbelpro.co.il",
+          "mantver.co.il"
+        ]
+      },
+      {
+        "term": "חברת הפקת אירועים",
+        "pos": null,
+        "top3": [
+          "www.arbelpro.co.il",
+          "pinchevents.co.il",
+          "allplaces.co.il"
+        ]
+      },
+      {
+        "term": "הפקת כנסים",
+        "pos": null,
+        "top3": [
+          "www.eron.co.il",
+          "rtspro.co.il",
+          "www.ortra.co.il"
+        ]
+      },
+      {
+        "term": "טיולי תמריץ לעובדים",
+        "pos": 5,
+        "top3": [
+          "www.elateva.co.il",
+          "mspirit.co.il",
+          "www.boutiqo.co.il"
+        ]
+      },
+      {
+        "term": "eventos corporativos españa",
+        "pos": null,
+        "top3": [
+          "www.eventoplus.com",
+          "www.creagroupevents.com",
+          "aevea.es"
+        ]
+      },
+      {
+        "term": "incentive travel spain",
+        "pos": null,
+        "top3": [
+          "madridexpert.com",
+          "tusetdmc.com",
+          "www.g20corporation.com"
+        ]
+      },
+      {
+        "term": "corporate events barcelona",
+        "pos": null,
+        "top3": [
+          "www.barcelona-life.com",
+          "www.eventbrite.com",
+          "barcelonaboatparty.com"
+        ]
+      }
+    ],
+    "ok": true,
+    "weekly_clicks": 196,
+    "top3_keywords": 0,
+    "aeo_cited_engines": 4
+  },
+  "site_inventory": {
+    "ok": true,
+    "service_pages": [
+      "why-uproduction-events-trust",
+      "אירוע-קונספט",
+      "אירועים-אקסלוסיביים",
+      "אירועים-עסקיים-מיוחדים",
+      "אירועים-קולינרים",
+      "ארגון-כנסים",
+      "הפקת-אירועי-חברה",
+      "הפקת-אירועי-חברה-בחול",
+      "הפקת-אירועים-לחברות-הייטק",
+      "הפקת-אירועים-עסקיים",
+      "הפקת-כנסים",
+      "חברת-הפקות",
+      "טיולי-חברה",
+      "טיולי-תמריץ-בחול",
+      "טיולי-תמריץ-לחברות",
+      "כנסים-לחברות-הייטק",
+      "כנסים-עסקיים",
+      "נופש-חברה",
+      "נופש-חברה-בחול",
+      "נופש-חברה-עם-חבילת-ספא-לעובדים",
+      "נופשים-וטיולי-תמריץ"
+    ],
+    "service_count": 21,
+    "key_pages": {
+      "llms.txt": true,
+      "llms-full.txt": true,
+      "faq": true,
+      "services_index": true,
+      "brand_hub_trust": true
+    },
+    "blog_article_count": 261,
+    "source": "github:alon3153/uproduction-astro"
+  }
+}
