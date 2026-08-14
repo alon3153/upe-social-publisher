@@ -112,11 +112,20 @@ def check_linkedin_auth():
     except Exception as e:
         issues.append(f"⚠️ LinkedIn — לא ניתן לבדוק חיבורי צוות: {e}")
         return issues
+    alon_urn = os.environ.get("LINKEDIN_MEMBER_URN", "")
     for account, (display, slug) in required_advocates.items():
         row = advocates.get(account)
         reconnect = f"{fn_base}?advocate={slug}" if fn_base.startswith("http") else ""
         if not row or not row.get("access_token") or not row.get("member_urn"):
             issues.append(f"🔴 LinkedIn — {display} לא מחוברת. חיבור מחדש: {reconnect}")
+            continue
+        # A connect link is a plain URL: whoever opens it authorizes THEIR OWN
+        # profile. If Alon clicks an advocate's link to "help", the row stores
+        # his URN and preflight still passes — the advocacy channel then quietly
+        # posts a second time as Alon instead of reaching her audience.
+        if alon_urn and row.get("member_urn") == alon_urn:
+            issues.append(f"🔴 LinkedIn — החיבור של {display} מצביע על הפרופיל של אלון "
+                          f"(מישהו אחר לחץ על הלינק). {display} צריכה ללחוץ בעצמה: {reconnect}")
             continue
         auth = linkedin.preflight(token=row["access_token"],
                                   member_urn_expected=row["member_urn"])
