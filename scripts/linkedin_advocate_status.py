@@ -53,6 +53,24 @@ def main():
         if not auth.get("ok"):
             problems += 1
 
+    # Being connected is not the same as having ever posted: the wiring sat on an
+    # unmerged branch for 11 days in July with valid tokens and zero output, so
+    # report actual publish history, not just authorization.
+    print()
+    for account, display in ADVOCATES.items():
+        rows = queue._req("GET", "post_approvals", params={
+            "select": "day,status,published_at", "account": f"eq.{account}",
+            "order": "day.desc", "limit": "5"})
+        if not rows:
+            print(f"{account:<14} {display:<8} never enqueued for approval")
+            continue
+        published = [r for r in rows if r.get("published_at")]
+        latest = published[0] if published else None
+        print(f"{account:<14} {display:<8} last 5 queued: "
+              f"{[(r.get('day'), r.get('status')) for r in rows]}")
+        print(f"{'':<14} last published: "
+              f"{latest.get('published_at') if latest else 'NEVER'}")
+
     print(f"\nproblems: {problems}")
     return 0
 
