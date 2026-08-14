@@ -36,8 +36,27 @@ def main():
         print("No pending rows to resend.")
         return 0
     days = sorted({int(r["day"]) for r in rows if r.get("day") is not None})
-    cards = "".join(daily.post_card(r) for r in rows)
     n = len(rows)
+
+    # One "approve all" button per day, exactly like the daily email. Without it
+    # this reminder needed one click per post: on 14.08 Alon clicked once,
+    # reported the batch approved, and 8 of 9 rows silently stayed pending.
+    by_day = {}
+    for r in rows:
+        by_day.setdefault(int(r["day"]) if r.get("day") is not None else -1, []).append(r)
+    cards = ""
+    for day in sorted(by_day):
+        drows = by_day[day]
+        cards += (f'<div dir="rtl" style="font-size:15px;font-weight:bold;color:#141414;'
+                  f'margin:20px 0 8px;">יום {day} — {len(drows)} פוסטים</div>')
+        if day >= 0:
+            approve_all = (f"{daily.FN}?action=approve_all&day={day}"
+                           f"&token={drows[0]['token']}")
+            cards += (f'<a href="{approve_all}" style="display:block;background:#2fa84f;'
+                      f'color:#fff;text-decoration:none;font-size:18px;font-weight:bold;'
+                      f'padding:16px 0;border-radius:12px;text-align:center;'
+                      f'margin-bottom:8px;">✅ אשר הכל ({len(drows)} פוסטים)</a>')
+        cards += "".join(daily.post_card(r) for r in drows)
     html = f"""<html dir="rtl" lang="he"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1"></head>
 <body dir="rtl" style="font-family:Arial,Helvetica,sans-serif;font-size:14px;direction:rtl;text-align:right;background:#f2f2f2;margin:0;padding:0;">
@@ -48,7 +67,7 @@ def main():
  <div dir="rtl" style="padding:20px 24px;direction:rtl;text-align:right;">
    <div style="font-size:13px;color:#c0392b;font-weight:bold;">⏳ פוסטים תקועים בהמתנה (ימים: {', '.join(map(str, days))})</div>
    <div style="font-size:20px;font-weight:bold;color:#141414;margin:4px 0 14px;">{n} פוסטים ממתינים לאישור</div>
-   <div style="font-size:12px;color:#999;margin-bottom:22px;text-align:center;">אשר / דחה כל פוסט בנפרד למטה.</div>
+   <div style="font-size:12px;color:#999;margin-bottom:22px;text-align:center;">"אשר הכל" מאשר את כל היום בלחיצה אחת — או אשר / דחה כל פוסט בנפרד.</div>
    {cards}
    <div style="font-size:12px;color:#999;margin-top:6px;text-align:center;">לחיצה על "אשר" → הפוסט יפורסם אוטומטית בריצת הפרסום הקרובה.</div>
  </div></div></body></html>"""
