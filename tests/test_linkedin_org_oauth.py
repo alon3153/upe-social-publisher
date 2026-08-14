@@ -45,3 +45,15 @@ def test_authorize_url_uses_registered_callback_state(monkeypatch):
     url = oauth.authorize_url()
     assert "state=main_callback" in url
     assert "functions%2Fv1%2Flinkedin-oauth" in url
+
+
+def test_authorize_url_only_requests_scopes_the_app_is_allowed():
+    """LinkedIn answers unauthorized_scope_error instead of showing consent.
+
+    App 78nrl43hscor4q has never had the OpenID Connect product approved, so
+    openid/profile/r_liteprofile in the request make re-auth impossible — which
+    is exactly what blocked recovery on 14.08.
+    """
+    requested = set(oauth.SCOPES.split())
+    assert not requested & {"openid", "profile", "r_liteprofile"}
+    assert {"w_organization_social", "w_member_social", "r_basicprofile"} <= requested

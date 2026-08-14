@@ -35,7 +35,10 @@ REDIRECT = os.environ.get("LINKEDIN_REDIRECT_URI",
                           "https://nlcbjhpfneutjuscqkjx.supabase.co/functions/v1/linkedin-oauth")
 # r_basicprofile is retained because the currently deployed Supabase callback
 # resolves the authorizing member through /v2/me before staging the credential.
-SCOPES = "w_organization_social r_organization_social rw_organization_admin w_member_social openid profile r_basicprofile"
+# Do NOT add openid/profile/r_liteprofile: they are not authorized on app
+# 78nrl43hscor4q, and LinkedIn then answers the consent request with
+# unauthorized_scope_error instead of a consent screen — no re-auth possible.
+SCOPES = "w_organization_social r_organization_social rw_organization_admin w_member_social r_basicprofile"
 UA = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36"
 CALLBACK_STATE = "main_callback"
 CALLBACK_ACCOUNT = "li_main_callback"
