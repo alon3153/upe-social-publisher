@@ -59,6 +59,29 @@ def seed():
     print("seeded. refresh_token present:", bool(r)); return 0
 
 
+def _token_is_live(access):
+    """Whether LinkedIn itself still honours the stored access token.
+
+    `expires_at` is not proof of validity: LinkedIn revokes tokens on re-auth,
+    and --seed only *guesses* the expiry (now + 55d). On 2026-08-13 the stored
+    token introspected as inactive while expires_at still read 56 days out, so
+    the "still fresh" shortcut skipped the refresh every night and all three
+    LinkedIn channels stopped publishing silently. Ask LinkedIn, don't assume.
+    """
+    if not access:
+        return False
+    try:
+        from publishers import linkedin
+        info = linkedin.introspect_token(access)
+    except Exception as e:
+        print(f"could not introspect stored token ({e}) — refreshing to be safe")
+        return False
+    if info.get("active") in (True, "true"):
+        return True
+    print("stored token introspects as INACTIVE — refreshing regardless of expires_at")
+    return False
+
+
 def main():
     if "--seed" in sys.argv:
         return seed()
@@ -77,20 +100,24 @@ def main():
         except Exception:
             pass
 
+    live = _token_is_live(row.get("access_token"))
+    fresh = live and (left is None or left > BEFORE_DAYS)
+
     if not row.get("refresh_token"):
         # No refresh_token => cannot auto-refresh. Only a problem once the access
-        # token is actually expiring. While it's still fresh, succeed quietly so
+        # token is actually unusable. While it still works, succeed quietly so
         # the daily job doesn't spam false failures.
-        if left is None or left > BEFORE_DAYS:
-            print("no refresh_token, but access token still fresh — nothing to do "
+        if fresh:
+            print("no refresh_token, but access token still works — nothing to do "
                   "(re-auth with offline_access scope to enable auto-refresh)")
             return 0
-        print(f"ACTION NEEDED: LinkedIn access token expires in {left:.1f}d and no "
-              "refresh_token is stored. Re-authorize the app (offline_access scope) "
-              "and run --seed with the new tokens.")
+        reason = ("was revoked" if not live else f"expires in {left:.1f}d")
+        print(f"ACTION NEEDED: LinkedIn access token {reason} and no refresh_token "
+              "is stored. Re-authorize the app (offline_access scope) and run "
+              "--seed with the new tokens.")
         return 1
 
-    if left is not None and left > BEFORE_DAYS:
+    if fresh:
         print("token still fresh; no refresh needed"); return 0
     try:
         t = _exchange(row["refresh_token"])
