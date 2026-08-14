@@ -82,9 +82,76 @@ def _token_is_live(access):
     return False
 
 
+def refresh_advocates():
+    """Keep the employee-advocacy tokens alive too.
+
+    These live in their own table and were never covered by this job: the two
+    connected advocates were both dated to expire 2026-08-29, after which the
+    advocacy channels would have gone silent with no alert and no way back
+    except asking each person to click her connect link again.
+    """
+    failures = 0
+    try:
+        rows = queue.list_advocates()
+    except Exception as e:
+        print(f"could not list advocates: {e}")
+        return 1
+    for row in rows:
+        account = row.get("account", "?")
+        if account == "li_main_callback":
+            continue  # staging row for the shared credential, not a person
+        left = None
+        if row.get("expires_at"):
+            try:
+                left = (datetime.datetime.fromisoformat(
+                    row["expires_at"].replace("Z", "+00:00"))
+                    - datetime.datetime.now(datetime.timezone.utc)).total_seconds() / 86400
+            except Exception:
+                pass
+        if _token_is_live(row.get("access_token")) and (left is None or left > BEFORE_DAYS):
+            print(f"{account}: still valid ({left:.1f}d left)" if left is not None
+                  else f"{account}: still valid")
+            continue
+        if not row.get("refresh_token"):
+            print(f"ACTION NEEDED: {account} needs to reconnect — token unusable "
+                  "and no refresh_token stored")
+            failures += 1
+            continue
+        try:
+            t = _exchange(row["refresh_token"])
+        except urllib.error.HTTPError as e:
+            print(f"ACTION NEEDED: {account} refresh failed "
+                  f"({e.code} {e.read().decode()[:120]}) — she must reconnect")
+            failures += 1
+            continue
+        if not t.get("access_token"):
+            print(f"ACTION NEEDED: {account} refresh returned no access_token")
+            failures += 1
+            continue
+        exp = datetime.datetime.utcfromtimestamp(
+            time.time() + int(t.get("expires_in", 5184000))).isoformat() + "Z"
+        queue.update_advocate(account,
+                              access_token=t["access_token"],
+                              refresh_token=t.get("refresh_token", row["refresh_token"]),
+                              expires_at=exp)
+        print(f"{account}: refreshed, expires_at={exp}")
+    return 1 if failures else 0
+
+
 def main():
     if "--seed" in sys.argv:
         return seed()
+    if "--advocates-only" in sys.argv:
+        return refresh_advocates()
+    # The advocates are refreshed on every run whatever the shared token does —
+    # a dead company token must not mask employee credentials quietly expiring.
+    print("— shared credential —")
+    rc = _refresh_shared()
+    print("— advocate credentials —")
+    return max(rc, refresh_advocates())
+
+
+def _refresh_shared():
     row = queue.get_oauth("linkedin")
     if not row:
         print("no linkedin token stored at all — run --seed first"); return 1

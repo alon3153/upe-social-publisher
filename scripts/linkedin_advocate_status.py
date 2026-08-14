@@ -40,9 +40,14 @@ def main():
         if urn and urn == alon_urn:
             note = "  ⚠️ THIS IS ALON'S OWN PROFILE — the wrong person clicked her link"
             problems += 1
+        # No refresh_token means the credential cannot be renewed automatically —
+        # that person has to click her connect link again before it expires.
         print(f"{account:<14} {display:<8} urn={urn or '(none)'} "
               f"token={'yes' if has_token else 'NO'} "
+              f"refresh={'yes' if row.get('refresh_token') else 'NO'} "
               f"expires_at={row.get('expires_at')}{note}")
+        if not row.get("refresh_token"):
+            problems += 1
 
         if not (has_token and urn):
             problems += 1

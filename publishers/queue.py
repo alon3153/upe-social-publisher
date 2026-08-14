@@ -89,4 +89,12 @@ def delete_advocate(account):
 def list_advocates():
     """Return all connected LinkedIn advocate credentials."""
     return _req("GET", "linkedin_advocate_tokens",
-                params={"select": "account,display_name,member_urn,access_token,expires_at"})
+                params={"select": "account,display_name,member_urn,access_token,"
+                                  "refresh_token,expires_at"})
+
+
+def update_advocate(account, **fields):
+    """Update one advocate's credential in place, by exact account key."""
+    return _req("PATCH", "linkedin_advocate_tokens",
+                params={"account": f"eq.{account}"}, body=fields,
+                prefer="return=minimal")
