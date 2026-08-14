@@ -1,0 +1,28 @@
+name: LinkedIn Advocate Status
+
+# Read-only. Prints which advocates can publish and which profile each row
+# actually writes as. Sends nothing and changes nothing.
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  status:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    if: github.actor == 'alon3153'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Report advocate publish readiness
+        env:
+          LINKEDIN_CLIENT_ID:        ${{ secrets.LINKEDIN_CLIENT_ID }}
+          LINKEDIN_CLIENT_SECRET:    ${{ secrets.LINKEDIN_CLIENT_SECRET }}
+          LINKEDIN_MEMBER_URN:       ${{ secrets.LINKEDIN_MEMBER_URN }}
+          SUPABASE_URL:              ${{ secrets.SUPABASE_URL }}
+          SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
+        run: python3 scripts/linkedin_advocate_status.py
