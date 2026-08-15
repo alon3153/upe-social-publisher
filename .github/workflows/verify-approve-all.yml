@@ -1,0 +1,29 @@
+name: Verify approve_all
+
+# Regression check against the LIVE approve edge function: a batch approval must
+# never revive a rejected post. Pick a day that has at least one rejected row.
+on:
+  workflow_dispatch:
+    inputs:
+      day:
+        description: "Content day to test (must contain a rejected row)"
+        required: true
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    if: github.actor == 'alon3153'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Verify approve_all leaves rejects alone
+        env:
+          SUPABASE_URL:              ${{ secrets.SUPABASE_URL }}
+          SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
+        run: python3 scripts/verify_approve_all.py "${{ inputs.day }}"
