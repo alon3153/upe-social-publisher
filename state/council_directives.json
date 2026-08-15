@@ -1,64 +1,64 @@
 {
-  "updated_at": "2026-08-14",
+  "updated_at": "2026-08-15",
   "source": "daily-council",
   "directives": [
     {
       "category": "safe_auto",
-      "action": "מיפוי קישורים פנימיים לעמודי שירות בTop-5 הזדמנויות SEO",
-      "detail": "המונחים 'אירועים לחברות' (pos 10.8, 468 חשיפות), 'הפקת נופש חברה' (pos 10.6, 414) ו'נופש חברה' (pos 17.9, 307) מופיעים בעמודי שירות קיימים. יש לבדוק מתוך 261 הבלוגים אילו מתאימים לקישור פנימי לעמודים אלה ולתעד רשימת מאמרים ממוקדת לאישור.",
-      "channel": "google_organic"
-    },
-    {
-      "category": "safe_auto",
-      "action": "הגדרת אסטרטגיית hashtag ב-LinkedIn סביב כאב-לקוח ספציפי",
-      "detail": "פוסטים המתמקדים בכאב תפעולי (vendor fragmentation, budget waste, single-vendor accountability) מייצרים engagement גבוה יותר — יש להגדיר 3 עמודי תוכן (pain-point, proof, process) עם hashtags עסקיים ממוקדי ICP ישראלי (#אירועיחברה, #MICE, #eventprofs) לצינור האישור.",
+      "action": "תיוג נושאים ו-hashtags ל-LinkedIn: העבר את מרכז הכובד לפוסטים בפורמט 'עלות נסתרת / טעות נפוצה / תוצאה מוכחת' (pain-point hooks) עם 3-5 hashtags ממוקדים (#הפקתאירועים #incentivetravel #corporateevents).",
+      "detail": "פוסטים עם hook של pain-point יצרו את ה-engagement הגבוה ביותר (הפוסט עם 'six vendors'); LinkedIn מגמת 2026 מאששת שתוכן אותנטי הנוגע בנקודות כאב מייצר DM ישיר מקהל B2B.",
       "channel": "linkedin"
     },
     {
       "category": "safe_auto",
-      "action": "קביעת אסטרטגיית פלייליסטים ביוטיוב לפי פרסונת קונה",
-      "detail": "יוטיוב יצר 4,537 חשיפות מ-4 פוסטים — אך ללא ארגון פלייליסטים לפי סוג אירוע (כנסים, טיולי תמריץ, אירועי חברה) הסשן-depth נמוך. יש להגדיר מבנה פלייליסטים ולוח תוכן להגשה לאישור.",
+      "action": "הנחיית קצב YouTube Shorts: לכל וידאו ארוך שמפורסם, הכן גרסת Short (60 שניות) הממוקדת בשאלת חיפוש ספציפית (למשל: 'כמה עולה הפקת כנס בחו\"ל?').",
+      "detail": "מחקר 2026 מאשש ש-87% ממשווקי B2B מדווחים על engagement גבוה יותר ב-Short-form; YouTube Shorts הם שכבת גילוי ראשונית שמזינה את הערוץ הארוך.",
       "channel": "youtube"
     },
     {
       "category": "safe_auto",
-      "action": "דוח הזדמנויות מונחים ל-upe-spain.com ממוקד ב-long-tail אנגלי",
-      "detail": "'international product launch event' (pos 10.3, 168) ו-'global product launch event' (pos 10.2, 129) הם מונחים בTop-11 עם נפח — יש לבדוק אם עמודי שירות קיימים בספרדית/אנגלית מכסים intent זה ולתעד פערים לאישור.",
-      "channel": "google_organic"
+      "action": "אסטרטגיית SEO-snippet: על כל 5 מאמרים קיימים בבלוג (מתוך 263), עדכן את ה-meta-description לשאלה ישירה + תשובה ב-160 תווים — במיוחד עבור דפי שירות 'אירועים לחברות' (pos 10.8, 468 impressions) ו'הפקת נופש חברה' (pos 10.6, 414 impressions).",
+      "detail": "CTR ממוצע של 0.5% מ-39K impressions מעיד שה-snippets לא מושכים קליקים; תשובה ישירה ב-meta מגדילה CTR ב-B2B ומשרתת גם AEO (AI מעדיף תשובות ישירות ב-100 המילים הראשונות).",
+      "channel": "google_organic_geo"
     },
     {
       "category": "safe_auto",
-      "action": "הפסקת תזמון פוסטים לפייסבוק מעל 2/שבוע — ניתוב משאבי אישור ל-LinkedIn/Instagram",
-      "detail": "פייסבוק: 25 חשיפות מ-8 פוסטים ו-0 אינטראקציות — ה-ROI על תהליך האישור הוא שלילי. יש להגביל ל-2 פוסטים/שבוע (repurpose מ-LinkedIn) ולנתב את חסכון הזמן ל-LinkedIn thought leadership.",
-      "channel": "facebook"
+      "action": "הנחיית Internal Linking: מתוך 263 מאמרי הבלוג, זהה את 20 המאמרים עם הTraffic הגבוה ביותר ובנה מהם קישורים פנימיים לדפי שירות קיימים (הפקת-כנסים, טיולי-תמריץ-לחברות, נופש-חברה) לחיזוק דירוג הדפים המסחריים.",
+      "detail": "0 Top-3 keywords מעיד על חולשת authority לדפי שירות; internal linking מ-traffic pages הוא ה-lever המהיר ביותר ללא יצירת תוכן חדש.",
+      "channel": "google_organic_geo"
     },
     {
       "category": "safe_auto",
-      "action": "הגדרת מדיניות תזמון LinkedIn ל-08:00-10:00 ימים ג'-ה' עם מחויבות תגובה בשעה הראשונה",
-      "detail": "האלגוריתם של LinkedIn מעריך כל פוסט בשעה הראשונה לפרסום — מעורבות מהירה מגדילה distribution. יש לתזמן פוסטים בשיאי פעילות B2B ולהבטיח שמישהו מהצוות פנוי להגיב לתגובות ראשוניות.",
-      "channel": "linkedin"
+      "action": "הגדרת תבנית פרסום אינסטגרם: שני פוסטים/שבוע בפורמט Carousel (3-5 שקופיות) + שניים בפורמט Reels מתוצרת UPE עצמה — לא לפרסם תוכן סטטי בודד שאינו מייצר swipe/engagement.",
+      "detail": "12 פוסטים שייצרו 620 חשיפות ו-6 אינטראקציות בלבד — ה-CPE (cost per engagement) גבוה מדי; Carousel ו-Reels מייצרים reach אורגני גבוה פי 2-3 מפוסט סטטי באינסטגרם B2B.",
+      "channel": "instagram"
+    },
+    {
+      "category": "safe_auto",
+      "action": "AEO — עדכון FAQ קיים: הוסף 10 שאלות חדשות בפורמט Q&A (שאלה בכותרת H3, תשובה ישירה בפסקה ראשונה של 2-3 משפטים) לדף ה-FAQ הקיים באתר — תמקד בשאלות השוואתיות ('כמה עולה חברת הפקה לעומת ניהול עצמי?').",
+      "detail": "UPE כבר ב-4 מנועי AI (מעבר ליעד); הרחבת ה-FAQ הקיים במבנה שאלה-תשובה מפורש תשמר ותגדיל את הנראות בלי לדלל authority לדף חדש.",
+      "channel": "google_organic_geo"
     }
   ],
   "channel_cadence": {
     "facebook": {
       "max_posts_per_week": 2,
-      "reason": "25 חשיפות מ-8 פוסטים ו-0 אינטראקציות — ערוץ כמעט מת. 2 פוסטים/שבוע (repurpose בלבד) שומר נוכחות מינימלית מבלי לבזבז כוח אדם על אישורים."
+      "reason": "Facebook הניב 25 חשיפות ו-0 אינטראקציות — ערוץ מת ל-B2B ישראלי. שני פוסטים בשבוע שומרים נוכחות מינימלית אך לא מבזבזים קיבולת אישור."
     },
     "instagram": {
       "max_posts_per_week": 5,
-      "reason": "556 חשיפות עם engagement 0.72% — סביר לB2B ישראלי. 5 פוסטים/שבוע שומר קצב ומאפשר בדיקת פורמטים (Reels vs. carousels) ללא עומס על pipeline האישור."
+      "reason": "Instagram מייצר engagement חיובי (0.97%) עם פורמט pain-point; 5 פוסטים בשבוע (שילוב Reels + Carousel) ממקסמים reach ב-B2B ומזינים remarketing."
     },
     "linkedin": {
-      "max_posts_per_week": 5,
-      "reason": "7.74% engagement — הערוץ הטוב ביותר של UPE. 5 פוסטים/שבוע (תמהיל: thought-leadership מנהלים + company page) מנצל את האלגוריתם שמתגמל עקביות ותוכן וידאו."
+      "max_posts_per_week": 4,
+      "reason": "LinkedIn הוא ערוץ ה-B2B הגבוה ביותר (7.23% engagement, קהל מקבלי החלטות); 3-4 פוסטים/שבוע הם הקצב האופטימלי לפי מחקרי 2026 ללא פגיעה בהפצה האורגנית."
     },
     "tiktok": {
-      "max_posts_per_week": 0,
-      "reason": "0 פוסטים ו-0 נוכחות כרגע — ה-ICP של UPE (CMO/CEO/HR בישראל) אינו צרכן TikTok B2B מוכח. יש לשמר 0 עד שתהיה אסטרטגיית תוכן ייעודית מאושרת."
+      "max_posts_per_week": 2,
+      "reason": "TikTok לא פעיל כרגע ואין נתוני ביצוע; 2 פוסטים/שבוע מינימליים (repurpose מ-Reels/Shorts) לבדיקת פוטנציאל קהל B2B ישראלי לפני הגדלת השקעה."
     },
     "youtube": {
-      "max_posts_per_week": 2,
-      "reason": "4,537 חשיפות מ-4 פוסטים — ROI גבוה מאוד לפוסט, אך ייצור וידאו דורש זמן. 2/שבוע מאפשר איכות ועקביות שהאלגוריתם מתגמל יותר מכמות."
+      "max_posts_per_week": 3,
+      "reason": "YouTube יצר 85%+ מסך החשיפות בתקופה הקודמת; קצב של 1 וידאו ארוך + 2 Shorts שבועיים מייצר consistency אלגוריתמי וממנף את הנכס הקיים."
     }
   },
   "channel_priority": [
@@ -69,25 +69,26 @@
     "tiktok"
   ],
   "channel_plan_basis": [
-    "facebook: 25 חשיפות מ-8 פוסטים ו-0 אינטראקציות — ערוץ כמעט מת. 2 פוסטים/שבוע (repurpose בלבד) שומר נוכחות מינימלית מבלי לבזבז כוח אדם על אישורים.",
-    "instagram: 556 חשיפות עם engagement 0.72% — סביר לB2B ישראלי. 5 פוסטים/שבוע שומר קצב ומאפשר בדיקת פורמטים (Reels vs. carousels) ללא עומס על pipeline האישור.",
-    "linkedin: 7.74% engagement — הערוץ הטוב ביותר של UPE. 5 פוסטים/שבוע (תמהיל: thought-leadership מנהלים + company page) מנצל את האלגוריתם שמתגמל עקביות ותוכן וידאו.",
-    "tiktok: 0 פוסטים ו-0 נוכחות כרגע — ה-ICP של UPE (CMO/CEO/HR בישראל) אינו צרכן TikTok B2B מוכח. יש לשמר 0 עד שתהיה אסטרטגיית תוכן ייעודית מאושרת.",
-    "youtube: 4,537 חשיפות מ-4 פוסטים — ROI גבוה מאוד לפוסט, אך ייצור וידאו דורש זמן. 2/שבוע מאפשר איכות ועקביות שהאלגוריתם מתגמל יותר מכמות."
+    "facebook: Facebook הניב 25 חשיפות ו-0 אינטראקציות — ערוץ מת ל-B2B ישראלי. שני פוסטים בשבוע שומרים נוכחות מינימלית אך לא מבזבזים קיבולת אישור.",
+    "instagram: Instagram מייצר engagement חיובי (0.97%) עם פורמט pain-point; 5 פוסטים בשבוע (שילוב Reels + Carousel) ממקסמים reach ב-B2B ומזינים remarketing.",
+    "linkedin: LinkedIn הוא ערוץ ה-B2B הגבוה ביותר (7.23% engagement, קהל מקבלי החלטות); 3-4 פוסטים/שבוע הם הקצב האופטימלי לפי מחקרי 2026 ללא פגיעה בהפצה האורגנית.",
+    "tiktok: TikTok לא פעיל כרגע ואין נתוני ביצוע; 2 פוסטים/שבוע מינימליים (repurpose מ-Reels/Shorts) לבדיקת פוטנציאל קהל B2B ישראלי לפני הגדלת השקעה.",
+    "youtube: YouTube יצר 85%+ מסך החשיפות בתקופה הקודמת; קצב של 1 וידאו ארוך + 2 Shorts שבועיים מייצר consistency אלגוריתמי וממנף את הנכס הקיים."
   ],
   "follower_growth_plan": [
-    "שלב 1 (0-3 חודשים): הפעלת 2 'LinkedIn Creator Voices' — מנהלים בכירים מפרסמים 3-4x/שבוע מפרופיל אישי; דף החברה מחזק ומגביר. כל פוסט מקצוע-ישראלי יניב reach ממשי לICP הנכון.",
-    "שלב 2 (3-6 חודשים): סדרת YouTube evergreen בעברית (MICE/הפקה) — 8 וידאו מובנים בפלייליסטים. כל וידאו מוצלב לבלוג קיים ול-LinkedIn snippet; subscriber growth מגיע מחיפוש אורגני.",
-    "שלב 3 (6-12 חודשים): LinkedIn Newsletter בעברית לקהל ה-CMO/HR — 'מגזין הפקת אירועים' עם תוכן חינוכי חודשי. Newsletters ב-LinkedIn צוברים subscribers מחוץ לעוקבים הקיימים.",
-    "שלב 4 (12-24 חודשים): תוכנית UGC — לקוחות מפרסמים תוצרי אירוע עם tag של UPE; UPE מגבירה ומוסיפה behind-the-scenes. מוביל לגדילה אורגנית ויראלית בסגמנט ה-B2B הישראלי.",
-    "שלב 5 (24-36 חודשים): שת\"פ עם influencers/experts ישראלים בתחומי HR, MICE, ניהול אירועים — guest content ב-YouTube ו-LinkedIn מביא קהלים חדשים ומאיץ לקראת יעד 500K."
+    "שלב 1 — LinkedIn Compounding (0-3 חודשים): הפעל founder personal account עם 4 פוסטים/שבוע (case studies, lessons, B2B hooks); כל פוסט ישותף גם מעמוד החברה. מטרה: 500 followers ב-LinkedIn Page + 1,000 ב-personal account.",
+    "שלב 2 — YouTube Shorts as Discovery Engine (1-4 חודשים): פרסם 2 Shorts/שבוע בעברית ואנגלית ממוקדי שאלות חיפוש ('איך בוחרים חברת הפקה?'). Shorts מזינים subscribers ארוכי-טווח ללא תקציב פרסום.",
+    "שלב 3 — Instagram Reels Repurpose Loop (2-5 חודשים): כל Short שפורסם ב-YouTube הופך ל-Reel באינסטגרם עם caption בעברית ו-3 hashtags מקצועיים. מנף את אותו תוכן פעמיים ללא עבודה כפולה.",
+    "שלב 4 — Employee Advocacy Program (3-6 חודשים): הכן 4 עובדים (מנהלי פרויקטים, מפיקים) לשתף 1 פוסט/שבוע מחשבונם האישי ב-LinkedIn עם tag לחברה. כל עובד מוסיף 200-500 חשיפות אורגניות/פוסט.",
+    "שלב 5 — AEO-to-Social Flywheel (4-8 חודשים): כל ציטוט AI חדש (מעל 4 מנועים כבר) הופך לפוסט LinkedIn ('ChatGPT ממליץ על UPE ל...') — Social proof שמייצר שיתופים אורגניים מ-B2B peers.",
+    "שלב 6 — Cross-Platform Hebrew/English Authority (6-12 חודשים): בנה סדרת LinkedIn Newsletter חודשית ('MICE Insider Israel') וסדרת YouTube ארוכה (30 דקות, ראיונות עם לקוחות) — תוכן עומק שמוסיף 100-300 followers חדשים/חודש בהתמדה לקראת ה-500K north-star."
   ],
   "leads_actions": [
-    "1. תקן את Salesforce מיידית (P0) — ללא LeadSource data אין דרך לדעת אם UPE כבר עוברת את יעד 10 הלידים החודשיים. זוהי הפעולה בעלת ה-ROI הגבוה ביותר השבוע.",
-    "2. אופטימיזציית עמודי שירות ב-Hebrew commercial intent (הפקת-כנסים, נופש-חברה, טיולי-תמריץ-לחברות) + 30 קישורים פנימיים — ירידת avg position מ-36 ל-15 תוכפל clicks מ-196 ל-300+/שבוע ותזרים לידי Contact.",
-    "3. הכנסת CTA ברורה (טופס/WhatsApp) לכל עמודי שירות קיימים — GSC מראה 39,358 חשיפות/שבוע אך CTR נמוך (0.5%); שיפור CTA בעמודים קיימים יגדיל conversion ללא תוכן נוסף.",
-    "4. LinkedIn thought leadership מנהלים: כל פוסט אישי של מנהל בכיר שמסתיים בשאלה פתוחה ('איך אתם מתמודדים עם X?') מייצר DM inbound — ערוץ הלידים הB2B הישיר ביותר לפי נתוני 2026.",
-    "5. הפעלת FAQ Schema על עמוד ה-FAQ הקיים ועל כל 21 עמודי שירות — מגדיל סיכוי ל-AI Overview ול-AEO citation, שמייצרים inbound traffic בכוונת רכישה גבוהה מבלי לדרוש תוכן חדש.",
-    "6. תיעוד ידני של כל שיחת מכירה/הצעת מחיר עם שדה LeadSource (Web/LinkedIn/Referral) ב-Salesforce עד לתיקון האוטומטי — נתוני attribution הם תנאי הכרחי לכל קבלת החלטה שיווקית עתידית."
+    "תיקון Salesforce (P0, שבוע 1): חבר מחדש את ה-OAuth token — ללא מדידה, אין pipeline management ואין ייחוס דיגיטלי; זהו ה-blocker הראשון לכל יעד הלידים.",
+    "SEO — 2 דפי שירות קיימים ל-Top-10 (שבועות 2-6): אופטימייז 'הפקת-כנסים' ו-'אירועים לחברות' (H1/Schema/word-count/internal links) — המונחים כבר ב-pos 10-11, עלייה ל-Top-5 תכפיל CTR פי 5-8 וישלח traffic מסחרי ישיר לדפי בקשת הצעת מחיר.",
+    "LinkedIn DM Pipeline (שבועות 1-4): הפעל founder-led posts עם CTA עדין ('מוזמנים לשאול בDM'); לפי נתוני 2026, קהלי B2B מייצרים DM ישיר תוך 30-60 יום מפרסום עקבי — מסלול ישיר ל-3 לידים דיגיטליים/חודש.",
+    "YouTube CTA Fix (שבוע 2): הוסף לכל וידאו קיים End Screen + Description קישור לדף 'בקשת הצעת מחיר'; 4,000+ חשיפות/שבוע ב-YouTube הן traffic שממומר ב-0% כרגע — תיקון פשוט יכול לייצר 2-4 leads/חודש.",
+    "upe-spain.com — European Lead Activation (שבועות 3-8): אופטימייז 'international product launch event' (pos 10.3, 168 impressions) לTop-3 עם Schema + backlinks מ-MICE directories; פתח segment לידים אירופאי שלא קיים בפאנל הנוכחי.",
+    "Conversion Audit (שבוע 3): בדוק שכל דף שירות קיים (מתוך 21) מכיל Form/CTA מוביל; ממוצע דירוג 36.1 עם CTR 0.5% מעיד שאפילו מי שמגיע לא ממיר — CTA ברור ב-above-the-fold הוא הכפלת לידים ללא שינוי תנועה."
   ]
 }
