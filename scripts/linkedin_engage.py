@@ -43,23 +43,30 @@ def recent_posts():
     since = (datetime.datetime.now(datetime.timezone.utc)
              - datetime.timedelta(hours=WINDOW_HOURS)).isoformat()
     rows = queue._req("GET", "post_approvals", params={
-        "select": "id,day,account,post_id,published_at,caption",
+        "select": "id,day,account,lang,post_id,published_at,caption",
         "network": "eq.linkedin", "status": "eq.published",
         "published_at": f"gte.{since}", "order": "published_at.desc"})
     return [r for r in rows
             if r.get("post_id") and r.get("account") in TARGET_ACCOUNTS]
 
 
-def comment_text(base_text, advocate_name):
-    """A short, specific Hebrew comment in the advocate's own voice."""
+LANGS = {"he": "עברית", "en": "אנגלית", "es": "ספרדית"}
+
+
+def comment_text(base_text, advocate_name, lang="he"):
+    """A short, specific comment in the advocate's own voice, in the post's own
+    language — the Spain page posts in Spanish and the company page in English,
+    and a Hebrew comment under either reads as an outsider."""
     if not ANTHROPIC_API_KEY or not base_text:
         return ""
+    language = LANGS.get(lang, "עברית")
     prompt = (
-        f"להלן פוסט LinkedIn בעברית של Uproduction Events:\n\n"
+        f"להלן פוסט LinkedIn של Uproduction Events:\n\n"
         f"\"\"\"\n{base_text}\n\"\"\"\n\n"
         f"כתבי תגובה קצרה לפוסט הזה בקול של {advocate_name}, אשת צוות ב-UPE.\n"
         f"כללים:\n"
-        f"- 1-2 משפטים בלבד, עברית טבעית ומדוברת\n"
+        f"- 1-2 משפטים בלבד, {language} טבעית ומדוברת\n"
+        f"- התגובה חייבת להיות ב{language}, כמו הפוסט עצמו\n"
         f"- להוסיף זווית או דוגמה מהשטח, לא לחזור על מה שכתוב בפוסט\n"
         f"- בלי שבחים גנריים ('מעולה!', 'מסכימה לגמרי'), בלי אימוג'ים, בלי האשטגים\n"
         f"- בלי לפנות לאלון בשמו ובלי לחשוף שזו תגובה מתואמת\n"
@@ -131,7 +138,8 @@ def main():
             if account in state.get(urn, []):
                 print(f"  {name}: already commented")
                 continue
-            text = comment_text(post.get("caption") or "", name)
+            text = comment_text(post.get("caption") or "", name,
+                                post.get("lang") or "he")
             if not text:
                 print(f"  {name}: SKIP — no comment generated")
                 continue

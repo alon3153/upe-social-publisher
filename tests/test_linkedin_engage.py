@@ -34,7 +34,7 @@ def test_each_advocate_comments_once_with_her_own_token(monkeypatch, capsys):
     monkeypatch.setattr(engage, "load_state", lambda: {})
     monkeypatch.setattr(engage, "save_state", lambda state: None)
     monkeypatch.setattr(engage, "comment_text",
-                        lambda base, name: f"תגובה של {name}")
+                        lambda base, name, lang="he": f"תגובה של {name}")
 
     posted = []
     monkeypatch.setattr(engage.linkedin, "create_comment",
@@ -62,7 +62,7 @@ def test_advocate_does_not_comment_twice_on_the_same_post(monkeypatch):
     monkeypatch.setattr(engage, "load_state",
                         lambda: {"urn:li:share:1": ["li_danielle"]})
     monkeypatch.setattr(engage, "save_state", lambda state: None)
-    monkeypatch.setattr(engage, "comment_text", lambda base, name: "טקסט")
+    monkeypatch.setattr(engage, "comment_text", lambda base, name, lang="he": "טקסט")
 
     posted = []
     monkeypatch.setattr(engage.linkedin, "create_comment",
@@ -82,7 +82,7 @@ def test_advocate_never_comments_on_her_own_post(monkeypatch):
          "caption": "הפוסט של דניאל"}])
     monkeypatch.setattr(engage, "load_state", lambda: {})
     monkeypatch.setattr(engage, "save_state", lambda state: None)
-    monkeypatch.setattr(engage, "comment_text", lambda base, name: "טקסט")
+    monkeypatch.setattr(engage, "comment_text", lambda base, name, lang="he": "טקסט")
 
     posted = []
     monkeypatch.setattr(engage.linkedin, "create_comment",
@@ -103,7 +103,7 @@ def test_no_generic_fallback_when_generation_fails(monkeypatch):
          "caption": "פוסט"}])
     monkeypatch.setattr(engage, "load_state", lambda: {})
     monkeypatch.setattr(engage, "save_state", lambda state: None)
-    monkeypatch.setattr(engage, "comment_text", lambda base, name: "")
+    monkeypatch.setattr(engage, "comment_text", lambda base, name, lang="he": "")
 
     posted = []
     monkeypatch.setattr(engage.linkedin, "create_comment",
@@ -122,7 +122,7 @@ def test_the_record_is_written_before_the_next_comment_is_attempted(monkeypatch)
         {"post_id": "urn:li:share:1", "day": 106, "account": "li_personal",
          "caption": "פוסט"}])
     monkeypatch.setattr(engage, "load_state", lambda: {})
-    monkeypatch.setattr(engage, "comment_text", lambda base, name: "טקסט")
+    monkeypatch.setattr(engage, "comment_text", lambda base, name, lang="he": "טקסט")
     monkeypatch.setattr(engage.linkedin, "create_comment",
                         lambda *a: {"success": True, "comment_id": "c1"})
 
@@ -133,3 +133,24 @@ def test_the_record_is_written_before_the_next_comment_is_attempted(monkeypatch)
     assert engage.main() == 0
     assert saves[0] == {"urn:li:share:1": ["li_danielle"]}
     assert saves[-1] == {"urn:li:share:1": ["li_danielle", "li_natalia"]}
+
+
+def test_the_comment_follows_the_language_of_the_post(monkeypatch):
+    """A Hebrew comment under the Spain page reads as an outsider."""
+    engage = _load_module()
+    monkeypatch.setattr(sys, "argv", ["linkedin_engage.py"])
+    _advocates(engage, monkeypatch)
+    monkeypatch.setattr(engage, "recent_posts", lambda: [
+        {"post_id": "urn:li:share:5", "day": 108, "account": "li_spain",
+         "lang": "es", "caption": "publicación"}])
+    monkeypatch.setattr(engage, "load_state", lambda: {})
+    monkeypatch.setattr(engage, "save_state", lambda state: None)
+    monkeypatch.setattr(engage.linkedin, "create_comment",
+                        lambda *a: {"success": True, "comment_id": "c1"})
+
+    seen = []
+    monkeypatch.setattr(engage, "comment_text",
+                        lambda base, name, lang="he": seen.append(lang) or "texto")
+
+    assert engage.main() == 0
+    assert seen == ["es", "es"]
