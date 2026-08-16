@@ -1,0 +1,59 @@
+name: Weekly Analytics + Scorecard
+
+on:
+  schedule:
+    # Sunday 06:00 UTC = 09:00 IST — weekly control-loop review
+    - cron: "0 6 * * 0"
+  workflow_dispatch:
+    inputs:
+      email:
+        description: "Also email the scorecard"
+        required: false
+        type: boolean
+        default: true
+
+permissions:
+  contents: write
+
+jobs:
+  analytics:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    if: github.event_name == 'schedule' || github.actor == 'alon3153'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - run: pip install -r requirements.txt
+
+      - name: Pull live metrics snapshot
+        env:
+          METRICOOL_TOKEN:   ${{ secrets.METRICOOL_TOKEN }}
+          METRICOOL_USER_ID: ${{ secrets.METRICOOL_USER_ID }}
+          METRICOOL_BLOG_ID: ${{ secrets.METRICOOL_BLOG_ID }}
+        run: python3 scripts/analytics_pull.py
+
+      - name: Build weekly scorecard
+        env:
+          RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
+          RESEND_FROM:    ${{ secrets.RESEND_FROM }}
+          NOTIFY_FROM:    ${{ secrets.NOTIFY_FROM }}
+          APPROVAL_TO:    ${{ secrets.APPROVAL_TO }}
+          MS_GRAPH_TENANT_ID:     ${{ secrets.MS_GRAPH_TENANT_ID }}
+          MS_GRAPH_CLIENT_ID:     ${{ secrets.MS_GRAPH_CLIENT_ID }}
+          MS_GRAPH_CLIENT_SECRET: ${{ secrets.MS_GRAPH_CLIENT_SECRET }}
+          MS_GRAPH_FROM:          ${{ secrets.MS_GRAPH_FROM }}
+        run: python3 scripts/weekly_scorecard.py --email
+
+      - name: Commit data + scorecard
+        run: |
+          git config user.name "upe-publisher-bot"
+          git config user.email "bot@upe.co.il"
+          git add data/ reports/
+          if git diff --staged --quiet; then
+            echo "No data changes to commit"
+          else
+            git commit -m "analytics: weekly snapshot $(date -u +%Y-%m-%d) [skip ci]"
+            git push
+          fi
