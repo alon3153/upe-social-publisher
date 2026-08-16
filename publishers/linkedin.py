@@ -276,3 +276,35 @@ def verify_token():
         return True, member_urn()
     except Exception as e:
         return False, str(e)
+
+
+def list_comments(post_urn, token):
+    """Comments already on a post. Used for idempotency: LinkedIn itself is the
+    record of what we posted, so re-running the engagement job cannot double-post
+    a comment even if local state is lost or a run is retried."""
+    path = urllib.parse.quote(post_urn, safe="")
+    _, res = _req("GET", f"{API}/v2/socialActions/{path}/comments", token)
+    return res.get("elements", [])
+
+
+def has_commented(post_urn, token, actor_urn):
+    """Whether this actor already commented on the post."""
+    try:
+        return any(c.get("actor") == actor_urn for c in list_comments(post_urn, token))
+    except urllib.error.HTTPError as e:
+        # Fail closed: an unreadable comment list must not license a second comment.
+        raise RuntimeError(f"could not read comments on {post_urn}: HTTP {e.code}") from e
+
+
+def create_comment(post_urn, text, token, actor_urn):
+    """Comment on a post as ``actor_urn`` (needs w_member_social for a person)."""
+    body = {"actor": actor_urn, "object": post_urn, "message": {"text": text}}
+    path = urllib.parse.quote(post_urn, safe="")
+    try:
+        hdrs, res = _req("POST", f"{API}/v2/socialActions/{path}/comments", token, body=body)
+        cid = res.get("id") or hdrs.get("x-restli-id") or hdrs.get("X-RestLi-Id")
+        return {"success": True, "comment_id": cid}
+    except urllib.error.HTTPError as e:
+        return {"success": False, "error": f"HTTP {e.code}: {e.read().decode()[:200]}"}
+    except Exception as e:
+        return {"success": False, "error": str(e)}
