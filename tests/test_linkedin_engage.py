@@ -31,8 +31,8 @@ def test_each_advocate_comments_once_with_her_own_token(monkeypatch, capsys):
     monkeypatch.setattr(engage, "recent_posts", lambda: [
         {"post_id": "urn:li:share:1", "day": 106, "account": "li_personal",
          "caption": "פוסט של אלון"}])
-    monkeypatch.setattr(engage.linkedin, "has_commented",
-                        lambda urn, token, actor: False)
+    monkeypatch.setattr(engage, "load_state", lambda: {})
+    monkeypatch.setattr(engage, "save_state", lambda state: None)
     monkeypatch.setattr(engage, "comment_text",
                         lambda base, name: f"תגובה של {name}")
 
@@ -59,8 +59,9 @@ def test_advocate_does_not_comment_twice_on_the_same_post(monkeypatch):
     monkeypatch.setattr(engage, "recent_posts", lambda: [
         {"post_id": "urn:li:share:1", "day": 106, "account": "li_personal",
          "caption": "פוסט"}])
-    monkeypatch.setattr(engage.linkedin, "has_commented",
-                        lambda urn, token, actor: actor == "urn:li:person:DAN")
+    monkeypatch.setattr(engage, "load_state",
+                        lambda: {"urn:li:share:1": ["li_danielle"]})
+    monkeypatch.setattr(engage, "save_state", lambda state: None)
     monkeypatch.setattr(engage, "comment_text", lambda base, name: "טקסט")
 
     posted = []
@@ -79,8 +80,8 @@ def test_advocate_never_comments_on_her_own_post(monkeypatch):
     monkeypatch.setattr(engage, "recent_posts", lambda: [
         {"post_id": "urn:li:share:9", "day": 106, "account": "li_danielle",
          "caption": "הפוסט של דניאל"}])
-    monkeypatch.setattr(engage.linkedin, "has_commented",
-                        lambda urn, token, actor: False)
+    monkeypatch.setattr(engage, "load_state", lambda: {})
+    monkeypatch.setattr(engage, "save_state", lambda state: None)
     monkeypatch.setattr(engage, "comment_text", lambda base, name: "טקסט")
 
     posted = []
@@ -100,8 +101,8 @@ def test_no_generic_fallback_when_generation_fails(monkeypatch):
     monkeypatch.setattr(engage, "recent_posts", lambda: [
         {"post_id": "urn:li:share:1", "day": 106, "account": "li_personal",
          "caption": "פוסט"}])
-    monkeypatch.setattr(engage.linkedin, "has_commented",
-                        lambda urn, token, actor: False)
+    monkeypatch.setattr(engage, "load_state", lambda: {})
+    monkeypatch.setattr(engage, "save_state", lambda state: None)
     monkeypatch.setattr(engage, "comment_text", lambda base, name: "")
 
     posted = []
@@ -112,22 +113,23 @@ def test_no_generic_fallback_when_generation_fails(monkeypatch):
     assert posted == []
 
 
-def test_unreadable_comment_list_blocks_rather_than_risks_a_duplicate(monkeypatch):
+def test_the_record_is_written_before_the_next_comment_is_attempted(monkeypatch):
+    """A lost record is a duplicate comment on the next run."""
     engage = _load_module()
     monkeypatch.setattr(sys, "argv", ["linkedin_engage.py"])
     _advocates(engage, monkeypatch)
     monkeypatch.setattr(engage, "recent_posts", lambda: [
         {"post_id": "urn:li:share:1", "day": 106, "account": "li_personal",
          "caption": "פוסט"}])
-
-    def boom(urn, token, actor):
-        raise RuntimeError("HTTP 403")
-    monkeypatch.setattr(engage.linkedin, "has_commented", boom)
+    monkeypatch.setattr(engage, "load_state", lambda: {})
     monkeypatch.setattr(engage, "comment_text", lambda base, name: "טקסט")
-
-    posted = []
     monkeypatch.setattr(engage.linkedin, "create_comment",
-                        lambda *a: posted.append(a) or {"success": True})
+                        lambda *a: {"success": True, "comment_id": "c1"})
+
+    saves = []
+    monkeypatch.setattr(engage, "save_state",
+                        lambda state: saves.append({k: list(v) for k, v in state.items()}))
 
     assert engage.main() == 0
-    assert posted == []
+    assert saves[0] == {"urn:li:share:1": ["li_danielle"]}
+    assert saves[-1] == {"urn:li:share:1": ["li_danielle", "li_natalia"]}

@@ -8,8 +8,10 @@ still being distributed.
 
 Guardrails, since nothing is reviewed before it goes live:
   · Only posts published in the last WINDOW_HOURS, so a backlog never floods.
-  · One comment per advocate per post, enforced by reading the post's existing
-    comments from LinkedIn — not local state, which retries and re-runs lose.
+  · One comment per advocate per post, recorded in state/engaged.json and
+    committed by the workflow. Reading the post's comments back from LinkedIn
+    would be the authoritative check, but advocate tokens only carry
+    w_member_social and GET /v2/socialActions/.../comments answers 403 for them.
   · An advocate never comments on a post authored from her own profile.
   · Generation failure means no comment. There is no generic fallback text:
     "מסכימה!" from three profiles in a row is what a comment pod looks like.
@@ -31,6 +33,7 @@ WINDOW_HOURS = float(os.environ.get("ENGAGE_WINDOW_HOURS", "6"))
 ANTHROPIC_API_KEY = os.environ.get("ANTHROPIC_API_KEY", "")
 GEN_MODEL = os.environ.get("GEN_MODEL", "claude-sonnet-4-6")
 ADVOCATE_NAMES = {"li_danielle": "דניאל", "li_dorin": "דורין", "li_natalia": "נטליה"}
+STATE_PATH = os.path.join(ROOT, "state", "engaged.json")
 # Posts worth amplifying: Alon's own profile and the company pages.
 TARGET_ACCOUNTS = {"li_personal", "alon3153", "li_english", "li_spain"}
 
@@ -78,6 +81,20 @@ def comment_text(base_text, advocate_name):
         return ""
 
 
+def load_state():
+    try:
+        with open(STATE_PATH, encoding="utf-8") as f:
+            return json.load(f)
+    except FileNotFoundError:
+        return {}
+
+
+def save_state(state):
+    os.makedirs(os.path.dirname(STATE_PATH), exist_ok=True)
+    with open(STATE_PATH, "w", encoding="utf-8") as f:
+        json.dump(state, f, ensure_ascii=False, indent=1, sort_keys=True)
+
+
 def connected_advocates():
     out = {}
     for row in queue.list_advocates():
@@ -101,6 +118,7 @@ def main():
     if not advocates:
         print("no connected advocates")
         return 0
+    state = load_state()
 
     done = 0
     for post in posts:
@@ -110,12 +128,8 @@ def main():
             name = ADVOCATE_NAMES[account]
             if post.get("account") == account:
                 continue  # never comment on your own post
-            try:
-                if linkedin.has_commented(urn, adv["access_token"], adv["member_urn"]):
-                    print(f"  {name}: already commented")
-                    continue
-            except RuntimeError as e:
-                print(f"  {name}: SKIP — {e}")
+            if account in state.get(urn, []):
+                print(f"  {name}: already commented")
                 continue
             text = comment_text(post.get("caption") or "", name)
             if not text:
@@ -127,6 +141,10 @@ def main():
             res = linkedin.create_comment(urn, text, adv["access_token"],
                                           adv["member_urn"])
             if res.get("success"):
+                # Record before anything else can fail: a lost record is a
+                # duplicate comment on the next run.
+                state.setdefault(urn, []).append(account)
+                save_state(state)
                 print(f"  OK  {name}: {res.get('comment_id')}")
                 done += 1
             else:
