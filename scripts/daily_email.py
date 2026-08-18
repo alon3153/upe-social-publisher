@@ -132,10 +132,55 @@ def post_card(r):
  </div>"""
 
 
-def email_html_digest(day, approve_all_url, rows):
-    """ONE consolidated email: 'approve all' button on top + a card per post."""
+def carryover_pending(exclude_day=None):
+    """Rows still pending from an earlier morning.
+
+    A missed click used to be terminal: pick_next_day skips a day that already has
+    live rows, so the stuck day never reappeared in any email and only the watchdog
+    nagged about it (day 107 sat pending for 3 days that way). Re-surfacing them in
+    THIS email keeps the one-email-a-day rule and makes a missed click self-healing.
+    """
+    today = datetime.date.today().isoformat()
+    try:
+        rows = queue._req("GET", "post_approvals", params={
+            "select": "*", "status": "eq.pending",
+            "scheduled_date": f"lt.{today}", "order": "day.asc,network.asc"})
+    except Exception as e:
+        print(f"warn: could not read carry-over pending rows: {e}")
+        return []
+    return [r for r in rows if r.get("day") != exclude_day]
+
+
+def carryover_html(rows):
+    """'Stuck from previous days' block: one approve-all button per day + cards."""
+    if not rows:
+        return ""
+    by_day = {}
+    for r in rows:
+        by_day.setdefault(r.get("day"), []).append(r)
+    days = sorted(d for d in by_day if d is not None)
+    out = (f'<div dir="rtl" style="border-top:2px solid #eee;margin-top:26px;padding-top:18px;">'
+           f'<div style="font-size:13px;color:#c0392b;font-weight:bold;">'
+           f'⏳ תקועים מימים קודמים '
+           f'({len(rows)} פוסטים)</div></div>')
+    for day in days:
+        drows = by_day[day]
+        approve_all = f"{FN}?action=approve_all&day={day}&token={drows[0]['token']}"
+        out += (f'<div dir="rtl" style="font-size:15px;font-weight:bold;color:#141414;'
+                f'margin:20px 0 8px;">יום {day} — {len(drows)} פוסטים</div>'
+                f'<a href="{approve_all}" style="display:block;background:#2fa84f;color:#fff;'
+                f'text-decoration:none;font-size:18px;font-weight:bold;padding:16px 0;'
+                f'border-radius:12px;text-align:center;margin-bottom:8px;">'
+                f'✅ אשר הכל ({len(drows)} פוסטים)</a>')
+        out += "".join(post_card(r) for r in drows)
+    return out
+
+
+def email_html_digest(day, approve_all_url, rows, carry=None):
+    """ONE consolidated email: 'approve all' button on top + a card per post,
+    plus any posts still pending from previous days."""
     n = len(rows)
-    cards = "".join(post_card(r) for r in rows)
+    cards = "".join(post_card(r) for r in rows) + carryover_html(carry or [])
     return f"""<html dir="rtl" lang="he"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1"></head>
 <body dir="rtl" style="font-family:Arial,Helvetica,sans-serif;font-size:14px;direction:rtl;text-align:right;background:#f2f2f2;margin:0;padding:0;">
@@ -247,14 +292,44 @@ def pick_next_day():
     return None
 
 
+def send_carryover_only(carry, reason):
+    """No new day to enqueue, but older posts are still pending — they must not
+    go silent just because the new-day path bailed out."""
+    print(reason)
+    if not carry:
+        return 0
+    days = sorted({r.get("day") for r in carry if r.get("day") is not None})
+    html = f"""<html dir="rtl" lang="he"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1"></head>
+<body dir="rtl" style="font-family:Arial,Helvetica,sans-serif;font-size:14px;direction:rtl;text-align:right;background:#f2f2f2;margin:0;padding:0;">
+<div dir="rtl" style="max-width:600px;margin:0 auto;background:#fff;">
+ <div dir="rtl" style="background:#141414;padding:18px 24px;text-align:right;">
+   <span style="color:#FBCE0A;font-size:20px;font-weight:bold;">uproduction</span>
+   <span style="color:#bbb;font-size:12px;"> &nbsp;from business to pleasure</span></div>
+ <div dir="rtl" style="padding:20px 24px;direction:rtl;text-align:right;">
+   <div style="font-size:20px;font-weight:bold;color:#141414;margin:4px 0 14px;">{len(carry)} פוסטים ממתינים לאישור</div>
+   {carryover_html(carry)}
+   <div style="font-size:12px;color:#999;margin-top:6px;text-align:center;">לחיצה על "אשר" → הפוסט יפורסם אוטומטית בריצת הפרסום הקרובה.</div>
+ </div></div></body></html>"""
+    subj = f"אישור פוסטים — {len(carry)} תקועים (ימים {', '.join(map(str, days))}) 📲"
+    ok, info = send_graph_html(subj, html)
+    if not ok:
+        print(f"graph send failed ({info}); falling back to resend")
+        ok, info = send_resend(subj, html)
+    print(f"{'OK ' if ok else 'ERR'} carry-over digest ({len(carry)} rows, days {days}): {info[:120]}")
+    return 0 if ok else 1
+
+
 def main():
+    # Stuck rows first: every exit path below must still surface them.
+    carry = carryover_pending()
     day = pick_next_day()
     if day is None:
-        print("Nothing to enqueue."); return 0
+        return send_carryover_only(carry, "Nothing to enqueue.")
     today = datetime.date.today().isoformat()
     _p = find_image_path(day, load_day_lang(day, "en"))  # honor real-archive image_file
     if not _p:
-        print(f"No image for day {day}"); return 0
+        return send_carryover_only(carry, f"No image for day {day}")
     image_url = f"{IMG_BASE}/{os.path.basename(_p)}"
     advocates_ready = connected_advocates()
     rows = []
@@ -275,14 +350,15 @@ def main():
                      "headline": data.get("theme") or data.get("title"),
                      "caption": text, "image_url": image_url, "scheduled_date": today})
     if not rows:
-        print(f"No content for day {day}"); return 0
+        return send_carryover_only(carry, f"No content for day {day}")
     inserted = queue.insert_rows(rows)
     if not inserted:
-        print(f"No rows inserted for day {day}"); return 0
+        return send_carryover_only(carry, f"No rows inserted for day {day}")
     # One 'approve all' link for the whole day; any row's token proves email receipt.
     approve_all_url = f"{FN}?action=approve_all&day={day}&token={inserted[0]['token']}"
-    html = email_html_digest(day, approve_all_url, inserted)
-    subj = f"אישור פוסטים — יום {day} · {len(inserted)} רשתות 📲"
+    html = email_html_digest(day, approve_all_url, inserted, carry=carry)
+    subj = (f"אישור פוסטים — יום {day} · {len(inserted)} רשתות"
+            + (f" + {len(carry)} תקועים" if carry else "") + " 📲")
     # Prefer Microsoft Graph (internal alon@upe.co.il → Focused Inbox); the
     # Resend onboarding@resend.dev sender gets filtered/buried. Fall back to
     # Resend only if Graph is unavailable.
@@ -291,7 +367,8 @@ def main():
         print(f"graph send failed ({info}); falling back to resend")
         ok, info = send_resend(subj, html, attachment_path=_p)
     print(f"{'OK ' if ok else 'ERR'} digest: {info[:120]}")
-    print(f"Enqueued {len(inserted)} / emailed {1 if ok else 0} consolidated email for day {day}")
+    print(f"Enqueued {len(inserted)} / emailed {1 if ok else 0} consolidated email for day {day}"
+          + (f" (+{len(carry)} carry-over pending)" if carry else ""))
     return 0
 
 

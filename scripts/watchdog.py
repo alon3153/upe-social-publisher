@@ -116,8 +116,15 @@ def check_linkedin_auth():
     for account, (display, slug) in required_advocates.items():
         row = advocates.get(account)
         reconnect = f"{fn_base}?advocate={slug}" if fn_base.startswith("http") else ""
-        if not row or not row.get("access_token") or not row.get("member_urn"):
-            issues.append(f"🔴 LinkedIn — {display} לא מחוברת. חיבור מחדש: {reconnect}")
+        if row is None:
+            # No row at all = never onboarded, not a connection that broke. The
+            # distinction decides what Alon does: chase HER to click the link once,
+            # or drop her from the roster — not "reconnect something that worked".
+            issues.append(f"🔴 LinkedIn — {display} מעולם לא התחברה (אין רשומה כלל). "
+                          f"רק היא יכולה ללחוץ, מהמכשיר שלה: {reconnect}")
+            continue
+        if not row.get("access_token") or not row.get("member_urn"):
+            issues.append(f"🔴 LinkedIn — החיבור של {display} נשבר. חיבור מחדש: {reconnect}")
             continue
         # A connect link is a plain URL: whoever opens it authorizes THEIR OWN
         # profile. If Alon clicks an advocate's link to "help", the row stores
@@ -132,7 +139,35 @@ def check_linkedin_auth():
         if not auth.get("ok"):
             issues.append(f"🔴 LinkedIn — החיבור של {display} אינו מורשה: "
                           f"{auth.get('code')} — {auth.get('message')}. חיבור מחדש: {reconnect}")
+    issues += check_idle_advocates(advocates)
     return issues
+
+
+def check_idle_advocates(advocates):
+    """An advocate who connected but is not on the publishing roster posts nothing,
+    forever, and nothing reports it: the daily email silently skips accounts it
+    doesn't list. Rosters live in four files and drift apart, so compare the two
+    that matter — connected vs. actually enqueued."""
+    try:
+        publishing = {a for _, a, _, _ in _daily_email().ACCOUNTS}
+    except Exception as e:
+        return [f"⚠️ LinkedIn — לא ניתן לבדוק אילו שגרירים מקבלים פוסטים: {e}"]
+    idle = [acc for acc, row in advocates.items()
+            if row.get("access_token") and row.get("member_urn") and acc not in publishing]
+    if not idle:
+        return []
+    return [f"🟠 LinkedIn — {', '.join(sorted(idle))} מחובר/ת אך לא מקבל/ת פוסטים כלל "
+            f"(לא ברשימת ACCOUNTS ב-daily_email). להוסיף או לנתק."]
+
+
+def _daily_email():
+    """daily_email is a script, not a package module — load it by path."""
+    import importlib.util
+    spec = importlib.util.spec_from_file_location(
+        "daily_email", os.path.join(ROOT, "scripts", "daily_email.py"))
+    m = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(m)
+    return m
 
 
 def check_backlog():

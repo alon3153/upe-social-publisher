@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Gated publisher: publish APPROVED + unpublished rows from the Supabase queue,
 then mark them published. Replaces the un-gated daily cron."""
-import os, sys, datetime
+import os, re, sys, datetime
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, ROOT)
 from publishers import queue, facebook, instagram, linkedin
@@ -125,6 +125,74 @@ def _is_linkedin_auth_error(error):
     return any(marker in value for marker in LI_AUTH_ERROR_MARKERS)
 
 
+# A publish call can fail for reasons that have nothing to do with the content:
+# a Meta 5xx, an IG media-container race (the SAME image URL published fine to the
+# sibling account seconds earlier), a timeout. Those rows were marked 'failed' and
+# then never touched again — day 48's FB/IG rows sat failed from 12.06 onwards, and
+# the watchdog only looks 3 days back, so nobody ever saw them. Retry them a bounded
+# number of times; anything still failing is a real defect and stays failed.
+TRANSIENT_MARKERS = (
+    "http 500", "http 502", "http 503", "http 504",
+    "an unknown error has occurred",
+    "only photo or video can be accepted",   # IG fetcher race on a valid image
+    "timed out", "timeout", "temporarily unavailable",
+    "please retry", "try again later", "rate limit", "connection reset",
+)
+PUBLISH_MAX_RETRIES = int(os.environ.get("PUBLISH_MAX_RETRIES", "3"))
+# Only retry recent failures. Re-publishing a two-month-old row would push stale
+# content out with no warning — those need a human decision, not an auto-retry.
+PUBLISH_RETRY_WINDOW_DAYS = int(os.environ.get("PUBLISH_RETRY_WINDOW_DAYS", "3"))
+_RETRY_TAG = re.compile(r"^retry (\d+)/\d+ · ")
+
+
+def _is_transient_error(error):
+    value = (error or "").lower()
+    return any(marker in value for marker in TRANSIENT_MARKERS)
+
+
+def _retry_attempts(error):
+    """How many auto-retries this row already had (encoded in its error text —
+    the queue table has no attempts column)."""
+    m = _RETRY_TAG.match(error or "")
+    return int(m.group(1)) if m else 0
+
+
+def _retry_transient_failures():
+    """Requeue recent failures whose error looks transient, bounded by attempts."""
+    cutoff = (datetime.date.today() - datetime.timedelta(days=PUBLISH_RETRY_WINDOW_DAYS)).isoformat()
+    try:
+        failed = queue._req("GET", "post_approvals", params={
+            "select": "id,day,network,account,error,scheduled_date", "status": "eq.failed",
+            "order": "day.asc"})
+    except Exception as e:
+        print(f"WARN could not inspect publish failures: {e}")
+        return 0
+    requeued, stale = 0, []
+    for row in failed:
+        err = row.get("error") or ""
+        label = f"day{row.get('day')} {row.get('network')}/{row.get('account')}"
+        if row.get("network") == "linkedin" and _is_linkedin_auth_error(err):
+            continue  # handled by _recover_linkedin_auth_failures
+        if not _is_transient_error(err):
+            continue
+        if (row.get("scheduled_date") or "")[:10] < cutoff:
+            stale.append(label)
+            continue
+        attempts = _retry_attempts(err)
+        if attempts >= PUBLISH_MAX_RETRIES:
+            print(f"GIVE-UP {label} -> {PUBLISH_MAX_RETRIES} retries exhausted; stays failed")
+            continue
+        clean = _RETRY_TAG.sub("", err)
+        queue.mark(row["id"], status="approved",
+                   error=f"retry {attempts + 1}/{PUBLISH_MAX_RETRIES} · {clean}"[:400])
+        print(f"RETRY {label} -> attempt {attempts + 1}/{PUBLISH_MAX_RETRIES} after: {clean[:90]}")
+        requeued += 1
+    if stale:
+        print(f"STALE-FAILED (older than {PUBLISH_RETRY_WINDOW_DAYS}d, needs a human decision): "
+              + ", ".join(stale))
+    return requeued
+
+
 def _recover_linkedin_auth_failures(auth_cache):
     """Requeue old auth failures only after their exact target passes preflight."""
     try:
@@ -184,8 +252,10 @@ def main():
     dry = "--dry-run" in sys.argv
     auth_cache = {}
     recovered = _recover_linkedin_auth_failures(auth_cache) if not dry else 0
+    requeued = _retry_transient_failures() if not dry else 0
     rows = queue.list_approved_unpublished()  # ordered day.asc -> oldest personal post goes first
-    print(f"Approved & unpublished: {len(rows)} (recovered auth failures: {recovered})")
+    print(f"Approved & unpublished: {len(rows)} (recovered auth failures: {recovered}; "
+          f"transient retries requeued: {requeued})")
     ok = 0
     published_today = _personal_published_today()  # personal key -> already published today (UTC)
     run_count = {}                                 # personal key -> published to it this run
