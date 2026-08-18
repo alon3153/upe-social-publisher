@@ -80,6 +80,29 @@ def check_failures():
     return lines
 
 
+def connect_link(fn_base, slug):
+    """Return (url, works). A reconnect link that 404s on its own slug is worse
+    than no link: it was emailed for weeks, and the advocate who clicked it got
+    'לינק לא תקין' — the failure looked like her fault. A healthy link 302s to
+    linkedin.com; anything else means the deployed function does not know the slug."""
+    if not fn_base.startswith("http"):
+        return "", False
+    url = f"{fn_base}?advocate={slug}"
+    try:
+        req = urllib.request.Request(url, headers={"User-Agent": "upe-watchdog/1.0"})
+        class _NoRedirect(urllib.request.HTTPRedirectHandler):
+            def redirect_request(self, *a, **kw):
+                return None
+        opener = urllib.request.build_opener(_NoRedirect)
+        with opener.open(req, timeout=20) as r:
+            return url, False  # a 200 here is the function's own error page
+    except urllib.error.HTTPError as e:
+        loc = e.headers.get("Location", "") if e.headers else ""
+        return url, e.code in (301, 302, 303, 307) and "linkedin.com" in loc
+    except Exception:
+        return url, True  # network trouble is not evidence the link is broken
+
+
 def check_linkedin_auth():
     """Validate usable write authorization, not merely token expiration."""
     issues = []
@@ -103,8 +126,11 @@ def check_linkedin_auth():
             issues.append(f"🔴 LinkedIn — {label}: {auth.get('code')} — {auth.get('message')}")
 
     fn_base = os.environ.get("SUPABASE_URL", "").rstrip("/") + "/functions/v1/linkedin-oauth"
+    # The slug must be one the DEPLOYED edge function knows — 'daniel' is not
+    # 'danielle', and the deployed build lagged the repo by two months, so both
+    # links in this alert led to "לינק לא תקין". connect_link() proves each one.
     required_advocates = {
-        "li_danielle": ("דניאל", "daniel"),
+        "li_danielle": ("דניאל", "danielle"),
         "li_dorin": ("דורין", "dorin"),
     }
     try:
@@ -115,7 +141,11 @@ def check_linkedin_auth():
     alon_urn = os.environ.get("LINKEDIN_MEMBER_URN", "")
     for account, (display, slug) in required_advocates.items():
         row = advocates.get(account)
-        reconnect = f"{fn_base}?advocate={slug}" if fn_base.startswith("http") else ""
+        reconnect, link_ok = connect_link(fn_base, slug)
+        if reconnect and not link_ok:
+            issues.append(f"🔴 LinkedIn — לינק החיבור של {display} שבור (הפונקציה שפרוסה לא מכירה "
+                          f"'{slug}'). אין טעם לשלוח לה אותו. פריסה מחדש: "
+                          f"supabase functions deploy linkedin-oauth --project-ref <ref>")
         if row is None:
             # No row at all = never onboarded, not a connection that broke. The
             # distinction decides what Alon does: chase HER to click the link once,
