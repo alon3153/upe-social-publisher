@@ -1,0 +1,280 @@
+{
+  "generated_at": "2026-08-18T05:55:52",
+  "period_days": 7,
+  "networks": {
+    "instagram": {
+      "posts": 6,
+      "impressions": 407,
+      "reach": 246,
+      "interactions": 4,
+      "engagement_rate_pct": 0.98,
+      "caveat": null,
+      "top": {
+        "url": "https://www.instagram.com/p/Db75lNUG4Sh/",
+        "content": "Six vendors. Six contracts. Six versions of \"that's not our part.\" 🫠\n\nThe hidden cost of juggling suppliers:\n🧩 Info lost at every handoff\n📞 No single number whe",
+        "impressions": 110,
+        "interactions": 2
+      }
+    },
+    "facebook": {
+      "posts": 6,
+      "impressions": 0,
+      "reach": 0,
+      "interactions": 0,
+      "engagement_rate_pct": 0.0,
+      "caveat": null,
+      "top": {
+        "url": null,
+        "content": "",
+        "impressions": 0,
+        "interactions": 0
+      }
+    },
+    "tiktok": {
+      "posts": 0,
+      "impressions": 0,
+      "reach": 0,
+      "interactions": 0,
+      "engagement_rate_pct": 0.0,
+      "top": null
+    },
+    "linkedin": {
+      "posts": 9,
+      "impressions": 47,
+      "reach": 0,
+      "interactions": 16,
+      "engagement_rate_pct": 34.04,
+      "caveat": null,
+      "top": {
+        "url": "https://www.linkedin.com/feed/update/urn:li:share:7495024325889204225",
+        "content": "",
+        "impressions": 2,
+        "interactions": 9
+      }
+    },
+    "youtube": {
+      "posts": 2,
+      "impressions": 5204,
+      "reach": 0,
+      "interactions": 6,
+      "engagement_rate_pct": 0.12,
+      "caveat": null,
+      "top": {
+        "url": null,
+        "content": "",
+        "impressions": 4559,
+        "interactions": 5
+      }
+    }
+  },
+  "totals": {
+    "posts": 23,
+    "impressions": 5658,
+    "reach": 246,
+    "interactions": 26,
+    "engagement_rate_pct": 0.46
+  },
+  "leads": {
+    "ok": true,
+    "qualified_leads": 4,
+    "new_opportunities": 4,
+    "lead_object_count": 0,
+    "period_days": 30,
+    "source": "salesforce",
+    "definition": "new Opportunities created (all)",
+    "by_source": {
+      "Word of mouth": 3,
+      "Other": 1
+    },
+    "dominant_source": "Word of mouth",
+    "dominant_share_pct": 75,
+    "attribution_gap": false,
+    "attribution_note": "הייחוס מפוזר בין מספר מקורות"
+  },
+  "seo_geo": {
+    "generated_at": "2026-08-17",
+    "sites": [
+      {
+        "site": "https://upe.co.il/",
+        "clicks": 145,
+        "impressions": 40680,
+        "avg_position": 36.6,
+        "clicks_prev": 136,
+        "impressions_prev": 38150,
+        "top_opportunities": [
+          [
+            "אירועים לחברות",
+            11.7,
+            476
+          ],
+          [
+            "הפקת נופש חברה",
+            11.3,
+            407
+          ],
+          [
+            "הפקת כנסים עסקיים",
+            19.7,
+            207
+          ],
+          [
+            "incentive travel companies",
+            16.0,
+            166
+          ],
+          [
+            "ארגון נופש חברה",
+            17.2,
+            157
+          ]
+        ]
+      },
+      {
+        "site": "https://upe-spain.com/",
+        "clicks": 41,
+        "impressions": 10692,
+        "avg_position": 27.3,
+        "clicks_prev": 61,
+        "impressions_prev": 15481,
+        "top_opportunities": [
+          [
+            "international product launch event",
+            10.8,
+            168
+          ],
+          [
+            "global product launch event",
+            10.1,
+            137
+          ],
+          [
+            "new hire team building",
+            15.0,
+            109
+          ],
+          [
+            "evento neutro en carbono",
+            10.9,
+            101
+          ],
+          [
+            "coctel corporativo",
+            6.7,
+            43
+          ]
+        ]
+      }
+    ],
+    "geo": {
+      "status": "ok",
+      "cited": 4,
+      "total": 7,
+      "rate": 57.1
+    },
+    "competitors": [
+      {
+        "term": "הפקת אירועים עסקיים",
+        "pos": null,
+        "top3": [
+          "pinchevents.co.il",
+          "www.arbelpro.co.il",
+          "mantver.co.il"
+        ]
+      },
+      {
+        "term": "חברת הפקת אירועים",
+        "pos": null,
+        "top3": [
+          "www.arbelpro.co.il",
+          "allplaces.co.il",
+          "eventiko.co.il"
+        ]
+      },
+      {
+        "term": "הפקת כנסים",
+        "pos": null,
+        "top3": [
+          "www.eron.co.il",
+          "rtspro.co.il",
+          "www.ortra.co.il"
+        ]
+      },
+      {
+        "term": "טיולי תמריץ לעובדים",
+        "pos": 4,
+        "top3": [
+          "www.elateva.co.il",
+          "mspirit.co.il",
+          "www.boutiqo.co.il"
+        ]
+      },
+      {
+        "term": "eventos corporativos españa",
+        "pos": null,
+        "top3": [
+          "www.creagroupevents.com",
+          "www.eventoplus.com",
+          "factoryevents.es"
+        ]
+      },
+      {
+        "term": "incentive travel spain",
+        "pos": null,
+        "top3": [
+          "madridexpert.com",
+          "www.indigo-dmc.com",
+          "www.g20corporation.com"
+        ]
+      },
+      {
+        "term": "corporate events barcelona",
+        "pos": null,
+        "top3": [
+          "www.barcelona-life.com",
+          "www.eventbrite.com",
+          "barcelonaboatparty.com"
+        ]
+      }
+    ],
+    "ok": true,
+    "weekly_clicks": 186,
+    "top3_keywords": 0,
+    "aeo_cited_engines": 4
+  },
+  "site_inventory": {
+    "ok": true,
+    "service_pages": [
+      "why-uproduction-events-trust",
+      "אירוע-קונספט",
+      "אירועים-אקסלוסיביים",
+      "אירועים-עסקיים-מיוחדים",
+      "אירועים-קולינרים",
+      "ארגון-כנסים",
+      "הפקת-אירועי-חברה",
+      "הפקת-אירועי-חברה-בחול",
+      "הפקת-אירועים-לחברות-הייטק",
+      "הפקת-אירועים-עסקיים",
+      "הפקת-כנסים",
+      "חברת-הפקות",
+      "טיולי-חברה",
+      "טיולי-תמריץ-בחול",
+      "טיולי-תמריץ-לחברות",
+      "כנסים-לחברות-הייטק",
+      "כנסים-עסקיים",
+      "נופש-חברה",
+      "נופש-חברה-בחול",
+      "נופש-חברה-עם-חבילת-ספא-לעובדים",
+      "נופשים-וטיולי-תמריץ"
+    ],
+    "service_count": 21,
+    "key_pages": {
+      "llms.txt": true,
+      "llms-full.txt": true,
+      "faq": true,
+      "services_index": true,
+      "brand_hub_trust": true
+    },
+    "blog_article_count": 269,
+    "source": "github:alon3153/uproduction-astro"
+  }
+}

@@ -1,72 +1,64 @@
 {
-  "updated_at": "2026-08-17",
+  "updated_at": "2026-08-18",
   "scores": {
     "instagram": 28,
     "facebook": 5,
     "tiktok": 0,
-    "linkedin": 62,
-    "youtube": 45,
+    "linkedin": 42,
+    "youtube": 55,
     "google_organic_geo": 32,
-    "overall": 31
+    "overall": 38
   },
   "recommendations": [
     {
       "category": "gated",
       "priority": "P0",
-      "action": "אופטימיזציה מלאה של עמוד הפקת-כנסים ועמוד הפקת-אירועים-עסקיים: עדכון H1/title/description למונחים הפקת כנסים עסקיים (עמדה 19.7, 207 חשיפות) ו-אירועים לחברות (עמדה 11.7, 476 חשיפות) — הוספת 300+ מילים לכל עמוד, case study ממשי, ו-CTA ישיר לייצור ליד.",
-      "expected_impact": "קפיצה ל-Top-10 תוך 60-90 יום, הגדלת קליקים ב-50-80% מהמונחים האלה; פוטנציאל ל-2-3 לידים אורגניים/חודש נוספים.",
-      "channel": "google_organic"
+      "action": "השקת תוכנית thought leadership אישית למנהלי UPE ב-LinkedIn: 3 מנהלים מפרסמים מחשבונם האישי פוסט POV שבועי על MICE/הפקות/incentive travel",
+      "expected_impact": "הכפלת organic reach ב-LinkedIn תוך 60 ימים (פוסטים אישיים מייצרים 5-7x reach ממול company page); בניית pipeline awareness אצל CMO/HR ישראלים — הערוץ המוכח שמביא 75% מהפניות.",
+      "channel": "linkedin"
     },
     {
       "category": "gated",
       "priority": "P0",
-      "action": "הפעלת LinkedIn Events חודשיים — וובינר/פאנל קצר (30-45 דקות) בנושאי MICE כמו 'איך לתכנן כנס חברה ב-2025' עם Lead Gen Form מובנה.",
-      "expected_impact": "לפי נתוני LinkedIn 2026, Event Attendee campaigns מייצרים 14.21% reply rate; אירוע אחד/חודש יכול לייצר 3-5 לידים דיגיטליים-ייחוסיים ישירות.",
-      "channel": "linkedin"
-    },
-    {
-      "category": "gated",
-      "priority": "P1",
-      "action": "בניית קמפיין תוכן ל-upe-spain.com: אופטימיזציה של עמודים קיימים למונחים international product launch event (עמדה 10.8) ו-global product launch event (עמדה 10.1) — תוספת תוכן, backlinks, וביצוע off-page authority.",
-      "expected_impact": "עצירת ירידת ה-32% בקליקים באתר הספרדי וחזרה ל-61+ קליקים/שבוע; פוטנציאל לפריצה ל-Top-5 במונחים אנגלו-בינלאומיים.",
+      "action": "כתיבת דפי נחיתה ממירים ל-3 מונחי GSC בעדיפות גבוהה: אופטימיזציה של דפי הפקת-אירועי-חברה, הפקת-כנסים, נופש-חברה-בחול עם H1 חדש, 800+ מילים, schema LocalBusiness/Event, וCTA ליצירת קשר",
+      "expected_impact": "שיפור דירוג מ-pos 11-20 ל-Top-5 עבור מונחי GSC עם 400+ impressions; בניית ערוץ ליד דיגיטלי אורגני ראשון עד 90 ימים.",
       "channel": "google_organic"
     },
     {
       "category": "gated",
       "priority": "P1",
-      "action": "הפקת סדרת וידאו YouTube — 'Behind the Event': 4 סרטוני הפקה (5-8 דקות) שמציגים תהליך ייצור כנס מקצה לקצה, עם תמלול מלא ו-SEO לכותרות בעברית ובאנגלית.",
-      "expected_impact": "תמלולי YouTube סרוקים על-ידי מנועי AI ומחזקים ציטוטים AEO; חשיפה אורגנית ל-CMO/HR leads שמחפשים וידאו ראיות לפני בחירת ספק.",
+      "action": "יצירת 4 YouTube Shorts חודשיים מחומר הפקה קיים (behind-the-scenes, reveal moments, client reactions) עם כותרות keyword-rich בעברית ובאנגלית",
+      "expected_impact": "הגדלת YouTube impressions ב-3x תוך 8 שבועות; Shorts מזינים את אלגוריתם הערוץ ומגדילים subscriber base — צעד קריטי לעבר 500K followers north-star.",
       "channel": "youtube"
     },
     {
       "category": "gated",
-      "priority": "P2",
-      "action": "בדיקת ותיקון חיבור Facebook API ב-Metricool — אם החשבון תקין, יש לייצר 1 פוסט/שבוע בפורמט case study קצר ולנטר אם נתונים מתחילים להגיע.",
-      "expected_impact": "חשיפה לקהל מבוגר יותר (CFO/CEO ישראלי) שעדיין פעיל ב-Facebook; אם הנתונים אפסיים גם לאחר תיקון — לשקול השעיית הערוץ.",
-      "channel": "facebook"
+      "priority": "P1",
+      "action": "בניית LinkedIn Newsletter חודשי בנושא 'מדריך CMO לאירועי חברה': 500-700 מילים, case study אחד, 3 טיפים מעשיים — subscription-based עם push notification",
+      "expected_impact": "LinkedIn Newsletter שולח push notification לכל מנוי — אחד מהערוצים הבודדים עם guaranteed delivery ב-2026; בניית רשימה of opted-in decision makers בפלח המטרה.",
+      "channel": "linkedin"
     },
     {
       "category": "gated",
       "priority": "P2",
-      "action": "קמפיין ambassador פנים-ארגוני: לבקש מ-3-5 עובדים/שותפים לשתף פוסטים של החברה בלינקדאין מהפרופיל האישי שלהם, עם תוכן שהוכן מראש ואושר.",
-      "expected_impact": "פרופילים אישיים מביסים דפי חברה ב-5-10x ב-reach לפי נתוני 2026; גידול מיידי ב-impressions ללא תשתית נוספת.",
-      "channel": "linkedin"
+      "action": "אופטימיזציה של upe-spain.com: עדכון תוכן לדפים שאיבדו דירוג (international product launch, coctel corporativo) ובניית backlinks ספרדיים מ-PR אירועים מקומיים",
+      "expected_impact": "עצירת ירידת -33% בקליקים והחזרת ה-impressions ל-15K+ תוך 6 שבועות; upe-spain.com מייצגת 22% מסך הקליקים הכולל של UPE.",
+      "channel": "google_organic"
     }
   ],
   "follower_growth_plan": [
-    "LinkedIn: הגדרת פרופיל מייסד/CEO כ-thought leader ראשי — 4 פוסטים/שבוע מהפרופיל האישי עם תוכן מקצועי (insights, case studies, behind-the-scenes) — זהו המנוע המהיר ביותר לבניית קהל B2B ישראלי-אירופאי עם עד 10x reach על פני דף החברה.",
-    "YouTube Shorts: repurpose של כל הפקת אירוע גדולה ל-3-5 Shorts — 15-60 שניות עם hook חזק בשניה הראשונה; ניצול הפוסט הויראלי הבא כמנוע גדילה דרך cross-promotion בלינקדאין ובאינסטגרם.",
-    "Instagram Reels: מעבר מלא לווידאו — תוכן Behind-the-Scenes מהפקות בשטח, time-lapse של הקמת הבמה, רגעי WOW מהאירוע; פירסום 3-4 Reels/שבוע עם hashtags מקומיים (#הפקות_אירועים #כנסים_עסקיים) ו-trending audio.",
-    "TikTok: שימוש ב-repurpose מ-Instagram Reels (9:16 זהה) להגיע לקהל HR/Events managers צעיר יותר שמשפיע על החלטות; 3 פוסטים/שבוע ללא השקעת ייצור נוספת.",
-    "AEO/AI Citations: הגדלת ציטוטים ממנועי AI מ-4 ל-7 על-ידי פרסום מאמרי Brand Hub, שאלות FAQ חדשות, והפעלת llms-full.txt מעודכן — כל ציטוט AI הוא חשיפה אפקטיבית לאלפי CMO שמחפשים ספקי MICE.",
-    "Off-page Authority: השגת 5-10 backlinks איכותיים/חודש מפורטלים ישראליים (מאמרי דעה, ראיונות) ו-2-3 פרסומים בינלאומיים (MICE media) — backlinks חזקים מחזקים גם SEO וגם AEO visibility בו-זמנית."
+    "שלב 1 — בסיס (0-3 חודשים): הפעלת thought leadership אישי ל-3 מנהלים ב-LinkedIn + קדנס YouTube של 2 ויידאו/שבוע כולל Shorts; מטרה: הגדלת following ב-LinkedIn ב-30% וב-YouTube ב-50%.",
+    "שלב 2 — תוכן ויראלי מחושב (3-6 חודשים): פיתוח סדרת 'Behind the Event' — ויידאו קצר (60-90 שניות) מכל הפקה גדולה, מותאם ל-YouTube Shorts, Instagram Reels ו-LinkedIn native video בו-זמנית; מיחזור תוכן אחד → 3 פלטפורמות.",
+    "שלב 3 — קהילה (6-12 חודשים): השקת LinkedIn Newsletter חודשי ל-CMO/HR + podcast קצר (15 דק') על מגמות MICE ישראל; Newsletter subscribers הופכים לקהל warm שניתן להמיר.",
+    "שלב 4 — הגברה (12-24 חודשים): שיתופי פעולה עם ספקים ושגרירי תעשייה (venues, catering, AV) לתוכן shared; כל שיתוף חושף UPE לקהל חדש ורלוונטי בלי עלות ייצור.",
+    "שלב 5 — מינוף AEO (24-36 חודשים): שמירת ציטוט ב-5+ מנועי AI ועדכון llms.txt + FAQ רבעוני; נוכחות ב-AI search מביאה followers איכותיים שמחפשים ספציפית חברת הפקות."
   ],
   "leads_actions": [
-    "LinkedIn Events חודשיים (P0): יצירת 1 LinkedIn Event/חודש עם Lead Gen Form מובנה — וובינר של 30-45 דקות על נושא כמו 'מדריך לתכנון כנס חברה בתקציב מוגבל'; לפי נתוני 2026, אירוע בודד יכול להניב 3-5 לידים דיגיטליים ישירים ולפתור את בעיית הייחוס הדיגיטלי.",
-    "SEO מסחרי עברי (P0): אופטימיזציה מהירה של עמודי הפקת-כנסים ו-נופש-חברה — H1/title/content המכוונים ל-5 מונחי ההזדמנות הגבוהים (עמדות 11-19) עם CTA ישיר לטופס ליד; מונחים אלה מייצגים 1,413+ חשיפות/שבוע שלא ממירות כיום.",
-    "Word of Mouth → Digital Referral: הטמעת תהליך מובנה ב-Salesforce — לכל עסקה שנסגרת, לשלוח ללקוח קיים email/WhatsApp עם בקשת הפניה ספציפית + לינק לטופס; ייחוס הפניות כ-LeadSource='Referral' ולא WOM, לשיפור מדדי הדיווח.",
-    "LinkedIn Founder Posts עם CTA: 1-2 פוסטים/שבוע מהפרופיל האישי של המנהל עם סיום ב-CTA רך ('שלחו לי DM אם אתם מתכננים כנס השנה') — בלינקדאין B2B ישראלי, פוסט אישי עם engagement 10%+ מניב לפחות 1 שיחה מוסמכת לפוסט.",
-    "הפעלת FAQ ו-Blog ל-Bottom-of-Funnel: בחירת 10 מאמרי בלוג קיימים עם הכי הרבה קליקים → הוספת CTA ספציפי לכל מאמר ('קבלו הצעת מחיר לכנס') + internal link לעמוד השירות המתאים; תהליך זה לא מצריך יצירת תוכן חדש.",
-    "Salesforce Lead Source Hygiene: הגדרת מדיניות data-entry ברורה לצוות המכירות — כל ליד שהגיע דרך אתר/לינקדאין/גוגל ייוחס ל-LeadSource='Web'/'LinkedIn'/'Organic Search'; ללא ייחוס נכון, ה-gap הדיגיטלי ייראה כאפס גם כאשר הדיגיטל מביא לידים בפועל."
+    "פעולה 1 — מיידי: לסמן ב-Salesforce את מקור 'Other' (1 ליד) — האם הגיע מאתר/LinkedIn/YouTube? זיהוי ערוץ הדיגיטל הראשון שהמיר הוא הבסיס לכל האסטרטגיה; word-of-mouth מוכח (75%) — להפוך אותו לאסטרטגי ולא מקרי.",
+    "פעולה 2 — שבוע 1-2: להוסיף CTA ברור לכל 21 דפי השירות הקיימים ('קבל הצעת מחיר' / 'דבר עם מנהל הפקה') — הדפים קיימים אך ככל הנראה חסרי conversion path ברור לGSC שמביא 186 קליקים/שבוע.",
+    "פעולה 3 — שבוע 2-4: אופטימיזציה של 3 דפי שירות עם הכי הרבה GSC impressions (אירועים לחברות 476, הפקת נופש חברה 407, הפקת כנסים עסקיים 207) — כל דף: H1 ממוקד, 800+ מילים, schema, CTA ספציפי.",
+    "פעולה 4 — חודש 1: השקת thought leadership LinkedIn של מנהלים עם CTA עדין לשיחה ('האם הפקתם כנס בשנה האחרונה? שמחה לשתף לקחים') — ב-2026, הפניות נוצרות מ-personal authority, לא מדפי שירות.",
+    "פעולה 5 — חודש 2: יצור case study אחד מפורט (עם מספרים: 450 משתתפים, 3 ימים, ROI שביעות רצון) ולהפיץ ב-LinkedIn, ב-blog ולהקצות URL ייעודי לllms.txt — case studies הם הקטגוריה שמניבה הכי הרבה AI citations ולידים B2B.",
+    "פעולה 6 — חודש 2-3: לגייס 10 לקוחות קיימים מרוצים לבקשת Google Review/LinkedIn recommendation; word-of-mouth דיגיטלי מוכח מגדיל conversion rate של traffic קיים ב-15-25% ויוצר ראיות חברתיות לצלבות AI."
   ]
 }
