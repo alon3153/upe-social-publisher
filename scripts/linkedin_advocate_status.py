@@ -17,7 +17,9 @@ sys.path.insert(0, ROOT)
 
 from publishers import queue, linkedin
 
-ADVOCATES = {"li_danielle": "דניאל", "li_dorin": "דורין", "li_natalia": "נטליה"}
+# li_dorin retired 19.08.2026 (never OAuth-connected; Alon dropped her from the
+# advocacy programme). Her token row, if one ever appears, is simply not reported.
+ADVOCATES = {"li_danielle": "דניאל", "li_natalia": "נטליה"}
 
 
 def main():
