@@ -116,29 +116,36 @@ jobs:
           # Every probe deliberately omits the acknowledgements, so validation runs to the
           # end and nothing is ever written. `missing_ack` is the marker for "everything
           # before the acks passed".
-          probe () {   # probe <label> <expected-substring> <extra curl args...>
-            label="$1"; want="$2"; shift 2
+          # Every varying field is a positional argument, never an appended -F. curl sends
+          # BOTH copies of a repeated field name and the function reads the first, so an
+          # override tacked on at the end silently tests nothing: that is how the
+          # "short phone refused" probe passed a valid phone and reported a false
+          # regression on 21.08.2026. Both outcomes were then confirmed by hand.
+          probe () {   # probe <label> <expected-substring> <passExp> <passport> <phone>
+            label="$1"; want="$2"; pexp="$3"; pnum="$4"; phone="${5:-0522090040}"
             out=$(curl -s -X POST "$URL" \
               -F "fnameHe=בדיקה" -F "lnameHe=בדיקה" -F "fnameEn=TEST" -F "lnameEn=PROBE" \
-              -F "idnum=000000018" -F "email=alon@upe.co.il" -F "phone=0522090040" \
+              -F "idnum=000000018" -F "email=alon@upe.co.il" -F "phone=$phone" \
               -F "birth=1990-01-01" -F "gender=זכר" -F "dept=בדיקה" \
               -F "passCountry=ישראל" -F "diet=רגיל" \
               -F "emergency_name=בדיקה" -F "emergency_phone=0522090040" \
-              -F "ecName=בדיקה" -F "ecPhone=0522090040" "$@")
+              -F "ecName=בדיקה" -F "ecPhone=0522090040" \
+              -F "passExp=$pexp" -F "passport=$pnum")
             if echo "$out" | grep -qF -- "$want"; then
               echo "OK      $label"
             else
               echo "BROKEN  $label — wanted '$want', got: $out"; fail=1
             fi
           }
+          #                                                                 passExp      passport   phone
           # the goal: Barak Toledano's real expiry must clear the passport gate
-          probe "05.03.2027 (Barak) accepted"  'missing_ack'               -F passport=12345678 -F passExp=2027-03-05
+          probe "05.03.2027 (Barak) accepted"  'missing_ack'               2027-03-05   12345678
           # the new floor holds in both directions
-          probe "08.01.2027 accepted"          'missing_ack'               -F passport=12345678 -F passExp=2027-01-08
-          probe "07.01.2027 still refused"     'passport_expires_too_soon' -F passport=12345678 -F passExp=2027-01-07
+          probe "08.01.2027 accepted"          'missing_ack'               2027-01-08   12345678
+          probe "07.01.2027 still refused"     'passport_expires_too_soon' 2027-01-07   12345678
           # the rest of the validation must survive the download/redeploy round-trip
-          probe "letters in passport refused"  'bad_passport'              -F passport=T1234567 -F passExp=2028-01-01
-          probe "short phone refused"          'bad_phone'                 -F passport=12345678 -F passExp=2028-01-01 -F phone=052209
+          probe "letters in passport refused"  'bad_passport'              2028-01-01   T1234567
+          probe "short phone refused"          'bad_phone'                 2028-01-01   12345678   052209
           if [ "$fail" != "0" ]; then
             echo "::error::the deployed function misbehaves. Re-run with from/to swapped to restore."
             exit 1
