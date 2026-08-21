@@ -76,8 +76,11 @@ jobs:
       - name: Patch the literal
         run: |
           dir="supabase/functions/$SLUG"
-          # `functions download` extracts from an eszip and leaves the files read-only,
-          # so the patch dies with EACCES before it writes a byte.
+          # `functions download` unpacks the eszip inside a Docker container running as
+          # root, so the tree comes out root-owned and mode 444: the patch dies with
+          # EACCES, and plain chmod dies with EPERM because the runner does not own it.
+          # Take ownership first — the runner has passwordless sudo.
+          sudo chown -R "$(id -u):$(id -g)" "$dir"
           chmod -R u+w "$dir"
           # Count first. A literal that appears an unexpected number of times means the
           # function is not shaped the way we assume, and guessing is how a live
