@@ -85,13 +85,11 @@ jobs:
             echo "::error::expected $EXPECT occurrence(s), found $before — not deploying."
             exit 1
           fi
+          # A literal replace, not sed: `&` and `|` in a sed replacement are magic, and a
+          # future caller will eventually pass a literal that contains one. Kept on one
+          # line because an unindented line would close this block scalar.
           grep -rlF -- "$FROM" "$dir" | while read -r f; do
-            python3 -c "
-import io, os, sys
-p = sys.argv[1]
-s = io.open(p, encoding='utf-8').read()
-io.open(p, 'w', encoding='utf-8').write(s.replace(os.environ['FROM'], os.environ['TO']))
-" "$f"
+            python3 -c "import io,os,sys; p=sys.argv[1]; s=io.open(p,encoding='utf-8').read(); io.open(p,'w',encoding='utf-8').write(s.replace(os.environ['FROM'],os.environ['TO']))" "$f"
           done
           after_from=$(grep -roF -- "$FROM" "$dir" | wc -l | tr -d ' ')
           after_to=$(grep -roF -- "$TO" "$dir" | wc -l | tr -d ' ')
