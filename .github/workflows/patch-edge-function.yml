@@ -76,6 +76,9 @@ jobs:
       - name: Patch the literal
         run: |
           dir="supabase/functions/$SLUG"
+          # `functions download` extracts from an eszip and leaves the files read-only,
+          # so the patch dies with EACCES before it writes a byte.
+          chmod -R u+w "$dir"
           # Count first. A literal that appears an unexpected number of times means the
           # function is not shaped the way we assume, and guessing is how a live
           # registration endpoint gets broken. Counts are of matches, not lines.
