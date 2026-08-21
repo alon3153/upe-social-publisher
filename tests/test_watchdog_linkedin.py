@@ -31,18 +31,16 @@ def test_advocate_row_pointing_at_alons_own_profile_is_flagged(monkeypatch):
     monkeypatch.setattr(watchdog.linkedin, "preflight",
                         lambda **kwargs: {"ok": True, "code": "ok"})
     monkeypatch.setattr(watchdog.queue, "list_advocates", lambda: [
-        {"account": "li_danielle", "member_urn": "urn:li:person:DANIELLE",
+        {"account": "li_danielle", "member_urn": "urn:li:person:ALON",
          "access_token": "t1"},
-        {"account": "li_dorin", "member_urn": "urn:li:person:ALON",
-         "access_token": "t2"},
     ])
 
     messages = watchdog.check_linkedin_auth()
 
     assert len(messages) == 1
-    assert "דורין" in messages[0]
+    assert "דניאל" in messages[0]
     assert "מצביע על הפרופיל של אלון" in messages[0]
-    assert "advocate=dorin" in messages[0]
+    assert "advocate=danielle" in messages[0]
 
 
 def test_never_connected_advocate_is_not_reported_as_a_broken_connection(monkeypatch):
@@ -113,7 +111,7 @@ def test_connect_link_flags_the_functions_own_error_page(monkeypatch):
         def open(self, *a, **kw): return Resp()
     monkeypatch.setattr(watchdog.urllib.request, "build_opener", lambda *a: Opener())
 
-    _, ok = watchdog.connect_link("https://p.supabase.co/functions/v1/linkedin-oauth", "dorin")
+    _, ok = watchdog.connect_link("https://p.supabase.co/functions/v1/linkedin-oauth", "danielle")
 
     assert ok is False
 
@@ -123,7 +121,7 @@ def test_network_trouble_does_not_cry_broken_link(monkeypatch):
         def open(self, *a, **kw): raise OSError("dns")
     monkeypatch.setattr(watchdog.urllib.request, "build_opener", lambda *a: Opener())
 
-    _, ok = watchdog.connect_link("https://p.supabase.co/functions/v1/linkedin-oauth", "dorin")
+    _, ok = watchdog.connect_link("https://p.supabase.co/functions/v1/linkedin-oauth", "danielle")
 
     assert ok is True
 

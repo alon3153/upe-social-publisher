@@ -32,7 +32,7 @@ from publishers import queue, linkedin
 WINDOW_HOURS = float(os.environ.get("ENGAGE_WINDOW_HOURS", "6"))
 ANTHROPIC_API_KEY = os.environ.get("ANTHROPIC_API_KEY", "")
 GEN_MODEL = os.environ.get("GEN_MODEL", "claude-sonnet-4-6")
-ADVOCATE_NAMES = {"li_danielle": "דניאל", "li_dorin": "דורין", "li_natalia": "נטליה"}
+ADVOCATE_NAMES = {"li_danielle": "דניאל", "li_natalia": "נטליה"}
 STATE_PATH = os.path.join(ROOT, "state", "engaged.json")
 # Posts worth amplifying: Alon's own profile and the company pages.
 TARGET_ACCOUNTS = {"li_personal", "alon3153", "li_english", "li_spain"}

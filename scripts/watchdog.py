@@ -129,9 +129,12 @@ def check_linkedin_auth():
     # The slug must be one the DEPLOYED edge function knows — 'daniel' is not
     # 'danielle', and the deployed build lagged the repo by two months, so both
     # links in this alert led to "לינק לא תקין". connect_link() proves each one.
+    # דורין was dropped from the advocacy roster on 21.08.2026 (Alon's call: she
+    # never connected and is not being chased). Re-adding her here without also
+    # re-adding li_dorin to daily_email.ACCOUNTS would report a person who is
+    # deliberately off the roster.
     required_advocates = {
         "li_danielle": ("דניאל", "danielle"),
-        "li_dorin": ("דורין", "dorin"),
     }
     try:
         advocates = {r.get("account"): r for r in queue.list_advocates()}
