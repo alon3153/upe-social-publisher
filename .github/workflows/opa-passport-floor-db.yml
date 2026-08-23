@@ -52,9 +52,14 @@ jobs:
 
           def run_sql(label, sql):
               body = json.dumps({"query": sql}).encode()
+              # Cloudflare fronts api.supabase.com and answers the default
+              # `Python-urllib/3.x` agent with 403 error 1010. A browser UA gets through.
               req = urllib.request.Request(URL, data=body, method="POST", headers={
                   "Authorization": f"Bearer {TOKEN}",
                   "Content-Type": "application/json",
+                  "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) "
+                                "AppleWebKit/537.36 (KHTML, like Gecko) "
+                                "Chrome/126.0.0.0 Safari/537.36",
               })
               print(f"::group::{label}")
               try:
