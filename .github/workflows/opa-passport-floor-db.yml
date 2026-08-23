@@ -1,0 +1,126 @@
+name: OPA passport floor (database)
+
+# The passport-validity floor for the Almogim / Rhodes registration lives in TWO places:
+#   1. the edge function `opa-register`  -> lowered to 2027-01-08 on 21.08.2026
+#   2. a constraint inside the database  -> still 2027-04-08, and nobody looked there
+#
+# Found 23.08.2026: a passport expiring between 08.01.2027 and 07.04.2027 passes every
+# visible gate, then the INSERT is rejected by the database and the registrant sees
+# "השמירה נכשלה" after filling in four steps. Barak Toledano hit exactly this.
+# Reproduced live against production: 2027-03-05 -> save_failed/500, 2027-04-08 -> ok.
+#
+# `inspect` is read-only and prints constraint/trigger NAMES plus only those definitions
+# that mention 2027 — this repo is PUBLIC and so are its Actions logs, so no registrant
+# row is ever selected. `fix` rewrites the literal in place, keeping the constraint's
+# name and shape, and aborts if it finds nothing to patch.
+#
+# Requires repository secret SUPABASE_ACCESS_TOKEN (added 21.08.2026 for the sibling
+# workflow "Patch Edge Function Constant").
+
+on:
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: "inspect (read-only) or fix (rewrite 2027-04-08 -> 2027-01-08)"
+        required: true
+        default: inspect
+        type: choice
+        options: [inspect, fix]
+
+permissions:
+  contents: read
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    if: github.actor == 'alon3153'
+    env:
+      PROJECT_REF: nlcbjhpfneutjuscqkjx
+      SUPABASE_ACCESS_TOKEN: ${{ secrets.SUPABASE_ACCESS_TOKEN }}
+      MODE: ${{ inputs.mode }}
+    steps:
+      - name: Inspect / patch the passport floor
+        shell: python
+        run: |
+          import json, os, sys, urllib.request, urllib.error
+
+          REF   = os.environ["PROJECT_REF"]
+          TOKEN = os.environ["SUPABASE_ACCESS_TOKEN"]
+          MODE  = os.environ["MODE"]
+          URL   = f"https://api.supabase.com/v1/projects/{REF}/database/query"
+
+          def run_sql(label, sql):
+              body = json.dumps({"query": sql}).encode()
+              req = urllib.request.Request(URL, data=body, method="POST", headers={
+                  "Authorization": f"Bearer {TOKEN}",
+                  "Content-Type": "application/json",
+              })
+              print(f"::group::{label}")
+              try:
+                  with urllib.request.urlopen(req, timeout=60) as r:
+                      out = r.read().decode()
+                      print(r.status, out)
+              except urllib.error.HTTPError as e:
+                  print("HTTP", e.code, e.read().decode())
+                  print("::endgroup::")
+                  sys.exit(1)
+              print("::endgroup::")
+              return out
+
+          INSPECT = """
+          select con.conname as name,
+                 case when pg_get_constraintdef(con.oid) like '%2027%'
+                      then pg_get_constraintdef(con.oid)
+                      else '(no date literal)' end as def
+          from pg_constraint con
+          join pg_class rel on rel.oid = con.conrelid
+          join pg_namespace ns on ns.oid = rel.relnamespace
+          where ns.nspname = 'public' and rel.relname = 'opa_registrations'
+          order by 1
+          """
+
+          TRIGGERS = """
+          select tgname as name
+          from pg_trigger
+          where tgrelid = 'public.opa_registrations'::regclass and not tgisinternal
+          order by 1
+          """
+
+          # Rewrites the literal without hardcoding the constraint name: whatever CHECK
+          # carries 2027-04-08 is dropped and re-added with the same name and the legal
+          # Greek floor. Raises if nothing matched, so a silent no-op can't read as success.
+          FIX = """
+          do $$
+          declare r record; d text; n int := 0;
+          begin
+            for r in
+              select con.conname as conname, pg_get_constraintdef(con.oid) as def
+              from pg_constraint con
+              join pg_class rel on rel.oid = con.conrelid
+              join pg_namespace ns on ns.oid = rel.relnamespace
+              where ns.nspname = 'public'
+                and rel.relname = 'opa_registrations'
+                and pg_get_constraintdef(con.oid) like '%2027-04-08%'
+            loop
+              d := replace(r.def, '2027-04-08', '2027-01-08');
+              execute format('alter table public.opa_registrations drop constraint %I', r.conname);
+              execute format('alter table public.opa_registrations add constraint %I %s', r.conname, d);
+              n := n + 1;
+              raise notice 'patched constraint %', r.conname;
+            end loop;
+            if n = 0 then
+              raise exception 'no constraint on opa_registrations contains 2027-04-08 - nothing patched';
+            end if;
+          end $$;
+          """
+
+          run_sql("constraints", INSPECT)
+          run_sql("triggers", TRIGGERS)
+
+          if MODE != "fix":
+              print("inspect only - nothing changed")
+              sys.exit(0)
+
+          run_sql("fix", FIX)
+          run_sql("verify", INSPECT)
