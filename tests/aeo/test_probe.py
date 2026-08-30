@@ -139,3 +139,73 @@ def test_outreach_targets_ranks_external_domains():
     t = probe.outreach_targets(sc)
     assert t[0]["domain"] == "bizbash.com" and t[0]["citations"] == 2
     assert all("upe.co.il" not in x["domain"] for x in t)
+
+
+# --- instrument honesty -------------------------------------------------------
+
+def _q(qid, text, dim="product_search"):
+    return {"id": qid, "text": text, "dimension": dim}
+
+
+def _judge_ok(prompt):
+    return '{"product_search":50,"comparison":0,"reputation":0,"competitors":[],"gap_note":""}'
+
+
+def _probe():
+    import aeo_probe
+    return aeo_probe
+
+
+def test_branded_questions_are_split_out_of_the_headline():
+    """4 branded questions must not put a permanent floor under the KPI."""
+    p = _probe()
+    qs = [_q("nb1", "Who are the best event production companies?"),
+          _q("nb2", "Which agency should a company hire for a conference?"),
+          _q("b1", "What do you know about Uproduction Events?"),
+          _q("b2", "Is Uproduction Events credible?")]
+
+    def ask(model, text):
+        # engine names UPE only when the question already named it
+        said = "Uproduction Events is a producer." if p.is_branded(text) else "Try Freeman or GPJ."
+        return {"text": said, "citations": [], "grounded": True, "grounded_error": None}
+
+    m = p.run_probe(qs, ["claude"], ask, _judge_ok)["models"]["claude"]
+    assert m["mention_rate"] == 50           # the old, flattering number
+    assert m["mention_rate_nonbranded"] == 0  # the truth
+    assert m["brand_recall"] == 100
+    assert m["n_nonbranded"] == 2 and m["n_branded"] == 2
+
+
+def test_model_with_dead_grounding_is_marked_degraded():
+    """The 2026-08-23 ChatGPT regression must surface as a broken instrument."""
+    p = _probe()
+    qs = [_q("a", "Best event companies?"), _q("b", "Top incentive travel firms?")]
+
+    def ask(model, text):
+        return {"text": "As of my last update in October 2023...", "citations": [],
+                "grounded": False, "grounded_error": "RuntimeError: HTTP 404 model retired"}
+
+    sc = p.run_probe(qs, ["chatgpt"], ask, _judge_ok)
+    m = sc["models"]["chatgpt"]
+    assert m["degraded"] is True
+    assert m["grounded_rate"] == 0
+    assert "retired" in m["degraded_reason"]
+    assert any("DEGRADED" in e for e in sc["errors"])
+
+
+def test_healthy_model_is_not_degraded():
+    p = _probe()
+    qs = [_q("a", "Best event companies?")]
+    ask = lambda model, text: {"text": "Uproduction Events.", "citations": ["https://upe.co.il/"],
+                               "grounded": True, "grounded_error": None}
+    m = p.run_probe(qs, ["claude"], ask, _judge_ok)["models"]["claude"]
+    assert m["degraded"] is False and m["grounded_rate"] == 100
+
+
+def test_ungrounded_run_is_not_mistaken_for_degradation():
+    """A deliberately ungrounded run (AEO_GROUNDED=0) is not a broken instrument."""
+    p = _probe()
+    qs = [_q("a", "Best event companies?")]
+    ask = lambda model, text: {"text": "Freeman.", "citations": [], "grounded": False,
+                               "grounded_error": None}
+    assert p.run_probe(qs, ["claude"], ask, _judge_ok)["models"]["claude"]["degraded"] is False

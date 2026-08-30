@@ -136,11 +136,11 @@ def test_totally_empty_metadata_still_builds():
     assert page["slug"]
 
 
-def test_comparison_prompt_forbids_naming_competitors():
-    # comparison/trust pages must compare by archetype so they pass the
-    # names_competitor guard (the vetoed head-to-head pages named rivals).
-    brief = dict(BRIEF, type="comparison", target_dimension="comparison",
-                 competitors_to_beat=["freeman", "bcd meetings"])
+def test_roster_prompt_names_competitors_under_neutrality_rules():
+    """Founder lifted the naming ban 30.08: a page that contains no roster cannot be
+    cited for "who are the top X" — which is the query the citations come from."""
+    brief = dict(BRIEF, type="comparison", dimension="comparison",
+                 competitors_named=["Freeman", "BCD Meetings"])
     seen = {}
 
     def spy_ask(model, prompt):
@@ -152,8 +152,11 @@ def test_comparison_prompt_forbids_naming_competitors():
 
     gen.generate_page(brief, "en", spy_ask, "2026-08-02")
     p = seen["prompt"].lower()
-    assert "do not name" in p
-    assert "freeman" not in p and "bcd meetings" not in p  # names not injected
+    assert "freeman" in p and "bcd meetings" in p          # the roster IS injected now
+    assert "methodology" in p                               # ...but only with disclosure
+    assert "never state or imply that any of them is bad" in p
+    assert "do not claim it is the best" in p
+    assert "must carry an inline markdown link to its source" in p
 
 
 def test_guide_prompt_still_names_competitors_for_citations():

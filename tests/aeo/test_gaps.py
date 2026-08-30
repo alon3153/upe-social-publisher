@@ -1,40 +1,83 @@
-import scripts.aeo_gaps as g
+import sys
+from pathlib import Path
 
-TARGETS = {"per_dimension_min": {"product_search": 70, "comparison": 70, "reputation": 90}, "briefs_per_run": 3}
-
-
-def scorecard(ps, cmp_, rep, comps=("BCD",)):
-    ans = [{"id": "a", "question": "best event company?",
-            "scores": {"product_search": ps, "comparison": cmp_, "reputation": rep},
-            "competitors": list(comps), "gap_note": "UPE not surfaced; competitors led"}]
-    return {"date": "2026-06-28", "models": {"claude": {"product_search": ps, "comparison": cmp_,
-                                                        "reputation": rep, "aeo": 0, "answers": ans}}}
+sys.path.insert(0, str(Path(__file__).resolve().parents[2] / "scripts"))
+import aeo_gaps as g
 
 
-def test_weak_product_search_makes_category_brief():
-    briefs = g.build_briefs(scorecard(40, 90, 100), None, TARGETS)
-    types = {b["type"] for b in briefs}
-    assert "category_guide" in types
-    b = next(b for b in briefs if b["type"] == "category_guide")
-    assert b["target_dimension"] == "product_search"
-    assert "BCD" in b["competitors_to_beat"]
+def answer(qid, mentioned, dim="product_search", lang="he", seg="beachhead",
+           branded=False, competitors=(), note=""):
+    return {"id": qid, "question": f"q-{qid}", "dimension": dim, "lang": lang,
+            "segment": seg, "branded": branded, "upe_mentioned": mentioned,
+            "competitors": list(competitors), "gap_note": note}
 
 
-def test_strong_dimensions_make_no_briefs():
-    assert g.build_briefs(scorecard(95, 95, 100), None, TARGETS) == []
+def scorecard(models):
+    return {"models": models}
 
 
-def test_cap_and_overflow():
-    # all three weak across model → 3 briefs, but cap=2 → 1 deferred
-    sc = scorecard(10, 10, 10)
-    briefs, deferred = g.briefs_with_overflow(sc, None, TARGETS, cap=2)
-    assert len(briefs) == 2
-    assert deferred == 1
+def test_brief_comes_from_the_question_we_lost():
+    sc = scorecard({"claude": {"answers": [
+        answer("bh_il_kenes", False, competitors=["Freeman", "GPJ"], note="named only global networks"),
+        answer("bh_il_gala", True),
+    ]}})
+    briefs = g.build_briefs(sc)
+    assert len(briefs) == 1
+    b = briefs[0]
+    assert b["intent"] == "bh_il_kenes"
+    assert b["question"] == "q-bh_il_kenes"
+    assert b["lang"] == "he"            # single language, not a he+en+es triplet
+    assert b["competitors_named"] == ["Freeman", "GPJ"]
+    assert b["lost_on"] == ["claude"]
+    assert b["why"] == "named only global networks"
 
 
-def test_regression_raises_priority():
-    cur = scorecard(60, 90, 100)
-    prev = scorecard(75, 90, 100)   # product_search dropped 75->60
-    b = g.build_briefs(cur, prev, TARGETS)[0]
-    assert b["target_dimension"] == "product_search"
-    assert b["priority"] >= (70 - 60) + 0.5
+def test_branded_questions_never_produce_briefs():
+    sc = scorecard({"claude": {"answers": [answer("rep_who_is", False, seg="branded", branded=True)]}})
+    assert g.build_briefs(sc) == []
+
+
+def test_segment_weighting_puts_beachhead_above_aspirational():
+    sc = scorecard({"claude": {"answers": [
+        answer("aspirational_q", False, seg="aspirational"),
+        answer("beachhead_q", False, seg="beachhead"),
+    ]}})
+    assert [b["intent"] for b in g.build_briefs(sc)] == ["beachhead_q", "aspirational_q"]
+
+
+def test_question_lost_on_more_engines_ranks_higher():
+    a = answer("wide", False, seg="expansion")
+    b = answer("narrow", False, seg="expansion")
+    sc = scorecard({"claude": {"answers": [a, b]}, "gemini": {"answers": [a]}})
+    briefs = g.build_briefs(sc)
+    assert briefs[0]["intent"] == "wide"
+    assert briefs[0]["lost_on"] == ["claude", "gemini"]
+
+
+def test_degraded_model_never_briefs():
+    """Its answers are frozen training recall — briefing from them writes content to fix an API bug."""
+    sc = scorecard({"chatgpt": {"degraded": True, "answers": [answer("ghost", False)]}})
+    assert g.build_briefs(sc) == []
+
+
+def test_covered_intent_is_not_regenerated():
+    """The treadmill: 27 URLs on one intent because nothing checked what was already published."""
+    sc = scorecard({"claude": {"answers": [answer("done", False), answer("todo", False)]}})
+    assert [b["intent"] for b in g.build_briefs(sc, covered=["done"])] == ["todo"]
+
+
+def test_vetoed_intent_is_not_regenerated():
+    sc = scorecard({"claude": {"answers": [answer("banned", False), answer("ok", False)]}})
+    assert [b["intent"] for b in g.build_briefs(sc, vetoed=["banned"])] == ["ok"]
+
+
+def test_overflow_is_a_real_backlog_not_a_constant_zero():
+    answers = [answer(f"q{i}", False) for i in range(7)]
+    briefs, still_open = g.briefs_with_overflow(scorecard({"claude": {"answers": answers}}), cap=3)
+    assert len(briefs) == 3
+    assert still_open == 4          # the old code returned max(0, 3-3) == 0 forever
+
+
+def test_nothing_lost_means_nothing_to_write():
+    sc = scorecard({"claude": {"answers": [answer("won", True)]}})
+    assert g.briefs_with_overflow(sc) == ([], 0)

@@ -59,6 +59,14 @@ def _missing_keys(payload):
     return [k for k in REQUIRED_KEYS if not str(payload.get(k) or "").strip()]
 
 
+def _dim(brief):
+    return brief.get("dimension") or brief.get("target_dimension") or "product_search"
+
+
+def _topic(brief):
+    return brief.get("topic") or brief.get("question") or ""
+
+
 def _normalize_payload(payload, brief):
     """Never crash on a malformed model payload — derive sensible fallbacks so a
     brief is always publishable (see MAX_GEN_ATTEMPTS / 'never drop a page')."""
@@ -68,7 +76,7 @@ def _normalize_payload(payload, brief):
     p["title"] = title
     p["h1"] = (p.get("h1") or title).strip()
     p["description"] = (p.get("description") or title).strip()
-    p["slug"] = _slugify(p.get("slug") or p.get("h1") or title) or f"aeo-{brief['target_dimension']}"
+    p["slug"] = _slugify(p.get("slug") or p.get("h1") or title) or f"aeo-{_dim(brief)}"
     return p
 
 
@@ -89,7 +97,7 @@ def _build_page(brief, lang, payload, body, date):
         "urlSlug": slug_base,
         "canonical": _canonical(lang, slug_base),
         "language": lang,
-        "translationKey": f"aeo-{brief['target_dimension']}-{slug_base}",
+        "translationKey": f"aeo-{_dim(brief)}-{slug_base}",
         "ogType": "article",
         "schemaType": SCHEMA_TYPE[brief["type"]],
         "author": "Uproduction",
@@ -103,6 +111,7 @@ def _build_page(brief, lang, payload, body, date):
                               [f["answer"] for f in payload.get("faqs", [])])
     violations = aeo_guards.check_content(text_to_check)
     return {"collection": COLLECTION[brief["type"]], "lang": lang, "slug": slug_base,
+            "intent": brief.get("intent"),
             "frontmatter": fm, "body": body, "violations": violations}
 
 
@@ -117,32 +126,64 @@ def _correction(violations):
     )
 
 
-# Head-to-head comparison/trust pages that NAME specific rivals were vetoed by
-# the founder (brand/legal risk of a direct named comparison). To still win the
-# "comparison" dimension, these page types differentiate by ARCHETYPE — the
-# boutique-specialist model vs the large global-network model — naming no firm,
-# so they pass names_competitor() and publish without a veto hold. Guide/list
-# pages keep naming competitors (that is the 05.07 citation-source strategy).
-_ARCHETYPE_TYPES = {"comparison", "trust"}
+# ARCHETYPE (revised 30.08.2026 after the founder lifted the competitor-naming ban).
+#
+# The previous archetype forbade naming any firm, so every page described only the
+# boutique MODEL versus "large global networks" in the abstract. That produced pages no
+# engine can cite for the query they targeted: asked "who are the top corporate event
+# production companies", an engine needs a page that CONTAINS the roster. Every cited
+# third-party page does exactly this — gogather names Freeman, GPJ, Jack Morton, Maritz
+# and ranks itself #1 among them.
+#
+# So category/list pages now name real firms, under the structural rules enforced by
+# aeo_guards.comparative_violations: a disclosed methodology, neutral one-line
+# descriptors, no disparagement, no self-superlative.
+
+_ROSTER_TYPES = {"category_guide", "comparison"}
+
+_ROSTER_RULES = (
+    "Write this as a genuine REFERENCE LIST that a neutral researcher would cite, not as "
+    "marketing copy about Uproduction Events.\n"
+    "1. Name 8-12 real companies that actually serve this need, including the ones an "
+    "answer engine already names: {competitors}.\n"
+    "2. Give each company a NEUTRAL one-or-two-line descriptor: what they are strong at, "
+    "who they suit, where they operate. Never state or imply that any of them is bad, "
+    "overpriced, unreliable, slow or inferior — a negative claim about a named firm is a "
+    "legal exposure under Israeli Commercial Torts Law 5759-1999 and EU Directive "
+    "2006/114/EC. Positive, factual, comparable descriptions only.\n"
+    "3. Include Uproduction Events as ONE entry among them, described in its true "
+    "category (boutique global producer, senior ownership, Israel-based with a Barcelona "
+    "office, strongest on incentive travel and conferences taken abroad). Do NOT claim it "
+    "is the best, the leading, or number one.\n"
+    "4. Open with a section headed 'Methodology' (or the equivalent in the page language) "
+    "stating in 2-3 sentences how the list was assembled and what it is based on.\n"
+    "5. Structure the roster so each company is a clear heading or list item — an engine "
+    "must be able to lift a single entry.\n"
+    "6. Every statistic you state must carry an inline markdown link to its source on the "
+    "same line. If you do not have a real source, do not state the number at all. Never "
+    "cite arxiv.org or any preprint server for an events-industry claim."
+)
 
 
 def _differentiation_line(brief):
-    if brief["type"] in _ARCHETYPE_TYPES:
-        return (
-            "Differentiate the BOUTIQUE-SPECIALIST model (Uproduction Events) against the "
-            "LARGE GLOBAL EVENT-MANAGEMENT NETWORK model in general terms — senior ownership, "
-            "flexibility, single point of contact, cost structure. "
-            "CRITICAL: do NOT name, abbreviate, or allude to any specific competing company or brand; "
-            "refer to the alternative only as 'large global event-management networks' / "
-            "'big agency networks'. Compare the MODELS, never named firms."
-        )
-    return f"Competitors to differentiate against (do not disparage): {', '.join(brief['competitors_to_beat']) or 'n/a'}"
+    if brief["type"] in _ROSTER_TYPES:
+        comps = brief.get("competitors_named") or brief.get("competitors_to_beat") or []
+        return _ROSTER_RULES.format(competitors=", ".join(comps) or "the established global networks")
+    return (
+        "This is a trust/solutions page about Uproduction Events itself. Describe what it "
+        "does, for whom, and with what proof. Do not name competing firms. Every statistic "
+        "must carry an inline source link on the same line, or be omitted."
+    )
 
 
 def generate_page(brief, lang, ask_fn, date):
     prompt = (
-        f"LANGUAGE: {lang}\nPAGE TYPE: {brief['type']}\nTOPIC: {brief['topic']}\n"
-        f"TARGET: improve '{brief['target_dimension']}' visibility.\n"
+        f"LANGUAGE: {lang}\nPAGE TYPE: {brief['type']}\n"
+        f"THE BUYER QUESTION THIS PAGE MUST ANSWER: {_topic(brief)}\n"
+        f"Write the page so that it is the best possible SOURCE for answering that exact "
+        f"question. An answer engine asked it and did not mention Uproduction Events"
+        + (f" (lost on: {', '.join(brief.get('lost_on') or [])})" if brief.get("lost_on") else "")
+        + ".\n"
         f"{_differentiation_line(brief)}\n"
         f"Include 3-5 FAQs (40-80 word answers). Write the body in {lang}."
     )
@@ -164,9 +205,16 @@ def generate_page(brief, lang, ask_fn, date):
 
 
 def render_brief(brief, ask_fn, date):
-    pages = []
-    shared_key = None
-    for lang in brief["lang_set"]:
+    """One brief -> one page, in the language of the question that generated it.
+
+    Briefs used to fan out over a fixed he+en+es set, so a single gap produced three pages
+    on the same intent every week and the clusters compounded (8 live pages on
+    "boutique vs large networks", 3 EN pages with byte-identical titles). A Hebrew buyer
+    question is answered by a Hebrew page.
+    """
+    langs = brief.get("lang_set") or [brief.get("lang") or "he"]
+    pages, shared_key = [], None
+    for lang in langs:
         page = generate_page(brief, lang, ask_fn, date)
         if shared_key is None:
             shared_key = page["frontmatter"]["translationKey"]

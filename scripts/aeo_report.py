@@ -5,10 +5,28 @@ DIM_HE = {"product_search": "חיפוש מוצר", "comparison": "השוואה",
 MODEL_HE = {"claude": "Claude", "chatgpt": "ChatGPT", "gemini": "Gemini"}
 
 
-def _arrow(cur, prev):
+def _arrow(cur, prev, min_delta=0):
+    """Suppress movement smaller than `min_delta`.
+
+    With a 16-question battery each question was worth 6.25 points, so every "▼ -7" and
+    "▲ +6" in the weekly email was a single question flipping. Over 13 runs ChatGPT's
+    mention rate had a standard deviation of exactly 0.0 while the email kept drawing
+    arrows. An arrow now requires at least two questions to move.
+    """
     if prev is None or cur == prev:
         return "—"
-    return f"▲ +{cur - prev}" if cur > prev else f"▼ {cur - prev}"
+    delta = cur - prev
+    if abs(delta) < min_delta:
+        return f"— (רעש: {delta:+d})"
+    return f"▲ +{delta}" if delta > 0 else f"▼ {delta}"
+
+
+def _min_delta(n_questions):
+    """Two questions' worth of movement, rounded up."""
+    if not n_questions:
+        return 0
+    import math
+    return math.ceil(2 * 100 / n_questions)
 
 
 def _ltr(url):
@@ -41,38 +59,102 @@ def _outreach_html(scorecard, top=10):
             f'<ul dir="rtl" style="direction:rtl;text-align:right;">{items}</ul>')
 
 
-def build_email(scorecard, prev, shipped, queued, failures, pr_url, citations_status=""):
+# Headline first, vanity last. `mention_rate` averages in four questions that NAME the
+# company -- guaranteed hits that put a permanent 25% floor under the number and hid the
+# fact that ChatGPT mentioned UPE in 0 of 12 non-branded questions for ten runs straight.
+PRIMARY_DIMS = ("mention_rate_nonbranded", "citation_rate_nonbranded")
+SECONDARY_DIMS = ("product_search", "comparison", "aeo", "brand_recall", "mention_rate")
+
+DIM_HE.update({
+    "mention_rate_nonbranded": "אזכור לא-ממותג (KPI ראשי)",
+    "citation_rate_nonbranded": "ציטוט לא-ממותג",
+    "brand_recall": "זיהוי מותג (ממותג — לא KPI)",
+    "mention_rate": "שיעור אזכור (כולל ממותג — ישן)",
+})
+
+
+def _degraded_html(scorecard):
+    bad = [(m, b) for m, b in scorecard.get("models", {}).items() if b.get("degraded")]
+    if not bad:
+        return ""
+    items = "".join(
+        f'<li dir="rtl" style="text-align:right;"><b>{MODEL_HE.get(m, m)}</b> — '
+        f'חיפוש הרשת נכשל בכל השאלות; התשובות הגיעו מזיכרון האימון, לא מהאינטרנט. '
+        f'<span dir="ltr">{(b.get("degraded_reason") or "")[:160]}</span></li>' for m, b in bad)
+    return ('<div dir="rtl" style="direction:rtl;text-align:right;border:2px solid #b00;'
+            'padding:8px;margin:8px 0;background:#fff5f5;">'
+            '<h3 dir="rtl" style="margin:0 0 6px;color:#b00;">⛔ מכשיר תקול — הציונים למטה אינם מדידה</h3>'
+            f'<ul dir="rtl" style="direction:rtl;text-align:right;">{items}</ul>'
+            '<p dir="rtl" style="margin:6px 0 0;">אל תסיק מכאן ירידה בנראות. '
+            'המנוע הזה לא נשאל באמת — יש לתקן את המתאם לפני שקוראים את המספרים שלו.</p></div>')
+
+
+def build_email(scorecard, prev, shipped, queued, failures, pr_url, citations_status="",
+                not_live=(), comparative=()):
     prev, baseline_note = _comparable(scorecard, prev)
     rows = ""
     for model, block in scorecard["models"].items():
         pblock = (prev or {}).get("models", {}).get(model, {}) if prev else {}
-        for dim in ("mention_rate", "citation_rate", "product_search", "comparison", "reputation", "aeo"):
+        degraded = block.get("degraded")
+        md = _min_delta(block.get("n_nonbranded") or 0)
+        label = MODEL_HE.get(model, model) + (" ⛔" if degraded else "")
+        for dim in PRIMARY_DIMS + SECONDARY_DIMS:
             if dim not in block:
                 continue
             cur = block.get(dim, 0)
-            arrow = _arrow(cur, pblock.get(dim) if pblock else None)
-            rows += (f'<tr><td dir="rtl" style="padding:4px 8px;">{MODEL_HE.get(model, model)}</td>'
-                     f'<td dir="rtl" style="padding:4px 8px;">{DIM_HE[dim]}</td>'
-                     f'<td dir="rtl" style="padding:4px 8px;text-align:center;">{cur}</td>'
-                     f'<td dir="rtl" style="padding:4px 8px;text-align:center;">{arrow}</td></tr>')
+            primary = dim in PRIMARY_DIMS
+            arrow = "—" if degraded else _arrow(cur, pblock.get(dim) if pblock else None, md)
+            # show the fraction, not just a percentage, so the reader can see how much
+            # one question is worth
+            frac = ""
+            if dim == "mention_rate_nonbranded" and block.get("n_nonbranded"):
+                frac = f' <span dir="ltr">({block.get("mentioned_nonbranded", 0)}/{block["n_nonbranded"]})</span>'
+            weight = "font-weight:bold;" if primary else "color:#666;"
+            rows += (f'<tr><td dir="rtl" style="padding:4px 8px;{weight}">{label}</td>'
+                     f'<td dir="rtl" style="padding:4px 8px;{weight}">{DIM_HE.get(dim, dim)}</td>'
+                     f'<td dir="rtl" style="padding:4px 8px;text-align:center;{weight}">{cur}{frac}</td>'
+                     f'<td dir="rtl" style="padding:4px 8px;text-align:center;{weight}">{arrow}</td></tr>')
 
     shipped_html = "".join(
         f'<li dir="rtl" style="direction:rtl;text-align:right;">{p["title"]} — {_ltr(p["url"])}</li>'
         for p in shipped) or '<li dir="rtl">לא פורסמו עמודים בריצה זו</li>'
 
+    # A PR is not a publication. Four consecutive weekly emails reported 27 pages as
+    # shipped while PRs #99/#108/#112 sat closed unmerged and their URLs returned 404.
+    notlive_html = ""
+    if not_live:
+        items = "".join(f'<li dir="rtl" style="text-align:right;">{p["title"]} — {_ltr(p["url"])}</li>'
+                        for p in not_live)
+        notlive_html = ('<h3 dir="rtl" style="color:#b00;">⚠️ נוצרו אך אינם חיים (לא נספרו כפרסום)</h3>'
+                        f'<ul dir="rtl" style="direction:rtl;text-align:right;">{items}</ul>')
+
+    comparative_html = ""
+    if comparative:
+        items = "".join(
+            f'<li dir="rtl" style="text-align:right;"><span dir="ltr">{c["slug"]}</span> — '
+            f'מזכיר: <span dir="ltr">{", ".join(c["competitors"])}</span></li>' for c in comparative)
+        comparative_html = ('<h3 dir="rtl">עמודי השוואה שפורסמו (מזכירים מתחרים)</h3>'
+                            '<p dir="rtl" style="direction:rtl;text-align:right;color:#666;">'
+                            'עברו בדיקת ניטרליות: מתודולוגיה גלויה, תיאור עובדתי, ללא הכפשה וללא '
+                            'סופרלטיב עצמי.</p>'
+                            f'<ul dir="rtl" style="direction:rtl;text-align:right;">{items}</ul>')
+
     fails_html = ""
     if failures:
-        fails_html = ('<p dir="rtl" style="direction:rtl;text-align:right;color:#b00;">'
-                      "תקלות: " + "; ".join(failures) + "</p>")
+        items = "".join(f'<li dir="rtl" style="text-align:right;">{f}</li>' for f in failures)
+        fails_html = ('<h3 dir="rtl" style="color:#b00;">תקלות</h3>'
+                      f'<ul dir="rtl" style="direction:rtl;text-align:right;color:#b00;">{items}</ul>')
 
     pr_html = f'<p dir="rtl" style="direction:rtl;text-align:right;">PR: {_ltr(pr_url)}</p>' if pr_url else ""
 
-    subject = f"דוח AEO שבועי — {scorecard['date']} ({len(shipped)} עמודים, {queued} בתור)"
+    subject = f"דוח AEO שבועי — {scorecard['date']} ({len(shipped)} עמודים חיים, {queued} בתור)"
     html = f"""<html dir="rtl" lang="he">
 <head><meta charset="utf-8"></head>
 <body dir="rtl" style="font-family:Arial,Helvetica,sans-serif;font-size:14px;direction:rtl;text-align:right;">
 <div dir="rtl" style="direction:rtl;text-align:right;">
 <h2 dir="rtl">דוח AEO/GEO שבועי — {scorecard['date']}</h2>
+{baseline_note}
+{_degraded_html(scorecard)}
 <table dir="rtl" style="border-collapse:collapse;border:1px solid #ddd;">
 <tr><th dir="rtl" style="padding:4px 8px;">מודל</th><th dir="rtl" style="padding:4px 8px;">ממד</th>
 <th dir="rtl" style="padding:4px 8px;">ציון</th><th dir="rtl" style="padding:4px 8px;">שינוי</th></tr>
@@ -80,8 +162,10 @@ def build_email(scorecard, prev, shipped, queued, failures, pr_url, citations_st
 </table>
 {_outreach_html(scorecard)}
 {citations_status}
-<h3 dir="rtl">מה פורסם השבוע</h3>
+<h3 dir="rtl">מה פורסם השבוע (אומת חי)</h3>
 <ul dir="rtl" style="direction:rtl;text-align:right;">{shipped_html}</ul>
+{notlive_html}
+{comparative_html}
 <p dir="rtl" style="direction:rtl;text-align:right;">בתור לשבוע הבא: {queued} בריפים.</p>
 {pr_html}
 {fails_html}

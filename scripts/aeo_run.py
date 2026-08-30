@@ -3,6 +3,7 @@ import os, sys, json, argparse, datetime
 from pathlib import Path
 
 import aeo_models, aeo_probe, aeo_gaps, aeo_generate, aeo_guards, aeo_publish, aeo_report
+import aeo_intents
 import citations_pipeline
 import held_pages
 import indexnow_ping
@@ -10,7 +11,9 @@ import indexnow_ping
 ROOT = Path(__file__).resolve().parent
 HISTORY = ROOT / "aeo_history.json"
 TARGETS = json.loads((ROOT / "kpi_targets.json").read_text(encoding="utf-8"))["aeo_targets"]
-QUESTIONS = json.loads((ROOT / "aeo_questions.json").read_text(encoding="utf-8"))["questions"]
+_QDOC = json.loads((ROOT / "aeo_questions.json").read_text(encoding="utf-8"))
+QUESTIONS = _QDOC["questions"]
+SEGMENT_WEIGHTS = _QDOC.get("segment_weights") or aeo_gaps.DEFAULT_WEIGHTS
 
 
 def _prev_scorecard(history_path):
@@ -55,8 +58,15 @@ def run(repo, dry_run, ask_fn=None, judge_fn=None, send_fn=None, runner=None, to
     failures.extend(scorecard.get("errors", []))
     aeo_probe.append_history(scorecard, history_path)
 
-    briefs, deferred = aeo_gaps.briefs_with_overflow(scorecard, prev, TARGETS,
-                                                     cap=TARGETS.get("briefs_per_run", 3))
+    # Filter the backlog BEFORE calling the model: an intent that already has a live page,
+    # or that the founder vetoed, must not be regenerated. Previously the veto was checked
+    # only after generation, so a permanently-blocked topic was rewritten in full every
+    # week and thrown away — invisible from both ends, and paid for every time.
+    covered = aeo_intents.covered()
+    vetoed = held_pages.vetoed_intents()
+    briefs, deferred = aeo_gaps.briefs_with_overflow(
+        scorecard, TARGETS, covered=covered, vetoed=vetoed,
+        cap=TARGETS.get("briefs_per_run", 3), weights=SEGMENT_WEIGHTS)
 
     # Citation gate (council decision 05.07): marginal value of another self-published
     # page is ~0 until third-party corroboration exists. Verify the external pipeline,
@@ -64,7 +74,8 @@ def run(repo, dry_run, ask_fn=None, judge_fn=None, send_fn=None, runner=None, to
     # carries the approval digest + outreach targets instead.
     citations_status = ""
     try:
-        advanced = citations_pipeline.verify()
+        # verify() crawls the live web; a dry run must not do network side effects
+        advanced = citations_pipeline.verify() if not dry_run else []
         if advanced:
             failures.append("citations advanced: " + ", ".join(advanced))  # informational
         citations_status = citations_pipeline.digest_html()
@@ -75,6 +86,7 @@ def run(repo, dry_run, ask_fn=None, judge_fn=None, send_fn=None, runner=None, to
 
     pages = []
     held_now = []
+    comparative = []
     for brief in briefs:
         try:
             rendered = aeo_generate.render_brief(brief, ask_fn, today)
@@ -82,15 +94,23 @@ def run(repo, dry_run, ask_fn=None, judge_fn=None, send_fn=None, runner=None, to
             failures.append(f"generation failed for {brief['type']} ({type(e).__name__}: {str(e)[:160]})")
             continue
         for page in rendered:
-            if page["violations"]:
-                failures.append(f"guard rejected {page['slug']}: {page['violations']}")
-                continue
-            comp = aeo_guards.names_competitor(page.get("body", ""))
-            if comp:  # founder-veto window — hold (don't drop); auto-merges after the window unless vetoed
+            body = page.get("body", "")
+            page.setdefault("intent", brief.get("intent"))
+            page.setdefault("lang", brief.get("lang", ""))
+            problems = list(page["violations"])
+            problems += aeo_guards.sourcing_violations(body)
+            comp = aeo_guards.names_competitor(body)
+            if comp:
+                # Founder decision 30.08: a roster page naming competitors is allowed when
+                # it is structurally neutral. It is rejected — not silently held — when it
+                # is not, because a held page was never actually reviewed.
                 page["_competitors"] = comp
-                held_now.append(page)
-                failures.append(f"held for founder veto (names competitors {comp}): {page['slug']}")
+                problems += aeo_guards.comparative_violations(body, comp)
+            if problems:
+                failures.append(f"guard rejected {page['slug']}: {problems}")
                 continue
+            if comp:
+                comparative.append({"slug": page["slug"], "competitors": comp})
             pages.append(page)
 
     # Founder-veto window (council 05.07): persist newly-held competitor-naming
@@ -114,20 +134,38 @@ def run(repo, dry_run, ask_fn=None, judge_fn=None, send_fn=None, runner=None, to
         held_pages.release([p["slug"] for p in merged_from_hold])
 
     shipped = [{"title": p["frontmatter"]["title"], "url": p["frontmatter"]["canonical"]} for p in pages]
+
+    # Record intents, then confirm the URLs actually resolve. Opening a PR is not
+    # publishing: PRs #99/#108/#112 were closed unmerged and #120 failed its build, yet
+    # four weekly emails reported those pages as shipped and IndexNow was pinged for URLs
+    # that 404. Only verified-live URLs are reported or pinged.
+    not_live = []
+    if pages and not dry_run:
+        aeo_intents.record(pages, today)
+        _, dead, _unknown = aeo_intents.verify(today)
+        if dead:
+            failures.append("intents whose page is no longer live (will be re-briefed): "
+                            + ", ".join(dead))
+        shipped, not_live = aeo_intents.filter_live(shipped)
+        for s_ in not_live:
+            failures.append(f"reported-but-not-live (NOT counted as published): {s_['url']}")
     if shipped and not dry_run:
-        try:  # pages auto-merge+deploy within minutes; IndexNow tolerates the lag
+        try:
             indexnow_ping.ping([s["url"] for s in shipped])
         except Exception as e:
             failures.append(f"indexnow ping failed ({type(e).__name__})")
     subject, html = aeo_report.build_email(scorecard, prev, shipped, deferred, failures,
-                                           publish.get("pr_url"), citations_status=citations_status)
+                                           publish.get("pr_url"), citations_status=citations_status,
+                                           not_live=not_live, comparative=comparative)
     email_sent = False
     if not dry_run or send_fn:
         ok, _ = aeo_report.send(subject, html, send_fn=send_fn)
         email_sent = bool(ok)
 
     return {"scorecard": scorecard, "briefs": briefs, "deferred": deferred,
-            "pages": pages, "publish": publish, "email_sent": email_sent, "failures": failures}
+            "pages": pages, "publish": publish, "email_sent": email_sent,
+            "comparative": comparative, "shipped": shipped, "not_live": not_live,
+            "failures": failures}
 
 
 def main():

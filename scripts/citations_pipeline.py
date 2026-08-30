@@ -52,6 +52,40 @@ def _fetch(url):
             return r.read().decode("utf-8", errors="replace")
 
 
+# A brand-slugged URL echoes its own path inside a bot-challenge page, so the naive
+# substring test made any blocked page "verify" itself: themanifest.com/company/
+# uproduction-events returned a Cloudflare interstitial containing three literal
+# "uproduction" hits and no profile. r.jina.ai serves challenge HTML with HTTP 200, so
+# the status code cannot catch it either.
+_BLOCK_MARKERS = (
+    "just a moment", "enable javascript and cookies", "cf-browser-verification",
+    "cf_chl_opt", "__cf_chl", "checking your browser", "attention required",
+    "datadome", "captcha-delivery", "px-captcha", "access denied",
+    "sorry, you have been blocked", "request unsuccessful",
+)
+
+
+def is_block_page(html):
+    """Marker-based only. A length heuristic was tempting but wrong: it would reject
+    legitimately terse pages, and a real challenge page always carries one of these."""
+    low = (html or "").lower()
+    return any(m in low for m in _BLOCK_MARKERS)
+
+
+def _mentions_us(html):
+    """True only when the page really carries our name — never off a challenge page."""
+    if is_block_page(html):
+        return False
+    low = (html or "").lower()
+    return "uproduction" in low or "upe.co.il" in low
+
+
+# Terminal items were never re-examined, so the board could not notice a profile going
+# down -- or a real review landing. The first verified Clutch review (13.08.2026) sat
+# unnoticed while the weekly email kept reporting "0 reviews".
+REVERIFY_DAYS = 14
+
+
 def verify(data=None, path=None, fetch=_fetch, today=None):
     """Advance submitted->live->verified_cited by crawling target_url.
     live = the page responds; verified_cited = it mentions Uproduction/upe.co.il.
@@ -68,15 +102,36 @@ def verify(data=None, path=None, fetch=_fetch, today=None):
     today = today or datetime.date.today().isoformat()
     changed = []
     for item in data["items"]:
-        if item["state"] not in ("awaiting_founder", "submitted", "live") or not item.get("target_url"):
+        if not item.get("target_url"):
+            # Nothing to crawl. Seven of twelve items were in this state, including
+            # entity_wikidata -- skipped here before any fetch, so it could never advance
+            # and nagged Alon daily for 30 days about work finished on 08.08. Mark it as
+            # needing a human check-off instead of pretending it is pending automation.
+            item["unverifiable"] = True
+            continue
+        item["unverifiable"] = False
+        if item["state"] == "verified_cited" and not _due_reverify(item, today):
+            continue
+        if item["state"] not in ("awaiting_founder", "submitted", "live", "verified_cited"):
             continue
         try:
-            html = fetch(item["target_url"]).lower()
+            html = fetch(item["target_url"])
         except Exception:
             continue  # unreachable today — retry next run
-        cited = "uproduction" in html or "upe.co.il" in html
+        if is_block_page(html):
+            item["last_check"] = today
+            item["last_check_result"] = "blocked"
+            continue  # a bot wall is not evidence either way
+        cited = _mentions_us(html)
+        item["last_check"] = today
+        item["last_check_result"] = "cited" if cited else "reachable"
         if item["state"] == "awaiting_founder" and not cited:
             continue  # cannot conclude the founder acted; keep nagging
+        if item["state"] == "verified_cited":
+            if not cited:  # a profile that disappeared must not stay green
+                item["state"], item["since"] = "live", today
+                changed.append(f'{item["id"]} → live (no longer mentions us)')
+            continue
         new_state = "verified_cited" if cited else "live"
         if new_state != item["state"]:
             item["state"], item["since"] = new_state, today
@@ -86,7 +141,19 @@ def verify(data=None, path=None, fetch=_fetch, today=None):
     return changed
 
 
+def _due_reverify(item, today):
+    last = item.get("last_check") or item.get("since")
+    if not last:
+        return True
+    try:
+        d = (datetime.date.fromisoformat(today) - datetime.date.fromisoformat(last[:10])).days
+    except ValueError:
+        return True
+    return d >= REVERIFY_DAYS
+
+
 PRESS_FOLLOWUP_DAYS = (5, 10)
+STALE_NAG_DAYS = 14
 
 
 def overdue_reminders(data=None, now=None):
@@ -103,7 +170,13 @@ def overdue_reminders(data=None, now=None):
         hours = (now - since).total_seconds() / 3600
         days = int(hours // 24)
         if item["state"] == "awaiting_founder" and hours >= REMIND_HOURS:
-            out.append(f'{item["title"]} — {item["action"]} (ממתין {days} ימים)')
+            if item.get("unverifiable") and days > STALE_NAG_DAYS:
+                # No target_url means nothing will ever clear this automatically. After a
+                # fortnight, stop asserting it is outstanding and ask for a human answer.
+                out.append(f'❓ {item["title"]} — לא ניתן לאימות אוטומטי (אין URL). '
+                           f'ממתין {days} ימים — לאשר ידנית שבוצע, או להוסיף כתובת לאימות.')
+            else:
+                out.append(f'{item["title"]} — {item["action"]} (ממתין {days} ימים)')
         elif (item["state"] == "submitted" and item.get("kind") == "press"
               and days in PRESS_FOLLOWUP_DAYS
               and days not in item.get("followups_handled", [])):

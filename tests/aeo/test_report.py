@@ -51,3 +51,80 @@ def test_send_uses_injected_fn():
 
     ok, info = rep.send("S", "<html></html>", send_fn=fake_send)
     assert ok and seen["s"] == "S"
+
+
+# --- honest reporting ---------------------------------------------------------
+
+def _block(**kw):
+    b = {"mention_rate": 31, "citation_rate": 44, "product_search": 12, "comparison": 23,
+         "reputation": 76, "aeo": 37, "mention_rate_nonbranded": 8, "citation_rate_nonbranded": 8,
+         "brand_recall": 100, "n_nonbranded": 32, "mentioned_nonbranded": 3, "n_branded": 4,
+         "grounded_rate": 100, "degraded": False, "answers": []}
+    b.update(kw)
+    return b
+
+
+def _sc(models, date="2026-09-06", bv="2026-08-30.1"):
+    return {"date": date, "battery_version": bv, "models": models, "errors": []}
+
+
+def test_headline_is_the_non_branded_rate_with_its_fraction():
+    import aeo_report as r
+    _, html = r.build_email(_sc({"claude": _block()}), None, [], 0, [], None)
+    assert "אזכור לא-ממותג (KPI ראשי)" in html
+    assert "(3/32)" in html                      # the reader can see what one question is worth
+    assert "זיהוי מותג (ממותג — לא KPI)" in html
+
+
+def test_single_question_movement_is_shown_as_noise():
+    import aeo_report as r
+    cur = _sc({"claude": _block(mention_rate_nonbranded=9)})
+    prev = _sc({"claude": _block(mention_rate_nonbranded=6)}, date="2026-08-30")
+    _, html = r.build_email(cur, prev, [], 0, [], None)
+    assert "רעש" in html                          # 3 points < 2 questions (7)
+    assert "▲ +3" not in html
+
+
+def test_real_movement_still_gets_an_arrow():
+    import aeo_report as r
+    cur = _sc({"claude": _block(mention_rate_nonbranded=25)})
+    prev = _sc({"claude": _block(mention_rate_nonbranded=6)}, date="2026-08-30")
+    _, html = r.build_email(cur, prev, [], 0, [], None)
+    assert "▲ +19" in html
+
+
+def test_degraded_engine_is_flagged_as_a_broken_instrument():
+    import aeo_report as r
+    sc = _sc({"chatgpt": _block(degraded=True, grounded_rate=0,
+                                degraded_reason="RuntimeError: HTTP 404 model retired",
+                                mention_rate_nonbranded=0, citation_rate_nonbranded=0)})
+    _, html = r.build_email(sc, None, [], 0, [], None)
+    assert "מכשיר תקול" in html
+    assert "אל תסיק מכאן ירידה בנראות" in html
+    assert "model retired" in html
+
+
+def test_pages_that_are_not_live_are_not_reported_as_published():
+    import aeo_report as r
+    subject, html = r.build_email(
+        _sc({"claude": _block()}), None,
+        shipped=[{"title": "Live one", "url": "https://upe.co.il/live/"}], queued=4, failures=[],
+        pr_url=None, not_live=[{"title": "Ghost", "url": "https://upe.co.il/ghost/"}])
+    assert "אינם חיים" in html and "ghost" in html.lower()
+    assert "1 עמודים חיים" in subject
+
+
+def test_baseline_note_is_actually_rendered_on_a_battery_change():
+    """It was computed and then dropped on the floor — the reader never saw it."""
+    import aeo_report as r
+    cur = _sc({"claude": _block()}, bv="2026-08-30.1")
+    prev = _sc({"claude": _block()}, date="2026-08-23", bv="2026-07-05.1")
+    _, html = r.build_email(cur, prev, [], 0, [], None)
+    assert "baseline חדש" in html
+
+
+def test_comparative_pages_are_disclosed():
+    import aeo_report as r
+    _, html = r.build_email(_sc({"claude": _block()}), None, [], 0, [], None,
+                            comparative=[{"slug": "top-event-companies", "competitors": ["Freeman"]}])
+    assert "עמודי השוואה שפורסמו" in html and "Freeman" in html

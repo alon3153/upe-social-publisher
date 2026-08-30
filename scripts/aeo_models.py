@@ -1,9 +1,15 @@
 """Pluggable answer-engine adapters. Claude is live; OpenAI/Gemini are gated on key presence.
 
 `grounded=True` asks each engine with live web search enabled (Claude web_search tool,
-OpenAI *-search-preview model, Gemini google_search tool) so probes measure what real
-answer engines return today, not frozen training-data recall. A grounded call that fails
-falls back to the plain (ungrounded) call so a provider-side tool outage never kills a run.
+OpenAI Responses API web_search tool, Gemini google_search tool) so probes measure what real
+answer engines return today, not frozen training-data recall.
+
+A grounded call that fails still falls back to the plain call so a provider outage never
+kills a run -- but the result is LABELLED (`grounded=False` + `grounded_error`) instead of
+silently substituted. Callers must treat an ungrounded answer as a broken instrument, not
+as data: an ungrounded model answers from frozen training recall and will report a
+visibility collapse that never happened. This is exactly how ChatGPT's citation rate
+silently fell to 0 on 2026-08-23 when `gpt-4o-search-preview` was retired (2026-07-23).
 """
 import os, json, urllib.request, urllib.error
 
@@ -30,14 +36,22 @@ def ask(model, prompt, system="", max_tokens=4096, _http=None, grounded=False):
 
 
 def ask_meta(model, prompt, system="", max_tokens=4096, _http=None, grounded=False):
-    """Like ask(), but returns {"text": str, "citations": [url, ...]} so probes can
-    see WHICH sources the engine retrieved (the outreach target list)."""
-    if grounded:
-        try:
-            return _ask_once(model, prompt, system, max_tokens, _http, grounded=True)
-        except Exception:
-            pass  # grounded path failed (tool not enabled / model gone) -> plain call below
-    return _ask_once(model, prompt, system, max_tokens, _http, grounded=False)
+    """Like ask(), but returns {"text", "citations", "grounded", "grounded_error"}.
+
+    `grounded` in the RESULT reports whether live web search actually ran -- never what was
+    requested. When a grounded call fails we still answer (so one outage cannot void a run),
+    but we say so, so the caller can mark the engine degraded and drop it from the scorecard.
+    """
+    if not grounded:
+        return {**_ask_once(model, prompt, system, max_tokens, _http, grounded=False),
+                "grounded": False, "grounded_error": None}
+    try:
+        return {**_ask_once(model, prompt, system, max_tokens, _http, grounded=True),
+                "grounded": True, "grounded_error": None}
+    except Exception as e:
+        err = f"{type(e).__name__}: {e}"[:300]
+    return {**_ask_once(model, prompt, system, max_tokens, _http, grounded=False),
+            "grounded": False, "grounded_error": err}
 
 
 def _dedup(urls):
@@ -77,19 +91,39 @@ def _ask_once(model, prompt, system, max_tokens, _http, grounded):
                         cites.append(r.get("url", ""))
         return {"text": "".join(text).strip(), "citations": _dedup(cites)}
     if model == "chatgpt":
-        if grounded:
-            mdl = os.environ.get("AEO_OPENAI_SEARCH_MODEL") or "gpt-4o-search-preview"
-            body = {"model": mdl,
-                    "web_search_options": {},
-                    "max_tokens": max_tokens,
-                    "messages": ([{"role": "system", "content": system}] if system else []) +
-                                [{"role": "user", "content": prompt}]}
-        else:
-            body = {"model": os.environ.get("AEO_OPENAI_MODEL") or "gpt-4o",
-                    "max_tokens": max_tokens,
-                    "messages": ([{"role": "system", "content": system}] if system else []) +
-                                [{"role": "user", "content": prompt}]}
         headers = {"authorization": f"Bearer {os.environ.get('OPENAI_API_KEY','')}", "content-type": "application/json"}
+        if grounded:
+            # Responses API + web_search tool. The old chat-completions
+            # `gpt-4o-search-preview` was retired 2026-07-23; asking for it fails, and the
+            # ungrounded fallback then answers from training recall.
+            mdl = os.environ.get("AEO_OPENAI_SEARCH_MODEL") or "gpt-5.6"
+            body = {"model": mdl,
+                    "tools": [{"type": "web_search"}],
+                    "max_output_tokens": max(max_tokens, 8192),
+                    "input": ([{"role": "system", "content": system}] if system else []) +
+                             [{"role": "user", "content": prompt}]}
+            data = json.loads(http("https://api.openai.com/v1/responses", json.dumps(body).encode(), headers))
+            text, cites = [], []
+            for item in data.get("output", []):
+                if item.get("type") != "message":
+                    continue
+                for c in item.get("content") or []:
+                    if c.get("type") != "output_text":
+                        continue
+                    text.append(c.get("text", ""))
+                    for a in c.get("annotations") or []:
+                        if a.get("type") == "url_citation":
+                            cites.append(a.get("url", ""))
+            text = "".join(text).strip()
+            if not text:
+                # empty grounded answer is a failed instrument, not an empty opinion --
+                # raise so ask_meta labels it instead of banking a blank as data
+                raise RuntimeError(f"openai responses returned no text (status={data.get('status')!r})")
+            return {"text": text, "citations": _dedup(cites)}
+        body = {"model": os.environ.get("AEO_OPENAI_MODEL") or "gpt-4o",
+                "max_tokens": max_tokens,
+                "messages": ([{"role": "system", "content": system}] if system else []) +
+                            [{"role": "user", "content": prompt}]}
         data = json.loads(http("https://api.openai.com/v1/chat/completions", json.dumps(body).encode(), headers))
         msg = data["choices"][0]["message"]
         cites = [a.get("url_citation", {}).get("url", "") for a in msg.get("annotations") or []

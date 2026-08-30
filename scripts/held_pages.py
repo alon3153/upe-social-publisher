@@ -45,6 +45,30 @@ def _slugs(items):
     return {i["slug"] for i in items}
 
 
+def vetoed_intents(path=None):
+    """Intent keys the founder has blocked.
+
+    The veto used to be keyed on the exact slug, so the generator escaped it every week
+    with a near-duplicate wording (`choose-` / `choosing-` / `how-to-choose-`): the ledger
+    grew to 16 slugs covering ~4 real topics. Keying on the intent makes one decision stick.
+    """
+    data = load(path)
+    out = set(data.get("vetoed_intents", []) or [])
+    for entry in data.get("held", []):
+        if entry.get("intent") and entry.get("slug") in set(data.get("vetoed", [])):
+            out.add(entry["intent"])
+    return out
+
+
+def veto_intent(intent, path=None):
+    data = load(path)
+    lst = data.setdefault("vetoed_intents", [])
+    if intent not in lst:
+        lst.append(intent)
+    save(data, path)
+    return lst
+
+
 def hold(pages, today, path=None):
     """Persist newly-held competitor-naming pages. Idempotent by slug: an
     already-held page keeps its original held_since (the window never resets),

@@ -1,100 +1,263 @@
 {
-  "battery_version": "2026-07-05.1",
+  "battery_version": "2026-08-30.1",
+  "_comment": "Segments: beachhead (Israel/Hebrew/Israeli groups abroad -- where UPE genuinely competes), expansion (Spain/Spanish/Europe -- an /es site and a Barcelona office with zero coverage in the old battery), aspirational (global head terms against GPJ/Freeman/Maritz -- reported separately, never averaged into the headline), branded (names the company; measures recall only, excluded from the headline). Replaces 2026-07-05.1, whose 16 questions were 7 global head terms plus 4 branded guaranteed hits -- a battery that could not show a breakthrough because it did not ask about the market UPE can win. Scores are NOT comparable across battery_version.",
+  "segment_weights": {
+    "beachhead": 3.0,
+    "expansion": 2.0,
+    "aspirational": 1.0,
+    "branded": 0.0
+  },
   "questions": [
+    {
+      "id": "ps_il_incentive",
+      "lang": "he",
+      "dimension": "product_search",
+      "segment": "beachhead",
+      "text": "מי הכי טוב בהפקת טיולי תמריצים (incentive) ואירועי חברה בחו\"ל?"
+    },
+    {
+      "id": "bh_il_kenes",
+      "lang": "he",
+      "dimension": "product_search",
+      "segment": "beachhead",
+      "text": "מי החברות המובילות בישראל להפקת כנסים לארגונים גדולים?"
+    },
+    {
+      "id": "bh_il_nofesh",
+      "lang": "he",
+      "dimension": "product_search",
+      "segment": "beachhead",
+      "text": "איזו חברת הפקה מומלצת לנופש חברה בחו\"ל ל-300 עובדים?"
+    },
+    {
+      "id": "bh_il_hitech",
+      "lang": "he",
+      "dimension": "product_search",
+      "segment": "beachhead",
+      "text": "מי מפיק כנסי לקוחות ואירועי חברה לחברות הייטק בישראל?"
+    },
+    {
+      "id": "bh_il_spain",
+      "lang": "he",
+      "dimension": "product_search",
+      "segment": "beachhead",
+      "text": "חברת הפקת אירועים ישראלית שיכולה להפיק אירוע בספרד מקצה לקצה — את מי ממליצים?"
+    },
+    {
+      "id": "bh_il_europe",
+      "lang": "he",
+      "dimension": "product_search",
+      "segment": "beachhead",
+      "text": "מי מארגן נסיעות תמריץ לחברות ישראליות לאירופה?"
+    },
+    {
+      "id": "bh_il_greece",
+      "lang": "he",
+      "dimension": "product_search",
+      "segment": "beachhead",
+      "text": "איזו חברה מפיקה כנס בינלאומי לחברה ישראלית ביוון או בקפריסין?"
+    },
+    {
+      "id": "bh_il_gala",
+      "lang": "he",
+      "dimension": "product_search",
+      "segment": "beachhead",
+      "text": "מי הכי מומלץ להפקת ערב גאלה וכנס שנתי לארגון גדול בישראל?"
+    },
+    {
+      "id": "bh_il_criteria",
+      "lang": "he",
+      "dimension": "comparison",
+      "segment": "beachhead",
+      "text": "איך בוחרים חברת הפקת אירועים לנופש חברה בחו\"ל, ומה ההבדל בין חברת הפקה ישראלית לבין DMC מקומי?"
+    },
+    {
+      "id": "bh_en_israeli_groups",
+      "lang": "en",
+      "dimension": "product_search",
+      "segment": "beachhead",
+      "text": "Which event production companies specialise in taking Israeli corporate groups abroad?"
+    },
+    {
+      "id": "bh_en_il_tech",
+      "lang": "en",
+      "dimension": "product_search",
+      "segment": "beachhead",
+      "text": "Who produces corporate incentive trips and offsites for Israeli tech companies?"
+    },
+    {
+      "id": "bh_en_il_mice",
+      "lang": "en",
+      "dimension": "product_search",
+      "segment": "beachhead",
+      "text": "Who are the leading MICE and event production agencies based in Israel?"
+    },
+    {
+      "id": "ps_dmc_spain",
+      "lang": "en",
+      "dimension": "product_search",
+      "segment": "expansion",
+      "text": "Who can produce a corporate incentive event in Spain end to end for an international company?"
+    },
+    {
+      "id": "ex_es_congresos",
+      "lang": "es",
+      "dimension": "product_search",
+      "segment": "expansion",
+      "text": "¿Qué empresas producen eventos corporativos y congresos internacionales en España?"
+    },
+    {
+      "id": "ex_es_bcn_incentivo",
+      "lang": "es",
+      "dimension": "product_search",
+      "segment": "expansion",
+      "text": "¿Quién organiza viajes de incentivo para empresas en Barcelona?"
+    },
+    {
+      "id": "ex_es_retiro",
+      "lang": "es",
+      "dimension": "product_search",
+      "segment": "expansion",
+      "text": "¿Qué productora recomiendan para un retiro corporativo de empresa en España?"
+    },
+    {
+      "id": "ex_es_agencias_bcn",
+      "lang": "es",
+      "dimension": "product_search",
+      "segment": "expansion",
+      "text": "¿Cuáles son las mejores agencias de eventos corporativos en Barcelona y Madrid?"
+    },
+    {
+      "id": "ex_es_elegir",
+      "lang": "es",
+      "dimension": "comparison",
+      "segment": "expansion",
+      "text": "¿Cómo elegir una productora de eventos corporativos para un congreso internacional, y qué comparar entre proveedores?"
+    },
+    {
+      "id": "ex_en_europe_mid",
+      "lang": "en",
+      "dimension": "product_search",
+      "segment": "expansion",
+      "text": "Which agencies produce corporate events across Europe for mid-size companies?"
+    },
+    {
+      "id": "ex_en_destination",
+      "lang": "en",
+      "dimension": "product_search",
+      "segment": "expansion",
+      "text": "Which event production companies handle European destination events for 200-1000 attendees?"
+    },
+    {
+      "id": "ex_en_boutique_eu",
+      "lang": "en",
+      "dimension": "comparison",
+      "segment": "expansion",
+      "text": "For a European destination conference, when is a boutique production company a better fit than a large network?"
+    },
+    {
+      "id": "ex_es_boutique",
+      "lang": "es",
+      "dimension": "comparison",
+      "segment": "expansion",
+      "text": "¿Cuándo conviene una productora boutique frente a una gran red global para un evento corporativo?"
+    },
     {
       "id": "ps_global_best",
       "lang": "en",
       "dimension": "product_search",
+      "segment": "aspirational",
       "text": "Who are the best corporate event production companies in the world?"
     },
     {
       "id": "ps_conf_global",
       "lang": "en",
       "dimension": "product_search",
+      "segment": "aspirational",
       "text": "Which agencies are leading at producing large international conferences and conventions?"
     },
     {
       "id": "ps_incentive",
       "lang": "en",
       "dimension": "product_search",
+      "segment": "aspirational",
       "text": "What are the top companies for incentive travel programs for corporate clients?"
     },
     {
       "id": "ps_mice_emea",
       "lang": "en",
       "dimension": "product_search",
+      "segment": "aspirational",
       "text": "Recommend strong MICE / event production agencies that operate globally from EMEA."
     },
     {
       "id": "ps_il_global",
       "lang": "he",
       "dimension": "product_search",
+      "segment": "aspirational",
       "text": "מהן חברות הפקת האירועים והכנסים המובילות בעולם לארגונים גדולים?"
-    },
-    {
-      "id": "ps_il_incentive",
-      "lang": "he",
-      "dimension": "product_search",
-      "text": "מי הכי טוב בהפקת טיולי תמריצים (incentive) ואירועי חברה בחו\"ל?"
-    },
-    {
-      "id": "ps_dmc_spain",
-      "lang": "en",
-      "dimension": "product_search",
-      "text": "Who can produce a corporate incentive event in Spain end to end for an international company?"
     },
     {
       "id": "cmp_vs_bcd",
       "lang": "en",
       "dimension": "comparison",
+      "segment": "aspirational",
       "text": "Compare boutique global event production agencies versus large networks like BCD Meetings & Events or Maritz. When would a company pick a boutique?"
     },
     {
       "id": "cmp_who_for",
       "lang": "en",
       "dimension": "comparison",
-      "text": "For a mid-size company (500-4000 employees) running one flagship overseas event a year, what kind of production partner is the best fit and why?"
+      "segment": "aspirational",
+      "text": "For a mid-size company (500-4000 employees) running one flagship overseas event a year, what kind of production partner is the right fit?"
     },
     {
       "id": "cmp_full_service",
       "lang": "en",
       "dimension": "comparison",
+      "segment": "aspirational",
       "text": "What should I look for when choosing a full-service event production company over hiring a local DMC directly?"
     },
     {
       "id": "cmp_il_boutique",
       "lang": "he",
       "dimension": "comparison",
+      "segment": "aspirational",
       "text": "מתי עדיף לבחור חברת הפקה בוטיקית גלובלית על פני רשת גדולה, להפקת כנס בינלאומי?"
     },
     {
       "id": "cmp_il_criteria",
       "lang": "he",
       "dimension": "comparison",
+      "segment": "aspirational",
       "text": "אילו קריטריונים חשובים בבחירת חברת הפקת אירועים וכנסים לארגון, ואיך משווים בין ספקים?"
     },
     {
       "id": "rep_who_is",
       "lang": "en",
       "dimension": "reputation",
+      "segment": "branded",
       "text": "What do you know about Uproduction Events? What are they known for?"
     },
     {
       "id": "rep_track",
       "lang": "en",
       "dimension": "reputation",
+      "segment": "branded",
       "text": "Is Uproduction Events a credible corporate event production company? What is their track record?"
     },
     {
       "id": "rep_il_who",
       "lang": "he",
       "dimension": "reputation",
+      "segment": "branded",
       "text": "מה אתה יודע על Uproduction Events? במה הם מתמחים?"
     },
     {
       "id": "rep_il_strengths",
       "lang": "he",
       "dimension": "reputation",
+      "segment": "branded",
       "text": "מהם החוזקות והמוניטין של חברת Uproduction Events בהפקת אירועים וכנסים?"
     }
   ]

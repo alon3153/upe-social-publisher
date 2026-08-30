@@ -45,17 +45,72 @@ def test_ask_claude_grounded_adds_web_search_tool(monkeypatch):
     assert m.ask("claude", "hi", _http=fake_http, grounded=True) == "grounded"
 
 
-def test_ask_chatgpt_grounded_uses_search_model(monkeypatch):
+def _openai_responses_payload(text="grounded", urls=("https://upe.co.il/",)):
+    return {"status": "completed", "output": [
+        {"type": "web_search_call", "status": "completed"},
+        {"type": "message", "role": "assistant", "content": [
+            {"type": "output_text", "text": text,
+             "annotations": [{"type": "url_citation", "url": u} for u in urls]}]}]}
+
+
+def test_ask_chatgpt_grounded_uses_responses_api_web_search(monkeypatch):
+    """The retired gpt-4o-search-preview must never be requested again."""
     import json
     m = load(monkeypatch, {"OPENAI_API_KEY": "y"})
 
     def fake_http(url, data, headers):
         body = json.loads(data)
-        assert body["model"] == "gpt-4o-search-preview"
-        assert "web_search_options" in body
-        return json.dumps({"choices": [{"message": {"content": "grounded"}}]})
+        assert url == "https://api.openai.com/v1/responses"
+        assert body["tools"] == [{"type": "web_search"}]
+        assert "search-preview" not in body["model"]
+        assert "web_search_options" not in body
+        return json.dumps(_openai_responses_payload())
 
-    assert m.ask("chatgpt", "hi", _http=fake_http, grounded=True) == "grounded"
+    res = m.ask_meta("chatgpt", "hi", _http=fake_http, grounded=True)
+    assert res["text"] == "grounded"
+    assert res["citations"] == ["https://upe.co.il/"]
+    assert res["grounded"] is True
+    assert res["grounded_error"] is None
+
+
+def test_chatgpt_grounded_empty_text_is_a_failure_not_data(monkeypatch):
+    """An empty grounded answer must fall back LABELLED, never bank a blank as a result."""
+    import json
+    m = load(monkeypatch, {"OPENAI_API_KEY": "y"})
+
+    def fake_http(url, data, headers):
+        if url.endswith("/responses"):
+            return json.dumps({"status": "incomplete", "output": []})
+        return json.dumps({"choices": [{"message": {"content": "plain"}}]})
+
+    res = m.ask_meta("chatgpt", "hi", _http=fake_http, grounded=True)
+    assert res["text"] == "plain"
+    assert res["grounded"] is False
+    assert "no text" in res["grounded_error"]
+
+
+def test_grounded_failure_is_labelled_not_swallowed(monkeypatch):
+    """The 2026-08-23 regression: a dead grounded model silently became training-recall data."""
+    import json
+    m = load(monkeypatch, {"ANTHROPIC_API_KEY": "x"})
+
+    def fake_http(url, data, headers):
+        if "tools" in json.loads(data):
+            raise RuntimeError("HTTP 404: model has been retired")
+        return json.dumps({"content": [{"type": "text", "text": "from training recall"}]})
+
+    res = m.ask_meta("claude", "hi", _http=fake_http, grounded=True)
+    assert res["text"] == "from training recall"
+    assert res["grounded"] is False
+    assert "retired" in res["grounded_error"]
+
+
+def test_ungrounded_request_is_reported_as_ungrounded(monkeypatch):
+    import json
+    m = load(monkeypatch, {"ANTHROPIC_API_KEY": "x"})
+    fake = lambda u, d, h: json.dumps({"content": [{"type": "text", "text": "ok"}]})
+    res = m.ask_meta("claude", "hi", _http=fake, grounded=False)
+    assert res["grounded"] is False and res["grounded_error"] is None
 
 
 def test_ask_gemini_grounded_adds_google_search_tool(monkeypatch):

@@ -1,0 +1,85 @@
+{
+  "updated": "2026-08-30",
+  "intents": {
+    "cmp_vs_bcd": {
+      "slug": "boutique-vs-large-event-agency",
+      "url": "https://upe.co.il/en/boutique-vs-large-event-agency/",
+      "lang": "en",
+      "last_published": "2026-08-30",
+      "live": true,
+      "verified": true,
+      "first_published": "2026-08-30",
+      "last_verified": "2026-08-30"
+    },
+    "cmp_il_boutique": {
+      "slug": "בוטיק-מול-סוכנות-אירועים-גדולה",
+      "url": "https://upe.co.il/בוטיק-מול-סוכנות-אירועים-גדולה/",
+      "lang": "he",
+      "last_published": "2026-08-30",
+      "live": true,
+      "verified": true,
+      "first_published": "2026-08-30",
+      "last_verified": "2026-08-30"
+    },
+    "ex_en_boutique_eu": {
+      "slug": "boutique-global-corporate-conference-production",
+      "url": "https://upe.co.il/en/boutique-global-corporate-conference-production/",
+      "lang": "en",
+      "last_published": "2026-08-30",
+      "live": true,
+      "verified": true,
+      "first_published": "2026-08-30",
+      "last_verified": "2026-08-30"
+    },
+    "ex_es_boutique": {
+      "slug": "productora-boutique-eventos-corporativos-vs-grandes-redes-globales",
+      "url": "https://upe.co.il/es/productora-boutique-eventos-corporativos-vs-grandes-redes-globales/",
+      "lang": "es",
+      "last_published": "2026-08-30",
+      "live": true,
+      "verified": true,
+      "first_published": "2026-08-30",
+      "last_verified": "2026-08-30"
+    },
+    "cmp_full_service": {
+      "slug": "global-corporate-event-conference-production-company-guide",
+      "url": "https://upe.co.il/en/global-corporate-event-conference-production-company-guide/",
+      "lang": "en",
+      "last_published": "2026-08-30",
+      "live": true,
+      "verified": true,
+      "first_published": "2026-08-30",
+      "last_verified": "2026-08-30"
+    },
+    "cmp_il_criteria": {
+      "slug": "how-to-choose-global-corporate-event-conference-production-company",
+      "url": "https://upe.co.il/en/how-to-choose-global-corporate-event-conference-production-company/",
+      "lang": "he",
+      "last_published": "2026-08-30",
+      "live": true,
+      "verified": true,
+      "first_published": "2026-08-30",
+      "last_verified": "2026-08-30"
+    },
+    "ex_es_elegir": {
+      "slug": "guia-elegir-productora-global-eventos-corporativos-congresos",
+      "url": "https://upe.co.il/es/guia-elegir-productora-global-eventos-corporativos-congresos/",
+      "lang": "es",
+      "last_published": "2026-08-30",
+      "live": false,
+      "verified": true,
+      "first_published": "2026-08-30",
+      "last_verified": "2026-08-30"
+    },
+    "ex_es_congresos": {
+      "slug": "eventos-corporativos-espana-guia-completa-2026",
+      "url": "https://upe.co.il/es/eventos-corporativos-espana-guia-completa-2026/",
+      "lang": "es",
+      "last_published": "2026-08-30",
+      "live": true,
+      "verified": true,
+      "first_published": "2026-08-30",
+      "last_verified": "2026-08-30"
+    }
+  }
+}

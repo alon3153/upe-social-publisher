@@ -45,6 +45,17 @@ def score_answer(question, answer, judge_fn):
 _UPE_RE = re.compile(r"uproduction|upe\.co\.il", re.I)
 
 
+def is_branded(question_text):
+    """A question that NAMES the company can only measure brand recall, never demand.
+
+    Such a question is a guaranteed mention -- the engine simply reads it back. Averaging
+    these into the headline puts a hard floor under the KPI (4 branded of 16 questions =
+    a permanent 25%) and hides the number that matters: whether an engine recommends UPE
+    to someone who has never heard of it.
+    """
+    return bool(_UPE_RE.search(question_text or ""))
+
+
 def _mention_fields(text, citations):
     """Deterministic binary metrics — the primary KPI (LLM judge stays secondary color)."""
     return {
@@ -52,6 +63,10 @@ def _mention_fields(text, citations):
         "upe_cited": any("upe.co.il" in (u or "") for u in citations),
         "cited_urls": list(citations),
     }
+
+
+def _rate(hits, total):
+    return round(100 * hits / total) if total else 0
 
 
 def run_probe(questions, models, ask_fn, judge_fn):
@@ -70,6 +85,8 @@ def run_probe(questions, models, ask_fn, judge_fn):
                     # ask_fn may return plain text or {"text", "citations"} (ask_meta)
                     ans = res["text"] if isinstance(res, dict) else res
                     citations = (res.get("citations") or []) if isinstance(res, dict) else []
+                    grounded = bool(res.get("grounded")) if isinstance(res, dict) else False
+                    gerr = res.get("grounded_error") if isinstance(res, dict) else None
                     sc = score_answer(q, ans, judge_fn)
                 except Exception as e:  # one flaky question must not sink the whole model battery
                     out["errors"].append(f"{model}/{q['id']}: {type(e).__name__}: {str(e)[:200]}")
@@ -77,6 +94,10 @@ def run_probe(questions, models, ask_fn, judge_fn):
                 per_dim[q["dimension"]].append(sc[q["dimension"]])
                 answers.append({"id": q["id"], "question": q["text"], "answer": ans,
                                 "dimension": q["dimension"],
+                                "lang": q.get("lang", ""),
+                                "segment": q.get("segment", "aspirational"),
+                                "branded": is_branded(q["text"]),
+                                "grounded": grounded, "grounded_error": gerr,
                                 "scores": sc, "competitors": sc["competitors"], "gap_note": sc["gap_note"],
                                 **_mention_fields(ans, citations)})
             if not answers:  # nothing succeeded — drop the model instead of reporting fake zeros
@@ -85,11 +106,39 @@ def run_probe(questions, models, ask_fn, judge_fn):
             dim_scores = {d: (round(mean(per_dim[d])) if per_dim[d] else 0) for d in DIMS}
             mentioned = sum(1 for a in answers if a["upe_mentioned"])
             cited = sum(1 for a in answers if a["upe_cited"])
+            nonbranded = [a for a in answers if not a["branded"]]
+            branded = [a for a in answers if a["branded"]]
+
+            # An engine whose grounded call failed answered from frozen training recall.
+            # Its scores describe our instrument, not our visibility -- say so.
+            gerrs = [a["grounded_error"] for a in answers if a.get("grounded_error")]
+            n_grounded = sum(1 for a in answers if a.get("grounded"))
+            grounding_attempted = bool(gerrs) or n_grounded > 0
+            degraded = grounding_attempted and n_grounded == 0
+
             out["models"][model] = {**dim_scores,
                                     "aeo": round(mean(dim_scores.values())),
-                                    "mention_rate": round(100 * mentioned / len(answers)),
-                                    "citation_rate": round(100 * cited / len(answers)),
+                                    "mention_rate": _rate(mentioned, len(answers)),
+                                    "citation_rate": _rate(cited, len(answers)),
+                                    # headline: does an engine recommend us unprompted?
+                                    "mention_rate_nonbranded": _rate(
+                                        sum(1 for a in nonbranded if a["upe_mentioned"]), len(nonbranded)),
+                                    "citation_rate_nonbranded": _rate(
+                                        sum(1 for a in nonbranded if a["upe_cited"]), len(nonbranded)),
+                                    "n_nonbranded": len(nonbranded),
+                                    "mentioned_nonbranded": sum(1 for a in nonbranded if a["upe_mentioned"]),
+                                    # separate line: does it know us when named?
+                                    "brand_recall": _rate(
+                                        sum(1 for a in branded if a["upe_mentioned"]), len(branded)),
+                                    "n_branded": len(branded),
+                                    "grounded_rate": _rate(n_grounded, len(answers)),
+                                    "degraded": degraded,
+                                    "degraded_reason": (gerrs[0] if degraded and gerrs else ""),
                                     "answers": answers}
+            if degraded:
+                out["errors"].append(
+                    f"{model}: DEGRADED — grounded search failed on every question; "
+                    f"scores are instrument error, not visibility ({gerrs[0] if gerrs else 'no citations returned'})")
         except Exception as e:  # a model with a bad/unbilled key must not crash the whole loop
             out["errors"].append(f"{model}: probe failed ({type(e).__name__}: {str(e)[:500]})")
     return out
