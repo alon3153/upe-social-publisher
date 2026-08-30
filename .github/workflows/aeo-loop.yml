@@ -77,7 +77,11 @@ jobs:
           # held_pages.json carries the founder-veto window; citations.json the
           # external-citation states — both MUST persist across runs or the veto
           # window never accumulates and citations re-verify from scratch.
-          git add scripts/aeo_history.json state/held_pages.json state/citations.json 2>/dev/null || true
+          # published_intents.json is the dedup ledger: without it every run starts
+          # believing nothing has been published and rewrites covered intents, which
+          # is the treadmill that produced 27 URLs on a single intent.
+          git add scripts/aeo_history.json state/held_pages.json state/citations.json \
+                  state/published_intents.json 2>/dev/null || true
           git commit -m "chore(aeo): scorecard + citation/veto state $(date -u +%F)" || echo "no change"
           # Retry the rebase+push: other jobs (daily monitor, council) push to main
           # constantly, so a single attempt loses the race often enough to matter.
