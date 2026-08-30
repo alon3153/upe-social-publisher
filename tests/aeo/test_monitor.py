@@ -46,3 +46,33 @@ def test_daily_monitor_skips_research_when_number_one(tmp_path, monkeypatch):
     assert calls["research"] == 0
     assert out["keywords"]["en"] == []
     assert out["email_sent"] is True
+
+
+def test_daily_battery_skips_branded_questions():
+    """Branded questions are guaranteed hits — asking them daily buys nothing."""
+    import aeo_monitor
+    assert aeo_monitor.QUESTIONS, "daily battery must not be empty"
+    assert all(q.get("segment") != "branded" for q in aeo_monitor.QUESTIONS)
+    assert len(aeo_monitor.QUESTIONS) < len(aeo_monitor._ALL_QUESTIONS)
+
+
+def test_daily_judge_falls_through_providers(monkeypatch):
+    """A dead Anthropic balance must not blind a battery that ChatGPT answered."""
+    import aeo_models, aeo_monitor
+    tried = []
+
+    def ask(model, prompt, system=""):
+        tried.append(model)
+        if model == "claude":
+            raise RuntimeError("credit balance too low")
+        return '{"product_search":40,"comparison":0,"reputation":0,"competitors":[],"gap_note":""}'
+
+    monkeypatch.setattr(aeo_models, "available_models", lambda: ["claude", "gemini"])
+    monkeypatch.setattr(aeo_models, "ask", ask)
+    monkeypatch.setattr(aeo_models, "ask_meta",
+                        lambda m, t, **k: {"text": "Freeman.", "citations": [],
+                                           "grounded": True, "grounded_error": None})
+    out = aeo_monitor.run_daily(history_dir="/tmp", send_fn=lambda *a, **k: (True, "x"),
+                                today="2026-08-30")
+    assert "claude" in tried and "gemini" in tried      # fell through
+    assert out["scorecard"]["models"], "scorecard must not be empty when a judge succeeded"

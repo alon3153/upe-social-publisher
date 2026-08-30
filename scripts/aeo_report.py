@@ -182,14 +182,25 @@ def build_daily_email(scorecard, prev, keywords, failures, target=90, reminders=
     rows, all_top = "", True
     for model, block in scorecard["models"].items():
         pblock = (prev or {}).get("models", {}).get(model, {}) if prev else {}
+        degraded = block.get("degraded")
         ps = block.get("product_search", 0)
-        mr = block.get("mention_rate")
+        # the honest headline: mentions on questions that do NOT name the company
+        mr = block.get("mention_rate_nonbranded", block.get("mention_rate"))
+        n = block.get("n_nonbranded") or 0
+        md = _min_delta(n)
         if ps < target:
             all_top = False
-        status = "✅ #1" if ps >= target else f"פער {target - ps} ל-#1"
-        arrow = _arrow(ps, pblock.get("product_search") if pblock else None)
-        mr_cell = f"{mr}%" if mr is not None else "—"
-        rows += (f'<tr><td dir="rtl" style="padding:4px 8px;">{MODEL_HE.get(model, model)}</td>'
+        if degraded:
+            status = "⛔ מכשיר תקול — לא נמדד"
+            arrow = "—"
+            all_top = False
+        else:
+            status = "✅ #1" if ps >= target else f"פער {target - ps} ל-#1"
+            arrow = _arrow(ps, pblock.get("product_search") if pblock else None, md)
+        frac = f' <span dir="ltr">({block.get("mentioned_nonbranded", 0)}/{n})</span>' if n else ""
+        mr_cell = f"{mr}%{frac}" if mr is not None else "—"
+        label = MODEL_HE.get(model, model) + (" ⛔" if degraded else "")
+        rows += (f'<tr><td dir="rtl" style="padding:4px 8px;">{label}</td>'
                  f'<td dir="rtl" style="padding:4px 8px;text-align:center;">{mr_cell}</td>'
                  f'<td dir="rtl" style="padding:4px 8px;text-align:center;">{ps}</td>'
                  f'<td dir="rtl" style="padding:4px 8px;text-align:center;">{arrow}</td>'
@@ -222,12 +233,13 @@ def build_daily_email(scorecard, prev, keywords, failures, target=90, reminders=
 <h2 dir="rtl">{headline}</h2>
 <p dir="rtl">תאריך: {scorecard['date']} · מדד: חיפוש-מוצר (האם UPE צץ ראשון בשאלות קטגוריה)</p>
 <table dir="rtl" style="border-collapse:collapse;border:1px solid #ddd;">
-<tr><th dir="rtl" style="padding:4px 8px;">מודל</th><th dir="rtl" style="padding:4px 8px;">שיעור אזכור</th>
+<tr><th dir="rtl" style="padding:4px 8px;">מודל</th><th dir="rtl" style="padding:4px 8px;">אזכור לא-ממותג</th>
 <th dir="rtl" style="padding:4px 8px;">חיפוש מוצר</th>
 <th dir="rtl" style="padding:4px 8px;">שינוי</th><th dir="rtl" style="padding:4px 8px;">סטטוס #1</th></tr>
 {rows}
 </table>
 {baseline_note}
+{_degraded_html(scorecard)}
 {_outreach_html(scorecard)}
 {reminders_html}
 <h3 dir="rtl">מתחרים שמובילים כרגע</h3>

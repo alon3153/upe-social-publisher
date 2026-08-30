@@ -8,7 +8,11 @@ import aeo_models, aeo_probe, aeo_competitor, aeo_report
 
 ROOT = Path(__file__).resolve().parent
 DAILY_HISTORY = ROOT / "aeo_daily_history.json"
-QUESTIONS = json.loads((ROOT / "aeo_questions.json").read_text(encoding="utf-8"))["questions"]
+_ALL_QUESTIONS = json.loads((ROOT / "aeo_questions.json").read_text(encoding="utf-8"))["questions"]
+# The daily tracker skips the branded questions. They name the company, so an engine can
+# only read it back — they are guaranteed hits that cost API credit every single day and
+# measure nothing. The weekly loop still asks them, on its own "brand recall" line.
+QUESTIONS = [q for q in _ALL_QUESTIONS if q.get("segment") != "branded"]
 TARGET = json.loads((ROOT / "kpi_targets.json").read_text(encoding="utf-8"))["aeo_targets"]["per_dimension_min"]["product_search"]
 
 
@@ -31,11 +35,26 @@ def run_daily(history_dir=None, ask_fn=None, judge_fn=None, send_fn=None, today=
     # Probe with live web search like the weekly loop (AEO_GROUNDED=0 reverts).
     grounded = os.environ.get("AEO_GROUNDED", "1") != "0"
     ask_fn = ask_fn or (lambda model, text: aeo_models.ask_meta(model, text, grounded=grounded))
-    judge_fn = judge_fn or (lambda prompt: aeo_models.ask("claude", prompt, system=aeo_probe.JUDGE_SYSTEM))
     history_path = str(Path(history_dir) / "aeo_daily_history.json") if history_dir else str(DAILY_HISTORY)
 
     models = aeo_models.available_models() or ["claude"]
     failures = [f"{m}: no key" for m in ("chatgpt", "gemini") if m not in models]
+
+    # The judge scores EVERY model's answers, so pinning it to one provider makes that
+    # provider a single point of failure for the whole battery — on 31.07.2026 an empty
+    # Anthropic balance produced an empty scorecard even though ChatGPT and Gemini had
+    # answered. The weekly loop already falls through providers; the daily one did not.
+    if judge_fn is None:
+        order = [m for m in ("claude", "gemini", "chatgpt") if m in models] or ["claude"]
+
+        def judge_fn(prompt):
+            errors = []
+            for m in order:
+                try:
+                    return aeo_models.ask(m, prompt, system=aeo_probe.JUDGE_SYSTEM)
+                except Exception as e:
+                    errors.append(f"{m}: {type(e).__name__}: {str(e)[:120]}")
+            raise RuntimeError("all judges failed — " + " | ".join(errors))
 
     prev = _prev(history_path)
     scorecard = aeo_probe.run_probe(QUESTIONS, models, ask_fn, judge_fn)
