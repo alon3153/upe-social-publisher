@@ -1,0 +1,68 @@
+{
+  "captured": "2026-06-06 17:23",
+  "blog_id": "6332214",
+  "follower_window_days": 120,
+  "activity_window_days": 90,
+  "followers": {
+    "instagram": {
+      "current": 42444.0,
+      "period_start": 42455.0,
+      "delta": -11.0,
+      "points": 5
+    },
+    "facebook": {
+      "current": 2705.0,
+      "period_start": 2694.0,
+      "delta": 11.0,
+      "points": 67
+    },
+    "linkedin": {
+      "current": 1127.0,
+      "period_start": 1115.0,
+      "delta": 12.0,
+      "points": 77
+    },
+    "tiktok": {
+      "current": 510.0,
+      "period_start": 511.0,
+      "delta": -1.0,
+      "points": 6
+    },
+    "youtube": {
+      "current": 7.0,
+      "period_start": 7.0,
+      "delta": 0.0,
+      "points": 5
+    }
+  },
+  "activity": {
+    "instagram_reel_views": {
+      "sum": 18477.0,
+      "points": 23
+    },
+    "tiktok_video_views": {
+      "sum": 3680.0,
+      "points": 19
+    },
+    "tiktok_likes": {
+      "sum": 30.0,
+      "points": 19
+    },
+    "tiktok_shares": {
+      "sum": 30.0,
+      "points": 19
+    },
+    "facebook_posts": {
+      "sum": 99.0,
+      "points": 55
+    },
+    "facebook_impressions": {
+      "sum": 0,
+      "points": 0
+    },
+    "youtube_views": {
+      "sum": 44602.0,
+      "points": 58
+    }
+  }
+}
