@@ -1,6 +1,8 @@
 """External-citation pipeline: the state machine for third-party authority actions.
 
 States: drafted -> awaiting_founder -> submitted -> live -> verified_cited
+        (any state may also terminate in closed_no_recontact — a deliberate decision to
+         stop pursuing a channel; it never nags and never re-crawls)
 - verify() crawls target_url for items in awaiting_founder/submitted/live and advances
   them automatically when the page exists and mentions Uproduction (no founder click
   needed) — so a submission Alon completed outside the pipeline stops being nagged.
@@ -17,7 +19,11 @@ REMIND_HOURS = 72
 UA = {"User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) upe-citation-verifier"}
 
 STATE_HE = {"drafted": "טיוטה", "awaiting_founder": "ממתין לאלון", "submitted": "הוגש",
-            "live": "באוויר", "verified_cited": "מאומת ✓"}
+            "live": "באוויר", "verified_cited": "מאומת ✓",
+            # terminal, deliberate: a channel we decided NOT to contact again. Distinct
+            # from "pending" — the four press pitches sat as open items for 55 days while
+            # the same email had already gone out 4-5 times to each editor.
+            "closed_no_recontact": "סגור — לא לפנות שוב"}
 
 
 def load(path=None):
