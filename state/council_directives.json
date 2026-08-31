@@ -1,64 +1,64 @@
 {
-  "updated_at": "2026-08-30",
+  "updated_at": "2026-08-31",
   "source": "daily-council",
   "directives": [
     {
       "category": "safe_auto",
-      "action": "מיפוי internal links קיימים מ-278 בלוגים לעמודי שירות מפתח",
-      "detail": "לבצע audit של Internal Linking מ-278 מאמרים קיימים לעמודים: הפקת-אירועים-עסקיים, טיולי-תמריץ-לחברות, ארגון-כנסים, הפקת-כנסים — כי הם ממפים לקלאסטרים עם הכי הרבה נפח חיפוש (אירועים לחברות: 476 impressions, הפקת נופש חברה: 407). יצירת link map ב-spreadsheet להעברה לאישור וביצוע.",
+      "action": "מיפוי קישורים פנימיים לעמודי הזדמנות SEO מובילים",
+      "detail": "זהה את 20 המאמרים הרלוונטיים ביותר מ-290 הקיימים ובנה קישורים פנימיים לעמוד 'הפקת-כנסים' ו'טיולי-תמריץ-לחברות' — שני העמודים עם הכי הרבה Impressions ב-GSC ('הפקת כנסים עסקיים' 207 imp, 'הפקת נופש חברה' 407 imp). קישורים פנימיים מ-290 מאמרים לעמודים אלה יגדילו PageRank פנימי וידחפו אותם לTop-10.",
       "channel": "google_organic"
     },
     {
       "category": "safe_auto",
-      "action": "הגדרת קדנס hashtag ותגיות LinkedIn לתוכן B2B ישראלי",
-      "detail": "לבנות רשימה של 15 hashtags עבריים וגלובליים (MICE, incentive travel, corporate events, הפקת אירועים, כנסים עסקיים) לשימוש סיבובי בלינקדאין — מכיוון ש-33% engagement rate מצביע על קהל נכון שצריך הרחבת reach.",
+      "action": "אסטרטגיית האשטגים לינקדאין — מעבר מ-generic ל-niche ישראלי",
+      "detail": "הגדר 4 עמודות תוכן לינקדאין: (1) Behind-the-scenes הפקה, (2) נתוני שוק MICE ישראלי, (3) Case study קצר, (4) שאלה פתוחה למנהלים. השתמש ב-3 האשטגים בלבד: #אירועיחברה #HiTechEvents #incentivetravel — נישה מספיק צרה להיות Top-post.",
       "channel": "linkedin"
     },
     {
       "category": "safe_auto",
-      "action": "תכנון פורמט carousel לינקדאין בנושאי data/insight",
-      "detail": "להכין briefing documents לפורמט carousel (5-7 שקופיות) המבוסס על נתוני שוק — כי carousel מייצר עד 278% יותר engagement בלינקדאין לעומת פורמטים אחרים, ומפנה תנועה לעמודי שירות קיימים.",
-      "channel": "linkedin"
-    },
-    {
-      "category": "safe_auto",
-      "action": "תכנון YouTube Shorts מקליפי אירועים קיימים לחיזוז חשיפה",
-      "detail": "להגדיר angles ל-Shorts (30-60 שניות) מחומרי behind-the-scenes של אירועים — כי YouTube מציג ROI חשיפות ל-post הכי גבוה (1,864 חשיפות/פוסט), וחשיפה cross-platform מאיצה גדילה אורגנית.",
+      "action": "YouTube — אופטימיזציית כותרות ותיאורים עברית+אנגלית",
+      "detail": "כל 4 הסרטונים הקיימים ב-YouTube צריכים כותרת בפורמט: '[מילת מפתח עברית] | [English keyword]' ותיאור של 200+ מילים עם timestamps. זה מנצל את ה-4,347 חשיפות שכבר יש ולא ממיר אותן — בעיית metadata, לא בעיית תוכן.",
       "channel": "youtube"
     },
     {
       "category": "safe_auto",
-      "action": "הגדרת schema markup ו-answer-first structure לעמודי שירות קיימים",
-      "detail": "לסמן לצוות הפיתוח: כל עמוד שירות קיים (21 עמודים) צריך FAQ schema + 45-מילה direct answer בפסקה הראשונה — כי 44.2% מציטוטי AI מגיעים מ-30% הראשונים של הדף, וה-AEO הנוכחי ב-4 מנועים יכול לגדול.",
-      "channel": "seo_aeo"
+      "action": "קדנציית פרסום מוגדרת — הורדת פייסבוק, הגדלת לינקדאין",
+      "detail": "הנחה לצוות האישורים: Facebook מוגבל ל-2/שבוע מקסימום (תוכן שכבר אושר לאינסטגרם בלבד, cross-post אוטומטי), ולינקדאין עולה ל-4/שבוע עם עדיפות לפורמט document/carousel שמייצר 3-5x reach לפי נתוני 2026.",
+      "channel": "linkedin"
     },
     {
       "category": "safe_auto",
-      "action": "הגדרת topic clusters עבור upe-spain.com לעצירת ירידת קליקים",
-      "detail": "לזהות 3 קלאסטרים עדיפים לספרד (international product launch: pos 10.8, global product launch: pos 10.1, coctel corporativo: pos 6.7) ולתכנן refreshing content לעמודים קיימים — כי הדומיין הספרדי ירד 33% בקליקים ויש הזדמנות מיידית בעמדות קרובות ל-Top-3.",
+      "action": "אסטרטגיית תוכן אינסטגרם — מעבר מטקסט כבד ל-Reels 15 שניות",
+      "detail": "הפוסט המוביל (115 חשיפות, 0 אינטראקציות) הוא טקסט ארוך — מוכיח שהפורמט לא עובד. הגדר כלל קדנציה: כל שבוע — Reel אחד behind-the-scenes הפקה, פוסט אחד סטטיסטיקה, carousel אחד תיק עבודות. Reels מקבלים 22% יותר reach מ-static posts ב-Instagram B2B לפי 2026 benchmarks.",
+      "channel": "instagram"
+    },
+    {
+      "category": "safe_auto",
+      "action": "upe-spain.com — אופטימיזציית עמודי קיימים לביטויי Top-10",
+      "detail": "הביטויים 'international product launch event' (pos 10.8, 168 imp) ו-'global product launch event' (pos 10.1, 137 imp) קרובים מאוד ל-Top-3 — אפשר לדחוף אותם עם שיפור H1, הוספת 300 מילות Body והשגת 2-3 backlinks מאתרי אירועים ספרדיים. בדוק אם קיים עמוד product-launch ב-upe-spain.com לפני יצירה.",
       "channel": "google_organic"
     }
   ],
   "channel_cadence": {
     "facebook": {
-      "max_posts_per_week": 1,
-      "reason": "8 פוסטים הניבו 5 חשיפות בלבד — ROI אפסי לקהל B2B. קיבולת אישור תוכן יקרה מדי לתוצאה כזו; לשמור על נוכחות מינימלית בלבד."
+      "max_posts_per_week": 2,
+      "reason": "9 חשיפות ל-8 פוסטים בשבוע = ROI שלילי על זמן האישור. רק cross-post אוטומטי מאינסטגרם — אין לייצר תוכן ייחודי לפייסבוק."
     },
     "instagram": {
-      "max_posts_per_week": 4,
-      "reason": "10 פוסטים ו-464 חשיפות — ביצועים בינוניים אך עם פוסט data-led שהגיע ל-105. להתמקד בפחות פוסטים עם איכות גבוהה יותר (visual + data) ולא בכמות."
+      "max_posts_per_week": 5,
+      "reason": "311 reach עם 10 פוסטים = 31 reach/פוסט; עלייה ל-5 פוסטים איכותיים (Reels+Carousel) צפויה להכפיל reach מבלי להעמיס על תהליך האישור."
     },
     "linkedin": {
       "max_posts_per_week": 4,
-      "reason": "33% engagement rate — הרשת הממירה ביותר לקהל B2B. 3-5 פוסטים/שבוע הם הקדנס המומלץ לגדילה אורגנית בלינקדאין B2B לפי 2026 benchmarks."
+      "reason": "30% engagement rate מוכיח שהקהל קיים ומגיב; לפי נתוני B2B 2026, פרסום 4x/שבוע מקסמל reach ללא פגיעה באיכות. זהו הערוץ הממיר הפוטנציאלי ביותר לדיגיטל."
     },
     "tiktok": {
-      "max_posts_per_week": 2,
-      "reason": "TikTok לא פעיל כרגע; לבדוק feasibility עם קצת תוכן behind-the-scenes. עד שנוצר pipeline של תוכן — לשמור על קדנס נמוך כדי לא להעמיס."
+      "max_posts_per_week": 3,
+      "reason": "0 פוסטים כרגע = 0 נוכחות. פתיחת ערוץ TikTok B2B עם 3 Reels behind-the-scenes/שבוע (תוכן שממילא מופק לאינסטגרם) היא הרחבה בעלות שולית נמוכה לקהל מנהלים צעיר."
     },
     "youtube": {
-      "max_posts_per_week": 2,
-      "reason": "3 פוסטים הניבו 5,591 חשיפות — הכי גבוה מכל רשת. וידאו ב-YouTube בעל חיי מדף ארוכים; 1-2 long-form ו-1-2 Shorts לשבוע מאפשר consistency בלי לשחוק ייצור."
+      "max_posts_per_week": 1,
+      "reason": "4 סרטונים/שבוע ייצרו 4,347 חשיפות — הערוץ עובד. הגדלה ל-1 סרטון/שבוע (קצר, 60-90 שניות, Shorts) תשמור על momentum ללא עומס על ייצור."
     }
   },
   "channel_priority": [
@@ -69,26 +69,25 @@
     "tiktok"
   ],
   "channel_plan_basis": [
-    "facebook: 8 פוסטים הניבו 5 חשיפות בלבד — ROI אפסי לקהל B2B. קיבולת אישור תוכן יקרה מדי לתוצאה כזו; לשמור על נוכחות מינימלית בלבד.",
-    "instagram: 10 פוסטים ו-464 חשיפות — ביצועים בינוניים אך עם פוסט data-led שהגיע ל-105. להתמקד בפחות פוסטים עם איכות גבוהה יותר (visual + data) ולא בכמות.",
-    "linkedin: 33% engagement rate — הרשת הממירה ביותר לקהל B2B. 3-5 פוסטים/שבוע הם הקדנס המומלץ לגדילה אורגנית בלינקדאין B2B לפי 2026 benchmarks.",
-    "tiktok: TikTok לא פעיל כרגע; לבדוק feasibility עם קצת תוכן behind-the-scenes. עד שנוצר pipeline של תוכן — לשמור על קדנס נמוך כדי לא להעמיס.",
-    "youtube: 3 פוסטים הניבו 5,591 חשיפות — הכי גבוה מכל רשת. וידאו ב-YouTube בעל חיי מדף ארוכים; 1-2 long-form ו-1-2 Shorts לשבוע מאפשר consistency בלי לשחוק ייצור."
+    "facebook: 9 חשיפות ל-8 פוסטים בשבוע = ROI שלילי על זמן האישור. רק cross-post אוטומטי מאינסטגרם — אין לייצר תוכן ייחודי לפייסבוק.",
+    "instagram: 311 reach עם 10 פוסטים = 31 reach/פוסט; עלייה ל-5 פוסטים איכותיים (Reels+Carousel) צפויה להכפיל reach מבלי להעמיס על תהליך האישור.",
+    "linkedin: 30% engagement rate מוכיח שהקהל קיים ומגיב; לפי נתוני B2B 2026, פרסום 4x/שבוע מקסמל reach ללא פגיעה באיכות. זהו הערוץ הממיר הפוטנציאלי ביותר לדיגיטל.",
+    "tiktok: 0 פוסטים כרגע = 0 נוכחות. פתיחת ערוץ TikTok B2B עם 3 Reels behind-the-scenes/שבוע (תוכן שממילא מופק לאינסטגרם) היא הרחבה בעלות שולית נמוכה לקהל מנהלים צעיר.",
+    "youtube: 4 סרטונים/שבוע ייצרו 4,347 חשיפות — הערוץ עובד. הגדלה ל-1 סרטון/שבוע (קצר, 60-90 שניות, Shorts) תשמור על momentum ללא עומס על ייצור."
   ],
   "follower_growth_plan": [
-    "שלב 1 — LinkedIn כמנוע ראשי (0-6 חודשים): להגיע ל-2,000 followers על ידי 4 פוסטים/שבוע + LinkedIn Newsletter + Exec thought leadership; LinkedIn הוכיח 33% engagement rate ומצביע על קהל הזרע הנכון.",
-    "שלב 2 — YouTube SEO (חודשים 3-9): לבנות playlist ממוקדת 'הפקות B2B ישראל' עם 2 סרטונים/שבוע; YouTube מייצר 1,864 חשיפות/פוסט וסרטון well-optimized ממשיך לצבור views חודשים קדימה.",
-    "שלב 3 — Instagram Reels (חודשים 4-12): לייצר 4 Reels/שבוע מחומרי behind-the-scenes אמיתיים; B2B אירועים הם ויזואלי מטבעם — תוכן אותנטי ממיר טוב יותר מפרודקשן מלוטש.",
-    "שלב 4 — TikTok כערוץ ניסיוני (חודשים 6-12): לבדוק 2 פוסטים/שבוע של תוכן 'behind the scenes' קצר; לא להשקיע כבד עד שמוכח ROI — לשמור משאבי אישור.",
-    "שלב 5 — Content Amplification Loops (חודשים 9-24): כל LinkedIn post מגדיל → מתחלק ל-Instagram carousel → מיוצר ל-YouTube summary → מובא כ-blog בsite; לכל נכס תוכן: 4 נגזרות לפחות.",
-    "שלב 6 — Community Building (שנה 2-3): לבנות LinkedIn Group 'מנהלי אירועי B2B ישראל' ו-LinkedIn Events חודשיים; קהילה ממוקדת מייצרת follower growth אקספוננציאלי ומקצרת מחזור מכירה."
+    "שלב 1 (0-3 חודשים): ייצוב קדנציה — LinkedIn 4x/שבוע, Instagram 5x/שבוע, YouTube 1x/שבוע, TikTok 3x/שבוע; הפעלת Founder-Led Content בפרופיל אישי (פוטנציאל 5-10x reach לפי נתוני 2026).",
+    "שלב 2 (3-6 חודשים): Viral Hooks — כל חודש פוסט/Reel אחד עם נתון שוק מפתיע על MICE ישראלי (כמו הפוסט המוביל של אינסטגרם על 63% חברות Hi-Tech); נתונים מקוריים מושכים שיתופים ועוקבים אורגניים.",
+    "שלב 3 (6-12 חודשים): Community Building — LinkedIn Newsletter חודשי 'דו\"ח MICE ישראל' + LinkedIn Events רבעוניים עם מנהלי HR/CMO ישראלים; כל Event מביא מנויים חדשים ומגדיל follower count.",
+    "שלב 4 (12-24 חודשים): Cross-Platform Amplification — כל Case Study מופק פעם אחת ומותאם ל-5 פלטפורמות (YouTube long-form, TikTok Shorts, Instagram Reels, LinkedIn Carousel, Blog); נפח גבוה בעלות ייצור שולית.",
+    "שלב 5 (24-36 חודשים): Influencer & PR Leverage — שיתופי פעולה עם 3-5 מנהלי HR/CMO ישראלים בעלי קהל ב-LinkedIn לפוסטי co-authorship; כל שיתוף חושף UPE לקהל חדש של 5,000-20,000 עוקבים רלוונטיים."
   ],
   "leads_actions": [
-    "פעולה מיידית (שבוע 1): להוסיף CTA ממיר לכל 21 עמודי שירות קיימים (טופס/ווטסאפ/קישור ייעוץ) — 186 קליקים/שבוע אורגניים מגיעים לדפים ולא ממירים; זה הדלף הגדול ביותר בפייפליין.",
-    "פעולה מיידית (שבוע 2): לאפטמז את עמוד טיולי-תמריץ-לחברות (עמדה 4) עם +500 מילים, FAQ schema, ו-internal links מ-278 בלוגים — הכי קרוב ל-Top-3 ויכול לייצר ליד מוסמך ראשון תוך 30 יום.",
-    "חודש 1: LinkedIn חייב להיות ערוץ מיוחס — לוודא שכל פוסט לינקדאין מכיל קישור לעמוד שירות ספציפי + לעקוב אחרי מי שמגיב (profile views של מקבלי החלטות = ליד חם); לתעד ב-Salesforce עם LeadSource='LinkedIn'.",
-    "חודש 1-2: Word of Mouth כבר מוכיח את עצמו (50% מהלידים) — לבקש מ-2 לקוחות קיימים שיכתבו Google Review ו-LinkedIn Recommendation ספציפיים; ביקורות אלו מוזנות ל-AI engines ומגדילות AEO citations.",
-    "חודש 2-3: לפרסם 2 case studies מפורטים (Hi-Tech event + Incentive travel) ב-blog קיים + YouTube + LinkedIn — case studies הם הנכס הממיר ביותר ב-B2B כי הם עונים על שאלת 'האם זה עובד למישהו כמוני'.",
-    "חודש 3+: לבנות LinkedIn Event חודשי (webinar/roundtable) — LinkedIn Events לוכדים פרטי רישום (שם, חברה, תפקיד) ומייצרים ייחוס דיגיטלי ישיר; roundtable לקהל CMO/HR ישראלי מייצר 3-5 לידים מוסמכים לאירוע."
+    "מיידי: הוסף CTA ישיר לכל פוסט לינקדאין ('תיאום שיחה ב-DM') — LinkedIn הוא ערוץ הB2B הדומיננטי בישראל ועם 30% engagement rate הוא הנכס הממיר הכי קרוב; 1-2 לידים/שבוע צפויים תוך 30 יום.",
+    "מיידי: SEO-Conversion — עמודי 'הפקת-כנסים' ו-'טיולי-תמריץ-לחברות' דורשים CTA ממיר ברור (טופס בקשת הצעת מחיר) מעל ה-fold; 145 קליקים/שבוע לאתר ללא טופס = לידים שנשפכים.",
+    "30 יום: Reactivation קמפיין — שלח ל-Word of Mouth leads הקיימים (2 מתוך 4) בקשה להמליץ על UPE ב-LinkedIn בפוסט ציבורי; המלצה ממנהל בכיר בלינקדאין שווה ממוצע 3-5 חשיפות ל-CMO/HR נוספים.",
+    "60 יום: תוכן Bottom-of-Funnel — פרסם 2 Case Studies מוסמכים (לקוח + תוצאה + מספרים) בבלוג + לינקדאין; B2B buyers ב-2026 מחפשים proof לפני כל RFP — Case Study הוא הדחיפה האחרונה לפני יצירת קשר.",
+    "60 יום: AEO לביטויי Intent גבוה — הוסף FAQPage schema לעמוד 'ארגון-כנסים' ו'טיולי-תמריץ-לחברות' עם שאלות כמו 'כמה עולה הפקת כנס לחברת היי-טק?'; מנועי AI מצטטים תשובות כאלה ומביאים טראפיק intent גבוה.",
+    "90 יום: מדידה והסמכה — הגדר ב-Salesforce Lead Source חדש 'LinkedIn-Organic' ו-'Website-Organic'; בלי הפרדה זו הציון 'לידים דיגיטליים=0' יישאר גם אם הדיגיטל יתחיל להמיר — כשל מדידה שחוסם כל שיפור נראה."
   ]
 }
