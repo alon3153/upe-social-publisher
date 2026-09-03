@@ -1,64 +1,64 @@
 {
-  "updated_at": "2026-09-02",
+  "updated_at": "2026-09-03",
   "source": "daily-council",
   "directives": [
     {
       "category": "safe_auto",
-      "action": "מיפוי כוונת חיפוש על 5 ביטויי הזדמנות ושיוך לדפים קיימים",
-      "detail": "כל ביטוי מהרשימה (אירועים לחברות → הפקת-אירועי-חברה, הפקת נופש חברה → נופש-חברה, הפקת כנסים עסקיים → הפקת-כנסים) ימופה לדף קיים. להכין briefing לשיפור H1/title/schema ומספר מילים — ולא ליצור דף חדש, כי כל הדפים קיימים ויצירת כפילות תפצל סיגנל דירוג.",
+      "action": "מיפוי קישורים פנימיים: לזהות את 290 מאמרי הבלוג שמכסים נושאי הפקת אירועים/כנסים ולהוסיף anchor-text links לדפי הפקת-אירועים-עסקיים, הפקת-כנסים ו-כנסים-עסקיים הקיימים.",
+      "detail": "דפי הליבה יושבים בממוצע מיקום 36.6; קישורים פנימיים ממאמרים קיימים הם הדרך המהירה ביותר לאמת authority ללא יצירת דף חדש. כל מאמר בלוג שמזכיר 'הפקת כנסים' צריך לקשר ל-/הפקת-כנסים.",
       "channel": "google_organic"
     },
     {
       "category": "safe_auto",
-      "action": "בניית רשת קישורים פנימיים מ-290 בלוגים לדפי שירות מטרה",
-      "detail": "לבחור 30 מאמרי בלוג קיימים שמכסים נושאים כמו 'טיולי חברה' ו'כנסים' ולהוסיף anchor text ממוקד לדפים הפנימיים — זה מגביר Page Authority לדפים שכבר ממוקמים 11-20 ועשוי להעביר אותם ל-Top-3 ללא תוכן חדש.",
-      "channel": "google_organic"
-    },
-    {
-      "category": "safe_auto",
-      "action": "הגדרת קדנציית LinkedIn לפוסטי carousel: 3 פוסטים/שבוע בפורמט carousel",
-      "detail": "Carousel posts מייצרים עד 278% יותר engagement מסרטונים ב-LinkedIn — לתזמן 3 carousels שבועיים (ראשון/רביעי/שישי) שמספרים סיפורי לקוח/case study, מכוונים ל-CMO/HR בחברות ישראליות של 200+ עובדים.",
+      "action": "אסטרטגיית hashtag LinkedIn: לעבור מהאשטגים גנריים (#events) ל-4 hashtags ממוקדים (#הפקתאירועים #כנסיםעסקיים #incentivetravel #HITECHevents) בכל פוסט.",
+      "detail": "האלגוריתם של LinkedIn 2026 מתגמל נישה ולא reach רחב; hashtags ממוקדים מביאים CMO/HR decision-makers ישראלים הרלוונטיים יותר מ-generic reach.",
       "channel": "linkedin"
     },
     {
       "category": "safe_auto",
-      "action": "הפסקת Facebook כערוץ ייצור תוכן עצמאי — רק syndication אוטומטי מ-Instagram",
-      "detail": "Facebook יצר 0 אינטראקציות על 7 פוסטים (10 חשיפות) — להוריד ל-1-2 פוסטים שבועיים ממוחזרים אוטומטית מ-Instagram בלבד, ולהפנות את זמן האישור שנחסך ליצירת תוכן LinkedIn ו-YouTube.",
-      "channel": "facebook"
-    },
-    {
-      "category": "safe_auto",
-      "action": "אסטרטגיית נושאי YouTube: סרטוני 'How-to' בעברית לביטויים בעמדה 11-20",
-      "detail": "YouTube הוא אחד משלושת המקורות שמהם LLMs שואבים ציטוטים — ליצור briefings לסרטונים קצרים (3-5 דקות) לנושאים כמו 'איך מארגנים כנס עסקי' ו'טיפים לטיול תמריץ לחברות הייטק' עם תמלילים מלאים בעברית לצורכי AEO.",
+      "action": "לוח תוכן YouTube Shorts: לתכנן 2 Shorts/שבוע (60-90 שניות) עם hook ב-3 שניות הראשונות — 'Behind the scenes' של הפקה בחו\"ל + תוצאות לקוח.",
+      "detail": "YouTube מייצר 75% מהחשיפות עם הכי מעט פוסטים; Shorts מתפקדים כ-discovery engine ומוזנים ל-Google Search — עם אפס Shorts כרגע הפוטנציאל לא ממומש.",
       "channel": "youtube"
     },
     {
       "category": "safe_auto",
-      "action": "הוספת FAQ schema ל-5 דפי שירות מרכזיים",
-      "detail": "להוסיף schema מסוג FAQPage ל-הפקת-כנסים, הפקת-אירועים-עסקיים, טיולי-תמריץ-לחברות, נופש-חברה, ו-כנסים-עסקיים — זה מגדיל סיכוי לציטוט ב-AI Overviews ו-Perplexity ומחזק את ה-AEO הקיים (4 מנועים).",
+      "action": "תדירות תוכן Instagram: לרכז את 10 הפוסטים השבועיים ל-5 פוסטים איכותיים עם Reels (לא static posts), תוך שמירה על ratio של 70% ערך/30% הוכחה חברתית.",
+      "detail": "ה-top post ב-Instagram קיבל 123 impressions מתוך 568 (21%) — קריטריון הצלחה הוא כיסוי גבוה per-post, לא volume; Reels מקבלים reach אורגני רב יותר מ-static.",
+      "channel": "instagram"
+    },
+    {
+      "category": "safe_auto",
+      "action": "schema markup audit לדפי שירות: לוודא שכל 21 דפי השירות הקיימים כוללים Organization + Service + FAQ schema תקניים — במיוחד דפי הפקת-כנסים וטיולי-תמריץ שהם top opportunities.",
+      "detail": "Schema markup משפר גילוי LLM ב-67% לפי מחקרים; ה-AEO score של UPE כבר 4/7 — שיפור schema יאיץ ציטוטים נוספים ויחזק top-3 ranking.",
+      "channel": "google_organic"
+    },
+    {
+      "category": "safe_auto",
+      "action": "מחקר קדמת מתחרים Spain: לנתח את 3 המתחרים (creagroupevents, eventoplus, factoryevents.es) שתופסים Top-3 ב-'eventos corporativos españa' ולזהות פערי תוכן וbacklinks שupe-spain.com חסר.",
+      "detail": "upe-spain.com נפל 33% בקליקים — ניתוח gap יאפשר לכוון בדיוק אילו דפים לחזק ואילו מונחים לתקוף ב-Q4.",
       "channel": "google_organic"
     }
   ],
   "channel_cadence": {
     "facebook": {
       "max_posts_per_week": 2,
-      "reason": "0 אינטראקציות על 7 פוסטים — ערוץ כמעט מת לקהל B2B. רק syndication ממוחזר מ-Instagram, לא ייצור מקורי."
+      "reason": "7 פוסטים הניבו 2 חשיפות בלבד — ערוץ כמעט מת אורגנית. 2 פוסטים/שבוע שומרים על נוכחות מינימלית ומפנים תקציב תוכן לערוצים שעובדים."
     },
     "instagram": {
       "max_posts_per_week": 5,
-      "reason": "engagement rate של 1.1% עם 543 חשיפות — ביצועים בינוניים אך עקביים. פחות מ-9 פוסטים שבועיים לטובת איכות על כמות, מיקוד בפוסטים מבוססי-נתונים שהוכחו כמנצחים."
+      "reason": "10 פוסטים נתנו ER של 1.06% — איכות על כמות. 5 פוסטים ממוקדים (בעיקר Reels) ישפרו reach per-post ויצמצמו בזבוז משאבי הפקה."
     },
     "linkedin": {
       "max_posts_per_week": 4,
-      "reason": "11.2% engagement rate — הערוץ הב2בי החזק ביותר. 3-5 פוסטים שבועיים הם הטווח האופטימלי לאלגוריתם LinkedIn לפי נתוני 2026."
+      "reason": "הערוץ המוביל עם ER 7.49%; 13 פוסטים/שבוע עלולים לשחוק את הקהל. 4 פוסטים עם איכות גבוהה (carousel, native video, opinion post) מגדילים reach ממוצע לפוסט."
     },
     "tiktok": {
       "max_posts_per_week": 3,
-      "reason": "כרגע 0 פוסטים — להתחיל לאט עם 3 סרטוני reels קצרים שבועיים ממוחזרים מ-Instagram/YouTube Shorts, לפני שמייצרים תוכן מקורי ייעודי."
+      "reason": "כרגע 0 — יש להתחיל בעדינות. 3 פוסטים/שבוע מאפשרים 'warm-up period' לאלגוריתם ובניית niche audience בקרב HR ו-event managers ישראלים ללא overshoot."
     },
     "youtube": {
-      "max_posts_per_week": 2,
-      "reason": "4 פוסטים הניבו 2,664 חשיפות (הערוץ בעל הפוטנציאל הגבוה ביותר). 1-2 סרטונים שבועיים עם אופטימיזציה SEO מלאה עדיפים על כמות גדולה ללא keyword strategy."
+      "max_posts_per_week": 3,
+      "reason": "4 פוסטים הניבו 2,493 חשיפות — ה-ROI גבוה ביותר. 3 פוסטים/שבוע (1 long-form + 2 Shorts) יבנו את discovery engine מבלי לעמוס על pipeline האישור."
     }
   },
   "channel_priority": [
@@ -69,26 +69,26 @@
     "tiktok"
   ],
   "channel_plan_basis": [
-    "facebook: 0 אינטראקציות על 7 פוסטים — ערוץ כמעט מת לקהל B2B. רק syndication ממוחזר מ-Instagram, לא ייצור מקורי.",
-    "instagram: engagement rate של 1.1% עם 543 חשיפות — ביצועים בינוניים אך עקביים. פחות מ-9 פוסטים שבועיים לטובת איכות על כמות, מיקוד בפוסטים מבוססי-נתונים שהוכחו כמנצחים.",
-    "linkedin: 11.2% engagement rate — הערוץ הב2בי החזק ביותר. 3-5 פוסטים שבועיים הם הטווח האופטימלי לאלגוריתם LinkedIn לפי נתוני 2026.",
-    "tiktok: כרגע 0 פוסטים — להתחיל לאט עם 3 סרטוני reels קצרים שבועיים ממוחזרים מ-Instagram/YouTube Shorts, לפני שמייצרים תוכן מקורי ייעודי.",
-    "youtube: 4 פוסטים הניבו 2,664 חשיפות (הערוץ בעל הפוטנציאל הגבוה ביותר). 1-2 סרטונים שבועיים עם אופטימיזציה SEO מלאה עדיפים על כמות גדולה ללא keyword strategy."
+    "facebook: 7 פוסטים הניבו 2 חשיפות בלבד — ערוץ כמעט מת אורגנית. 2 פוסטים/שבוע שומרים על נוכחות מינימלית ומפנים תקציב תוכן לערוצים שעובדים.",
+    "instagram: 10 פוסטים נתנו ER של 1.06% — איכות על כמות. 5 פוסטים ממוקדים (בעיקר Reels) ישפרו reach per-post ויצמצמו בזבוז משאבי הפקה.",
+    "linkedin: הערוץ המוביל עם ER 7.49%; 13 פוסטים/שבוע עלולים לשחוק את הקהל. 4 פוסטים עם איכות גבוהה (carousel, native video, opinion post) מגדילים reach ממוצע לפוסט.",
+    "tiktok: כרגע 0 — יש להתחיל בעדינות. 3 פוסטים/שבוע מאפשרים 'warm-up period' לאלגוריתם ובניית niche audience בקרב HR ו-event managers ישראלים ללא overshoot.",
+    "youtube: 4 פוסטים הניבו 2,493 חשיפות — ה-ROI גבוה ביותר. 3 פוסטים/שבוע (1 long-form + 2 Shorts) יבנו את discovery engine מבלי לעמוס על pipeline האישור."
   ],
   "follower_growth_plan": [
-    "LinkedIn First: להגדיל follower base ל-5,000 תוך 6 חודשים דרך founder-led content (מנהלי UPE מפרסמים מהפרופיל האישי) — זו האסטרטגיה בעלת ה-ROI הגבוה ביותר ל-B2B ב-2026.",
-    "YouTube כ-Search Engine: 2 סרטונים שבועיים בעברית עם keyword-optimized titles (60 תווים, מילת מפתח ב-40 הראשונים) — YouTube מעבד 3 מיליארד חיפושים/חודש וכל סרטון הוא נכס ארגוני לשנים.",
-    "Instagram Reels → TikTok: כל Reel אינסטגרם ממוחזר ל-TikTok וליYouTube Shorts — לייצר x3 נוכחות מאותה הפקה בלי עלות נוספת.",
-    "תוכן מבוסס-נתונים ייחודיים: לפרסם 1 'State of Corporate Events Israel' שנתי עם נתונים ראשוניים — תוכן שרק UPE יכולה לייצר מגדיל citations ב-AI וב-PR.",
-    "שותפויות תוכן: 3-4 LinkedIn Lives / webinars עם משפיעני HR וCMO ישראלים בשנה — כל אירוע מייצר followers, לידים ותוכן שניתן לחתוך לפוסטים.",
-    "מסלול 3 שנים: שנה 1 — 10K followers (LinkedIn + YouTube); שנה 2 — 50K (הוספת TikTok ותוכן ספרדי); שנה 3 — 150K+ עם ממשק AEO מלא ו-PR בינלאומי לכיוון 500K north-star."
+    "LinkedIn thought leadership: לגייס 3-5 עובדים/שותפים לפרסם תוכן אישי שבועי ('employee advocacy') — כל פרופיל אישי מגדיל reach החברה ב-~300% לפי נתוני LinkedIn 2026.",
+    "YouTube Shorts כ-discovery engine: להשיק 2 Shorts/שבוע עם hooks חזקים (שאלה/סטטיסטיקה מפתיעה), נושאים: behind the scenes, הפקות בחו\"ל, טיפים לארגון כנסים — הפורמט עם הפוטנציאל הגבוה ביותר לצמיחת subscribers.",
+    "Instagram Reels cross-posting: כל Short מ-YouTube מותאם ל-Reels ומועלה עם hashtags ממוקדים (#הפקתאירועים #כנסים #teambuilding) — cross-posting חוסך הפקה ומכפיל reach.",
+    "TikTok כ-top-of-funnel חדש: להתחיל 3 פוסטים/שבוע בסגנון אותנטי/לא-מלוטש; TikTok מציע organic reach גבוה לאקאונטים חדשים בנישות B2B ישראליות עם תחרות נמוכה.",
+    "תוכן מבוסס נתונים ל-virality: סטטיסטיקת '63% מחברות ה-HiTech מגדילות תקציב אירועים' (שכבר הופיעה ב-top Instagram post) — להמשיך בפורמט זה של Insights ישראליים שאף מתחרה לא מפרסם.",
+    "שיתופי פעולה עם influencers עסקיים ישראלים: לזהות 3-5 LinkedIn creators בתחום HR/ניהול עם 5K+ followers ולהציע co-content (webinar, podcast, post משותף) — amplification מהיר ללא תשלום מדיה."
   ],
   "leads_actions": [
-    "LinkedIn Case Studies + CTA ישיר: לפרסם שבועי סיפור לקוח אנונימי עם 'מוכנים לתכנן את האירוע הבא? כתבו לנו' — זהו הצינור עם 11.2% engagement ו-80% מלידי B2B ממדיה חברתית.",
-    "אופטימיזציה דחופה של 3 דפי שירות (הפקת-כנסים, נופש-חברה, הפקת-אירועים-עסקיים): שיפור H1 + meta title + CTA בולט עם 'קבלו הצעת מחיר' — אלו הדפים עם הביטויים הכי קרובים ל-Top-3.",
-    "קמפיין LinkedIn Events: לארגן 1 LinkedIn Live חודשי בנושא MICE/אירועי חברה ולאסוף פרטי משתתפים — LinkedIn Events מספקים contact info של registrants ומהווים ליד מוסמך.",
-    "off-page Hebrew SEO: 4-6 אורחים בפורטלים ישראליים עם קישורים מסחריים — לא רק מגדיל דירוג אלא יוצר referral traffic ישיר עם intent גבוה.",
-    "תיקון Salesforce LeadSource: לחייב מילוי שדה מקור בכל Opportunity — ללא זה, digital leads ייספרו כ-0 גם אם מגיעים מהדיגיטל, ולא ניתן יהיה לעבור את יעד 3 הלידים הדיגיטליים.",
-    "הפעלת upe-spain.com: לייצר 2 landing pages ממוקדות ל-'international product launch event' ו-'global incentive travel Spain' — שוק אירופה פתוח ויכול להוסיף 2-3 לידים/חודש ולעזור לעבור יעד 10."
+    "P0 — לתקן attribution ב-Salesforce: לוודא שכל ליד מ-Web/LinkedIn/YouTube/Organic מוזן עם LeadSource נכון; כרגע 'Other' מסתיר לידים דיגיטליים אמיתיים — ללא נתונים נקיים לא ניתן לייחס ולשפר.",
+    "P0 — להוסיף CTA ישיר בכל דף שירות קיים (הפקת-כנסים, טיולי-תמריץ-לחברות, הפקת-אירועי-חברה): כפתור 'קבל הצעת מחיר / ייעוץ ראשוני חינם' עם form קצר (3 שדות) שמזין ישירות ל-Salesforce עם LeadSource='Web'.",
+    "P1 — לנצל את ה-Word-of-Mouth הדומיננטי (50%): לבקש מ-2 לקוחות קיימים להמליץ בפוסט LinkedIn אישי + לשלוח referral link ל-3 חברות נוספות בסביבתם — כל referral מוזן כ-LeadSource='Referral/Digital'.",
+    "P1 — LinkedIn Outreach אורגני: לזהות ב-LinkedIn Search 50 CMO/HR Directors בחברות הייטק ישראליות 200+ עובדים ולשלוח הודעת connection אישית (לא pitch) שמתבססת על תוכן שפרסמנו — מטרה 5 שיחות/חודש.",
+    "P1 — לאופטימיזציה את דף 'טיולי תמריץ לחברות' (מיקום 4, 157 חיפושים/חודש): קפיצה ל-Top-3 שקולה ל-~50 קליקים/חודש עם intent גבוה; כל 1% מהם שממלא form = ליד מדיד.",
+    "P2 — לערוך webinar/LinkedIn Live חודשי בנושא 'טרנדים בהפקת אירועים עסקיים 2026' — נרשמים הם opted-in leads עם intent גבוה; לשלב registration form שמזין ל-Salesforce כ-LeadSource='LinkedIn/Event'."
   ]
 }
