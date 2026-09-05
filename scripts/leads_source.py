@@ -97,13 +97,20 @@ def count(days=30):
             token, base)
         opps = len(recs)
         attr = _attribution(recs)
-        # Lead-object count kept as a secondary signal (typically 0 — not used by UPE).
-        leads_obj = _soql_count(
-            f"SELECT COUNT() FROM Lead WHERE CreatedDate = LAST_N_DAYS:{n} AND IsConverted = false",
-            token, base)
-        return {"ok": True, "qualified_leads": opps, "new_opportunities": opps,
+        # Lead-object records = inbound hand-raisers from the website (api/lead.js
+        # writes them with a digital LeadSource such as 'Google Organic'). Until
+        # 05.09.2026 they were only reported as a count and never counted as leads, so
+        # a form lead that Alon had not yet converted to an Opportunity scored ZERO on
+        # both lead KPIs. Unconverted only — a converted Lead already is an Opportunity.
+        # 'UPE TEST' = the bridge health-check record, never a lead.
+        lead_recs = _soql_records(
+            f"SELECT Id, LeadSource, Company FROM Lead WHERE CreatedDate = LAST_N_DAYS:{n} "
+            f"AND IsConverted = false AND Company != 'UPE TEST'", token, base)
+        leads_obj = len(lead_recs)
+        attr = _attribution(recs + lead_recs)
+        return {"ok": True, "qualified_leads": opps + leads_obj, "new_opportunities": opps,
                 "lead_object_count": leads_obj, "period_days": n, "source": "salesforce",
-                "definition": "new Opportunities created (all)", **attr}
+                "definition": "new Opportunities + unconverted web Leads (form hand-raisers)", **attr}
     except urllib.error.HTTPError as e:
         return {"ok": False, "reason": f"SF HTTP {e.code}: {e.read().decode()[:160]}",
                 "qualified_leads": None, "new_opportunities": None, "source": "salesforce"}

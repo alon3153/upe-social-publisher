@@ -10,7 +10,15 @@
     "leads_definition": "Real NEW inbound leads from NEW potential clients for substantial events/conferences (not existing clients, not vendors).",
     "leads_source": "WIRED via leads_source.py (Salesforce client-credentials); Opportunity CreatedDate LAST_N_DAYS."
   },
-  "channels": ["instagram", "facebook", "tiktok", "linkedin", "youtube", "google_organic", "ai_geo"],
+  "channels": [
+    "instagram",
+    "facebook",
+    "tiktok",
+    "linkedin",
+    "youtube",
+    "google_organic",
+    "ai_geo"
+  ],
   "effectiveness_targets": {
     "min_avg_engagement_rate_pct": 2.0,
     "min_reach_per_post": 500,
@@ -22,7 +30,11 @@
   "trend_period_days": 30,
   "aeo_targets": {
     "_comment": "Targets for the weekly AEO/GEO loop. per_dimension_min = score below which a dimension is 'weak' and generates briefs.",
-    "per_dimension_min": { "product_search": 70, "comparison": 70, "reputation": 90 },
+    "per_dimension_min": {
+      "product_search": 70,
+      "comparison": 70,
+      "reputation": 90
+    },
     "briefs_per_run": 3
   },
   "scorecard_weights": {
@@ -32,12 +44,42 @@
     "aeo": 15,
     "social_presence": 10
   },
-  "digital_lead_sources": ["Web", "Website", "LinkedIn", "Google", "Organic Search", "Social", "Paid Search", "Email"],
-  "word_of_mouth_sources": ["Word of mouth", "Referral", "Existing Client", "Partner"],
-  "organic_targets": { "weekly_clicks_min": 300, "top3_keywords_min": 3 },
+  "digital_lead_sources": [
+    "Web",
+    "Website",
+    "Linkedin",
+    "LinkedIn",
+    "Google",
+    "Google Organic",
+    "Google Ads",
+    "Organic Search",
+    "Bing Organic",
+    "Social",
+    "Facebook",
+    "Instagram",
+    "Paid Search",
+    "Advertisement",
+    "Email",
+    "Youtube",
+    "YouTube",
+    "Tiktok",
+    "TikTok"
+  ],
+  "word_of_mouth_sources": [
+    "Word of mouth",
+    "Referral",
+    "Existing Client",
+    "Partner"
+  ],
+  "organic_targets": {
+    "weekly_clicks_min": 300,
+    "top3_keywords_min": 3,
+    "_note": "weekly_clicks_min is compared against clicks_7d from the astro snapshot (true 7-day window since 05.09.2026; before that the 28-day total was labelled weekly). top3 = queries at position <= 3.5 with >= 10 impressions in 28 days."
+  },
   "context_metrics": {
     "_comment": "Shown for visibility, NOT scored. Engagement/impressions no longer drag the headline.",
     "engagement_rate_pct": 2.0,
     "weekly_impressions_growth_pct": 10
-  }
+  },
+  "_digital_lead_sources_note": "Must mirror the ACTUAL Salesforce LeadSource picklist (Facebook/Instagram/Google Ads/Linkedin) plus the values api/lead.js writes (Google Organic, Bing Organic, Organic Search). Before 05.09.2026 the list lacked Facebook/Instagram/Google Ads, so those leads counted as non-digital."
 }
