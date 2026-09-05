@@ -102,10 +102,12 @@ def count(days=30):
         # 05.09.2026 they were only reported as a count and never counted as leads, so
         # a form lead that Alon had not yet converted to an Opportunity scored ZERO on
         # both lead KPIs. Unconverted only — a converted Lead already is an Opportunity.
-        # 'UPE TEST' = the bridge health-check record, never a lead.
+        # 'UPE TEST' = the bridge health-check record, never a lead. Status='Unqualified'
+        # = what Alon marks bot form-fills as (the first web Lead on 05.09 was one).
         lead_recs = _soql_records(
             f"SELECT Id, LeadSource, Company FROM Lead WHERE CreatedDate = LAST_N_DAYS:{n} "
-            f"AND IsConverted = false AND Company != 'UPE TEST'", token, base)
+            f"AND IsConverted = false AND Company != 'UPE TEST' AND Status != 'Unqualified'",
+            token, base)
         leads_obj = len(lead_recs)
         attr = _attribution(recs + lead_recs)
         return {"ok": True, "qualified_leads": opps + leads_obj, "new_opportunities": opps,
