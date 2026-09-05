@@ -149,6 +149,15 @@ def build_scorecard(cur, prev, leads, seo_geo=None):
         ct["engagement_rate_pct"] >= t["min_avg_engagement_rate_pct"], "%")
     row(context, "חשיפות (תקופה)", ct["impressions"], "↑", ct["impressions"] > 0)
 
+    # Snapshot age (context): the council scored a 19-day-old GSC snapshot on
+    # 05.09.2026 without saying so — one 403 property had killed the weekly job.
+    if seo_geo and seo_geo.get("ok") and seo_geo.get("generated_at"):
+        try:
+            age = (datetime.date.today() - datetime.date.fromisoformat(seo_geo["generated_at"])).days
+            row(context, "עדכניות snapshot אורגני (ימים)", age, "≤8", age <= 8)
+        except Exception:
+            pass
+
     # attribution note (kept from old scorecard) as a context row
     if leads.get("ok") and leads.get("dominant_source"):
         if leads.get("attribution_gap"):
