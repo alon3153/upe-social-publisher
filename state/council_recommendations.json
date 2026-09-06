@@ -1,72 +1,71 @@
 {
-  "updated_at": "2026-09-05",
+  "updated_at": "2026-09-06",
   "scores": {
-    "instagram": 22,
-    "facebook": 18,
-    "tiktok": 0,
-    "linkedin": 52,
-    "youtube": 45,
-    "google_organic_geo": 38,
-    "overall": 41
+    "instagram": 32,
+    "facebook": 28,
+    "tiktok": 5,
+    "linkedin": 55,
+    "youtube": 60,
+    "google_organic_geo": 62,
+    "overall": 52
   },
   "recommendations": [
     {
       "category": "gated",
       "priority": "P0",
-      "action": "צור 3 סרטוני YouTube מקרה-לקוח (case study) בעברית: כנס חברת הייטק, טיול תמריץ חו\"ל, ונופש חברה — כל סרטון מסתיים ב-CTA ל-landing page עם טופס יצירת קשר",
-      "expected_impact": "YouTube הוא ערוץ החשיפה הכי חזק של UPE (3,570 חשיפות מ-3 פוסטים); סרטוני case study מייצרים אמון אצל מקבלי החלטות ומהווים בסיס לייחוס דיגיטלי ישיר — מטרה: 1-2 לידים/חודש מ-YouTube תוך 60 יום.",
-      "channel": "youtube"
-    },
-    {
-      "category": "gated",
-      "priority": "P0",
-      "action": "שדרג עמוד 'הפקת-אירועים-עסקיים' (קיים): הרחב ל-1,500+ מילים, הוסף schema LocalBusiness+Service, פסקת FAQ עם 5 שאלות נפוצות, וקישור פנימי מ-15 מאמרי בלוג רלוונטיים",
-      "expected_impact": "המונח 'הפקת אירועים עסקיים' עומד על 476 חשיפות ומיקום 11.7 — שיפור עמוד קיים (לא יצירת כפול) הוא הנתיב המהיר ביותר ל-Top-3 ולהגדלת קליקים אורגניים מ-186 ל-300+/שבוע.",
+      "action": "אופטימיזציה דחופה לעמודי 'נופש-חברה' ו-'אירוע-קונספט': שדרג H1/title tag למונח המדויק, הוסף schema FAQ, הגדל word-count ל-1,200+ מילים ובנה 5+ קישורים פנימיים ממאמרי הבלוג הקיימים",
+      "expected_impact": "העלאת 2 עמודים מפוז' 17-19 לפוז' 5-10 תוך 8-14 שבועות; תוספת אומדת של 60-120 קליקים/שבוע לאורגני",
       "channel": "google_organic"
     },
     {
       "category": "gated",
-      "priority": "P1",
-      "action": "הפעל LinkedIn Newsletter חודשי בשם 'מאחורי ההפקה' — תוכן thought leadership מנהל UPE בעברית על טרנדים בהפקות ואירועי חברה",
-      "expected_impact": "Newsletter ב-LinkedIn צובר subscribers ישירות מקרב מקבלי החלטות; מייצר ערוץ ייחוס דיגיטלי מדיד ב-Salesforce ומחזק מיתוג מוביל-דעה — פוטנציאל 1-2 לידים/חודש תוך 90 יום.",
+      "priority": "P0",
+      "action": "הפעלת LinkedIn Personal Branding לבכירים — פרסום שבועי קבוע מפרופיל ה-CEO/מנהלים עם case studies אירועים אמיתיים, lessons learned ותובנות תעשייתיות",
+      "expected_impact": "פי 8 יותר חשיפה מפרופיל אישי לעומת דף חברה; צפויה הכפלת לידים דיגיטליים מ-LinkedIn תוך 60 יום",
       "channel": "linkedin"
     },
     {
       "category": "gated",
       "priority": "P1",
-      "action": "בנה תוכנית תוכן TikTok: 3 פוסטים/שבוע של 'מאחורי-הקלעים' הפקות (סטייג', לוגיסטיקה, הפתעות לאורחים) בפורמט Reels/Shorts — ניתן לשתף בו-זמנית ל-Instagram",
-      "expected_impact": "ערוץ עם 0 נוכחות כרגע = הזדמנות מיידית לתפוס נישה לא תחרותית; תוכן מאחורי-הקלעים הוא הפורמט עם הוויראליות הגבוהה ביותר ב-B2B MICE — יעד: 5,000 צפיות/חודש תוך 60 יום.",
-      "channel": "tiktok"
+      "action": "קמפיין off-page authority: פרסום מאמרי אורח ב-2-3 פורטלים עסקיים ישראליים רלוונטיים (כלכלה, HR, טק) עם backlink לעמודי שירות ממוקדים",
+      "expected_impact": "חיזוק Domain Authority נגד המתחרים (signalevents, trask, tarin) שתופסים Top-3 על 'הפקת אירועים עסקיים'; תרומה לדירוג תוך 3-4 חודשים",
+      "channel": "google_organic"
     },
     {
       "category": "gated",
       "priority": "P1",
-      "action": "כתוב 3 עמודי עמוד-שירות חדשים ל-upe-spain.com בספרדית ואנגלית: 'international product launch event Spain', 'new hire team building Barcelona', 'carbon neutral event Spain' — עמודים שאינם קיימים כרגע בישראל",
-      "expected_impact": "upe-spain.com בנפילה (-33% קליקים); שלושת המונחים הללו מופיעים בטבלת ההזדמנויות העליונה עם CTR של 10-16% — עמודים חדשים (לא כפולים לישראל) יתפסו דירוג מהיר יחסית בשוק פחות תחרותי.",
+      "action": "יצירת 3-4 וידאו YouTube מסוג 'case study לקוח': אירוע אמיתי, אתגר, פתרון, תוצאה — בפורמט 5-10 דקות עם VideoObject schema וקישור לעמוד שירות רלוונטי",
+      "expected_impact": "וידאו case study מושך decision-makers בשלב evaluation; מגדיל dwell time ואמינות AEO; YouTube כבר מוכיח 74% מהחשיפות",
+      "channel": "youtube"
+    },
+    {
+      "category": "gated",
+      "priority": "P2",
+      "action": "בניית דף נחיתה ייעודי בעברית ל-'ארגון כנסים לחברות הייטק' עם CTA ישיר לטופס ייעוץ — ממפה לעמוד הקיים 'כנסים-לחברות-הייטק' ולא יוצר עמוד חדש; מבצע A/B testing על כותרת ה-CTA",
+      "expected_impact": "הגדלת conversion rate מתנועה אורגנית ב-הייטק — סגמנט בעל ערך גבוה שמופיע ברשימת השירותים אך ללא CTA ייעודי",
       "channel": "google_organic"
     },
     {
       "category": "gated",
       "priority": "P2",
-      "action": "בנה תהליך בקשת ביקורת/מקרה-לקוח: לאחר כל אירוע, בקש אישור לפרסום ציטוט לקוח ב-LinkedIn ועמוד 'why-uproduction-events-trust' (קיים) עם שם חברה, גודל, ויעד האירוע",
-      "expected_impact": "אותנטיות לקוח מחזקת AEO וממירה Word-of-Mouth לנכס דיגיטלי מדיד; עמוד Trust קיים שמתעדכן בתדירות מגביר סיכוי לציטוט ב-AI Overviews ומחזק E-E-A-T.",
+      "action": "השקת LinkedIn Newsletter חודשי בעברית: 'הפקת אירועים — מה עובד עכשיו' — ידע מקצועי, מגמות MICE, לקחים משטח, הפצה לקהל opted-in",
+      "expected_impact": "בניית ערוץ owned-audience ישיר ל-decision makers; LinkedIn Newsletter מגיע לתיבת הדואר של עוקבים — ממיר טוב יותר מ-feed posts רגילים",
       "channel": "linkedin"
     }
   ],
   "follower_growth_plan": [
-    "LinkedIn First: הגדל followers אורגניים ע\"י תגובה יומית (10+ תגובות/יום) בפוסטים של CMO/HR Directors ישראלים — engagement יוצר exposure ומביא followers רלוונטיים לפני כל תוכן.",
-    "YouTube Shorts כמנוע גיוס: קצר כל סרטון הפקה ל-Shorts של 60 שניות עם hook ב-3 השניות הראשונות — Shorts מגדילים subscriber rate פי 3-5 לעומת long-form בלבד.",
-    "TikTok → Instagram Cross-post: כל תוכן TikTok שעובר אישור מתפרסם ב-Instagram Reels אוטומטית — מכפיל reach ללא תוספת עבודה, מזיז את מחוג הפולוורים בשני ערוצים במקביל.",
-    "AEO כמנוע Follower: כל ציטוט ב-AI Overview מגדיל brand searches; הוסף CTA 'עקוב אחרינו ב-LinkedIn' לדפי שירות בעלי תנועה גבוהה ('הפקת-אירועים-עסקיים', 'טיולי-תמריץ-לחברות').",
-    "Partner Content: הפק סרטון/פוסט משותף עם ספק מוביל (מקום אירוע, קייטרינג, אמן) — כל צד מפרסם לקהל שלו ומייצר חשיפה צולבת אורגנית ללא עלות.",
-    "Milestone Content: תעד ציוני דרך (הפקה מספר 100, אירוע ראשון בספרד) כסדרת פוסטים עם storytelling — תוכן Milestone מקבל שיתופים אורגניים גבוהים יותר ותורם לבניית קהל נאמן לאורך זמן."
+    "שלב 1 — LinkedIn Personal Authority (0-6 חודשים): הפעל 2-3 קולות אישיים מהחברה בפרסום שבועי קבוע; מטרת ביניים 2,000+ עוקבים פרופיל אישי לכל קול. פרופילים אישיים הם מנוע הצמיחה המהיר ביותר ב-B2B LinkedIn 2026.",
+    "שלב 2 — YouTube SEO & Discoverability (0-6 חודשים): מיטוב כל וידאו חדש עם מונחי חיפוש ישראליים ובינלאומיים, פלייליסטים נושאיים ושיתוף cross-platform; YouTube מהווה כבר 74% מהחשיפות — זה המנוע העיקרי לצמיחה ויראלית.",
+    "שלב 3 — תוכן Instagram Reels ו-TikTok (3-9 חודשים): הפק 4-6 Reels/חודש מחוזרים מוידאו YouTube — הצג 'מאחורי הקלעים' של הפקות, transformations, wow-moments; תוכן ויזואלי הוא גשר לקהל רחב יותר ולצמיחת follower ב-Instagram.",
+    "שלב 4 — Thought Leadership ו-PR דיגיטלי (6-18 חודשים): ציטוטים בתקשורת מקצועית (כלכלה, מדיה HR/מנהלים), הופעות בפודקאסטים עסקיים ישראליים, שיתופי תוכן עם ספקים ויעדים — כל ציטוט מניב backlinks ועוקבים חדשים.",
+    "שלב 5 — Community Building (12-36 חודשים): הקמת קהילת LinkedIn / ניוזלטר סביב תחום MICE/אירועי חברה בישראל; תוכן user-generated (לקוחות מפרסמים תמונות אירועים ותוייגים); 500K פולוורים מגיעים כשUPE הופכת לפלטפורמת ידע בתעשייה — לא רק מותג."
   ],
   "leads_actions": [
-    "דחיפת LinkedIn כערוץ ממיר ראשי: Word of mouth מוביל ב-50% — ה'המלצה' הדיגיטלית המקבילה היא LinkedIn; בקש מלקוחות קיימים לתייג UPE בפוסט לאחר האירוע כדי ליצור ייחוס דיגיטלי מדיד ב-Salesforce.",
-    "הוסף UTM רק לנקודות conversion (לא לתוכן): הוסף UTM ל-CTA הספציפי בסוף כל סרטון YouTube ובדף הצור-קשר מ-LinkedIn Newsletter — כך ייחוס דיגיטלי יעלה מ-0 ל-3+ ללא שינוי תרבות CRM.",
-    "שדרג עמוד 'הפקת-אירועים-עסקיים' (P0 SEO): כל קליק אורגני נוסף על מונח commercial-intent גבוה = ליד פוטנציאלי; מעבר מ-186 ל-300 קליקים/שבוע על מונחים עסקיים יוסיף 2-3 לידים/חודש.",
-    "הפעל LinkedIn Events חודשי: Webinar קצר (30 דקות) בעברית בנושאים כ'איך לתכנן כנס חברה לצמיחה' — LinkedIn Events אוספים מידע של הרשמה ומייצרים ייחוס דיגיטלי ישיר עם 40-80 לידים פוטנציאליים.",
-    "שלב CTA ב-YouTube: הוסף קישור לדף יצירת קשר ב-description ו-pinned comment בכל 3 הסרטונים הקיימים — ערוץ שמייצר 3,570 חשיפות ללא CTA הוא דלי מחורר; תיקון מיידי ללא פרסום תוכן חדש.",
-    "Salesforce discipline: הגדר LeadSource='LinkedIn Organic' ו-'YouTube Organic' כאפשרויות ב-Salesforce ודרוש מנציגי המכירות למלא מקור בכל Opportunity חדשה — ללא שינוי זה, ייחוס דיגיטלי יישאר 0 גם אם הלידים יגיעו מדיגיטל."
+    "פעולה 1 — הכפל קליקים אורגניים ב-Hebrew SEO: אופטימיז' את עמודי 'נופש-חברה' ו-'אירוע-קונספט' לפוז' 5-10 (כרגע 17-19) — המרת חשיפות קיימות לקליקים תוסיף 60-120 קליקים/שבוע ותזרים לידים דיגיטליים ישירות.",
+    "פעולה 2 — LinkedIn Personal + Company אקטיבי: publish מבכירים 3-4x/שבוע עם case studies; כל פוסט שמקבל תגובה הוא הזדמנות outreach ידנית לאותו decision-maker — הוכח כבר שהערוץ ממיר ב-15.38% engagement.",
+    "פעולה 3 — שדרג כל עמוד שירות עם CTA ישיר לטופס ייעוץ חינם: הוסף CTA 'קבל הצעת מחיר ב-48 שעות' מעל ה-fold בכל עמוד שירות קיים; שיפור UX conversion מוכח כמשפר lead rate ב-B2B מבלי לגדיל תנועה.",
+    "פעולה 4 — תוכן וידאו YouTube ממוקד decision-makers: 2 וידאו/חודש מסוג 'שאל את המומחה' ו-'case study לקוח'; קהל B2B שצופה 10-15 דקות הוא decision-maker בשלב evaluation — שיעור conversion גבוה פר view.",
+    "פעולה 5 — חזק Attribution ל-Web: ודא שכל טופס Web כולל שדה 'איך שמעת עלינו?' (dropdown) כדי לאבחן אם לידי Web מגיעים מ-Google Organic, YouTube, LinkedIn — נתון זה יאפשר להכפיל על הערוץ הנכון ולהגיע ל-3 לידים דיגיטליים/חודש.",
+    "פעולה 6 — רשימת גורמי השפעה ועדויות לקוחות: בקש מ-3 לקוחות קיימים להשאיר Google Review + quote מצוטט בעמוד הנחיתה; social proof מגביר conversion rate ב-B2B ומסייע לאמינות AEO — ישיר להגדלת לידים דיגיטליים."
   ]
 }
