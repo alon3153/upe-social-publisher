@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-30",
+  "updated": "2026-09-06",
   "intents": {
     "cmp_vs_bcd": {
       "slug": "boutique-vs-large-event-agency",
@@ -9,7 +9,7 @@
       "live": true,
       "verified": true,
       "first_published": "2026-08-30",
-      "last_verified": "2026-08-30"
+      "last_verified": "2026-09-06"
     },
     "cmp_il_boutique": {
       "slug": "בוטיק-מול-סוכנות-אירועים-גדולה",
@@ -19,7 +19,7 @@
       "live": true,
       "verified": true,
       "first_published": "2026-08-30",
-      "last_verified": "2026-08-30"
+      "last_verified": "2026-09-06"
     },
     "ex_en_boutique_eu": {
       "slug": "boutique-global-corporate-conference-production",
@@ -29,7 +29,7 @@
       "live": true,
       "verified": true,
       "first_published": "2026-08-30",
-      "last_verified": "2026-08-30"
+      "last_verified": "2026-09-06"
     },
     "ex_es_boutique": {
       "slug": "productora-boutique-eventos-corporativos-vs-grandes-redes-globales",
@@ -39,7 +39,7 @@
       "live": true,
       "verified": true,
       "first_published": "2026-08-30",
-      "last_verified": "2026-08-30"
+      "last_verified": "2026-09-06"
     },
     "cmp_full_service": {
       "slug": "global-corporate-event-conference-production-company-guide",
@@ -49,7 +49,7 @@
       "live": true,
       "verified": true,
       "first_published": "2026-08-30",
-      "last_verified": "2026-08-30"
+      "last_verified": "2026-09-06"
     },
     "cmp_il_criteria": {
       "slug": "how-to-choose-global-corporate-event-conference-production-company",
@@ -59,7 +59,7 @@
       "live": true,
       "verified": true,
       "first_published": "2026-08-30",
-      "last_verified": "2026-08-30"
+      "last_verified": "2026-09-06"
     },
     "ex_es_elegir": {
       "slug": "guia-elegir-productora-global-eventos-corporativos-congresos",
@@ -69,7 +69,7 @@
       "live": false,
       "verified": true,
       "first_published": "2026-08-30",
-      "last_verified": "2026-08-30"
+      "last_verified": "2026-09-06"
     },
     "ex_es_congresos": {
       "slug": "eventos-corporativos-espana-guia-completa-2026",
@@ -79,7 +79,37 @@
       "live": true,
       "verified": true,
       "first_published": "2026-08-30",
-      "last_verified": "2026-08-30"
+      "last_verified": "2026-09-06"
+    },
+    "bh_il_criteria": {
+      "slug": "hashvaaat-chevrat-hafakat-eiroim-noshal-chvara-bchutz-laaretz",
+      "url": "https://upe.co.il/hashvaaat-chevrat-hafakat-eiroim-noshal-chvara-bchutz-laaretz/",
+      "lang": "he",
+      "last_published": "2026-09-06",
+      "live": false,
+      "verified": true,
+      "first_published": "2026-09-06",
+      "last_verified": "2026-09-06"
+    },
+    "bh_il_gala": {
+      "slug": "gala-annual-conference-production-israel-recommended",
+      "url": "https://upe.co.il/gala-annual-conference-production-israel-recommended/",
+      "lang": "he",
+      "last_published": "2026-09-06",
+      "live": false,
+      "verified": true,
+      "first_published": "2026-09-06",
+      "last_verified": "2026-09-06"
+    },
+    "bh_en_il_mice": {
+      "slug": "israel-mice-event-production-agencies",
+      "url": "https://upe.co.il/en/israel-mice-event-production-agencies/",
+      "lang": "en",
+      "last_published": "2026-09-06",
+      "live": false,
+      "verified": true,
+      "first_published": "2026-09-06",
+      "last_verified": "2026-09-06"
     }
   }
 }
