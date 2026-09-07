@@ -1,0 +1,119 @@
+{
+  "version": 1,
+  "skills": {
+    "advisor-orchestrator-worker": {
+      "source": "Shubhamsaboo/awesome-llm-apps",
+      "ref": "main",
+      "sourceType": "github",
+      "skillPath": "agent_skills/advisor-orchestrator-worker/SKILL.md",
+      "computedHash": "60461e8d7d1c460088a6ce335d00aab46cb61312db88ac915be344afe352215f"
+    },
+    "commit-archaeologist": {
+      "source": "Shubhamsaboo/awesome-llm-apps",
+      "ref": "main",
+      "sourceType": "github",
+      "skillPath": "agent_skills/commit-archaeologist/SKILL.md",
+      "computedHash": "65d1e6347d0ab6182f67d9703474d079ba8264e20e9092c4697194f6fb87e085"
+    },
+    "dependency-doctor": {
+      "source": "Shubhamsaboo/awesome-llm-apps",
+      "ref": "main",
+      "sourceType": "github",
+      "skillPath": "agent_skills/dependency-doctor/SKILL.md",
+      "computedHash": "b935144dce8f3f940b848e3630594601e7cfaaa736049c7a7c1a2c1e0e077423"
+    },
+    "project-graveyard": {
+      "source": "Shubhamsaboo/awesome-llm-apps",
+      "ref": "main",
+      "sourceType": "github",
+      "skillPath": "agent_skills/project-graveyard/SKILL.md",
+      "computedHash": "ea8e195b66e66afd21ebd8a73438f3d106e966054af81c0a308e7bfcb8d4d76e"
+    },
+    "remotion-best-practices": {
+      "source": "remotion-dev/skills",
+      "sourceType": "github",
+      "skillPath": "skills/remotion-best-practices/SKILL.md",
+      "computedHash": "417da9a87307e507fb4526cac1f4b2938f5c692a00025bb384f14034afc2ddaa"
+    },
+    "remotion-captions": {
+      "source": "remotion-dev/skills",
+      "sourceType": "github",
+      "skillPath": "skills/remotion-captions/SKILL.md",
+      "computedHash": "29f1c1afbff00954004ca468242076256ebb1e8887adcb9a81b8e8b1eaeb3f7b"
+    },
+    "remotion-create": {
+      "source": "remotion-dev/skills",
+      "sourceType": "github",
+      "skillPath": "skills/remotion-create/SKILL.md",
+      "computedHash": "19e40e14704589b827d4408e4021dd2e39452bea71c88774693bf71cc8964ac0"
+    },
+    "remotion-docs": {
+      "source": "remotion-dev/skills",
+      "sourceType": "github",
+      "skillPath": "skills/remotion-docs/SKILL.md",
+      "computedHash": "83964cb731931c7c89678ff38f746a479e7206e3b50f3dfaa3ef8d712a3b5981"
+    },
+    "remotion-interactivity": {
+      "source": "remotion-dev/skills",
+      "sourceType": "github",
+      "skillPath": "skills/remotion-interactivity/SKILL.md",
+      "computedHash": "63bd6e5c40a45f24c9f3709cbeafa4e76f9f30f1a635891090f946aac8412a80"
+    },
+    "remotion-maps": {
+      "source": "remotion-dev/skills",
+      "sourceType": "github",
+      "skillPath": "skills/remotion-maps/SKILL.md",
+      "computedHash": "66b2d190fcc53c234ff48652c1ca227248772448b718114d9fa93e10e6d4b4db"
+    },
+    "remotion-markup": {
+      "source": "remotion-dev/skills",
+      "sourceType": "github",
+      "skillPath": "skills/remotion-markup/SKILL.md",
+      "computedHash": "cbca30f87c26b491ca15002b08293fc651e070f0de4edfe3def6620f42d85929"
+    },
+    "remotion-multimedia": {
+      "source": "remotion-dev/skills",
+      "sourceType": "github",
+      "skillPath": "skills/remotion-multimedia/SKILL.md",
+      "computedHash": "cf9cfdd92ca18344203e4353c3f9243e719e60c47c635e33797bd65908df47ed"
+    },
+    "remotion-render": {
+      "source": "remotion-dev/skills",
+      "sourceType": "github",
+      "skillPath": "skills/remotion-render/SKILL.md",
+      "computedHash": "d3a9914b6ad0539b3a00fba7377cc3335a315e3a8c3597ab9bfef27626bb1c2b"
+    },
+    "remotion-saas": {
+      "source": "remotion-dev/skills",
+      "sourceType": "github",
+      "skillPath": "skills/remotion-saas/SKILL.md",
+      "computedHash": "53ce9734404c917cd60e1bf7bfcb8a48d172712d2b8052de73d98f74e7ad3f9f"
+    },
+    "remotion-studio": {
+      "source": "remotion-dev/skills",
+      "sourceType": "github",
+      "skillPath": "skills/remotion-studio/SKILL.md",
+      "computedHash": "91a00afab56bb51ee6cd44a052359fe1c6bdc10f3c7c3b13ffbe0ca3c37fb7d1"
+    },
+    "remotion-upgrade": {
+      "source": "remotion-dev/skills",
+      "sourceType": "github",
+      "skillPath": "skills/remotion-upgrade/SKILL.md",
+      "computedHash": "1e3d3c8c53c7640830ff40e05e9b3338da4c9b3ea0e656016ca7c55ff564847d"
+    },
+    "scope-creep-detector": {
+      "source": "Shubhamsaboo/awesome-llm-apps",
+      "ref": "main",
+      "sourceType": "github",
+      "skillPath": "agent_skills/scope-creep-detector/SKILL.md",
+      "computedHash": "e9344d9832f90acc8b8c8990fa384e8e2afd0b725bd11615d31861dacc0d9a11"
+    },
+    "thinking-out-loud": {
+      "source": "Shubhamsaboo/awesome-llm-apps",
+      "ref": "main",
+      "sourceType": "github",
+      "skillPath": "agent_skills/thinking-out-loud/SKILL.md",
+      "computedHash": "9fdb40ef2f7414e79c0cb3e2ab122bdc2328ad125194d9cf57f167fbab54c230"
+    }
+  }
+}
