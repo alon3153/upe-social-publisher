@@ -286,6 +286,58 @@ def check_duplicates():
     return out
 
 
+def _publishing_hours_since(created, now):
+    """Count only the configured 07:17–19:17 UTC publishing window."""
+    seconds = 0.0
+    day = created.date()
+    while day <= now.date():
+        start = datetime.datetime.combine(day, datetime.time(7, 17), tzinfo=datetime.timezone.utc)
+        end = start.replace(hour=19)
+        seconds += max(0.0, (min(now, end) - max(created, start)).total_seconds())
+        day += datetime.timedelta(days=1)
+    return seconds / 3600.0
+
+
+def workflow_issue(run, label, max_age_h, now, publishing=False):
+    """Describe observed state without claiming GitHub's scheduler is dead."""
+    status, conclusion = run.get('status'), run.get('conclusion')
+    url = run.get('html_url', '')
+    if status == 'completed' and conclusion != 'success':
+        action = 'דולגה ולא ביצעה עבודה' if conclusion == 'skipped' else f'נכשלה ({conclusion})'
+        return f'🔴 {label} — הריצה האחרונה {action}. {url}'
+    try:
+        created = datetime.datetime.fromisoformat(run['created_at'].replace('Z', '+00:00'))
+        if created.tzinfo is None:
+            raise ValueError('missing timezone')
+    except (KeyError, ValueError, TypeError):
+        return f'⚠️ {label} — זמן הריצה אינו זמין; לא ניתן לאמת את התזמון. {url}'
+    age_h = max(0.0, (now - created).total_seconds() / 3600.0)
+    if status == 'in_progress':
+        try:
+            started = datetime.datetime.fromisoformat((run.get('run_started_at') or run['created_at']).replace('Z', '+00:00'))
+            running_minutes = (now - started).total_seconds() / 60.0
+        except (ValueError, TypeError):
+            running_minutes = age_h * 60
+        # Publisher timeout is 10 minutes; allow another 10 for runner cleanup.
+        limit = 20 if publishing else 60
+        if running_minutes > limit:
+            return f'⚠️ {label} — ריצה פעילה כבר {running_minutes:.0f} דקות; יש לבדוק תקיעה. {url}'
+        return None
+    if status in {'queued', 'requested', 'waiting', 'pending'}:
+        if age_h > 1:
+            return f'⚠️ {label} — הריצה ממתינה בתור של GitHub כבר {age_h:.1f} שעות. {url}'
+        return None
+    if status != 'completed':
+        return f'⚠️ {label} — מצב ריצה לא מוכר ({status}); נדרשת בדיקה. {url}'
+    active_age_h = _publishing_hours_since(created, now) if publishing else age_h
+    if active_age_h > max_age_h:
+        window = ' בחלון הפרסום הפעיל' if publishing else ''
+        return (f'⚠️ {label} — עיכוב בתזמון: עברו {active_age_h:.1f} שעות{window} '
+                f'מהריצה האחרונה (סף {max_age_h}). טרם נצפתה ריצה חדשה; '
+                f'ייתכן עיכוב או דילוג של GitHub Actions. {url}')
+    return None
+
+
 def check_workflows():
     """Catch WORKFLOW-LEVEL failures (GitHub Actions run conclusions) — the gap
     that let the approval email die quietly for days: the run crashed BEFORE any
@@ -295,7 +347,7 @@ def check_workflows():
     repo = os.environ.get("GITHUB_REPOSITORY", "alon3153/upe-social-publisher")
     if not token:
         print("check_workflows: no GITHUB_TOKEN — skipping workflow-run check")
-        return []
+        return ['⚠️ לא ניתן לאמת תזמון workflows: חיבור GitHub אינו זמין.']
     # workflow file -> (label, max hours since last run before "silent")
     # NOTE: daily-publish.yml is legacy (retired ~2026-05-29) — FB/IG now publish
     # through publish-approved.yml (handles all networks). Do not monitor it.
@@ -305,7 +357,6 @@ def check_workflows():
         "daily-council.yml":    ("מועצת שיווק יומית", 26),
         "aeo-daily.yml":        ("AEO יומי", 26),
     }
-    bad = {"failure", "cancelled", "timed_out", "startup_failure"}
     now = datetime.datetime.now(datetime.timezone.utc)
     issues = []
     for wf, (label, max_age_h) in critical.items():
@@ -323,15 +374,10 @@ def check_workflows():
         if not runs:
             issues.append(f"🔴 {label} ({wf}) — אין ריצות כלל")
             continue
-        run = runs[0]
-        concl, status = run.get("conclusion"), run.get("status")
-        created = run.get("created_at", "1970-01-01T00:00:00Z")
-        age_h = (now - datetime.datetime.fromisoformat(created.replace("Z", "+00:00"))).total_seconds() / 3600.0
-        url = run.get("html_url", "")
-        if status == "completed" and concl in bad:
-            issues.append(f"🔴 {label} — הריצה האחרונה נכשלה ({concl}). {url}")
-        elif age_h > max_age_h:
-            issues.append(f"🔴 {label} — אין ריצה מזה {age_h:.0f} שעות (סף {max_age_h}). ה-cron אולי מת. {url}")
+        issue = workflow_issue(runs[0], label, max_age_h, now,
+                               publishing=wf == 'publish-approved.yml')
+        if issue:
+            issues.append(issue)
     return issues
 
 
@@ -362,6 +408,10 @@ def send_graph(subject, body_text):
 
 
 def main():
+    if '--workflows-only' in sys.argv:
+        issues = check_workflows()
+        print('\n'.join(issues) if issues else '✅ workflow scheduling healthy')
+        return 1 if issues else 0
     # Immediate mode: called from an if:failure() step so a crashing workflow
     # alerts within seconds, not at the next 13:00 watchdog sweep.
     if len(sys.argv) > 2 and sys.argv[1] == "--immediate":
