@@ -2,9 +2,14 @@ name: Autonomy Watchdog
 
 on:
   schedule:
-    # 13:00 UTC = 16:00 IST — after the day's publish + approval window
-    - cron: "0 13 * * *"
+    # 30 minutes after the 13:17 publisher slot; avoid top-of-hour congestion.
+    - cron: "47 13 * * *"
   workflow_dispatch:
+    inputs:
+      check_only:
+        description: 'Read-only workflow health check; no email or queue changes'
+        type: boolean
+        default: true
 
 permissions:
   contents: read
@@ -37,4 +42,9 @@ jobs:
           MS_GRAPH_CLIENT_ID:        ${{ secrets.MS_GRAPH_CLIENT_ID }}
           MS_GRAPH_CLIENT_SECRET:    ${{ secrets.MS_GRAPH_CLIENT_SECRET }}
           MS_GRAPH_FROM:             ${{ secrets.MS_GRAPH_FROM }}
-        run: python3 scripts/watchdog.py
+        run: |
+          if [ "${{ inputs.check_only }}" = "true" ]; then
+            python3 scripts/watchdog.py --workflows-only
+          else
+            python3 scripts/watchdog.py
+          fi
