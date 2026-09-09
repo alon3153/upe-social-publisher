@@ -1,0 +1,31 @@
+name: Watchdog and publishing safety tests
+
+on:
+  pull_request:
+    paths:
+      - 'scripts/watchdog.py'
+      - 'scripts/publish_approved.py'
+      - 'publishers/**'
+      - 'tests/**'
+      - 'requirements*.txt'
+      - '.github/workflows/watchdog*.yml'
+      - '.github/workflows/publish-approved.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install -r requirements.txt -r requirements-dev.txt
+      - run: >-
+          python -m pytest
+          tests/test_watchdog_workflows.py tests/test_watchdog_linkedin.py
+          tests/test_publish_approved_linkedin.py tests/test_publish_retry_transient.py -q

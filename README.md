@@ -2,7 +2,21 @@
 
 Daily automated publishing to Facebook Pages and Instagram Business accounts via Meta Graph API. Runs on GitHub Actions — no Mac dependency, no browser automation.
 
-**Schedule:** 09:00 IST every day (06:00 UTC cron).
+**Active approved-post schedule:** every two hours at 07:17, 09:17, 11:17,
+13:17, 15:17, 17:17 and 19:17 UTC, through `publish-approved.yml` and
+`scripts/publish_approved.py`. Only approved posts are eligible, and existing
+per-profile limits remain in force. Publisher invocations are serialized.
+
+**Health checks:** the daily watchdog runs at 13:47 UTC. Its five-hour publisher
+freshness limit counts only the 07:17–19:17 UTC window; planned overnight pauses
+are excluded, but failures and skipped runs remain visible. Queued and active
+runs are reported separately from a missing execution. A timing gap is evidence
+of a delay, not proof that GitHub's scheduler is dead.
+
+For a read-only live check, dispatch `watchdog.yml` with `check_only=true`
+(the manual default). This only reads workflow status and does not send email,
+publish posts or modify the approval queue. The older direct-publish commands
+below describe legacy tooling, not the current approved-post scheduler.
 
 ## Accounts
 

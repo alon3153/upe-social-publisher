@@ -1,0 +1,308 @@
+{
+  "generated_at": "2026-09-07T10:38:20",
+  "period_days": 7,
+  "networks": {
+    "instagram": {
+      "posts": 14,
+      "impressions": 896,
+      "reach": 541,
+      "interactions": 6,
+      "engagement_rate_pct": 0.67,
+      "caveat": null,
+      "top": {
+        "url": "https://www.instagram.com/p/Dc2nVw8HNf2/",
+        "content": "נופש חברה טוב לא מתחיל ביעד. הוא מתחיל בלוח שנה\n\nשני נופשי חברה. אותו גודל קבוצה, כמעט אותו תקציב. אחד מדובר שנה שלמה, השני נשכח תוך שבוע.\n\nההבדל לא היה היעד\n\nה",
+        "impressions": 143,
+        "interactions": 2
+      }
+    },
+    "facebook": {
+      "posts": 10,
+      "impressions": 158,
+      "reach": 119,
+      "interactions": 15,
+      "engagement_rate_pct": 9.49,
+      "caveat": null,
+      "top": {
+        "url": null,
+        "content": "",
+        "impressions": 148,
+        "interactions": 15
+      }
+    },
+    "tiktok": {
+      "posts": 0,
+      "impressions": 0,
+      "reach": 0,
+      "interactions": 0,
+      "engagement_rate_pct": 0.0,
+      "top": null
+    },
+    "linkedin": {
+      "posts": 12,
+      "impressions": 207,
+      "reach": 0,
+      "interactions": 34,
+      "engagement_rate_pct": 16.43,
+      "caveat": null,
+      "top": {
+        "url": "https://www.linkedin.com/feed/update/urn:li:share:7500440961831903232",
+        "content": "",
+        "impressions": 83,
+        "interactions": 0
+      }
+    },
+    "youtube": {
+      "posts": 2,
+      "impressions": 1824,
+      "reach": 0,
+      "interactions": 0,
+      "engagement_rate_pct": 0.0,
+      "caveat": null,
+      "top": {
+        "url": null,
+        "content": "",
+        "impressions": 1442,
+        "interactions": 0
+      }
+    }
+  },
+  "totals": {
+    "posts": 38,
+    "impressions": 3085,
+    "reach": 660,
+    "interactions": 55,
+    "engagement_rate_pct": 1.78
+  },
+  "leads": {
+    "ok": true,
+    "qualified_leads": 4,
+    "new_opportunities": 3,
+    "lead_object_count": 1,
+    "period_days": 30,
+    "source": "salesforce",
+    "definition": "new Opportunities + unconverted web Leads (form hand-raisers)",
+    "by_source": {
+      "Web": 2,
+      "Existing Customer": 1,
+      "Word of mouth": 1
+    },
+    "dominant_source": "Web",
+    "dominant_share_pct": 50,
+    "attribution_gap": false,
+    "attribution_note": "הייחוס מפוזר בין מספר מקורות"
+  },
+  "seo_geo": {
+    "generated_at": "2026-09-07",
+    "window_days": 28,
+    "sites": [
+      {
+        "site": "https://upe.co.il/",
+        "clicks": 158,
+        "impressions": 46250,
+        "avg_position": 36.0,
+        "clicks_prev": 160,
+        "impressions_prev": 42384,
+        "clicks_7d": 33,
+        "impressions_7d": 10774,
+        "top3_terms": [
+          [
+            "טיולי חברה",
+            1.4,
+            122,
+            0
+          ],
+          [
+            "הפקת אירועים קולינריים",
+            1.6,
+            34,
+            0
+          ],
+          [
+            "טיולי חברה יוקרתיים",
+            1.2,
+            33,
+            0
+          ],
+          [
+            "מה זה ערב גאלה",
+            2.6,
+            33,
+            0
+          ],
+          [
+            "נופש חברה במלטה",
+            1.1,
+            33,
+            0
+          ],
+          [
+            "איזה מקום מתאים לארגן כנס בינלאומי עם משתתפים מארצות שונות?",
+            1.7,
+            29,
+            0
+          ],
+          [
+            "אילו ארגוניות נחשבים לטובים ביותר?",
+            2.4,
+            29,
+            0
+          ]
+        ],
+        "top10_count": 53,
+        "top_opportunities": [
+          [
+            "הפקת נופש חברה",
+            16.9,
+            362
+          ],
+          [
+            "אירועי קונספט",
+            19.1,
+            282
+          ],
+          [
+            "ארגון טיולים לחברות",
+            10.7,
+            183
+          ],
+          [
+            "נופש חברה בחול",
+            17.1,
+            145
+          ],
+          [
+            "נופש חברה בארץ",
+            17.3,
+            141
+          ]
+        ],
+        "opportunity_pages": {
+          "הפקת נופש חברה": "https://upe.co.il/%D7%A0%D7%95%D7%A4%D7%A9-%D7%97%D7%91%D7%A8%D7%94/",
+          "אירועי קונספט": "https://upe.co.il/%D7%90%D7%99%D7%A8%D7%95%D7%A2-%D7%A7%D7%95%D7%A0%D7%A1%D7%A4%D7%98/",
+          "ארגון טיולים לחברות": "https://upe.co.il/%D7%98%D7%99%D7%95%D7%9C%D7%99-%D7%97%D7%91%D7%A8%D7%94/",
+          "נופש חברה בחול": "https://upe.co.il/%D7%A0%D7%95%D7%A4%D7%A9-%D7%97%D7%91%D7%A8%D7%94-%D7%91%D7%97%D7%95%D7%9C/",
+          "נופש חברה בארץ": "https://upe.co.il/%D7%A0%D7%95%D7%A4%D7%A9-%D7%97%D7%91%D7%A8%D7%94/",
+          "חברת הפקה": "https://upe.co.il/",
+          "טיול מאורגן לעובדים": "https://upe.co.il/%D7%98%D7%99%D7%95%D7%9C%D7%99-%D7%97%D7%91%D7%A8%D7%94/",
+          "טיולי תמריץ לחברות": "https://upe.co.il/%D7%98%D7%99%D7%95%D7%9C%D7%99-%D7%AA%D7%9E%D7%A8%D7%99%D7%A5-%D7%91%D7%97%D7%95%D7%9C/",
+          "הפקת נופש לחברות": "https://upe.co.il/%D7%A0%D7%95%D7%A4%D7%A9-%D7%97%D7%91%D7%A8%D7%94/",
+          "incentive travel spain": "https://upe.co.il/en/incentive-travel-to-spain-the-ultimate-planning-guide-for-international-companie/"
+        }
+      }
+    ],
+    "weekly_clicks": 33,
+    "clicks_28d": 158,
+    "top3_keywords": 7,
+    "top10_keywords": 53,
+    "geo": {
+      "status": "ok",
+      "cited": 4,
+      "total": 7,
+      "rate": 57.1
+    },
+    "competitors": [
+      {
+        "term": "הפקת אירועים עסקיים",
+        "pos": null,
+        "top3": [
+          "pinchevents.co.il",
+          "mantver.co.il",
+          "www.arbelpro.co.il"
+        ]
+      },
+      {
+        "term": "חברת הפקת אירועים",
+        "pos": null,
+        "top3": [
+          "www.arbelpro.co.il",
+          "pinchevents.co.il",
+          "mantver.co.il"
+        ]
+      },
+      {
+        "term": "הפקת כנסים",
+        "pos": null,
+        "top3": [
+          "www.ortra.co.il",
+          "www.eron.co.il",
+          "www.by-p.com"
+        ]
+      },
+      {
+        "term": "טיולי תמריץ לעובדים",
+        "pos": 4,
+        "top3": [
+          "stage.wallatours.co.il",
+          "xtrip.co.il",
+          "www.kokopeliadventure.com"
+        ]
+      },
+      {
+        "term": "eventos corporativos españa",
+        "pos": null,
+        "top3": [
+          "www.ideafoster.com",
+          "showflow.es",
+          "amgservicios.com"
+        ]
+      },
+      {
+        "term": "incentive travel spain",
+        "pos": null,
+        "top3": [
+          "www.indigo-dmc.com",
+          "www.uyuni-incentivetravels.com",
+          "www.g20corporation.com"
+        ]
+      },
+      {
+        "term": "corporate events barcelona",
+        "pos": null,
+        "top3": [
+          "www.barcelona-life.com",
+          "www.eventbrite.com",
+          "tuseteventos.com"
+        ]
+      }
+    ],
+    "ok": true,
+    "aeo_cited_engines": 4
+  },
+  "site_inventory": {
+    "ok": true,
+    "service_pages": [
+      "why-uproduction-events-trust",
+      "אירוע-קונספט",
+      "אירועים-אקסלוסיביים",
+      "אירועים-עסקיים-מיוחדים",
+      "אירועים-קולינרים",
+      "ארגון-כנסים",
+      "הפקת-אירועי-חברה",
+      "הפקת-אירועי-חברה-בחול",
+      "הפקת-אירועים-לחברות-הייטק",
+      "הפקת-אירועים-עסקיים",
+      "הפקת-כנסים",
+      "חברת-הפקות",
+      "טיולי-חברה",
+      "טיולי-תמריץ-בחול",
+      "טיולי-תמריץ-לחברות",
+      "כנסים-לחברות-הייטק",
+      "כנסים-עסקיים",
+      "נופש-חברה",
+      "נופש-חברה-בחול",
+      "נופש-חברה-עם-חבילת-ספא-לעובדים",
+      "נופשים-וטיולי-תמריץ"
+    ],
+    "service_count": 21,
+    "key_pages": {
+      "llms.txt": true,
+      "llms-full.txt": true,
+      "faq": true,
+      "services_index": true,
+      "brand_hub_trust": true
+    },
+    "blog_article_count": 301,
+    "source": "github:alon3153/uproduction-astro"
+  }
+}

@@ -2,8 +2,9 @@ name: Publish Approved
 
 on:
   schedule:
-    # every 2h, 07:00-19:00 UTC — publishes posts you approved, soon after approval
-    - cron: "0 7-19/2 * * *"
+    # Every 2h, 07:17-19:17 UTC. Avoid GitHub's top-of-hour schedule congestion.
+    # Keep scripts/watchdog.py's publishing window aligned with these hours.
+    - cron: "17 7-19/2 * * *"
   workflow_dispatch:
     inputs:
       dry_run:
@@ -14,6 +15,10 @@ on:
 
 permissions:
   contents: read
+
+concurrency:
+  group: publish-approved
+  cancel-in-progress: false
 
 jobs:
   publish:
