@@ -102,7 +102,7 @@ this repo in Claude Code gets them automatically:
 | Plugin | What it adds | Setup |
 |---|---|---|
 | `playwright` | Browser automation MCP server (Microsoft). Lets Claude open pages, click, fill forms, take screenshots — e.g. to verify a published post renders, or to walk a manual OAuth consent screen. Runs `npx @playwright/mcp@latest`; needs Node and a Chromium install (`npx playwright install chromium` locally; pre-installed on Claude Code on the web). | none |
-| `github` | Official GitHub MCP server (remote, `https://api.githubcopilot.com/mcp/`). Issues, PRs, workflow runs, code search from inside Claude Code. | set `GITHUB_PERSONAL_ACCESS_TOKEN` in your shell (a fine-grained PAT with repo + actions read is enough for this repo) |
+| `github` | Official GitHub MCP server (remote, `https://api.githubcopilot.com/mcp/`). Issues, PRs, workflow runs, code search from inside Claude Code. | set `GITHUB_PERSONAL_ACCESS_TOKEN` in your shell (a fine-grained PAT with repo + actions read is enough for this repo). Local Claude Code only: on Claude Code on the web the environment's network policy blocks `api.githubcopilot.com`, and the built-in GitHub tools there already cover the same ground. |
 
 These plugins are developer tooling only. The publishing pipeline itself is
 still Graph API / GitHub Actions and does not drive a browser.
