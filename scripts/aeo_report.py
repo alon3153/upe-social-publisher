@@ -176,10 +176,9 @@ def build_email(scorecard, prev, shipped, queued, failures, pr_url, citations_st
 
 
 def build_daily_email(scorecard, prev, keywords, failures, target=90, reminders=None):
-    """Daily #1-tracking email: per-model mention-rate (primary) + product_search
-    vs the #1 target, delta vs yesterday, and competitor keyword opportunities."""
+    """Report mentions and the judge rubric score; recommendation rank is unmeasured."""
     prev, baseline_note = _comparable(scorecard, prev)
-    rows, all_top = "", True
+    rows, all_at_target = "", bool(scorecard["models"])
     for model, block in scorecard["models"].items():
         pblock = (prev or {}).get("models", {}).get(model, {}) if prev else {}
         degraded = block.get("degraded")
@@ -189,13 +188,13 @@ def build_daily_email(scorecard, prev, keywords, failures, target=90, reminders=
         n = block.get("n_nonbranded") or 0
         md = _min_delta(n)
         if ps < target:
-            all_top = False
+            all_at_target = False
         if degraded:
             status = "⛔ מכשיר תקול — לא נמדד"
             arrow = "—"
-            all_top = False
+            all_at_target = False
         else:
-            status = "✅ #1" if ps >= target else f"פער {target - ps} ל-#1"
+            status = "✅ יעד הציון הושג" if ps >= target else f"פער {target - ps} נקודות ליעד {target}"
             arrow = _arrow(ps, pblock.get("product_search") if pblock else None, md)
         frac = f' <span dir="ltr">({block.get("mentioned_nonbranded", 0)}/{n})</span>' if n else ""
         mr_cell = f"{mr}%{frac}" if mr is not None else "—"
@@ -216,8 +215,8 @@ def build_daily_email(scorecard, prev, keywords, failures, target=90, reminders=
     comps = ", ".join(keywords.get("competitors", [])) or "—"
     actions = "".join(f'<li dir="rtl" style="text-align:right;">{a}</li>'
                       for a in keywords.get("priority_actions", [])) or '<li dir="rtl">—</li>'
-    headline = ("🥇 UPE מוביל (#1) בכל המודלים!" if all_top
-                else "מטרה: UPE #1 בתוצאות ה-AI — הנה הפער והצעדים")
+    headline = ("יעד ציון הבולטות הושג בכל המודלים שנמדדו" if all_at_target
+                else "נראות UPE בתוצאות ה-AI — המדידה והצעדים")
 
     reminders_html = ""
     if reminders:
@@ -225,17 +224,18 @@ def build_daily_email(scorecard, prev, keywords, failures, target=90, reminders=
         reminders_html = ('<h3 dir="rtl" style="color:#b00;">⏰ ממתין לך מעל 72 שעות</h3>'
                           f'<ul dir="rtl" style="direction:rtl;text-align:right;">{items}</ul>')
     fails_html = (f'<p dir="rtl" style="color:#b00;">תקלות: {"; ".join(failures)}</p>' if failures else "")
-    subject = f"מעקב AEO יומי — {scorecard['date']} ({'#1 בכל המודלים' if all_top else 'בדרך ל-#1'})"
+    subject = f"מעקב AEO יומי — {scorecard['date']} ({'יעד הציון הושג' if all_at_target else 'מעקב נראות'})"
     html = f"""<html dir="rtl" lang="he">
 <head><meta charset="utf-8"></head>
 <body dir="rtl" style="font-family:Arial,Helvetica,sans-serif;font-size:14px;direction:rtl;text-align:right;">
 <div dir="rtl" style="direction:rtl;text-align:right;">
 <h2 dir="rtl">{headline}</h2>
-<p dir="rtl">תאריך: {scorecard['date']} · מדד: חיפוש-מוצר (האם UPE צץ ראשון בשאלות קטגוריה)</p>
+<p dir="rtl">תאריך: {scorecard['date']} · מדד: ציון בולטות AI (<span dir="ltr">0–100</span>) לפי הערכת מודל שופט</p>
+<p dir="rtl">יעד הציון: {target}. זהו סף עבודה פנימי, לא מיקום בתוצאות. דירוג ראשון לא נמדד.</p>
 <table dir="rtl" style="border-collapse:collapse;border:1px solid #ddd;">
 <tr><th dir="rtl" style="padding:4px 8px;">מודל</th><th dir="rtl" style="padding:4px 8px;">אזכור לא-ממותג</th>
-<th dir="rtl" style="padding:4px 8px;">חיפוש מוצר</th>
-<th dir="rtl" style="padding:4px 8px;">שינוי</th><th dir="rtl" style="padding:4px 8px;">סטטוס #1</th></tr>
+<th dir="rtl" style="padding:4px 8px;">ציון בולטות AI</th>
+<th dir="rtl" style="padding:4px 8px;">שינוי</th><th dir="rtl" style="padding:4px 8px;">סטטוס יעד הציון</th></tr>
 {rows}
 </table>
 {baseline_note}

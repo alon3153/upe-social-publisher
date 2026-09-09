@@ -37,9 +37,13 @@ def test_build_daily_email_rtl_status_and_keywords():
     assert "מעקב" in subject or "AEO" in subject
 
 
-def test_build_daily_email_says_number_one_when_at_target():
+def test_build_daily_email_never_claims_first_place_from_judge_score():
     subject, html = rep.build_daily_email(sc(95, 92, 100), None, {"he": [], "en": [], "competitors": [], "priority_actions": []}, failures=[], target=90)
-    assert "#1" in html or "מוביל" in html or "ראשון" in html
+    assert "#1" not in html + subject
+    assert "דירוג ראשון לא נמדד" in html
+    assert "יעד הציון הושג" in html
+    assert "0–100" in html
+    assert "יעד הציון: 90" in html
 
 
 def test_send_uses_injected_fn():
@@ -128,3 +132,16 @@ def test_comparative_pages_are_disclosed():
     _, html = r.build_email(_sc({"claude": _block()}), None, [], 0, [], None,
                             comparative=[{"slug": "top-event-companies", "competitors": ["Freeman"]}])
     assert "עמודי השוואה שפורסמו" in html and "Freeman" in html
+
+
+def test_below_target_is_a_score_gap_not_a_ranking_gap():
+    subject, html = rep.build_daily_email(sc(29, 20, 0), None, {}, [], target=70)
+    assert "פער 41 נקודות ליעד 70" in html
+    assert "דירוג ראשון לא נמדד" in html
+    assert "#1" not in html + subject
+
+
+def test_empty_model_set_does_not_claim_target_achieved():
+    subject, html = rep.build_daily_email({"date": "2026-09-09", "models": {}}, None, {}, [], target=70)
+    assert "יעד הציון הושג" not in subject + html
+    assert "דירוג ראשון לא נמדד" in html
