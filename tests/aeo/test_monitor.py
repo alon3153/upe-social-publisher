@@ -76,3 +76,10 @@ def test_daily_judge_falls_through_providers(monkeypatch):
                                 today="2026-08-30")
     assert "claude" in tried and "gemini" in tried      # fell through
     assert out["scorecard"]["models"], "scorecard must not be empty when a judge succeeded"
+
+
+def test_degraded_high_score_does_not_satisfy_target():
+    scorecard = {"models": {"claude": {"product_search": 95, "degraded": True}}}
+    assert not mon._meets_score_target(scorecard, 70)
+    scorecard["models"]["claude"]["degraded"] = False
+    assert mon._meets_score_target(scorecard, 70)

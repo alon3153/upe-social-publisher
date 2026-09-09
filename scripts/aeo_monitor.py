@@ -28,7 +28,10 @@ def _prev(history_path):
 def _meets_score_target(scorecard, target):
     """An internal rubric threshold, never evidence of first-place ranking."""
     models = scorecard.get("models", {})
-    return bool(models) and all(b.get("product_search", 0) >= target for b in models.values())
+    return bool(models) and all(
+        not b.get("degraded") and b.get("product_search", 0) >= target
+        for b in models.values()
+    )
 
 
 def run_daily(history_dir=None, ask_fn=None, judge_fn=None, send_fn=None, today=None):
