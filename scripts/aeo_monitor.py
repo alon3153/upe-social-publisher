@@ -1,5 +1,5 @@
-"""Daily AEO #1-tracking monitor: probe 3 models, compare to yesterday, research
-competitor keywords (he+en) when UPE is not the #1 answer, email Alon. No content
+"""Daily AEO visibility monitor: probe 3 models, compare to yesterday, research
+competitor keywords (he+en) when the judge rubric score is below its target, email Alon. No content
 generation — that stays in the weekly loop (aeo_run.py) so pages have time to index."""
 import os, sys, json, argparse, datetime
 from pathlib import Path
@@ -25,7 +25,8 @@ def _prev(history_path):
     return None
 
 
-def _is_number_one(scorecard, target):
+def _meets_score_target(scorecard, target):
+    """An internal rubric threshold, never evidence of first-place ranking."""
     models = scorecard.get("models", {})
     return bool(models) and all(b.get("product_search", 0) >= target for b in models.values())
 
@@ -62,7 +63,7 @@ def run_daily(history_dir=None, ask_fn=None, judge_fn=None, send_fn=None, today=
     aeo_probe.append_history(scorecard, history_path)
 
     keywords = {"he": [], "en": [], "competitors": [], "priority_actions": []}
-    if not _is_number_one(scorecard, TARGET):
+    if not _meets_score_target(scorecard, TARGET):
         try:
             # strategist call is plain-text (no grounding needed); unwrap ask_meta dicts
             plain_fn = lambda model, text: (lambda r: r["text"] if isinstance(r, dict) else r)(ask_fn(model, text))

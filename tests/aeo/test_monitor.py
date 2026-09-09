@@ -22,13 +22,13 @@ def test_daily_monitor_probes_researches_and_emails(tmp_path, monkeypatch):
                         send_fn=lambda s, h: (sent.update({"s": s, "h": h}), (True, "ok"))[1],
                         today="2026-06-28")
     assert out["scorecard"]["models"]["claude"]["product_search"] == 40
-    assert out["keywords"]["en"] == ["conference production"]   # researched because not #1
+    assert out["keywords"]["en"] == ["conference production"]   # researched because score target is unmet
     assert out["email_sent"] is True
     assert "מעקב AEO" in sent["s"]
     assert (tmp_path / "aeo_daily_history.json").exists()
 
 
-def test_daily_monitor_skips_research_when_number_one(tmp_path, monkeypatch):
+def test_daily_monitor_skips_research_when_score_target_met(tmp_path, monkeypatch):
     monkeypatch.setenv("ANTHROPIC_API_KEY", "x")
     calls = {"research": 0}
 
@@ -42,7 +42,7 @@ def test_daily_monitor_skips_research_when_number_one(tmp_path, monkeypatch):
                                           "reputation": 95, "competitors": [], "gap_note": ""})
     out = mon.run_daily(str(tmp_path), ask_fn=ask_fn, judge_fn=judge_fn,
                         send_fn=lambda s, h: (True, "ok"), today="2026-06-28")
-    # already #1 → no competitor research call
+    # score target met → no competitor research call
     assert calls["research"] == 0
     assert out["keywords"]["en"] == []
     assert out["email_sent"] is True
