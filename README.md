@@ -87,6 +87,23 @@ export FB_UPRODUCTIONEVENTS_PAGE_TOKEN=...
 python3 scripts/publish.py --dry-run
 ```
 
+## Spec-Driven Development (Spec Kit)
+
+The repo is initialized with [GitHub Spec Kit](https://github.github.io/spec-kit/).
+Templates, scripts and the project constitution live in `.specify/`; the
+`/speckit-*` skills for Claude Code live in `.claude/skills/`.
+
+Install the `specify` CLI (requires [uv](https://docs.astral.sh/uv/)):
+
+```bash
+uv tool install specify-cli --from git+https://github.com/github/spec-kit.git
+specify check
+```
+
+Typical flow inside Claude Code: `/speckit-constitution` → `/speckit-specify`
+→ `/speckit-plan` → `/speckit-tasks` → `/speckit-implement`. Optional:
+`/speckit-clarify`, `/speckit-analyze`, `/speckit-checklist`, `/speckit-converge`.
+
 ## Content
 
 - `content/days/*.json` — one file per day, contains LinkedIn / Instagram / Facebook texts
