@@ -1,72 +1,72 @@
 {
-  "updated_at": "2026-09-10",
+  "updated_at": "2026-09-11",
   "scores": {
-    "instagram": 38,
-    "facebook": 22,
+    "instagram": 42,
+    "facebook": 18,
     "tiktok": 0,
-    "linkedin": 62,
+    "linkedin": 61,
     "youtube": 55,
-    "google_organic_geo": 58,
-    "overall": 52
+    "google_organic_geo": 68,
+    "overall": 72
   },
   "recommendations": [
     {
       "category": "gated",
       "priority": "P0",
-      "action": "אופטימיזציה דחופה של 5 דפי ה-opportunity הגדולים: עדכון H1, title, word-count ל-1,500+ מילים, הוספת case study מספרי ו-CTA ל-'קבל הצעה' — לדפים: נופש-חברה, אירוע-קונספט, טיולי-חברה, נופש-חברה-בחול, ארגון-כנסים",
-      "expected_impact": "העלאת CTR מ-Top-3 ל-3-5% תביא 180-300 קליקים/שבוע נוספים תוך 60-90 יום, ועלייה ישירה בלידים Web-attributed — זהו נתיב ה-ROI המהיר ביותר.",
+      "action": "אופטימיזציה מיידית של 3 דפי שירות בעדיפות גבוהה: /נופש-חברה/ (pos.17, 363 חיפושים), /אירוע-קונספט/ (pos.19, 282 חיפושים), /נופש-חברה-בחול/ (pos.17, 143 חיפושים) — עדכן H1, title tag, meta description, word-count ל-1,200+ מילים, הוסף FAQPage JSON-LD schema, הוסף CTA ברור לטופס יצירת קשר",
+      "expected_impact": "מעבר מעמדות 17-19 ל-Top-5 בצפי 8-14 שבועות; 363 חיפושים חודשיים על 'הפקת נופש חברה' בלבד עשויים להוסיף 20-40 קליקים/שבוע ו-1-2 לידים חדשים/חודש",
       "channel": "google_organic"
     },
     {
       "category": "gated",
       "priority": "P0",
-      "action": "השקת Reels שבועיים מאירועים אמיתיים: 60-90 שניות BTS מכל הפקה — setup, reveal-moment, תגובות לקוח, גב-לגב עם לוגו חברה (מושחר); אישור צוות לפני פרסום",
-      "expected_impact": "Reels מניבים reach 30-38% לעומת 13% לתמונה סטטית; 3 Reels/שבוע צפויים להכפיל את ה-reach של אינסטגרם ולהשיג 2,000+ חשיפות/שבוע תוך 30 יום.",
-      "channel": "instagram"
-    },
-    {
-      "category": "gated",
-      "priority": "P1",
-      "action": "פתיחת TikTok channel ופרסום 3 Shorts/שבוע — אותו חומר גלם של Instagram Reels, ערוך לפורמט TikTok native (טקסט עם emoji, hook ב-3 שניות הראשונות, Hebrew captions)",
-      "expected_impact": "TikTok הוא ה-discovery engine הצומח ביותר לבניית follower base לנורת-הצפון 500K; 0 עלות תוכן נוספת כי מדובר בשימוש חוזר בחומר קיים.",
-      "channel": "tiktok"
-    },
-    {
-      "category": "gated",
-      "priority": "P1",
-      "action": "LinkedIn thought-leadership posts מהמנכ\"ל/שותפים הבכירים: פוסט שבועי בגוף ראשון על החלטה שנלמדה מהפקה ספציפית — פורמט 'מה שגיתי + מה עשיתי' עם CTA לשיחה",
-      "expected_impact": "פוסטים אישיים של founders מניבים 3-5x יותר reach מפוסטי חברה ב-LinkedIn; כל שיחה שנפתחת בתגובות = lead B2B פוטנציאלי ישיר מהקהל הרלוונטי ביותר.",
+      "action": "הפעל אסטרטגיית LinkedIn executive advocacy: מנכ\"ל/שותפים בכירים מפרסמים 2 פוסטים/שבוע מפרופיל אישי — case study קצר, תובנת תעשייה, שאלה לקהל; דף החברה מגביר (reposts) בלבד",
+      "expected_impact": "פרופילים אישיים מייצרים 8× יותר engagement מדפי חברה; צפי להכפיל impressions LinkedIn ל-350+ ולהוסיף 1-2 לידים B2B/רבעון מהודות לחשיפה ל-CMO/HR ישראלי",
       "channel": "linkedin"
     },
     {
       "category": "gated",
       "priority": "P1",
-      "action": "Digital PR: הצעת UPE כמקור מומחה ל-3 כתבות תקשורת עסקית ישראלית (Globes, TheMarker, Calcalist) בנושאי incentive travel trends ו-ROI של אירועי חברה — לינק חוזר לדפי שירות קיימים",
-      "expected_impact": "קישורים חוזרים ממוצאים authority גבוה יעלו את הדירוג ה-organic של דפי ה-service ויחזקו את ה-AEO citation rate — Perplexity מגמל freshness ו-multi-channel authority.",
+      "action": "צור 3 סרטוני YouTube ממוטבי-SEO (5-8 דקות כל אחד) על שאלות קונים: 'כמה עולה הפקת כנס ל-200 איש?', 'איך בוחרים חברת הפקה לאירוע חברה?', 'מה ההבדל בין נופש חברה לטיול תמריץ?' — כולל timestamps, תיאור 300+ מילים עם מונחים רלוונטיים, קישור לדף שירות",
+      "expected_impact": "YouTube SEO עם תוכן evergreen B2B מגדיל אורגני; סרטונים שעונים על שאלות קונים מוסיפים ציטוטים ב-AI Overviews ומחזקים את ה-57.1% AEO rate הנוכחי",
+      "channel": "youtube"
+    },
+    {
+      "category": "gated",
+      "priority": "P1",
+      "action": "בנה 10+ קישורים נכנסים (off-page) לדפי שירות מרכזיים: פנה ל-5 פורטלים עסקיים ישראלים (Bizportal, Calcalist, Globes אירועים, TheMarker) ול-3 ספקי MICE (מלונות, venue ישראל) לפרסום guest content עם קישור לדף השירות",
+      "expected_impact": "קישורים נכנסים מאתרי סמכות ישראליים מאיצים מעבר ל-Top-3 על מונחים תחרותיים; כל link מאתר authority מוסיף משקל domain לכלל 21 דפי השירות",
       "channel": "google_organic"
     },
     {
       "category": "gated",
       "priority": "P2",
-      "action": "אופטימיזציה של דף ה-incentive-travel-spain באנגלית: הוספת VideoObject schema, FAQ schema עם שאלות DMC ו-case study מספרי — ללא יצירת דף חדש (הדף קיים ב-upe.co.il/en/incentive-travel-to-spain)",
-      "expected_impact": "הדף כבר מצוטט ב-AI responses אנגליים אך אינו ב-Google Top-10 אורגני; שיפור schema ו-word-count ל-2,000+ מילים יכניס אותו לעמ' 1 על 'incentive travel spain' ו-'DMC spain international company'.",
+      "action": "הפעל TikTok לראשונה: 3 Reels/שבוע של '60 שניות מאחורי הקלעים' בהפקות — בלי תסריט, אותנטי, עם כיתוב עברי; שתף מקביל ב-Instagram Reels לחיסכון בתפוקה",
+      "expected_impact": "TikTok בישראל 2026 בעל פוטנציאל B2B גבוה לsocial proof; short-form authentic content מושך decision-makers צעירים; cross-posting ל-Instagram מכפיל ערך ביחידת מאמץ",
+      "channel": "tiktok"
+    },
+    {
+      "category": "gated",
+      "priority": "P2",
+      "action": "שגר קמפיין AEO ממוקד: עדכן את llms-full.txt הקיים עם נתוני לקוחות מספריים (מספר אירועים, מדינות, שנות ניסיון) בפורמט Q&A מובנה; הוסף FAQPage schema ל-5 דפי שירות מובילים",
+      "expected_impact": "נתונים ספציפיים מגדילים שיעור ציטוט AI; UPE כבר מצוטטת ב-4 מנועים — מבנה Q&A ועמידה בדרישות AEO יעלו citation rate מ-57.1% לכיוון 70%+",
       "channel": "google_organic"
     }
   ],
   "follower_growth_plan": [
-    "שלב 1 (חודשים 1-3) — הפעלת Reels ו-YouTube Shorts שבועיים מהפקות אמיתיות: כל event מניב 1 Reel + 2 Shorts; מטרה 500 עוקבים חדשים/חודש.",
-    "שלב 2 (חודשים 2-6) — פתיחת TikTok ב-repurpose מלא מאינסטגרם; hook ב-3 שניות הראשונות, soundtrack מקומי-עברי, hashtags היברידיים (#עסקים #קורפוריאט #event); TikTok הוא מנוע הגדילה המהיר ביותר לבסיס עוקבים.",
-    "שלב 3 (חודשים 3-9) — LinkedIn company page: סדרת תוכן 'Behind the Production' — סרטוני 45 שניות של decision points ב-B2B event planning; כוון ל-100 follows חדשים/שבוע מקהל CMO/HR/CEO.",
-    "שלב 4 (חודשים 6-12) — שיתופי פעולה עם vendors משלימים (מלונות, קייטרינג, מיקומים) על co-content ו-story-takeovers; כל שיתוף חושף UPE לקהל חדש בגודל 5K-50K עוקבים.",
-    "שלב 5 (שנה 2) — בניית community: LinkedIn newsletter עברי על MICE trends ב-ישראל, Instagram Close Friends לאנשי אירועים, YouTube series 'איך מפיקים X-type event'; תוכן שמייצר subscribers לאורך זמן.",
-    "שלב 6 (שנה 2-3) — SEO-to-social loop: כל Top-3 keyword מאתר הופך ל-Reel + Short + LinkedIn post; תנועה אורגנית מגוגל מופנית לפולו ב-social דרך CTA בדפי שירות — מנוע צמיחה שמתחזק עצמית."
+    "שלב 1 (חודשים 1-3): בסס executive presence: 2 מנהלים בכירים פעילים ב-LinkedIn באופן אישי — מטרה 500 followers חדשים לדפי UPE דרך amplification אורגני",
+    "שלב 2 (חודשים 2-6): הפעל TikTok + Instagram Reels בסדרת 'behind the scenes' — 3 פוסטים/שבוע; תוכן אותנטי מאחורי הקלעים הוא מנוע העוקבים המהיר ביותר ב-B2B ויזואלי",
+    "שלב 3 (חודשים 3-9): בנה 'הפקת האירועים ב-60 שניות' — פורמט קבוע שבועי בכל הפלטפורמות; פורמט חוזר וניתן לצפייה הוא הדרך להגיע ל-10K+ followers ראשונים",
+    "שלב 4 (חודשים 6-12): שגר LinkedIn Newsletter עברי ל-HR/CMO ישראלי — 'מדריך מנהלים לאירועי חברה'; Newsletters ב-LinkedIn מקבלים distribution priority ובונים subscriber base נפרד",
+    "שלב 5 (שנה 2): שותפויות תוכן עם ספקי MICE (מלונות, venues, קייטרינג) לcross-promotion — הגדלה ל-50K+ followers דרך קהלים משלימים",
+    "שלב 6 (שנה 3): YouTube SEO compounding — 50+ סרטונים ממוטבים יוצרים long-tail discovery אורגני; YouTube הוא מנוע העוקבים ל-500K בטווח הארוך עם ROI גבוה ביותר"
   ],
   "leads_actions": [
-    "פריצת פקק ה-CTR מ-Top-3: עדכון מיידי של meta descriptions ב-5 דפי opportunity (נופש חברה, אירועי קונספט, נופש בחול, ארגון כנסים, טיולי חברה) לכלול CTA ישיר — מדובר בנתיב המהיר ביותר להגדלת Web leads ללא תוכן חדש.",
-    "הוספת CTA form בולט בעמ' 1 Above-the-fold בכל דף שירות קיים: 'השאירו פרטים וקבלו הצעה תוך 24 שעות' — הדפים כבר מקבלים תנועה אך אין conversion point ברור; זו נפילה מסחרית קריטית.",
-    "LinkedIn outreach מחברת UPE: 10 connection requests/שבוע לתפקידי CMO/HR VP/Event Manager בחברות 200+ עובדים בישראל, עם הודעת value-first (לא pitch) — בסביבת B2B ישראלית שיחות LinkedIn ממירות גבוה.",
-    "אוטומציית תזכורת לטפסים שהוגשו: כל Web Lead שמגיש טופס מקבל email response תוך שעה עם case study רלוונטי לסוג האירוע שציין — זמן תגובה הוא גורם ההמרה הקריטי ביותר ב-B2B inbound.",
-    "הוספת testimonial videos לדפי שירות קיימים: 3 לקוחות מרוצים מצולמים ב-30-60 שניות אמיתיים, עם VideoObject schema — מגדיל גם AI citation rate וגם אמון מבקרים חדשים שהגיעו מחיפוש אורגני.",
-    "בניית lead magnet: מדריך PDF 'ROI של אירועי חברה — כיצד למדוד' כ-gated asset בדפי שירות בעלי תנועה גבוהה; מי שמוריד = qualified lead מוסמך עם context ברור לצוות המכירות."
+    "כפיל SEO עברי מסחרי על /נופש-חברה/ ו-/אירוע-קונספט/ — שתי עמדות pos.17-19 עם 645 חיפושים חודשיים מצטברים; כניסה ל-Top-5 מוסיפה 1-2 לידים/חודש ישירות",
+    "הגדל internal linking מ-292 מאמרי בלוג קיימים לדפי שירות מסחריים — עלות אפסית, אפקט מיידי על crawl authority; מקד 10 מאמרים בעלי traffic גבוה לכל דף שירות",
+    "הוסף CTA ברור ('קבל הצעת מחיר') בכל דף שירות ובסוף כל מאמר בלוג — Web leads (33% נתח) מעידים שהאתר ממיר, אך יש לפשט את מסע המשתמש לטופס",
+    "הפעל LinkedIn executive posting: ציטוט לקוח אחד/שבוע + תובנה אחת/שבוע מפרופיל אישי — B2B ישראלי מקבל החלטות דרך מוניטין אישי; lead שנוצר ב-LinkedIn מגיע עם trust גבוה",
+    "עדכן llms-full.txt הקיים בנתונים כמותיים (16+ שנה, 200+ אירועים, 20+ מדינות) — AI citations כבר מחזירות UPE; נתונים ספציפיים מגדילים את שיעור ה'נבחר' (לא רק 'מוזכר') ב-AI",
+    "סגור פער ייחוס: ודא שנציגי מכירות מסמנים 'Google Organic' / 'Web' ב-Salesforce בכל lead שהזכיר את האתר — 'Other' (1 ליד) ו-'Web' (3 לידים) עשויים להסתיר Google Organic נוספים שיחשפו היכן באמת לדחוף"
   ]
 }
