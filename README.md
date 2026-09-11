@@ -27,6 +27,7 @@ below describe legacy tooling, not the current approved-post scheduler.
 | Instagram Business | `@uproductionevents` | `IG_UPRODUCTIONEVENTS_USER_ID`, `IG_UPRODUCTIONEVENTS_ACCESS_TOKEN` |
 | Instagram Business | `@uproduction_spain` | `IG_UPRODUCTION_SPAIN_USER_ID`, `IG_UPRODUCTION_SPAIN_ACCESS_TOKEN` |
 | Instagram Business | `@alon3153` | `IG_ALON3153_USER_ID`, `IG_ALON3153_ACCESS_TOKEN` |
+| KIE (kie.ai) | media generation API | `KIE_API_KEY` |
 
 LinkedIn publisher will be added once the LinkedIn Developer App is approved (Phase C3).
 
@@ -75,6 +76,16 @@ python3 scripts/publish.py --catchup
 - **FB Page tokens** issued from Meta App should be **long-lived Page tokens** (no expiry, as long as the user token they were exchanged from stays valid). See `https://developers.facebook.com/docs/pages/access-tokens`.
 - **IG access tokens** are the Page Access Tokens of the **linked Facebook Page**. Use the same token for both `FB_..._PAGE_TOKEN` and `IG_..._ACCESS_TOKEN`. The IG Business User ID is fetched via `GET /{page_id}?fields=instagram_business_account`.
 - All tokens should have permissions: `pages_read_engagement`, `pages_manage_posts`, `instagram_basic`, `instagram_content_publish`.
+
+## KIE API key
+
+Media generation calls go through `publishers/kie.py`, which reads the bearer
+token from `KIE_API_KEY`. Add it as a repository secret (`KIE_API_KEY`) for
+Actions and to `.env` for local runs (see `.env.example`). Verify it with:
+
+```bash
+python3 scripts/kie_check.py        # prints validity + remaining credits
+```
 
 ## Local dev
 
