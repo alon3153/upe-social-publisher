@@ -140,16 +140,21 @@ def sync_backlog(inits):
     for r in recs.get("recommendations", []):
         incoming.append((r.get("action", ""), {"kind": "recommendation",
                          "priority": r.get("priority", "P2"), "channel": r.get("channel", ""),
-                         "expected_impact": r.get("expected_impact", "")}))
+                         "expected_impact": r.get("expected_impact", ""),
+                         "action_key": r.get("action_key", ""),
+                         "owner": r.get("owner", ""), "success_metric": r.get("success_metric", "")}))
     for s in recs.get("leads_actions", []):
         incoming.append((s, {"kind": "leads_action", "priority": "leads", "channel": "leads"}))
     for s in recs.get("follower_growth_plan", []):
         incoming.append((s, {"kind": "follower_plan", "priority": "follower", "channel": "growth"}))
-    seen = set()
     for title, meta in incoming:
         if not title.strip():
             continue
-        iid = _iid(title); seen.add(iid)
+        key = meta.get("action_key")
+        # Resolve to an existing ID to preserve artifact paths and approval tokens.
+        iid = next((i for i, it in inits.items() if key and
+                    (it.get("action_key") == key or i == key) and
+                    it.get("channel") == meta.get("channel")), _iid(title))
         if iid not in inits:
             inits[iid] = {"id": iid, "title": title, "status": "todo", "revisions": 0,
                           "history": [], "created": _today(), "updated": _today(), **meta}
@@ -157,10 +162,8 @@ def sync_backlog(inits):
             inits[iid].update({k: v for k, v in meta.items() if v})
             if inits[iid].get("status") == "archived":
                 inits[iid]["status"] = "todo"
-    # recs that dropped off the latest council output → archive (keep artifacts)
-    for iid, it in inits.items():
-        if iid not in seen and it.get("status") not in ("done", "archived"):
-            it["status"] = "archived"; it["updated"] = _today()
+    # Daily omission is not cancellation. Keep work and approval state intact.
+    # Retirement must be explicit; a council failure must not erase the backlog.
     return inits, None
 
 
@@ -172,7 +175,7 @@ def pick_to_advance(inits, approved, limit):
             it["status"] = "approved"; continue
         if it.get("status") not in open_states:
             continue
-        if it.get("status") == "awaiting_approval" and it.get("revisions", 0) >= MAX_REVISIONS:
+        if it.get("status") == "awaiting_approval" or it.get("revisions", 0) >= MAX_REVISIONS:
             continue  # parked — waiting for Alon
         cands.append(it)
     cands.sort(key=lambda it: (PRIORITY_ORDER.get(it.get("priority"), 5),
@@ -225,6 +228,9 @@ def run_agent(it):
     prompt = AGENT_PROMPT.format(kind=it.get("kind"), channel=it.get("channel"),
                                  priority=it.get("priority"), title=it.get("title"),
                                  impact=it.get("expected_impact", "—"), prior=prior or "(no prior draft)")
+    prompt += "\nOWNER: " + str(it.get("owner") or "executor prepares draft; Alon approves")
+    prompt += "\nMEASURABLE ACCEPTANCE CRITERION: " + str(it.get("success_metric") or "state a verifiable completion check")
+    prompt += "\nTreat traffic/ranking/lead uplift as hypotheses; never claim a draft was published or a KPI improved without measured evidence."
     body = {"model": MODEL, "max_tokens": 16000,
             "tools": [{"type": "web_search_20250305", "name": "web_search", "max_uses": 4}],
             "messages": [{"role": "user", "content": prompt}]}

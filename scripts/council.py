@@ -143,8 +143,11 @@ def build_scorecard(cur, prev, leads, seo_geo=None):
     # CONTEXT (not scored): engagement + impressions growth
     imp_growth = round(((ct["impressions"] - pt["impressions"]) / pt["impressions"] * 100)
                        if pt.get("impressions") else 0.0, 1)
-    row(context, "צמיחת חשיפות", imp_growth, t["weekly_impressions_growth_pct"],
-        imp_growth >= t["weekly_impressions_growth_pct"], "%")
+    if cur.get("unavailable_networks") or prev.get("unavailable_networks"):
+        row(context, "צמיחת חשיפות", "נתונים חלקיים", t["weekly_impressions_growth_pct"], False)
+    else:
+        row(context, "צמיחת חשיפות", imp_growth, t["weekly_impressions_growth_pct"],
+            imp_growth >= t["weekly_impressions_growth_pct"], "%")
     row(context, "Engagement rate", ct["engagement_rate_pct"], t["min_avg_engagement_rate_pct"],
         ct["engagement_rate_pct"] >= t["min_avg_engagement_rate_pct"], "%")
     row(context, "חשיפות (תקופה)", ct["impressions"], "↑", ct["impressions"] > 0)
@@ -200,6 +203,21 @@ is computed from business outcomes, your "overall" is an advisory second opinion
 - CONTEXT ONLY — engagement/impressions are CONTEXT, not goals. A low engagement rate on
   Israeli-B2B social is EXPECTED and must NOT dominate your assessment or the overall score.
 - North-star: 500,000 organic followers over ~3 years (leading indicator, not a near-term target).
+
+IMPROVEMENT POLICY:
+- Canonical company facts ONLY: founded 2010; 1,500+ events; 130+ destinations;
+  25,000+ participants. Never use 200+ events or 20+ destinations.
+- Never change KPI targets/weights to improve the score. Rank work by closing actual
+  failed scored metrics (qualified leads and organic clicks), before follower growth.
+- At most FIVE recommendations. Each must include action_key (stable English slug,
+  reuse for the same initiative), owner, success_metric, and evidence from input data.
+  Reuse existing initiatives below; don't restart the same work under a new title.
+- Separate a directive saved for later from a change actually applied to a website.
+  No ranking/lead uplift guarantees, invented multipliers, or unverified benchmarks.
+- Networks with ok=false have UNKNOWN activity, never zero. Do not change their
+  cadence. Unreliable ER is not evidence for channel allocation. Attribute period
+  changes per network; lifetime post statistics are NOT in-period traffic.
+- Prepare drafts and technical patches for existing pages; keep publication gated.
 
 HARD CONSTRAINTS (UPE iron rules) — respect these when classifying actions:
 - Nothing publishes without human approval; all client-facing content is reviewed first.
@@ -258,7 +276,7 @@ in HEBREW, with EXACTLY these keys:
   "what_failed": ["..."],
   "auto_fixes": [{{"category": "safe_auto", "action": "Hebrew action", "detail": "what+why", "channel": "instagram|..."}}],
   "channel_cadence": {{"facebook": {{"max_posts_per_week": 2, "reason": "Hebrew"}}, "instagram": {{"max_posts_per_week": 7, "reason": "Hebrew"}}, "linkedin": {{"max_posts_per_week": 3, "reason": "Hebrew"}}, "tiktok": {{"max_posts_per_week": 3, "reason": "Hebrew"}}, "youtube": {{"max_posts_per_week": 2, "reason": "Hebrew"}}}},
-  "recommendations": [{{"category": "gated", "priority": "P0|P1|P2", "action": "Hebrew", "expected_impact": "Hebrew", "channel": "..."}}],
+  "recommendations": [{{"category": "gated", "priority": "P0|P1|P2", "action_key": "stable-existing-id-or-slug", "owner": "executor drafts; Alon approves", "success_metric": "metric baseline, target and review window", "evidence": "input metric or verified source", "action": "Hebrew", "expected_impact": "Hebrew", "channel": "..."}}],
   "follower_growth_plan": ["concrete Hebrew steps toward the 500K north-star, ordered"],
   "leads_actions": ["concrete Hebrew steps to hit 10 qualified leads/month, ordered"]
 }}"""
@@ -270,10 +288,17 @@ def run_council(cur, prev, scorecard, inventory=None):
     inv = inventory if inventory is not None else {"ok": False, "reason": "not fetched"}
     blog_hint = inv.get("blog_article_count", 100) if inv.get("ok") else 100
     prompt = COUNCIL_PROMPT.format(
-        data=json.dumps({"current": cur, "previous_totals": prev["totals"]}, ensure_ascii=False),
+        data=json.dumps({"current": cur, "previous_totals": prev["totals"], "previous_networks": prev.get("networks", {})}, ensure_ascii=False),
         scorecard=json.dumps(scorecard, ensure_ascii=False),
         site_inventory=json.dumps(inv, ensure_ascii=False),
         blog_hint=blog_hint)
+    try:
+        backlog = json.loads((STATE_DIR / "initiatives.json").read_text())
+        active = [{k: it.get(k) for k in ("id", "action_key", "title", "channel", "status", "revisions")}
+                  for it in backlog.values() if it.get("status") in ("todo", "in_progress", "awaiting_approval")]
+    except (OSError, ValueError, AttributeError):
+        active = []
+    prompt += "\nEXISTING INITIATIVES (reuse action_key or id):\n" + json.dumps(active, ensure_ascii=False)
     body = {
         "model": MODEL,
         "max_tokens": 16000,
@@ -295,6 +320,10 @@ def run_council(cur, prev, scorecard, inventory=None):
     text = "".join(b.get("text", "") for b in resp.get("content", []) if b.get("type") == "text")
     parsed = _extract_json(text)
     if parsed:
+        parsed["recommendations"] = parsed.get("recommendations", [])[:5]
+        raw_cadence = parsed.get("channel_cadence") or {}
+        parsed["channel_cadence"] = {n: c for n, c in raw_cadence.items()
+                                     if cur.get("networks", {}).get(n, {}).get("ok") is not False}
         return parsed
     sys.stderr.write(f"[council] parse fail. stop_reason={resp.get('stop_reason')} "
                      f"len={len(text)}\n--- tail ---\n{text[-1500:]}\n")
@@ -373,19 +402,24 @@ def validate_cadence(raw):
     return out
 
 
+def _previous_directives():
+    try:
+        value = json.loads(DIRECTIVES.read_text())
+        return value if isinstance(value, dict) else {}
+    except (OSError, ValueError):
+        return {}
+
+
 def apply_auto_fixes(verdict, dry_run):
     """Write safe auto-fix directives for the next content-generation run to consume.
     Does NOT publish — respects the approval gate. Returns (applied_fixes, cadence)."""
+    if verdict.get("error"):
+        return [], validate_cadence(_previous_directives().get("channel_cadence"))
     fixes = [f for f in verdict.get("auto_fixes", []) if f.get("category") == "safe_auto"]
     cadence = validate_cadence(verdict.get("channel_cadence"))
-    if not cadence:
-        # one bad LLM day must not drop enforcement — carry yesterday's caps forward
-        prev = {}
-        try:
-            prev = json.loads(DIRECTIVES.read_text())
-        except Exception:
-            pass
-        cadence = validate_cadence(prev.get("channel_cadence"))
+    # Preserve omitted networks on partial responses, including failed data sources.
+    previous = validate_cadence(_previous_directives().get("channel_cadence"))
+    cadence = {**previous, **cadence}
     if (not fixes and not cadence) or dry_run:
         return fixes, cadence
     scores = verdict.get("scores", {})
@@ -413,10 +447,13 @@ def render_html(cur, scorecard, verdict, applied, cadence=None):
         return "".join(f"<li>{x}</li>" for x in items) or "<li>—</li>"
     net_rows = ""
     for net, s in cur["networks"].items():
+        if s.get("ok") is False:
+            net_rows += f"<tr><td>{net}</td><td colspan='6'>נתונים לא זמינים — נדרשת בדיקת חיבור</td></tr>"
+            continue
         cav = f" <span style='color:#b00'>({s['caveat']})</span>" if s.get("caveat") else ""
         net_rows += (f"<tr><td>{net}</td><td>{s['posts']}</td><td>{s['impressions']:,}</td>"
                      f"<td>{s['reach']:,}</td><td>{s['interactions']:,}</td>"
-                     f"<td>{s['engagement_rate_pct']}%{cav}</td><td>{sc.get(net,'—')}</td></tr>")
+                     f"<td>{str(s['engagement_rate_pct']) + '%' if not cav else 'לא אמין'}{cav}</td><td>{sc.get(net,'—')}</td></tr>")
     sb_rows = "".join(
         f"<tr><td>{r['metric']}</td><td>{r['value']}{r['unit']}</td>"
         f"<td>{r['target']}{r['unit']}</td><td>{r['status']}</td></tr>" for r in scorecard["scored_rows"])
@@ -505,10 +542,7 @@ def main():
 
     days = a.days
     cur = ma.snapshot(days)
-    prev = ma.snapshot(days * 2)
-    # previous-period totals = (2*days window) - (current window)
-    for k in ("posts", "impressions", "reach", "interactions"):
-        prev["totals"][k] = max(prev["totals"].get(k, 0) - cur["totals"].get(k, 0), 0)
+    prev = ma.snapshot(days, end=datetime.datetime.fromisoformat(cur["period_start"]))
 
     leads = leads_source.count(30)
     cur["leads"] = leads
@@ -541,13 +575,14 @@ def main():
 
     # Persist gated recommendations for the executor agent-team to pick up & advance.
     STATE_DIR.mkdir(parents=True, exist_ok=True)
-    (STATE_DIR / "council_recommendations.json").write_text(json.dumps({
-        "updated_at": _today(),
-        "scores": verdict.get("scores", {}),
-        "recommendations": verdict.get("recommendations", []),
-        "follower_growth_plan": verdict.get("follower_growth_plan", []),
-        "leads_actions": verdict.get("leads_actions", []),
-    }, ensure_ascii=False, indent=2))
+    if not a.no_llm and not verdict.get("error"):
+        (STATE_DIR / "council_recommendations.json").write_text(json.dumps({
+            "updated_at": _today(),
+            "scores": verdict.get("scores", {}),
+            "recommendations": verdict.get("recommendations", []),
+            "follower_growth_plan": verdict.get("follower_growth_plan", []),
+            "leads_actions": verdict.get("leads_actions", []),
+        }, ensure_ascii=False, indent=2))
 
     subj = (f"🏛️ מועצת השיווק — דוח יומי {_today()} · "
             + ("⚠️ חוות הדעת נכשלה" if verdict.get("error")

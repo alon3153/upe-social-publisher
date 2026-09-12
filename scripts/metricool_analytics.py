@@ -54,17 +54,24 @@ def _dt(d):
     return d.strftime("%Y-%m-%dT%H:%M:%S")
 
 
-def pull_posts(network, frm, to, tok, uid, bid):
+def pull_posts(network, frm, to, tok, uid, bid, strict=False):
     """Return list of post dicts for one network in [frm, to]; [] on any error."""
     try:
         j = _req(f"/v2/analytics/posts/{network}",
                  {"blogId": bid, "from": _dt(frm), "to": _dt(to)}, tok, uid)
-        return j.get("data", []) if isinstance(j, dict) else (j if isinstance(j, list) else [])
+        data = j.get("data") if isinstance(j, dict) else j
+        if not isinstance(data, list):
+            raise ValueError("analytics response did not contain a post list")
+        return data
     except urllib.error.HTTPError as e:
         sys.stderr.write(f"[{network}] HTTP {e.code}: {e.read().decode()[:160]}\n")
+        if strict:
+            raise
         return []
     except Exception as e:
         sys.stderr.write(f"[{network}] {e}\n")
+        if strict:
+            raise
         return []
 
 
@@ -133,20 +140,25 @@ def summarize(posts):
     }
 
 
-def snapshot(days=7):
+def snapshot(days=7, end=None):
     tok, uid, bid = _load_creds()
-    to = datetime.datetime.utcnow()
+    to = end or datetime.datetime.utcnow()
     frm = to - datetime.timedelta(days=days)
-    out = {"generated_at": _dt(to), "period_days": days, "networks": {}}
+    out = {"generated_at": _dt(datetime.datetime.utcnow()), "period_days": days, "period_start": _dt(frm), "period_end": _dt(to), "networks": {}}
     totals = {"posts": 0, "impressions": 0, "reach": 0, "interactions": 0}
     for net in NETWORKS:
-        posts = pull_posts(net, frm, to, tok, uid, bid)
-        s = summarize(posts)
+        try:
+            posts = pull_posts(net, frm, to, tok, uid, bid, strict=True)
+            s = {**summarize(posts), "ok": True}
+        except Exception:
+            s = {**summarize([]), "ok": False, "caveat": "analytics unavailable"}
         out["networks"][net] = s
         for k in totals:
             totals[k] += s.get(k, 0)
-    totals["engagement_rate_pct"] = round(
-        (totals["interactions"] / totals["impressions"] * 100) if totals["impressions"] else 0.0, 2)
+    reliable = [s for s in out["networks"].values() if s["ok"] and not s.get("caveat")]
+    denominator = sum(s["impressions"] or s["reach"] for s in reliable)
+    totals["engagement_rate_pct"] = round(sum(s["interactions"] for s in reliable) / denominator * 100, 2) if denominator else 0.0
+    out["unavailable_networks"] = [n for n, s in out["networks"].items() if not s["ok"]]
     out["totals"] = totals
     return out
 
