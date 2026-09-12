@@ -17865,6 +17865,10 @@
       {
         "date": "2026-09-11",
         "error": "anthropic Remote end closed connection without response"
+      },
+      {
+        "date": "2026-09-12",
+        "error": "anthropic Remote end closed connection without response"
       }
     ],
     "created": "2026-09-11",
@@ -17877,7 +17881,7 @@
   "12c66867": {
     "id": "12c66867",
     "title": "הפעל אסטרטגיית LinkedIn executive advocacy: מנכ\"ל/שותפים בכירים מפרסמים 2 פוסטים/שבוע מפרופיל אישי — case study קצר, תובנת תעשייה, שאלה לקהל; דף החברה מגביר (reposts) בלבד",
-    "status": "awaiting_approval",
+    "status": "approved",
     "revisions": 1,
     "history": [
       {
@@ -17896,7 +17900,7 @@
   "ecb038e5": {
     "id": "ecb038e5",
     "title": "צור 3 סרטוני YouTube ממוטבי-SEO (5-8 דקות כל אחד) על שאלות קונים: 'כמה עולה הפקת כנס ל-200 איש?', 'איך בוחרים חברת הפקה לאירוע חברה?', 'מה ההבדל בין נופש חברה לטיול תמריץ?' — כולל timestamps, תיאור 300+ מילים עם מונחים רלוונטיים, קישור לדף שירות",
-    "status": "awaiting_approval",
+    "status": "approved",
     "revisions": 1,
     "history": [
       {
@@ -17915,7 +17919,7 @@
   "d4debfa9": {
     "id": "d4debfa9",
     "title": "בנה 10+ קישורים נכנסים (off-page) לדפי שירות מרכזיים: פנה ל-5 פורטלים עסקיים ישראלים (Bizportal, Calcalist, Globes אירועים, TheMarker) ול-3 ספקי MICE (מלונות, venue ישראל) לפרסום guest content עם קישור לדף השירות",
-    "status": "awaiting_approval",
+    "status": "approved",
     "revisions": 1,
     "history": [
       {
@@ -17953,7 +17957,7 @@
   "fc7f6750": {
     "id": "fc7f6750",
     "title": "שגר קמפיין AEO ממוקד: עדכן את llms-full.txt הקיים עם נתוני לקוחות מספריים (מספר אירועים, מדינות, שנות ניסיון) בפורמט Q&A מובנה; הוסף FAQPage schema ל-5 דפי שירות מובילים",
-    "status": "awaiting_approval",
+    "status": "approved",
     "revisions": 1,
     "history": [
       {
@@ -18109,6 +18113,247 @@
     "history": [],
     "created": "2026-09-11",
     "updated": "2026-09-11",
+    "kind": "follower_plan",
+    "priority": "follower",
+    "channel": "growth"
+  },
+  "15fdd24e": {
+    "id": "15fdd24e",
+    "title": "אופטימיזציה של /נופש-חברה/ ו-/אירוע-קונספט/ הקיימים: עדכן H1 ו-title tag למונח המדויק, הרחב word-count ל-1,200+ מילים, הוסף FAQPage JSON-LD schema, הוסף CTA 'קבל הצעת מחיר' בולט — לא ליצור דף חדש",
+    "status": "todo",
+    "revisions": 0,
+    "history": [
+      {
+        "date": "2026-09-12",
+        "error": "anthropic Remote end closed connection without response"
+      }
+    ],
+    "created": "2026-09-12",
+    "updated": "2026-09-12",
+    "kind": "recommendation",
+    "priority": "P0",
+    "channel": "google_organic_geo",
+    "expected_impact": "שיפור pos.17-19 ל-Top-8 יוסיף 20-40 קליקים/שבוע; בשילוב internal linking מ-292 מאמרים — מסלול ישיר לליד Web נוסף/חודש",
+    "action_key": "seo-service-page-optimization",
+    "owner": "SEO specialist מכין; Alon מאשר לפני publish",
+    "success_metric": "בסיס: pos.17-19 על 'הפקת נופש חברה' ו-'אירועי קונספט'; יעד: Top-8 תוך 60 יום, קליקים שבועיים ≥50 תוך 90 יום; בדיקה ב-GSC"
+  },
+  "ba5e2d8e": {
+    "id": "ba5e2d8e",
+    "title": "הפעל executive posting: 2 פוסטים/שבוע מפרופיל אישי של מנכ\"ל (case-study + insight תעשייתי), דף החברה עושה repost בלבד — מיישם את id 12c66867 שאושר ונתקע",
+    "status": "in_progress",
+    "revisions": 1,
+    "history": [
+      {
+        "date": "2026-09-12",
+        "summary": "(no summary)",
+        "ready": false
+      }
+    ],
+    "created": "2026-09-12",
+    "updated": "2026-09-12",
+    "kind": "recommendation",
+    "priority": "P0",
+    "channel": "linkedin",
+    "expected_impact": "personal profiles מניבים 5-10x organic reach לעומת company pages ב-LinkedIn 2026; מוניטין אישי הוא מנוע ה-trust המרכזי בB2B ישראלי",
+    "action_key": "linkedin-executive-advocacy",
+    "owner": "מנכ\"ל/שותף בכיר מייצר תוכן; מנהל שיווק מגיש לאישור; Alon מאשר",
+    "success_metric": "בסיס: 148 impressions, 14 interactions מ-7 פוסטים; יעד: 300+ impressions/שבוע, 2+ leads/quarter מ-LinkedIn תוך 60 יום"
+  },
+  "8c4f9ebe": {
+    "id": "8c4f9ebe",
+    "title": "זהה 20 מאמרי בלוג עם traffic גבוה ב-GSC (10 לכל דף שירות), הוסף anchor-text רלוונטי לדפי /נופש-חברה/ ו-/אירוע-קונספט/ — עריכה של משפט קיים, לא כתיבה מחדש",
+    "status": "awaiting_approval",
+    "revisions": 1,
+    "history": [
+      {
+        "date": "2026-09-12",
+        "summary": "הופקה רשימת 20 עריכות anchor text מוכנות-לביצוע (10 לכל דף שירות: /נופש-חברה/ ו-/אירוע-קונספט/), כולל המשפט הקיים, המשפט הערוך, HTML להעתקה, טבלת סיכום ו-checklist קבלה — טיוטה לאישור אלון.",
+        "ready": true
+      }
+    ],
+    "created": "2026-09-12",
+    "updated": "2026-09-12",
+    "kind": "recommendation",
+    "priority": "P1",
+    "channel": "google_organic_geo",
+    "expected_impact": "מעביר link equity מ-292 מאמרים לדפים מסחריים; אפקט crawl priority מיידי ללא עלות תוכן; תומך ישירות ב-P0 SEO optimization",
+    "action_key": "internal-linking-blog-to-service",
+    "owner": "עורך תוכן מכין רשימת קישורים; Alon מאשר ומיישם",
+    "success_metric": "בסיס: crawl authority לא מדוד ל-/נופש-חברה/ ו-/אירוע-קונספט/; יעד: 10 מאמרים חדשים עם קישור פנימי לכל דף שירות תוך 30 יום; בדיקה ב-GSC Coverage"
+  },
+  "1869d5aa": {
+    "id": "1869d5aa",
+    "title": "עדכן llms-full.txt הקיים בנתונים כמותיים מדויקים (מאז 2010, 1,500+ אירועים, 130+ יעדים, 25,000+ משתתפים) בפורמט Q&A; הוסף FAQPage schema ל-3 דפי שירות מובילים — שני הקבצים קיימים, רק עדכון תוכן",
+    "status": "awaiting_approval",
+    "revisions": 1,
+    "history": [
+      {
+        "date": "2026-09-12",
+        "summary": "הופקו שני קבצים מוכנים לאישור: llms-full.txt מעודכן עם נתוני UPE המדויקים בפורמט Q&A (1,500+ אירועים, 130+ יעדים, 25,000+ משתתפים מאז 2010), ו-3 בלוקי FAQPage JSON-LD לדפי כנסים, incentive travel וגיבוש — כולל צ'קליסט implementation ל-Alon.",
+        "ready": true
+      }
+    ],
+    "created": "2026-09-12",
+    "updated": "2026-09-12",
+    "kind": "recommendation",
+    "priority": "P1",
+    "channel": "google_organic_geo",
+    "expected_impact": "AI citations כבר מחזירות UPE; תיקון הנתונים השגויים ישפר אמינות ו-conversion rate בתוך תשובות AI שמשפיעות ישירות על decision-makers",
+    "action_key": "aeo-llms-txt-update",
+    "owner": "מנהל שיווק מכין; Alon מאשר נתונים לפני commit",
+    "success_metric": "בסיס: cited=4/7 engines, נתוני חברה שגויים (200/20) בתשובות AI; יעד: 0 אזכורים עם נתונים שגויים, cited rate ≥5/7 תוך 45 יום"
+  },
+  "0a16e409": {
+    "id": "0a16e409",
+    "title": "הפק 3 סרטוני YouTube (5-8 דקות) על שאלות קונים מוכחות: 'כמה עולה הפקת כנס ל-200 איש', 'איך בוחרים חברת הפקה', 'נופש חברה vs טיול תמריץ' — כולל timestamps, תיאור 300+ מילים עם מונחים עבריים, קישור לדף שירות רלוונטי",
+    "status": "awaiting_approval",
+    "revisions": 1,
+    "history": [
+      {
+        "date": "2026-09-12",
+        "summary": "הופקו 3 טיוטות סרטוני YouTube מלאות לערוץ UPE — כולל כותרת SEO, 2 שורות ראשונות עם CTA, תיאור 300+ מילים בעברית עם מונחים מקצועיים, timestamps מלאים, hashtags, brief לתמונות ממוזערות וצ'קליסט לפני העלאה — בהתאם ל-best practice יוטיוב 2026.",
+        "ready": true
+      }
+    ],
+    "created": "2026-09-12",
+    "updated": "2026-09-12",
+    "kind": "recommendation",
+    "priority": "P2",
+    "channel": "youtube",
+    "expected_impact": "YouTube long-tail discovery מצטבר; כל סרטון מוסיף נוכחות ב-Google Video tab שמתחרה בפחות מפיקים ישראלים; מזין גם את ה-AEO כי AI מצטט YouTube",
+    "action_key": "youtube-seo-videos",
+    "owner": "מפיק וידאו מכין; Alon מאשר script ו-upload",
+    "success_metric": "בסיס: 4,133 impressions מ-3 סרטונים; יעד: 3 סרטוני SEO ממוטבים חדשים עם CTR ≥3% ו-50+ שעות צפייה תוך 60 יום מ-publish"
+  },
+  "a78a8d0c": {
+    "id": "a78a8d0c",
+    "title": "דחוף ביותר — SEO מסחרי עברי: אופטימיזציה של /נופש-חברה/ ו-/אירוע-קונספט/ (pos.17-19) + internal linking מ-10 מאמרים לכל דף — Web leads (33%) מוכיחים שהאתר ממיר; יותר תנועה = יותר לידים (id 251c2671, id 425ff99d)",
+    "status": "todo",
+    "revisions": 0,
+    "history": [],
+    "created": "2026-09-12",
+    "updated": "2026-09-12",
+    "kind": "leads_action",
+    "priority": "leads",
+    "channel": "leads"
+  },
+  "0de24bb6": {
+    "id": "0de24bb6",
+    "title": "ה-CTA pipeline: ודא שיש CTA 'קבל הצעת מחיר' בולט בכל דף שירות ובסוף כל מאמר; האתר כבר ממיר — פישוט מסע המשתמש לטופס מגדיל conversion ללא תנועה נוספת (id 879b4850)",
+    "status": "todo",
+    "revisions": 0,
+    "history": [],
+    "created": "2026-09-12",
+    "updated": "2026-09-12",
+    "kind": "leads_action",
+    "priority": "leads",
+    "channel": "leads"
+  },
+  "7661040d": {
+    "id": "7661040d",
+    "title": "LinkedIn executive posting: פוסט case-study אחד + פוסט insight אחד/שבוע מפרופיל מנכ\"ל — B2B ישראלי מחליט על סמך מוניטין אישי; lead מ-LinkedIn מגיע עם trust מובנה (id 341e6ab8)",
+    "status": "todo",
+    "revisions": 0,
+    "history": [],
+    "created": "2026-09-12",
+    "updated": "2026-09-12",
+    "kind": "leads_action",
+    "priority": "leads",
+    "channel": "leads"
+  },
+  "51595e3f": {
+    "id": "51595e3f",
+    "title": "סגירת פער ייחוס: הדרך נציגי מכירות לסמן 'Google Organic' ו-'Web' ב-Salesforce כשלקוח מזכיר את האתר; 'Other' (1 ליד) ו-'Web' (3 לידים) עשויים להסתיר Google Organic שמכוון את ההשקעה (id c3ec361d)",
+    "status": "todo",
+    "revisions": 0,
+    "history": [],
+    "created": "2026-09-12",
+    "updated": "2026-09-12",
+    "kind": "leads_action",
+    "priority": "leads",
+    "channel": "leads"
+  },
+  "c193c607": {
+    "id": "c193c607",
+    "title": "עדכון llms-full.txt עם נתונים מדויקים: 1,500+ אירועים, 130+ יעדים, 25,000+ משתתפים — AI citations כבר מייצרות demand; תיקון נתונים שגויים (200/20) מונע אובדן אמון אצל decision-makers שבודקים ב-AI (id 76ad88de)",
+    "status": "todo",
+    "revisions": 0,
+    "history": [],
+    "created": "2026-09-12",
+    "updated": "2026-09-12",
+    "kind": "leads_action",
+    "priority": "leads",
+    "channel": "leads"
+  },
+  "411f35dc": {
+    "id": "411f35dc",
+    "title": "שלב 1 (חודשים 1-3) — Executive presence: הפעל 2 מנהלים בכירים ב-LinkedIn עם 2 פוסטים/שבוע כל אחד; יעד 500 followers חדשים לדף החברה דרך amplification אורגני (id 107ed80f)",
+    "status": "todo",
+    "revisions": 0,
+    "history": [],
+    "created": "2026-09-12",
+    "updated": "2026-09-12",
+    "kind": "follower_plan",
+    "priority": "follower",
+    "channel": "growth"
+  },
+  "50eb7a05": {
+    "id": "50eb7a05",
+    "title": "שלב 2 (חודשים 2-6) — TikTok + Reels: 3 סרטוני 'אחורי הקלעים' מהפקות/שבוע בפורמט 60 שניות; שיתוף מקביל ל-Instagram Reels; תוכן אותנטי ולא מסרק הוא מנוע הגדילה המהיר ביותר (id 2c8d880c)",
+    "status": "todo",
+    "revisions": 0,
+    "history": [],
+    "created": "2026-09-12",
+    "updated": "2026-09-12",
+    "kind": "follower_plan",
+    "priority": "follower",
+    "channel": "growth"
+  },
+  "5930aefd": {
+    "id": "5930aefd",
+    "title": "שלב 3 (חודשים 3-9) — פורמט קבוע: 'הפקה ב-60 שניות' בכל פלטפורמה — פורמט חוזר וניתן לזכירה; עקביות פורמט בונה subscriber behavior ומגדיל retention (id 251cdb63)",
+    "status": "todo",
+    "revisions": 0,
+    "history": [],
+    "created": "2026-09-12",
+    "updated": "2026-09-12",
+    "kind": "follower_plan",
+    "priority": "follower",
+    "channel": "growth"
+  },
+  "b3c7daa3": {
+    "id": "b3c7daa3",
+    "title": "שלב 4 (חודשים 6-12) — LinkedIn Newsletter: שגר newsletter עברי חודשי ל-HR/CMO — 'מדריך מנהלים לאירועי חברה'; newsletters מקבלים push notification priority ובונים subscriber base נפרד מ-followers (id 04925d91)",
+    "status": "todo",
+    "revisions": 0,
+    "history": [],
+    "created": "2026-09-12",
+    "updated": "2026-09-12",
+    "kind": "follower_plan",
+    "priority": "follower",
+    "channel": "growth"
+  },
+  "d53cb010": {
+    "id": "d53cb010",
+    "title": "שלב 5 (שנה 2) — שותפויות MICE: cross-promotion עם ספקי מלונות, venues וקייטרינג — גישה לקהלים משלימים של 50K+ followers (id 058304a7)",
+    "status": "todo",
+    "revisions": 0,
+    "history": [],
+    "created": "2026-09-12",
+    "updated": "2026-09-12",
+    "kind": "follower_plan",
+    "priority": "follower",
+    "channel": "growth"
+  },
+  "3d0441f7": {
+    "id": "3d0441f7",
+    "title": "שלב 6 (שנה 3) — YouTube compounding: 50+ סרטונים ממוטבי-SEO יוצרים long-tail discovery אורגני; YouTube הוא המנוע שמוביל ל-500K בטווח הארוך עם ROI גבוה ביותר (id 62db6d85)",
+    "status": "todo",
+    "revisions": 0,
+    "history": [],
+    "created": "2026-09-12",
+    "updated": "2026-09-12",
     "kind": "follower_plan",
     "priority": "follower",
     "channel": "growth"
