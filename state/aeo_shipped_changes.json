@@ -1,0 +1,153 @@
+{
+  "changes": [
+    {
+      "url": "https://upe.co.il/הפקת-כנסים/",
+      "last_changed": "2026-09-09",
+      "aliases": [
+        "הפקת כנסים בינלאומיים",
+        "הפקת כנסים עסקיים בחול",
+        "international conference production"
+      ],
+      "source": "uproduction-astro service-depth changes published 2026-09-09",
+      "intents": [
+        "bh_il_kenes"
+      ]
+    },
+    {
+      "url": "https://upe.co.il/נופש-חברה-בחול/",
+      "last_changed": "2026-09-09",
+      "aliases": [
+        "נופש חברה",
+        "company retreat"
+      ],
+      "source": "uproduction-astro service-depth changes published 2026-09-09",
+      "intents": [
+        "bh_il_nofesh"
+      ]
+    },
+    {
+      "url": "https://upe.co.il/טיולי-תמריץ-בחול/",
+      "last_changed": "2026-09-09",
+      "aliases": [
+        "טיולי תמריץ",
+        "טיול תמריץ"
+      ],
+      "source": "uproduction-astro service-depth changes published 2026-09-09",
+      "intents": [
+        "ps_il_incentive"
+      ]
+    },
+    {
+      "url": "https://upe.co.il/en/pleasure-travel/",
+      "last_changed": "2026-09-09",
+      "aliases": [
+        "corporate incentive travel",
+        "incentive travel planning"
+      ],
+      "source": "uproduction-astro service-depth changes published 2026-09-09"
+    },
+    {
+      "url": "https://upe.co.il/כנסים-לחברות-הייטק/",
+      "aliases": [
+        "כנסים לחברות הייטק"
+      ],
+      "source": "uproduction-astro PR135 merged and live verified 2026-09-12",
+      "intents": [
+        "bh_il_hitech"
+      ],
+      "last_changed": "2026-09-12"
+    },
+    {
+      "url": "https://upe.co.il/en/about-us/",
+      "last_changed": "2026-09-12",
+      "source": "uproduction-astro PR135 cumulative-participation correction, published 2026-09-12"
+    },
+    {
+      "url": "https://upe.co.il/en/corporate-conference-producer-incentive-travel/",
+      "last_changed": "2026-09-12",
+      "source": "uproduction-astro PR135 cumulative-participation correction, published 2026-09-12"
+    },
+    {
+      "url": "https://upe.co.il/en/corporate-conference-production-outside-the-us/",
+      "last_changed": "2026-09-12",
+      "source": "uproduction-astro PR135 cumulative-participation correction, published 2026-09-12"
+    },
+    {
+      "url": "https://upe.co.il/en/corporate-event-production-europe-10-to-25000-attendees/",
+      "last_changed": "2026-09-12",
+      "source": "uproduction-astro PR135 cumulative-participation correction, published 2026-09-12"
+    },
+    {
+      "url": "https://upe.co.il/en/corporate-event-production/",
+      "last_changed": "2026-09-12",
+      "source": "uproduction-astro PR135 cumulative-participation correction, published 2026-09-12"
+    },
+    {
+      "url": "https://upe.co.il/en/corporate-incentive-travel-event-production/",
+      "last_changed": "2026-09-12",
+      "source": "uproduction-astro PR135 cumulative-participation correction, published 2026-09-12"
+    },
+    {
+      "url": "https://upe.co.il/en/international-conference-production-tech-companies/",
+      "last_changed": "2026-09-12",
+      "source": "uproduction-astro PR135 cumulative-participation correction, published 2026-09-12"
+    }
+  ],
+  "verified_existing_pages": [
+    {
+      "url": "https://upe.co.il/מייס-ישראל/",
+      "aliases": [
+        "מייס ישראל"
+      ],
+      "source": "Read-only live inventory audit 2026-09-12; no new publication implied"
+    },
+    {
+      "url": "https://upe.co.il/en/international-mice-production-israel/",
+      "aliases": [
+        "israel mice company",
+        "israeli mice company"
+      ],
+      "source": "uproduction-astro PR135 cumulative-participation correction, published 2026-09-12",
+      "intents": [
+        "bh_en_il_mice"
+      ],
+      "last_changed": "2026-09-12"
+    },
+    {
+      "url": "https://upe.co.il/en/boutique-global-corporate-conference-production/",
+      "aliases": [
+        "boutique global corporate conference"
+      ],
+      "source": "uproduction-astro PR135 cumulative-participation correction, published 2026-09-12",
+      "intents": [
+        "ex_en_boutique_eu"
+      ],
+      "last_changed": "2026-09-12"
+    },
+    {
+      "url": "https://upe.co.il/en/boutique-vs-large-event-agency/",
+      "aliases": [
+        "boutique vs large"
+      ],
+      "source": "uproduction-astro PR135 cumulative-participation correction, published 2026-09-12",
+      "intents": [
+        "cmp_vs_bcd"
+      ],
+      "last_changed": "2026-09-12"
+    },
+    {
+      "url": "https://upe.co.il/בחירת-חברה-להפקת-כנסים/",
+      "aliases": [
+        "בחירת חברה להפקת כנסים"
+      ],
+      "source": "Read-only live inventory audit 2026-09-12; no new publication implied"
+    },
+    {
+      "url": "https://upe.co.il/en/how-to-choose-an-incentive-travel-company/",
+      "aliases": [
+        "how to choose an incentive travel company"
+      ],
+      "source": "Read-only live inventory audit 2026-09-12; no new publication implied"
+    }
+  ]
+}

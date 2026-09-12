@@ -62,7 +62,9 @@ def run(repo, dry_run, ask_fn=None, judge_fn=None, send_fn=None, runner=None, to
     # or that the founder vetoed, must not be regenerated. Previously the veto was checked
     # only after generation, so a permanently-blocked topic was rewritten in full every
     # week and thrown away — invisible from both ends, and paid for every time.
-    covered = aeo_intents.covered()
+    import aeo_recommendations
+    covered = aeo_intents.covered() | aeo_recommendations.covered_intents(
+        aeo_recommendations.inventory(today=scorecard.get("date")))
     vetoed = held_pages.vetoed_intents()
     briefs, deferred = aeo_gaps.briefs_with_overflow(
         scorecard, TARGETS, covered=covered, vetoed=vetoed,
