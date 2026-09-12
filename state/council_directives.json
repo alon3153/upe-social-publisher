@@ -1,94 +1,87 @@
 {
-  "updated_at": "2026-09-11",
+  "updated_at": "2026-09-12",
   "source": "daily-council",
   "directives": [
     {
       "category": "safe_auto",
-      "action": "מיפוי פנימי: בנה רשימת 50 מאמרי בלוג קיימים (מתוך 292) שאינם מקשרים לדף /נופש-חברה/ ו-/אירוע-קונספט/ — והכן מפת internal links מומלצת",
-      "detail": "שני דפים אלו עומדים בעמדות 16-19 עם מאות חיפושים — internal linking מהמאמרים הקיימים הוא הדלק הזול ביותר לדחוף אותם ל-Top-5; אין צורך ביצירת דפים חדשים",
-      "channel": "google_organic"
-    },
-    {
-      "category": "safe_auto",
-      "action": "הגדר קדנציית hashtag ל-LinkedIn: 3-5 תגיות בלבד לפוסט, שילוב: #הפקתאירועים + #אירועיחברה + תגית נישה ספציפית (כגון #כנסיםעסקיים)",
-      "detail": "אלגוריתם LinkedIn 2026 מדכא תגיות עם מיליון+ עוקבים; נישה ממוקדת מאיצה חשיפה לקהל CMO/HR המדויק; מקסימום 5 תגיות",
+      "action": "בנה מאגר זוויות תוכן LinkedIn לפוסטים אישיים: narrative קצר (כנס 600 איש, 9 שבועות), insight תעשייתי, שאלה לקהל CMO/HR — פורמט תחליף מדי שבוע",
+      "detail": "הפוסט הטוב ביותר ב-Instagram (narrative case-study, 159 imp) מאשר שסיפורי לחץ ופתרון עובדים; LinkedIn מתגמל 2026 על personal voice ו-dwell time; 3 פוסטים/שבוע מפרופיל אישי עם 1 repost בדף החברה הוא split מוכח (1-1 personal/company)",
       "channel": "linkedin"
     },
     {
       "category": "safe_auto",
-      "action": "הכן מסגרת תוכן לסדרת YouTube 'שאלות שקונים שואלים' — כל סרטון עונה על שאלה ספציפית (כגון 'כמה עולה הפקת נופש חברה ל-100 עובדים?')",
-      "detail": "YouTube SEO 2026 מבוסס על satisfaction events ו-watch time; תוכן evergreen B2B שעונה על שאלות קונים ממוטב לציטוט ב-AI Overviews ומגדיל נוכחות אורגנית",
-      "channel": "youtube"
+      "action": "הגדר פורמט Instagram קבוע: סיפור לחץ → פתרון → תוצאה מספרית, עד 5 שורות עברית, ללא hashtag מיותר — 3-4 פוסטים/שבוע בלבד",
+      "detail": "הפוסט המוביל (159 imp) השיג פי 2.4 מהממוצע (51.5 imp/post) בזכות narrative ברור ומשפט פתיחה חזק; הפחתת נפח מ-11 ל-4 פוסטים תשפר את ה-per-post reach הממוצע ותחסוך capacity לאישורים",
+      "channel": "instagram"
     },
     {
       "category": "safe_auto",
-      "action": "הוסף timestamps מובנים (Key Moments) לכל 4 הסרטונים הקיימים ב-YouTube",
-      "detail": "Timestamps מבטיחים נוכחות ב-Google AI Search Overviews ומגדילים CTR; עלות אפסית, אין צורך בסרטונים חדשים",
-      "channel": "youtube"
+      "action": "הכן רשימת 10 מאמרי בלוג בעלי traffic גבוה (זהה ב-GSC) עם anchor-text מפורשות לדפי /נופש-חברה/ ו-/אירוע-קונספט/ — הוראות internal linking לעורך תוכן",
+      "detail": "שני הדפים עומדים על pos.17-19 עם 363+282 חיפושים/חודש; internal linking הוא אפס-עלות ומגביר crawl authority לפי best practice SEO ישראלי 2026; מ-292 מאמרים קיימים ניתן לבחור 10 רלוונטיים מבלי לכתוב מילה חדשה",
+      "channel": "google_organic_geo"
     },
     {
       "category": "safe_auto",
-      "action": "הגדר פוסטינג-קדנציה: הפחת Facebook ל-2 פוסטים/שבוע מקסימום, העבר תקציב זמן ל-LinkedIn ו-Instagram",
-      "detail": "Facebook השיג 39 impressions על 8 פוסטים — ROI שלילי על זמן קריאייטיב; LinkedIn עם 15% ER מצדיק הגדלת תשומה; reallocate effort",
-      "channel": "facebook"
+      "action": "נסח תבנית Q&A מובנית לעדכון llms-full.txt עם נתוני ground truth בלבד: 'מאז 2010, 1,500+ אירועים, 130+ יעדים, 25,000+ משתתפים' — לא 200 אירועים, לא 20 יעדים",
+      "detail": "AI כבר מצטט UPE ב-4 מנועים; ב-citation הנוכחי ב-AI הופיעו נתונים שגויים (200+ אירועים, 20+ מדינות) — תיקון llms-full.txt עם מספרים נכונים ישפר את 'selected not just mentioned' rate ויונע את הציטוט המדויק",
+      "channel": "google_organic_geo"
     },
     {
       "category": "safe_auto",
-      "action": "הכן בריף לסדרת LinkedIn מנהלים אישיים: 2 פוסטים/שבוע מפרופיל אישי של מנכ\"ל/מנהל בכיר UPE — לא מדף החברה",
-      "detail": "פרופילים אישיים מייצרים 8× יותר engagement מדפי חברה ב-LinkedIn 2026; executive thought leadership הוא הדרייבר העיקרי של reach אורגני B2B ב-LinkedIn כיום",
-      "channel": "linkedin"
+      "action": "הכן תוכנית צילום TikTok/Reels: 3 רעיונות לסצנות 'אחורי הקלעים' מהפקות קרובות — ללא עריכה מורכבת, עם כיתוב עברי, לשיתוף מקביל ב-Instagram Reels",
+      "detail": "TikTok על 0 פוסטים בתקופה למרות אישור pending (id b7c0af4b); מבנה repurposing ל-Instagram חוסך 50% מזמן הייצור; תבנית מוכנה מורידה חסמי הפקה ומאפשרת למנהל תוכן להגיש לאישור מיד",
+      "channel": "tiktok"
     }
   ],
   "channel_cadence": {
     "facebook": {
-      "max_posts_per_week": 2,
-      "reason": "8 פוסטים יצרו 39 impressions בלבד — reach אורגני כמעט אפסי ב-B2B ישראלי; 2 פוסטים שבועיים שומרים נוכחות מינימלית בלי בזבוז משאבי קריאייטיב"
+      "max_posts_per_week": 1,
+      "reason": "5 פוסטים הניבו 38 impressions בלבד עקב under-reporting מובנה של הרשת; חשיפה אורגנית קרובה לאפס בקהל B2B ישראלי; פוסט אחד/שבוע שומר נוכחות מינימלית ומפנה capacity לערוצים ממירים"
     },
     "instagram": {
-      "max_posts_per_week": 5,
-      "reason": "15 פוסטים ב-7 ימים הם מהירות גבוהה מדי לאיכות; Top Post הוכיח שstoretelling עובד — 5 פוסטים איכותיים ב-שבוע שומרים על קדנציה ריאלית לאישור אנושי"
+      "max_posts_per_week": 4,
+      "reason": "11 פוסטים הניבו 566 impressions (51.5/פוסט); הפחתה ל-4 פוסטים/שבוע תתמקד ב-narrative איכותי שמניב פי 2-3 impressions, תחסוך עומס אישורים ותשמור על עקביות"
     },
     "linkedin": {
-      "max_posts_per_week": 4,
-      "reason": "ER של 15% ו-10 פוסטים ב-7 ימים מצוין, אך אלגוריתם 2026 מדכא פוסטים ביום; 4 פוסטים (3 חברה + 1 מנהל אישי) בימים שלישי-חמישי בין 9:00-11:00 ממקסמים חשיפה"
+      "max_posts_per_week": 3,
+      "reason": "3 פוסטים/שבוע (2 מפרופיל אישי + 1 repost בדף חברה) הם ה-split המוכח לפי best practice 2026; נפח גבוה יותר בדף החברה מדולל reach ומשדר spam לקהל decision-makers"
     },
     "tiktok": {
       "max_posts_per_week": 3,
-      "reason": "ערוץ לא פעיל כעת; 3 פוסטים שבועיים הם רצפה סבירה להפעלה ראשונית של ערוץ short-form; אין לאמוד ביצועים על פחות מ-12 פוסטים"
+      "reason": "3 Reels/שבוע הם הרצפה המינימלית להפעלת אלגוריתם TikTok; שיתוף מקביל ל-Instagram Reels מכפיל ROI של כל יחידת תוכן; מעל 3/שבוע בשלב ההשקה ייצור bottleneck אישורים"
     },
     "youtube": {
-      "max_posts_per_week": 2,
-      "reason": "4 פוסטים ב-7 ימים עם 0 אינטראקציות מעידים על צורך באיכות על פני כמות; 2 סרטונים ממוטבי-SEO עם timestamps ותיאורים מלאים עדיפים על 4 סרטונים גנריים"
+      "max_posts_per_week": 1,
+      "reason": "3 פוסטים הניבו 4,133 impressions — הערוץ עם ה-CPM האורגני הנמוך ביותר; פוסט אחד/שבוע שומר קצב ייצור בר-קיימא לסרטוני 5-8 דקות ממוטבי-SEO עם תיאור 300+ מילים"
     }
   },
   "channel_priority": [
-    "linkedin",
     "youtube",
+    "linkedin",
     "instagram",
     "facebook",
     "tiktok"
   ],
   "channel_plan_basis": [
-    "facebook: 8 פוסטים יצרו 39 impressions בלבד — reach אורגני כמעט אפסי ב-B2B ישראלי; 2 פוסטים שבועיים שומרים נוכחות מינימלית בלי בזבוז משאבי קריאייטיב",
-    "instagram: 15 פוסטים ב-7 ימים הם מהירות גבוהה מדי לאיכות; Top Post הוכיח שstoretelling עובד — 5 פוסטים איכותיים ב-שבוע שומרים על קדנציה ריאלית לאישור אנושי",
-    "linkedin: ER של 15% ו-10 פוסטים ב-7 ימים מצוין, אך אלגוריתם 2026 מדכא פוסטים ביום; 4 פוסטים (3 חברה + 1 מנהל אישי) בימים שלישי-חמישי בין 9:00-11:00 ממקסמים חשיפה",
-    "tiktok: ערוץ לא פעיל כעת; 3 פוסטים שבועיים הם רצפה סבירה להפעלה ראשונית של ערוץ short-form; אין לאמוד ביצועים על פחות מ-12 פוסטים",
-    "youtube: 4 פוסטים ב-7 ימים עם 0 אינטראקציות מעידים על צורך באיכות על פני כמות; 2 סרטונים ממוטבי-SEO עם timestamps ותיאורים מלאים עדיפים על 4 סרטונים גנריים"
+    "facebook: 5 פוסטים הניבו 38 impressions בלבד עקב under-reporting מובנה של הרשת; חשיפה אורגנית קרובה לאפס בקהל B2B ישראלי; פוסט אחד/שבוע שומר נוכחות מינימלית ומפנה capacity לערוצים ממירים",
+    "instagram: 11 פוסטים הניבו 566 impressions (51.5/פוסט); הפחתה ל-4 פוסטים/שבוע תתמקד ב-narrative איכותי שמניב פי 2-3 impressions, תחסוך עומס אישורים ותשמור על עקביות",
+    "linkedin: 3 פוסטים/שבוע (2 מפרופיל אישי + 1 repost בדף חברה) הם ה-split המוכח לפי best practice 2026; נפח גבוה יותר בדף החברה מדולל reach ומשדר spam לקהל decision-makers",
+    "tiktok: 3 Reels/שבוע הם הרצפה המינימלית להפעלת אלגוריתם TikTok; שיתוף מקביל ל-Instagram Reels מכפיל ROI של כל יחידת תוכן; מעל 3/שבוע בשלב ההשקה ייצור bottleneck אישורים",
+    "youtube: 3 פוסטים הניבו 4,133 impressions — הערוץ עם ה-CPM האורגני הנמוך ביותר; פוסט אחד/שבוע שומר קצב ייצור בר-קיימא לסרטוני 5-8 דקות ממוטבי-SEO עם תיאור 300+ מילים"
   ],
   "follower_growth_plan": [
-    "שלב 1 (חודשים 1-3): בסס executive presence: 2 מנהלים בכירים פעילים ב-LinkedIn באופן אישי — מטרה 500 followers חדשים לדפי UPE דרך amplification אורגני",
-    "שלב 2 (חודשים 2-6): הפעל TikTok + Instagram Reels בסדרת 'behind the scenes' — 3 פוסטים/שבוע; תוכן אותנטי מאחורי הקלעים הוא מנוע העוקבים המהיר ביותר ב-B2B ויזואלי",
-    "שלב 3 (חודשים 3-9): בנה 'הפקת האירועים ב-60 שניות' — פורמט קבוע שבועי בכל הפלטפורמות; פורמט חוזר וניתן לצפייה הוא הדרך להגיע ל-10K+ followers ראשונים",
-    "שלב 4 (חודשים 6-12): שגר LinkedIn Newsletter עברי ל-HR/CMO ישראלי — 'מדריך מנהלים לאירועי חברה'; Newsletters ב-LinkedIn מקבלים distribution priority ובונים subscriber base נפרד",
-    "שלב 5 (שנה 2): שותפויות תוכן עם ספקי MICE (מלונות, venues, קייטרינג) לcross-promotion — הגדלה ל-50K+ followers דרך קהלים משלימים",
-    "שלב 6 (שנה 3): YouTube SEO compounding — 50+ סרטונים ממוטבים יוצרים long-tail discovery אורגני; YouTube הוא מנוע העוקבים ל-500K בטווח הארוך עם ROI גבוה ביותר"
+    "שלב 1 (חודשים 1-3) — Executive presence: הפעל 2 מנהלים בכירים ב-LinkedIn עם 2 פוסטים/שבוע כל אחד; יעד 500 followers חדשים לדף החברה דרך amplification אורגני (id 107ed80f)",
+    "שלב 2 (חודשים 2-6) — TikTok + Reels: 3 סרטוני 'אחורי הקלעים' מהפקות/שבוע בפורמט 60 שניות; שיתוף מקביל ל-Instagram Reels; תוכן אותנטי ולא מסרק הוא מנוע הגדילה המהיר ביותר (id 2c8d880c)",
+    "שלב 3 (חודשים 3-9) — פורמט קבוע: 'הפקה ב-60 שניות' בכל פלטפורמה — פורמט חוזר וניתן לזכירה; עקביות פורמט בונה subscriber behavior ומגדיל retention (id 251cdb63)",
+    "שלב 4 (חודשים 6-12) — LinkedIn Newsletter: שגר newsletter עברי חודשי ל-HR/CMO — 'מדריך מנהלים לאירועי חברה'; newsletters מקבלים push notification priority ובונים subscriber base נפרד מ-followers (id 04925d91)",
+    "שלב 5 (שנה 2) — שותפויות MICE: cross-promotion עם ספקי מלונות, venues וקייטרינג — גישה לקהלים משלימים של 50K+ followers (id 058304a7)",
+    "שלב 6 (שנה 3) — YouTube compounding: 50+ סרטונים ממוטבי-SEO יוצרים long-tail discovery אורגני; YouTube הוא המנוע שמוביל ל-500K בטווח הארוך עם ROI גבוה ביותר (id 62db6d85)"
   ],
   "leads_actions": [
-    "כפיל SEO עברי מסחרי על /נופש-חברה/ ו-/אירוע-קונספט/ — שתי עמדות pos.17-19 עם 645 חיפושים חודשיים מצטברים; כניסה ל-Top-5 מוסיפה 1-2 לידים/חודש ישירות",
-    "הגדל internal linking מ-292 מאמרי בלוג קיימים לדפי שירות מסחריים — עלות אפסית, אפקט מיידי על crawl authority; מקד 10 מאמרים בעלי traffic גבוה לכל דף שירות",
-    "הוסף CTA ברור ('קבל הצעת מחיר') בכל דף שירות ובסוף כל מאמר בלוג — Web leads (33% נתח) מעידים שהאתר ממיר, אך יש לפשט את מסע המשתמש לטופס",
-    "הפעל LinkedIn executive posting: ציטוט לקוח אחד/שבוע + תובנה אחת/שבוע מפרופיל אישי — B2B ישראלי מקבל החלטות דרך מוניטין אישי; lead שנוצר ב-LinkedIn מגיע עם trust גבוה",
-    "עדכן llms-full.txt הקיים בנתונים כמותיים (16+ שנה, 200+ אירועים, 20+ מדינות) — AI citations כבר מחזירות UPE; נתונים ספציפיים מגדילים את שיעור ה'נבחר' (לא רק 'מוזכר') ב-AI",
-    "סגור פער ייחוס: ודא שנציגי מכירות מסמנים 'Google Organic' / 'Web' ב-Salesforce בכל lead שהזכיר את האתר — 'Other' (1 ליד) ו-'Web' (3 לידים) עשויים להסתיר Google Organic נוספים שיחשפו היכן באמת לדחוף"
+    "דחוף ביותר — SEO מסחרי עברי: אופטימיזציה של /נופש-חברה/ ו-/אירוע-קונספט/ (pos.17-19) + internal linking מ-10 מאמרים לכל דף — Web leads (33%) מוכיחים שהאתר ממיר; יותר תנועה = יותר לידים (id 251c2671, id 425ff99d)",
+    "ה-CTA pipeline: ודא שיש CTA 'קבל הצעת מחיר' בולט בכל דף שירות ובסוף כל מאמר; האתר כבר ממיר — פישוט מסע המשתמש לטופס מגדיל conversion ללא תנועה נוספת (id 879b4850)",
+    "LinkedIn executive posting: פוסט case-study אחד + פוסט insight אחד/שבוע מפרופיל מנכ\"ל — B2B ישראלי מחליט על סמך מוניטין אישי; lead מ-LinkedIn מגיע עם trust מובנה (id 341e6ab8)",
+    "סגירת פער ייחוס: הדרך נציגי מכירות לסמן 'Google Organic' ו-'Web' ב-Salesforce כשלקוח מזכיר את האתר; 'Other' (1 ליד) ו-'Web' (3 לידים) עשויים להסתיר Google Organic שמכוון את ההשקעה (id c3ec361d)",
+    "עדכון llms-full.txt עם נתונים מדויקים: 1,500+ אירועים, 130+ יעדים, 25,000+ משתתפים — AI citations כבר מייצרות demand; תיקון נתונים שגויים (200/20) מונע אובדן אמון אצל decision-makers שבודקים ב-AI (id 76ad88de)"
   ]
 }
