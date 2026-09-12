@@ -23,7 +23,7 @@ def test_research_keywords_parses_he_en():
             "he": ["הפקת כנסים בינלאומיים", "חברת הפקת אירועים לחברות"],
             "en": ["international conference production", "corporate event agency"],
             "competitors": ["BCD", "Maritz"],
-            "priority_actions": ["publish a Hebrew category guide on conference production"],
+            "priority_actions": [{"text": "Verify conference page performance", "kind": "observe"}],
         })
     out = comp.research_keywords(scorecard_with(["BCD", "Maritz"]), ask_fn)
     assert out["he"] and out["en"]

@@ -1,6 +1,7 @@
-"""Competitor keyword-gap research: when UPE is not the #1 AI recommendation, find the
+"""Competitor keyword-gap research: when UPE has a visibility gap, find the
 Hebrew + English keywords/phrases competitors win that UPE should target."""
 import json, re
+import aeo_recommendations
 
 MAX_PER_LANG = 5     # keep only the highest-impact keywords per language
 MAX_ACTIONS = 5
@@ -14,13 +15,15 @@ RESEARCH_SYSTEM = (
     "to how decision-makers actually search/ask. "
     f"Return ONLY the {MAX_PER_LANG} HIGHEST-IMPACT keywords per language, ranked best-first (most "
     "winnable + highest intent at the top). Quality over quantity. "
-    'Reply with ONLY JSON: {"he":[str],"en":[str],"competitors":[str],"priority_actions":[str]}.'
+    'Reply with ONLY JSON: {"he":[str],"en":[str],"competitors":[str],"priority_actions":[{"text":str,"kind":str,"target_url":str}]}.'
 )
 
 
 def collect_competitors(scorecard):
     seen = []
     for block in scorecard.get("models", {}).values():
+        if block.get("degraded"):
+            continue
         for ans in block.get("answers", []):
             for c in ans.get("competitors", []) or []:
                 if c not in seen:
@@ -31,9 +34,12 @@ def collect_competitors(scorecard):
 def _weak_notes(scorecard, min_score=90):
     notes = []
     for model, block in scorecard.get("models", {}).items():
+        if block.get("degraded"):
+            continue
         for dim in ("product_search", "comparison"):
             if block.get(dim, 0) < min_score:
-                worst = min(block.get("answers", []), key=lambda a: a["scores"].get(dim, 0), default=None)
+                relevant = [a for a in block.get("answers", []) if a.get("dimension", dim) == dim]
+                worst = min(relevant, key=lambda a: a["scores"].get(dim, 0), default=None)
                 if worst and worst.get("gap_note"):
                     notes.append(f"[{model}/{dim}] {worst['gap_note']}")
     return notes
@@ -46,7 +52,8 @@ def _extract_json(text):
     return json.loads(m.group(0))
 
 
-def research_keywords(scorecard, ask_fn):
+def research_keywords(scorecard, ask_fn, inventory_items=None):
+    items = aeo_recommendations.inventory(today=scorecard.get("date")) if inventory_items is None else inventory_items
     competitors = collect_competitors(scorecard)
     notes = _weak_notes(scorecard)
     if not competitors and not notes:
@@ -54,13 +61,13 @@ def research_keywords(scorecard, ask_fn):
     prompt = (
         f"Competitors currently winning AI answers over Uproduction: {', '.join(competitors) or 'unknown'}.\n"
         f"Observed gaps from the probe:\n" + ("\n".join(notes) or "(none)") + "\n\n"
-        "Produce keyword/phrase opportunities (he + en) and concrete priority_actions to make "
-        "Uproduction Events the #1 answer for corporate event/conference production, incentive travel and MICE."
+        "Produce keyword/phrase opportunities (he + en) and concrete priority_actions to improve "
+        "Uproduction Events visibility for corporate event/conference production, incentive travel and MICE."
     )
-    data = _extract_json(ask_fn("claude", RESEARCH_SYSTEM + "\n\n" + prompt))
+    data = _extract_json(ask_fn("claude", RESEARCH_SYSTEM + "\n\n" + aeo_recommendations.context(items) + "\n\n" + prompt))
     return {
         "he": (data.get("he", []) or [])[:MAX_PER_LANG],
         "en": (data.get("en", []) or [])[:MAX_PER_LANG],
         "competitors": data.get("competitors", competitors) or competitors,
-        "priority_actions": (data.get("priority_actions", []) or [])[:MAX_ACTIONS],
+        "priority_actions": aeo_recommendations.filter_actions(data.get("priority_actions", []) or [], items)[:MAX_ACTIONS],
     }
