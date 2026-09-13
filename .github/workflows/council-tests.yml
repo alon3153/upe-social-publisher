@@ -1,0 +1,29 @@
+name: Council report evidence tests
+on:
+  pull_request:
+    paths:
+      - 'scripts/council*.py'
+      - 'scripts/leads_source.py'
+      - 'scripts/seo_geo_source.py'
+      - 'scripts/site_inventory.py'
+      - 'scripts/metricool_analytics.py'
+      - 'scripts/kpi_targets.json'
+      - 'state/council*.json'
+      - 'tests/**'
+      - 'requirements*.txt'
+      - '.github/workflows/council-tests.yml'
+      - '.github/workflows/daily-council.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  evidence-regression:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install -r requirements.txt -r requirements-dev.txt
+      - run: python -m pytest tests/ -q

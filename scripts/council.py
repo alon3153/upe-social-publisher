@@ -206,6 +206,8 @@ def build_scorecard(cur, prev, leads, seo_geo=None):
 
 # ---------------------------------------------------------------- the council --
 import council_evidence
+from html import escape
+from council_html import normalize_directions
 import aeo_recommendations
 
 
@@ -271,8 +273,11 @@ DETERMINISTIC SCORECARD:
 {scorecard}
 
 MEASUREMENT AND EVIDENCE:
+- verdict_summary, what_worked and what_failed are derived by code from scorecard rows; do not add causal explanations to them.
+- Recommendations are candidates, each requiring an evidence OBJECT with metric, value, target exactly matching one measured scorecard row. Do not invent data in evidence prose.
 - Lead source shares are distribution, NOT conversion rates. 3 Web leads out of 9 is a 33% share,
   with no visitor denominator. Web does not prove Google Organic origin or channel profitability.
+  Reclassifying an existing lead never increases the total lead count. Google alone does not distinguish paid traffic from Google Organic.
 - Qualified leads use the reported operational CRM definition; do not assert independently verified
   qualification or predict that an SEO edit will close a missing lead.
 - GSC impressions are this site's impressions in the stated period, NOT monthly market searches.
@@ -303,9 +308,9 @@ in HEBREW, with EXACTLY these keys:
   "scores": {{"instagram": 0-100, "facebook": 0-100, "tiktok": 0-100, "linkedin": 0-100, "youtube": 0-100, "google_organic_geo": 0-100, "overall": 0-100}},
   "what_worked": ["..."],
   "what_failed": ["..."],
-  "auto_fixes": [{{"category": "safe_auto", "action": "Hebrew action", "detail": "what+why", "channel": "instagram|..."}}],
+  "auto_fixes": [{{"category": "safe_auto", "action": "Hebrew proposed experiment", "detail": "proposal only; no causal claim", "channel": "instagram|...", "evidence": {{"metric": "exact scorecard row label", "value": "exact measured value with original JSON type", "target": "exact existing target with original JSON type"}}}}],
   "channel_cadence": {{"facebook": {{"max_posts_per_week": 2, "reason": "Hebrew"}}, "instagram": {{"max_posts_per_week": 7, "reason": "Hebrew"}}, "linkedin": {{"max_posts_per_week": 3, "reason": "Hebrew"}}, "tiktok": {{"max_posts_per_week": 3, "reason": "Hebrew"}}, "youtube": {{"max_posts_per_week": 2, "reason": "Hebrew"}}}},
-  "recommendations": [{{"category": "gated", "priority": "P0|P1|P2", "action_key": "stable-existing-id-or-slug", "owner": "executor drafts; Alon approves", "success_metric": "metric baseline, target and review window", "evidence": "input metric or verified source", "evidence_url": "exact retrieved source URL if external", "target_url": "existing site URL for on-site work", "action": "Hebrew", "expected_impact": "Hebrew", "channel": "..."}}],
+  "recommendations": [{{"category": "gated", "priority": "P0|P1|P2", "action_key": "stable-existing-id-or-slug", "owner": "executor drafts; Alon approves", "success_metric": "metric baseline, target and review window", "evidence": {{"metric": "exact scorecard row label", "value": "exact measured value with original JSON type", "target": "exact existing target with original JSON type"}}, "evidence_url": "exact retrieved source URL if external", "target_url": "existing site URL for on-site work", "action": "Hebrew", "expected_impact": "Hebrew", "channel": "..."}}],
   "follower_growth_plan": ["small measurable Hebrew experiments; no follower forecasts"],
   "leads_actions": ["concrete Hebrew steps to hit 10 qualified leads/month, ordered"]
 }}"""
@@ -353,6 +358,7 @@ def run_council(cur, prev, scorecard, inventory=None):
     text = "".join(b.get("text", "") for b in resp.get("content", []) if b.get("type") == "text")
     parsed = _extract_json(text)
     if parsed:
+        parsed.pop("verified_source_urls", None)  # provenance is assigned from provider citations only
         parsed["recommendations"] = parsed.get("recommendations", [])[:5]
         raw_cadence = parsed.get("channel_cadence") or {}
         parsed["channel_cadence"] = {n: c for n, c in raw_cadence.items()
@@ -362,7 +368,7 @@ def run_council(cur, prev, scorecard, inventory=None):
         completed_keys = [it.get('action_key') or it.get('id') for it in backlog.values()
                           if it.get('status') in ('done', 'completed', 'published')] if 'backlog' in locals() and isinstance(backlog, dict) else []
         return council_evidence.sanitize(parsed, state=evidence_state, shipped=shipped,
-                                         completed_keys=completed_keys, source_urls=source_urls)
+                                         completed_keys=completed_keys, source_urls=source_urls, scorecard=scorecard)
     sys.stderr.write(f"[council] parse fail. stop_reason={resp.get('stop_reason')} "
                      f"len={len(text)}\n--- tail ---\n{text[-1500:]}\n")
     return {"error": "could not parse council JSON", "raw": text[:800]}
@@ -479,33 +485,43 @@ def apply_auto_fixes(verdict, dry_run):
 
 
 # ------------------------------------------------------------------- report ----
-def render_html(cur, scorecard, verdict, applied, cadence=None):
-    d = _today()
+def render_html(cur, scorecard, verdict, applied, cadence=None, report_date=None):
+    d = report_date or _today()
+    verdict = council_evidence.sanitize(verdict, scorecard=scorecard)
+    applied = council_evidence.sanitize({"auto_fixes": applied}, scorecard=scorecard, source_urls=verdict.get("verified_source_urls", ()))["auto_fixes"]
+    cadence = council_evidence.sanitize({"channel_cadence": cadence or {}}, scorecard=scorecard)["channel_cadence"]
     sc = verdict.get("scores", {})
+    def cell(value, unit=''):
+        numeric = ((isinstance(value, (int, float)) and not isinstance(value, bool))
+                   or bool(re.fullmatch(r'[≤≥<>]?\s*[\d.,]+%?', str(value))))
+        direction = 'ltr' if numeric else 'rtl'
+        return f"<td dir='{direction}'>{escape(str(value))}{escape(str(unit))}</td>"
     def chips(items):
-        return "".join(f"<li>{x}</li>" for x in items) or "<li>—</li>"
+        return "".join(f"<li>{escape(str(x))}</li>" for x in items) or "<li>—</li>"
+    net_names = {"instagram": "אינסטגרם", "facebook": "פייסבוק", "linkedin": "לינקדאין", "tiktok": "טיקטוק", "youtube": "יוטיוב"}
     net_rows = ""
     for net, s in cur["networks"].items():
+        label = escape(str(net_names.get(net, net)))
         if s.get("ok") is False:
-            net_rows += f"<tr><td>{net}</td><td colspan='6'>נתונים לא זמינים — נדרשת בדיקת חיבור</td></tr>"
+            net_rows += f"<tr><td>{label}</td><td colspan='6'>נתונים לא זמינים — נדרשת בדיקת חיבור</td></tr>"
             continue
-        cav = f" <span style='color:#b00'>({s['caveat']})</span>" if s.get("caveat") else ""
-        net_rows += (f"<tr><td>{net}</td><td>{s['posts']}</td><td>{s['impressions']:,}</td>"
-                     f"<td>{s['reach']:,}</td><td>{s['interactions']:,}</td>"
-                     f"<td>{str(s['engagement_rate_pct']) + '%' if not cav else 'לא אמין'}{cav}</td><td>{sc.get(net,'—')}</td></tr>")
+        cav = " <span dir='rtl' style='color:#b00'>(דיווח החשיפות חלקי; מדד המעורבות אינו אמין)</span>" if s.get("caveat") else ""
+        net_rows += (f"<tr><td>{label}</td><td dir='ltr'>{s['posts']}</td><td dir='ltr'>{s['impressions']:,}</td>"
+                     f"<td dir='ltr'>{s['reach']:,}</td><td dir='ltr'>{s['interactions']:,}</td>"
+                     f"<td>{str(s['engagement_rate_pct']) + '%' if not cav else 'לא אמין'}{cav}</td><td dir='ltr'>{sc.get(net,'—')}</td></tr>")
     sb_rows = "".join(
-        f"<tr><td>{r['metric']}</td><td>{r['value']}{r['unit']}</td>"
-        f"<td>{r['target']}{r['unit']}</td><td>{r['status']}</td></tr>" for r in scorecard["scored_rows"])
+        f"<tr><td>{escape(str(r['metric']).replace('Engagement rate', 'מעורבות'))}</td>{cell(r['value'], r['unit'])}"
+        f"{cell(r['target'], r['unit'])}<td>{r['status']}</td></tr>" for r in scorecard["scored_rows"])
     ctx_rows = "".join(
-        f"<tr><td>{r['metric']}</td><td dir='ltr'>{r['value']}{r['unit']}</td>"
-        f"<td dir='ltr'>{r['target']}{r['unit']}</td><td>{r['status']}</td></tr>"
+        f"<tr><td>{escape(str(r['metric']).replace('Engagement rate', 'מעורבות'))}</td>{cell(r['value'], r['unit'])}"
+        f"{cell(r['target'], r['unit'])}<td>{r['status']}</td></tr>"
         for r in scorecard.get("context_rows", []))
     recs = "".join(
-        f"<li><b>[{r.get('priority','')}]</b> {r.get('action','')} "
-        f"<span style='color:#555'>— {r.get('expected_impact','')}</span> "
-        f"<span dir='ltr' style='color:#888'>({r.get('channel','')})</span></li>"
+        f"<li><b>[{escape(str(r.get('priority','')))}]</b> {escape(str(r.get('action','')))} "
+        f"<span style='color:#555'>— {escape(str(r.get('expected_impact','')))}</span> "
+        f"<span dir='ltr' style='color:#888'>({escape(str(r.get('channel','')))})</span></li>"
         for r in verdict.get("recommendations", []))
-    applied_li = "".join(f"<li>{f.get('action','')} <span dir='ltr' style='color:#888'>({f.get('channel','')})</span></li>" for f in applied)
+    applied_li = "".join(f"<li>{escape(str(f.get('action','')))} <span dir='ltr' style='color:#888'>({escape(str(f.get('channel','')))})</span></li>" for f in applied)
     # A failed LLM verdict used to render as a bare 'ציון —/100' with an empty
     # summary, which reads like a quiet day rather than a broken run (24.07,
     # 26.07.2026). Say so out loud instead — the scorecard below is still real.
@@ -513,23 +529,23 @@ def render_html(cur, scorecard, verdict, applied, cadence=None):
     if verdict.get("error"):
         err_banner = (
             "<p style=\"background:#fdecea;border-right:4px solid #c0392b;padding:10px;\">"
-            "⚠️ <b>חוות דעת המועצה (LLM) נכשלה בריצה הזו — הציון והסיכום למטה ריקים.</b><br>"
-            f"<span dir='ltr' style='color:#555;font-size:12px;'>{str(verdict.get('error'))[:300]}</span><br>"
-            "מספרי ה-scorecard והערוצים למטה תקינים ונמדדו כרגיל.</p>")
-    return f"""<html dir="rtl" lang="he"><head><meta charset="utf-8"></head>
+            "⚠️ <b>חוות דעת המודל נכשלה בריצה הזו; הסיכום להלן נגזר מהמדדים הזמינים בלבד.</b><br>"
+            f"<span dir='ltr' style='color:#555;font-size:12px;'>{escape(str(verdict.get('error'))[:300])}</span><br>"
+            "מקורות חסרים ומגבלות המדידה מוצגים בהערות להלן.</p>")
+    return normalize_directions(f"""<html dir="rtl" lang="he"><head><meta charset="utf-8"></head>
 <body dir="rtl" style="font-family:Arial,Helvetica,sans-serif;font-size:14px;direction:rtl;text-align:right;color:#111;">
 <div dir="rtl" style="direction:rtl;text-align:right;max-width:680px;">
-<h2>🏛️ מועצת השיווק — דוח יומי {d}</h2>
+<h2>🏛️ מועצת השיווק — דוח יומי <span dir="ltr">{d}</span></h2>
 {err_banner}
-<p style="font-size:16px;"><b>ציון כולל: {scorecard['weighted']}/100</b> · scorecard עבר {scorecard['passed']}/{scorecard['total']} · <span style="color:#888">קריאת המועצה (LLM): {sc.get('overall','—')}/100</span></p>
-<p style="background:#f6f6f6;padding:10px;border-right:3px solid #333;">{verdict.get('verdict_summary','—')}</p>
+<p style="font-size:16px;"><b>ציון כולל: {scorecard['weighted']}/100</b> · מדדים שהגיעו ליעד: {scorecard['passed']}/{scorecard['total']} · <span style="color:#888">הערכת המודל (דעה בלבד): {sc.get('overall','—')}/100</span></p>
+<p style="background:#f6f6f6;padding:10px;border-right:3px solid #333;">{escape(verdict.get('verdict_summary','—'))}</p>
 
 <h3>תוצאות לפי ערוץ ({cur['period_days']} ימים)</h3>
 <table dir="rtl" border="0" cellpadding="6" style="border-collapse:collapse;width:100%;font-size:13px;">
-<tr style="background:#222;color:#fff;"><th>ערוץ</th><th>פוסטים</th><th>חשיפות</th><th>Reach</th><th>תגובות</th><th>ER</th><th>ציון</th></tr>
+<tr style="background:#222;color:#fff;"><th>ערוץ</th><th>פוסטים</th><th>חשיפות</th><th>חשיפה לאנשים</th><th>תגובות</th><th>מעורבות</th><th>ציון</th></tr>
 {net_rows}</table>
 
-<h3>Scorecard מול יעדים</h3>
+<h3>מדדים מול יעדים</h3>
 <table dir="rtl" border="0" cellpadding="6" style="border-collapse:collapse;width:100%;font-size:13px;">
 <tr style="background:#222;color:#fff;"><th>מדד</th><th>ערך</th><th>יעד</th><th></th></tr>
 {sb_rows}</table>
@@ -540,27 +556,29 @@ def render_html(cur, scorecard, verdict, applied, cadence=None):
 {ctx_rows}</table>
 
 <h3>הערות מדידה ובדיקת ראיות</h3><ul>{chips(scorecard.get('warnings', []) + verdict.get('evidence_notes', []))}</ul>
-<h3>✅ מה עבד</h3><ul>{chips(verdict.get('what_worked',[]))}</ul>
-<h3>❌ מה נכשל</h3><ul>{chips(verdict.get('what_failed',[]))}</ul>
+<h3>✅ מדדים שהגיעו ליעד</h3><ul>{chips(verdict.get('what_worked',[]))}</ul>
+<h3>❌ פערים במדדים</h3><ul>{chips(verdict.get('what_failed',[]))}</ul>
 
 <h3>⏱️ מכסות פרסום שנשמרו — אכיפה דורשת אימות</h3>
-<ul>{"".join(f"<li>{net}: עד {c['max_posts_per_week']}/שבוע <span style='color:#555'>— {c.get('reason','')}</span></li>" for net, c in (cadence or {}).items()) or '<li>—</li>'}</ul>
+<ul>{"".join(f"<li>{escape(str(net_names.get(net, net)))}: עד {c['max_posts_per_week']}/שבוע <span style='color:#555'>— {escape(str(c.get('reason','')))}</span></li>" for net, c in (cadence or {}).items()) or '<li>—</li>'}</ul>
 
 <h3>🤖 הנחיות {"מתוכננות — טרם נשמרו" if verdict.get("directive_save_status") == "planned" else "שנשמרו להמשך"} ({len(applied)})</h3>
 <p style="color:#555;font-size:12px;">מיועדות לייצור התוכן הבא; שמירת הנחיות אינה הוכחה לביצוע שינוי או לאכיפת מכסה בכל ערוצי הפרסום.</p>
 <ul>{applied_li or '<li>—</li>'}</ul>
 
-<h3>📋 המלצות לאישורך (gated)</h3><ul>{recs or '<li>—</li>'}</ul>
+<h3>📋 מועמדות לניסוי — דורשות בדיקה</h3><ul>{recs or '<li>—</li>'}</ul>
 
 <h3>🎯 ניסויי צמיחה — ללא תחזית עוקבים</h3><ol>{chips(verdict.get('follower_growth_plan',[]))}</ol>
-<h3>💼 דרך ל-10 לידים/חודש</h3><ol>{chips(verdict.get('leads_actions',[]))}</ol>
+<h3>💼 פעולות מעקב וייחוס לידים</h3><ol>{chips(verdict.get('leads_actions',[]))}</ol>
 
 <hr><p style="color:#888;font-size:11px;">UPE Marketing Council · אוטומטי · {d}</p>
-</div></body></html>"""
+</div></body></html>""")
 
 
-def render_md(cur, scorecard, verdict, applied):
-    return (f"# UPE Marketing Council — {_today()}\n\n"
+def render_md(cur, scorecard, verdict, applied, report_date=None):
+    verdict = council_evidence.sanitize(verdict, scorecard=scorecard)
+    applied = council_evidence.sanitize({"auto_fixes": applied}, scorecard=scorecard, source_urls=verdict.get("verified_source_urls", ()))["auto_fixes"]
+    return (f"# UPE Marketing Council — {report_date or _today()}\n\n"
             f"Overall (weighted): {scorecard['weighted']}/100 · scorecard {scorecard['passed']}/{scorecard['total']} · LLM read {verdict.get('scores',{}).get('overall','—')}/100\n\n"
             f"## Verdict\n{verdict.get('verdict_summary','—')}\n\n"
             + "## Measurement notes\n" + "\n".join(f"- {n}" for n in scorecard.get("warnings", []) + verdict.get("evidence_notes", [])) + "\n\n" +
@@ -573,15 +591,68 @@ def render_md(cur, scorecard, verdict, applied):
             f"\n\n## Leads actions\n" + "\n".join(f"{i+1}. {s}" for i, s in enumerate(verdict.get("leads_actions", []))) + "\n")
 
 
+def replay_report(report_path, snapshot_path, output_dir, *, write_state=False):
+    """Revalidate saved evidence without fresh measurements, an LLM call or email transport."""
+    report = json.loads(Path(report_path).read_text())
+    cur = json.loads(Path(snapshot_path).read_text())
+    report_date = report['date']
+    datetime.date.fromisoformat(report_date)
+    scorecard = report['scorecard']
+    verdict = council_evidence.sanitize(report['verdict'], scorecard=scorecard,
+                                        shipped=aeo_recommendations.inventory(today=report_date))
+    cadence = validate_cadence(council_evidence.sanitize(
+        {'channel_cadence': report.get('cadence', {})}, scorecard=scorecard)['channel_cadence'])
+    applied = verdict.get('auto_fixes', [])
+    if write_state:
+        # Preserve metadata and surviving identifiers; never change initiative/approval state.
+        payload = _previous_directives()
+        payload.update({'directives': applied, 'channel_cadence': cadence,
+                        'channel_plan_basis': [f"{n}: {c['reason']}" for n, c in cadence.items()],
+                        'leads_actions': verdict['leads_actions'], 'follower_growth_plan': [],
+                        'source_report_date': report_date, 'evidence_replayed': True})
+        DIRECTIVES.write_text(json.dumps(payload, ensure_ascii=False, indent=2) + '\n')
+        rec_path = STATE_DIR / 'council_recommendations.json'
+        try:
+            recs = json.loads(rec_path.read_text())
+        except (OSError, ValueError):
+            recs = {}
+        recs.update({'recommendations': verdict['recommendations'], 'leads_actions': verdict['leads_actions'],
+                     'follower_growth_plan': [], 'source_report_date': report_date, 'evidence_replayed': True})
+        rec_path.write_text(json.dumps(recs, ensure_ascii=False, indent=2) + '\n')
+    folder = Path(output_dir)
+    folder.mkdir(parents=True, exist_ok=True)
+    result = dict(report, verdict=verdict, applied_directives=applied, cadence=cadence,
+                  email_requested=False, replay={'source_report_date': report_date, 'new_measurements': False,
+                                                'llm_called': False, 'state_written': write_state})
+    (folder / 'report.json').write_text(json.dumps(result, ensure_ascii=False, indent=2) + '\n')
+    (folder / 'report.html').write_text(render_html(cur, scorecard, verdict, applied, cadence, report_date=report_date), encoding='utf-8')
+    (folder / 'report.md').write_text(render_md(cur, scorecard, verdict, applied, report_date=report_date), encoding='utf-8')
+    print(f"Replayed source report {report_date}; no new measurements, LLM call or email.")
+    return result
+
+
 # --------------------------------------------------------------------- main ----
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--dry-run", action="store_true")
     ap.add_argument("--no-llm", action="store_true")
     ap.add_argument("--send-email", action="store_true", help="Explicitly enable report delivery")
+    ap.add_argument("--replay-report", type=Path, help="Re-render saved report offline; requires --snapshot and --output-dir")
+    ap.add_argument("--snapshot", type=Path)
+    ap.add_argument("--output-dir", type=Path)
+    ap.add_argument("--write-state", action="store_true", help="Persist validated replay recommendations/directives")
     ap.add_argument("--days", type=int, default=TARGETS.get("review_period_days", 7))
     a = ap.parse_args()
 
+    if a.replay_report:
+        if a.send_email:
+            ap.error('--replay-report cannot be combined with --send-email')
+        if not a.snapshot or not a.output_dir:
+            ap.error('--replay-report requires --snapshot and --output-dir')
+        replay_report(a.replay_report, a.snapshot, a.output_dir, write_state=a.write_state and not a.dry_run)
+        return 0
+    if a.snapshot or a.output_dir or a.write_state:
+        ap.error('--snapshot, --output-dir and --write-state require --replay-report')
     days = a.days
     cur = ma.snapshot(days)
     prev = ma.snapshot(days, end=datetime.datetime.fromisoformat(cur["period_start"]))
@@ -601,6 +672,7 @@ def main():
         if verdict.get("error"):
             print(f"council LLM error: {verdict['error']}", file=sys.stderr)
 
+    verdict = council_evidence.sanitize(verdict, scorecard=scorecard)
     applied, cadence = apply_auto_fixes(verdict, a.dry_run)
     html = render_html(cur, scorecard, verdict, applied, cadence)
     md = render_md(cur, scorecard, verdict, applied)
