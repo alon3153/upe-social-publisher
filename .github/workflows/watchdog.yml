@@ -48,3 +48,17 @@ jobs:
           else
             python3 scripts/watchdog.py
           fi
+      - name: Export read-only approval counts
+        if: always()
+        env:
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
+        run: python3 scripts/social_health_snapshot.py
+      - name: Preserve social health evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: social-health-evidence
+          path: reports/social-health-cloud.json
+          retention-days: 14
+          if-no-files-found: error
