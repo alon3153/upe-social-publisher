@@ -37,6 +37,26 @@ def inventory(today=None, ledger_path=None, changes_path=None):
         saved = json.loads(p.read_text())
         items.extend(saved['changes'])
         items.extend(saved.get('verified_existing_pages', []))
+    # A URL can occur in the weekly ledger and the manual-deployment ledger.
+    # The newest verified change governs every recommendation for that URL.
+    grouped = {}
+    for item in items:
+        key = _url_key(item['url'])
+        previous = grouped.get(key, {})
+        stamps = [i.get('last_changed') or i.get('last_published') for i in (previous, item)]
+        valid = []
+        for stamp in stamps:
+            try:
+                valid.append(datetime.date.fromisoformat(stamp).isoformat())
+            except (ValueError, TypeError):
+                pass
+        merged = dict(previous, **item)
+        if valid:
+            merged['last_changed'] = max(valid)
+        merged['intents'] = sorted(set(previous.get('intents', []) + item.get('intents', []) +
+                                       [i['intent'] for i in (previous, item) if i.get('intent')]))
+        grouped[key] = merged
+    items = list(grouped.values())
     for item in items:
         stamp = item.get('last_changed') or item.get('last_published')
         try:
@@ -102,6 +122,9 @@ def filter_actions(actions, items):
             continue
         if kind == 'outreach_draft':
             from aeo_probe import citation_kind
+            domains = re.findall(r'(?<![\w@])(?:[a-z0-9-]+\.)+[a-z]{2,}(?![\w])', text.lower())
+            if any(citation_kind(d.removeprefix('www.')) == 'competitor' for d in domains):
+                continue
             if any(citation_kind((urlsplit(u).hostname or '').lower()) in ('competitor', 'unverified') for u in targets):
                 continue
         if kind not in ('observe', 'verify', 'outreach_draft', 'create', 'update'):

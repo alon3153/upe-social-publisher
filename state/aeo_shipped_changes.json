@@ -146,12 +146,12 @@
       "aliases": [
         "בחירת חברה להפקת כנסים"
       ],
-      "source": "Read-only live audit 2026-09-13 and uproduction-astro master merge history (not HTML dateModified); Live 200/self-canonical; 7 selection criteria, international production, budget/ROI and 7 visible FAQs verified 2026-09-13. Missing FAQPage is a separate technical fix, not a content rewrite. Live content matches master PR127 merge 8fbde79 2026-09-10.",
+      "source": "Read-only live audit 2026-09-13 and uproduction-astro master merge history (not HTML dateModified); Live 200/self-canonical; 7 selection criteria, international production, budget/ROI and 7 visible FAQs verified 2026-09-13. FAQPage fixed and live-verified by technical-only PR137 on 2026-09-13. Live content matches master PR127 merge 8fbde79 2026-09-10.",
       "last_changed": "2026-09-10",
       "audit": {
         "completed_at": "2026-09-13",
         "update_required": false,
-        "evidence": "Live 200/self-canonical; 7 selection criteria, international production, budget/ROI and 7 visible FAQs verified 2026-09-13. Missing FAQPage is a separate technical fix, not a content rewrite. Live content matches master PR127 merge 8fbde79 2026-09-10."
+        "evidence": "Live 200/self-canonical; 7 selection criteria, international production, budget/ROI and 7 visible FAQs verified 2026-09-13. 7-question FAQPage verified live after technical-only PR137 (cf805f24, 2026-09-13T18:32:36Z); body and content measurement date unchanged. Live content matches master PR127 merge 8fbde79 2026-09-10."
       }
     },
     {

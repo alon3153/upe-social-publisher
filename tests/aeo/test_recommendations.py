@@ -99,3 +99,17 @@ def test_exclusive_dmc_claim_and_competitor_outreach_fail_closed():
                {'kind': 'outreach_draft', 'text': 'Draft pitch', 'target_url': 'https://unknown.example/'},
                {'kind': 'outreach_draft', 'text': 'Draft factual expert commentary for review', 'target_url': 'https://bizbash.com/'}]
     assert rec.filter_actions(actions, []) == [actions[-1]['text']]
+
+
+def test_duplicate_url_uses_latest_verified_change_for_observation(tmp_path):
+    ledger, changes = files(tmp_path)
+    changes.write_text(json.dumps({'changes': [{'url': 'https://upe.co.il/en/mice/', 'last_changed': '2026-09-12'}]}))
+    items = rec.inventory('2026-09-13', ledger, changes)
+    assert len(items) == 1 and items[0]['cooldown_until'] == '2026-10-10'
+    assert rec.covered_intents(items) == {'mice'}
+    result = rec.filter_actions([{'kind': 'verify', 'target_url': items[0]['url'], 'text': 'Audit again'}], items)
+    assert len(result) == 1 and '2026-10-10' in result[0]
+
+
+def test_competitor_named_in_outreach_prose_without_url_is_rejected():
+    assert rec.filter_actions([{'kind': 'outreach_draft', 'text': 'Pitch corporateoptics.com for an editorial mention'}], []) == []
