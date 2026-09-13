@@ -103,9 +103,9 @@ def run(repo, dry_run, ask_fn=None, judge_fn=None, send_fn=None, runner=None, to
             problems += aeo_guards.sourcing_violations(body)
             comp = aeo_guards.names_competitor(body)
             if comp:
-                # Founder decision 30.08: a roster page naming competitors is allowed when
-                # it is structurally neutral. It is rejected — not silently held — when it
-                # is not, because a held page was never actually reviewed.
+                # Legacy neutrality checks are additional safeguards, never permission
+                # to bypass the destination website's hard competitor-name guard.
+                # Generation retries those violations; publish preflight checks again.
                 page["_competitors"] = comp
                 problems += aeo_guards.comparative_violations(body, comp)
             if problems:
@@ -130,8 +130,14 @@ def run(repo, dry_run, ask_fn=None, judge_fn=None, send_fn=None, runner=None, to
     pub_kwargs = {"dry_run": dry_run}
     if runner:
         pub_kwargs["runner"] = runner
-    publish = aeo_publish.publish(astro_repo, pages, f"aeo/{today}", today, **pub_kwargs) if pages else \
-        {"branch": None, "files": [], "pr_url": None, "dry_run": dry_run}
+    try:
+        publish = aeo_publish.publish(astro_repo, pages, f"aeo/{today}", today, **pub_kwargs) if pages else \
+            {"branch": None, "files": [], "pr_url": None, "dry_run": dry_run}
+    except (ValueError, RuntimeError) as exc:
+        failures.append(f"publication preflight failed: {exc}")
+        publish = {"branch": None, "files": [], "pr_url": None, "dry_run": dry_run}
+        pages = []  # no PR means no shipped report, intent recording, or IndexNow ping
+        merged_from_hold = []  # retain held entries for review/retry
     if merged_from_hold and not dry_run and (publish.get("pr_url") or publish.get("files")):
         held_pages.release([p["slug"] for p in merged_from_hold])
 
