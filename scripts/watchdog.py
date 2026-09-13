@@ -407,6 +407,20 @@ def send_graph(subject, body_text):
         print("graph send failed:", e); return False
 
 
+def write_health_feed(issues):
+    """Persist completed full checks, including recovery; never auth URLs/errors."""
+    from pathlib import Path
+    feed = {'schema_version': 1, 'source_key': 'sp_watchdog',
+            'generated_at': datetime.datetime.now(datetime.timezone.utc).isoformat(),
+            'status': 'partial' if issues else 'ok',
+            'source': 'GitHub full Autonomy Watchdog run ' + os.environ.get('GITHUB_RUN_ID', 'local'),
+            'facts': [['שורות ממצא בבדיקה', len(issues)]],
+            'findings': [{'severity': 'warn' if issues else 'info',
+                          'text': 'בדיקת הסושיאל דורשת עיון בממצאי ריצת הענן.' if issues else 'בדיקת הסושיאל המלאה הסתיימה ללא בעיות.'}]}
+    path=Path(ROOT)/'reports/sp_watchdog.json';path.parent.mkdir(exist_ok=True)
+    path.write_text(json.dumps(feed,ensure_ascii=False,indent=2))
+
+
 def main():
     if '--workflows-only' in sys.argv:
         issues = check_workflows()
@@ -423,6 +437,7 @@ def main():
         return 0
     issues = (check_workflows() + check_runway() + check_linkedin_auth() + check_failures()
               + check_backlog() + check_duplicates())
+    write_health_feed(issues)
     if not issues:
         print("✅ watchdog: all healthy (runway ok, no failures, no backlog)")
         return 0

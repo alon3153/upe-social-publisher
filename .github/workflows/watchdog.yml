@@ -59,6 +59,8 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: social-health-evidence
-          path: reports/social-health-cloud.json
+          path: |
+            reports/social-health-cloud.json
+            reports/sp_watchdog.json
           retention-days: 14
           if-no-files-found: error
