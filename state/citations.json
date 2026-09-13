@@ -73,7 +73,7 @@
       "title": "פרופיל Clutch",
       "state": "verified_cited",
       "since": "2026-07-31",
-      "action": "פרופיל חי, ביקורת מאומתת אחת (Future of Health, 13.08). חסמים פתוחים: Service Lines מצהירים Event Management 20% בלבד מול Corporate Travel 70%; Year founded מוצג 2010 במקום 2012; טווח עובדים 2-9. כניסה ל-Leaders Matrix דורשת ~5 ביקורות עדכניות.",
+      "action": "פרופיל קיים. לפי בדיקת 30.08: ביקורת מאומתת אחת, Service Lines מציגים Event Management 20% מול Corporate Travel 70%, וטווח עובדים 2–9; אלו נתונים היסטוריים שיש לאמת לפני שינוי. שנת תחילת הפעילות המאושרת היא 2010; אין לשנותה ל-2012 בגלל תאריך ההתאגדות המשפטית.",
       "target_url": "https://clutch.co/profile/uproduction-events",
       "kind": "directory",
       "reviews": 1
@@ -127,10 +127,11 @@
       "title": "ישות Wikidata + sameAs",
       "state": "verified_cited",
       "since": "2026-08-30",
-      "action": "בוצע 08.08: פריט חברה Q140941236 + פריט מייסד Q140941733, מקושרים הדדית, מחווטים ל-sameAs בסכמה. נותר: להוסיף את פריט המייסד לצומת founder בסכמה.",
+      "action": "פריטי חברה Q140941236 ומייסד Q140941733 מחוברים ב-sameAs בסכמת האתר, כולל צומת founder; אין משימת חיבור פתוחה. איכות הנתונים וסטטוס הפריטים עצמם נבדקים בנפרד.",
       "target_url": "https://www.wikidata.org/wiki/Q140941236",
       "kind": "entity",
-      "note": "founder item Q140941733 not yet in OrganizationSchema.astro"
+      "note": "Founder sameAs confirmed in OrganizationSchema.astro in deployed website source (PR137); do not recreate this completed task.",
+      "last_reviewed": "2026-09-13"
     },
     {
       "id": "li_articles",
