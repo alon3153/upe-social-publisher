@@ -1,21 +1,21 @@
 {
-  "generated_at": "2026-09-13T10:30:52",
+  "generated_at": "2026-09-13T21:51:29",
   "period_days": 7,
-  "period_start": "2026-09-06T10:30:52",
-  "period_end": "2026-09-13T10:30:52",
+  "period_start": "2026-09-06T21:51:29",
+  "period_end": "2026-09-13T21:51:29",
   "networks": {
     "instagram": {
       "posts": 9,
-      "impressions": 454,
-      "reach": 321,
-      "interactions": 1,
-      "engagement_rate_pct": 0.22,
+      "impressions": 525,
+      "reach": 370,
+      "interactions": 3,
+      "engagement_rate_pct": 0.57,
       "caveat": null,
       "top": {
         "url": "https://www.instagram.com/p/DdH2QBaCmZ4/",
         "content": "נופש חברה טוב לא מתחיל ביעד. הוא מתחיל בלוח שנה\n\nשני נופשי חברה. אותו גודל קבוצה, כמעט אותו תקציב. אחד מדובר שנה שלמה, השני נשכח תוך שבוע.\n\nההבדל לא היה היעד\n\nה",
-        "impressions": 83,
-        "interactions": 0
+        "impressions": 114,
+        "interactions": 1
       },
       "ok": true
     },
@@ -45,15 +45,15 @@
     },
     "linkedin": {
       "posts": 6,
-      "impressions": 141,
+      "impressions": 144,
       "reach": 0,
       "interactions": 8,
-      "engagement_rate_pct": 5.67,
+      "engagement_rate_pct": 5.56,
       "caveat": null,
       "top": {
         "url": "https://www.linkedin.com/feed/update/urn:li:share:7503348620763541504",
         "content": "",
-        "impressions": 54,
+        "impressions": 55,
         "interactions": 0
       },
       "ok": true
@@ -77,10 +77,10 @@
   "unavailable_networks": [],
   "totals": {
     "posts": 22,
-    "impressions": 4460,
-    "reach": 339,
-    "interactions": 50,
-    "engagement_rate_pct": 0.2
+    "impressions": 4534,
+    "reach": 388,
+    "interactions": 52,
+    "engagement_rate_pct": 0.24
   },
   "leads": {
     "ok": true,
@@ -99,9 +99,13 @@
       "Google Organic": 1
     },
     "dominant_source": "Web",
+    "ambiguous_sources": [
+      "Advertisement",
+      "Other"
+    ],
     "dominant_share_pct": 33,
-    "attribution_gap": false,
-    "attribution_note": "הייחוס מפוזר בין מספר מקורות"
+    "attribution_gap": true,
+    "attribution_note": "2/9 ברשומות מקור עמום או ברירת מחדל. אין לשייך אותן לערוץ דיגיטלי מסוים ללא ראיה ואין להסיק שיעור המרה מחלוקת המקורות."
   },
   "seo_geo": {
     "generated_at": "2026-09-08",
@@ -110,18 +114,59 @@
     "sites": [
       {
         "site": "https://upe.co.il/",
-        "clicks": 157,
-        "impressions": 46629,
-        "avg_position": 35.7,
-        "clicks_prev": 161,
-        "impressions_prev": 42531,
-        "clicks_7d": 31,
-        "impressions_7d": 10681,
+        "windows": {
+          "current": {
+            "start": "2026-08-17",
+            "end": "2026-09-13",
+            "days": 28
+          },
+          "previous": {
+            "start": "2026-07-20",
+            "end": "2026-08-16",
+            "days": 28
+          },
+          "weekly": {
+            "start": "2026-09-07",
+            "end": "2026-09-13",
+            "days": 7
+          }
+        },
+        "clicks": 168,
+        "impressions": 46546,
+        "avg_position": 33.7,
+        "clicks_prev": 154,
+        "impressions_prev": 42366,
+        "clicks_7d": 40,
+        "impressions_7d": 9310,
         "top3_terms": [
           [
             "טיולי חברה",
-            1.3,
-            123,
+            1.4,
+            126,
+            0
+          ],
+          [
+            "טיולי תמריץ לאיטליה",
+            2.9,
+            73,
+            0
+          ],
+          [
+            "נופש חברה במלטה",
+            1.8,
+            43,
+            0
+          ],
+          [
+            "הפקת כנסים בחו\"ל",
+            2.4,
+            38,
+            0
+          ],
+          [
+            "נופש חברה לקבוצות גדולות",
+            3.5,
+            36,
             0
           ],
           [
@@ -131,33 +176,45 @@
             0
           ],
           [
-            "טיולי חברה יוקרתיים",
-            1.1,
-            34,
+            "הפקת כנסים בחול",
+            3.2,
+            33,
             0
           ],
           [
-            "נופש חברה במלטה",
-            1.1,
-            34,
-            0
-          ],
-          [
-            "מה זה ערב גאלה",
+            "הפקת אירועים בינלאומיים",
             2.5,
             32,
             0
           ],
           [
-            "איזה מקום מתאים לארגן כנס בינלאומי עם משתתפים מארצות שונות?",
-            1.7,
+            "מה זה ערב גאלה",
+            2.3,
+            32,
+            0
+          ],
+          [
+            "טיולי חברה יוקרתיים",
+            1.2,
             30,
             0
           ],
           [
-            "אילו ארגוניות נחשבים לטובים ביותר?",
-            2.5,
+            "איזה מקום מתאים לארגן כנס בינלאומי עם משתתפים מארצות שונות?",
+            1.8,
             29,
+            0
+          ],
+          [
+            "אילו ארגוניות נחשבים לטובים ביותר?",
+            2.8,
+            24,
+            0
+          ],
+          [
+            "איך אפשר להזמין מקום לאירוע השקה טכנולוגי עם דגש על חדשנות בתצוגה?",
+            2.4,
+            10,
             0
           ]
         ],
@@ -165,47 +222,47 @@
         "top_opportunities": [
           [
             "הפקת נופש חברה",
-            16.9,
-            363
+            16.4,
+            332
+          ],
+          [
+            "נופש חברה",
+            19.7,
+            275
           ],
           [
             "אירועי קונספט",
-            19.0,
-            282
+            19.1,
+            270
+          ],
+          [
+            "הפקות אירועים עסקיים",
+            17.1,
+            201
           ],
           [
             "ארגון טיולים לחברות",
-            10.5,
-            184
-          ],
-          [
-            "נופש חברה בחול",
-            17.1,
-            143
-          ],
-          [
-            "נופש חברה בארץ",
-            17.3,
-            139
+            9.6,
+            178
           ]
         ],
         "opportunity_pages": {
           "הפקת נופש חברה": "https://upe.co.il/%D7%A0%D7%95%D7%A4%D7%A9-%D7%97%D7%91%D7%A8%D7%94/",
+          "נופש חברה": "https://upe.co.il/%D7%A0%D7%95%D7%A4%D7%A9-%D7%97%D7%91%D7%A8%D7%94/",
           "אירועי קונספט": "https://upe.co.il/%D7%90%D7%99%D7%A8%D7%95%D7%A2-%D7%A7%D7%95%D7%A0%D7%A1%D7%A4%D7%98/",
+          "הפקות אירועים עסקיים": "https://upe.co.il/%D7%94%D7%A4%D7%A7%D7%AA-%D7%90%D7%99%D7%A8%D7%95%D7%A2%D7%99%D7%9D-%D7%A2%D7%A1%D7%A7%D7%99%D7%99%D7%9D/",
           "ארגון טיולים לחברות": "https://upe.co.il/%D7%98%D7%99%D7%95%D7%9C%D7%99-%D7%97%D7%91%D7%A8%D7%94/",
+          "טיולי תמריץ לחברות": "https://upe.co.il/%D7%98%D7%99%D7%95%D7%9C%D7%99-%D7%AA%D7%9E%D7%A8%D7%99%D7%A5-%D7%91%D7%97%D7%95%D7%9C/",
           "נופש חברה בחול": "https://upe.co.il/%D7%A0%D7%95%D7%A4%D7%A9-%D7%97%D7%91%D7%A8%D7%94-%D7%91%D7%97%D7%95%D7%9C/",
-          "נופש חברה בארץ": "https://upe.co.il/%D7%A0%D7%95%D7%A4%D7%A9-%D7%97%D7%91%D7%A8%D7%94/",
           "טיול מאורגן לעובדים": "https://upe.co.il/%D7%98%D7%99%D7%95%D7%9C%D7%99-%D7%97%D7%91%D7%A8%D7%94/",
           "חברת הפקה": "https://upe.co.il/",
-          "טיולי תמריץ לחברות": "https://upe.co.il/%D7%98%D7%99%D7%95%D7%9C%D7%99-%D7%AA%D7%9E%D7%A8%D7%99%D7%A5-%D7%91%D7%97%D7%95%D7%9C/",
-          "הפקת נופש לחברות": "https://upe.co.il/%D7%A0%D7%95%D7%A4%D7%A9-%D7%97%D7%91%D7%A8%D7%94/",
-          "incentive travel spain": "https://upe.co.il/en/incentive-travel-to-spain-the-ultimate-planning-guide-for-international-companie/"
+          "נופש חברה בארץ": "https://upe.co.il/%D7%A0%D7%95%D7%A4%D7%A9-%D7%97%D7%91%D7%A8%D7%94/"
         }
       }
     ],
-    "weekly_clicks": 31,
-    "clicks_28d": 157,
-    "top3_keywords": 7,
+    "weekly_clicks": 40,
+    "clicks_28d": 168,
+    "top3_keywords": 13,
     "top10_keywords": 53,
     "geo": {
       "status": "ok",
@@ -601,8 +658,47 @@
         ]
       }
     ],
+    "gsc_generated_at": "2026-09-13",
+    "gsc_retrieved_at": "2026-09-13T21:39:13.321093+00:00",
+    "weekly_window_days": 7,
+    "geo_generated_at": "2026-09-08",
+    "category_generated_at": "2026-09-08T11:52:17.947378+00:00",
+    "competitors_generated_at": "2026-09-08",
     "ok": true,
-    "aeo_cited_engines": 4
+    "weekly_window_verified": true,
+    "aeo_cited_questions": 4,
+    "aeo_measured_questions": 7,
+    "aeo_question_engine": "perplexity",
+    "aeo_cited_engines": 3,
+    "aeo_engine_evidence": {
+      "ok": true,
+      "reason": "",
+      "date": "2026-09-13",
+      "battery_version": "2026-08-30.1",
+      "engines": {
+        "claude": {
+          "grounded_nonbranded_answers": 32,
+          "direct_url_answers": 17,
+          "source_domain_answers": 0,
+          "cited": true
+        },
+        "chatgpt": {
+          "grounded_nonbranded_answers": 32,
+          "direct_url_answers": 4,
+          "source_domain_answers": 0,
+          "cited": true
+        },
+        "gemini": {
+          "grounded_nonbranded_answers": 32,
+          "direct_url_answers": 0,
+          "source_domain_answers": 10,
+          "cited": true
+        }
+      },
+      "measured_engines": 3,
+      "cited_engines": 3,
+      "definition": "Distinct engines citing UPE in grounded nonbranded answers; direct URLs and grounding source-domain labels distinguished. Not recommendation rank."
+    }
   },
   "site_inventory": {
     "ok": true,
@@ -637,7 +733,7 @@
       "services_index": true,
       "brand_hub_trust": true
     },
-    "blog_article_count": 292,
+    "blog_article_count": 299,
     "source": "github:alon3153/uproduction-astro"
   }
 }

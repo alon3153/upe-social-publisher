@@ -1,57 +1,65 @@
 {
   "updated_at": "2026-09-13",
   "scores": {
-    "instagram": 38,
-    "facebook": 30,
-    "tiktok": 5,
-    "linkedin": 52,
-    "youtube": 60,
-    "google_organic_geo": 55,
-    "overall": 62
+    "instagram": 42,
+    "facebook": 28,
+    "tiktok": 10,
+    "linkedin": 38,
+    "youtube": 55,
+    "google_organic_geo": 62,
+    "overall": 58
   },
   "recommendations": [
     {
       "category": "gated",
-      "priority": "P2",
-      "action_key": "youtube-seo-videos",
-      "owner": "video producer מכין; SEO specialist מוסיף timestamps ותיאור; Alon מאשר לפני העלאה",
-      "success_metric": "בסיס: 3,828 חשיפות/שבוע YouTube, 0 interactions; יעד: 3 סרטונים חדשים ב-90 יום עם 500+ חשיפות/סרטון ו-CTR >2% לדפי שירות; מדד: YouTube analytics + GSC",
-      "evidence": "id 0a16e409 בסטטוס awaiting_approval; YouTube מוביל חשיפות (3,828 — 86% מסך חשיפות תקופה); top opportunity 'incentive travel spain' מקושר לסרטון/מאמר קיים; שאלות קונים מוכחות ב-GSC (כמה עולה כנס, איך בוחרים חברת הפקה)",
-      "action": "הפק 3 סרטוני YouTube (5-8 דקות) על שאלות קונים מוכחות: 'כמה עולה הפקת כנס ל-200 איש', 'איך בוחרים חברת הפקה', 'נופש חברה vs טיול תמריץ' — כולל timestamps, תיאור 300+ מילים עם מונחים עבריים, קישור לדף שירות רלוונטי",
-      "expected_impact": "YouTube SEO compounding — סרטונים ממוטבים מייצרים long-tail discovery אורגני; כניסה לתוצאות חיפוש Google Video עבור שאלות קונים עם כוונת רכישה גבוהה",
-      "channel": "youtube"
-    }
-  ],
-  "follower_growth_plan": [],
-  "leads_actions": [
-    "P0 — Internal linking מיידי: ערוך 20 מאמרי בלוג קיימים עם anchor text לדפי ההזדמנות — עלות אפסית, אפקט מיידי על crawl authority ו-ranking.",
-    "P1 — CTA pipeline: ודא שיש CTA 'קבל הצעת מחיר' בולט בכל דף שירות ובסוף כל מאמר בלוג; האתר כבר ממיר — פישוט מסע המשתמש לטופס מגדיל conversion ללא תנועה נוספת.",
-    "P1 — LinkedIn executive posting: פוסט case-study אחד + פוסט insight אחד/שבוע מפרופיל מנכ\"ל — B2B ישראלי מחליט על בסיס מוניטין אישי; lead מ-LinkedIn מגיע עם trust מובנה.",
-    "P2 — סגירת פער ייחוס Salesforce: הדרך נציגי מכירות לסמן 'Google Organic' ו-'Web' כשלקוח מזכיר את האתר; 'Other' (1 ליד) עשוי להסתיר organic שמכוון היכן להשקיע."
-  ],
-  "evidence_notes": [
-    "אין בנתונים בסיס לתחזית עוקבים או לתוספת מובטחת של קליקים ולידים. צעדי צמיחה הם ניסויים למדידה.",
-    "אישור יוזמה או מסמך תסריטים אינו אישור לפוסט מוגמר; יש לבדוק את הנכס ואת סטטוס האישור לפני פרסום.",
-    "טענות על אלגוריתמים, שעות מועדפות ובנצ׳מרקים דורשות מקור מאומת; יעילותן עבור UPE דורשת ניסוי.",
-    "המלצות לשינוי אתר חייבות להפנות לפער מתועד שטרם טופל ולכבד את מועד השינוי האחרון."
-  ],
-  "withheld_advice": [
-    {
-      "action_key": "seo-service-page-optimization",
-      "reason": "site_evidence"
+      "priority": "P0",
+      "action_key": "salesforce-attribution-fix",
+      "owner": "מנהל מכירות מנחה; Alon מאשר הנחיה לצוות",
+      "success_metric": "פחות מ-1 רשומה עם LeadSource 'Other' או ברירת מחדל בחודש הקרוב; כל lead מוב מסומן Google Organic / Web / LinkedIn בהתאם למה שאמר (baseline: 2/9 עמום, review: 2026-10-13)",
+      "evidence": "2/9 לידים מסומנים 'Other' ו-'Advertisement' ללא ראיה לערוץ; attribution_gap=true ב-Salesforce. אי-אפשר לדעת אם יעד 10 לידים דיגיטליים הושג בפועל.",
+      "evidence_url": null,
+      "target_url": null,
+      "action": "הכן הנחיה כתובה לנציגי מכירות: כיצד לסמן LeadSource ב-Salesforce — 'Google Organic' אם הלקוח ציין שמצא בגוגל, 'Web' אם הגיע דרך הטופס, 'LinkedIn' אם דרך פוסט. שלח ל-Alon לאישור לפני הפצה לצוות.",
+      "expected_impact": "חשיפת ערוצים מוסתרים; החלטות הקצאת תקציב מבוססות נתונים אמיתיים ולא ניחוש. אין ערובה לגידול בלידים.",
+      "channel": "leads"
     },
     {
-      "action_key": "internal-linking-blog-to-service",
-      "reason": "site_evidence"
-    },
-    {
-      "action_key": "aeo-llms-txt-update",
-      "reason": "site_evidence"
-    },
-    {
+      "category": "gated",
+      "priority": "P1",
       "action_key": "linkedin-executive-advocacy",
-      "reason": "benchmark"
+      "owner": "מנכ\"ל/בכיר מפרסם מפרופיל אישי; Alon מאשר תכנית תוכן שבועית",
+      "success_metric": "≥3 פוסטים אישיים/שבוע מפרופיל בכיר; ≥500 impressions LinkedIn שבועיות תוך 4 שבועות; ≥1 ליד מ-LinkedIn ב-90 יום (baseline: 144 impressions/שבוע, 0 לידים מ-LinkedIn, review: 2026-12-13)",
+      "evidence": "LinkedIn impressions ירדו מ-265 ל-144 בתקופה הנוכחית; 2026: reach דף חברה ~1% מעוקבים, פוסטים אישיים מייצרים 14x יותר engagement ממותג; executive posting הוא prerequisite לנראות אורגנית.",
+      "evidence_url": "https://www.tremendous.com/blog/b2b-social-media-marketing/",
+      "target_url": null,
+      "action": "הכן תכנית תוכן ל-4 שבועות: 2 פוסטים case-study + 2 פוסטים insight תעשייתי + 1 וידאו native מפרופיל אישי בכיר; דף החברה עושה repost בלבד. אין לפרסם ללא אישור Alon על כל פוסט.",
+      "expected_impact": "בניית מוניטין אישי ב-B2B ישראלי שמניע trust ועוגן lead pipeline; אין ערובה לליד בפרק זמן מוגדר.",
+      "channel": "linkedin"
+    },
+    {
+      "category": "gated",
+      "priority": "P2",
+      "action_key": "tiktok-behind-scenes-launch",
+      "owner": "יוצר תוכן מכין; Alon מאשר כל סרטון לפני פרסום",
+      "success_metric": "6 סרטוני TikTok ראשונים מאושרים ומפורסמים תוך 4 שבועות מאישור ההפעלה; נתוני reach מדווחים (לא impressions) לאחר 2 שבועות (baseline: 0 פוסטים, review: 2026-11-13)",
+      "evidence": "awaiting_approval מתקופה קודמת; 0 פוסטים גם עכשיו — חוסר החלטה הוא עצירה מוחלטת. TikTok מדווח reach ולא impressions — הגדר KPI ל-reach מהיום הראשון.",
+      "evidence_url": null,
+      "target_url": null,
+      "action": "הגש לאישור Alon: 3 טיוטות סרטון 'אחורי הקלעים' (60 שניות, עברית, ללא תסריט נוקשה) ממקומות הפקה אמיתיים; אם מאושר — פרסם ב-TikTok ושתף מקביל ב-Instagram Reels. ללא אישור — אל תשנה cadence.",
+      "expected_impact": "פתיחת ערוץ חדש לקהל ויזואלי; לא ניתן לחזות reach או לידים לפני נתוני תקופה ראשונה.",
+      "channel": "tiktok"
     }
   ],
-  "evidence_reviewed_at": "2026-09-13"
+  "follower_growth_plan": [
+    "ניסוי A (LinkedIn, 4 שבועות): מנכ\"ל מפרסם 3 פוסטים אישיים/שבוע — מדד: האם follower count דף החברה גדל ב-20+ לאחר amplification? תוצאה תחליט על המשך.",
+    "ניסוי B (YouTube, 6 שבועות): הוסיפו CTA מילולי ו-card קישור בסוף כל סרטון חדש — מדד: האם subscriber rate שבועי עולה? השוואה לממוצע נוכחי (baseline: 0 מנויים חדשים ידועים).",
+    "ניסוי C (Instagram, 4 שבועות): השוו ביצועי Reel (60 שניות, אחורי הקלעים) מול תמונת סטילס — מדד: reach ו-interactions לפוסט; הפורמט הזוכה מקבל עדיפות ב-cadence."
+  ],
+  "leads_actions": [
+    "1. סגור פער ייחוס Salesforce לחודש הבא (action_key: salesforce-attribution-fix) — הליד החסר (9 מתוך 10) עשוי כבר להיות שם, רק לא מסומן נכון.",
+    "2. לאחר cooldown (אוקטובר): הכן טיוטות לדפי opportunity (נופש חברה pos.19.7, אירועי קונספט pos.19.1) — מעבר לעמוד 1 על ביטויים עם 270-275 חיפושים הוא הנתיב הישיר לגידול ב-Web leads.",
+    "3. ודא CTA 'קבל הצעת מחיר' קיים ובולט בכל דף שירות ובסוף כל סרטון YouTube — האתר ממיר כבר (3 Web leads), הגדלת שטח ה-CTA לא מחייבת תנועה נוספת.",
+    "4. הפעל executive posting ב-LinkedIn (action_key: linkedin-executive-advocacy) — B2B ישראלי מחליט על בסיס מוניטין אישי; LinkedIn הוא הערוץ עם פוטנציאל lead qualification גבוה ביותר.",
+    "5. עקוב אחרי 'Advertisement' ו-'Other' בSalesforce — אם אחד מהם הוא דיגיטלי, הוא כבר ליד 10 ו-5 לידים דיגיטליים. זה לא מוסיף ליד אלא מגלה אחד שכבר קיים."
+  ]
 }

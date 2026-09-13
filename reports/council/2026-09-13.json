@@ -1,0 +1,407 @@
+{
+  "date": "2026-09-13",
+  "scorecard": {
+    "rows": [
+      {
+        "metric": "לידים לפי ההגדרה התפעולית (30 ימים)",
+        "value": 9,
+        "target": 10,
+        "unit": "",
+        "status": "❌"
+      },
+      {
+        "metric": "לידים מיוחסים לדיגיטל",
+        "value": 4,
+        "target": 3,
+        "unit": "",
+        "status": "✅"
+      },
+      {
+        "metric": "קליקים אורגניים/שבוע",
+        "value": 40,
+        "target": 300,
+        "unit": "",
+        "status": "❌"
+      },
+      {
+        "metric": "מונחים ב-Top-3",
+        "value": 13,
+        "target": 3,
+        "unit": "",
+        "status": "✅"
+      },
+      {
+        "metric": "נראות ב-AI (מנועים)",
+        "value": 3,
+        "target": 3,
+        "unit": "",
+        "status": "✅"
+      },
+      {
+        "metric": "נוכחות סושיאל (רצפה)",
+        "value": 22.0,
+        "target": 5,
+        "unit": "",
+        "status": "✅"
+      },
+      {
+        "metric": "שאלות עם ציטוט במנוע Perplexity (מדידה נפרדת)",
+        "value": 4,
+        "target": 7,
+        "unit": "",
+        "status": "—"
+      },
+      {
+        "metric": "צמיחת חשיפות",
+        "value": -34.0,
+        "target": 10,
+        "unit": "%",
+        "status": "❌"
+      },
+      {
+        "metric": "Engagement rate",
+        "value": 0.24,
+        "target": 2.0,
+        "unit": "%",
+        "status": "❌"
+      },
+      {
+        "metric": "חשיפות (תקופה)",
+        "value": 4534,
+        "target": "↑",
+        "unit": "",
+        "status": "✅"
+      },
+      {
+        "metric": "עדכניות snapshot אורגני (ימים)",
+        "value": 0,
+        "target": "≤8",
+        "unit": "",
+        "status": "✅"
+      },
+      {
+        "metric": "ייחוס לידים",
+        "value": "לא-מיוחס",
+        "target": "מקור אמיתי",
+        "unit": "",
+        "status": "❌"
+      }
+    ],
+    "scored_rows": [
+      {
+        "metric": "לידים לפי ההגדרה התפעולית (30 ימים)",
+        "value": 9,
+        "target": 10,
+        "unit": "",
+        "status": "❌"
+      },
+      {
+        "metric": "לידים מיוחסים לדיגיטל",
+        "value": 4,
+        "target": 3,
+        "unit": "",
+        "status": "✅"
+      },
+      {
+        "metric": "קליקים אורגניים/שבוע",
+        "value": 40,
+        "target": 300,
+        "unit": "",
+        "status": "❌"
+      },
+      {
+        "metric": "מונחים ב-Top-3",
+        "value": 13,
+        "target": 3,
+        "unit": "",
+        "status": "✅"
+      },
+      {
+        "metric": "נראות ב-AI (מנועים)",
+        "value": 3,
+        "target": 3,
+        "unit": "",
+        "status": "✅"
+      },
+      {
+        "metric": "נוכחות סושיאל (רצפה)",
+        "value": 22.0,
+        "target": 5,
+        "unit": "",
+        "status": "✅"
+      }
+    ],
+    "context_rows": [
+      {
+        "metric": "שאלות עם ציטוט במנוע Perplexity (מדידה נפרדת)",
+        "value": 4,
+        "target": 7,
+        "unit": "",
+        "status": "—"
+      },
+      {
+        "metric": "צמיחת חשיפות",
+        "value": -34.0,
+        "target": 10,
+        "unit": "%",
+        "status": "❌"
+      },
+      {
+        "metric": "Engagement rate",
+        "value": 0.24,
+        "target": 2.0,
+        "unit": "%",
+        "status": "❌"
+      },
+      {
+        "metric": "חשיפות (תקופה)",
+        "value": 4534,
+        "target": "↑",
+        "unit": "",
+        "status": "✅"
+      },
+      {
+        "metric": "עדכניות snapshot אורגני (ימים)",
+        "value": 0,
+        "target": "≤8",
+        "unit": "",
+        "status": "✅"
+      },
+      {
+        "metric": "ייחוס לידים",
+        "value": "לא-מיוחס",
+        "target": "מקור אמיתי",
+        "unit": "",
+        "status": "❌"
+      }
+    ],
+    "coverage_percent": 100,
+    "warnings": [
+      "ספירת הלידים כוללת הזדמנויות ופניות טופס שלא סומנו כלא מתאימות; אינה הוכחה שכל פנייה הוסמכה במכירות.",
+      "מדידת מנועי AI מתאריך 2026-09-13: ציטוטי כתובת או תווית דומיין ממקור חיפוש, בשאלות לא ממותגות; אינה מדידת מקום ראשון."
+    ],
+    "components": {
+      "qualified_leads": 0.9,
+      "digital_leads": 1.3333333333333333,
+      "organic": 0.5666666666666667,
+      "aeo": 1.0,
+      "social_presence": 1.0
+    },
+    "weighted": 88,
+    "passed": 4,
+    "total": 6,
+    "impressions_growth_pct": -34.0,
+    "posts_per_week": 22.0,
+    "lead_attribution": {
+      "by_source": {
+        "Existing Customer": 1,
+        "Word of mouth": 2,
+        "Web": 3,
+        "Advertisement": 1,
+        "Other": 1,
+        "Google Organic": 1
+      },
+      "dominant_source": "Web",
+      "dominant_share_pct": 33,
+      "attribution_gap": true,
+      "note": "2/9 ברשומות מקור עמום או ברירת מחדל. אין לשייך אותן לערוץ דיגיטלי מסוים ללא ראיה ואין להסיק שיעור המרה מחלוקת המקורות."
+    }
+  },
+  "verdict": {
+    "verdict_summary": "המסקנות המאומתות מופיעות בנתונים ובהערות המדידה להלן.",
+    "scores": {
+      "instagram": 42,
+      "facebook": 28,
+      "tiktok": 10,
+      "linkedin": 38,
+      "youtube": 55,
+      "google_organic_geo": 62,
+      "overall": 58
+    },
+    "what_worked": [
+      "נראות AI: UPE מצוטטת ב-3 מנועים (Claude, ChatGPT, Gemini) ובפרפלקסיטי ב-4/7 שאלות — זהו יתרון תחרותי מוכח שנבנה על llms-full.txt ודפי שירות קיימים.",
+      "13 מונחים עבריים ב-Top-3 בגוגל, כולל 'טיולי חברה' (pos.1.4) ו'הפקת אירועים קולינריים' (pos.1.6) — מוכיח שהתוכן הקיים מדורג היטב על כוונות מסחריות.",
+      "4 לידים מיוחסים לדיגיטל (יעד: 3) — Web+Google Organic ביחד עברו את הרף; האתר ממיר בפועל.",
+      "YouTube מייצר 84% מהחשיפות הכוללות (3,828 מתוך 4,534) עם 3 פוסטים בלבד — ה-ROI לחשיפה גבוה ביותר מכל ערוץ.",
+      "דפי שירות מבוקרים (/נופש-חברה/, /אירוע-קונספט/, /הפקת-כנסים/) עודכנו ואין update_required — הבסיס הטכני תקין."
+    ],
+    "what_failed": [
+      "קליקים אורגניים: 40/שבוע מול יעד 300 — פער 87%; 5 הזדמנויות Top (הפקת נופש חברה pos.16.4, נופש חברה pos.19.7) יושבות בעמוד 2 עם 332-275 חיפושים ולא מייצרות קליקים.",
+      "לידים: 9 מתוך 10 — חסר ליד אחד; ללא שיפור בקליקים האורגניים הסיכוי להגיע ל-10 בחודש הבא נמוך.",
+      "Facebook: פוסטים ירדו מ-11 ל-4, חשיפות מ-186 ל-37 — הערוץ חלש ומוגזם-פוסטים יחסית לתשואה; ER לא אמין.",
+      "LinkedIn: ירידה חדה מ-13 פוסטים ו-265 חשיפות ל-6 פוסטים ו-144 חשיפות — ה-executive posting (action_key: linkedin-executive-advocacy) נמצא in_progress אך תפוקת הפוסטים ירדה; דף חברה לא מספיק, נדרש posting אישי.",
+      "TikTok: 0 פוסטים גם בתקופה הנוכחית — awaiting_approval מאז תקופה קודמת; חוסר החלטה הוא בפועל בחירה להישאר ב-0.",
+      "פער ייחוס Salesforce: 2 רשומות מ-9 מסומנות 'Other'/'Advertisement' — אין אפשרות לדעת מאיזה ערוץ הגיעו ואין ראיה לשיוך דיגיטלי."
+    ],
+    "auto_fixes": [
+      {
+        "category": "safe_auto",
+        "action": "אסטרטגיית hashtag LinkedIn: 3-5 האשטאגים נישתיים בלבד (#HREvents #CorporateEvents #IncentiveTravel #מיוחד #MICE)",
+        "detail": "האשטאגים עם 1M+ עוקבים מדללים את החשיפה בפיד רווי. השתמשו ב-1-2 hashtag רחב + 2-3 hashtag נישתי. זהו guidance לcontent pipeline הקיים בלבד.",
+        "channel": "linkedin"
+      },
+      {
+        "category": "safe_auto",
+        "action": "זווית תוכן YouTube: צרו תמלול מלא + timestamps לכל סרטון (300+ מילים בתיאור) עם מונחים עבריים ממוקדי קונה",
+        "detail": "YouTube מייצר 84% מהחשיפות הכוללות עם 0 אינטראקציות — הסרטונים נצפים אך אינם מייצרים פעולה. כיוון לתיאורים: ענו על שאלות קונה מוכחות (כמה עולה הפקת כנס, איך בוחרים חברת הפקה) ופנו לקישור לדף שירות רלוונטי. זה guidance לpipeline הקיים.",
+        "channel": "youtube"
+      },
+      {
+        "category": "safe_auto",
+        "action": "הפחתת cadence Facebook: הגבילו ל-2 פוסטים/שבוע מקסימום",
+        "detail": "4 פוסטים הניבו 37 חשיפות (9.25 לפוסט) — התשואה נמוכה ביותר מכל ערוץ. Facebook חלש מבנית ל-B2B ישראלי; הפחתת תדירות חוסכת תקציב תוכן לערוצים בעלי ROI גבוה יותר. ה-ER מדווח כ-100% ומסומן כ-unreliable — אין להסיק ממנו דבר.",
+        "channel": "facebook"
+      },
+      {
+        "category": "safe_auto",
+        "action": "מדידת ביצועים אורגניים: הגדירו GSC weekly alert על קליקים ל-5 הזדמנויות Top כדי לזהות שינוי עמדות לאחר cooldown",
+        "detail": "5 ביטויי opportunity (הפקת נופש חברה pos.16.4 / 332 חיפושים, נופש חברה pos.19.7 / 275 חיפושים, אירועי קונספט pos.19.1 / 270 חיפושים) כולם בעמוד 2. הגדרת alert שבועי ב-GSC תאפשר לזהות תנועה לאחר שה-cooldown על הדפים הרלוונטיים יסתיים (אוקטובר 2026).",
+        "channel": "google_organic_geo"
+      }
+    ],
+    "channel_cadence": {
+      "facebook": {
+        "max_posts_per_week": 2,
+        "reason": "4 פוסטים הניבו 37 חשיפות בלבד (9.25/פוסט); הערוץ חלש מבנית ל-B2B ישראלי. cap נמוך מפנה תקציב תוכן לערוצים עם ROI גבוה יותר."
+      },
+      "instagram": {
+        "max_posts_per_week": 5,
+        "reason": "9 פוסטים הניבו 525 חשיפות (58/פוסט) — הפחתה מ-9 ל-5 שבועיים תשמור על נוכחות ותפנה קיבולת לאיכות. ER 0.57% אינו חריג לB2B ישראלי."
+      },
+      "linkedin": {
+        "max_posts_per_week": 3,
+        "reason": "פרופיל אישי: 3 פוסטים/שבוע הוא האופטימום לפי נתוני 2026 (יותר מפוסט אחד ביום מדכא reach). דף החברה: repost בלבד. cadence נוכחי של 6 פוסטים/שבוע ירד ל-144 חשיפות — אין תועלת בכמות ללא executive posting."
+      },
+      "tiktok": {
+        "max_posts_per_week": 3,
+        "reason": "0 פוסטים כרגע; awaiting_approval. אם יאושר: cap של 3/שבוע לתוכן 'אחורי הקלעים' סביר לערוץ חדש. אל תשנו cadence עד לאישור הפעלה."
+      },
+      "youtube": {
+        "max_posts_per_week": 2,
+        "reason": "3 פוסטים הניבו 3,828 חשיפות (1,276/פוסט) — הערוץ היעיל ביותר לחשיפה. cap של 2/שבוע מאפשר איכות גבוהה (timestamps, תיאורים ארוכים) בלי להקריב על הפקה."
+      }
+    },
+    "recommendations": [
+      {
+        "category": "gated",
+        "priority": "P0",
+        "action_key": "salesforce-attribution-fix",
+        "owner": "מנהל מכירות מנחה; Alon מאשר הנחיה לצוות",
+        "success_metric": "פחות מ-1 רשומה עם LeadSource 'Other' או ברירת מחדל בחודש הקרוב; כל lead מוב מסומן Google Organic / Web / LinkedIn בהתאם למה שאמר (baseline: 2/9 עמום, review: 2026-10-13)",
+        "evidence": "2/9 לידים מסומנים 'Other' ו-'Advertisement' ללא ראיה לערוץ; attribution_gap=true ב-Salesforce. אי-אפשר לדעת אם יעד 10 לידים דיגיטליים הושג בפועל.",
+        "evidence_url": null,
+        "target_url": null,
+        "action": "הכן הנחיה כתובה לנציגי מכירות: כיצד לסמן LeadSource ב-Salesforce — 'Google Organic' אם הלקוח ציין שמצא בגוגל, 'Web' אם הגיע דרך הטופס, 'LinkedIn' אם דרך פוסט. שלח ל-Alon לאישור לפני הפצה לצוות.",
+        "expected_impact": "חשיפת ערוצים מוסתרים; החלטות הקצאת תקציב מבוססות נתונים אמיתיים ולא ניחוש. אין ערובה לגידול בלידים.",
+        "channel": "leads"
+      },
+      {
+        "category": "gated",
+        "priority": "P1",
+        "action_key": "linkedin-executive-advocacy",
+        "owner": "מנכ\"ל/בכיר מפרסם מפרופיל אישי; Alon מאשר תכנית תוכן שבועית",
+        "success_metric": "≥3 פוסטים אישיים/שבוע מפרופיל בכיר; ≥500 impressions LinkedIn שבועיות תוך 4 שבועות; ≥1 ליד מ-LinkedIn ב-90 יום (baseline: 144 impressions/שבוע, 0 לידים מ-LinkedIn, review: 2026-12-13)",
+        "evidence": "LinkedIn impressions ירדו מ-265 ל-144 בתקופה הנוכחית; 2026: reach דף חברה ~1% מעוקבים, פוסטים אישיים מייצרים 14x יותר engagement ממותג; executive posting הוא prerequisite לנראות אורגנית.",
+        "evidence_url": "https://www.tremendous.com/blog/b2b-social-media-marketing/",
+        "target_url": null,
+        "action": "הכן תכנית תוכן ל-4 שבועות: 2 פוסטים case-study + 2 פוסטים insight תעשייתי + 1 וידאו native מפרופיל אישי בכיר; דף החברה עושה repost בלבד. אין לפרסם ללא אישור Alon על כל פוסט.",
+        "expected_impact": "בניית מוניטין אישי ב-B2B ישראלי שמניע trust ועוגן lead pipeline; אין ערובה לליד בפרק זמן מוגדר.",
+        "channel": "linkedin"
+      },
+      {
+        "category": "gated",
+        "priority": "P2",
+        "action_key": "tiktok-behind-scenes-launch",
+        "owner": "יוצר תוכן מכין; Alon מאשר כל סרטון לפני פרסום",
+        "success_metric": "6 סרטוני TikTok ראשונים מאושרים ומפורסמים תוך 4 שבועות מאישור ההפעלה; נתוני reach מדווחים (לא impressions) לאחר 2 שבועות (baseline: 0 פוסטים, review: 2026-11-13)",
+        "evidence": "awaiting_approval מתקופה קודמת; 0 פוסטים גם עכשיו — חוסר החלטה הוא עצירה מוחלטת. TikTok מדווח reach ולא impressions — הגדר KPI ל-reach מהיום הראשון.",
+        "evidence_url": null,
+        "target_url": null,
+        "action": "הגש לאישור Alon: 3 טיוטות סרטון 'אחורי הקלעים' (60 שניות, עברית, ללא תסריט נוקשה) ממקומות הפקה אמיתיים; אם מאושר — פרסם ב-TikTok ושתף מקביל ב-Instagram Reels. ללא אישור — אל תשנה cadence.",
+        "expected_impact": "פתיחת ערוץ חדש לקהל ויזואלי; לא ניתן לחזות reach או לידים לפני נתוני תקופה ראשונה.",
+        "channel": "tiktok"
+      }
+    ],
+    "follower_growth_plan": [
+      "ניסוי A (LinkedIn, 4 שבועות): מנכ\"ל מפרסם 3 פוסטים אישיים/שבוע — מדד: האם follower count דף החברה גדל ב-20+ לאחר amplification? תוצאה תחליט על המשך.",
+      "ניסוי B (YouTube, 6 שבועות): הוסיפו CTA מילולי ו-card קישור בסוף כל סרטון חדש — מדד: האם subscriber rate שבועי עולה? השוואה לממוצע נוכחי (baseline: 0 מנויים חדשים ידועים).",
+      "ניסוי C (Instagram, 4 שבועות): השוו ביצועי Reel (60 שניות, אחורי הקלעים) מול תמונת סטילס — מדד: reach ו-interactions לפוסט; הפורמט הזוכה מקבל עדיפות ב-cadence."
+    ],
+    "leads_actions": [
+      "1. סגור פער ייחוס Salesforce לחודש הבא (action_key: salesforce-attribution-fix) — הליד החסר (9 מתוך 10) עשוי כבר להיות שם, רק לא מסומן נכון.",
+      "2. לאחר cooldown (אוקטובר): הכן טיוטות לדפי opportunity (נופש חברה pos.19.7, אירועי קונספט pos.19.1) — מעבר לעמוד 1 על ביטויים עם 270-275 חיפושים הוא הנתיב הישיר לגידול ב-Web leads.",
+      "3. ודא CTA 'קבל הצעת מחיר' קיים ובולט בכל דף שירות ובסוף כל סרטון YouTube — האתר ממיר כבר (3 Web leads), הגדלת שטח ה-CTA לא מחייבת תנועה נוספת.",
+      "4. הפעל executive posting ב-LinkedIn (action_key: linkedin-executive-advocacy) — B2B ישראלי מחליט על בסיס מוניטין אישי; LinkedIn הוא הערוץ עם פוטנציאל lead qualification גבוה ביותר.",
+      "5. עקוב אחרי 'Advertisement' ו-'Other' בSalesforce — אם אחד מהם הוא דיגיטלי, הוא כבר ליד 10 ו-5 לידים דיגיטליים. זה לא מוסיף ליד אלא מגלה אחד שכבר קיים."
+    ],
+    "evidence_notes": [
+      "אין בנתונים בסיס לתחזית עוקבים או לתוספת מובטחת של קליקים ולידים. צעדי צמיחה הם ניסויים למדידה.",
+      "המלצות לשינוי אתר חייבות להפנות לפער מתועד שטרם טופל ולכבד את מועד השינוי האחרון.",
+      "טענות על אלגוריתמים, שעות מועדפות ובנצ׳מרקים דורשות מקור מאומת; יעילותן עבור UPE דורשת ניסוי."
+    ],
+    "withheld_advice": [
+      {
+        "action_key": "opportunity-pages-seo-push",
+        "reason": "site_evidence"
+      },
+      {
+        "action_key": "youtube-seo-videos",
+        "reason": "site_evidence"
+      },
+      {
+        "action_key": null,
+        "reason": "benchmark"
+      }
+    ],
+    "directive_save_status": "saved"
+  },
+  "applied_directives": [
+    {
+      "category": "safe_auto",
+      "action": "אסטרטגיית hashtag LinkedIn: 3-5 האשטאגים נישתיים בלבד (#HREvents #CorporateEvents #IncentiveTravel #מיוחד #MICE)",
+      "detail": "האשטאגים עם 1M+ עוקבים מדללים את החשיפה בפיד רווי. השתמשו ב-1-2 hashtag רחב + 2-3 hashtag נישתי. זהו guidance לcontent pipeline הקיים בלבד.",
+      "channel": "linkedin"
+    },
+    {
+      "category": "safe_auto",
+      "action": "זווית תוכן YouTube: צרו תמלול מלא + timestamps לכל סרטון (300+ מילים בתיאור) עם מונחים עבריים ממוקדי קונה",
+      "detail": "YouTube מייצר 84% מהחשיפות הכוללות עם 0 אינטראקציות — הסרטונים נצפים אך אינם מייצרים פעולה. כיוון לתיאורים: ענו על שאלות קונה מוכחות (כמה עולה הפקת כנס, איך בוחרים חברת הפקה) ופנו לקישור לדף שירות רלוונטי. זה guidance לpipeline הקיים.",
+      "channel": "youtube"
+    },
+    {
+      "category": "safe_auto",
+      "action": "הפחתת cadence Facebook: הגבילו ל-2 פוסטים/שבוע מקסימום",
+      "detail": "4 פוסטים הניבו 37 חשיפות (9.25 לפוסט) — התשואה נמוכה ביותר מכל ערוץ. Facebook חלש מבנית ל-B2B ישראלי; הפחתת תדירות חוסכת תקציב תוכן לערוצים בעלי ROI גבוה יותר. ה-ER מדווח כ-100% ומסומן כ-unreliable — אין להסיק ממנו דבר.",
+      "channel": "facebook"
+    },
+    {
+      "category": "safe_auto",
+      "action": "מדידת ביצועים אורגניים: הגדירו GSC weekly alert על קליקים ל-5 הזדמנויות Top כדי לזהות שינוי עמדות לאחר cooldown",
+      "detail": "5 ביטויי opportunity (הפקת נופש חברה pos.16.4 / 332 חיפושים, נופש חברה pos.19.7 / 275 חיפושים, אירועי קונספט pos.19.1 / 270 חיפושים) כולם בעמוד 2. הגדרת alert שבועי ב-GSC תאפשר לזהות תנועה לאחר שה-cooldown על הדפים הרלוונטיים יסתיים (אוקטובר 2026).",
+      "channel": "google_organic_geo"
+    }
+  ],
+  "cadence": {
+    "facebook": {
+      "max_posts_per_week": 2,
+      "reason": "4 פוסטים הניבו 37 חשיפות בלבד (9.25/פוסט); הערוץ חלש מבנית ל-B2B ישראלי. cap נמוך מפנה תקציב תוכן לערוצים עם ROI גבוה יותר."
+    },
+    "instagram": {
+      "max_posts_per_week": 5,
+      "reason": "9 פוסטים הניבו 525 חשיפות (58/פוסט) — הפחתה מ-9 ל-5 שבועיים תשמור על נוכחות ותפנה קיבולת לאיכות. ER 0.57% אינו חריג לB2B ישראלי."
+    },
+    "linkedin": {
+      "max_posts_per_week": 3,
+      "reason": "פרופיל אישי: 3 פוסטים/שבוע הוא האופטימום לפי נתוני 2026 (יותר מפוסט אחד ביום מדכא reach). דף החברה: repost בלבד. cadence נוכחי של 6 פוסטים/שבוע ירד ל-144 חשיפות — אין תועלת בכמות ללא executive posting"
+    },
+    "tiktok": {
+      "max_posts_per_week": 3,
+      "reason": "0 פוסטים כרגע; awaiting_approval. אם יאושר: cap של 3/שבוע לתוכן 'אחורי הקלעים' סביר לערוץ חדש. אל תשנו cadence עד לאישור הפעלה."
+    },
+    "youtube": {
+      "max_posts_per_week": 2,
+      "reason": "3 פוסטים הניבו 3,828 חשיפות (1,276/פוסט) — הערוץ היעיל ביותר לחשיפה. cap של 2/שבוע מאפשר איכות גבוהה (timestamps, תיאורים ארוכים) בלי להקריב על הפקה."
+    }
+  },
+  "email_requested": false
+}
