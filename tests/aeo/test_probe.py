@@ -209,3 +209,19 @@ def test_ungrounded_run_is_not_mistaken_for_degradation():
     ask = lambda model, text: {"text": "Freeman.", "citations": [], "grounded": False,
                                "grounded_error": None}
     assert p.run_probe(qs, ["claude"], ask, _judge_ok)["models"]["claude"]["degraded"] is False
+
+
+def test_citation_classification_does_not_treat_competitors_as_outreach():
+    import scripts.aeo_probe as probe
+    sc = {'models': {'claude': {'answers': [{'cited_urls': [
+        'https://corporateoptics.com/a', 'https://blog.bcdme.com/a',
+        'https://sortlist.com/a', 'https://unknown.example/a', 'https://WWW.BIZBASH.COM/a',
+        'https://sub.upe.co.il/a']} ]},
+        'gemini': {'degraded': True, 'answers': [{'cited_urls': ['https://bad.example/']} ]}}}
+    rows = {r['domain']: r for r in probe.outreach_targets(sc)}
+    assert rows['corporateoptics.com']['kind'] == 'competitor'
+    assert rows['blog.bcdme.com']['outreach_eligible'] is False
+    assert rows['unknown.example']['outreach_eligible'] is False
+    assert rows['sortlist.com']['kind'] == 'directory'
+    assert rows['bizbash.com']['kind'] == 'editorial'
+    assert 'bad.example' not in rows and 'sub.upe.co.il' not in rows

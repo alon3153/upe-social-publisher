@@ -34,7 +34,7 @@ def _meets_score_target(scorecard, target):
     )
 
 
-def run_daily(history_dir=None, ask_fn=None, judge_fn=None, send_fn=None, today=None):
+def run_daily(history_dir=None, ask_fn=None, judge_fn=None, send_fn=None, today=None, send_email=True, output_dir=None):
     today = today or datetime.date.today().isoformat()
     # Probe with live web search like the weekly loop (AEO_GROUNDED=0 reverts).
     grounded = os.environ.get("AEO_GROUNDED", "1") != "0"
@@ -82,13 +82,23 @@ def run_daily(history_dir=None, ask_fn=None, judge_fn=None, send_fn=None, today=
         pass  # pipeline optional — reminders must never sink the daily email
     subject, html = aeo_report.build_daily_email(scorecard, prev, keywords, failures,
                                                  target=TARGET, reminders=reminders)
-    ok, _ = aeo_report.send(subject, html, send_fn=send_fn)
+    if output_dir:
+        folder = Path(output_dir)
+        folder.mkdir(parents=True, exist_ok=True)
+        (folder / 'daily-report.html').write_text(html, encoding='utf-8')
+        (folder / 'daily-report.json').write_text(json.dumps({'scorecard': scorecard, 'keywords': keywords, 'failures': failures}, ensure_ascii=False, indent=2), encoding='utf-8')
+    ok = False
+    if send_email:
+        ok, _ = aeo_report.send(subject, html, send_fn=send_fn)
     return {"scorecard": scorecard, "keywords": keywords, "email_sent": bool(ok), "failures": failures}
 
 
 def main():
-    argparse.ArgumentParser().parse_args()
-    out = run_daily()
+    parser = argparse.ArgumentParser()
+    parser.add_argument('--send-email', action='store_true', help='Explicitly enable delivery')
+    parser.add_argument('--output-dir')
+    args = parser.parse_args()
+    out = run_daily(send_email=args.send_email, output_dir=args.output_dir)
     sc = out["scorecard"]["models"]
     print(f"AEO daily {datetime.date.today().isoformat()}: models={list(sc)} "
           f"kw_he={len(out['keywords']['he'])} kw_en={len(out['keywords']['en'])} "

@@ -83,3 +83,16 @@ def test_degraded_high_score_does_not_satisfy_target():
     assert not mon._meets_score_target(scorecard, 70)
     scorecard["models"]["claude"]["degraded"] = False
     assert mon._meets_score_target(scorecard, 70)
+
+
+def test_no_email_run_still_produces_reviewable_report(tmp_path, monkeypatch):
+    monkeypatch.setattr(mon.aeo_models, 'available_models', lambda: ['claude'])
+    monkeypatch.setattr(mon.aeo_probe, 'run_probe', lambda *a: {'date': '2026-09-13', 'models': {}})
+    monkeypatch.setattr(mon.aeo_competitor, 'research_keywords', lambda *a: {})
+    def forbidden(*a, **kw):
+        raise AssertionError('No email transport may be invoked')
+    monkeypatch.setattr(mon.aeo_report, 'send', forbidden)
+    out = mon.run_daily(history_dir=tmp_path, send_email=False, output_dir=tmp_path / 'report')
+    assert out['email_sent'] is False
+    assert (tmp_path / 'report' / 'daily-report.html').exists()
+    assert json.loads((tmp_path / 'report' / 'daily-report.json').read_text())['scorecard']['date'] == '2026-09-13'
