@@ -16,10 +16,11 @@ Runs every day in the background. Pipeline:
              GATED for Alon's approval (iron rule: review ALL content before publish).
   5. REPORT  write reports/council/YYYY-MM-DD.md + email Alon an RTL Hebrew digest.
 
-Always exits 0 (a daemon must never break its own schedule); reports via email.
+Failed delivery or persistence must be visible to the scheduler.
 
 Usage:
-  python3 scripts/council.py                 # full run + email
+  python3 scripts/council.py                 # full run, save report, no email
+  python3 scripts/council.py --send-email    # explicit report delivery
   python3 scripts/council.py --dry-run       # no email, no file writes, print report
   python3 scripts/council.py --no-llm        # scorecard only (skip Claude) — cheap smoke test
 """
@@ -50,11 +51,12 @@ def _today():
 
 def digital_attributed_leads(leads, digital_sources):
     """Count opportunities whose LeadSource is a digital channel (case-insensitive).
-    Digital = not Word-of-Mouth. Proves the digital engine converts (spec Part 3 metric,
-    computable today from Salesforce by_source without a new form field)."""
+    This is source attribution, not a conversion rate; ambiguous defaults are excluded."""
     by_source = (leads or {}).get("by_source") or {}
     wanted = {s.lower() for s in digital_sources}
-    return sum(n for src, n in by_source.items() if str(src).lower() in wanted)
+    ambiguous = {s.lower() for s in (leads or {}).get("ambiguous_sources", [])}
+    return sum(n for src, n in by_source.items() if str(src).lower() in wanted
+               and str(src).lower() not in ambiguous)
 
 
 def weighted_score(components, weights):
@@ -83,11 +85,11 @@ def build_scorecard(cur, prev, leads, seo_geo=None):
     org_t = TARGETS["organic_targets"]
     lead_target = TARGETS["primary_kpi"]["qualified_leads_per_month"]
     ct, pt = cur["totals"], prev["totals"]
-    scored, context = [], []
+    scored, context, warnings = [], [], []
 
     def row(bucket, label, value, target, ok, unit=""):
         bucket.append({"metric": label, "value": value, "target": target,
-                       "unit": unit, "status": "✅" if ok else "❌"})
+                       "unit": unit, "status": "—" if ok is None else ("✅" if ok else "❌")})
 
     comp = {}
 
@@ -95,10 +97,12 @@ def build_scorecard(cur, prev, leads, seo_geo=None):
     if leads.get("ok"):
         ql = leads.get("qualified_leads") or 0
         comp["qualified_leads"] = ql / lead_target if lead_target else None
-        row(scored, "לידים מוסמכים (30 ימים)", ql, lead_target, ql >= lead_target)
+        row(scored, "לידים לפי ההגדרה התפעולית (30 ימים)", ql, lead_target, ql >= lead_target)
+        if leads.get("definition"):
+            warnings.append("ספירת הלידים כוללת הזדמנויות ופניות טופס שלא סומנו כלא מתאימות; אינה הוכחה שכל פנייה הוסמכה במכירות.")
     else:
         comp["qualified_leads"] = None
-        row(scored, "לידים מוסמכים/חודש", "לא מחובר", lead_target, False)
+        row(scored, "לידים/חודש", "לא נמדד", lead_target, None)
 
     # 2) digital-attributed leads (scored) — target = 3 of the 10
     dig_target = max(1, round(lead_target * 0.3))
@@ -108,22 +112,22 @@ def build_scorecard(cur, prev, leads, seo_geo=None):
         row(scored, "לידים מיוחסים לדיגיטל", dl, dig_target, dl >= dig_target)
     else:
         comp["digital_leads"] = None
-        row(scored, "לידים מיוחסים לדיגיטל", "לא מחובר", dig_target, False)
+        row(scored, "לידים מיוחסים לדיגיטל", "לא נמדד", dig_target, None)
 
     # 3) organic (scored) — clicks + top3 keywords, averaged
     if seo_geo and seo_geo.get("ok"):
-        clicks = seo_geo.get("weekly_clicks") or 0
-        top3 = seo_geo.get("top3_keywords") or 0
-        f_clicks = min(1.0, clicks / org_t["weekly_clicks_min"])
-        f_top3 = min(1.0, top3 / org_t["top3_keywords_min"])
-        comp["organic"] = (f_clicks + f_top3) / 2
-        row(scored, "קליקים אורגניים/שבוע", clicks, org_t["weekly_clicks_min"],
-            clicks >= org_t["weekly_clicks_min"])
-        row(scored, "מונחים ב-Top-3", top3, org_t["top3_keywords_min"],
-            top3 >= org_t["top3_keywords_min"])
+        clicks = seo_geo.get("weekly_clicks")
+        top3 = seo_geo.get("top3_keywords")
+        comp["organic"] = ((min(1.0, clicks / org_t["weekly_clicks_min"]) +
+                            min(1.0, top3 / org_t["top3_keywords_min"])) / 2
+                           if clicks is not None and top3 is not None else None)
+        row(scored, "קליקים אורגניים/שבוע", clicks if clicks is not None else "לא נמדד", org_t["weekly_clicks_min"],
+            clicks >= org_t["weekly_clicks_min"] if clicks is not None else None)
+        row(scored, "מונחים ב-Top-3", top3 if top3 is not None else "לא נמדד", org_t["top3_keywords_min"],
+            top3 >= org_t["top3_keywords_min"] if top3 is not None else None)
     else:
         comp["organic"] = None
-        row(scored, "אורגני (GSC)", "לא מחובר", org_t["weekly_clicks_min"], False)
+        row(scored, "אורגני (GSC)", "לא נמדד", org_t["weekly_clicks_min"], None)
 
     # 4) AEO (scored) — cited in N engines out of 3
     if seo_geo and seo_geo.get("ok") and seo_geo.get("aeo_cited_engines") is not None:
@@ -132,7 +136,14 @@ def build_scorecard(cur, prev, leads, seo_geo=None):
         row(scored, "נראות ב-AI (מנועים)", cited, 3, cited >= 3)
     else:
         comp["aeo"] = None
-        row(scored, "נראות ב-AI (מנועים)", "לא מחובר", 3, False)
+        row(scored, "נראות ב-AI (מנועים)", "לא נמדד", 3, None)
+    if seo_geo and seo_geo.get("aeo_engine_evidence"):
+        ev = seo_geo["aeo_engine_evidence"]
+        warnings.append("מדידת מנועי AI מתאריך " + str(ev.get("date", "לא זמין")) +
+                        ": ציטוטי כתובת או תווית דומיין ממקור חיפוש, בשאלות לא ממותגות; אינה מדידת מקום ראשון.")
+    if seo_geo and seo_geo.get("aeo_cited_questions") is not None:
+        row(context, "שאלות עם ציטוט במנוע Perplexity (מדידה נפרדת)",
+            seo_geo["aeo_cited_questions"], seo_geo.get("aeo_measured_questions"), None)
 
     # 5) social presence floor (scored) — cadence met, NOT growth
     posts_week = round(ct["posts"] / (cur["period_days"] / 7.0), 1) if cur["period_days"] else 0
@@ -154,9 +165,10 @@ def build_scorecard(cur, prev, leads, seo_geo=None):
 
     # Snapshot age (context): the council scored a 19-day-old GSC snapshot on
     # 05.09.2026 without saying so — one 403 property had killed the weekly job.
-    if seo_geo and seo_geo.get("ok") and seo_geo.get("generated_at"):
+    if seo_geo and seo_geo.get("ok") and (seo_geo.get("gsc_generated_at") or seo_geo.get("generated_at")):
         try:
-            age = (datetime.date.today() - datetime.date.fromisoformat(seo_geo["generated_at"])).days
+            stamp = seo_geo.get("gsc_generated_at") or seo_geo["generated_at"]
+            age = (datetime.date.today() - datetime.date.fromisoformat(stamp[:10])).days
             row(context, "עדכניות snapshot אורגני (ימים)", age, "≤8", age <= 8)
         except Exception:
             pass
@@ -166,8 +178,8 @@ def build_scorecard(cur, prev, leads, seo_geo=None):
         if leads.get("attribution_gap"):
             row(context, "ייחוס לידים", "לא-מיוחס", "מקור אמיתי", False)
         else:
-            row(context, f"ערוץ ממיר ({leads['dominant_source']})",
-                leads.get("dominant_share_pct", 0), "↑", True, "%")
+            row(context, f"חלק מקור הלידים ({leads['dominant_source']})",
+                leads.get("dominant_share_pct", 0), "הקשר בלבד", None, "%")
 
     weighted = weighted_score(comp, W)
     # Leads are the PRIMARY definition of winning (55% of intended weight). If BOTH
@@ -177,7 +189,11 @@ def build_scorecard(cur, prev, leads, seo_geo=None):
     if comp.get("qualified_leads") is None and comp.get("digital_leads") is None:
         weighted = min(weighted, 40)
     passed = sum(1 for r in scored if r["status"] == "✅")
+    coverage = sum(W[k] for k, v in comp.items() if v is not None)
+    if coverage < sum(W.values()):
+        warnings.append(f"הציון חלקי: כיסוי {coverage}% ממשקל המדדים; נתון חסר אינו אפס או הצלחה.")
     return {"rows": scored + context, "scored_rows": scored, "context_rows": context,
+            "coverage_percent": coverage, "warnings": warnings,
             "components": comp, "weighted": weighted,
             "passed": passed, "total": len(scored),
             "impressions_growth_pct": imp_growth, "posts_per_week": posts_week,
@@ -562,6 +578,7 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--dry-run", action="store_true")
     ap.add_argument("--no-llm", action="store_true")
+    ap.add_argument("--send-email", action="store_true", help="Explicitly enable report delivery")
     ap.add_argument("--days", type=int, default=TARGETS.get("review_period_days", 7))
     a = ap.parse_args()
 
@@ -597,6 +614,12 @@ def main():
     REPORT_DIR.mkdir(parents=True, exist_ok=True)
     (METRICS_DIR / f"{_today()}.json").write_text(json.dumps(cur, ensure_ascii=False, indent=2))
     (REPORT_DIR / f"{_today()}.md").write_text(md)
+    (REPORT_DIR / f"{_today()}.html").write_text(html, encoding="utf-8")
+    (REPORT_DIR / f"{_today()}.json").write_text(json.dumps({
+        "date": _today(), "scorecard": scorecard, "verdict": verdict,
+        "applied_directives": applied, "cadence": cadence,
+        "email_requested": a.send_email,
+    }, ensure_ascii=False, indent=2), encoding="utf-8")
 
     # Persist gated recommendations for the executor agent-team to pick up & advance.
     STATE_DIR.mkdir(parents=True, exist_ok=True)
@@ -609,15 +632,21 @@ def main():
             "leads_actions": verdict.get("leads_actions", []),
         }, ensure_ascii=False, indent=2))
 
-    subj = (f"🏛️ מועצת השיווק — דוח יומי {_today()} · "
+    if not a.send_email:
+        print("Report and evidence saved; email delivery disabled.")
+        return 0
+    subj = (f"מועצת השיווק — דוח יומי {_today()} · "
             + ("⚠️ חוות הדעת נכשלה" if verdict.get("error")
                else f"ציון {verdict.get('scores', {}).get('overall', '—')}/100"))
     try:
         from daily_email import send_graph_html
         ok, info = send_graph_html(subj, html)
         print(f"email: {ok} ({info})")
+        if not ok:
+            return 1
     except Exception as e:
         print(f"email failed: {e}", file=sys.stderr)
+        return 1
     return 0
 
 

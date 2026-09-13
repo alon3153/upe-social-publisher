@@ -10,6 +10,14 @@ on:
         description: "review window in days"
         required: false
         default: "7"
+      send_email:
+        description: "Send the report by email"
+        type: boolean
+        default: false
+
+concurrency:
+  group: daily-council
+  cancel-in-progress: false
 
 permissions:
   contents: write
@@ -40,12 +48,32 @@ jobs:
           MS_GRAPH_CLIENT_ID:     ${{ secrets.MS_GRAPH_CLIENT_ID }}
           MS_GRAPH_CLIENT_SECRET: ${{ secrets.MS_GRAPH_CLIENT_SECRET }}
           MS_GRAPH_FROM:          ${{ secrets.MS_GRAPH_FROM }}
-        run: python3 scripts/council.py --days "${{ github.event.inputs.days || '7' }}"
+          REVIEW_DAYS:            ${{ inputs.days || '7' }}
+          SEND_EMAIL:             ${{ github.event_name == 'schedule' || inputs.send_email == true }}
+        run: |
+          args=(--days "$REVIEW_DAYS")
+          if [ "$SEND_EMAIL" = "true" ]; then args+=(--send-email); fi
+          python3 scripts/council.py "${args[@]}"
+      - name: Save reviewable report and source evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: council-report
+          path: |
+            reports/council/
+            reports/metrics/
+          retention-days: 14
       - name: Commit report + directives
+        if: always()
         run: |
           git config user.name  "upe-council-bot"
           git config user.email "bot@upe.co.il"
-          git pull --rebase --autostash -q origin main || true
-          git add reports/council reports/metrics state 2>/dev/null || true
-          git commit -m "council: daily report $(date -u +%F)" || echo "nothing to commit"
-          git push || echo "push skipped"
+          git add reports/council reports/metrics state
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m "council: daily report $(date -u +%F)"
+          for attempt in 1 2 3; do
+            git pull --rebase -q origin main
+            if git push origin HEAD:main; then exit 0; fi
+          done
+          echo "Failed to persist council report after three attempts" >&2
+          exit 1
