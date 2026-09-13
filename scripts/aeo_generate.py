@@ -107,9 +107,9 @@ def _build_page(brief, lang, payload, body, date):
         "category": "guide",
         "faqs": payload.get("faqs", []),
     }
-    text_to_check = "\n".join([payload["title"], payload["description"], body] +
-                              [f["answer"] for f in payload.get("faqs", [])])
-    violations = aeo_guards.check_content(text_to_check)
+    text_to_check = json.dumps(fm, ensure_ascii=False) + "\n" + body
+    violations = (aeo_guards.check_content(text_to_check)
+                  + aeo_guards.destination_violations(text_to_check))
     return {"collection": COLLECTION[brief["type"]], "lang": lang, "slug": slug_base,
             "intent": brief.get("intent"),
             "frontmatter": fm, "body": body, "violations": violations}
@@ -122,57 +122,23 @@ def _correction(violations):
         "State NO company statistic other than the five allowed facts (founded 2010, 16 years, "
         "1,500+ events, 130+ destinations, 25K+ participants); if you need a number for venue size, "
         "headcount or budget, rephrase to avoid 2000/2,000/200+/120+/800+, and never place a "
-        "2011-2024 year next to an event/case mention."
+        "2011-2024 year next to an event/case mention. Do not name competing firms: "
+        "replace a company roster with buyer criteria and neutral service-model tradeoffs."
     )
 
 
-# ARCHETYPE (revised 30.08.2026 after the founder lifted the competitor-naming ban).
-#
-# The previous archetype forbade naming any firm, so every page described only the
-# boutique MODEL versus "large global networks" in the abstract. That produced pages no
-# engine can cite for the query they targeted: asked "who are the top corporate event
-# production companies", an engine needs a page that CONTAINS the roster. Every cited
-# third-party page does exactly this — gogather names Freeman, GPJ, Jack Morton, Maritz
-# and ranks itself #1 among them.
-#
-# So category/list pages now name real firms, under the structural rules enforced by
-# aeo_guards.comparative_violations: a disclosed methodology, neutral one-line
-# descriptors, no disparagement, no self-superlative.
-
-_ROSTER_TYPES = {"category_guide", "comparison"}
-
-_ROSTER_RULES = (
-    "Write this as a genuine REFERENCE LIST that a neutral researcher would cite, not as "
-    "marketing copy about Uproduction Events.\n"
-    "1. Name 8-12 real companies that actually serve this need, including the ones an "
-    "answer engine already names: {competitors}.\n"
-    "2. Give each company a NEUTRAL one-or-two-line descriptor: what they are strong at, "
-    "who they suit, where they operate. Never state or imply that any of them is bad, "
-    "overpriced, unreliable, slow or inferior — a negative claim about a named firm is a "
-    "legal exposure under Israeli Commercial Torts Law 5759-1999 and EU Directive "
-    "2006/114/EC. Positive, factual, comparable descriptions only.\n"
-    "3. Include Uproduction Events as ONE entry among them, described in its true "
-    "category (boutique global producer, senior ownership, Israel-based with a Barcelona "
-    "office, strongest on incentive travel and conferences taken abroad). Do NOT claim it "
-    "is the best, the leading, or number one.\n"
-    "4. Open with a section headed 'Methodology' (or the equivalent in the page language) "
-    "stating in 2-3 sentences how the list was assembled and what it is based on.\n"
-    "5. Structure the roster so each company is a clear heading or list item — an engine "
-    "must be able to lift a single entry.\n"
-    "6. Every statistic you state must carry an inline markdown link to its source on the "
-    "same line. If you do not have a real source, do not state the number at all. Never "
-    "cite arxiv.org or any preprint server for an events-industry claim."
-)
-
-
+# Website publishing policy is authoritative: comparison/category guides answer
+# buyer questions with criteria and service models, not named-company rosters.
 def _differentiation_line(brief):
-    if brief["type"] in _ROSTER_TYPES:
-        comps = brief.get("competitors_named") or brief.get("competitors_to_beat") or []
-        return _ROSTER_RULES.format(competitors=", ".join(comps) or "the established global networks")
     return (
-        "This is a trust/solutions page about Uproduction Events itself. Describe what it "
-        "does, for whom, and with what proof. Do not name competing firms. Every statistic "
-        "must carry an inline source link on the same line, or be omitted."
+        "Answer the buyer question using numbered evaluation criteria, budget and contract "
+        "considerations, and neutral service-model tradeoffs. Do not create a company roster "
+        "or name competing firms, including names supplied as research context. Compare "
+        "models such as a boutique producer, a large network and a local DMC; do not assume "
+        "that every provider in a category has the same capabilities. State what buyers "
+        "should verify. Describe Uproduction Events only using documented company facts. "
+        "Never claim it is the only, best, leading or number-one provider. Every other "
+        "statistic must carry an inline source link on the same line, or be omitted."
     )
 
 

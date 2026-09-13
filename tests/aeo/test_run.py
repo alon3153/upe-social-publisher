@@ -85,3 +85,22 @@ def test_citation_gate_pauses_generation(tmp_path, monkeypatch):
                       send_fn=lambda s, h: (True, "ok"), today="2026-07-05")
     assert out["pages"] == [] and out["briefs"] == []
     assert out["deferred"] >= 1                     # paused briefs counted as deferred
+
+
+def test_publish_rejection_is_reported_without_claiming_shipment(tmp_path, monkeypatch):
+    monkeypatch.setenv("ANTHROPIC_API_KEY", "x")
+    monkeypatch.setattr(run_mod.citations_pipeline, "verified_count", lambda data=None: 3)
+    def ask(model, prompt):
+        if "PAGE TYPE" in prompt:
+            return json.dumps({"title": "Guide", "description": "d", "h1": "Guide", "slug": "safe-guide"}) + "\n===BODY===\nBuyer criteria."
+        return "answer omitting brand"
+    def reject(*args, **kwargs):
+        raise RuntimeError("destination guard blocked this draft")
+    monkeypatch.setattr(run_mod.aeo_publish, "publish", reject)
+    out = run_mod.run(str(tmp_path), dry_run=True, ask_fn=ask,
+                      judge_fn=lambda prompt: json.dumps({"product_search": 0, "comparison": 0,
+                          "reputation": 0, "competitors": [], "gap_note": "gap"}),
+                      today="2026-09-13")
+    assert out["pages"] == []
+    assert out["publish"]["pr_url"] is None
+    assert any("publication preflight failed" in failure for failure in out["failures"])

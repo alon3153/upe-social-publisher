@@ -136,37 +136,40 @@ def test_totally_empty_metadata_still_builds():
     assert page["slug"]
 
 
-def test_roster_prompt_names_competitors_under_neutrality_rules():
-    """Founder lifted the naming ban 30.08: a page that contains no roster cannot be
-    cited for "who are the top X" — which is the query the citations come from."""
-    brief = dict(BRIEF, type="comparison", dimension="comparison",
-                 competitors_named=["Freeman", "BCD Meetings"])
+def test_comparison_prompt_uses_models_not_competitor_rosters():
+    brief = dict(BRIEF, type="comparison", competitors_named=["Freeman", "BCD Meetings"])
     seen = {}
-
-    def spy_ask(model, prompt):
+    def ask(model, prompt):
         seen["prompt"] = prompt
-        meta = json.dumps({"title": "Boutique vs large-network event production",
-                           "description": "Model comparison.", "h1": "Boutique vs large networks",
-                           "slug": "boutique-vs-large-networks", "faqs": []})
-        return meta + "\n===BODY===\nA boutique specialist vs large global networks.\n"
-
-    gen.generate_page(brief, "en", spy_ask, "2026-08-02")
-    p = seen["prompt"].lower()
-    assert "freeman" in p and "bcd meetings" in p          # the roster IS injected now
-    assert "methodology" in p                               # ...but only with disclosure
-    assert "never state or imply that any of them is bad" in p
-    assert "do not claim it is the best" in p
-    assert "must carry an inline markdown link to its source" in p
+        return fake_ask(model, prompt)
+    gen.generate_page(brief, "en", ask, "2026-09-13")
+    prompt = seen["prompt"]
+    assert "Freeman" not in prompt and "BCD Meetings" not in prompt
+    assert "Do not create a company roster" in prompt
+    assert "numbered evaluation criteria" in prompt
 
 
-def test_guide_prompt_still_names_competitors_for_citations():
-    brief = dict(BRIEF, type="category_guide", competitors_to_beat=["freeman"])
-    seen = {}
+def test_category_guide_does_not_inject_competitors():
+    assert "freeman" not in gen._differentiation_line(dict(BRIEF, competitors_to_beat=["freeman"]))
 
-    def spy_ask(model, prompt):
-        seen["prompt"] = prompt
-        meta = json.dumps({"title": "T", "description": "d", "h1": "h", "slug": "s", "faqs": []})
-        return meta + "\n===BODY===\nbody"
 
-    gen.generate_page(brief, "en", spy_ask, "2026-08-02")
-    assert "freeman" in seen["prompt"].lower()  # guides keep the citation-source strategy
+def test_destination_rejection_in_faq_question_retries_before_publish():
+    calls = []
+    def ask(model, prompt):
+        calls.append(prompt)
+        if len(calls) == 1:
+            meta = {"title": "Guide", "description": "d", "h1": "h", "slug": "guide",
+                    "faqs": [{"question": "Compare MCI Group?", "answer": "Ask about contracts."}]}
+            return json.dumps(meta) + "\n===BODY===\nNeutral methodology and buyer criteria."
+        assert "destination competitor guard" in prompt
+        return fake_ask(model, prompt)
+    page = gen.generate_page(BRIEF, "en", ask, "2026-09-13")
+    assert len(calls) == 2
+    assert page["violations"] == []
+
+
+def test_destination_violation_cannot_escape_final_attempt():
+    def ask(model, prompt):
+        return json.dumps({"title": "Guide", "description": "d", "h1": "Maritz", "slug": "guide"}) + "\n===BODY===\nBuyer criteria"
+    page = gen.generate_page(BRIEF, "en", ask, "2026-09-13")
+    assert any("destination competitor guard" in x for x in page["violations"])

@@ -35,3 +35,10 @@ def test_names_competitor_detects_and_clean_passes():
     import scripts.aeo_guards as g
     assert g.names_competitor("We compared Jack Morton and Freeman.") == ["jack morton", "freeman"]
     assert g.names_competitor("Uproduction produces global events.") == []
+
+
+def test_destination_policy_preserves_warning_and_ordinary_word_semantics():
+    from scripts.aeo_guards import destination_violations
+    assert destination_violations("Cvent manages registration; this sparks debate.") == []
+    assert destination_violations("A comparative MCI Group entry")
+    assert destination_violations("Sparks")

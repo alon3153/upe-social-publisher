@@ -2,6 +2,8 @@
 import subprocess
 from pathlib import Path
 import aeo_generate
+import aeo_guards
+import held_pages
 
 
 def page_path(repo, page):
@@ -20,14 +22,29 @@ def write_pages(repo, pages):
 
 
 def publish(repo, pages, branch, date, runner=subprocess.run, dry_run=False):
+    vetoed = set(held_pages.load().get("vetoed", []))
+    for page in pages:
+        if page["slug"] in vetoed:
+            raise ValueError(f"vetoed page cannot publish: {page['slug']}")
+        markdown = aeo_generate.to_markdown(page["frontmatter"], page["body"])
+        violations = aeo_guards.destination_violations(markdown)
+        if violations:
+            raise ValueError(f"destination guard rejected {page['slug']}: {violations}")
     files = write_pages(repo, pages)
     if dry_run:
         return {"branch": branch, "files": files, "pr_url": None, "dry_run": True}
 
     def run(cmd, capture=False):
-        return runner(cmd, cwd=repo, text=True,
-                      stdout=(subprocess.PIPE if capture else None))
+        result = runner(cmd, cwd=repo, text=True,
+                        stdout=(subprocess.PIPE if capture else None))
+        if getattr(result, "returncode", 0):
+            raise RuntimeError(f"AEO publish command failed ({result.returncode}): {' '.join(cmd[:3])}")
+        return result
 
+    guard = Path(repo) / "scripts/check-competitor-names.mjs"
+    if not guard.is_file():
+        raise RuntimeError("Destination competitor guard is missing; refusing to publish")
+    run(["node", "scripts/check-competitor-names.mjs"])
     run(["git", "checkout", "-B", branch])
     run(["git", "add", *files])
     run(["git", "commit", "-m", f"feat(aeo): GEO content {date} ({len(files)} pages)"])

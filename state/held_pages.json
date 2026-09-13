@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-30",
+  "updated": "2026-09-13",
   "held": [],
   "vetoed": [
     "boutique-global-event-producer-vs-large-networks",
@@ -17,6 +17,26 @@
     "productora-boutique-vs-grandes-redes-eventos-corporativos",
     "productora-boutique-vs-red-global-eventos-corporativos",
     "why-trust-uproduction-events",
-    "why-uproduction-events-trust"
-  ]
+    "why-uproduction-events-trust",
+    "israeli-event-producer-vs-dmc-corporate-incentive-travel",
+    "gala-annual-conference-production-israel-guide",
+    "corporate-incentive-trip-producers-israeli-tech-companies"
+  ],
+  "veto_reasons": {
+    "israeli-event-producer-vs-dmc-corporate-incentive-travel": {
+      "date": "2026-09-13",
+      "reason": "Rejected company-roster output; PR136 closed. Use existing intent pages or buyer criteria, never bypass destination guard.",
+      "source": "https://github.com/alon3153/uproduction-astro/pull/136"
+    },
+    "gala-annual-conference-production-israel-guide": {
+      "date": "2026-09-13",
+      "reason": "Rejected company-roster output; PR136 closed. Use existing intent pages or buyer criteria, never bypass destination guard.",
+      "source": "https://github.com/alon3153/uproduction-astro/pull/136"
+    },
+    "corporate-incentive-trip-producers-israeli-tech-companies": {
+      "date": "2026-09-13",
+      "reason": "Rejected company-roster output; PR136 closed. Use existing intent pages or buyer criteria, never bypass destination guard.",
+      "source": "https://github.com/alon3153/uproduction-astro/pull/136"
+    }
+  }
 }

@@ -43,9 +43,31 @@ def names_competitor(text):
     return [c for c in COMPETITOR_NAMES if c in low]
 
 
+# Mirrors the blocking names in uproduction-astro/scripts/check-competitor-names.mjs.
+# The destination's actual guard is also run before any push, so policy drift fails
+# locally rather than creating an unmergeable weekly PR. Cvent remains warning-only.
+_DESTINATION_ANY_CASE = (
+    "george p. johnson", "jack morton", "bcd meetings", "mci group",
+    "momentum worldwide", "czarnowski", "bi worldwide", "ita group",
+    "one10", "brightspot", "uniplan", "maritz", "opus agency", "smyle",
+    "production resource group", "dorier", "american express gbt",
+)
+_DESTINATION_PROPER_NOUN = ("Freeman", "Encore", "Sparks", "GPJ", "CWT")
+
+
+def destination_violations(text):
+    """Reject content the destination website cannot merge, including metadata."""
+    hits = [name for name in _DESTINATION_ANY_CASE
+            if re.search(r"\b" + re.escape(name) + r"\b", text or "", re.I)]
+    hits += [name for name in _DESTINATION_PROPER_NOUN
+             if re.search(r"\b" + re.escape(name) + r"\b", text or "")]
+    return ["destination competitor guard: " + name for name in hits]
+
+
 # --- comparative ("roster") pages -------------------------------------------------
 #
-# Founder decision 30.08.2026: naming competitors is ALLOWED, in a controlled format.
+# Legacy neutrality validator (30.08.2026). Passing these structural checks
+# does NOT override destination_violations or the website publish preflight.
 #
 # Why the policy moved. Every third-party page answer engines cite for "who are the top
 # corporate event production companies" is a roster naming 8-12 real firms — gogather,
