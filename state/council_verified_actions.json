@@ -1,0 +1,43 @@
+{
+  "verified_at": "2026-09-13",
+  "completed_action_keys": [
+    "seo-service-page-optimization",
+    "aeo-llms-txt-update",
+    "internal-linking-blog-to-service"
+  ],
+  "page_audits": [
+    {
+      "url": "https://upe.co.il/נופש-חברה/",
+      "completed_at": "2026-09-13",
+      "last_content_change": "2026-08-12",
+      "update_required": false,
+      "evidence": "Live HTTP200; H1/title target company retreats, FAQPage10 and quote CTA /צור-קשר/ already present. Substantive title/meta master e0ee843 2026-08-12; later a1b4db8 2026-08-26 navigation only."
+    },
+    {
+      "url": "https://upe.co.il/אירוע-קונספט/",
+      "completed_at": "2026-09-13",
+      "last_content_change": "2026-08-02",
+      "update_required": false,
+      "evidence": "Live HTTP200; H1/title target company concept events; FAQPage8 and quote CTA already present. Master7cd62b7 2026-08-02."
+    },
+    {
+      "url": "https://upe.co.il/llms-full.txt",
+      "completed_at": "2026-09-13",
+      "last_content_change": "2026-08-08",
+      "update_required": false,
+      "evidence": "Live HTTP200,76198 characters; canonical2010/1500+/130+/25000+ already present, no stale200+ events or20years. Canonical facts fix masterd968802 2026-08-08."
+    }
+  ],
+  "implemented_repairs": [
+    {
+      "action_key": "internal-linking-blog-to-service",
+      "count": 3,
+      "basis": "topic_relevance",
+      "status": "live_verified",
+      "verified_at": "2026-09-13",
+      "source": "https://github.com/alon3153/uproduction-astro/pull/138",
+      "commit": "d2f50a6d1c7bdb412b677d61099bce37f344ec72",
+      "detail": "Three contextual links in existing blog sentences verified live HTTP200; no claim of 20 GSC-ranked articles or traffic uplift."
+    }
+  ]
+}

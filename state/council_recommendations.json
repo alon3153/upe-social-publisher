@@ -12,50 +12,6 @@
   "recommendations": [
     {
       "category": "gated",
-      "priority": "P0",
-      "action_key": "seo-service-page-optimization",
-      "owner": "SEO specialist מכין טיוטה; Alon מאשר לפני פרסום",
-      "success_metric": "בסיס: /נופש-חברה/ pos.17 (363 חיפושים), /אירוע-קונספט/ pos.19 (282 חיפושים); יעד: pos. ≤8 לשניהם תוך 90 יום; בדיקה ב-GSC חלון 28 יום",
-      "evidence": "top_opportunities: 'הפקת נופש חברה' pos.16.9 (363 חיפושים), 'אירועי קונספט' pos.19 (282 חיפושים) — 645 חיפושים/חודש ב-pos.17-19 שהאתר לא מנצל; Web leads (33%) מוכיחים שהאתר ממיר",
-      "action": "אופטימיזציה של /נופש-חברה/ ו-/אירוע-קונספט/ הקיימים: עדכן H1 ו-title tag למונח המדויק, הרחב word-count ל-1,200+ מילים, הוסף FAQPage JSON-LD schema ו-CTA 'קבל הצעת מחיר' — לא ליצור דפים חדשים",
-      "expected_impact": "כניסה ל-Top-8 עבור 645 חיפושים/חודש עשויה להוסיף 20-40 קליקים/חודש נוספים ממוקדי-conversion — ישיר לסגירת פער הליד החסר",
-      "channel": "google_organic_geo"
-    },
-    {
-      "category": "gated",
-      "priority": "P0",
-      "action_key": "internal-linking-blog-to-service",
-      "owner": "content editor מזהה 20 מאמרים ב-GSC; Alon מאשר עריכות",
-      "success_metric": "בסיס: 0 internal links ממוקדים מ-292 מאמרים לדפי הזדמנות; יעד: 10 anchor-links חדשים לכל דף שירות תוך 30 יום; מדד: crawl authority בGSC",
-      "evidence": "id 8c4f9ebe בסטטוס awaiting_approval; 292 מאמרים = link equity לא מנוצל; /נופש-חברה/ ו-/אירוע-קונספט/ צריכים PageRank פנימי להאיץ יציאה מ-pos.17-19",
-      "action": "זהה 20 מאמרי בלוג עם traffic גבוה ב-GSC (10 לכל דף שירות), ערוך משפט קיים בכל מאמר עם anchor text רלוונטי לדפי /נופש-חברה/ ו-/אירוע-קונספט/ — עריכת משפט בלבד, לא כתיבה מחדש",
-      "expected_impact": "חיזוק PageRank פנימי לדפי הזדמנות = תמיכה ישירה ב-P0 SEO optimization; עלות כמעט אפסית לאפקט crawl authority מיידי",
-      "channel": "google_organic_geo"
-    },
-    {
-      "category": "gated",
-      "priority": "P1",
-      "action_key": "aeo-llms-txt-update",
-      "owner": "SEO/content specialist מכין עדכון; Alon מאשר לפני דחיפה ל-repo",
-      "success_metric": "בסיס: AI citations מזכירות '200+ אירועים, 20+ מדינות' — נתונים שגויים; יעד: llms-full.txt מעודכן עם 1,500+ אירועים, 130+ יעדים, 25,000+ משתתפים תוך 14 יום; מדד: AEO citation rate בבדיקה הבאה",
-      "evidence": "geo observation: AI answer כוללת '200 אירועים ביותר מ-20 מדינות' — נתונים לא מדויקים; canonical facts: 1,500+ אירועים, 130+ יעדים, 25,000+ משתתפים; llms-full.txt קיים — רק עדכון תוכן נדרש",
-      "action": "עדכן llms-full.txt הקיים בנתונים כמותיים מדויקים (מאז 2010, 1,500+ אירועים, 130+ יעדים, 25,000+ משתתפים) בפורמט Q&A; הוסף FAQPage schema ל-3 דפי שירות מובילים — שני הקבצים קיימים",
-      "expected_impact": "תיקון נתונים שגויים ב-AI citations מגן על אמון decision-makers שבודקים ב-AI; נתונים ספציפיים מגדילים סיכויי בחירה על פני מתחרים ב-AI responses",
-      "channel": "google_organic_geo"
-    },
-    {
-      "category": "gated",
-      "priority": "P1",
-      "action_key": "linkedin-executive-advocacy",
-      "owner": "מנכ\"ל/מנהל בכיר מספק תוכן גולמי; social manager עורך ומתזמן; Alon מאשר",
-      "success_metric": "בסיס: LinkedIn 141 חשיפות/שבוע, ER 5.67%; יעד: 300+ חשיפות/שבוע ו-ER >5% תוך 60 יום; בדיקה: LinkedIn analytics חודשית",
-      "evidence": "id ba5e2d8e בסטטוס in_progress; LinkedIn ER 5.67% מעל ממוצע ענפי 2-3%; פרופיל אישי מניב 8x engagement לעומת דף חברה; B2B ישראלי מחליט על בסיס מוניטין אישי",
-      "action": "2 פוסטים/שבוע מפרופיל אישי מנכ\"ל (case-study לפני/אחרי + industry insight), דף החברה עושה repost בלבד; פורמט: carousel או native video בעדיפות על טקסט סטטי",
-      "expected_impact": "הגדלת LinkedIn reach ל-decision makers (CMO/HR/CEO) שמחפשים ספקי הפקה; LinkedIn חשוף בפייפליין עם Web leads — חיזוק הנוכחות עשוי להגביר conversion rate",
-      "channel": "linkedin"
-    },
-    {
-      "category": "gated",
       "priority": "P2",
       "action_key": "youtube-seo-videos",
       "owner": "video producer מכין; SEO specialist מוסיף timestamps ותיאור; Alon מאשר לפני העלאה",
@@ -66,20 +22,36 @@
       "channel": "youtube"
     }
   ],
-  "follower_growth_plan": [
-    "שלב 1 (חודשים 1-3) — Executive presence: הפעל 2 מנהלים בכירים ב-LinkedIn עם פוסט case-study + פוסט insight בשבוע כל אחד (פרופיל אישי); יעד 500 followers חדשים לדף החברה דרך amplification אורגני.",
-    "שלב 2 (חודשים 2-6) — TikTok + Instagram Reels: אשר id b7c0af4b ושגר 3 סרטוני '60 שניות מהפקות'/שבוע בפורמט אותנטי מאחורי הקלעים; שיתוף מקביל לשתי הפלטפורמות לחיסכון בתפוקה.",
-    "שלב 3 (חודשים 3-9) — פורמט קבוע: בסס 'הפקה ב-60 שניות' כפורמט שבועי עקבי בכל הפלטפורמות; עקביות פורמט בונה subscriber behavior ו-algorithm memory.",
-    "שלב 4 (חודשים 6-12) — LinkedIn Newsletter: שגר newsletter עברי חודשי ל-HR/CMO — 'מדריך מנהלים לאירועי חברה'; newsletters ב-LinkedIn מקבלים push notification priority ובונים subscriber base נפרד.",
-    "שלב 5 (שנה 2) — שותפויות MICE: cross-promotion עם ספקי מלונות, venues וקייטרינג בישראל ואירופה — גישה לקהלים משלימים ויעד 50K+ followers.",
-    "שלב 6 (שנה 3) — YouTube SEO compounding: 50+ סרטונים ממוטבי-SEO יוצרים long-tail discovery אורגני; YouTube הוא המנוע שמוביל ל-500K בטווח הארוך עם ROI גבוה ביותר."
-  ],
+  "follower_growth_plan": [],
   "leads_actions": [
-    "P0 — האצת SEO מסחרי עברי: אשר ופרסם אופטימיזציה של /נופש-חברה/ (pos.17, 363 חיפושים) ו-/אירוע-קונספט/ (pos.19, 282 חיפושים) — Web leads (33%) מוכיחים שהאתר ממיר; יותר תנועה ממוקדת = הליד החסר.",
     "P0 — Internal linking מיידי: ערוך 20 מאמרי בלוג קיימים עם anchor text לדפי ההזדמנות — עלות אפסית, אפקט מיידי על crawl authority ו-ranking.",
     "P1 — CTA pipeline: ודא שיש CTA 'קבל הצעת מחיר' בולט בכל דף שירות ובסוף כל מאמר בלוג; האתר כבר ממיר — פישוט מסע המשתמש לטופס מגדיל conversion ללא תנועה נוספת.",
     "P1 — LinkedIn executive posting: פוסט case-study אחד + פוסט insight אחד/שבוע מפרופיל מנכ\"ל — B2B ישראלי מחליט על בסיס מוניטין אישי; lead מ-LinkedIn מגיע עם trust מובנה.",
-    "P1 — תיקון llms-full.txt: עדכן ל-1,500+ אירועים, 130+ יעדים, 25,000+ משתתפים — AI citations כבר מייצרות demand; נתונים שגויים (200/20) פוגעים באמינות אצל decision-makers שבודקים ב-AI לפני פנייה.",
     "P2 — סגירת פער ייחוס Salesforce: הדרך נציגי מכירות לסמן 'Google Organic' ו-'Web' כשלקוח מזכיר את האתר; 'Other' (1 ליד) עשוי להסתיר organic שמכוון היכן להשקיע."
-  ]
+  ],
+  "evidence_notes": [
+    "אין בנתונים בסיס לתחזית עוקבים או לתוספת מובטחת של קליקים ולידים. צעדי צמיחה הם ניסויים למדידה.",
+    "אישור יוזמה או מסמך תסריטים אינו אישור לפוסט מוגמר; יש לבדוק את הנכס ואת סטטוס האישור לפני פרסום.",
+    "טענות על אלגוריתמים, שעות מועדפות ובנצ׳מרקים דורשות מקור מאומת; יעילותן עבור UPE דורשת ניסוי.",
+    "המלצות לשינוי אתר חייבות להפנות לפער מתועד שטרם טופל ולכבד את מועד השינוי האחרון."
+  ],
+  "withheld_advice": [
+    {
+      "action_key": "seo-service-page-optimization",
+      "reason": "site_evidence"
+    },
+    {
+      "action_key": "internal-linking-blog-to-service",
+      "reason": "site_evidence"
+    },
+    {
+      "action_key": "aeo-llms-txt-update",
+      "reason": "site_evidence"
+    },
+    {
+      "action_key": "linkedin-executive-advocacy",
+      "reason": "benchmark"
+    }
+  ],
+  "evidence_reviewed_at": "2026-09-13"
 }

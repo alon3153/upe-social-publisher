@@ -4,12 +4,6 @@
   "directives": [
     {
       "category": "safe_auto",
-      "action": "זווית תוכן LinkedIn: מסגר case studies כ'לפני/אחרי' (קראו: תקציב X → תוצאה Y) — תוכן וידאו ומסמכי carousel מניב reach גבוה משמעותית ב-2026 לעומת פוסט טקסט סטטי",
-      "detail": "פרופיל אישי מנכ\"ל + repost דף חברה; LinkedIn ER עומד על 5.67% — גבוה מהממוצע הענפי; וידאו ו-carousel הם הפורמטים עם highest reach algorithm ב-2026",
-      "channel": "linkedin"
-    },
-    {
-      "category": "safe_auto",
       "action": "זווית תוכן Instagram: עבור מ-caption-heavy לפורמט Reels ויזואלי של '30 שניות מהפקה' — אירוע ב-60 שניות, ללא תסריט, עם כיתוב עברי וטקסט על-גבי הוידאו",
       "detail": "454 חשיפות ל-9 פוסטים = 50 חשיפות/פוסט; Reels מקבלים הפצה נרחבת יותר מ-static posts; תוכן מאחורי הקלעים בהפקות הוא אנגייג'מנט סגמנט מוכח בB2B ויזואלי",
       "channel": "instagram"
@@ -19,18 +13,6 @@
       "action": "אסטרטגיית hashtag LinkedIn: השתמש ב-3-5 hashtags ממוקדים (#הפקת_אירועים, #טיולי_תמריץ, #MICE, #corporate_events_israel) — פחות hashtags רלוונטיים > יותר hashtags גנריים",
       "detail": "LinkedIn 2026 מתגמל authentic engagement; hashtags רלוונטיים מרחיבים reach ל-decision makers מחוץ לרשת הקיימת; ER נוכחי של 5.67% מצביע על בסיס טוב להרחבה",
       "channel": "linkedin"
-    },
-    {
-      "category": "safe_auto",
-      "action": "אסטרטגיית זמן פרסום LinkedIn: תזמן פוסטים לימים ג'-ה' בין 08:00-10:00 ו-12:00-14:00 שעון ישראל — המחקר ב-2026 מצביע על שעות אלה כפיק הפעילות לקהל B2B ישראלי ואירופאי",
-      "detail": "6 פוסטים ב-7 ימים עם 141 חשיפות בלבד — תזמון לא אופטימלי עשוי לגרום ל-reach נמוך; B2B audiences most active Tue-Thu 8-10AM & 12-2PM",
-      "channel": "linkedin"
-    },
-    {
-      "category": "safe_auto",
-      "action": "מפת תוכן SEO: הכן רשימת 20 מאמרי בלוג עם traffic גבוה ב-GSC שמכוונים ל-anchor text לדפי /נופש-חברה/ ו-/אירוע-קונספט/ — עריכה של משפט קיים בלבד, לא כתיבה מחדש",
-      "detail": "id 8c4f9ebe בסטטוס awaiting_approval; 292 מאמרים קיימים = internal link equity לא מנוצל; /נופש-חברה/ ו-/אירוע-קונספט/ ב-pos.17-19 עם 645 חיפושים/חודש",
-      "channel": "google_organic_geo"
     }
   ],
   "channel_cadence": {
@@ -69,20 +51,32 @@
     "tiktok: ב-awaiting_approval; כשיאושר — 3 Reels/שבוע של '60 שניות מהפקות' הוא קצב בר-קיימא; פחות מ-3 לא בונה algorithm momentum, יותר מ-3 מעמיס על pipeline הייצור",
     "youtube: 3 פוסטים ב-7 ימים בתקופה הנוכחית (לעומת 6 קודם) גרמו לירידה בחשיפות; YouTube מתגמל consistency ואיכות על פני כמות; 1 סרטון/שבוע ממוטב SEO עדיף על 3 לא-ממוטבים"
   ],
-  "follower_growth_plan": [
-    "שלב 1 (חודשים 1-3) — Executive presence: הפעל 2 מנהלים בכירים ב-LinkedIn עם פוסט case-study + פוסט insight בשבוע כל אחד (פרופיל אישי); יעד 500 followers חדשים לדף החברה דרך amplification אורגני.",
-    "שלב 2 (חודשים 2-6) — TikTok + Instagram Reels: אשר id b7c0af4b ושגר 3 סרטוני '60 שניות מהפקות'/שבוע בפורמט אותנטי מאחורי הקלעים; שיתוף מקביל לשתי הפלטפורמות לחיסכון בתפוקה.",
-    "שלב 3 (חודשים 3-9) — פורמט קבוע: בסס 'הפקה ב-60 שניות' כפורמט שבועי עקבי בכל הפלטפורמות; עקביות פורמט בונה subscriber behavior ו-algorithm memory.",
-    "שלב 4 (חודשים 6-12) — LinkedIn Newsletter: שגר newsletter עברי חודשי ל-HR/CMO — 'מדריך מנהלים לאירועי חברה'; newsletters ב-LinkedIn מקבלים push notification priority ובונים subscriber base נפרד.",
-    "שלב 5 (שנה 2) — שותפויות MICE: cross-promotion עם ספקי מלונות, venues וקייטרינג בישראל ואירופה — גישה לקהלים משלימים ויעד 50K+ followers.",
-    "שלב 6 (שנה 3) — YouTube SEO compounding: 50+ סרטונים ממוטבי-SEO יוצרים long-tail discovery אורגני; YouTube הוא המנוע שמוביל ל-500K בטווח הארוך עם ROI גבוה ביותר."
-  ],
+  "follower_growth_plan": [],
   "leads_actions": [
-    "P0 — האצת SEO מסחרי עברי: אשר ופרסם אופטימיזציה של /נופש-חברה/ (pos.17, 363 חיפושים) ו-/אירוע-קונספט/ (pos.19, 282 חיפושים) — Web leads (33%) מוכיחים שהאתר ממיר; יותר תנועה ממוקדת = הליד החסר.",
     "P0 — Internal linking מיידי: ערוך 20 מאמרי בלוג קיימים עם anchor text לדפי ההזדמנות — עלות אפסית, אפקט מיידי על crawl authority ו-ranking.",
     "P1 — CTA pipeline: ודא שיש CTA 'קבל הצעת מחיר' בולט בכל דף שירות ובסוף כל מאמר בלוג; האתר כבר ממיר — פישוט מסע המשתמש לטופס מגדיל conversion ללא תנועה נוספת.",
     "P1 — LinkedIn executive posting: פוסט case-study אחד + פוסט insight אחד/שבוע מפרופיל מנכ\"ל — B2B ישראלי מחליט על בסיס מוניטין אישי; lead מ-LinkedIn מגיע עם trust מובנה.",
-    "P1 — תיקון llms-full.txt: עדכן ל-1,500+ אירועים, 130+ יעדים, 25,000+ משתתפים — AI citations כבר מייצרות demand; נתונים שגויים (200/20) פוגעים באמינות אצל decision-makers שבודקים ב-AI לפני פנייה.",
     "P2 — סגירת פער ייחוס Salesforce: הדרך נציגי מכירות לסמן 'Google Organic' ו-'Web' כשלקוח מזכיר את האתר; 'Other' (1 ליד) עשוי להסתיר organic שמכוון היכן להשקיע."
-  ]
+  ],
+  "evidence_notes": [
+    "אין בנתונים בסיס לתחזית עוקבים או לתוספת מובטחת של קליקים ולידים. צעדי צמיחה הם ניסויים למדידה.",
+    "אישור יוזמה או מסמך תסריטים אינו אישור לפוסט מוגמר; יש לבדוק את הנכס ואת סטטוס האישור לפני פרסום.",
+    "טענות על אלגוריתמים, שעות מועדפות ובנצ׳מרקים דורשות מקור מאומת; יעילותן עבור UPE דורשת ניסוי.",
+    "המלצות לשינוי אתר חייבות להפנות לפער מתועד שטרם טופל ולכבד את מועד השינוי האחרון."
+  ],
+  "withheld_advice": [
+    {
+      "action_key": null,
+      "reason": "benchmark"
+    },
+    {
+      "action_key": null,
+      "reason": "benchmark"
+    },
+    {
+      "action_key": null,
+      "reason": "site_evidence"
+    }
+  ],
+  "evidence_reviewed_at": "2026-09-13"
 }

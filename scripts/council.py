@@ -189,6 +189,10 @@ def build_scorecard(cur, prev, leads, seo_geo=None):
 
 
 # ---------------------------------------------------------------- the council --
+import council_evidence
+import aeo_recommendations
+
+
 COUNCIL_PROMPT = """You are the UPE Marketing Council — a panel of senior B2B/MICE growth strategists
 auditing Uproduction Events' organic digital marketing. UPE is a B2B corporate-event production &
 incentive-travel company (Israel-based, global ops). Audience = decision-makers (CMO/HR/CEO/event
@@ -202,7 +206,7 @@ is computed from business outcomes, your "overall" is an advisory second opinion
 - SECONDARY: Google-organic momentum (clicks + Top-3 Hebrew keywords) and AI/AEO citations.
 - CONTEXT ONLY — engagement/impressions are CONTEXT, not goals. A low engagement rate on
   Israeli-B2B social is EXPECTED and must NOT dominate your assessment or the overall score.
-- North-star: 500,000 organic followers over ~3 years (leading indicator, not a near-term target).
+- Follower growth is exploratory context. There is no evidenced forecast, timetable or path to 500,000 followers. Propose measurable small experiments, not promises.
 
 IMPROVEMENT POLICY:
 - Canonical company facts ONLY: founded 2010; 1,500+ events; 130+ destinations;
@@ -238,11 +242,11 @@ EXISTING SITE ASSETS (LIVE on upe.co.il — treat as GROUND TRUTH):
 CRITICAL: every page listed above already EXISTS. Do NOT recommend "create/build/write" a page,
 service, Brand Hub, llms.txt, or FAQ that is already in this inventory — that produces a DUPLICATE
 that splits ranking signal and pushes the original further from Top-3 (a hard UPE anti-pattern).
-When a target keyword maps to an existing page, phrase the recommendation as OPTIMIZE it
-(H1/title/schema/word-count), build INTERNAL LINKS to it from the {blog_hint}+ existing blog
-articles, and pursue OFF-PAGE authority — never "create". Only recommend a brand-new page if NO
-listed asset covers that intent, and say which existing pages you checked. If the inventory is
-unavailable (ok=false), fall back to your prior behaviour but hedge creation recommendations.
+Existing pages are not evidence of missing H1/title/schema/word count. Do not recommend a rewrite,
+fixed word quota or generic batch of 20 links. Read the recorded page audits and shipment dates.
+On-site changes require target_url and a recorded open issue with update_required=true and evidence.
+Completed audits and shipped fixes must not be proposed again. Never guess cooldown dates.
+If inventory is unavailable (ok=false), verify the inventory first; do not suggest new pages.
 
 DATA:
 {data}
@@ -250,15 +254,24 @@ DATA:
 DETERMINISTIC SCORECARD:
 {scorecard}
 
-LEAD ATTRIBUTION: the scorecard's "lead_attribution" shows where this month's pipeline actually
-came from. If a REAL source dominates (e.g. Web/Linkedin/Word of mouth), treat it as the proven
-converting channel and make "leads_actions" DOUBLE DOWN on it (Web ⇒ accelerate Hebrew commercial
-SEO/content). Only if the dominant bucket is unattributed default (Advertisement/none) flag it as a
-data-entry gap — do NOT recommend UTM tracking otherwise (UPE's deals are relationship/inbound B2B).
+MEASUREMENT AND EVIDENCE:
+- Lead source shares are distribution, NOT conversion rates. 3 Web leads out of 9 is a 33% share,
+  with no visitor denominator. Web does not prove Google Organic origin or channel profitability.
+- Qualified leads use the reported operational CRM definition; do not assert independently verified
+  qualification or predict that an SEO edit will close a missing lead.
+- GSC impressions are this site's impressions in the stated period, NOT monthly market searches.
+- AI citation counts refer to probe questions and named provider(s), NOT distinct AI engines.
+- Current/previous post metrics are lifetime counts. A top post present in the current snapshot
+  has not rolled out of it. Do not invent causality for period differences.
+- Algorithm preferences, posting-time claims and benchmarks need an exact evidence_url from actual
+  web-search results. If unsupported, omit the claim and propose an explicitly labelled experiment.
+- Approval IDs identify initiatives; a script/playbook is not a finished video or publication approval.
+- Stored directives and saved cadence are pending instructions. Do not claim execution, enforcement
+  across all publishers, or a repaired website without an execution receipt.
 
 channel_cadence is MANDATORY and is a safe_auto-class decision (posting-cadence guidance): for EVERY
 network above, set the max posts/week the approval-gated pipeline should schedule, based on the
-measured data (integers 0-14). Local publishers enforce these caps mechanically, so be decisive —
+measured data (integers 0-14). Treat saved caps as proposed guidance until a publisher receipt confirms enforcement —
 an over-posted weak network (e.g. Facebook) should get a LOW cap.
 
 Use web_search to find what is working RIGHT NOW (2026) for B2B/MICE organic growth and for the
@@ -276,8 +289,8 @@ in HEBREW, with EXACTLY these keys:
   "what_failed": ["..."],
   "auto_fixes": [{{"category": "safe_auto", "action": "Hebrew action", "detail": "what+why", "channel": "instagram|..."}}],
   "channel_cadence": {{"facebook": {{"max_posts_per_week": 2, "reason": "Hebrew"}}, "instagram": {{"max_posts_per_week": 7, "reason": "Hebrew"}}, "linkedin": {{"max_posts_per_week": 3, "reason": "Hebrew"}}, "tiktok": {{"max_posts_per_week": 3, "reason": "Hebrew"}}, "youtube": {{"max_posts_per_week": 2, "reason": "Hebrew"}}}},
-  "recommendations": [{{"category": "gated", "priority": "P0|P1|P2", "action_key": "stable-existing-id-or-slug", "owner": "executor drafts; Alon approves", "success_metric": "metric baseline, target and review window", "evidence": "input metric or verified source", "action": "Hebrew", "expected_impact": "Hebrew", "channel": "..."}}],
-  "follower_growth_plan": ["concrete Hebrew steps toward the 500K north-star, ordered"],
+  "recommendations": [{{"category": "gated", "priority": "P0|P1|P2", "action_key": "stable-existing-id-or-slug", "owner": "executor drafts; Alon approves", "success_metric": "metric baseline, target and review window", "evidence": "input metric or verified source", "evidence_url": "exact retrieved source URL if external", "target_url": "existing site URL for on-site work", "action": "Hebrew", "expected_impact": "Hebrew", "channel": "..."}}],
+  "follower_growth_plan": ["small measurable Hebrew experiments; no follower forecasts"],
   "leads_actions": ["concrete Hebrew steps to hit 10 qualified leads/month, ordered"]
 }}"""
 
@@ -298,6 +311,10 @@ def run_council(cur, prev, scorecard, inventory=None):
                   for it in backlog.values() if it.get("status") in ("todo", "in_progress", "awaiting_approval")]
     except (OSError, ValueError, AttributeError):
         active = []
+    evidence_state = council_evidence.load_state()
+    shipped = aeo_recommendations.inventory(today=_today())
+    prompt += "\nVERIFIED PAGE AUDITS:\n" + json.dumps(evidence_state, ensure_ascii=False)
+    prompt += "\nEXACT SHIPMENT STATE:\n" + json.dumps(shipped, ensure_ascii=False)
     prompt += "\nEXISTING INITIATIVES (reuse action_key or id):\n" + json.dumps(active, ensure_ascii=False)
     body = {
         "model": MODEL,
@@ -324,7 +341,12 @@ def run_council(cur, prev, scorecard, inventory=None):
         raw_cadence = parsed.get("channel_cadence") or {}
         parsed["channel_cadence"] = {n: c for n, c in raw_cadence.items()
                                      if cur.get("networks", {}).get(n, {}).get("ok") is not False}
-        return parsed
+        source_urls = {c.get('url') for block in resp.get('content', [])
+                       for c in block.get('citations', []) if c.get('url')}
+        completed_keys = [it.get('action_key') or it.get('id') for it in backlog.values()
+                          if it.get('status') in ('done', 'completed', 'published')] if 'backlog' in locals() and isinstance(backlog, dict) else []
+        return council_evidence.sanitize(parsed, state=evidence_state, shipped=shipped,
+                                         completed_keys=completed_keys, source_urls=source_urls)
     sys.stderr.write(f"[council] parse fail. stop_reason={resp.get('stop_reason')} "
                      f"len={len(text)}\n--- tail ---\n{text[-1500:]}\n")
     return {"error": "could not parse council JSON", "raw": text[:800]}
@@ -415,6 +437,7 @@ def apply_auto_fixes(verdict, dry_run):
     Does NOT publish — respects the approval gate. Returns (applied_fixes, cadence)."""
     if verdict.get("error"):
         return [], validate_cadence(_previous_directives().get("channel_cadence"))
+    verdict["directive_save_status"] = "planned" if dry_run else "saved"
     fixes = [f for f in verdict.get("auto_fixes", []) if f.get("category") == "safe_auto"]
     cadence = validate_cadence(verdict.get("channel_cadence"))
     # Preserve omitted networks on partial responses, including failed data sources.
@@ -500,19 +523,20 @@ def render_html(cur, scorecard, verdict, applied, cadence=None):
 <tr style="background:#666;color:#fff;"><th>מדד</th><th>ערך</th><th>יעד</th><th></th></tr>
 {ctx_rows}</table>
 
+<h3>הערות מדידה ובדיקת ראיות</h3><ul>{chips(scorecard.get('warnings', []) + verdict.get('evidence_notes', []))}</ul>
 <h3>✅ מה עבד</h3><ul>{chips(verdict.get('what_worked',[]))}</ul>
 <h3>❌ מה נכשל</h3><ul>{chips(verdict.get('what_failed',[]))}</ul>
 
-<h3>⏱️ קצב פרסום שבועי שנקבע (נאכף אוטומטית)</h3>
+<h3>⏱️ מכסות פרסום שנשמרו — אכיפה דורשת אימות</h3>
 <ul>{"".join(f"<li>{net}: עד {c['max_posts_per_week']}/שבוע <span style='color:#555'>— {c.get('reason','')}</span></li>" for net, c in (cadence or {}).items()) or '<li>—</li>'}</ul>
 
-<h3>🤖 תיקונים אוטומטיים שבוצעו ({len(applied)})</h3>
-<p style="color:#555;font-size:12px;">נכתבו ל-state/council_directives.json — נצרכים ע"י ייצור התוכן הבא. לא פורסם דבר ללא אישורך.</p>
+<h3>🤖 הנחיות {"מתוכננות — טרם נשמרו" if verdict.get("directive_save_status") == "planned" else "שנשמרו להמשך"} ({len(applied)})</h3>
+<p style="color:#555;font-size:12px;">מיועדות לייצור התוכן הבא; שמירת הנחיות אינה הוכחה לביצוע שינוי או לאכיפת מכסה בכל ערוצי הפרסום.</p>
 <ul>{applied_li or '<li>—</li>'}</ul>
 
 <h3>📋 המלצות לאישורך (gated)</h3><ul>{recs or '<li>—</li>'}</ul>
 
-<h3>🎯 דרך ל-500K עוקבים</h3><ol>{chips(verdict.get('follower_growth_plan',[]))}</ol>
+<h3>🎯 ניסויי צמיחה — ללא תחזית עוקבים</h3><ol>{chips(verdict.get('follower_growth_plan',[]))}</ol>
 <h3>💼 דרך ל-10 לידים/חודש</h3><ol>{chips(verdict.get('leads_actions',[]))}</ol>
 
 <hr><p style="color:#888;font-size:11px;">UPE Marketing Council · אוטומטי · {d}</p>
@@ -523,8 +547,9 @@ def render_md(cur, scorecard, verdict, applied):
     return (f"# UPE Marketing Council — {_today()}\n\n"
             f"Overall (weighted): {scorecard['weighted']}/100 · scorecard {scorecard['passed']}/{scorecard['total']} · LLM read {verdict.get('scores',{}).get('overall','—')}/100\n\n"
             f"## Verdict\n{verdict.get('verdict_summary','—')}\n\n"
+            + "## Measurement notes\n" + "\n".join(f"- {n}" for n in scorecard.get("warnings", []) + verdict.get("evidence_notes", [])) + "\n\n" +
             f"## Totals\n```json\n{json.dumps(cur['totals'], ensure_ascii=False, indent=2)}\n```\n\n"
-            f"## Auto-fixes applied\n" + "\n".join(f"- {f.get('action')} ({f.get('channel')})" for f in applied) +
+            f"## Directives saved — execution unverified\n" + "\n".join(f"- {f.get('action')} ({f.get('channel')})" for f in applied) +
             f"\n\n## Recommendations (gated)\n" +
             "\n".join(f"- [{r.get('priority')}] {r.get('action')} — {r.get('expected_impact')}"
                       for r in verdict.get("recommendations", [])) +
