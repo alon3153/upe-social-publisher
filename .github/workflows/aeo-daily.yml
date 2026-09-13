@@ -3,6 +3,11 @@ on:
   schedule:
     - cron: "0 6 * * *"        # every day 06:00 UTC
   workflow_dispatch:
+    inputs:
+      send_email:
+        description: Send the report by email
+        type: boolean
+        default: false
 
 # Shares state/citations.json with the weekly loop — overlapping writers conflict on
 # `git pull --rebase` and the day's probe result is silently discarded (02.08.2026).
@@ -37,7 +42,19 @@ jobs:
           MS_GRAPH_CLIENT_SECRET: ${{ secrets.MS_GRAPH_CLIENT_SECRET }}
           MS_GRAPH_FROM:          ${{ secrets.MS_GRAPH_FROM }}
           APPROVAL_TO:            ${{ secrets.APPROVAL_TO }}
-        run: python scripts/aeo_monitor.py
+          SEND_EMAIL: ${{ github.event_name == 'schedule' || inputs.send_email == true }}
+        run: |
+          args=(--output-dir artifacts/aeo-daily)
+          if [ "$SEND_EMAIL" = "true" ]; then args+=(--send-email); fi
+          python scripts/aeo_monitor.py "${args[@]}"
+
+      - name: Save reviewable daily report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: aeo-daily-report
+          path: artifacts/aeo-daily/
+          retention-days: 14
 
       - name: Persist daily history
         run: |

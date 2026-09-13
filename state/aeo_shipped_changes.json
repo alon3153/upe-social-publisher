@@ -99,7 +99,13 @@
       "aliases": [
         "מייס ישראל"
       ],
-      "source": "Read-only live inventory audit 2026-09-12; no new publication implied"
+      "source": "Read-only live audit 2026-09-13 and uproduction-astro master merge history (not HTML dateModified); Live 200/self-canonical; H1 names boutique global MICE; 11 FAQPage questions, comparison/pricing/process sections verified 2026-09-13. Content matches master 2e3b731 (2026-08-08).",
+      "last_changed": "2026-08-08",
+      "audit": {
+        "completed_at": "2026-09-13",
+        "update_required": false,
+        "evidence": "Live 200/self-canonical; H1 names boutique global MICE; 11 FAQPage questions, comparison/pricing/process sections verified 2026-09-13. Content matches master 2e3b731 (2026-08-08)."
+      }
     },
     {
       "url": "https://upe.co.il/en/international-mice-production-israel/",
@@ -140,14 +146,26 @@
       "aliases": [
         "בחירת חברה להפקת כנסים"
       ],
-      "source": "Read-only live inventory audit 2026-09-12; no new publication implied"
+      "source": "Read-only live audit 2026-09-13 and uproduction-astro master merge history (not HTML dateModified); Live 200/self-canonical; 7 selection criteria, international production, budget/ROI and 7 visible FAQs verified 2026-09-13. FAQPage fixed and live-verified by technical-only PR137 on 2026-09-13. Live content matches master PR127 merge 8fbde79 2026-09-10.",
+      "last_changed": "2026-09-10",
+      "audit": {
+        "completed_at": "2026-09-13",
+        "update_required": false,
+        "evidence": "Live 200/self-canonical; 7 selection criteria, international production, budget/ROI and 7 visible FAQs verified 2026-09-13. 7-question FAQPage verified live after technical-only PR137 (cf805f24, 2026-09-13T18:32:36Z); body and content measurement date unchanged. Live content matches master PR127 merge 8fbde79 2026-09-10."
+      }
     },
     {
       "url": "https://upe.co.il/en/how-to-choose-an-incentive-travel-company/",
       "aliases": [
         "how to choose an incentive travel company"
       ],
-      "source": "Read-only live inventory audit 2026-09-12; no new publication implied"
+      "source": "Read-only live audit 2026-09-13 and uproduction-astro master merge history (not HTML dateModified); Live 200/self-canonical; 6 selection criteria, budget/destination/team, boutique-vs-network section and 6 valid FAQPage questions verified 2026-09-13. Content matches master 97a820e 2026-07-30.",
+      "last_changed": "2026-07-30",
+      "audit": {
+        "completed_at": "2026-09-13",
+        "update_required": false,
+        "evidence": "Live 200/self-canonical; 6 selection criteria, budget/destination/team, boutique-vs-network section and 6 valid FAQPage questions verified 2026-09-13. Content matches master 97a820e 2026-07-30."
+      }
     }
   ]
 }

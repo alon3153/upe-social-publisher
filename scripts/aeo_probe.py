@@ -144,21 +144,39 @@ def run_probe(questions, models, ask_fn, judge_fn):
     return out
 
 
+# Conservative reviewed domains: a citation alone does not establish outreach suitability.
+EDITORIAL_DOMAINS = {'bizbash.com', 'ctech.com', 'calcalistech.com', 'pcma.org', 'mpi.org'}
+DIRECTORY_DOMAINS = {'clutch.co', 'sortlist.com'}
+COMPETITOR_DOMAINS = {'corporateoptics.com', 'gogather.com', 'naboo.app', 'pinchevents.co.il',
+                      'bcdme.com', 'promarket.co.il', 'eron.co.il', 'mci-group.com', 'kenes.com'}
+
+
+def citation_kind(host):
+    for domains, kind in ((COMPETITOR_DOMAINS, 'competitor'), (EDITORIAL_DOMAINS, 'editorial'),
+                          (DIRECTORY_DOMAINS, 'directory')):
+        if any(host == d or host.endswith('.' + d) for d in domains):
+            return kind
+    return 'unverified'
+
+
 def outreach_targets(scorecard, top=15):
     """Rank the third-party pages answer engines actually cite (excluding our own domain).
-    This IS the outreach target list: get UPE onto these pages/domains."""
+    Each domain is classified; only reviewed editorial/directory sources are candidates."""
     from collections import Counter
     from urllib.parse import urlparse
     counts, examples = Counter(), {}
     for md in scorecard.get("models", {}).values():
+        if md.get("degraded"):
+            continue
         for a in md.get("answers", []):
             for u in a.get("cited_urls", []):
-                host = (urlparse(u).netloc or "").replace("www.", "")
-                if not host or "upe.co.il" in host:
+                host = (urlparse(u).hostname or "").lower().removeprefix("www.")
+                if not host or host == "upe.co.il" or host.endswith(".upe.co.il"):
                     continue
                 counts[host] += 1
                 examples.setdefault(host, u)
-    return [{"domain": d, "citations": n, "example": examples[d]} for d, n in counts.most_common(top)]
+    return [{"domain": d, "citations": n, "example": examples[d], "kind": citation_kind(d),
+             "outreach_eligible": citation_kind(d) in ("editorial", "directory")} for d, n in counts.most_common(top)]
 
 
 def append_history(scorecard, path):

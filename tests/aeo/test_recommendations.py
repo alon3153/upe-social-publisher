@@ -7,7 +7,7 @@ def files(tmp_path):
     ledger = tmp_path / 'ledger.json'
     ledger.write_text(json.dumps({'intents': {'mice': {'url': 'https://upe.co.il/en/mice/', 'live': True, 'last_published': '2026-09-09'}}}))
     changes = tmp_path / 'changes.json'
-    changes.write_text(json.dumps({'changes': [{'url': 'https://upe.co.il/conferences/', 'last_changed': '2026-09-09', 'aliases': ['international conference']}]}))
+    changes.write_text(json.dumps({'changes': [{'url': 'https://upe.co.il/conferences/', 'last_changed': '2026-09-09', 'audit': {'update_required': True, 'evidence': 'Verified missing structured comparison'}, 'aliases': ['international conference']}]}))
     return ledger, changes
 
 
@@ -64,3 +64,52 @@ def test_alias_text_cannot_authorize_an_unknown_update_url():
     items = [{"url": "https://upe.co.il/existing/", "aliases": ["conference production"], "cooldown": False}]
     action = {"kind": "update", "target_url": "https://upe.co.il/new-unverified-page/", "text": "Improve conference production guidance"}
     assert rec.filter_actions([action], items) == []
+
+
+def test_unknown_publication_is_not_outside_cooldown(tmp_path):
+    ledger, changes = files(tmp_path)
+    changes.write_text(json.dumps({'changes': [{'url': 'https://upe.co.il/x/'}]}))
+    item = rec.inventory('2026-09-13', ledger, changes)[-1]
+    assert item['cooldown'] is None and item['cooldown_until'] is None
+    assert rec.filter_actions([{'kind': 'update', 'target_url': item['url'], 'text': 'Rewrite page'}], [item]) == []
+
+
+def test_disguised_rewrite_uses_exact_state_deadline_and_deduplicates(tmp_path):
+    ledger, changes = files(tmp_path)
+    items = rec.inventory('2026-09-13', ledger, changes)
+    actions = [{'kind': kind, 'target_url': 'https://upe.co.il/conferences/',
+                'text': 'Not in cooldown; audit then rewrite by 2026-10-10'} for kind in ('verify', 'observe')]
+    output = rec.filter_actions(actions, items)
+    assert len(output) == 1
+    assert '2026-10-07' in output[0] and '2026-10-10' not in output[0]
+    assert 'rewrite' not in output[0]
+
+
+def test_completed_audit_suppresses_repeat_and_unsupported_updates():
+    item = {'url': 'https://upe.co.il/x/', 'cooldown': False,
+            'audit': {'completed_at': '2026-09-13', 'update_required': False, 'evidence': 'Live FAQ and criteria confirmed'}}
+    actions = [{'kind': kind, 'target_url': item['url'], 'text': 'Audit missing criteria and FAQ'}
+               for kind in ('verify', 'update')]
+    assert rec.filter_actions(actions, [item]) == []
+
+
+def test_exclusive_dmc_claim_and_competitor_outreach_fail_closed():
+    actions = [{'kind': 'outreach_draft', 'text': 'Pitch UPE as the only Israel-based production house with in-house DMC network'},
+               {'kind': 'outreach_draft', 'text': 'Draft pitch', 'target_url': 'https://corporateoptics.com/'},
+               {'kind': 'outreach_draft', 'text': 'Draft pitch', 'target_url': 'https://unknown.example/'},
+               {'kind': 'outreach_draft', 'text': 'Draft factual expert commentary for review', 'target_url': 'https://bizbash.com/'}]
+    assert rec.filter_actions(actions, []) == [actions[-1]['text']]
+
+
+def test_duplicate_url_uses_latest_verified_change_for_observation(tmp_path):
+    ledger, changes = files(tmp_path)
+    changes.write_text(json.dumps({'changes': [{'url': 'https://upe.co.il/en/mice/', 'last_changed': '2026-09-12'}]}))
+    items = rec.inventory('2026-09-13', ledger, changes)
+    assert len(items) == 1 and items[0]['cooldown_until'] == '2026-10-10'
+    assert rec.covered_intents(items) == {'mice'}
+    result = rec.filter_actions([{'kind': 'verify', 'target_url': items[0]['url'], 'text': 'Audit again'}], items)
+    assert len(result) == 1 and '2026-10-10' in result[0]
+
+
+def test_competitor_named_in_outreach_prose_without_url_is_rejected():
+    assert rec.filter_actions([{'kind': 'outreach_draft', 'text': 'Pitch corporateoptics.com for an editorial mention'}], []) == []

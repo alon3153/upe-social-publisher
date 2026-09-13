@@ -52,10 +52,12 @@ def _outreach_html(scorecard, top=10):
     targets = aeo_probe.outreach_targets(scorecard, top=top)
     if not targets:
         return ""
+    labels = {"competitor": "מתחרה — לא יעד פנייה", "editorial": "מקור מערכתי — לבדיקה לפני פנייה",
+              "directory": "מדריך חברות — לבדיקה לפני רישום", "unverified": "טרם סווג — לא יעד פנייה"}
     items = "".join(
         f'<li dir="rtl" style="text-align:right;"><span dir="ltr">{t["domain"]}</span>'
-        f' — {t["citations"]} ציטוטים</li>' for t in targets)
-    return ('<h3 dir="rtl">מי כן מצוטט (יעדי outreach)</h3>'
+        f' — {t["citations"]} ציטוטים · {labels[t["kind"]]}</li>' for t in targets)
+    return ('<h3 dir="rtl">מי מצוטט — סוג המקור</h3>'
             f'<ul dir="rtl" style="direction:rtl;text-align:right;">{items}</ul>')
 
 
