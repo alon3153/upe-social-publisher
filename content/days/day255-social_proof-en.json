@@ -1,0 +1,31 @@
+{
+  "day": 255,
+  "category": "social_proof",
+  "language": "en",
+  "date": "",
+  "weekday": "",
+  "theme": "Trust Built Over 1,500 Events",
+  "linkedin": {
+    "profile": "Uproduction Events (Company Page)",
+    "text": "The brief arrived on a Tuesday afternoon. No call, no preamble — just a document and a deadline.\n\nThat's what repeat business actually looks like in event production. Not a signed contract after three pitch meetings. A message that assumes you'll figure it out, because you always have.\n\nAfter 16 years and 1,500+ events across 130+ destinations, the trust our clients extend is the proof point we're most proud of — more than any award or case study.\n\nFor HR and marketing leaders managing high-stakes events: what does trust look like in the vendor relationships you rely on most? Curious what the room thinks."
+  },
+  "instagram": {
+    "profile": "@uproductionevents",
+    "text": "Fifth event. Same client. Zero hesitation.\n\nThat's the metric we care about most.\n\n16 years. 1,500+ events. 130+ destinations. 25,000+ participants — and the clients who keep coming back.\n\nWorking on your next event? DM us."
+  },
+  "facebook": {
+    "profile": "Uproduction Events (Page)",
+    "text": "When a client calls us for their fifth event in three years, that says more than any testimonial could.\n\nOver 16 years, we've built something that doesn't show up in a brochure — the kind of trust that means a VP of HR sends us a brief on a Tuesday and sleeps soundly that night.\n\n1,500+ events. 130+ destinations. 25,000+ participants. The numbers are the track record.\n\nPlanning something for your team? Drop a comment or send us a message — we'd love to hear what you're building."
+  },
+  "image_file": "content/images/d188_real.jpg",
+  "image_source": "real_archive_reused",
+  "image_credit": "📷 A real frame from a Uproduction production",
+  "brand": {
+    "colors": [
+      "#1C1C1C",
+      "#FBCE0A"
+    ],
+    "font": "Comfortaa",
+    "logo": "uproduction_official_logo.png"
+  }
+}

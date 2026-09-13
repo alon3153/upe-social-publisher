@@ -1,0 +1,31 @@
+{
+  "day": 255,
+  "category": "social_proof",
+  "language": "es",
+  "date": "",
+  "weekday": "",
+  "theme": "Trust Built Over 1,500 Events",
+  "linkedin": {
+    "profile": "Uproduction Events (Company Page)",
+    "text": "El brief llegó un martes por la tarde. Sin llamada previa, sin introducción — solo un documento y una fecha límite.\n\nAsí se ve la fidelidad real en producción de eventos. No un contrato firmado tras tres reuniones de presentación. Un mensaje que da por sentado que lo resolverás, porque siempre lo has hecho.\n\nTras 16 años y más de 1,500 eventos en más de 130 destinos, la confianza que nuestros clientes nos otorgan es el indicador del que más nos enorgullecemos — más que cualquier premio o caso de éxito.\n\nPara líderes de RRHH y marketing que gestionan eventos de alto impacto: ¿cómo se ve la confianza en las relaciones con proveedores que más os importan? Me interesa saber qué opináis."
+  },
+  "instagram": {
+    "profile": "@uproductionevents",
+    "text": "Quinto evento. Mismo cliente. Sin dudarlo.\n\nEsa es la métrica que más nos importa.\n\n16 años. 1,500+ eventos. 130+ destinos. 25,000+ participantes — y los clientes que vuelven una y otra vez.\n\n¿Tu próximo evento ya está en marcha? Escríbenos por DM."
+  },
+  "facebook": {
+    "profile": "Uproduction Events (Page)",
+    "text": "Cuando un cliente regresa para su quinto evento en tres años, eso vale más que cualquier reseña.\n\nEn 16 años hemos construido algo que no aparece en ningún folleto: la confianza que hace que un director de RRHH nos envíe el brief un martes y duerma tranquilo esa noche.\n\n1,500+ eventos. 130+ destinos. 25,000+ participantes. Los números hablan solos.\n\n¿Estás planificando algo para tu equipo? Escríbenos en los comentarios o envíanos un mensaje — nos encantaría saber qué tienes en mente."
+  },
+  "image_file": "content/images/d188_real.jpg",
+  "image_source": "real_archive_reused",
+  "image_credit": "📷 Un fotograma real de una producción de Uproduction",
+  "brand": {
+    "colors": [
+      "#1C1C1C",
+      "#FBCE0A"
+    ],
+    "font": "Comfortaa",
+    "logo": "uproduction_official_logo.png"
+  }
+}
