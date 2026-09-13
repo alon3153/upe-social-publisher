@@ -50,10 +50,7 @@ def _soql_records(query, token, base):
         return json.loads(r.read().decode()).get("records", [])
 
 
-# Concentration in one of these buckets is a DATA-ENTRY artifact (the picklist default /
-# blank) — the attribution is uninformative. Concentration in a REAL chosen source
-# (Web, Linkedin, Word of mouth...) is a market SIGNAL, not a gap. Ported from the
-# retired Dropbox council 02.07 so the cloud council reasons about it identically.
+# Default/ambiguous buckets do not establish a marketing channel or conversion rate.
 _UNATTRIBUTED = {"Advertisement", "(none)", "Other"}
 
 
@@ -68,16 +65,17 @@ def _attribution(records):
                 "attribution_gap": False, "attribution_note": "no opportunities in window"}
     dom = max(by_source.items(), key=lambda x: x[1])
     concentrated = dom[1] / total >= 0.8
-    gap = bool(concentrated and dom[0] in _UNATTRIBUTED)
+    ambiguous = [s for s in by_source if s in _UNATTRIBUTED]
+    gap = bool(ambiguous)
     if gap:
-        note = (f"{dom[1]}/{total} תויגו '{dom[0]}' (ברירת-מחדל / לא-מיוחס) — הייחוס לא אינפורמטיבי. "
-                "להקפיד לתייג מקור אמיתי בכל עסקה חדשה.")
+        note = (f"{sum(by_source[s] for s in ambiguous)}/{total} ברשומות מקור עמום או ברירת מחדל. "
+                "אין לשייך אותן לערוץ דיגיטלי מסוים ללא ראיה ואין להסיק שיעור המרה מחלוקת המקורות.")
     elif concentrated:
-        note = (f"{dom[1]}/{total} מקורם '{dom[0]}' — זה הערוץ הממיר. להכפיל בו את ההשקעה"
-                + (" — להאיץ SEO/תוכן אורגני מסחרי בעברית." if dom[0] == "Web" else "."))
+        note = (f"{dom[1]}/{total} תויגו '{dom[0]}' — זה חלקו ברשומות, לא שיעור המרה. "
+                "Web אינו מוכיח Google Organic; נדרשת ראיית מקור לפני שינוי הקצאת תקציב.")
     else:
         note = "הייחוס מפוזר בין מספר מקורות"
-    return {"by_source": by_source, "dominant_source": dom[0],
+    return {"by_source": by_source, "dominant_source": dom[0], "ambiguous_sources": ambiguous,
             "dominant_share_pct": round(dom[1] / total * 100), "attribution_gap": gap,
             "attribution_note": note}
 

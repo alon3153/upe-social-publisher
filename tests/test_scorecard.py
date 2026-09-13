@@ -133,15 +133,20 @@ def test_normalize_maps_guardian_nested_schema_to_flat_fields():
     # daily score at 36 with AI-visibility falsely "not connected". normalize() bridges it.
     raw = {"ok": True,
            "sites": [
-               {"site": "https://upe.co.il/", "clicks": 145,
+               {"site": "https://upe.co.il/", "clicks": 145, "clicks_7d": 40,
+                "windows": {"weekly": {"start": "2026-09-07", "end": "2026-09-13", "days": 7}},
+                "top3_terms": [["b", 2.0, 300]],
                 "top_opportunities": [["a", 9.2, 757], ["b", 2.0, 300]]},
-               {"site": "https://upe-spain.com/", "clicks": 60,
+               {"site": "https://upe-spain.com/", "clicks": 60, "clicks_7d": 10,
+                "windows": {"weekly": {"start": "2026-09-07", "end": "2026-09-13", "days": 7}},
+                "top3_terms": [],
                 "top_opportunities": [["c", 15.0, 184]]}],
            "geo": {"status": "ok", "cited": 3, "total": 7}}
     n = seo_geo_source.normalize(raw)
-    assert n["weekly_clicks"] == 205          # 145 + 60, not 0
+    assert n["weekly_clicks"] == 50           # exact weekly totals, never 28-day totals
     assert n["top3_keywords"] == 1            # only "b" at pos 2.0 <= 3
-    assert n["aeo_cited_engines"] == 3        # from geo.cited, not "not connected"
+    assert n["aeo_cited_engines"] is None    # three prompts are not three engines
+    assert n["aeo_cited_questions"] == 3
 
 def test_normalize_never_fabricates_when_source_dark():
     # ok=False (no GH_PAT / fetch error) must pass through untouched — no invented zeros.
@@ -149,7 +154,7 @@ def test_normalize_never_fabricates_when_source_dark():
     # ok=True but no sites -> leave organic fields UNSET so the scorecard honestly
     # renders "not connected" rather than a fabricated 0-clicks pass/fail.
     n = seo_geo_source.normalize({"ok": True, "geo": {"cited": 5}})
-    assert "weekly_clicks" not in n and n["aeo_cited_engines"] == 5
+    assert n["weekly_clicks"] is None and n["aeo_cited_engines"] is None
 
 def test_all_sources_unwired_does_not_inflate():
     # Salesforce + GSC both dark, but posting continues (UPE posts ~41/wk).
