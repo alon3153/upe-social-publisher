@@ -35,7 +35,7 @@ def test_first_success_survives_next_action_failure():
              patch.object(e,'supa_fetch_approved',return_value=(set(),set())), \
              patch.object(e,'pick_to_advance',return_value=list(inits.values())), \
              patch.object(e,'bounded_agent',side_effect=action), \
-             patch.object(e,'supa_register'), \
+             patch.object(e,'supa_register',return_value=True), \
              patch.object(e,'render_html',return_value='draft digest'), \
              patch.dict(sys.modules,{'daily_email':types.SimpleNamespace(send_graph_html=lambda *a:(True,'mocked'))}), \
              patch.object(sys,'argv',['executor.py']):
@@ -60,3 +60,22 @@ def test_checkpoint_does_not_claim_running_action_completed():
 def test_no_api_key_is_failure():
     with patch.object(e,'API_KEY',''),patch.object(sys,'argv',['executor.py']):
         assert e.main()==1
+
+
+def test_drafting_completion_does_not_claim_delivery_success():
+    with tempfile.TemporaryDirectory() as d:
+        root=Path(d)
+        with patch.multiple(e,ROOT=root,STATE_DIR=root/'state',INIT_PATH=root/'state/initiatives.json'):
+            e.checkpoint({},[('draft',{})],1,1,finished=True,postprocessing='failed')
+        feed=json.loads((root/'reports/executor.json').read_text())
+        assert feed['drafting_complete'] is True
+        assert feed['complete'] is False and feed['status']=='partial'
+        assert feed['postprocessing']=='failed'
+
+
+def test_zero_planned_is_measured_complete_without_notification():
+    with tempfile.TemporaryDirectory() as d:
+        root=Path(d)
+        with patch.multiple(e,ROOT=root,STATE_DIR=root/'state',INIT_PATH=root/'state/initiatives.json'):
+            e.checkpoint({},[],0,0,finished=True,postprocessing='not_needed')
+        assert json.loads((root/'reports/executor.json').read_text())['complete'] is True

@@ -62,21 +62,23 @@ def bounded_agent(it, seconds):
         signal.signal(signal.SIGALRM, previous)
 
 
-def checkpoint(inits, advanced, attempted, planned, *, finished=False, active_id=None):
+def checkpoint(inits, advanced, attempted, planned, *, finished=False, active_id=None, postprocessing='pending'):
     STATE_DIR.mkdir(parents=True, exist_ok=True)
     temporary = INIT_PATH.with_suffix('.tmp')
     temporary.write_text(json.dumps(inits, ensure_ascii=False, indent=2))
     temporary.replace(INIT_PATH)
-    complete = finished and attempted == planned and len(advanced) == attempted
+    drafting_complete = finished and attempted == planned and len(advanced) == attempted
+    complete = drafting_complete and postprocessing in ('complete','not_needed')
     feed = {'schema_version': 1, 'source_key': 'executor',
             'generated_at': datetime.datetime.now(datetime.timezone.utc).isoformat(),
             'workflow_run_id': os.environ.get('GITHUB_RUN_ID'),
             'status': 'ok' if complete else 'partial', 'complete': complete,
+            'drafting_complete': drafting_complete, 'postprocessing': postprocessing,
             'planned': planned, 'attempted': attempted, 'advanced': len(advanced),
             'active_id': active_id, 'source': 'Executor durable checkpoint; drafts only',
             'facts': [['טיוטות שקודמו',len(advanced)],['ניסיונות',attempted],['בתוכנית',planned]],
             'findings': [{'severity':'info' if complete else 'warn',
-                          'text': 'סבב הטיוטות הסתיים ונשמר.' if complete else 'סבב הביצוע טרם הושלם במלואו; ההתקדמות שנשמרה מוצגת בנפרד.'}]}
+                          'text': 'סבב הטיוטות הסתיים ונשמר; אין בכך אישור לפרסום או ביצוע שיווקי.' if complete else 'הטיוטות נשמרות בנפרד; הסבב או שלבי הרישום והדיווח טרם הושלמו במלואם.'}]}
     path=ROOT/'reports/executor.json';path.parent.mkdir(exist_ok=True)
     temp=path.with_suffix('.tmp');temp.write_text(json.dumps(feed,ensure_ascii=False,indent=2));temp.replace(path)
 
@@ -122,13 +124,15 @@ def supa_fetch_approved():
 def supa_register(it):
     """Ensure a pending approval row exists (keeps status if already set)."""
     if not (SUPA_URL and SUPA_KEY and HMAC_SECRET):
-        return
+        return False
     try:
         _supa("POST", "executor_approvals", body={
             "id": it["id"], "token": _token(it["id"]),
             "title": it.get("title", "")[:300], "priority": it.get("priority", "")})
+        return True
     except Exception as e:
         sys.stderr.write(f"supa register {it['id']}: {e}\n")
+        return False
 
 
 def approve_links(iid):
@@ -421,18 +425,24 @@ def main():
 
     checkpoint(inits, advanced, attempted, len(todo), finished=True)
 
+    registration_ok = True
     for it, _ in advanced:  # ensure an approval row exists so the email links resolve
-        supa_register(it)
+        if supa_register(it) is not True:
+            registration_ok = False
 
-    if advanced:
+    notification_ok = not advanced
+    if advanced and registration_ok:
         try:
             from daily_email import send_graph_html
             ok, info = send_graph_html(f"🤖 צוות הביצוע — {_today()} · {len(advanced)} יוזמות קודמו",
                                        render_html(inits, advanced))
             print(f"email: {ok} ({info})")
+            notification_ok = ok is True
         except Exception as e:
             print(f"email failed: {e}", file=sys.stderr)
-    return 0 if attempted == len(todo) and len(advanced) == attempted else 1
+    postprocessing = 'not_needed' if not advanced else ('complete' if registration_ok and notification_ok else 'failed')
+    checkpoint(inits, advanced, attempted, len(todo), finished=True, postprocessing=postprocessing)
+    return 0 if attempted == len(todo) and len(advanced) == attempted and postprocessing != 'failed' else 1
 
 
 if __name__ == "__main__":

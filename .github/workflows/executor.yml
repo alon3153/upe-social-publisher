@@ -59,6 +59,9 @@ jobs:
           git config user.name  "upe-executor-bot"
           git config user.email "bot@upe.co.il"
           git add state/initiatives.json deliverables
+          if [ -f reports/executor.json ]; then
+            git add -f reports/executor.json
+          fi
           if ! git diff --cached --quiet; then
             git commit -m "executor: checkpoint initiatives $(date -u +%F)"
             git pull --rebase -q origin main
