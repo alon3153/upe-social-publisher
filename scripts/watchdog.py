@@ -410,12 +410,13 @@ def send_graph(subject, body_text):
 def write_health_feed(issues):
     """Persist completed full checks, including recovery; never auth URLs/errors."""
     from pathlib import Path
+    critical = any('🔴' in issue for issue in issues)
     feed = {'schema_version': 1, 'source_key': 'sp_watchdog',
             'generated_at': datetime.datetime.now(datetime.timezone.utc).isoformat(),
-            'status': 'partial' if issues else 'ok',
+            'status': 'error' if critical else ('partial' if issues else 'ok'),
             'source': 'GitHub full Autonomy Watchdog run ' + os.environ.get('GITHUB_RUN_ID', 'local'),
             'facts': [['שורות ממצא בבדיקה', len(issues)]],
-            'findings': [{'severity': 'warn' if issues else 'info',
+            'findings': [{'severity': 'crit' if critical else ('warn' if issues else 'info'),
                           'text': 'בדיקת הסושיאל דורשת עיון בממצאי ריצת הענן.' if issues else 'בדיקת הסושיאל המלאה הסתיימה ללא בעיות.'}]}
     path=Path(ROOT)/'reports/sp_watchdog.json';path.parent.mkdir(exist_ok=True)
     path.write_text(json.dumps(feed,ensure_ascii=False,indent=2))
