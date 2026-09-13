@@ -487,6 +487,7 @@ def apply_auto_fixes(verdict, dry_run):
 # ------------------------------------------------------------------- report ----
 def render_html(cur, scorecard, verdict, applied, cadence=None, report_date=None):
     d = report_date or _today()
+    display_date = datetime.date.fromisoformat(d).strftime("%d.%m.%Y")
     verdict = council_evidence.sanitize(verdict, scorecard=scorecard)
     applied = council_evidence.sanitize({"auto_fixes": applied}, scorecard=scorecard, source_urls=verdict.get("verified_source_urls", ()))["auto_fixes"]
     cadence = council_evidence.sanitize({"channel_cadence": cadence or {}}, scorecard=scorecard)["channel_cadence"]
@@ -532,10 +533,12 @@ def render_html(cur, scorecard, verdict, applied, cadence=None, report_date=None
             "⚠️ <b>חוות דעת המודל נכשלה בריצה הזו; הסיכום להלן נגזר מהמדדים הזמינים בלבד.</b><br>"
             f"<span dir='ltr' style='color:#555;font-size:12px;'>{escape(str(verdict.get('error'))[:300])}</span><br>"
             "מקורות חסרים ומגבלות המדידה מוצגים בהערות להלן.</p>")
+    replay_note = (f'<p>הדוח נוצר מחדש מהמדידות מיום <span dir="ltr">{display_date}</span>; לא נאספו נתונים חדשים.</p>' if verdict.get("replay_source_date") else "")
     return normalize_directions(f"""<html dir="rtl" lang="he"><head><meta charset="utf-8"></head>
 <body dir="rtl" style="font-family:Arial,Helvetica,sans-serif;font-size:14px;direction:rtl;text-align:right;color:#111;">
 <div dir="rtl" style="direction:rtl;text-align:right;max-width:680px;">
-<h2>🏛️ מועצת השיווק — דוח יומי <span dir="ltr">{d}</span></h2>
+<h2 data-source-date="{d}">🏛️ מועצת השיווק — דוח יומי <span dir="ltr">{display_date}</span></h2>
+{replay_note}
 {err_banner}
 <p style="font-size:16px;"><b>ציון כולל: {scorecard['weighted']}/100</b> · מדדים שהגיעו ליעד: {scorecard['passed']}/{scorecard['total']} · <span style="color:#888">הערכת המודל (דעה בלבד): {sc.get('overall','—')}/100</span></p>
 <p style="background:#f6f6f6;padding:10px;border-right:3px solid #333;">{escape(verdict.get('verdict_summary','—'))}</p>
@@ -571,7 +574,7 @@ def render_html(cur, scorecard, verdict, applied, cadence=None, report_date=None
 <h3>🎯 ניסויי צמיחה — ללא תחזית עוקבים</h3><ol>{chips(verdict.get('follower_growth_plan',[]))}</ol>
 <h3>💼 פעולות מעקב וייחוס לידים</h3><ol>{chips(verdict.get('leads_actions',[]))}</ol>
 
-<hr><p style="color:#888;font-size:11px;">UPE Marketing Council · אוטומטי · {d}</p>
+<hr><p style="color:#888;font-size:11px;">UPE Marketing Council · אוטומטי · <span dir="ltr">{display_date}</span></p>
 </div></body></html>""")
 
 
@@ -600,6 +603,7 @@ def replay_report(report_path, snapshot_path, output_dir, *, write_state=False):
     scorecard = report['scorecard']
     verdict = council_evidence.sanitize(report['verdict'], scorecard=scorecard,
                                         shipped=aeo_recommendations.inventory(today=report_date))
+    verdict['replay_source_date'] = report_date
     cadence = validate_cadence(council_evidence.sanitize(
         {'channel_cadence': report.get('cadence', {})}, scorecard=scorecard)['channel_cadence'])
     applied = verdict.get('auto_fixes', [])

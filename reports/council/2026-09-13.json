@@ -342,7 +342,8 @@
         "distributed": false,
         "crm_modified": false
       }
-    ]
+    ],
+    "replay_source_date": "2026-09-13"
   },
   "applied_directives": [],
   "cadence": {
@@ -372,6 +373,6 @@
     "source_report_date": "2026-09-13",
     "new_measurements": false,
     "llm_called": false,
-    "state_written": true
+    "state_written": false
   }
 }
