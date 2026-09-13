@@ -80,3 +80,81 @@ def test_live_council_consumer_validates_model_prose_before_returning_it(monkeyp
     assert 'הערוץ הממיר' not in out['verdict_summary']
     assert out['scores']['overall'] == 62
     assert out['evidence_notes']
+
+
+def actual_cloud_report():
+    return json.loads((Path(__file__).parent / 'fixtures/council_2026-09-13_cloud_report.json').read_text())
+
+
+def test_actual_cloud_output_gets_deterministic_findings_and_verified_candidates():
+    report = actual_cloud_report()
+    before = copy.deepcopy(report)
+    out = evidence.sanitize(report['verdict'], scorecard=report['scorecard'])
+    assert report == before
+    expected = evidence.scorecard_narrative(report['scorecard'])
+    assert all(out[key] == value for key, value in expected.items())
+    assert any('לידים מיוחסים לדיגיטל: 4; יעד 3' in item for item in out['what_worked'])
+    assert any('9; יעד 10' in item for item in out['what_failed'])
+    assert any('40; יעד 300' in item for item in out['what_failed'])
+    narrative = ' '.join([out['verdict_summary'], *out['what_worked'], *out['what_failed'], *out['leads_actions']])
+    for falsehood in ('יתרון תחרותי מוכח', '332-275 חיפושים', 'ROI', 'היעד של 10 לידים דיגיטליים הושג'):
+        assert falsehood not in narrative
+    assert 'שינוי תווית מקור אינו מוסיף ליד' in narrative
+    assert 'אינה מספיקה לסיווג כאורגני' in narrative
+    assert out['recommendations']
+    for action in out['recommendations']:
+        assert action['status'] == 'candidate'
+        assert evidence.metric_evidence(action['evidence'], report['scorecard']) == action['evidence']
+    assert all('מדכא' not in cfg['reason'] and 'מכסה מוצעת' in cfg['reason'] for cfg in out['channel_cadence'].values())
+    assert evidence.sanitize(out, scorecard=report['scorecard']) == out
+
+
+def test_wrong_digital_target_and_plain_evidence_cannot_enter_candidates():
+    sc = actual_cloud_report()['scorecard']
+    actions = [{'action_key': 'wrong-target', 'channel': 'salesforce', 'action': 'הכן הנחיה',
+                'evidence': {'metric': 'לידים מיוחסים לדיגיטל', 'value': 4, 'target': 10}},
+               {'action_key': 'plain-proof', 'channel': 'salesforce', 'action': 'הכן הנחיה',
+                'evidence': '9 לידים ועוד Advertisement שיתברר כדיגיטלי מביאים ל-10'}]
+    out = evidence.sanitize({'recommendations': actions}, scorecard=sc)
+    assert {r['action_key'] for r in out['recommendations']}.isdisjoint({'wrong-target', 'plain-proof'})
+    assert len([r for r in out['withheld_advice'] if r['reason'] == 'metric_evidence']) == 2
+
+
+def test_offline_replay_preserves_date_and_never_calls_external_systems(tmp_path, monkeypatch):
+    report = actual_cloud_report()
+    input_file = tmp_path / 'input.json'
+    input_file.write_text(json.dumps(report))
+    snapshot_file = tmp_path / 'snapshot.json'
+    snapshot_file.write_text(json.dumps({'networks': {}, 'period_days': 7, 'totals': {}}))
+    def forbidden(*args, **kwargs): raise AssertionError('No API or fresh measurement allowed during replay')
+    monkeypatch.setattr(council.urllib.request, 'urlopen', forbidden)
+    monkeypatch.setattr(council.ma, 'snapshot', forbidden)
+    monkeypatch.setattr(council.leads_source, 'count', forbidden)
+    monkeypatch.setattr(council.seo_geo_source, 'fetch', forbidden)
+    monkeypatch.setattr(council, 'run_council', forbidden)
+    monkeypatch.setattr(council, '_today', lambda: '2026-09-14')
+    result = council.replay_report(input_file, snapshot_file, tmp_path / 'output')
+    assert result['date'] == '2026-09-13' and result['scorecard'] == report['scorecard']
+    assert result['email_requested'] is False and result['replay']['new_measurements'] is False
+    html = (tmp_path / 'output/report.html').read_text()
+    assert '2026-09-13' in html and '2026-09-14' not in html
+    assert '2026-09-13' in (tmp_path / 'output/report.md').read_text()
+
+
+def test_rendered_rtl_blocks_and_numeric_cells_are_explicit():
+    from html.parser import HTMLParser
+    from council_html import BLOCKS
+    class Audit(HTMLParser):
+        def __init__(self): super().__init__(); self.blocks=[]; self.ltr_cells=0
+        def handle_starttag(self, tag, attrs):
+            attrs=dict(attrs)
+            if tag in BLOCKS: self.blocks.append((tag, attrs))
+            if tag=='td' and attrs.get('dir')=='ltr': self.ltr_cells+=1
+    report = actual_cloud_report()
+    html = council.render_html({'networks': {}, 'period_days': 7, 'totals': {}}, report['scorecard'], report['verdict'], [], report['cadence'], report_date=report['date'])
+    audit=Audit();audit.feed(html)
+    assert audit.blocks and audit.ltr_cells > 5
+    for tag, attrs in audit.blocks:
+        assert attrs.get('dir') in ('rtl','ltr'), tag
+        assert 'direction:' in attrs.get('style','') and 'text-align:' in attrs['style'], tag
+    assert 'engagement_rate unreliable' not in html and '<th>ER</th>' not in html

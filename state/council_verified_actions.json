@@ -39,5 +39,15 @@
       "commit": "d2f50a6d1c7bdb412b677d61099bce37f344ec72",
       "detail": "Three contextual links in existing blog sentences verified live HTTP200; no claim of 20 GSC-ranked articles or traffic uplift."
     }
+  ],
+  "deliverables": [
+    {
+      "action_key": "salesforce-attribution-fix",
+      "status": "draft_ready",
+      "path": "Uproduction Operations/Marketing-Council/verification-2026-09-13/lead-source-guidance.md",
+      "source_report_date": "2026-09-13",
+      "distributed": false,
+      "crm_modified": false
+    }
   ]
 }
