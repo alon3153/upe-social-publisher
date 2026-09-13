@@ -76,7 +76,7 @@ def test_verify_survives_fetch_errors(tmp_path):
     def fetch(url):
         raise RuntimeError("timeout")
 
-    assert cp.verify(path=str(p), fetch=fetch) == []
+    assert cp.verify(path=str(p), fetch=fetch, today="2026-07-05") == []
 
 
 def test_press_followup_reminders_day5():

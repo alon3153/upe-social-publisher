@@ -10,7 +10,7 @@ States: drafted -> awaiting_founder -> submitted -> live -> verified_cited
   the daily email nag.
 - digest_html() renders the weekly one-look approval digest (RTL Hebrew).
 """
-import json, datetime, urllib.request
+import copy, json, datetime, urllib.request
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent
@@ -23,7 +23,8 @@ STATE_HE = {"drafted": "טיוטה", "awaiting_founder": "ממתין לאלון"
             # terminal, deliberate: a channel we decided NOT to contact again. Distinct
             # from "pending" — the four press pitches sat as open items for 55 days while
             # the same email had already gone out 4-5 times to each editor.
-            "closed_no_recontact": "סגור — לא לפנות שוב"}
+            "closed_no_recontact": "סגור — לא לפנות שוב",
+            "needs_verification": "בבדיקת האוטומציה — טרם אומת"}
 
 
 def load(path=None):
@@ -105,24 +106,39 @@ def verify(data=None, path=None, fetch=_fetch, today=None):
     mention us leaves the item exactly where it was.
     """
     data = data or load(path)
+    before = copy.deepcopy(data)
     today = today or datetime.date.today().isoformat()
     changed = []
     for item in data["items"]:
+        if item["state"] == "closed_no_recontact":
+            continue
         if not item.get("target_url"):
             # Nothing to crawl. Seven of twelve items were in this state, including
             # entity_wikidata -- skipped here before any fetch, so it could never advance
             # and nagged Alon daily for 30 days about work finished on 08.08. Mark it as
             # needing a human check-off instead of pretending it is pending automation.
             item["unverifiable"] = True
+            age = (datetime.date.fromisoformat(today) -
+                   datetime.date.fromisoformat(item["since"][:10])).days
+            if item["state"] == "awaiting_founder" and age > STALE_NAG_DAYS:
+                item["state"] = "needs_verification"
+                item["owner"] = "automation"
+                item["review_reason"] = "No verifiable target; confirm evidence before requesting founder action."
+                item["next_review_at"] = (datetime.date.fromisoformat(today) +
+                                          datetime.timedelta(days=7)).isoformat()
+                changed.append(f'{item["id"]} → needs_verification')
             continue
         item["unverifiable"] = False
         if item["state"] == "verified_cited" and not _due_reverify(item, today):
             continue
-        if item["state"] not in ("awaiting_founder", "submitted", "live", "verified_cited"):
+        if item["state"] not in ("awaiting_founder", "needs_verification", "submitted", "live", "verified_cited"):
             continue
         try:
             html = fetch(item["target_url"])
-        except Exception:
+        except Exception as exc:
+            item["last_check"] = today
+            item["last_check_result"] = "fetch_error"
+            item["last_check_error_type"] = type(exc).__name__
             continue  # unreachable today — retry next run
         if is_block_page(html):
             item["last_check"] = today
@@ -131,7 +147,7 @@ def verify(data=None, path=None, fetch=_fetch, today=None):
         cited = _mentions_us(html)
         item["last_check"] = today
         item["last_check_result"] = "cited" if cited else "reachable"
-        if item["state"] == "awaiting_founder" and not cited:
+        if item["state"] in ("awaiting_founder", "needs_verification") and not cited:
             continue  # cannot conclude the founder acted; keep nagging
         if item["state"] == "verified_cited":
             if not cited:  # a profile that disappeared must not stay green
@@ -142,12 +158,14 @@ def verify(data=None, path=None, fetch=_fetch, today=None):
         if new_state != item["state"]:
             item["state"], item["since"] = new_state, today
             changed.append(f'{item["id"]} → {new_state}')
-    if changed:
+    if data != before:
         save(data, path)
     return changed
 
 
 def _due_reverify(item, today):
+    if item.get("last_check_result") in ("fetch_error", "blocked"):
+        return item.get("last_check") != today
     last = item.get("last_check") or item.get("since")
     if not last:
         return True
