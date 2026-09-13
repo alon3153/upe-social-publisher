@@ -22,7 +22,7 @@ State:
   state/initiatives.json               (the team's backlog + status)
   deliverables/<id>.md                 (each agent's work product)
 
-Always exits 0. Emails Alon a digest of what advanced.
+Checkpoints after every attempt. Incomplete runs exit nonzero.
 
 Usage:
   python3 scripts/executor.py                 # one cycle + email
@@ -30,6 +30,8 @@ Usage:
   python3 scripts/executor.py --max 3         # advance at most 3 this run
 """
 import os, sys, json, hmac, hashlib, argparse, datetime, urllib.request, urllib.error, urllib.parse
+import signal
+import time
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -37,6 +39,46 @@ sys.path.insert(0, str(ROOT)); sys.path.insert(0, str(ROOT / "scripts"))
 
 API_KEY = os.environ.get("ANTHROPIC_API_KEY", "")
 MODEL = os.environ.get("EXECUTOR_MODEL") or "claude-sonnet-4-6"
+ACTION_SECONDS = 240
+RUN_SECONDS = 1200
+
+
+class ActionDeadline(RuntimeError):
+    pass
+
+
+def bounded_agent(it, seconds):
+    """Hard wall-clock limit, including retries and slow response bodies (Unix runner)."""
+    def expire(signum, frame):
+        raise ActionDeadline('action deadline exceeded')
+    previous = signal.signal(signal.SIGALRM, expire)
+    signal.setitimer(signal.ITIMER_REAL, seconds)
+    try:
+        return run_agent(it)
+    except ActionDeadline:
+        return {'error': 'action deadline exceeded'}
+    finally:
+        signal.setitimer(signal.ITIMER_REAL, 0)
+        signal.signal(signal.SIGALRM, previous)
+
+
+def checkpoint(inits, advanced, attempted, planned, *, finished=False, active_id=None):
+    STATE_DIR.mkdir(parents=True, exist_ok=True)
+    temporary = INIT_PATH.with_suffix('.tmp')
+    temporary.write_text(json.dumps(inits, ensure_ascii=False, indent=2))
+    temporary.replace(INIT_PATH)
+    complete = finished and attempted == planned and len(advanced) == attempted
+    feed = {'schema_version': 1, 'source_key': 'executor',
+            'generated_at': datetime.datetime.now(datetime.timezone.utc).isoformat(),
+            'workflow_run_id': os.environ.get('GITHUB_RUN_ID'),
+            'status': 'ok' if complete else 'partial', 'complete': complete,
+            'planned': planned, 'attempted': attempted, 'advanced': len(advanced),
+            'active_id': active_id, 'source': 'Executor durable checkpoint; drafts only',
+            'facts': [['טיוטות שקודמו',len(advanced)],['ניסיונות',attempted],['בתוכנית',planned]],
+            'findings': [{'severity':'info' if complete else 'warn',
+                          'text': 'סבב הטיוטות הסתיים ונשמר.' if complete else 'סבב הביצוע טרם הושלם במלואו; ההתקדמות שנשמרה מוצגת בנפרד.'}]}
+    path=ROOT/'reports/executor.json';path.parent.mkdir(exist_ok=True)
+    temp=path.with_suffix('.tmp');temp.write_text(json.dumps(feed,ensure_ascii=False,indent=2));temp.replace(path)
 
 # Email-approval gate (Supabase + signed token → executor-approve edge function).
 SUPA_URL = os.environ.get("SUPABASE_URL", "").rstrip("/")
@@ -238,18 +280,18 @@ def run_agent(it):
     headers = {"x-api-key": API_KEY, "anthropic-version": "2023-06-01", "content-type": "application/json"}
     resp = None
     import time
-    for attempt in range(4):  # web_search calls can stall / drop — retry transient failures
+    for attempt in range(2):  # bounded retries; bounded_agent enforces the whole action deadline
         try:
             req = urllib.request.Request("https://api.anthropic.com/v1/messages", data=data, headers=headers)
-            with urllib.request.urlopen(req, timeout=600) as r:
+            with urllib.request.urlopen(req, timeout=90) as r:
                 resp = json.loads(r.read().decode())
             break
         except urllib.error.HTTPError as e:
-            if e.code in (429, 500, 529) and attempt < 3:
+            if e.code in (429, 500, 529) and attempt < 1:
                 time.sleep(8 * (attempt + 1)); continue
             return {"error": f"anthropic {e.code}: {e.read().decode()[:200]}"}
         except (urllib.error.URLError, TimeoutError, OSError, ConnectionError) as e:
-            if attempt < 3:
+            if attempt < 1:
                 time.sleep(8 * (attempt + 1)); continue
             return {"error": f"anthropic {e}"}
     if resp is None:
@@ -323,7 +365,7 @@ def main():
     ap.add_argument("--max", type=int, default=MAX_PER_RUN)
     a = ap.parse_args()
     if not API_KEY and not a.dry_run:
-        print("ANTHROPIC_API_KEY not set", file=sys.stderr); return 0
+        print("ANTHROPIC_API_KEY not set", file=sys.stderr); return 1
 
     inits = load_initiatives()
     inits, warn = sync_backlog(inits)
@@ -346,11 +388,24 @@ def main():
 
     DELIV_DIR.mkdir(parents=True, exist_ok=True); STATE_DIR.mkdir(parents=True, exist_ok=True)
     advanced = []
+    attempted = 0
+    deadline = time.monotonic() + RUN_SECONDS
+    checkpoint(inits, advanced, attempted, len(todo))
     for it in todo:
-        res = run_agent(it)
+        remaining = deadline - time.monotonic()
+        if remaining <= 1:
+            break
+        checkpoint(inits, advanced, attempted, len(todo), active_id=it['id'])
+        print(f"  starting {it['id']} with {min(ACTION_SECONDS, remaining):.0f}s deadline", flush=True)
+        try:
+            res = bounded_agent(it, min(ACTION_SECONDS, remaining))
+        except Exception as exc:
+            res = {'error': 'agent failed: ' + type(exc).__name__}
+        attempted += 1
         if res.get("error"):
             print(f"  ✗ {it['id']}: {res['error']}", file=sys.stderr)
             it["history"].append({"date": _today(), "error": res["error"]})
+            checkpoint(inits, advanced, attempted, len(todo))
             continue
         (DELIV_DIR / f"{it['id']}.md").write_text(
             f"# {it.get('title')}\n\n_{it.get('priority')} · {it.get('channel')} · updated {_today()}_\n\n"
@@ -361,9 +416,10 @@ def main():
         it["history"].append({"date": _today(), "summary": res.get("summary", ""),
                               "ready": res.get("ready_for_approval", False)})
         advanced.append((it, res))
+        checkpoint(inits, advanced, attempted, len(todo))
         print(f"  ✓ {it['id']} [{it.get('status')}] {res.get('summary','')[:60]}")
 
-    INIT_PATH.write_text(json.dumps(inits, ensure_ascii=False, indent=2))
+    checkpoint(inits, advanced, attempted, len(todo), finished=True)
 
     for it, _ in advanced:  # ensure an approval row exists so the email links resolve
         supa_register(it)
@@ -376,7 +432,7 @@ def main():
             print(f"email: {ok} ({info})")
         except Exception as e:
             print(f"email failed: {e}", file=sys.stderr)
-    return 0
+    return 0 if attempted == len(todo) and len(advanced) == attempted else 1
 
 
 if __name__ == "__main__":
