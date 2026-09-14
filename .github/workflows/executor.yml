@@ -21,7 +21,7 @@ concurrency:
 jobs:
   executor:
     runs-on: ubuntu-latest
-    timeout-minutes: 60
+    timeout-minutes: 30
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -29,6 +29,7 @@ jobs:
           python-version: "3.11"
       - run: pip install -r requirements.txt
       - name: Run executor
+        timeout-minutes: 25
         env:
           ANTHROPIC_API_KEY:      ${{ secrets.ANTHROPIC_API_KEY }}
           EXECUTOR_MODEL:         ${{ vars.EXECUTOR_MODEL }}
@@ -40,12 +41,29 @@ jobs:
           MS_GRAPH_CLIENT_ID:     ${{ secrets.MS_GRAPH_CLIENT_ID }}
           MS_GRAPH_CLIENT_SECRET: ${{ secrets.MS_GRAPH_CLIENT_SECRET }}
           MS_GRAPH_FROM:          ${{ secrets.MS_GRAPH_FROM }}
-        run: python3 scripts/executor.py --max "${{ github.event.inputs.max || '6' }}"
+        run: python3 -u scripts/executor.py --max "${{ github.event.inputs.max || '6' }}"
+      - name: Preserve executor checkpoints
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: executor-evidence
+          path: |
+            reports/executor.json
+            state/initiatives.json
+            deliverables
+          if-no-files-found: error
+          retention-days: 14
       - name: Commit initiatives + deliverables
+        if: always()
         run: |
           git config user.name  "upe-executor-bot"
           git config user.email "bot@upe.co.il"
-          git pull --rebase --autostash -q origin main || true
-          git add state/initiatives.json deliverables 2>/dev/null || true
-          git commit -m "executor: advance initiatives $(date -u +%F)" || echo "nothing to commit"
-          git push || echo "push skipped"
+          git add state/initiatives.json deliverables
+          if [ -f reports/executor.json ]; then
+            git add -f reports/executor.json
+          fi
+          if ! git diff --cached --quiet; then
+            git commit -m "executor: checkpoint initiatives $(date -u +%F)"
+            git pull --rebase -q origin main
+            git push
+          fi
