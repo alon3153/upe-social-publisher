@@ -1,34 +1,58 @@
 {
-  "updated_at": "2026-09-13",
+  "updated_at": "2026-09-14",
   "scores": {
     "instagram": 42,
     "facebook": 28,
-    "tiktok": 10,
+    "tiktok": 5,
     "linkedin": 38,
     "youtube": 55,
     "google_organic_geo": 62,
-    "overall": 58
+    "overall": 71
   },
   "recommendations": [
     {
-      "action_key": "organic-click-period-review",
       "category": "gated",
-      "status": "candidate",
-      "priority": "P1",
-      "channel": "google_organic_geo",
-      "owner": "בדיקת נתונים",
-      "action": "השווה את קליקי האתר ב-GSC בין שתי תקופות באותו אורך, לפי עמוד ושאילתה. תעד פערים לפני החלטה על שינוי תוכן.",
+      "priority": "P0",
+      "action_key": "salesforce-attribution-fix",
+      "owner": "Marketing Ops מכין; אלון מאשר; נציגי מכירות מיישמים",
+      "success_metric": "ייחוס לידים: בסיס לא-מיוחס; יעד המדד מקור אמיתי. יש להשוות תקופות תואמות.",
       "evidence": {
         "source": "scorecard",
-        "metric": "קליקים אורגניים/שבוע",
-        "value": 40,
-        "target": 300,
+        "metric": "ייחוס לידים",
+        "value": "לא-מיוחס",
+        "target": "מקור אמיתי",
         "unit": "",
         "status": "❌"
       },
+      "evidence_url": "https://leadsource.co/salesforce-lead-source-best-practices",
+      "target_url": "Uproduction Operations/Marketing-Council/verification-2026-09-13/lead-source-guidance.md",
+      "action": "הפץ את טיוטת lead-source-guidance.md (סטטוס draft_ready, לא הופצה) לנציגי המכירות; הגדר picklist סגור ב-Salesforce עם ערכים: Google Organic, Web (Form), LinkedIn, Advertisement (Paid), Word of Mouth, Existing Customer, Other (חייב הערה); קיים 15 דקות הכשרה; בדוק עמידה בסוף חודש.",
       "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
-      "detail": "הצעה לבדיקה על בסיס המדד המתועד; לא בוצע שינוי.",
-      "success_metric": "קליקים אורגניים/שבוע: בסיס 40; יעד המדד 300. יש להשוות תקופות תואמות."
+      "channel": "leads",
+      "status": "candidate",
+      "detail": "הצעה לבדיקה על בסיס המדד המתועד; לא בוצע שינוי."
+    },
+    {
+      "category": "gated",
+      "priority": "P1",
+      "action_key": "linkedin-executive-advocacy",
+      "owner": "מנכ\"ל/שותף בכיר מספק תוכן; Marketing עורך; אלון מאשר",
+      "success_metric": "לידים מיוחסים לדיגיטל: בסיס 4; יעד המדד 3. יש להשוות תקופות תואמות.",
+      "evidence": {
+        "source": "scorecard",
+        "metric": "לידים מיוחסים לדיגיטל",
+        "value": 4,
+        "target": 3,
+        "unit": "",
+        "status": "✅"
+      },
+      "evidence_url": "https://lagrowthmachine.com/linkedin-marketing-strategy-2026/",
+      "target_url": "https://www.linkedin.com/feed/update/urn:li:share:7503348620763541504",
+      "action": "המשך את יוזמת linkedin-executive-advocacy הקיימת (status: in_progress): הגדר לו\"ז קבוע של 2 פוסטים/שבוע מפרופיל אישי — פוסט 1: case-study אחד מפרויקט ממשי (עם תמונה), פוסט 2: תובנה תפעולית. דף החברה עושה repost בלבד. כל פוסט עובר אישור לפני פרסום.",
+      "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
+      "channel": "linkedin",
+      "status": "candidate",
+      "detail": "הצעה לבדיקה על בסיס המדד המתועד; לא בוצע שינוי."
     }
   ],
   "follower_growth_plan": [],
@@ -37,7 +61,5 @@
     "בדוק את המקור של רשומות Web, Advertisement ו-Other מול ראיה מתועדת. שינוי תווית מקור אינו מוסיף ליד לספירה הכוללת.",
     "הבחן בין Google Organic לתנועה ממומנת באמצעות פרטי הפנייה והייחוס. תשובה כללית ״מצאתי בגוגל״ אינה מספיקה לסיווג כאורגני.",
     "עקוב אחרי הפניות הקיימות ותעד את שלב הטיפול. אין לשנות רשומות CRM או להפיץ הנחיות ללא ההרשאה המתאימה."
-  ],
-  "source_report_date": "2026-09-13",
-  "evidence_replayed": true
+  ]
 }
