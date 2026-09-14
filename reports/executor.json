@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "source_key": "executor",
+  "generated_at": "2026-09-14T13:24:44.086204+00:00",
+  "workflow_run_id": "34847098860",
+  "status": "partial",
+  "complete": false,
+  "drafting_complete": false,
+  "postprocessing": "not_needed",
+  "planned": 6,
+  "attempted": 6,
+  "advanced": 0,
+  "active_id": null,
+  "source": "Executor durable checkpoint; drafts only",
+  "facts": [
+    [
+      "טיוטות שקודמו",
+      0
+    ],
+    [
+      "ניסיונות",
+      6
+    ],
+    [
+      "בתוכנית",
+      6
+    ]
+  ],
+  "findings": [
+    {
+      "severity": "warn",
+      "text": "הטיוטות נשמרות בנפרד; הסבב או שלבי הרישום והדיווח טרם הושלמו במלואם."
+    }
+  ]
+}

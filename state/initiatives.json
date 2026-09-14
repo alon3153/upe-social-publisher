@@ -17869,6 +17869,10 @@
       {
         "date": "2026-09-12",
         "error": "anthropic Remote end closed connection without response"
+      },
+      {
+        "date": "2026-09-14",
+        "error": "anthropic The read operation timed out"
       }
     ],
     "created": "2026-09-11",
@@ -17978,7 +17982,12 @@
     "title": "כפיל SEO עברי מסחרי על /נופש-חברה/ ו-/אירוע-קונספט/ — שתי עמדות pos.17-19 עם 645 חיפושים חודשיים מצטברים; כניסה ל-Top-5 מוסיפה 1-2 לידים/חודש ישירות",
     "status": "todo",
     "revisions": 0,
-    "history": [],
+    "history": [
+      {
+        "date": "2026-09-14",
+        "error": "anthropic The read operation timed out"
+      }
+    ],
     "created": "2026-09-11",
     "updated": "2026-09-11",
     "kind": "leads_action",
@@ -17990,7 +17999,12 @@
     "title": "הגדל internal linking מ-292 מאמרי בלוג קיימים לדפי שירות מסחריים — עלות אפסית, אפקט מיידי על crawl authority; מקד 10 מאמרים בעלי traffic גבוה לכל דף שירות",
     "status": "todo",
     "revisions": 0,
-    "history": [],
+    "history": [
+      {
+        "date": "2026-09-14",
+        "error": "anthropic The read operation timed out"
+      }
+    ],
     "created": "2026-09-11",
     "updated": "2026-09-11",
     "kind": "leads_action",
@@ -18126,6 +18140,10 @@
       {
         "date": "2026-09-12",
         "error": "anthropic Remote end closed connection without response"
+      },
+      {
+        "date": "2026-09-14",
+        "error": "anthropic The read operation timed out"
       }
     ],
     "created": "2026-09-12",
@@ -18148,17 +18166,21 @@
         "date": "2026-09-12",
         "summary": "(no summary)",
         "ready": false
+      },
+      {
+        "date": "2026-09-14",
+        "error": "anthropic The read operation timed out"
       }
     ],
     "created": "2026-09-12",
     "updated": "2026-09-12",
     "kind": "recommendation",
-    "priority": "P0",
+    "priority": "P1",
     "channel": "linkedin",
-    "expected_impact": "personal profiles מניבים 5-10x organic reach לעומת company pages ב-LinkedIn 2026; מוניטין אישי הוא מנוע ה-trust המרכזי בB2B ישראלי",
+    "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
     "action_key": "linkedin-executive-advocacy",
-    "owner": "מנכ\"ל/שותף בכיר מייצר תוכן; מנהל שיווק מגיש לאישור; Alon מאשר",
-    "success_metric": "בסיס: 148 impressions, 14 interactions מ-7 פוסטים; יעד: 300+ impressions/שבוע, 2+ leads/quarter מ-LinkedIn תוך 60 יום"
+    "owner": "מנכ\"ל/שותף בכיר מספק תוכן; Marketing עורך; אלון מאשר",
+    "success_metric": "לידים מיוחסים לדיגיטל: בסיס 4; יעד המדד 3. יש להשוות תקופות תואמות."
   },
   "8c4f9ebe": {
     "id": "8c4f9ebe",
@@ -18357,5 +18379,74 @@
     "kind": "follower_plan",
     "priority": "follower",
     "channel": "growth"
+  },
+  "af90d50d": {
+    "id": "af90d50d",
+    "title": "הפץ את טיוטת lead-source-guidance.md (סטטוס draft_ready, לא הופצה) לנציגי המכירות; הגדר picklist סגור ב-Salesforce עם ערכים: Google Organic, Web (Form), LinkedIn, Advertisement (Paid), Word of Mouth, Existing Customer, Other (חייב הערה); קיים 15 דקות הכשרה; בדוק עמידה בסוף חודש.",
+    "status": "todo",
+    "revisions": 0,
+    "history": [
+      {
+        "date": "2026-09-14",
+        "error": "anthropic The read operation timed out"
+      }
+    ],
+    "created": "2026-09-14",
+    "updated": "2026-09-14",
+    "kind": "recommendation",
+    "priority": "P0",
+    "channel": "leads",
+    "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
+    "action_key": "salesforce-attribution-fix",
+    "owner": "Marketing Ops מכין; אלון מאשר; נציגי מכירות מיישמים",
+    "success_metric": "ייחוס לידים: בסיס לא-מיוחס; יעד המדד מקור אמיתי. יש להשוות תקופות תואמות."
+  },
+  "2769e4c7": {
+    "id": "2769e4c7",
+    "title": "טיוטת הנחיית ייחוס המקורות כבר הוכנה וממתינה לבדיקה. טרם הופצה; אין ליצור אותה מחדש.",
+    "status": "todo",
+    "revisions": 0,
+    "history": [],
+    "created": "2026-09-14",
+    "updated": "2026-09-14",
+    "kind": "leads_action",
+    "priority": "leads",
+    "channel": "leads"
+  },
+  "ba98f3b0": {
+    "id": "ba98f3b0",
+    "title": "בדוק את המקור של רשומות Web, Advertisement ו-Other מול ראיה מתועדת. שינוי תווית מקור אינו מוסיף ליד לספירה הכוללת.",
+    "status": "todo",
+    "revisions": 0,
+    "history": [],
+    "created": "2026-09-14",
+    "updated": "2026-09-14",
+    "kind": "leads_action",
+    "priority": "leads",
+    "channel": "leads"
+  },
+  "5e8e44d0": {
+    "id": "5e8e44d0",
+    "title": "הבחן בין Google Organic לתנועה ממומנת באמצעות פרטי הפנייה והייחוס. תשובה כללית ״מצאתי בגוגל״ אינה מספיקה לסיווג כאורגני.",
+    "status": "todo",
+    "revisions": 0,
+    "history": [],
+    "created": "2026-09-14",
+    "updated": "2026-09-14",
+    "kind": "leads_action",
+    "priority": "leads",
+    "channel": "leads"
+  },
+  "d2424296": {
+    "id": "d2424296",
+    "title": "עקוב אחרי הפניות הקיימות ותעד את שלב הטיפול. אין לשנות רשומות CRM או להפיץ הנחיות ללא ההרשאה המתאימה.",
+    "status": "todo",
+    "revisions": 0,
+    "history": [],
+    "created": "2026-09-14",
+    "updated": "2026-09-14",
+    "kind": "leads_action",
+    "priority": "leads",
+    "channel": "leads"
   }
 }
