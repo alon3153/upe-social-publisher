@@ -17873,6 +17873,10 @@
       {
         "date": "2026-09-14",
         "error": "anthropic The read operation timed out"
+      },
+      {
+        "date": "2026-09-15",
+        "error": "anthropic The read operation timed out"
       }
     ],
     "created": "2026-09-11",
@@ -17986,6 +17990,10 @@
       {
         "date": "2026-09-14",
         "error": "anthropic The read operation timed out"
+      },
+      {
+        "date": "2026-09-15",
+        "error": "anthropic The read operation timed out"
       }
     ],
     "created": "2026-09-11",
@@ -18002,6 +18010,10 @@
     "history": [
       {
         "date": "2026-09-14",
+        "error": "anthropic The read operation timed out"
+      },
+      {
+        "date": "2026-09-15",
         "error": "anthropic The read operation timed out"
       }
     ],
@@ -18144,6 +18156,10 @@
       {
         "date": "2026-09-14",
         "error": "anthropic The read operation timed out"
+      },
+      {
+        "date": "2026-09-15",
+        "error": "anthropic The read operation timed out"
       }
     ],
     "created": "2026-09-12",
@@ -18170,6 +18186,10 @@
       {
         "date": "2026-09-14",
         "error": "anthropic The read operation timed out"
+      },
+      {
+        "date": "2026-09-15",
+        "error": "anthropic The read operation timed out"
       }
     ],
     "created": "2026-09-12",
@@ -18179,8 +18199,8 @@
     "channel": "linkedin",
     "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
     "action_key": "linkedin-executive-advocacy",
-    "owner": "מנכ\"ל/שותף בכיר מספק תוכן; Marketing עורך; אלון מאשר",
-    "success_metric": "לידים מיוחסים לדיגיטל: בסיס 4; יעד המדד 3. יש להשוות תקופות תואמות."
+    "owner": "מנכ״ל מפרסם; צוות מכין טיוטות; Alon מאשר",
+    "success_metric": "נוכחות סושיאל (רצפה): בסיס 16.0; יעד המדד 5. יש להשוות תקופות תואמות."
   },
   "8c4f9ebe": {
     "id": "8c4f9ebe",
@@ -18388,6 +18408,10 @@
     "history": [
       {
         "date": "2026-09-14",
+        "error": "anthropic The read operation timed out"
+      },
+      {
+        "date": "2026-09-15",
         "error": "anthropic The read operation timed out"
       }
     ],
