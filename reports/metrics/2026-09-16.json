@@ -1,0 +1,746 @@
+{
+  "generated_at": "2026-09-16T10:12:50",
+  "period_days": 7,
+  "period_start": "2026-09-09T10:12:50",
+  "period_end": "2026-09-16T10:12:50",
+  "networks": {
+    "instagram": {
+      "posts": 4,
+      "impressions": 306,
+      "reach": 222,
+      "interactions": 3,
+      "engagement_rate_pct": 0.98,
+      "caveat": null,
+      "top": {
+        "url": "https://www.instagram.com/p/DdH2QBaCmZ4/",
+        "content": "נופש חברה טוב לא מתחיל ביעד. הוא מתחיל בלוח שנה\n\nשני נופשי חברה. אותו גודל קבוצה, כמעט אותו תקציב. אחד מדובר שנה שלמה, השני נשכח תוך שבוע.\n\nההבדל לא היה היעד\n\nה",
+        "impressions": 132,
+        "interactions": 1
+      },
+      "ok": true
+    },
+    "facebook": {
+      "posts": 1,
+      "impressions": 14,
+      "reach": 12,
+      "interactions": 2,
+      "engagement_rate_pct": 14.29,
+      "caveat": null,
+      "top": {
+        "url": null,
+        "content": "",
+        "impressions": 14,
+        "interactions": 2
+      },
+      "ok": true
+    },
+    "tiktok": {
+      "posts": 0,
+      "impressions": 0,
+      "reach": 0,
+      "interactions": 0,
+      "engagement_rate_pct": 0.0,
+      "top": null,
+      "ok": true
+    },
+    "linkedin": {
+      "posts": 3,
+      "impressions": 91,
+      "reach": 0,
+      "interactions": 0,
+      "engagement_rate_pct": 0.0,
+      "caveat": null,
+      "top": {
+        "url": "https://www.linkedin.com/feed/update/urn:li:share:7503348620763541504",
+        "content": "",
+        "impressions": 60,
+        "interactions": 0
+      },
+      "ok": true
+    },
+    "youtube": {
+      "posts": 4,
+      "impressions": 4286,
+      "reach": 0,
+      "interactions": 1,
+      "engagement_rate_pct": 0.02,
+      "caveat": null,
+      "top": {
+        "url": null,
+        "content": "",
+        "impressions": 3283,
+        "interactions": 1
+      },
+      "ok": true
+    }
+  },
+  "unavailable_networks": [],
+  "totals": {
+    "posts": 12,
+    "impressions": 4697,
+    "reach": 234,
+    "interactions": 6,
+    "engagement_rate_pct": 0.13
+  },
+  "leads": {
+    "ok": true,
+    "qualified_leads": 12,
+    "new_opportunities": 9,
+    "lead_object_count": 3,
+    "period_days": 30,
+    "source": "salesforce",
+    "definition": "new Opportunities + unconverted web Leads (form hand-raisers)",
+    "by_source": {
+      "Existing Customer": 1,
+      "Word of mouth": 2,
+      "Web": 3,
+      "Advertisement": 2,
+      "Other": 3,
+      "Google Organic": 1
+    },
+    "dominant_source": "Web",
+    "ambiguous_sources": [
+      "Advertisement",
+      "Other"
+    ],
+    "dominant_share_pct": 25,
+    "attribution_gap": true,
+    "attribution_note": "5/12 ברשומות מקור עמום או ברירת מחדל. אין לשייך אותן לערוץ דיגיטלי מסוים ללא ראיה ואין להסיק שיעור המרה מחלוקת המקורות."
+  },
+  "seo_geo": {
+    "generated_at": "2026-09-14",
+    "window_days": 28,
+    "gsc_status": "measured",
+    "sites": [
+      {
+        "site": "https://upe.co.il/",
+        "windows": {
+          "current": {
+            "start": "2026-08-18",
+            "end": "2026-09-14",
+            "days": 28
+          },
+          "previous": {
+            "start": "2026-07-21",
+            "end": "2026-08-17",
+            "days": 28
+          },
+          "weekly": {
+            "start": "2026-09-08",
+            "end": "2026-09-14",
+            "days": 7
+          }
+        },
+        "clicks": 162,
+        "impressions": 46651,
+        "avg_position": 33.6,
+        "clicks_prev": 151,
+        "impressions_prev": 42639,
+        "clicks_7d": 36,
+        "impressions_7d": 9223,
+        "top3_terms": [
+          [
+            "טיולי חברה",
+            1.4,
+            125,
+            0
+          ],
+          [
+            "טיולי תמריץ לאיטליה",
+            2.9,
+            74,
+            0
+          ],
+          [
+            "נופש חברה במלטה",
+            1.8,
+            42,
+            0
+          ],
+          [
+            "הפקת כנסים בחו\"ל",
+            2.2,
+            38,
+            0
+          ],
+          [
+            "הפקת אירועים קולינריים",
+            1.8,
+            36,
+            0
+          ],
+          [
+            "נופש חברה לקבוצות גדולות",
+            3.5,
+            35,
+            0
+          ],
+          [
+            "הפקת אירועים בינלאומיים",
+            2.7,
+            33,
+            0
+          ],
+          [
+            "מה זה ערב גאלה",
+            2.3,
+            32,
+            0
+          ],
+          [
+            "איזה מקום מתאים לארגן כנס בינלאומי עם משתתפים מארצות שונות?",
+            1.9,
+            30,
+            0
+          ],
+          [
+            "טיולי חברה יוקרתיים",
+            1.2,
+            30,
+            0
+          ],
+          [
+            "אילו ארגוניות נחשבים לטובים ביותר?",
+            2.9,
+            24,
+            0
+          ],
+          [
+            "איך אפשר להזמין מקום לאירוע השקה טכנולוגי עם דגש על חדשנות בתצוגה?",
+            2.4,
+            10,
+            0
+          ]
+        ],
+        "top10_count": 54,
+        "top_opportunities": [
+          [
+            "הפקת נופש חברה",
+            17.2,
+            327
+          ],
+          [
+            "נופש חברה",
+            19.9,
+            277
+          ],
+          [
+            "אירועי קונספט",
+            19,
+            272
+          ],
+          [
+            "הפקות אירועים עסקיים",
+            16.2,
+            195
+          ],
+          [
+            "אירועי קונספט לחברות",
+            20,
+            183
+          ]
+        ],
+        "opportunity_pages": {
+          "הפקת נופש חברה": "https://upe.co.il/%D7%A0%D7%95%D7%A4%D7%A9-%D7%97%D7%91%D7%A8%D7%94/",
+          "נופש חברה": "https://upe.co.il/%D7%A0%D7%95%D7%A4%D7%A9-%D7%97%D7%91%D7%A8%D7%94/",
+          "אירועי קונספט": "https://upe.co.il/%D7%90%D7%99%D7%A8%D7%95%D7%A2-%D7%A7%D7%95%D7%A0%D7%A1%D7%A4%D7%98/",
+          "הפקות אירועים עסקיים": "https://upe.co.il/%D7%94%D7%A4%D7%A7%D7%AA-%D7%90%D7%99%D7%A8%D7%95%D7%A2%D7%99%D7%9D-%D7%A2%D7%A1%D7%A7%D7%99%D7%99%D7%9D/",
+          "אירועי קונספט לחברות": "https://upe.co.il/%D7%90%D7%99%D7%A8%D7%95%D7%A2-%D7%A7%D7%95%D7%A0%D7%A1%D7%A4%D7%98/",
+          "ארגון טיולים לחברות": "https://upe.co.il/%D7%98%D7%99%D7%95%D7%9C%D7%99-%D7%97%D7%91%D7%A8%D7%94/",
+          "טיולי תמריץ לחברות": "https://upe.co.il/%D7%98%D7%99%D7%95%D7%9C%D7%99-%D7%AA%D7%9E%D7%A8%D7%99%D7%A5-%D7%91%D7%97%D7%95%D7%9C/",
+          "נופש חברה בחול": "https://upe.co.il/%D7%A0%D7%95%D7%A4%D7%A9-%D7%97%D7%91%D7%A8%D7%94-%D7%91%D7%97%D7%95%D7%9C/",
+          "טיול מאורגן לעובדים": "https://upe.co.il/%D7%98%D7%99%D7%95%D7%9C%D7%99-%D7%97%D7%91%D7%A8%D7%94/",
+          "ארגון כנסים": "https://upe.co.il/%D7%94%D7%A4%D7%A7%D7%AA-%D7%9B%D7%A0%D7%A1%D7%99%D7%9D/"
+        }
+      }
+    ],
+    "weekly_clicks": 36,
+    "clicks_28d": 162,
+    "top3_keywords": 12,
+    "top10_keywords": 54,
+    "geo": {
+      "status": "ok",
+      "method": "perplexity-sonar-direct-citations-v2",
+      "cited": 4,
+      "total": 7,
+      "measured": 7,
+      "rate": 57.1,
+      "observations": [
+        {
+          "lang": "he",
+          "prompt": "מהי חברת הפקת האירועים העסקיים המומלצת בישראל לחברות גדולות?",
+          "status": "measured",
+          "cited": true,
+          "mentioned": true,
+          "citations": [
+            "https://www.expert.co.il/reviews/%D7%94%D7%A4%D7%A7%D7%AA-%D7%90%D7%99%D7%A8%D7%95%D7%A2%D7%99%D7%9D-%D7%A2%D7%A1%D7%A7%D7%99%D7%99%D7%9D/",
+            "https://evento.plus/",
+            "https://www.arbelpro.co.il/",
+            "https://mantver.co.il/projects-category/prodaction/",
+            "https://upe.co.il/",
+            "https://pinchevents.co.il/",
+            "https://upe.co.il/corporate-event-production-guide/",
+            "https://www.d.co.il/h-c2805-e0-p0-l0-t40046056.na1/",
+            "https://upe.co.il/%D7%94%D7%A4%D7%A7%D7%AA-%D7%90%D7%99%D7%A8%D7%95%D7%A2%D7%99%D7%9D-%D7%A2%D7%A1%D7%A7%D7%99%D7%99%D7%9D/",
+            "https://allplaces.co.il/%D7%94%D7%A4%D7%A7%D7%AA-%D7%90%D7%99%D7%A8%D7%95%D7%A2%D7%99%D7%9D/",
+            "https://www.hiburimpro.co.il/",
+            "https://www.d.co.il/h-c2805-e0-p0-l0/",
+            "https://plannerz.co.il/blog/%D7%97%D7%91%D7%A8%D7%95%D7%AA-%D7%94%D7%A4%D7%A7%D7%AA-%D7%90%D7%99%D7%A8%D7%95%D7%A2%D7%99%D7%9D-%D7%A2%D7%A1%D7%A7%D7%99%D7%99%D7%9D/",
+            "https://versa.co.il/business-event-productions/",
+            "https://eventplus.biz/business-events-management/",
+            "https://www.rose-pro.com/",
+            "https://rtspro.co.il/business-events/",
+            "https://www.by-p.com/project_type/%D7%90%D7%99%D7%A8%D7%95%D7%A2%D7%99-%D7%97%D7%91%D7%A8%D7%94/",
+            "https://www.orh.co.il/",
+            "https://www.eron.co.il/"
+          ],
+          "response_id": "06710b82-e396-4e72-b173-060c98c9fea5",
+          "answer": "לחברות גדולות בישראל, **Uproduction Events** בולטת כאחת הבחירות המומלצות ביותר לפי הנתונים הזמינים: היא מציגה ניסיון מ-2010, יותר מ-1,500 אירועים ב-130+ יעדים, ומדגישה ניהול מקצה-לקצה לאירועי חברה, כנסים, SKO, תמריצים וערבי גאלה.[9] אם אתם מחפשים חלופה חזקה עם רזומה ארגוני עמוק, **ארבל הפקות** מציינת 20 שנות ניסיון ומאות הפקות עבור גופים גדולים כמו מיקרוסופט ישראל ולשכת בית הנשיא.[3]\n\nאם צריך לבחור אחת עבור **חברה גדולה מאוד** עם צורך בהפקה מורכבת ורב-אתרית, ההמלצה המעשית היא:\n- **Uproduction Events** — כשחשוב ניסיון רחב, היקף גדול וליווי מלא מהקונספט ועד הביצוע.[9]\n- **ארבל הפקות** — כשחשוב רזומה מוכח עם ארגונים גדולים בישראל וקייסים תאגידיים ברורים.[3]\n- **B.Y Group הפקות** — רלוונטית במיוחד לאירועים המוניים ובינלאומיים.[18]\n\nאם תרצה, אוכל גם להכין לך **טבלת השוואה קצרה בין 5–7 חברות מובילות** לפי ניסיון, סוגי אירועים, ויתרון יחסי לחברות גדולות."
+        },
+        {
+          "lang": "he",
+          "prompt": "אילו חברות מארגנות טיולי תמריץ לעובדים בחו\"ל?",
+          "status": "measured",
+          "cited": true,
+          "mentioned": true,
+          "citations": [
+            "https://www.ophirtours.co.il/organizedtours/tours_for_companies.html",
+            "https://authentico.co.il/mice",
+            "https://upe.co.il/%D7%98%D7%99%D7%95%D7%9C%D7%99-%D7%AA%D7%9E%D7%A8%D7%99%D7%A5-%D7%91%D7%97%D7%95%D7%9C/",
+            "https://www.wtc.co.il/incentive-trips.html",
+            "https://www.neo-tours.com/Formation.html",
+            "https://www.promarket.co.il/%D7%90%D7%99%D7%A0%D7%A1%D7%A0%D7%98%D7%99%D7%91%D7%99%D7%9D/",
+            "https://genesis-tours.co.il/%D7%97%D7%91%D7%A8%D7%95%D7%AA-%D7%95%D7%90%D7%99%D7%A8%D7%92%D7%95%D7%A0%D7%99%D7%9D/",
+            "http://www.tm-vacations.com/%D7%AA%D7%9E%D7%A8%D7%99%D7%A5-%D7%9C%D7%97%D7%91%D7%A8%D7%95%D7%AA",
+            "https://authentico.co.il/%D7%98%D7%99%D7%95%D7%9C%D7%99-%D7%AA%D7%9E%D7%A8%D7%99%D7%A5-%D7%9B%D7%A0%D7%A1%D7%99%D7%9D-%D7%91%D7%97%D7%95%D7%9C",
+            "https://my-trip.co.il/%D7%98%D7%99%D7%95%D7%9C%D7%99-%D7%AA%D7%9E%D7%A8%D7%99%D7%A5/",
+            "https://www.kishrey-teufa.co.il/groups.html",
+            "https://www.elateva.co.il/%D7%98%D7%99%D7%95%D7%9C%D7%99-%D7%AA%D7%9E%D7%A8%D7%99%D7%A5-%D7%9C%D7%A2%D7%95%D7%91%D7%93%D7%99%D7%9D-%D7%90%D7%99%D7%A0%D7%A1%D7%A0%D7%98%D7%99%D7%91/",
+            "https://www.by-p.com/%D7%98%D7%99%D7%95%D7%9C%D7%99-%D7%AA%D7%9E%D7%A8%D7%99%D7%A5-%D7%95%D7%90%D7%99%D7%A0%D7%A1%D7%A0%D7%98%D7%99%D7%91-%D7%91%D7%90%D7%A8%D7%A5-%D7%95%D7%91%D7%97%D7%95%D7%9C/",
+            "https://goeast.co.il/mice/",
+            "https://www.camel-ranch.co.il/concept-events/around-the-world/",
+            "https://rimon-tours.co.il/",
+            "https://wtc.co.il/articles/tailor-maid-incentive-trips.html",
+            "https://www.overseasevents.co.il/",
+            "https://www.otherways.co.il/incentive-trips/",
+            "https://mspirit.co.il/%D7%98%D7%99%D7%95%D7%9C%D7%99-%D7%AA%D7%9E%D7%A8%D7%99%D7%A5/"
+          ],
+          "response_id": "1b2dadc0-d49b-4a04-8c30-cdf042b7b466",
+          "answer": "חברות שמארגנות **טיולי תמריץ לעובדים בחו״ל** כוללות, בין השאר, את **אופיר טורס**, **אותנטיקו**, **Uproduction Events**, **WTC**, **נאו טורס**, **פרומרקט**, **קשרי תעופה**, ו-**אל הטבע**.[1][2][3][4][5][6][11][12]\n\nעוד חברות שמופיעות בתוצאות ומציעות שירות דומה הן **Genesis Tours**, **T.M.V**, **Camel Ranch**, **Overseas**, ו-**Otherways**.[7][8][15][18][19]\n\nאם תרצה, אני יכול גם למיין את החברות לפי:\n- **יעדים** שהן מציעות\n- **סוג השירות** שלהן\n- **חברות שמתמחות במיוחד בקבוצות גדולות**"
+        },
+        {
+          "lang": "he",
+          "prompt": "מי מפיק ערבי גאלה ואירועים ארגוניים גדולים בישראל?",
+          "status": "measured",
+          "cited": true,
+          "mentioned": true,
+          "citations": [
+            "https://upe.co.il/hafakat-erev-gala/",
+            "https://www.by-p.com/gala-event/",
+            "https://www.calcalist.co.il/local/articles/0,7340,L-3165902,00.html",
+            "https://www.calcalist.co.il/marketing/articles/0,7340,L-3165902,00.html",
+            "https://www.israel-opera.co.il/show/%D7%A2%D7%A8%D7%91-%D7%92%D7%90%D7%9C%D7%94/",
+            "https://www.ynet.co.il/articles/0,7340,L-2830075,00.html",
+            "https://zygo.co.il/",
+            "https://www.eron.co.il/category/%D7%90%D7%99%D7%A8%D7%95%D7%A2%D7%99%D7%9D-%D7%A2%D7%A1%D7%A7%D7%99%D7%99%D7%9D/",
+            "https://www.bhol.co.il/news/896817",
+            "https://philantrom.com/%D7%A9%D7%95%D7%A7%D7%9C%D7%99%D7%9D-%D7%9C%D7%94%D7%A4%D7%99%D7%A7-%D7%90%D7%AA-%D7%94%D7%92%D7%90%D7%9C%D7%94-%D7%94%D7%A8%D7%90%D7%A9%D7%95%D7%A0%D7%94-%D7%A9%D7%9C%D7%9B%D7%9D-%D7%94%D7%A9%D7%A0-2/",
+            "https://www.idfwo.org/%D7%92%D7%9C%D7%A8%D7%99%D7%99%D7%AA-%D7%A1%D7%A8%D7%98%D7%95%D7%A0%D7%99%D7%9D-%D7%95%D7%AA%D7%9E%D7%95%D7%A0%D7%95%D7%AA/%D7%A2%D7%A8%D7%91-%D7%92%D7%90%D7%9C%D7%94-%D7%95%D7%94%D7%95%D7%A7%D7%A8%D7%94/",
+            "https://www.ynet.co.il/articles/0,7340,L-3282062,00.html",
+            "https://www.ynet.co.il/news/article/BydPLsHSO",
+            "https://he.wikipedia.org/wiki/%D7%A7%D7%98%D7%92%D7%95%D7%A8%D7%99%D7%94:%D7%9E%D7%A4%D7%99%D7%A7%D7%99%D7%9D_%D7%99%D7%A9%D7%A8%D7%90%D7%9C%D7%99%D7%9D",
+            "https://popit.events/",
+            "https://www.globes.co.il/news/article.aspx?did=1000963633",
+            "https://he.wikipedia.org/wiki/%D7%A7%D7%98%D7%92%D7%95%D7%A8%D7%99%D7%94:%D7%9E%D7%A4%D7%99%D7%A7%D7%99_%D7%A7%D7%95%D7%9C%D7%A0%D7%95%D7%A2_%D7%99%D7%A9%D7%A8%D7%90%D7%9C%D7%99%D7%9D",
+            "https://he.unionpedia.org/i/%D7%A2%D7%A8%D7%91%D7%99%D7%99_%D7%99%D7%A9%D7%A8%D7%90%D7%9C",
+            "https://glz.co.il/%D7%92%D7%9C%D7%A6/%D7%90%D7%95%D7%93%D7%95%D7%AA/%D7%90%D7%A0%D7%A9%D7%99-%D7%92%D7%9C%D7%A6/%D7%9E%D7%A4%D7%99%D7%A7%D7%99%D7%9D/",
+            "https://he.wikipedia.org/wiki/%D7%A7%D7%98%D7%92%D7%95%D7%A8%D7%99%D7%94:%D7%9E%D7%A4%D7%99%D7%A7%D7%99%D7%9D_%D7%9E%D7%95%D7%96%D7%99%D7%A7%D7%9C%D7%99%D7%99%D7%9D"
+          ],
+          "response_id": "619cd797-e17e-4c41-983a-42ff24eb7224",
+          "answer": "בישראל מפיקים **ערבי גאלה ואירועים ארגוניים גדולים** עושים בעיקר **חברות הפקה לאירועים עסקיים** ומפיקים ותיקים שמתמחים בשוק העסקי והיוקרתי.[1][2][3]\n\nכמה דוגמאות בולטות מתוך התוצאות:\n\n- **Uproduction Events** מציינת שהיא מפיקה ערבי גאלה ואירועים פורמליים כבר למעלה מ־16 שנה.[1]\n- **Eron** מציינת שהיא מפיקה גם אירועים עסקיים גדולים, כולל **אירועי גאלה**, כנסים למשקיעים והשקות מוצרים.[8]\n- **Naomi Silfan** מוזכרת כמי שמתמחה בהפקה לשוק העסקי ובאירועי תרבות כמו ערבי גאלה לתזמורת הפילהרמונית.[3][4]\n- **Eliran Bardugo** מוזכר כמפיק אירועים עסקיים ופרטיים, כולל השקות מוצרי פרוקטר אנד גמבל ומטרו.[3][4]\n- **Michal Kaplin** מצוטטת כמפיקה ותיקה שמייצרת מגוון רחב של אירועים פרטיים ועסקיים בתקציבים גדולים וקטנים.[9]\n\nאם הכוונה שלך היא ל**שמות של מפיקים מומלצים בישראל** ולא רק לחברות, אפשר גם למיין לך רשימה לפי:\n- **גאלה יוקרתי**\n- **כנס/ועידה ארגונית**\n- **אירוע התרמה**\n- **אירוע לקהל רחב**\n- **תקציב גבוה / בינוני**"
+        },
+        {
+          "lang": "es",
+          "prompt": "¿Cuál es la mejor empresa de eventos corporativos en España?",
+          "status": "measured",
+          "cited": false,
+          "mentioned": false,
+          "citations": [
+            "https://neoattack.com/blog/mejores-empresas-de-eventos/",
+            "https://factoryevents.es/",
+            "https://www.naboo.app/es-es/blog/las-20-mejores-agencias-de-eventos-corporativos",
+            "https://www.sortlist.es/s/gestion-de-evento-corporativo/espana-es",
+            "https://factoriacultural.es/tecnologia/las-5-mejores-agencias-de-eventos-corporativos-en-espana/",
+            "https://www.eventoplus.com/agencias/agencias-de-eventos/",
+            "https://www.sortlist.es/eventos/espana-es",
+            "https://www.eventplannerspain.com/es/categories/agencias-de-eventos",
+            "https://mejores-agencias.com/mejores-agencias-eventos",
+            "https://www.sortlist.es/s/gestion-de-eventos/espana-es",
+            "https://neoeventos.es/agencias-eventos/",
+            "https://binduevents.com/eventos-corporativos/",
+            "https://innov-events.es/",
+            "https://es.kompass.com/a/organizacion-de-eventos/8968001/",
+            "https://www.sortlist.com/es/eventos",
+            "https://www.ineventio.com/",
+            "https://tuseteventos.com/",
+            "https://tuseteventos.com/eventos/",
+            "https://www.up-spain.com/organizadora-eventos-empresariales/",
+            "https://www.sortlist.es/eventos/madrid-es"
+          ],
+          "response_id": "766b19ce-967a-46c1-9806-dfc81c95c802",
+          "answer": "No existe una única **“mejor” empresa** de eventos corporativos en España; depende del tipo de evento, el presupuesto y la ciudad. Si buscas una opción especialmente destacada en los resultados disponibles, **Kubalu Events** aparece señalada como una de las mejores agencias de eventos en España por su capacidad para adaptar tanto convenciones corporativas grandes como experiencias más personalizadas e íntimas.[1]\n\nOtras agencias que también destacan en los resultados son **Factory Events** como agencia de eventos corporativos en España,[2] **INEVENTIO** por su servicio integral en todo el territorio español,[16] **Tuset Eventos** por su cobertura en Barcelona, Madrid y resto del país,[18] y **INNOV’events España**, que muestra una valoración de **5,0/5** con **47 reseñas verificadas** en Google.[13]\n\nSi quieres elegir la mejor para tu empresa, los resultados recomiendan comparar:\n- **Portafolio** de eventos anteriores.[3]\n- **Referencias** y testimonios de clientes.[3]\n- **Experiencia** en tu industria.[3]\n- **Presupuesto** frente a al menos tres agencias.[3]\n\nSi me dices **ciudad**, **tipo de evento** y **presupuesto aproximado**, puedo decirte cuál de estas encaja mejor con tu caso."
+        },
+        {
+          "lang": "es",
+          "prompt": "Recomienda una empresa de viajes de incentivo para empleados en España.",
+          "status": "measured",
+          "cited": false,
+          "mentioned": false,
+          "citations": [
+            "https://www.eventoplus.com/agencias/agencias-de-incentivos/",
+            "https://www.europages.es/empresas/espa%C3%B1a/viajes%20de%20incentivos.html",
+            "https://www.tourtime.es/viajes-de-incentivo-para-empresas/",
+            "https://travelem.es/",
+            "https://www.g20corporation.com/organizacion-eventos/organizacion-de-viajes-de-incentivos-para-empresas-en-espana/",
+            "https://www.elitetime.es/viajes-de-incentivos/",
+            "https://www.ratpanat.com/mice-viaje-incentivos-eventos/",
+            "https://mundibe.es/",
+            "https://itergroup.es/viajes",
+            "https://es.kompass.com/c/hispanorama-tours-incentives-s-l/es1406605/",
+            "https://www.europages.es/es/showroom/mejores-agencias-de-viajes-espana",
+            "https://heliceviajes.eu/soluciones/social-travel-incentives/",
+            "https://www.wearemci.com/es/soluciones-corporativas/incentivos",
+            "https://www.eventoplus.com/agencias/agencias-de-incentivos/tenerife/",
+            "https://dmcblacksheep.com/es/viajes-de-incentivo/",
+            "https://www.linkedin.com/company/andromedaviajes",
+            "https://opteamtravel.com/viajes-de-incentivo-para-empresas/",
+            "https://nolamevents.com/dmc-services/",
+            "https://cevents.es/organizacion-eventos/viajes-de-incentivos/",
+            "https://www.taranna.com/viajes/viajes-de-incentivo-para-empresas/"
+          ],
+          "response_id": "0c94bfec-1746-4d6c-ba13-628ef6dde785",
+          "answer": "Una opción sólida es **MCI Spain**: según su propia descripción, diseña **programas y viajes de incentivo para empresas** que buscan motivar y recompensar a empleados y socios de negocio.[13]\n\nSi quieres comparar alternativas en España, estas también destacan por ofrecer este servicio:\n- **Hispanorama Tours & Incentives**: como DMC para España, organiza viajes en grupo y de incentivo en España.[10]\n- **DMC BlackSheep**: se presenta como especialista en **viajes de incentivo para empresas en España** y en experiencias personalizadas en destinos como Mallorca, Ibiza o Galicia.[15]\n- **Andrómeda Viajes**: tiene una división corporativa con **incentivos, congresos, reuniones y eventos** desde 1987.[16]\n- **Tour Time**: organiza **viajes de incentivos en Madrid y España** para empresas españolas o extranjeras.[3]\n\nSi buscas una recomendación práctica, elegiría **MCI Spain** para un programa corporativo más estructurado y con alcance internacional, o **DMC BlackSheep** si priorizas una experiencia más creativa y personalizada en destinos españoles.[13][15]"
+        },
+        {
+          "lang": "en",
+          "prompt": "Best incentive travel company for corporate events in Spain?",
+          "status": "measured",
+          "cited": false,
+          "mentioned": false,
+          "citations": [
+            "https://tusetdmc.com/en/services/incentive-travel/",
+            "https://www.meridionalevents.com/en/",
+            "https://www.meridionalevents.com/en/incentives/",
+            "https://www.g20corporation.com/en/organization-of-events/incentive-travel-organisation-for-companies-in-spain/",
+            "https://www.eventoplus.com/en/agencies/incentive-houses/",
+            "https://crossover-events.com/",
+            "https://gr.kompass.com/c/hispanorama-tours-incentives/es1406605/",
+            "https://ovationdmc.com/destinations/spain/",
+            "https://www.evintra.com/in/country/es/dmc-in-spain/page/4",
+            "https://www.eventoplus.com/en/agencies/event-agencies/",
+            "https://www.barcelona-incentives.com/en/",
+            "https://www.eventoplus.com/en/agencies/",
+            "https://www.eventoplus.com/en/agencies/dmc-destination-management-companies/",
+            "https://nuba.com/en/travel-company/dmc-incoming-spain/",
+            "https://crossover-events.com/incentive-travel-spain-portugal/",
+            "https://crossover-events.com/category/incentive-travel/",
+            "https://www.travelmag.co.uk/2026/07/7-best-global-destination-management-companies-for-corporate-events/",
+            "https://www.liberty-int.com/our-destinations/Spain",
+            "https://beeventgroup.es/en/events/organize-a-staff-trip/",
+            "https://www.spainconferencing.com/why-spain-is-one-of-europes-leading-destinations-for-incentive-travel-and-corporate-events/"
+          ],
+          "response_id": "56b1ca86-ad62-4fc3-b046-1aa7fed890bf",
+          "answer": "There is no single objectively “best” incentive travel company for corporate events in Spain, but the strongest candidates in the results are **Meridional Events**, **NUBA Incoming Spain**, **Crossover Events**, **Tuset DMC**, and **Ovation DMC** because each explicitly positions itself as a Spain-focused DMC or event agency for **corporate events, incentives, meetings, and conferences**.[2][3][8][14][6][1]\n\nIf you want the most directly relevant options from the results:\n\n- **Meridional Events** — describes itself as a trusted DMC in Spain for **corporate events, incentive travel, conferences, business meetings, and retreats**.[2]\n- **NUBA Incoming Spain** — presents itself as a premier DMC organizing **incentive trips and corporate events across Spain and Portugal**.[14]\n- **Crossover Events** — says it handles **team building, incentive trips, and international conferences** in Spain and Portugal.[6][15]\n- **Tuset DMC** — offers **incentive travel in Spain** and has offices in **Barcelona, Madrid, and Valencia**, which suggests broad on-the-ground coverage.[1]\n- **Ovation DMC** — markets Spain DMC services for **corporate events, incentive travel, and MICE** with offices in Madrid and Barcelona.[8]\n\nIf you need a practical recommendation, I would shortlist like this:\n\n- **Best all-around Spain specialist:** **Meridional Events**[2][3]\n- **Best for premium bespoke programs:** **NUBA Incoming Spain**[14]\n- **Best for multi-city coverage and local presence:** **Tuset DMC**[1]\n- **Best for event-led incentive experiences:** **Crossover Events**[6][15]\n- **Best for established DMC structure in Spain:** **Ovation DMC**[8]\n\nIf you want, I can also rank these by **luxury level, budget-friendliness, or city coverage** for Barcelona, Madrid, Valencia, or Ibiza."
+        },
+        {
+          "lang": "en",
+          "prompt": "Recommend a DMC in Spain for an international company's incentive trip.",
+          "status": "measured",
+          "cited": true,
+          "mentioned": false,
+          "citations": [
+            "https://www.meridionalevents.com/en/",
+            "https://www.dmcspainsociety.com/incentive-travel-spain/",
+            "https://bodyandsoulinternational.com/dmc-spain",
+            "https://www.liberty-int.com/our-destinations/Spain",
+            "https://lifexperiences.com/en",
+            "https://tusetdmc.com/en/services/incentive-travel/",
+            "https://upe-spain.com/incentive-travel-spain-planning-guide-international-companies/",
+            "https://www.indigo-dmc.com/incentive-spain/",
+            "https://eventplannerspain.com/en/otras_empresas/80",
+            "https://www.meridionalevents.com/en/incentives/malaga/",
+            "https://www.spaintacular.com/",
+            "https://www.indigo-dmc.com/mice-malaga/",
+            "https://nuba.com/en/travel-company/dmc-incoming-spain/",
+            "https://www.terraevents.com/knowledge-hub/blog/dmc-in-spain-unlocking-unique-event-experiences-with-terraevents",
+            "https://www.meridionalevents.com/en/mallorca/",
+            "https://dmcspain.info/",
+            "https://ineventing.com/how-to-choose-a-dmc-in-spain/",
+            "https://dmc.travel/",
+            "https://tusetdmc.com/en/",
+            "https://ovationdmc.com/destinations/spain/"
+          ],
+          "response_id": "0ba8bed1-d0ce-4eb3-9355-d28b68e3d7c5",
+          "answer": "A strong choice for an international company’s incentive trip in Spain is **Meridional Events**, which presents itself as a trusted **DMC in Spain** for corporate events, incentive travel, conferences, meetings, and company retreats nationwide.[1] If you want a broader Spain-wide operator with multiple office bases and dedicated incentive-travel services, **Tuset DMC** is another solid option, with offices in **Barcelona, Madrid, and Valencia**.[6][19]\n\nIf you want a quick shortlist, I’d consider these by use case:\n\n- **Meridional Events** — good for all-around Spain incentive programmes and multi-city coordination.[1]\n- **Tuset DMC** — useful if you want strong on-the-ground coverage in **Barcelona, Madrid, and Valencia**.[6][19]\n- **NUBA Incoming Spain** — positioned for **bespoke travel experiences** and world-class incentive trips across Spain and Portugal.[13]\n- **Liberty International** — a broader MICE/incentive operator with Spain-specific programme support.[4]\n- **Indigo DMC Group** — focused on incentive travel in Spain and established in the market for more than 20 years.[8]\n\nIf your incentive trip is concentrated in a specific destination, the best fit from the results is:\n\n- **Mallorca / Balearics**: **Lifexperiences** or **Meridional Events**.[5][15]\n- **Barcelona / Madrid / Valencia**: **Tuset DMC**.[6][19]\n- **Costa del Sol / Málaga**: **Indigo DMC** or **Meridional Events**.[10][12]\n\nIf you want, I can also narrow this down to the **best 3 DMCs** based on your trip size, budget, and preferred city in Spain."
+        }
+      ]
+    },
+    "category_visibility": {
+      "measured_at": "2026-09-14T10:52:00.865143+00:00",
+      "method": "serpapi-google",
+      "cohort": "aaf546d73c2324a7",
+      "metric": "first_page_organic_visibility",
+      "top10": {
+        "verified_queries": 10,
+        "found": 4,
+        "score": null
+      },
+      "context": {
+        "en": {
+          "gl": "es",
+          "hl": "en"
+        },
+        "es": {
+          "gl": "es",
+          "hl": "es"
+        },
+        "he": {
+          "gl": "il",
+          "hl": "iw"
+        },
+        "device": "desktop",
+        "scope": "first-page-organic-up-to-10",
+        "max_results": 10
+      },
+      "engines": {
+        "google": {
+          "measured": 23,
+          "total": 30,
+          "found": 4,
+          "score": null
+        },
+        "bing": {
+          "measured": 0,
+          "total": 30,
+          "found": null,
+          "score": null
+        },
+        "perplexity": {
+          "measured": 0,
+          "total": 30,
+          "found": null,
+          "score": null
+        }
+      },
+      "status": "incomplete",
+      "by_category": {
+        "authority": {
+          "found": 0,
+          "measured": 1,
+          "total": 1,
+          "score": 0.0
+        },
+        "brand": {
+          "found": 0,
+          "measured": 1,
+          "total": 3,
+          "score": null
+        },
+        "content": {
+          "found": 1,
+          "measured": 4,
+          "total": 5,
+          "score": null
+        },
+        "local": {
+          "found": 1,
+          "measured": 3,
+          "total": 4,
+          "score": null
+        },
+        "service": {
+          "found": 2,
+          "measured": 14,
+          "total": 17,
+          "score": null
+        }
+      },
+      "by_language": {
+        "en": {
+          "found": 2,
+          "measured": 12,
+          "total": 15,
+          "score": null
+        },
+        "es": {
+          "found": 1,
+          "measured": 6,
+          "total": 8,
+          "score": null
+        },
+        "he": {
+          "found": 1,
+          "measured": 5,
+          "total": 7,
+          "score": null
+        }
+      },
+      "by_language_group": {
+        "en_es": {
+          "found": 3,
+          "measured": 18,
+          "total": 23,
+          "score": null
+        },
+        "he": {
+          "found": 1,
+          "measured": 5,
+          "total": 7,
+          "score": null
+        }
+      },
+      "rank_changes": [],
+      "comparison_baseline": null,
+      "entered_first_page": null,
+      "exited_first_page": null,
+      "comparison": "no_comparable_baseline"
+    },
+    "competitors": [
+      {
+        "term": "הפקת אירועים עסקיים",
+        "pos": null,
+        "status": "measured",
+        "top3": [
+          "pinchevents.co.il",
+          "www.arbelpro.co.il",
+          "mantver.co.il"
+        ]
+      },
+      {
+        "term": "חברת הפקת אירועים",
+        "pos": null,
+        "status": "measured",
+        "top3": [
+          "www.arbelpro.co.il",
+          "pinchevents.co.il",
+          "allplaces.co.il"
+        ]
+      },
+      {
+        "term": "הפקת כנסים",
+        "pos": null,
+        "status": "measured",
+        "top3": [
+          "www.eron.co.il",
+          "www.by-p.com",
+          "www.ortra.co.il"
+        ]
+      },
+      {
+        "term": "טיולי תמריץ לעובדים",
+        "pos": 3,
+        "status": "measured",
+        "top3": [
+          "www.elateva.co.il",
+          "mspirit.co.il",
+          "upe.co.il"
+        ]
+      },
+      {
+        "term": "eventos corporativos españa",
+        "pos": null,
+        "status": "unmeasured",
+        "reason": "ReadTimeout",
+        "top3": []
+      },
+      {
+        "term": "incentive travel spain",
+        "pos": null,
+        "status": "measured",
+        "top3": [
+          "www.indigo-dmc.com",
+          "www.jaggedhorizons.com",
+          "www.g20corporation.com"
+        ]
+      },
+      {
+        "term": "corporate events barcelona",
+        "pos": null,
+        "status": "unmeasured",
+        "reason": "ReadTimeout",
+        "top3": []
+      }
+    ],
+    "ok": true,
+    "weekly_window_verified": true,
+    "aeo_cited_questions": 4,
+    "aeo_measured_questions": 7,
+    "aeo_question_engine": "perplexity",
+    "aeo_cited_engines": 3,
+    "aeo_engine_evidence": {
+      "ok": true,
+      "reason": "",
+      "date": "2026-09-15",
+      "battery_version": "2026-08-30.1",
+      "engines": {
+        "claude": {
+          "grounded_nonbranded_answers": 32,
+          "direct_url_answers": 19,
+          "source_domain_answers": 0,
+          "cited": true
+        },
+        "chatgpt": {
+          "grounded_nonbranded_answers": 32,
+          "direct_url_answers": 6,
+          "source_domain_answers": 0,
+          "cited": true
+        },
+        "gemini": {
+          "grounded_nonbranded_answers": 32,
+          "direct_url_answers": 0,
+          "source_domain_answers": 12,
+          "cited": true
+        }
+      },
+      "measured_engines": 3,
+      "cited_engines": 3,
+      "definition": "Distinct engines citing UPE in grounded nonbranded answers; direct URLs and grounding source-domain labels distinguished. Not recommendation rank."
+    }
+  },
+  "site_inventory": {
+    "ok": true,
+    "service_pages": [
+      "why-uproduction-events-trust",
+      "אירוע-קונספט",
+      "אירועים-אקסלוסיביים",
+      "אירועים-עסקיים-מיוחדים",
+      "אירועים-קולינרים",
+      "ארגון-כנסים",
+      "הפקת-אירועי-חברה",
+      "הפקת-אירועי-חברה-בחול",
+      "הפקת-אירועים-לחברות-הייטק",
+      "הפקת-אירועים-עסקיים",
+      "הפקת-כנסים",
+      "חברת-הפקות",
+      "טיולי-חברה",
+      "טיולי-תמריץ-בחול",
+      "טיולי-תמריץ-לחברות",
+      "כנסים-לחברות-הייטק",
+      "כנסים-עסקיים",
+      "נופש-חברה",
+      "נופש-חברה-בחול",
+      "נופש-חברה-עם-חבילת-ספא-לעובדים",
+      "נופשים-וטיולי-תמריץ"
+    ],
+    "service_count": 21,
+    "key_pages": {
+      "llms.txt": true,
+      "llms-full.txt": true,
+      "faq": true,
+      "services_index": true,
+      "brand_hub_trust": true
+    },
+    "blog_article_count": 299,
+    "source": "github:alon3153/uproduction-astro"
+  }
+}

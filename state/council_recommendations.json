@@ -1,34 +1,34 @@
 {
-  "updated_at": "2026-09-15",
+  "updated_at": "2026-09-16",
   "scores": {
     "instagram": 42,
-    "facebook": 18,
+    "facebook": 28,
     "tiktok": 10,
-    "linkedin": 30,
+    "linkedin": 31,
     "youtube": 55,
-    "google_organic_geo": 62,
+    "google_organic_geo": 72,
     "overall": 68
   },
   "recommendations": [
     {
       "category": "gated",
-      "priority": "P1",
-      "action_key": "linkedin-executive-advocacy",
-      "owner": "מנכ״ל מפרסם; צוות מכין טיוטות; Alon מאשר",
-      "success_metric": "נוכחות סושיאל (רצפה): בסיס 16.0; יעד המדד 5. יש להשוות תקופות תואמות.",
+      "priority": "P0",
+      "action_key": "salesforce-attribution-fix",
+      "owner": "מנהל מכירות מכין; Alon מאשר ומפיץ",
+      "success_metric": "ייחוס לידים: בסיס לא-מיוחס; יעד המדד מקור אמיתי. יש להשוות תקופות תואמות.",
       "evidence": {
         "source": "scorecard",
-        "metric": "נוכחות סושיאל (רצפה)",
-        "value": 16.0,
-        "target": 5,
+        "metric": "ייחוס לידים",
+        "value": "לא-מיוחס",
+        "target": "מקור אמיתי",
         "unit": "",
-        "status": "✅"
+        "status": "❌"
       },
-      "evidence_url": "https://sllives.com/linkedin-growth-strategy-for-b2b-brands-what-actually-works-in-2026/",
+      "evidence_url": null,
       "target_url": null,
-      "action": "ממשך initiative ba5e2d8e (in_progress, revisions:1): הפעל 2 פוסטים/שבוע מפרופיל אישי מנכ״ל — case-study ספציפי + insight תעשייתי; דף החברה עושה repost בלבד; מדוד connection requests ו-DMs כ-proxy לאיכות (לא likes/impressions)",
+      "action": "הפץ את lead-source-guidance.md (draft_ready, לא הופצה) לנציגי המכירות; הגדר picklist סגור ב-Salesforce (Google Organic, Web Form, LinkedIn, Advertisement Paid, Word of Mouth, Existing Customer, Other+הערה חובה); קיים 15 דקות הדרכה; בדוק עמידה בסוף חודש.",
       "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
-      "channel": "linkedin",
+      "channel": "leads",
       "status": "candidate",
       "detail": "הצעה לבדיקה על בסיס המדד המתועד; לא בוצע שינוי."
     }

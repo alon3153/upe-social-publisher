@@ -1,66 +1,32 @@
 {
-  "updated_at": "2026-09-15",
+  "updated_at": "2026-09-16",
   "source": "daily-council",
   "directives": [
     {
       "category": "safe_auto",
-      "action": "ניסוי YouTube: כל 4 הסרטונים שנוספו השבוע — בדוק האם יש title+description בעברית עם מונח חיפוש מדויק (כגון 'כמה עולה הפקת כנס') ו-chapters/timestamps; ניסוי: 1 סרטון עם chapters לעומת 1 בלעדיהם, השוואת watch-time ב-GSC ב-28 יום",
+      "action": "ניסוי: תכנן 2 פוסטי LinkedIn בפורמט 'case study קצר' (עד 90 שניות טקסט + תמונה) מפרופיל אישי מנכ\"ל — כולל שאלה בסוף לעידוד תגובות; שמור כהצעה לאישור.",
       "detail": "הצעה לבדיקה על בסיס המדד המתועד; לא בוצע שינוי.",
-      "channel": "youtube",
-      "evidence": {
-        "source": "scorecard",
-        "metric": "קליקים אורגניים/שבוע",
-        "value": 36,
-        "target": 300,
-        "unit": "",
-        "status": "❌"
-      },
-      "status": "candidate",
-      "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
-      "success_metric": "קליקים אורגניים/שבוע: בסיס 36; יעד המדד 300. יש להשוות תקופות תואמות."
-    },
-    {
-      "category": "safe_auto",
-      "action": "ניסוי Instagram: בדוק האם 6 הפוסטים השבוע כללו Reels עם כותרת עברית ב-hook הראשון (3 שניות); הצע לצוות תוכן להגדיר ניסוי 3 שבועות: Reels בלבד מול תמונות סטטיות, השוואת reach ו-saves (לא likes) כ-KPI",
-      "detail": "הצעה לבדיקה על בסיס המדד המתועד; לא בוצע שינוי.",
-      "channel": "instagram",
+      "channel": "linkedin",
       "evidence": {
         "source": "scorecard",
         "metric": "נוכחות סושיאל (רצפה)",
-        "value": 16.0,
+        "value": 12.0,
         "target": 5,
         "unit": "",
         "status": "✅"
       },
       "status": "candidate",
       "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
-      "success_metric": "נוכחות סושיאל (רצפה): בסיס 16.0; יעד המדד 5. יש להשוות תקופות תואמות."
-    },
-    {
-      "category": "safe_auto",
-      "action": "זהה מתוך 5 keywords ב-top_opportunities (הפקת נופש חברה pos.17.2, נופש חברה pos.19.9, אירועי קונספט pos.19-20) את שאילתות הזנב הארוך הספציפיות ב-GSC שמקבלות חשיפות רבות אך אפס קליקים — הכן רשימת מונחים לדף content-gap להעברה לבעל תוכן",
-      "detail": "הצעה לבדיקה על בסיס המדד המתועד; לא בוצע שינוי.",
-      "channel": "google_organic",
-      "evidence": {
-        "source": "scorecard",
-        "metric": "קליקים אורגניים/שבוע",
-        "value": 36,
-        "target": 300,
-        "unit": "",
-        "status": "❌"
-      },
-      "status": "candidate",
-      "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
-      "success_metric": "קליקים אורגניים/שבוע: בסיס 36; יעד המדד 300. יש להשוות תקופות תואמות."
+      "success_metric": "נוכחות סושיאל (רצפה): בסיס 12.0; יעד המדד 5. יש להשוות תקופות תואמות."
     }
   ],
   "channel_cadence": {
     "facebook": {
-      "max_posts_per_week": 2,
+      "max_posts_per_week": 1,
       "reason": "מכסה מוצעת לבדיקה בתקופת המדידה; אין מסקנה סיבתית על אלגוריתם."
     },
     "instagram": {
-      "max_posts_per_week": 5,
+      "max_posts_per_week": 4,
       "reason": "מכסה מוצעת לבדיקה בתקופת המדידה; אין מסקנה סיבתית על אלגוריתם."
     },
     "linkedin": {
@@ -68,7 +34,7 @@
       "reason": "מכסה מוצעת לבדיקה בתקופת המדידה; אין מסקנה סיבתית על אלגוריתם."
     },
     "tiktok": {
-      "max_posts_per_week": 3,
+      "max_posts_per_week": 0,
       "reason": "מכסה מוצעת לבדיקה בתקופת המדידה; אין מסקנה סיבתית על אלגוריתם."
     },
     "youtube": {
