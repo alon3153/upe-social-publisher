@@ -26,4 +26,5 @@ jobs:
         env:
           SUPABASE_URL:              ${{ secrets.SUPABASE_URL }}
           SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
-        run: python3 scripts/verify_approve_all.py "${{ inputs.day }}"
+          DAY: ${{ inputs.day }}
+        run: python3 scripts/verify_approve_all.py "$DAY"

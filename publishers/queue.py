@@ -4,6 +4,9 @@ import os, json, urllib.request, urllib.parse, urllib.error
 URL = os.environ.get("SUPABASE_URL", "").rstrip("/")
 KEY = os.environ.get("SUPABASE_SERVICE_ROLE_KEY", "")
 UA = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36"
+# Every call carries a timeout: a hung socket must fail the step, not stall the
+# publisher until the workflow's own timeout-minutes kills it mid-run.
+TIMEOUT = int(os.environ.get("SUPABASE_HTTP_TIMEOUT", "30"))
 
 
 def _req(method, path, params=None, body=None, prefer=None):
@@ -17,7 +20,7 @@ def _req(method, path, params=None, body=None, prefer=None):
     data = json.dumps(body).encode() if body is not None else None
     req = urllib.request.Request(URL + "/rest/v1/" + path + q, data=data, headers=headers, method=method)
     try:
-        with urllib.request.urlopen(req) as r:
+        with urllib.request.urlopen(req, timeout=TIMEOUT) as r:
             txt = r.read().decode()
             return json.loads(txt) if txt else []
     except urllib.error.HTTPError as e:

@@ -5,7 +5,7 @@ Reads a queue JSON: content/sofia/queue/<file>.json (default week1.json).
 
 Each entry: {id, headline, caption, video_url, watch_url, accounts:[ig keys], scheduled_date, day}
 """
-import os, sys, json, urllib.request, urllib.error
+import os, sys, json, html, urllib.request, urllib.error
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, ROOT)
 from publishers import queue
@@ -20,14 +20,17 @@ NET_HE = {"uproduction_spain": "Uproduction Spain", "uproductionevents": "Uprodu
 def email_html(acc, headline, rid, token, caption, video_url):
     approve = f"{FN}?id={rid}&token={token}&action=approve"
     reject = f"{FN}?id={rid}&token={token}&action=reject"
-    cap_html = caption.replace("\n", "<br>")
+    cap_html = html.escape(caption or "", quote=True).replace("\n", "<br>")
+    headline = html.escape(headline or "", quote=True)
+    video_url = html.escape(video_url or "", quote=True)
+    acc_label = html.escape(NET_HE.get(acc, acc), quote=True)
     return f"""<html dir="rtl" lang="he"><head><meta charset="utf-8"></head>
 <body dir="rtl" style="font-family:Arial,Helvetica,sans-serif;font-size:14px;direction:rtl;text-align:right;background:#f4f4f4;padding:18px;">
 <div dir="rtl" style="max-width:520px;margin:auto;background:#fff;border-radius:14px;overflow:hidden;">
   <div style="background:#1C1C1C;color:#FBCE0A;padding:16px 20px;font-size:18px;font-weight:bold;">🎬 Sofia — אישור סרטון לפרסום</div>
   <div dir="rtl" style="padding:20px;direction:rtl;text-align:right;">
     <p style="font-size:16px;font-weight:bold;margin:0 0 4px;">{headline}</p>
-    <p style="color:#888;margin:0 0 14px;">חשבון: {NET_HE.get(acc, acc)} · Instagram Reels</p>
+    <p style="color:#888;margin:0 0 14px;">חשבון: {acc_label} · Instagram Reels</p>
     <div dir="ltr" style="direction:ltr;text-align:center;margin:14px 0;">
       <a href="{video_url}" style="display:inline-block;background:#1C1C1C;color:#fff;text-decoration:none;font-size:15px;padding:12px 22px;border-radius:8px;">▶️ צפה בסרטון</a>
     </div>
@@ -46,7 +49,7 @@ def send_resend(subj, html):
                                  headers={"Authorization": f"Bearer {RESEND_KEY}", "Content-Type": "application/json",
                                           "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124 Safari/537.36"})
     try:
-        with urllib.request.urlopen(req) as r:
+        with urllib.request.urlopen(req, timeout=60) as r:
             return True, r.read().decode()[:80]
     except urllib.error.HTTPError as e:
         return False, f"{e.code} {e.read().decode()[:160]}"
@@ -54,7 +57,11 @@ def send_resend(subj, html):
 
 def main():
     qfile = sys.argv[1] if len(sys.argv) > 1 else "week1"
-    posts = json.load(open(f"{ROOT}/content/sofia/queue/{qfile}.json"))
+    import re
+    if not re.fullmatch(r"[A-Za-z0-9_-]{1,64}", qfile):
+        print(f"refusing queue file name {qfile!r}: letters, digits, '-' and '_' only")
+        return 1
+    posts = json.load(open(os.path.join(ROOT, "content", "sofia", "queue", f"{qfile}.json"), encoding="utf-8"))
     rows = []
     for p in posts:
         for i, acc in enumerate(p["accounts"]):

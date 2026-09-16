@@ -49,8 +49,9 @@ jobs:
           LINKEDIN_ORG_URN:                  ${{ secrets.LINKEDIN_ORG_URN }}
           LINKEDIN_ORG_URN_SPAIN:            ${{ secrets.LINKEDIN_ORG_URN_SPAIN }}
           LINKEDIN_MEMBER_URN:               ${{ secrets.LINKEDIN_MEMBER_URN }}
+          DRY_RUN:                           ${{ inputs.dry_run == true }}
         run: |
-          if [ "${{ inputs.dry_run }}" = "true" ]; then
+          if [ "$DRY_RUN" = "true" ]; then
             python3 scripts/publish_approved.py --dry-run
           else
             python3 scripts/publish_approved.py
