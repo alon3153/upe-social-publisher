@@ -18,6 +18,7 @@ jobs:
   intel:
     runs-on: ubuntu-latest
     timeout-minutes: 20
+    if: github.event_name == 'schedule' || github.actor == 'alon3153'
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -26,7 +27,8 @@ jobs:
       - name: Research + generate viral-adapted posts
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
-        run: python3 scripts/competitor_intel.py --count "${{ inputs.count || 3 }}"
+          COUNT: ${{ inputs.count || 3 }}
+        run: python3 scripts/competitor_intel.py --count "$COUNT"
       - name: Commit new bank days
         run: |
           git config user.name  "upe-competitor-intel"

@@ -18,10 +18,12 @@ USAGE:
   # to also save the token to Supabase:
   export SUPABASE_URL=... SUPABASE_SERVICE_ROLE_KEY=...
   python3 scripts/linkedin_org_oauth.py --authorize-url
-  -> authorize in the browser. The registered Supabase callback stores the
-     credential in a fixed temporary row (`li_main_callback`). The GitHub
-     re-auth workflow validates every target, promotes it to the main credential,
-     syncs GitHub Secrets, and deletes the temporary row without printing a token.
+  -> open the printed link in the browser. It is the edge function's START URL
+     (?advocate=main_callback): the function issues the LinkedIn consent redirect
+     itself, with a one-time CSRF nonce bound to a cookie, and on return stores the
+     credential in a fixed temporary row (`li_main_callback`). The GitHub re-auth
+     workflow validates every target, promotes it to the main credential, syncs
+     GitHub Secrets, and deletes the temporary row without printing a token.
 """
 import os, sys, json, time, secrets, datetime, subprocess
 import urllib.parse, urllib.request, urllib.error, webbrowser
@@ -45,12 +47,15 @@ CALLBACK_ACCOUNT = "li_main_callback"
 
 
 def authorize_url():
-    q = urllib.parse.urlencode({
-        "response_type": "code", "client_id": CID, "redirect_uri": REDIRECT,
-        "scope": SCOPES,
-        # The Supabase callback uses state as the temporary account key.
-        "state": CALLBACK_STATE})
-    return "https://www.linkedin.com/oauth/v2/authorization?" + q
+    """Start URL of the registered Supabase callback for the shared credential.
+
+    The function (supabase/functions/linkedin-oauth) builds the LinkedIn consent
+    URL itself: scopes = its ORG_SCOPES (kept equal to SCOPES here), state =
+    ``main_callback.<nonce>`` with the nonce also set as an HttpOnly cookie, so a
+    callback forged by a third party is rejected. Building the LinkedIn URL here
+    (a bare ``state=main_callback``) would skip that check and be refused.
+    """
+    return REDIRECT + "?" + urllib.parse.urlencode({"advocate": CALLBACK_STATE})
 
 
 def exchange(code):
@@ -59,7 +64,7 @@ def exchange(code):
         "client_id": CID, "client_secret": CSECRET}).encode()
     req = urllib.request.Request("https://www.linkedin.com/oauth/v2/accessToken", data=data,
         headers={"Content-Type": "application/x-www-form-urlencoded", "User-Agent": UA}, method="POST")
-    with urllib.request.urlopen(req) as r:
+    with urllib.request.urlopen(req, timeout=60) as r:
         return json.loads(r.read().decode())
 
 
@@ -72,7 +77,7 @@ def discover_org(token):
         "Authorization": f"Bearer {token}", "User-Agent": UA,
         "X-Restli-Protocol-Version": "2.0.0"})
     try:
-        with urllib.request.urlopen(req) as r:
+        with urllib.request.urlopen(req, timeout=60) as r:
             data = json.loads(r.read().decode())
     except urllib.error.HTTPError as e:
         print(f"  (could not auto-list orgs: {e.code} {e.read().decode()[:160]})")

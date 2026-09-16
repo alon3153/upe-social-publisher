@@ -9,6 +9,8 @@ import os, json, time, urllib.request, urllib.parse, urllib.error
 
 API = "https://api.linkedin.com"
 UA = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36"
+TIMEOUT = 60          # API calls
+MEDIA_TIMEOUT = 300   # fetching / uploading image and video bytes
 ORG_POST_ROLES = {
     "ADMINISTRATOR", "CONTENT_ADMINISTRATOR", "CONTENT_ADMIN",
     "DIRECT_SPONSORED_CONTENT_POSTER",
@@ -42,7 +44,7 @@ def _req(method, url, token, body=None, raw=None, ctype="application/json", extr
     elif body is not None:
         data = json.dumps(body).encode(); headers["Content-Type"] = "application/json"
     req = urllib.request.Request(url, data=data, headers=headers, method=method)
-    with urllib.request.urlopen(req) as r:
+    with urllib.request.urlopen(req, timeout=MEDIA_TIMEOUT if method == "PUT" else TIMEOUT) as r:
         txt = r.read().decode() if method != "PUT" else ""
         return r.headers, (json.loads(txt) if txt else {})
 
@@ -191,7 +193,7 @@ def _upload_image(token, owner, image_url):
     upload_url = val["uploadMechanism"]["com.linkedin.digitalmedia.uploading.MediaUploadHttpRequest"]["uploadUrl"]
     # 2) fetch image bytes
     ireq = urllib.request.Request(image_url, headers={"User-Agent": UA})
-    with urllib.request.urlopen(ireq) as r:
+    with urllib.request.urlopen(ireq, timeout=MEDIA_TIMEOUT) as r:
         img = r.read()
     # 3) PUT bytes
     _req("PUT", upload_url, token, raw=img, ctype="image/png")
@@ -220,7 +222,7 @@ def _upload_video(token, owner, video_url, poll_secs=180):
     # fetch the video bytes (local path or http URL)
     if video_url.startswith("http"):
         vreq = urllib.request.Request(video_url, headers={"User-Agent": UA})
-        with urllib.request.urlopen(vreq) as r:
+        with urllib.request.urlopen(vreq, timeout=MEDIA_TIMEOUT) as r:
             vid = r.read()
     else:
         with open(video_url, "rb") as fh:

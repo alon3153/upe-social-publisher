@@ -56,15 +56,18 @@ jobs:
           IG_UPRODUCTION_SPAIN_USER_ID:      ${{ secrets.IG_UPRODUCTION_SPAIN_USER_ID }}
           IG_UPRODUCTION_SPAIN_ACCESS_TOKEN: ${{ secrets.IG_UPRODUCTION_SPAIN_ACCESS_TOKEN }}
           IMAGE_BASE_URL: https://raw.githubusercontent.com/${{ github.repository }}/${{ github.ref_name }}
+          DRY_RUN: ${{ inputs.dry_run == true }}
+          CATCHUP: ${{ inputs.catchup == true }}
+          DAY: ${{ inputs.day }}
         run: |
-          ARGS=""
-          if [ "${{ inputs.dry_run }}" = "true" ]; then ARGS="$ARGS --dry-run"; fi
-          if [ "${{ inputs.catchup }}" = "true" ]; then
-            ARGS="$ARGS --catchup"
-          elif [ -n "${{ inputs.day }}" ]; then
-            ARGS="$ARGS --day ${{ inputs.day }}"
+          args=()
+          if [ "$DRY_RUN" = "true" ]; then args+=(--dry-run); fi
+          if [ "$CATCHUP" = "true" ]; then
+            args+=(--catchup)
+          elif [ -n "$DAY" ]; then
+            args+=(--day "$DAY")
           fi
-          python3 scripts/publish.py $ARGS
+          python3 scripts/publish.py "${args[@]}"
 
       - name: Commit state and report
         if: ${{ inputs.dry_run != 'true' }}

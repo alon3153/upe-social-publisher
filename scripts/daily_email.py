@@ -2,6 +2,7 @@
 """Daily approval email: pick next day, build per-account posts, virality-optimize,
 enqueue in Supabase, send ONE email per post via Resend with Approve/Reject buttons."""
 import os, sys, json, glob, datetime, urllib.request, urllib.error, urllib.parse
+import html as _html  # several functions take a parameter named `html`
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, ROOT)
@@ -118,11 +119,14 @@ def post_card(r):
     """Inner card for a single post inside the consolidated digest email."""
     approve = f"{FN}?id={r['id']}&token={r['token']}&action=approve"
     reject = f"{FN}?id={r['id']}&token={r['token']}&action=reject"
-    cap = (r.get("caption") or "").replace("&", "&amp;").replace("<", "&lt;").replace("\n", "<br>")
-    net = NET_HE.get(r["network"], r["network"])
-    img = r.get("image_url") or ""
+    # Captions are LLM-generated and may be rewritten by the advocate-variant
+    # step: escape fully (quotes included) before they land in the mail body.
+    cap = _html.escape(r.get("caption") or "", quote=True).replace("\n", "<br>")
+    net = _html.escape(NET_HE.get(r["network"], r["network"]), quote=True)
+    img = _html.escape(r.get("image_url") or "", quote=True)
+    lang = _html.escape(str(r.get("lang", "")), quote=True)
     return f"""<div dir="rtl" style="border:1px solid #eee;border-radius:12px;padding:16px;margin-bottom:16px;">
-   <div style="font-size:16px;font-weight:bold;color:#141414;margin-bottom:10px;">{net} <span style="font-size:12px;color:#888;font-weight:normal;">· {r.get('lang','')}</span></div>
+   <div style="font-size:16px;font-weight:bold;color:#141414;margin-bottom:10px;">{net} <span style="font-size:12px;color:#888;font-weight:normal;">· {lang}</span></div>
    <img src="{img}" alt="post" style="width:100%;border-radius:8px;display:block;margin-bottom:12px;">
    <div dir="ltr" style="direction:ltr;text-align:left;background:#f7f7f7;border-radius:8px;padding:12px;font-size:13px;line-height:1.55;color:#222;">{cap}</div>
    <table dir="rtl" style="width:100%;margin-top:12px;border-collapse:collapse;"><tr>
@@ -260,7 +264,7 @@ def send_resend(subject, html, attachment_path=None):
     req = urllib.request.Request("https://api.resend.com/emails", data=body,
         headers={"Authorization": f"Bearer {RESEND_KEY}", "Content-Type": "application/json", "User-Agent": UA})
     try:
-        with urllib.request.urlopen(req) as r:
+        with urllib.request.urlopen(req, timeout=60) as r:
             return True, r.read().decode()
     except urllib.error.HTTPError as e:
         return False, f"{e.code} {e.read().decode()[:200]}"

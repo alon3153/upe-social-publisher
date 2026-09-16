@@ -1,1 +1,4 @@
-requests>=2.31.0
+# >=2.32.4: below that, requests is affected by CVE-2024-35195 (verify=False
+# sticking to a Session) and CVE-2024-47081 (.netrc credential leak). Dependabot
+# (.github/dependabot.yml) proposes newer versions; pip-audit is run in CI.
+requests>=2.32.4,<3

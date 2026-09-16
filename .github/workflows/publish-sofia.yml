@@ -16,9 +16,14 @@ on:
         required: true
         default: "content/sofia/captions/barcelona_01.txt"
 
+permissions:
+  contents: read
+
 jobs:
   publish:
     runs-on: ubuntu-latest
+    timeout-minutes: 15
+    if: github.actor == 'alon3153'
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -32,8 +37,11 @@ jobs:
           IG_UPRODUCTION_SPAIN_ACCESS_TOKEN: ${{ secrets.IG_UPRODUCTION_SPAIN_ACCESS_TOKEN }}
           IG_UPRODUCTIONEVENTS_USER_ID:      ${{ secrets.IG_UPRODUCTIONEVENTS_USER_ID }}
           IG_UPRODUCTIONEVENTS_ACCESS_TOKEN: ${{ secrets.IG_UPRODUCTIONEVENTS_ACCESS_TOKEN }}
+          ACCOUNTS:     ${{ inputs.accounts }}
+          VIDEO_URL:    ${{ inputs.video_url }}
+          CAPTION_FILE: ${{ inputs.caption_file }}
         run: |
           python3 scripts/publish_sofia_reel.py \
-            --accounts "${{ github.event.inputs.accounts }}" \
-            --video-url "${{ github.event.inputs.video_url }}" \
-            --caption-file "${{ github.event.inputs.caption_file }}"
+            --accounts "$ACCOUNTS" \
+            --video-url "$VIDEO_URL" \
+            --caption-file "$CAPTION_FILE"

@@ -29,7 +29,7 @@ Usage:
   python3 scripts/executor.py --dry-run       # no writes/email, print plan
   python3 scripts/executor.py --max 3         # advance at most 3 this run
 """
-import os, sys, json, hmac, hashlib, argparse, datetime, urllib.request, urllib.error, urllib.parse
+import os, sys, json, hmac, hashlib, html, argparse, datetime, urllib.request, urllib.error, urllib.parse
 import signal
 import time
 from pathlib import Path
@@ -331,8 +331,11 @@ def render_html(inits, advanced):
         counts[it.get("status", "?")] = counts.get(it.get("status", "?"), 0) + 1
     summary = " · ".join(f"{k}: {v}" for k, v in sorted(counts.items()))
     rows = ""
+    # Everything below (title, summary, open questions) is model output that may
+    # have been steered by web_search results: escape it, never trust it as HTML.
+    esc = lambda v: html.escape(str(v if v is not None else ""), quote=True)
     for it, res in advanced:
-        oq = res.get("open_questions") or []
+        oq = [esc(q) for q in (res.get("open_questions") or [])]
         oqh = ("<br><span style='color:#b00;font-size:12px;'>❓ " + "; ".join(oq) + "</span>") if oq else ""
         ap, rj = approve_links(it["id"])
         if ap and res.get("ready_for_approval"):
@@ -343,10 +346,10 @@ def render_html(inits, advanced):
             act = "<span style='color:#999;font-size:12px;'>✍️ בתהליך</span>"
         else:
             act = ("✅ מוכן" if res.get("ready_for_approval") else "✍️ בתהליך")
-        rows += (f"<tr><td><b>{it.get('priority')}</b></td><td>{it.get('title')[:90]}</td>"
-                 f"<td>{res.get('summary','—')}{oqh}</td>"
+        rows += (f"<tr><td><b>{esc(it.get('priority'))}</b></td><td>{esc((it.get('title') or '')[:90])}</td>"
+                 f"<td>{esc(res.get('summary','—'))}{oqh}</td>"
                  f"<td>{act}</td>"
-                 f"<td><code>deliverables/{it['id']}.md</code></td></tr>")
+                 f"<td><code>deliverables/{esc(it['id'])}.md</code></td></tr>")
     return f"""<html dir="rtl" lang="he"><head><meta charset="utf-8"></head>
 <body dir="rtl" style="font-family:Arial,Helvetica,sans-serif;font-size:14px;direction:rtl;text-align:right;color:#111;">
 <div dir="rtl" style="direction:rtl;text-align:right;max-width:720px;">
