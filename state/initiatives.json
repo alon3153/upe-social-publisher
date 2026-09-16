@@ -17877,6 +17877,10 @@
       {
         "date": "2026-09-15",
         "error": "anthropic The read operation timed out"
+      },
+      {
+        "date": "2026-09-16",
+        "error": "anthropic The read operation timed out"
       }
     ],
     "created": "2026-09-11",
@@ -17994,6 +17998,10 @@
       {
         "date": "2026-09-15",
         "error": "anthropic The read operation timed out"
+      },
+      {
+        "date": "2026-09-16",
+        "error": "anthropic The read operation timed out"
       }
     ],
     "created": "2026-09-11",
@@ -18014,6 +18022,10 @@
       },
       {
         "date": "2026-09-15",
+        "error": "anthropic The read operation timed out"
+      },
+      {
+        "date": "2026-09-16",
         "error": "anthropic The read operation timed out"
       }
     ],
@@ -18160,6 +18172,10 @@
       {
         "date": "2026-09-15",
         "error": "anthropic The read operation timed out"
+      },
+      {
+        "date": "2026-09-16",
+        "error": "anthropic The read operation timed out"
       }
     ],
     "created": "2026-09-12",
@@ -18189,6 +18205,10 @@
       },
       {
         "date": "2026-09-15",
+        "error": "anthropic The read operation timed out"
+      },
+      {
+        "date": "2026-09-16",
         "error": "anthropic The read operation timed out"
       }
     ],
@@ -18413,6 +18433,10 @@
       {
         "date": "2026-09-15",
         "error": "anthropic The read operation timed out"
+      },
+      {
+        "date": "2026-09-16",
+        "error": "anthropic The read operation timed out"
       }
     ],
     "created": "2026-09-14",
@@ -18422,7 +18446,7 @@
     "channel": "leads",
     "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
     "action_key": "salesforce-attribution-fix",
-    "owner": "Marketing Ops מכין; אלון מאשר; נציגי מכירות מיישמים",
+    "owner": "מנהל מכירות מכין; Alon מאשר ומפיץ",
     "success_metric": "ייחוס לידים: בסיס לא-מיוחס; יעד המדד מקור אמיתי. יש להשוות תקופות תואמות."
   },
   "2769e4c7": {
