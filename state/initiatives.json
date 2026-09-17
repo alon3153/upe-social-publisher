@@ -17881,6 +17881,10 @@
       {
         "date": "2026-09-16",
         "error": "anthropic The read operation timed out"
+      },
+      {
+        "date": "2026-09-17",
+        "error": "anthropic The read operation timed out"
       }
     ],
     "created": "2026-09-11",
@@ -18002,6 +18006,10 @@
       {
         "date": "2026-09-16",
         "error": "anthropic The read operation timed out"
+      },
+      {
+        "date": "2026-09-17",
+        "error": "anthropic The read operation timed out"
       }
     ],
     "created": "2026-09-11",
@@ -18026,6 +18034,10 @@
       },
       {
         "date": "2026-09-16",
+        "error": "anthropic The read operation timed out"
+      },
+      {
+        "date": "2026-09-17",
         "error": "anthropic The read operation timed out"
       }
     ],
@@ -18176,6 +18188,10 @@
       {
         "date": "2026-09-16",
         "error": "anthropic The read operation timed out"
+      },
+      {
+        "date": "2026-09-17",
+        "error": "anthropic The read operation timed out"
       }
     ],
     "created": "2026-09-12",
@@ -18210,17 +18226,21 @@
       {
         "date": "2026-09-16",
         "error": "anthropic The read operation timed out"
+      },
+      {
+        "date": "2026-09-17",
+        "error": "anthropic The read operation timed out"
       }
     ],
     "created": "2026-09-12",
     "updated": "2026-09-12",
     "kind": "recommendation",
-    "priority": "P1",
+    "priority": "P0",
     "channel": "linkedin",
     "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
     "action_key": "linkedin-executive-advocacy",
-    "owner": "מנכ״ל מפרסם; צוות מכין טיוטות; Alon מאשר",
-    "success_metric": "נוכחות סושיאל (רצפה): בסיס 16.0; יעד המדד 5. יש להשוות תקופות תואמות."
+    "owner": "מנכ\"ל מכין טיוטת פוסטים; Alon מאשר לפני כל פרסום",
+    "success_metric": "נוכחות סושיאל (רצפה): בסיס 8.0; יעד המדד 5. יש להשוות תקופות תואמות."
   },
   "8c4f9ebe": {
     "id": "8c4f9ebe",
@@ -18437,6 +18457,10 @@
       {
         "date": "2026-09-16",
         "error": "anthropic The read operation timed out"
+      },
+      {
+        "date": "2026-09-17",
+        "error": "anthropic The read operation timed out"
       }
     ],
     "created": "2026-09-14",
@@ -18446,7 +18470,7 @@
     "channel": "leads",
     "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
     "action_key": "salesforce-attribution-fix",
-    "owner": "מנהל מכירות מכין; Alon מאשר ומפיץ",
+    "owner": "מנהל מכירות מכין; Alon מאשר הפצה",
     "success_metric": "ייחוס לידים: בסיס לא-מיוחס; יעד המדד מקור אמיתי. יש להשוות תקופות תואמות."
   },
   "2769e4c7": {
