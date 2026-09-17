@@ -1,20 +1,20 @@
 {
-  "updated_at": "2026-09-16",
+  "updated_at": "2026-09-17",
   "scores": {
     "instagram": 42,
     "facebook": 28,
     "tiktok": 10,
-    "linkedin": 31,
+    "linkedin": 30,
     "youtube": 55,
-    "google_organic_geo": 72,
-    "overall": 68
+    "google_organic_geo": 62,
+    "overall": 72
   },
   "recommendations": [
     {
       "category": "gated",
       "priority": "P0",
       "action_key": "salesforce-attribution-fix",
-      "owner": "מנהל מכירות מכין; Alon מאשר ומפיץ",
+      "owner": "מנהל מכירות מכין; Alon מאשר הפצה",
       "success_metric": "ייחוס לידים: בסיס לא-מיוחס; יעד המדד מקור אמיתי. יש להשוות תקופות תואמות.",
       "evidence": {
         "source": "scorecard",
@@ -26,9 +26,31 @@
       },
       "evidence_url": null,
       "target_url": null,
-      "action": "הפץ את lead-source-guidance.md (draft_ready, לא הופצה) לנציגי המכירות; הגדר picklist סגור ב-Salesforce (Google Organic, Web Form, LinkedIn, Advertisement Paid, Word of Mouth, Existing Customer, Other+הערה חובה); קיים 15 דקות הדרכה; בדוק עמידה בסוף חודש.",
+      "action": "הפץ את טיוטת lead-source-guidance.md (draft_ready, לא הופצה — path: Uproduction Operations/Marketing-Council/verification-2026-09-13/lead-source-guidance.md) לנציגי המכירות; הגדר picklist סגור ב-Salesforce עם ערכים: Google Organic, Web (Form), LinkedIn, Advertisement (Paid), Word of Mouth, Existing Customer, Other (חייב הערה); קיים 15 דקות הכשרה; בדוק עמידה בסוף חודש אוקטובר 2026.",
       "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
       "channel": "leads",
+      "status": "candidate",
+      "detail": "הצעה לבדיקה על בסיס המדד המתועד; לא בוצע שינוי."
+    },
+    {
+      "category": "gated",
+      "priority": "P0",
+      "action_key": "linkedin-executive-advocacy",
+      "owner": "מנכ\"ל מכין טיוטת פוסטים; Alon מאשר לפני כל פרסום",
+      "success_metric": "נוכחות סושיאל (רצפה): בסיס 8.0; יעד המדד 5. יש להשוות תקופות תואמות.",
+      "evidence": {
+        "source": "scorecard",
+        "metric": "נוכחות סושיאל (רצפה)",
+        "value": 8.0,
+        "target": 5,
+        "unit": "",
+        "status": "✅"
+      },
+      "evidence_url": "https://www.tremendous.com/blog/b2b-social-media-marketing/",
+      "target_url": null,
+      "action": "הפעל executive posting: 2 פוסטים/שבוע מפרופיל אישי של מנכ\"ל (case-study אנונימי + תובנה ענפית), דף החברה עושה repost בלבד — בהתאם ל-initiative ba5e2d8e (in_progress). פרסום מותנה באישור Alon לכל פוסט.",
+      "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
+      "channel": "linkedin",
       "status": "candidate",
       "detail": "הצעה לבדיקה על בסיס המדד המתועד; לא בוצע שינוי."
     }
