@@ -266,6 +266,73 @@ OUTPUT FORMAT (important):
 Do NOT put the deliverable inside the json. The json is metadata only and must be the last thing you output."""
 
 
+class StreamFailure(ValueError):
+    """A response that must not be registered as a complete draft."""
+
+
+def read_message_stream(response):
+    """Accumulate text SSE blocks; never accept a disconnected or failed stream.
+
+    Pings/search events keep the socket alive while the 240s outer deadline
+    still limits total work. Tool payloads are deliberately not draft text.
+    """
+    chunks, blocks, active = {}, {}, set()
+    started, stop_reason = False, None
+    data_lines = []
+    for raw_line in response:
+        line = raw_line.decode("utf-8").rstrip("\r\n")
+        if line.startswith("data:"):
+            data_lines.append(line[5:].lstrip())
+            continue
+        if line or not data_lines:
+            continue
+        try:
+            event = json.loads("\n".join(data_lines))
+        except (ValueError, TypeError) as exc:
+            raise StreamFailure("malformed stream event") from exc
+        data_lines = []
+        kind = event.get("type")
+        if kind == "error":
+            # Avoid persisting upstream messages, which may echo private inputs.
+            raise StreamFailure("provider stream error")
+        if kind == "message_start":
+            if started:
+                raise StreamFailure("duplicate message start")
+            started = True
+        elif kind == "content_block_start":
+            index = event.get("index")
+            if not started or index in blocks:
+                raise StreamFailure("invalid block start")
+            block = event.get("content_block", {})
+            blocks[index] = block.get("type")
+            active.add(index)
+            if blocks[index] == "text":
+                chunks[index] = block.get("text", "")
+        elif kind == "content_block_delta":
+            index = event.get("index")
+            if index not in active:
+                raise StreamFailure("delta outside active block")
+            delta = event.get("delta", {})
+            if delta.get("type") == "text_delta":
+                if blocks[index] != "text":
+                    raise StreamFailure("text delta outside text block")
+                chunks[index] += delta.get("text", "")
+        elif kind == "content_block_stop":
+            index = event.get("index")
+            if index not in active:
+                raise StreamFailure("invalid block stop")
+            active.remove(index)
+        elif kind == "message_delta":
+            stop_reason = event.get("delta", {}).get("stop_reason", stop_reason)
+        elif kind == "message_stop":
+            if not started or active or stop_reason != "end_turn":
+                raise StreamFailure("incomplete message (stop=%s)" % stop_reason)
+            return {"content": [{"type": "text", "text": chunks[i]}
+                                for i in sorted(chunks)], "stop_reason": stop_reason}
+        # Unknown event types and pings are forward-compatible, never draft text.
+    raise StreamFailure("stream disconnected before message_stop")
+
+
 def run_agent(it):
     prior = ""
     dpath = DELIV_DIR / f"{it['id']}.md"
@@ -277,7 +344,7 @@ def run_agent(it):
     prompt += "\nOWNER: " + str(it.get("owner") or "executor prepares draft; Alon approves")
     prompt += "\nMEASURABLE ACCEPTANCE CRITERION: " + str(it.get("success_metric") or "state a verifiable completion check")
     prompt += "\nTreat traffic/ranking/lead uplift as hypotheses; never claim a draft was published or a KPI improved without measured evidence."
-    body = {"model": MODEL, "max_tokens": 16000,
+    body = {"model": MODEL, "max_tokens": 16000, "stream": True,
             "tools": [{"type": "web_search_20250305", "name": "web_search", "max_uses": 4}],
             "messages": [{"role": "user", "content": prompt}]}
     data = json.dumps(body).encode()
@@ -288,8 +355,10 @@ def run_agent(it):
         try:
             req = urllib.request.Request("https://api.anthropic.com/v1/messages", data=data, headers=headers)
             with urllib.request.urlopen(req, timeout=90) as r:
-                resp = json.loads(r.read().decode())
+                resp = read_message_stream(r)
             break
+        except StreamFailure as e:
+            return {"error": f"anthropic {e}"}
         except urllib.error.HTTPError as e:
             if e.code in (429, 500, 529) and attempt < 1:
                 time.sleep(8 * (attempt + 1)); continue
