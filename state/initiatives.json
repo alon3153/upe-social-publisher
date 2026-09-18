@@ -17885,6 +17885,10 @@
       {
         "date": "2026-09-17",
         "error": "anthropic The read operation timed out"
+      },
+      {
+        "date": "2026-09-18",
+        "error": "action deadline exceeded"
       }
     ],
     "created": "2026-09-11",
@@ -17992,8 +17996,8 @@
   "251c2671": {
     "id": "251c2671",
     "title": "כפיל SEO עברי מסחרי על /נופש-חברה/ ו-/אירוע-קונספט/ — שתי עמדות pos.17-19 עם 645 חיפושים חודשיים מצטברים; כניסה ל-Top-5 מוסיפה 1-2 לידים/חודש ישירות",
-    "status": "todo",
-    "revisions": 0,
+    "status": "awaiting_approval",
+    "revisions": 1,
     "history": [
       {
         "date": "2026-09-14",
@@ -18010,10 +18014,15 @@
       {
         "date": "2026-09-17",
         "error": "anthropic The read operation timed out"
+      },
+      {
+        "date": "2026-09-18",
+        "summary": "הופקו שני עמודי SEO מסחריים מלאים בעברית עבור /נופש-חברה/ ו-/אירוע-קונספט/ — כולל H1, meta title+description, תוכן מלא בכל הסקשנים, טבלאות מיפוי מילות מפתח, FAQ, CTA משוקעים, internal links, ו-JSON-LD schema מוכן להדבקה — טיוטה לאישור אלון בלבד, לא פורסמה.",
+        "ready": true
       }
     ],
     "created": "2026-09-11",
-    "updated": "2026-09-11",
+    "updated": "2026-09-18",
     "kind": "leads_action",
     "priority": "leads",
     "channel": "leads"
@@ -18039,6 +18048,10 @@
       {
         "date": "2026-09-17",
         "error": "anthropic The read operation timed out"
+      },
+      {
+        "date": "2026-09-18",
+        "error": "action deadline exceeded"
       }
     ],
     "created": "2026-09-11",
@@ -18192,6 +18205,10 @@
       {
         "date": "2026-09-17",
         "error": "anthropic The read operation timed out"
+      },
+      {
+        "date": "2026-09-18",
+        "error": "action deadline exceeded"
       }
     ],
     "created": "2026-09-12",
@@ -18230,17 +18247,21 @@
       {
         "date": "2026-09-17",
         "error": "anthropic The read operation timed out"
+      },
+      {
+        "date": "2026-09-18",
+        "error": "action deadline exceeded"
       }
     ],
     "created": "2026-09-12",
     "updated": "2026-09-12",
     "kind": "recommendation",
-    "priority": "P0",
+    "priority": "P1",
     "channel": "linkedin",
     "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
     "action_key": "linkedin-executive-advocacy",
-    "owner": "מנכ\"ל מכין טיוטת פוסטים; Alon מאשר לפני כל פרסום",
-    "success_metric": "נוכחות סושיאל (רצפה): בסיס 8.0; יעד המדד 5. יש להשוות תקופות תואמות."
+    "owner": "מנכ\"ל (פרופיל אישי) מכין טיוטות; Alon מאשר לפני פרסום",
+    "success_metric": "לידים מיוחסים לדיגיטל: בסיס 5; יעד המדד 3. יש להשוות תקופות תואמות."
   },
   "8c4f9ebe": {
     "id": "8c4f9ebe",
@@ -18443,8 +18464,8 @@
   "af90d50d": {
     "id": "af90d50d",
     "title": "הפץ את טיוטת lead-source-guidance.md (סטטוס draft_ready, לא הופצה) לנציגי המכירות; הגדר picklist סגור ב-Salesforce עם ערכים: Google Organic, Web (Form), LinkedIn, Advertisement (Paid), Word of Mouth, Existing Customer, Other (חייב הערה); קיים 15 דקות הכשרה; בדוק עמידה בסוף חודש.",
-    "status": "todo",
-    "revisions": 0,
+    "status": "awaiting_approval",
+    "revisions": 1,
     "history": [
       {
         "date": "2026-09-14",
@@ -18461,16 +18482,21 @@
       {
         "date": "2026-09-17",
         "error": "anthropic The read operation timed out"
+      },
+      {
+        "date": "2026-09-18",
+        "summary": "הופק חבילת מסמכים מוכנה-לאישור הכוללת: מדריך Lead Source לנציגים (7 ערכי Picklist סגורים עם הגדרות תפעוליות), מדריך טכני לאדמין Salesforce (גיבוי, עדכון פיקליסט, Validation Rule, UTM Mapping), תסריט הכשרה מלא של 15 דקות עם תרחישים מ-UPE, פרוטוקול בדיקת עמידה סוף-חודש עם Report ו-KPIs, ו-Rollout Checklist — כולם בסטטוס DRAFT הממתין לאישור Alon.",
+        "ready": true
       }
     ],
     "created": "2026-09-14",
-    "updated": "2026-09-14",
+    "updated": "2026-09-18",
     "kind": "recommendation",
     "priority": "P0",
     "channel": "leads",
     "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
     "action_key": "salesforce-attribution-fix",
-    "owner": "מנהל מכירות מכין; Alon מאשר הפצה",
+    "owner": "מנהל מכירות מכין; Alon מאשר; נציגי מכירות מיישמים",
     "success_metric": "ייחוס לידים: בסיס לא-מיוחס; יעד המדד מקור אמיתי. יש להשוות תקופות תואמות."
   },
   "2769e4c7": {
