@@ -3,6 +3,8 @@ on:
   pull_request:
     paths:
       - 'scripts/council*.py'
+      - 'scripts/executor.py'
+      - '.github/workflows/executor.yml'
       - 'scripts/leads_source.py'
       - 'scripts/seo_geo_source.py'
       - 'scripts/site_inventory.py'
