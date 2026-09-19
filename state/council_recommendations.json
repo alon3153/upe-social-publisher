@@ -1,20 +1,20 @@
 {
-  "updated_at": "2026-09-18",
+  "updated_at": "2026-09-19",
   "scores": {
-    "instagram": 52,
-    "facebook": 28,
-    "tiktok": 10,
-    "linkedin": 35,
-    "youtube": 62,
-    "google_organic_geo": 68,
-    "overall": 72
+    "instagram": 10,
+    "facebook": 22,
+    "tiktok": 5,
+    "linkedin": 28,
+    "youtube": 55,
+    "google_organic_geo": 62,
+    "overall": 63
   },
   "recommendations": [
     {
       "category": "gated",
       "priority": "P0",
       "action_key": "salesforce-attribution-fix",
-      "owner": "מנהל מכירות מכין; Alon מאשר; נציגי מכירות מיישמים",
+      "owner": "Sales Ops מכין; Alon מאשר ומפיץ",
       "success_metric": "ייחוס לידים: בסיס לא-מיוחס; יעד המדד מקור אמיתי. יש להשוות תקופות תואמות.",
       "evidence": {
         "source": "scorecard",
@@ -25,8 +25,8 @@
         "status": "❌"
       },
       "evidence_url": null,
-      "target_url": null,
-      "action": "הפץ את טיוטת lead-source-guidance.md (draft_ready, לא הופצה) לנציגי המכירות; הגדר picklist סגור ב-Salesforce (Google Organic, Web/Form, LinkedIn, Advertisement/Paid, Word of Mouth, Existing Customer, Other+הערת חובה); קיים הכשרה של 15 דקות; בדוק עמידה בסוף החודש.",
+      "target_url": "Uproduction Operations/Marketing-Council/verification-2026-09-13/lead-source-guidance.md",
+      "action": "הפץ את טיוטת lead-source-guidance.md (draft_ready, לא הופצה) לנציגי המכירות; הגדר picklist סגור ב-Salesforce: Google Organic, Web (Form), LinkedIn, Advertisement (Paid), Word of Mouth, Existing Customer, Other (חייב הערה); קיים 15 דקות הכשרה; בדוק עמידה בסוף חודש.",
       "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
       "channel": "leads",
       "status": "candidate",
@@ -36,7 +36,7 @@
       "category": "gated",
       "priority": "P1",
       "action_key": "linkedin-executive-advocacy",
-      "owner": "מנכ\"ל (פרופיל אישי) מכין טיוטות; Alon מאשר לפני פרסום",
+      "owner": "מנכ\"ל מכין טיוטות; Alon מאשר; דף החברה עושה repost בלבד",
       "success_metric": "לידים מיוחסים לדיגיטל: בסיס 5; יעד המדד 3. יש להשוות תקופות תואמות.",
       "evidence": {
         "source": "scorecard",
@@ -46,9 +46,9 @@
         "unit": "",
         "status": "✅"
       },
-      "evidence_url": "https://heropost.io/linkedin-b2b-marketing-strategy-2026/",
-      "target_url": null,
-      "action": "הפעל את המהלך הקיים (in_progress): פרסם 2 פוסטים/שבוע מפרופיל אישי של מנכ\"ל — case-study מהפקה אמיתית + insight תפעולי; דף החברה עושה repost בלבד. השתמש בפורמט קצר (פחות מ-90 שניות לווידאו, text+hook חזק לכתוב). כל פוסט עובר אישור לפני פרסום.",
+      "evidence_url": "https://lagrowthmachine.com/linkedin-marketing-strategy-2026/",
+      "target_url": "https://www.linkedin.com/feed/update/urn:li:ugcPost:7500872373114613760",
+      "action": "הפעל 2 פוסטים/שבוע מפרופיל אישי מנכ\"ל: פוסט case-study מהפקה ספציפית (עם מספרים: משתתפים, יעד, אתגר שנפתר) + פוסט insight תעשייתי — דף החברה עושה repost בלבד ללא כפילות תוכן.",
       "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
       "channel": "linkedin",
       "status": "candidate",
