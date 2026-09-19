@@ -1,0 +1,265 @@
+{
+  "batch": "week2",
+  "persona": "Sofia",
+  "format": "UGC selfie-style, 9:16, 15s, Seedance 2.0",
+  "persona_lock": "Sofia, early thirties, dark brown shoulder-length wavy hair, soft side part, warm olive skin with visible texture and faint forehead shine, light brown eyes, small gold hoops, cream linen blazer over a camel knit top",
+  "brand_stats": "15 years, 200+ events, 120+ countries",
+  "source_formula": ".claude/skills/arcads-external-api/prompting/prompt-library/seedance-2-ugc.md",
+  "ads": [
+    {
+      "id": "rome_power",
+      "day": 9003,
+      "headline": "The Rome Villa That Can't Power Your Show",
+      "city": "Rome",
+      "angle": "Heritage venues have heritage electrical capacity. Full AV plus catering load trips the house supply, and the generator nobody budgeted shows up at load-in.",
+      "fix": "Get the available amperage and a power survey in writing before signing, and budget the generator as its own line.",
+      "accounts": [
+        "uproduction_spain",
+        "uproductionevents"
+      ],
+      "scheduled_date": "2026-09-22",
+      "render": {
+        "endpoint": "POST /v2/videos/generate",
+        "model": "seedance-2.0",
+        "duration": 15,
+        "resolution": "720p",
+        "aspectRatio": "9:16",
+        "audioEnabled": true,
+        "referenceImages": [],
+        "prompt": "15 seconds UGC style insider-tip video, filmed on smartphone, late-afternoon light through shuttered windows, handheld selfie angle. Sofia, early thirties, dark brown shoulder-length wavy hair, soft side part, warm olive skin with visible texture and faint forehead shine, light brown eyes, small gold hoops, cream linen blazer over a camel knit top, inside an empty Roman villa hall — chalky fresco walls, a folding ladder against a column, coiled black cable on the stone floor, unfinished and real.\n\nOpens on her, eyebrows up: “That Roman villa you love? It probably can’t power your show.”\n\nQuick jump cut — closer, tipping the phone toward a fuse box behind her: “Heritage building, heritage wiring. Your AV and catering trip the whole house.”\n\nJump cut — she glances at the cable run, tilts her head, a knowing shrug, says nothing.\n\nJump cut — back to the first angle, lifting a clipboard: “Get the amperage in writing. Before you sign.” She half-smiles and stops the recording.\n\nTone is warm, conspiratorial, matter-of-fact — she lowers her voice, breathes between sentences, never rushes, a beat of silence after each line. Each cut is closer or at a new angle.\n\nLighting is uneven afternoon daylight, one cheek bright, the other in shadow, no ring light, no filters. Image imperfect — natural phone quality, not color graded, grain in the darker corners. Sound direct from the phone mic — her natural voice, stone-room echo, street noise under it.\n\nFeels candid and insider — a producer sending a voice note before you make an expensive mistake."
+      },
+      "dialogue": [
+        {
+          "beat": "HOOK",
+          "line": "That Roman villa you love? It probably can’t power your show."
+        },
+        {
+          "beat": "SHOW",
+          "line": "Heritage building, heritage wiring. Your AV and catering trip the whole house."
+        },
+        {
+          "beat": "SILENT",
+          "line": null
+        },
+        {
+          "beat": "VERDICT",
+          "line": "Get the amperage in writing. Before you sign."
+        }
+      ],
+      "spoken_word_count": 31,
+      "overlay_cards": [
+        "THE ROME VILLA\nTHAT CAN'T POWER\nYOUR SHOW",
+        "Heritage wiring,\nmodern AV load",
+        "1 · Power survey\nbefore signing",
+        "2 · Amperage\nin writing",
+        "FOLLOW\n@uproductionevents"
+      ],
+      "caption": "That Roman villa you fell in love with? It may not be able to power your show.\n\nHeritage buildings run on heritage electrics. Add full AV to a live catering kitchen and you trip the house supply — usually at load-in, when a generator is an emergency line item instead of a budgeted one.\n\nThe fix: ask for a power survey and the available amperage in writing before you sign, and price the generator as its own line from day one.\n\nAfter 200+ events across 120+ countries, the venue that photographs best is rarely the one that just works.\n\nFollow Sofia for the details venues won’t volunteer. 🎬\n\n#corporateevents #incentivetravel #eventplanner #rome #eventprofs #mice #businesstravel #eventos",
+      "status": "awaiting_approval"
+    },
+    {
+      "id": "santorini_transfer",
+      "day": 9004,
+      "headline": "The Santorini Transfer That Strands 150 Guests",
+      "city": "Santorini",
+      "angle": "Caldera arrivals depend on tenders and ferries. One afternoon of meltemi wind and the group is still on the water while the gala starts.",
+      "fix": "Build the arrival around the weather window rather than the sunset photo, and hold a land-side backup venue.",
+      "accounts": [
+        "uproduction_spain",
+        "uproductionevents"
+      ],
+      "scheduled_date": "2026-09-24",
+      "render": {
+        "endpoint": "POST /v2/videos/generate",
+        "model": "seedance-2.0",
+        "duration": 15,
+        "resolution": "720p",
+        "aspectRatio": "9:16",
+        "audioEnabled": true,
+        "referenceImages": [],
+        "prompt": "15 seconds UGC style insider-tip video, filmed on smartphone, hazy midday light off a white wall, handheld selfie angle, wind moving her hair. Sofia, early thirties, dark brown shoulder-length wavy hair, soft side part, warm olive skin with visible texture and faint forehead shine, light brown eyes, small gold hoops, cream linen blazer over a camel knit top, on a whitewashed terrace above a caldera — a low painted railing, a folded parasol, two stacked crates, sea moving below, windy and real.\n\nOpens on her squinting, hair across her face: “Santorini sells itself in the deck. Then the wind picks up.”\n\nQuick jump cut — phone turns to the whitecaps, then back: “Tenders stop. Your hundred and fifty guests are still on the water.”\n\nJump cut — close-up, she pushes hair from her eyes, exhales, says nothing.\n\nJump cut — back to the first framing: “We always hold a land-side backup. Always.” She shrugs once.\n\nTone is warm, conspiratorial, matter-of-fact — she lowers her voice, breathes between sentences, never rushes, a beat of silence after each line. Each cut is closer or at a new angle.\n\nLighting is harsh midday sun, blown out on the wall behind her, her face half in shade, no ring light, no filters. Image imperfect — natural phone quality, motion blur when the wind moves her hair, not color graded. Sound direct from the phone mic — her natural voice, wind buffeting the mic, water below.\n\nFeels direct and unbothered — someone who has watched this day go wrong."
+      },
+      "dialogue": [
+        {
+          "beat": "HOOK",
+          "line": "Santorini sells itself in the deck. Then the wind picks up."
+        },
+        {
+          "beat": "SHOW",
+          "line": "Tenders stop. Your hundred and fifty guests are still on the water."
+        },
+        {
+          "beat": "SILENT",
+          "line": null
+        },
+        {
+          "beat": "VERDICT",
+          "line": "We always hold a land-side backup. Always."
+        }
+      ],
+      "spoken_word_count": 30,
+      "overlay_cards": [
+        "THE SANTORINI\nTRANSFER THAT STRANDS\n150 GUESTS",
+        "Tenders stop\nwhen the wind turns",
+        "1 · Plan the arrival\naround the weather",
+        "2 · Hold a land-side\nbackup venue",
+        "FOLLOW\n@uproductionevents"
+      ],
+      "caption": "That Santorini caldera arrival? The wind decides whether it happens.\n\nTender and ferry movements are weather-dependent, and the meltemi does not check your run sheet. One rough afternoon and 150 guests are still on the water while the gala clock runs.\n\nThe fix: design the arrival around the weather window instead of the sunset photo, and contract a land-side backup venue you can call by midday.\n\nAfter 200+ events across 120+ countries, the island arrival is the single most over-promised moment in incentive travel.\n\nFollow Sofia for the details venues won’t volunteer. 🎬\n\n#corporateevents #incentivetravel #eventplanner #santorini #eventprofs #mice #businesstravel #eventos",
+      "status": "awaiting_approval"
+    },
+    {
+      "id": "milan_fairweek",
+      "day": 9005,
+      "headline": "The Milan Week That Triples Your Hotel Bill",
+      "city": "Milan",
+      "angle": "Salone del Mobile, the fashion weeks and EICMA collapse availability and multiply room rates, and minimum-stay rules appear overnight.",
+      "fix": "Check the fair calendar before locking dates. Moving the programme by one week can halve the accommodation budget.",
+      "accounts": [
+        "uproduction_spain",
+        "uproductionevents"
+      ],
+      "scheduled_date": "2026-09-26",
+      "render": {
+        "endpoint": "POST /v2/videos/generate",
+        "model": "seedance-2.0",
+        "duration": 15,
+        "resolution": "720p",
+        "aspectRatio": "9:16",
+        "audioEnabled": true,
+        "referenceImages": [],
+        "prompt": "15 seconds UGC style insider-tip video, filmed on smartphone, flat overcast daylight through a lobby window, handheld selfie angle. Sofia, early thirties, dark brown shoulder-length wavy hair, soft side part, warm olive skin with visible texture and faint forehead shine, light brown eyes, small gold hoops, cream linen blazer over a camel knit top, to one side of a busy hotel lobby — a luggage trolley stacked with cases, a queue at reception, a folded newspaper on an armchair, crowded and real.\n\nOpens on her leaning in, flat delivery: “Same hotel. Same room. Three times the price.”\n\nQuick jump cut — she glances back at the queue, then to camera: “You booked Milan during furniture fair week. Nobody checked the calendar.”\n\nJump cut — tighter, eyebrows raised, a short breath of a laugh, says nothing.\n\nJump cut — back wider, one finger up: “Move your dates one week. That’s the whole saving.” She looks away as it cuts.\n\nTone is warm, conspiratorial, matter-of-fact — she lowers her voice, breathes between sentences, never rushes, a beat of silence after each line. Each cut is closer or at a new angle.\n\nLighting is flat grey window light mixed with warm lobby lamps, an uneven cast on her face, no ring light, no filters. Image imperfect — natural phone quality, soft focus, an auto white balance shift between cuts. Sound direct from the phone mic — her natural voice, lobby chatter, a rolling suitcase behind her.\n\nFeels dry and knowing — a colleague telling you what your budget spreadsheet cannot."
+      },
+      "dialogue": [
+        {
+          "beat": "HOOK",
+          "line": "Same hotel. Same room. Three times the price."
+        },
+        {
+          "beat": "SHOW",
+          "line": "You booked Milan during furniture fair week. Nobody checked the calendar."
+        },
+        {
+          "beat": "SILENT",
+          "line": null
+        },
+        {
+          "beat": "VERDICT",
+          "line": "Move your dates one week. That’s the whole saving."
+        }
+      ],
+      "spoken_word_count": 28,
+      "overlay_cards": [
+        "THE MILAN WEEK\nTHAT TRIPLES YOUR\nHOTEL BILL",
+        "Fair week collapses\navailability",
+        "1 · Check the fair\ncalendar first",
+        "2 · Shift the dates\nby one week",
+        "FOLLOW\n@uproductionevents"
+      ],
+      "caption": "Same hotel, same room, three times the price. The only thing that changed was the week.\n\nMilan’s big fairs — Salone del Mobile, the fashion weeks, EICMA — empty the city’s room stock and multiply rates. Minimum-stay rules appear, and the rooms you held quietly disappear.\n\nThe fix: check the fair calendar before you lock a single date. Shifting the programme by one week is often the largest saving available on the whole budget.\n\nAfter 200+ events across 120+ countries, the cheapest line item to fix is always the date.\n\nFollow Sofia for the details venues won’t volunteer. 🎬\n\n#corporateevents #incentivetravel #eventplanner #milan #eventprofs #mice #businesstravel #eventos",
+      "status": "awaiting_approval"
+    },
+    {
+      "id": "marrakech_riad",
+      "day": 9006,
+      "headline": "The Marrakech Riad That Only Sleeps Forty",
+      "city": "Marrakech",
+      "angle": "Riads are small. A 200-person programme splits across six properties, which means six breakfasts, six transfer lists and six points of failure.",
+      "fix": "Anchor the group in one property and use riads for the leadership tier only.",
+      "accounts": [
+        "uproduction_spain",
+        "uproductionevents"
+      ],
+      "scheduled_date": "2026-09-29",
+      "render": {
+        "endpoint": "POST /v2/videos/generate",
+        "model": "seedance-2.0",
+        "duration": 15,
+        "resolution": "720p",
+        "aspectRatio": "9:16",
+        "audioEnabled": true,
+        "referenceImages": [],
+        "prompt": "15 seconds UGC style insider-tip video, filmed on smartphone, dappled light through a lattice screen, handheld selfie angle. Sofia, early thirties, dark brown shoulder-length wavy hair, soft side part, warm olive skin with visible texture and faint forehead shine, light brown eyes, small gold hoops, cream linen blazer over a camel knit top, in a small tiled riad courtyard — a low fountain, two potted palms, folded blankets on a bench, a narrow staircase behind her, intimate and real.\n\nOpens on her holding the phone close, half-smiling: “That riad on your moodboard sleeps forty. You’re bringing two hundred.”\n\nQuick jump cut — she pans slowly across the courtyard and back: “So now it’s six properties, six breakfasts, six transfer lists.”\n\nJump cut — close on her hand, counting three fingers off, one shake of the head, says nothing.\n\nJump cut — back to the opening framing: “One anchor hotel. Riads for the leadership tier.” She nods once and it stops.\n\nTone is warm, conspiratorial, matter-of-fact — she lowers her voice, breathes between sentences, never rushes, a beat of silence after each line. Each cut is closer or at a new angle.\n\nLighting is dappled and uneven, lattice shadow moving across her face and the tiles, no ring light, no filters. Image imperfect — natural phone quality, grain in the shaded areas, motion blur on the pan. Sound direct from the phone mic — her natural voice, running fountain water, birds overhead.\n\nFeels affectionate and rueful — someone who loves the place and still has to say the hard part."
+      },
+      "dialogue": [
+        {
+          "beat": "HOOK",
+          "line": "That riad on your moodboard sleeps forty. You’re bringing two hundred."
+        },
+        {
+          "beat": "SHOW",
+          "line": "So now it’s six properties, six breakfasts, six transfer lists."
+        },
+        {
+          "beat": "SILENT",
+          "line": null
+        },
+        {
+          "beat": "VERDICT",
+          "line": "One anchor hotel. Riads for the leadership tier."
+        }
+      ],
+      "spoken_word_count": 29,
+      "overlay_cards": [
+        "THE MARRAKECH RIAD\nTHAT ONLY SLEEPS\nFORTY",
+        "200 pax = six\nseparate operations",
+        "1 · One anchor\nproperty for the group",
+        "2 · Riads for the\nleadership tier",
+        "FOLLOW\n@uproductionevents"
+      ],
+      "caption": "That riad on your moodboard sleeps forty. Your programme is two hundred people.\n\nRiads are small by design — that is exactly why they are beautiful. Split a large group across six of them and you are no longer running one event. You are running six: six breakfasts, six transfer lists, six points of failure.\n\nThe fix: anchor the full group in one property and reserve the riads for the leadership tier, where the intimacy actually earns its cost.\n\nAfter 200+ events across 120+ countries, fragmenting the room block is the quietest way to lose control of a programme.\n\nFollow Sofia for the details venues won’t volunteer. 🎬\n\n#corporateevents #incentivetravel #eventplanner #marrakech #eventprofs #mice #businesstravel #eventos",
+      "status": "awaiting_approval"
+    },
+    {
+      "id": "iceland_daylight",
+      "day": 9007,
+      "headline": "The Iceland Trip With Four Hours Of Daylight",
+      "city": "Iceland",
+      "angle": "Reykjavik sits near four hours of daylight around the December solstice, which removes the outdoor activity programme and every daytime photo.",
+      "fix": "Move the programme to February or March for aurora season with workable daylight, or design the content around the dark.",
+      "accounts": [
+        "uproduction_spain",
+        "uproductionevents"
+      ],
+      "scheduled_date": "2026-10-01",
+      "render": {
+        "endpoint": "POST /v2/videos/generate",
+        "model": "seedance-2.0",
+        "duration": 15,
+        "resolution": "720p",
+        "aspectRatio": "9:16",
+        "audioEnabled": true,
+        "referenceImages": [],
+        "prompt": "15 seconds UGC style insider-tip video, filmed on smartphone, low blue winter light at the edge of darkness, handheld selfie angle. Sofia, early thirties, dark brown shoulder-length wavy hair, soft side part, warm olive skin with visible texture and faint forehead shine, light brown eyes, small gold hoops, cream linen blazer over a camel knit top, a wool scarf at her neck, inside a glass-walled lodge entrance — wet boots by the door, a fogged pane, one lamp in the dark behind her, cold and real.\n\nOpens on her close to the lens, deadpan: “You booked Iceland in December. For the northern lights.”\n\nQuick jump cut — phone turns to the black window, then back: “You also booked four hours of daylight. Your outdoor programme is gone.”\n\nJump cut — tighter, a wince and a small apologetic smile, says nothing.\n\nJump cut — back to the opening angle, warmer: “February. Same aurora, twice the day.” Eyebrows up once.\n\nTone is warm, conspiratorial, matter-of-fact — she lowers her voice, breathes between sentences, never rushes, a beat of silence after each line. Each cut is closer or at a new angle.\n\nLighting is dim and blue, lit by the lamp outside and one warm bulb to the side, her face underexposed, no ring light, no filters. Image imperfect — natural phone quality, heavy grain in the dark areas, soft focus. Sound direct from the phone mic — her natural voice, a low heater hum, her scarf brushing the mic.\n\nFeels dry and kind — bad news she has delivered many times before."
+      },
+      "dialogue": [
+        {
+          "beat": "HOOK",
+          "line": "You booked Iceland in December. For the northern lights."
+        },
+        {
+          "beat": "SHOW",
+          "line": "You also booked four hours of daylight. Your outdoor programme is gone."
+        },
+        {
+          "beat": "SILENT",
+          "line": null
+        },
+        {
+          "beat": "VERDICT",
+          "line": "February. Same aurora, twice the day."
+        }
+      ],
+      "spoken_word_count": 27,
+      "overlay_cards": [
+        "THE ICELAND TRIP\nWITH FOUR HOURS\nOF DAYLIGHT",
+        "December solstice:\n~4 hrs of usable light",
+        "1 · Move to Feb\nor March",
+        "2 · Or design the\nprogramme for the dark",
+        "FOLLOW\n@uproductionevents"
+      ],
+      "caption": "You booked Iceland in December for the northern lights. You also booked four hours of daylight.\n\nAround the solstice Reykjavik gets roughly four hours of usable light. That removes the outdoor activity programme, the daytime transfers and almost every photograph your marketing team was counting on.\n\nThe fix: move the programme to February or March. Aurora season is still open and the day is roughly twice as long. If the dates cannot move, design the content around the dark instead of pretending it is not there.\n\nAfter 200+ events across 120+ countries, daylight is the constraint nobody puts on the planning sheet.\n\nFollow Sofia for the details venues won’t volunteer. 🎬\n\n#corporateevents #incentivetravel #eventplanner #iceland #reykjavik #eventprofs #mice #businesstravel",
+      "status": "awaiting_approval"
+    }
+  ]
+}
