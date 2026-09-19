@@ -240,7 +240,9 @@ def main():
             json.dump(queue_rows, fh, indent=2, ensure_ascii=False)
             fh.write("\n")
         print(f"\nWrote {len(queue_rows)} rows to {os.path.relpath(out, ROOT)}")
-        print(f"Next: burn the overlay cards, then  python3 scripts/enqueue_sofia.py {args.batch}")
+        print("Next, per clip:")
+        print(f"  python3 scripts/brand_video_overlay.py <raw.mp4> <branded.mp4> --batch {args.batch} --ad <id>")
+        print(f"Then: python3 scripts/enqueue_sofia.py {args.batch}")
     if failures:
         print(f"Failed: {', '.join(failures)} — rerun with --only {','.join(failures)}")
         sys.exit(1)

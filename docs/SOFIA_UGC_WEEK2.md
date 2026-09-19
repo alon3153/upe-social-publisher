@@ -30,6 +30,8 @@ published Sofia films treat Prague and Barcelona.
 |---|---|
 | `content/sofia/prompts/week2.json` | The batch. Per ad: Seedance prompt, dialogue beats, overlay cards, caption, target accounts and date. |
 | `scripts/render_sofia_arcads.py` | Renders the batch and writes the queue file the existing pipeline consumes. |
+| `scripts/brand_video_overlay.py` | Burns the caption cards, wordmark and site line onto a rendered clip. |
+| `assets/fonts/Comfortaa[wght].ttf` | The brand font, vendored with its OFL licence so the overlay runs anywhere. |
 | `logs/README.md` | Schema for the Arcads call log that future cost estimates read. |
 
 ## How to ship it
@@ -38,16 +40,29 @@ published Sofia films treat Prague and Barcelona.
 cp .agents/shared/arcads.env.example .env    # then add your key
 python3 scripts/render_sofia_arcads.py week2 --dry-run   # payloads + cost, no calls
 python3 scripts/render_sofia_arcads.py week2             # generate
-python3 scripts/enqueue_sofia.py week2                   # approval emails
+
+# brand each clip, then queue the batch for approval
+python3 scripts/brand_video_overlay.py raw.mp4 branded.mp4 --batch week2 --ad rome_power
+python3 scripts/enqueue_sofia.py week2
 ```
 
 The render step writes `content/sofia/queue/week2.json` with the same six keys
 `scripts/enqueue_sofia.py` already reads, so approval and publishing are
 unchanged. Days 9003 to 9007 do not collide with week1's 9001 and 9002.
 
-Overlay cards are burned in between rendering and enqueueing, matching the
-published films: white text for the problem, brand yellow `#FBCE0A` numbered
-text for the fix, logo top-left, `upe.co.il` bottom-right.
+`brand_video_overlay.py` reproduces the look of the published films: rounded
+translucent caption cards in the upper third, the wordmark top-left and
+`upe.co.il` bottom-right. Cards whose first line starts with a number render in
+brand yellow `#FBCE0A`, which is how the published films mark the fix steps;
+everything else is white. Cards spread evenly across the clip unless you pass
+`--timings`. It reads the card text straight from the batch file via `--ad`, or
+takes literal text with `--cards`.
+
+Two things it needs: `ffmpeg` on PATH (it falls back to the `imageio-ffmpeg`
+package) and the Comfortaa font, which is now vendored at `assets/fonts/` under
+its OFL licence. The older `scripts/brand_overlay.py`, which composites still
+images, still points at a Dropbox path that only resolves on one Mac; the video
+overlay deliberately does not, so it runs in CI.
 
 ## Cost
 
