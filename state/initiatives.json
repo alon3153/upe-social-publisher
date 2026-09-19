@@ -17889,6 +17889,10 @@
       {
         "date": "2026-09-18",
         "error": "action deadline exceeded"
+      },
+      {
+        "date": "2026-09-19",
+        "error": "action deadline exceeded"
       }
     ],
     "created": "2026-09-11",
@@ -17996,7 +18000,7 @@
   "251c2671": {
     "id": "251c2671",
     "title": "כפיל SEO עברי מסחרי על /נופש-חברה/ ו-/אירוע-קונספט/ — שתי עמדות pos.17-19 עם 645 חיפושים חודשיים מצטברים; כניסה ל-Top-5 מוסיפה 1-2 לידים/חודש ישירות",
-    "status": "awaiting_approval",
+    "status": "approved",
     "revisions": 1,
     "history": [
       {
@@ -18030,8 +18034,8 @@
   "425ff99d": {
     "id": "425ff99d",
     "title": "הגדל internal linking מ-292 מאמרי בלוג קיימים לדפי שירות מסחריים — עלות אפסית, אפקט מיידי על crawl authority; מקד 10 מאמרים בעלי traffic גבוה לכל דף שירות",
-    "status": "todo",
-    "revisions": 0,
+    "status": "awaiting_approval",
+    "revisions": 1,
     "history": [
       {
         "date": "2026-09-14",
@@ -18052,10 +18056,15 @@
       {
         "date": "2026-09-18",
         "error": "action deadline exceeded"
+      },
+      {
+        "date": "2026-09-19",
+        "summary": "הופק מסמך Internal Linking מלא ומוכן לשימוש: מיפוי 70 מאמרי בלוג ל-7 דפי שירות מסחריים של UPE, כולל anchor text מגוון, SOP שבועי, טבלת מעקב וקריטריון השלמה מדיד.",
+        "ready": true
       }
     ],
     "created": "2026-09-11",
-    "updated": "2026-09-11",
+    "updated": "2026-09-19",
     "kind": "leads_action",
     "priority": "leads",
     "channel": "leads"
@@ -18063,11 +18072,17 @@
   "879b4850": {
     "id": "879b4850",
     "title": "הוסף CTA ברור ('קבל הצעת מחיר') בכל דף שירות ובסוף כל מאמר בלוג — Web leads (33% נתח) מעידים שהאתר ממיר, אך יש לפשט את מסע המשתמש לטופס",
-    "status": "todo",
-    "revisions": 0,
-    "history": [],
+    "status": "awaiting_approval",
+    "revisions": 1,
+    "history": [
+      {
+        "date": "2026-09-19",
+        "summary": "הופק מדריך יישום מלא וקוד HTML/CSS מוכן-להדבקה של CTA 'קבל הצעת מחיר' לכלל דפי השירות ומאמרי הבלוג של UPE — כולל 3 מיקומי CTA לדפי שירות, תבנית סוף מאמר בעברית ואנגלית, בלוק אינליין לבלוג, טבלת A/B וריאנטים, עקרונות נגישות, וצ'קליסט בדיקה עם קריטריון קבלה מדיד.",
+        "ready": true
+      }
+    ],
     "created": "2026-09-11",
-    "updated": "2026-09-11",
+    "updated": "2026-09-19",
     "kind": "leads_action",
     "priority": "leads",
     "channel": "leads"
@@ -18077,7 +18092,12 @@
     "title": "הפעל LinkedIn executive posting: ציטוט לקוח אחד/שבוע + תובנה אחת/שבוע מפרופיל אישי — B2B ישראלי מקבל החלטות דרך מוניטין אישי; lead שנוצר ב-LinkedIn מגיע עם trust גבוה",
     "status": "todo",
     "revisions": 0,
-    "history": [],
+    "history": [
+      {
+        "date": "2026-09-19",
+        "error": "action deadline exceeded"
+      }
+    ],
     "created": "2026-09-11",
     "updated": "2026-09-11",
     "kind": "leads_action",
@@ -18209,6 +18229,10 @@
       {
         "date": "2026-09-18",
         "error": "action deadline exceeded"
+      },
+      {
+        "date": "2026-09-19",
+        "error": "action deadline exceeded"
       }
     ],
     "created": "2026-09-12",
@@ -18251,6 +18275,10 @@
       {
         "date": "2026-09-18",
         "error": "action deadline exceeded"
+      },
+      {
+        "date": "2026-09-19",
+        "error": "action deadline exceeded"
       }
     ],
     "created": "2026-09-12",
@@ -18260,7 +18288,7 @@
     "channel": "linkedin",
     "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
     "action_key": "linkedin-executive-advocacy",
-    "owner": "מנכ\"ל (פרופיל אישי) מכין טיוטות; Alon מאשר לפני פרסום",
+    "owner": "מנכ\"ל מכין טיוטות; Alon מאשר; דף החברה עושה repost בלבד",
     "success_metric": "לידים מיוחסים לדיגיטל: בסיס 5; יעד המדד 3. יש להשוות תקופות תואמות."
   },
   "8c4f9ebe": {
@@ -18464,7 +18492,7 @@
   "af90d50d": {
     "id": "af90d50d",
     "title": "הפץ את טיוטת lead-source-guidance.md (סטטוס draft_ready, לא הופצה) לנציגי המכירות; הגדר picklist סגור ב-Salesforce עם ערכים: Google Organic, Web (Form), LinkedIn, Advertisement (Paid), Word of Mouth, Existing Customer, Other (חייב הערה); קיים 15 דקות הכשרה; בדוק עמידה בסוף חודש.",
-    "status": "awaiting_approval",
+    "status": "approved",
     "revisions": 1,
     "history": [
       {
@@ -18496,7 +18524,7 @@
     "channel": "leads",
     "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
     "action_key": "salesforce-attribution-fix",
-    "owner": "מנהל מכירות מכין; Alon מאשר; נציגי מכירות מיישמים",
+    "owner": "Sales Ops מכין; Alon מאשר ומפיץ",
     "success_metric": "ייחוס לידים: בסיס לא-מיוחס; יעד המדד מקור אמיתי. יש להשוות תקופות תואמות."
   },
   "2769e4c7": {
