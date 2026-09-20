@@ -1,0 +1,31 @@
+{
+  "day": 261,
+  "category": "cta_lead",
+  "language": "es",
+  "date": "",
+  "weekday": "",
+  "theme": "Your next event deserves a production team that's done this 1,500+ times",
+  "linkedin": {
+    "profile": "Uproduction Events (Company Page)",
+    "text": "Un brief con fechas ajustadas, múltiples mercados involucrados y expectativas internas muy altas — eso es lo que llega a nuestra mesa con más frecuencia. Y después de 16 años y más de 1,500 eventos entregados en más de 130 destinos, es el escenario en el que mejor operamos. Si estás definiendo tu próxima conferencia, lanzamiento de producto o programa de incentivos y buscas un socio de producción que ya haya estado ahí, con gusto conversamos. Escríbeme por mensaje directo o déjame un comentario."
+  },
+  "instagram": {
+    "profile": "@uproductionevents",
+    "text": "Más de 1,500 eventos. Más de 130 destinos. Más de 25,000 participantes. Cada evento que producimos tiene una lógica detrás: menos estrés para quien lo organiza, más impacto para quien lo vive. Si estás planeando una conferencia, un viaje de incentivo o una cena de gala, este es el momento de hablar. Escríbenos por DM y empezamos. #producciondeeventos #eventoscorporativos #viajesdeincentivo #b2bevents #uproductionevents #congresos #eventosempresariales"
+  },
+  "facebook": {
+    "profile": "Uproduction Events (Page)",
+    "text": "¿Estás comenzando a planificar tu próximo evento corporativo y no sabes por dónde empezar? Llevamos 16 años resolviendo exactamente eso. En Uproduction Events hemos producido más de 1,500 eventos en más de 130 destinos para más de 25,000 participantes. La complejidad es nuestra especialidad. Cuéntanos qué estás construyendo — escríbenos un mensaje o déjanos un comentario y hablamos."
+  },
+  "image_file": "content/images/eight_hundred_real.jpg",
+  "image_source": "real_archive_reused",
+  "image_credit": "📷 Un fotograma real de una producción de Uproduction",
+  "brand": {
+    "colors": [
+      "#1C1C1C",
+      "#FBCE0A"
+    ],
+    "font": "Comfortaa",
+    "logo": "uproduction_official_logo.png"
+  }
+}

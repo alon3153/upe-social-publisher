@@ -1,0 +1,31 @@
+{
+  "day": 265,
+  "category": "social_proof",
+  "language": "es",
+  "date": "",
+  "weekday": "",
+  "theme": "Client trust proven at scale",
+  "linkedin": {
+    "profile": "Uproduction Events (Company Page)",
+    "text": "Un cliente que regresa es más valioso que diez reseñas de cinco estrellas.\n\nEn la producción de eventos B2B, la repetición es la señal más honesta del mercado. Significa que el cliente evaluó su experiencia anterior, comparó alternativas y decidió que el riesgo de cambiar no valía la pena.\n\nEsa es la validación que importa.\n\nEn Uproduction Events llevamos más de 1,500 eventos producidos en más de 130 destinos — con 25,000+ participantes que vivieron conferencias, cenas de gala, viajes de incentivo y retiros corporativos. Una parte significativa de ese volumen proviene de relaciones construidas a lo largo de múltiples proyectos con los mismos clientes.\n\nSi hoy estás evaluando socios para producción de eventos, te hago una pregunta directa: ¿cuántos de tus clientes actuales han vuelto más de una vez?\n\nSi quieres comparar enfoques, con gusto conversamos."
+  },
+  "instagram": {
+    "profile": "@uproductionevents",
+    "text": "El mejor testimonio no es una reseña. Es una nueva reserva. 🔁\n\nCuando los clientes vuelven — una segunda vez, una quinta — eso habla más que cualquier palabra.\n\nMás de 1,500 eventos. Más de 130 destinos. Más de 25,000 participantes. Y la mayoría de esos números vienen de organizaciones que confiaron en nosotros más de una vez.\n\n¿Tienes un evento en mente? Escríbenos. 📩\n\n#EventosCorporativos #ProducciónDeEventos #ViajesDeIncentivo #EventosB2B #MICE #UproductionEvents #EventosEmpresariales #PlanificaciónDeEventos"
+  },
+  "facebook": {
+    "profile": "Uproduction Events (Page)",
+    "text": "Cuando un cliente te contrata por quinta vez, no lo hace por costumbre — lo hace porque confía en los resultados.\n\nEn Uproduction Events, medimos nuestro trabajo en repeticiones, no en aplausos. Más de 1,500 eventos producidos, más de 130 destinos y más de 25,000 participantes que vivieron experiencias que valió la pena repetir.\n\nLa fidelidad de un cliente es el mejor indicador de que algo se hizo bien.\n\n¿Estás evaluando un proveedor de eventos corporativos? Cuéntanos lo que necesitas. 👇"
+  },
+  "image_file": "content/images/five_rules_real.jpg",
+  "image_source": "real_archive_reused",
+  "image_credit": "📷 Un fotograma real de una producción de Uproduction",
+  "brand": {
+    "colors": [
+      "#1C1C1C",
+      "#FBCE0A"
+    ],
+    "font": "Comfortaa",
+    "logo": "uproduction_official_logo.png"
+  }
+}
