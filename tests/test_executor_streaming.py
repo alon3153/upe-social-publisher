@@ -87,3 +87,24 @@ def test_hard_deadline_still_bounds_a_stream_with_continuous_pings(tmp_path):
     with patch.object(e,'DELIV_DIR',tmp_path),patch.object(e.urllib.request,'urlopen',return_value=SlowStream()):
         result=e.bounded_agent({'id':'one'},0.025)
     assert result == {'error':'action deadline exceeded'}
+
+
+def test_deadline_retry_uses_smaller_request_without_accepting_partial_stream(tmp_path):
+    seen = []
+    def request(req, timeout):
+        seen.append(json.loads(req.data))
+        return stream(complete('Concise draft\n```json\n{"summary":"draft","ready_for_approval":false,"open_questions":["verify live page"]}\n```'))
+    item = {'id':'retry','history':[{'error':'action deadline exceeded'}]}
+    with patch.object(e,'DELIV_DIR',tmp_path), patch.object(e.urllib.request,'urlopen',side_effect=request):
+        result = e.run_agent(item)
+    assert seen[0]['max_tokens'] == 6000
+    assert seen[0]['tools'][0]['max_uses'] == 1
+    assert 'remaining work' in seen[0]['messages'][0]['content']
+    assert result['ready_for_approval'] is False
+    assert result['open_questions'] == ['verify live page']
+
+
+def test_successful_previous_revision_does_not_inherit_old_timeout():
+    assert e.needs_bounded_retry({'history':[{'error':'anthropic The read operation timed out'}]})
+    assert not e.needs_bounded_retry({'history':[{'error':'action deadline exceeded'},{'summary':'saved'}]})
+    assert not e.needs_bounded_retry({'history':[{'error':'anthropic 401'}]})
