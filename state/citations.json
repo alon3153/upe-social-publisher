@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-13",
+  "updated": "2026-09-20",
   "note": "External authority evidence and actions. needs_verification belongs to automation, remains visible in the weekly digest, and is not an overdue founder decision. Review due items in the existing weekly UPE automation; never infer active membership from historical notes alone.",
   "items": [
     {
@@ -66,7 +66,8 @@
       "action": "הוגש 18.07 בטופס הספק הציבורי, 43 יום ללא דף פומבי. הטריגר של הפריט עצמו (סוף אוגוסט) נדלק — מוכן להגשה חוזרת, ממתין לאישור אלון (פנייה חיצונית).",
       "target_url": "",
       "kind": "directory",
-      "recontact_due": "2026-08-30"
+      "recontact_due": "2026-08-30",
+      "unverifiable": true
     },
     {
       "id": "dir_clutch",
@@ -76,7 +77,11 @@
       "action": "פרופיל קיים. לפי בדיקת 30.08: ביקורת מאומתת אחת, Service Lines מציגים Event Management 20% מול Corporate Travel 70%, וטווח עובדים 2–9; אלו נתונים היסטוריים שיש לאמת לפני שינוי. שנת תחילת הפעילות המאושרת היא 2010; אין לשנותה ל-2012 בגלל תאריך ההתאגדות המשפטית.",
       "target_url": "https://clutch.co/profile/uproduction-events",
       "kind": "directory",
-      "reviews": 1
+      "reviews": 1,
+      "unverifiable": false,
+      "last_check": "2026-09-20",
+      "last_check_result": "fetch_error",
+      "last_check_error_type": "HTTPError"
     },
     {
       "id": "dir_g2",
@@ -85,7 +90,11 @@
       "since": "2026-07-31",
       "action": "חי ואושר 18.07 (אומת 31.07). עובדות תקינות. ⚠️ 0/5 ביקורות",
       "target_url": "https://www.g2.com/products/uproduction-events/reviews",
-      "kind": "directory"
+      "kind": "directory",
+      "unverifiable": false,
+      "last_check": "2026-09-20",
+      "last_check_result": "fetch_error",
+      "last_check_error_type": "HTTPError"
     },
     {
       "id": "dir_icca_mpi_hb",
@@ -120,7 +129,11 @@
       "since": "2026-07-12",
       "action": "פרופיל נוצר ונשמר (11.07) — הסורק מאמת אוטומטית",
       "target_url": "https://www.crunchbase.com/organization/uproduction-events",
-      "kind": "entity"
+      "kind": "entity",
+      "unverifiable": false,
+      "last_check": "2026-09-20",
+      "last_check_result": "fetch_error",
+      "last_check_error_type": "HTTPError"
     },
     {
       "id": "entity_wikidata",
@@ -131,7 +144,10 @@
       "target_url": "https://www.wikidata.org/wiki/Q140941236",
       "kind": "entity",
       "note": "Founder sameAs confirmed in OrganizationSchema.astro in deployed website source (PR137); do not recreate this completed task.",
-      "last_reviewed": "2026-09-13"
+      "last_reviewed": "2026-09-13",
+      "unverifiable": false,
+      "last_check": "2026-09-20",
+      "last_check_result": "cited"
     },
     {
       "id": "li_articles",
@@ -140,7 +156,10 @@
       "since": "2026-07-31",
       "action": "שני המאמרים פורסמו 18.07, אומתו HTTP 200 ב-31.07. מאמר 2: linkedin.com/pulse/boutique-vs-large-event-agency-which-right-ecfte/",
       "target_url": "https://www.linkedin.com/pulse/how-choose-corporate-event-production-kq3re/",
-      "kind": "content"
+      "kind": "content",
+      "unverifiable": false,
+      "last_check": "2026-09-20",
+      "last_check_result": "cited"
     },
     {
       "id": "dir_themanifest",
@@ -149,7 +168,11 @@
       "since": "2026-07-12",
       "action": "פרופיל קיים חי (established 2010, Barcelona) — הסורק מאמת אוטומטית",
       "target_url": "https://themanifest.com/company/uproduction-events",
-      "kind": "directory"
+      "kind": "directory",
+      "unverifiable": false,
+      "last_check": "2026-09-20",
+      "last_check_result": "fetch_error",
+      "last_check_error_type": "HTTPError"
     }
   ]
 }
