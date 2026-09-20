@@ -1,10 +1,10 @@
 {
-  "updated_at": "2026-09-19",
+  "updated_at": "2026-09-20",
   "source": "daily-council",
   "directives": [
     {
       "category": "safe_auto",
-      "action": "ניתוח נושאי תוכן LinkedIn: בדוק אילו מ-2 הפוסטים השבוע קיבלו חשיפה גבוהה יותר (30 vs 11 חשיפות) וזהה אם פורמט case-study, insight, או וידאו native — השתמש בממצא כסיגנל לעדיפות פורמט בשבועות הבאים",
+      "action": "ניסוי LinkedIn native-video: הפק 1 סרטון קצר (60-90 שניות) לשבוע מפרופיל אישי של מנכ\"ל — case-study מהפקה אחרונה עם כיתוב עברי; בדוק אם native video מגדיל dwell-time ואינטראקציות לעומת פוסט טקסט (מדידה: impressions + comments אחרי 4 שבועות, ללא תחזית מספרית).",
       "detail": "הצעה לבדיקה על בסיס המדד המתועד; לא בוצע שינוי.",
       "channel": "linkedin",
       "evidence": {
@@ -21,26 +21,60 @@
     },
     {
       "category": "safe_auto",
-      "action": "הכן 3 זוויות תוכן Instagram לאישור: (1) behind-the-scenes מהפקה קיימת, (2) stat-card עם עובדת UPE (1,500+ אירועים, 130+ יעדים), (3) לפני/אחרי venue transform — כל אחד עם קריאייטיב מוכן לביקורת קמפיין",
+      "action": "ניסוי hashtag עברי ממוקד: בכל פוסט LinkedIn הוסף 2-3 hashtags בעברית הרלוונטיים לתפקיד (דוגמה: #מנהליHR #אירועי_חברה #הפקות_אירועים) ו-1 hashtag אנגלי (#MICE); רשום CTR per hashtag למשך 30 יום לפני שינוי ה-mix.",
+      "detail": "הצעה לבדיקה על בסיס המדד המתועד; לא בוצע שינוי.",
+      "channel": "linkedin",
+      "evidence": {
+        "source": "scorecard",
+        "metric": "נוכחות סושיאל (רצפה)",
+        "value": 8.0,
+        "target": 5,
+        "unit": "",
+        "status": "✅"
+      },
+      "status": "candidate",
+      "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
+      "success_metric": "נוכחות סושיאל (רצפה): בסיס 8.0; יעד המדד 5. יש להשוות תקופות תואמות."
+    },
+    {
+      "category": "safe_auto",
+      "action": "ניסוי YouTube-to-LinkedIn repurpose: קח את הפוסט הטוב ביותר של השבוע ב-YouTube (4,125 חשיפות), חתוך 60 שניות ממנו ועלה כ-native LinkedIn video — מדוד אם הפורמט מקבל יותר חשיפות ממצגת תמונה רגילה (השוואה פשוטה, 2 שבועות).",
+      "detail": "הצעה לבדיקה על בסיס המדד המתועד; לא בוצע שינוי.",
+      "channel": "youtube",
+      "evidence": {
+        "source": "scorecard",
+        "metric": "נוכחות סושיאל (רצפה)",
+        "value": 8.0,
+        "target": 5,
+        "unit": "",
+        "status": "✅"
+      },
+      "status": "candidate",
+      "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
+      "success_metric": "נוכחות סושיאל (רצפה): בסיס 8.0; יעד המדד 5. יש להשוות תקופות תואמות."
+    },
+    {
+      "category": "safe_auto",
+      "action": "מיפוי 3 long-tail עבריים מ-GSC לדפים קיימים: זהה שאלות AEO כמו 'איזה מקום מתאים לארגן כנס בינלאומי' (pos. 2.0, 27 חשיפות) ו-'מה זה ערב גאלה' (pos. 2.0, 25 חשיפות) — אלו מועמדים לשיפור תשובה בתוכן קיים, לא לדפים חדשים.",
+      "detail": "הצעה לבדיקה על בסיס המדד המתועד; לא בוצע שינוי.",
+      "channel": "google_organic_geo",
+      "evidence": {
+        "source": "scorecard",
+        "metric": "קליקים אורגניים/שבוע",
+        "value": 40,
+        "target": 300,
+        "unit": "",
+        "status": "❌"
+      },
+      "status": "candidate",
+      "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
+      "success_metric": "קליקים אורגניים/שבוע: בסיס 40; יעד המדד 300. יש להשוות תקופות תואמות."
+    },
+    {
+      "category": "safe_auto",
+      "action": "הגדרת cadence Instagram: השבוע 0 פוסטים — הגדר לצינור הפנימי יעד של 3 Reels/שבוע מהפקות אחרונות (אותנטי, ללא תסריט); מדוד reach אחרי 4 שבועות לפני הגדלת תדירות.",
       "detail": "הצעה לבדיקה על בסיס המדד המתועד; לא בוצע שינוי.",
       "channel": "instagram",
-      "evidence": {
-        "source": "scorecard",
-        "metric": "נוכחות סושיאל (רצפה)",
-        "value": 8.0,
-        "target": 5,
-        "unit": "",
-        "status": "✅"
-      },
-      "status": "candidate",
-      "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
-      "success_metric": "נוכחות סושיאל (רצפה): בסיס 8.0; יעד המדד 5. יש להשוות תקופות תואמות."
-    },
-    {
-      "category": "safe_auto",
-      "action": "הכן טיוטת hashtag strategy עברית ל-LinkedIn: מונחים כגון #הפקתאירועים #כנסיםעסקיים #HRישראל #MICE — בדוק volume יחסי מול מתחרים (pinchevents, arbelpro) לפני שמוסיפים לצינור",
-      "detail": "הצעה לבדיקה על בסיס המדד המתועד; לא בוצע שינוי.",
-      "channel": "linkedin",
       "evidence": {
         "source": "scorecard",
         "metric": "נוכחות סושיאל (רצפה)",
@@ -56,11 +90,11 @@
   ],
   "channel_cadence": {
     "facebook": {
-      "max_posts_per_week": 1,
+      "max_posts_per_week": 2,
       "reason": "מכסה מוצעת לבדיקה בתקופת המדידה; אין מסקנה סיבתית על אלגוריתם."
     },
     "instagram": {
-      "max_posts_per_week": 4,
+      "max_posts_per_week": 3,
       "reason": "מכסה מוצעת לבדיקה בתקופת המדידה; אין מסקנה סיבתית על אלגוריתם."
     },
     "linkedin": {
@@ -68,7 +102,7 @@
       "reason": "מכסה מוצעת לבדיקה בתקופת המדידה; אין מסקנה סיבתית על אלגוריתם."
     },
     "tiktok": {
-      "max_posts_per_week": 2,
+      "max_posts_per_week": 3,
       "reason": "מכסה מוצעת לבדיקה בתקופת המדידה; אין מסקנה סיבתית על אלגוריתם."
     },
     "youtube": {
