@@ -42,6 +42,8 @@ def test_first_success_survives_next_action_failure():
             assert e.main()==1
         feed=json.loads((root/'reports/executor.json').read_text())
         assert feed['advanced']==1 and feed['attempted']==2
+        assert feed['failed']==1
+        assert '1/2' in feed['findings'][0]['text']
         assert feed['complete'] is False and feed['status']=='partial'
         assert 'private contents' not in path.read_text()
         assert json.loads(path.read_text())['a']['status']=='awaiting_approval'

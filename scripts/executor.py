@@ -75,10 +75,11 @@ def checkpoint(inits, advanced, attempted, planned, *, finished=False, active_id
             'status': 'ok' if complete else 'partial', 'complete': complete,
             'drafting_complete': drafting_complete, 'postprocessing': postprocessing,
             'planned': planned, 'attempted': attempted, 'advanced': len(advanced),
+            'failed': attempted - len(advanced),
             'active_id': active_id, 'source': 'Executor durable checkpoint; drafts only',
-            'facts': [['טיוטות שקודמו',len(advanced)],['ניסיונות',attempted],['בתוכנית',planned]],
+            'facts': [['טיוטות שקודמו',len(advanced)],['ניסיונות',attempted],['בתוכנית',planned],['ניסיונות שנכשלו',attempted-len(advanced)]],
             'findings': [{'severity':'info' if complete else 'warn',
-                          'text': 'סבב הטיוטות הסתיים ונשמר; אין בכך אישור לפרסום או ביצוע שיווקי.' if complete else 'הטיוטות נשמרות בנפרד; הסבב או שלבי הרישום והדיווח טרם הושלמו במלואם.'}]}
+                          'text': 'סבב הטיוטות הסתיים ונשמר; אין בכך אישור לפרסום או ביצוע שיווקי.' if complete else f"הסבב חלקי: {len(advanced)}/{planned} טיוטות קודמו; {attempted-len(advanced)} ניסיונות נכשלו; {planned-attempted} טרם נוסו. רישום ודיווח: {postprocessing}."}]}
     path=ROOT/'reports/executor.json';path.parent.mkdir(exist_ok=True)
     temp=path.with_suffix('.tmp');temp.write_text(json.dumps(feed,ensure_ascii=False,indent=2));temp.replace(path)
 
@@ -333,6 +334,15 @@ def read_message_stream(response):
     raise StreamFailure("stream disconnected before message_stop")
 
 
+def needs_bounded_retry(it):
+    """A timed-out deliverable needs a smaller request, not another identical one."""
+    history = it.get('history') or []
+    if not history:
+        return False
+    error = str(history[-1].get('error', '')).lower()
+    return 'deadline exceeded' in error or 'timed out' in error
+
+
 def run_agent(it):
     prior = ""
     dpath = DELIV_DIR / f"{it['id']}.md"
@@ -344,8 +354,18 @@ def run_agent(it):
     prompt += "\nOWNER: " + str(it.get("owner") or "executor prepares draft; Alon approves")
     prompt += "\nMEASURABLE ACCEPTANCE CRITERION: " + str(it.get("success_metric") or "state a verifiable completion check")
     prompt += "\nTreat traffic/ranking/lead uplift as hypotheses; never claim a draft was published or a KPI improved without measured evidence."
-    body = {"model": MODEL, "max_tokens": 16000, "stream": True,
-            "tools": [{"type": "web_search_20250305", "name": "web_search", "max_uses": 4}],
+    recovery = needs_bounded_retry(it)
+    if recovery:
+        prompt += """
+RECOVERY AFTER A PREVIOUS TIMEOUT: Produce a concise, self-contained draft,
+maximum 1200 words. Use at most one targeted web search. Do not repeat broad
+research or generate multiple long page variants. Preserve factual uncertainty:
+never invent current rankings, live page contents, quotes or results. If the full
+acceptance criterion cannot be met in this bounded response, set ready_for_approval
+false and list the specific remaining work in open_questions. Include the final
+metadata block within this budget; a partial draft must not be marked complete."""
+    body = {"model": MODEL, "max_tokens": 6000 if recovery else 16000, "stream": True,
+            "tools": [{"type": "web_search_20250305", "name": "web_search", "max_uses": 1 if recovery else 4}],
             "messages": [{"role": "user", "content": prompt}]}
     data = json.dumps(body).encode()
     headers = {"x-api-key": API_KEY, "anthropic-version": "2023-06-01", "content-type": "application/json"}
