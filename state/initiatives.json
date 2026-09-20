@@ -17893,6 +17893,10 @@
       {
         "date": "2026-09-19",
         "error": "action deadline exceeded"
+      },
+      {
+        "date": "2026-09-20",
+        "error": "action deadline exceeded"
       }
     ],
     "created": "2026-09-11",
@@ -18034,7 +18038,7 @@
   "425ff99d": {
     "id": "425ff99d",
     "title": "הגדל internal linking מ-292 מאמרי בלוג קיימים לדפי שירות מסחריים — עלות אפסית, אפקט מיידי על crawl authority; מקד 10 מאמרים בעלי traffic גבוה לכל דף שירות",
-    "status": "awaiting_approval",
+    "status": "approved",
     "revisions": 1,
     "history": [
       {
@@ -18072,7 +18076,7 @@
   "879b4850": {
     "id": "879b4850",
     "title": "הוסף CTA ברור ('קבל הצעת מחיר') בכל דף שירות ובסוף כל מאמר בלוג — Web leads (33% נתח) מעידים שהאתר ממיר, אך יש לפשט את מסע המשתמש לטופס",
-    "status": "awaiting_approval",
+    "status": "approved",
     "revisions": 1,
     "history": [
       {
@@ -18090,16 +18094,21 @@
   "341e6ab8": {
     "id": "341e6ab8",
     "title": "הפעל LinkedIn executive posting: ציטוט לקוח אחד/שבוע + תובנה אחת/שבוע מפרופיל אישי — B2B ישראלי מקבל החלטות דרך מוניטין אישי; lead שנוצר ב-LinkedIn מגיע עם trust גבוה",
-    "status": "todo",
-    "revisions": 0,
+    "status": "awaiting_approval",
+    "revisions": 1,
     "history": [
       {
         "date": "2026-09-19",
         "error": "action deadline exceeded"
+      },
+      {
+        "date": "2026-09-20",
+        "summary": "הופקה תוכנית LinkedIn executive posting מלאה ל-4 שבועות: 8 פוסטים מוכנים לפרסום (4 ציטוטי לקוח + 4 תובנות מקצועיות) בעברית ובאנגלית, עם לו\"ז, הנחיות טכניות מבוססות נתוני 2026, ושאלות פתוחות לאישור Alon.",
+        "ready": true
       }
     ],
     "created": "2026-09-11",
-    "updated": "2026-09-11",
+    "updated": "2026-09-20",
     "kind": "leads_action",
     "priority": "leads",
     "channel": "leads"
@@ -18107,11 +18116,17 @@
   "76ad88de": {
     "id": "76ad88de",
     "title": "עדכן llms-full.txt הקיים בנתונים כמותיים (16+ שנה, 200+ אירועים, 20+ מדינות) — AI citations כבר מחזירות UPE; נתונים ספציפיים מגדילים את שיעור ה'נבחר' (לא רק 'מוזכר') ב-AI",
-    "status": "todo",
-    "revisions": 0,
-    "history": [],
+    "status": "awaiting_approval",
+    "revisions": 1,
+    "history": [
+      {
+        "date": "2026-09-20",
+        "summary": "נוצר קובץ llms-full.txt מלא ומוכן לאישור עבור UPE, הכולל את כל הנתונים הכמותיים הקנוניים (16+ שנה, 1,500+ אירועים, 25,000+ משתתפים, 130+ יעדים, 20+ מדינות) בפורמט Markdown מובנה לצריכת AI, לצד קובץ llms.txt קומפניון ורשימת משימות ליישום.",
+        "ready": true
+      }
+    ],
     "created": "2026-09-11",
-    "updated": "2026-09-11",
+    "updated": "2026-09-20",
     "kind": "leads_action",
     "priority": "leads",
     "channel": "leads"
@@ -18233,6 +18248,10 @@
       {
         "date": "2026-09-19",
         "error": "action deadline exceeded"
+      },
+      {
+        "date": "2026-09-20",
+        "error": "action deadline exceeded"
       }
     ],
     "created": "2026-09-12",
@@ -18278,6 +18297,10 @@
       },
       {
         "date": "2026-09-19",
+        "error": "action deadline exceeded"
+      },
+      {
+        "date": "2026-09-20",
         "error": "action deadline exceeded"
       }
     ],
@@ -18574,5 +18597,27 @@
     "kind": "leads_action",
     "priority": "leads",
     "channel": "leads"
+  },
+  "d758c0c3": {
+    "id": "d758c0c3",
+    "title": "השווה את קליקי האתר ב-GSC בין שתי תקופות באותו אורך, לפי עמוד ושאילתה. תעד פערים לפני החלטה על שינוי תוכן.",
+    "status": "awaiting_approval",
+    "revisions": 1,
+    "history": [
+      {
+        "date": "2026-09-20",
+        "summary": "הופק מדריך עבודה (SOP) מלא ומוכן לשימוש להשוואת תקופות ב-GSC לפי עמוד ושאילתה, כולל טבלאות תיעוד, עץ החלטה, אזהרות נתונים ל-2026 (AI Overview, באג Impressions), ולוח זמנים — הכל לפני כל שינוי תוכן.",
+        "ready": true
+      }
+    ],
+    "created": "2026-09-20",
+    "updated": "2026-09-20",
+    "kind": "recommendation",
+    "priority": "P1",
+    "channel": "google_organic_geo",
+    "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
+    "action_key": "organic-click-period-review",
+    "owner": "בדיקת נתונים",
+    "success_metric": "קליקים אורגניים/שבוע: בסיס 40; יעד המדד 300. יש להשוות תקופות תואמות."
   }
 }
