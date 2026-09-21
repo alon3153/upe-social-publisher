@@ -1,34 +1,36 @@
 {
-  "updated_at": "2026-09-20",
+  "updated_at": "2026-09-21",
   "scores": {
-    "instagram": 20,
-    "facebook": 30,
+    "instagram": 28,
+    "facebook": 32,
     "tiktok": 10,
     "linkedin": 35,
-    "youtube": 60,
-    "google_organic_geo": 55,
-    "overall": 72
+    "youtube": 55,
+    "google_organic_geo": 72,
+    "overall": 68
   },
   "recommendations": [
     {
-      "action_key": "organic-click-period-review",
       "category": "gated",
-      "status": "candidate",
-      "priority": "P1",
-      "channel": "google_organic_geo",
-      "owner": "בדיקת נתונים",
-      "action": "השווה את קליקי האתר ב-GSC בין שתי תקופות באותו אורך, לפי עמוד ושאילתה. תעד פערים לפני החלטה על שינוי תוכן.",
+      "priority": "P0",
+      "action_key": "salesforce-attribution-fix",
+      "owner": "מנהל מכירות מפיץ; Alon מאשר הנחיה",
+      "success_metric": "ייחוס לידים: בסיס לא-מיוחס; יעד המדד מקור אמיתי. יש להשוות תקופות תואמות.",
       "evidence": {
         "source": "scorecard",
-        "metric": "קליקים אורגניים/שבוע",
-        "value": 40,
-        "target": 300,
+        "metric": "ייחוס לידים",
+        "value": "לא-מיוחס",
+        "target": "מקור אמיתי",
         "unit": "",
         "status": "❌"
       },
+      "evidence_url": null,
+      "target_url": null,
+      "action": "הנחיית הייחוס (draft_ready בנתיב Uproduction Operations/Marketing-Council/verification-2026-09-13/lead-source-guidance.md) עדיין לא הופצה ו-CRM לא שונה. הפץ את הקובץ הקיים לנציגי מכירות עם session הסבר קצרה (15 דקות). הגדר כללי זרימה: כל ליד שציין את האתר/גוגל → 'Web' או 'Google Organic'; 'Advertisement' = ממומן מתועד בלבד; 'Other' = ברירת מחדל אסורה ללא הסבר.",
       "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
-      "detail": "הצעה לבדיקה על בסיס המדד המתועד; לא בוצע שינוי.",
-      "success_metric": "קליקים אורגניים/שבוע: בסיס 40; יעד המדד 300. יש להשוות תקופות תואמות."
+      "channel": "leads",
+      "status": "candidate",
+      "detail": "הצעה לבדיקה על בסיס המדד המתועד; לא בוצע שינוי."
     }
   ],
   "follower_growth_plan": [],
