@@ -17897,6 +17897,10 @@
       {
         "date": "2026-09-20",
         "error": "action deadline exceeded"
+      },
+      {
+        "date": "2026-09-21",
+        "error": "action deadline exceeded"
       }
     ],
     "created": "2026-09-11",
@@ -18094,7 +18098,7 @@
   "341e6ab8": {
     "id": "341e6ab8",
     "title": "הפעל LinkedIn executive posting: ציטוט לקוח אחד/שבוע + תובנה אחת/שבוע מפרופיל אישי — B2B ישראלי מקבל החלטות דרך מוניטין אישי; lead שנוצר ב-LinkedIn מגיע עם trust גבוה",
-    "status": "awaiting_approval",
+    "status": "approved",
     "revisions": 1,
     "history": [
       {
@@ -18116,7 +18120,7 @@
   "76ad88de": {
     "id": "76ad88de",
     "title": "עדכן llms-full.txt הקיים בנתונים כמותיים (16+ שנה, 200+ אירועים, 20+ מדינות) — AI citations כבר מחזירות UPE; נתונים ספציפיים מגדילים את שיעור ה'נבחר' (לא רק 'מוזכר') ב-AI",
-    "status": "awaiting_approval",
+    "status": "approved",
     "revisions": 1,
     "history": [
       {
@@ -18134,11 +18138,17 @@
   "c3ec361d": {
     "id": "c3ec361d",
     "title": "סגור פער ייחוס: ודא שנציגי מכירות מסמנים 'Google Organic' / 'Web' ב-Salesforce בכל lead שהזכיר את האתר — 'Other' (1 ליד) ו-'Web' (3 לידים) עשויים להסתיר Google Organic נוספים שיחשפו היכן באמת לדחוף",
-    "status": "todo",
-    "revisions": 0,
-    "history": [],
+    "status": "awaiting_approval",
+    "revisions": 1,
+    "history": [
+      {
+        "date": "2026-09-21",
+        "summary": "הופקה חבילת סגירת פער ייחוס מלאה הכוללת: כרטיס עזר לנציגים לסיווג נכון של Lead Source (Google Organic / Web / Other), שני Validation Rules מוכנים להעתקה ב-Salesforce, הגדרת Restricted Picklist, טבלת Audit ל-4 לידים קיימים, תבנית בירור לנציג, דוח שבועי שוטף, והודעת Rollout לסלאק — עם מדד הצלחה ניתן לאימות.",
+        "ready": true
+      }
+    ],
     "created": "2026-09-11",
-    "updated": "2026-09-11",
+    "updated": "2026-09-21",
     "kind": "leads_action",
     "priority": "leads",
     "channel": "leads"
@@ -18252,6 +18262,10 @@
       {
         "date": "2026-09-20",
         "error": "action deadline exceeded"
+      },
+      {
+        "date": "2026-09-21",
+        "error": "action deadline exceeded"
       }
     ],
     "created": "2026-09-12",
@@ -18301,6 +18315,10 @@
       },
       {
         "date": "2026-09-20",
+        "error": "action deadline exceeded"
+      },
+      {
+        "date": "2026-09-21",
         "error": "action deadline exceeded"
       }
     ],
@@ -18385,7 +18403,12 @@
     "title": "דחוף ביותר — SEO מסחרי עברי: אופטימיזציה של /נופש-חברה/ ו-/אירוע-קונספט/ (pos.17-19) + internal linking מ-10 מאמרים לכל דף — Web leads (33%) מוכיחים שהאתר ממיר; יותר תנועה = יותר לידים (id 251c2671, id 425ff99d)",
     "status": "todo",
     "revisions": 0,
-    "history": [],
+    "history": [
+      {
+        "date": "2026-09-21",
+        "error": "action deadline exceeded"
+      }
+    ],
     "created": "2026-09-12",
     "updated": "2026-09-12",
     "kind": "leads_action",
@@ -18395,11 +18418,17 @@
   "0de24bb6": {
     "id": "0de24bb6",
     "title": "ה-CTA pipeline: ודא שיש CTA 'קבל הצעת מחיר' בולט בכל דף שירות ובסוף כל מאמר; האתר כבר ממיר — פישוט מסע המשתמש לטופס מגדיל conversion ללא תנועה נוספת (id 879b4850)",
-    "status": "todo",
-    "revisions": 0,
-    "history": [],
+    "status": "awaiting_approval",
+    "revisions": 1,
+    "history": [
+      {
+        "date": "2026-09-21",
+        "summary": "הוכן מסמך עבודה מלא עם ספציפיקציית CTA מקצה לקצה: קוד HTML מוכן להדבקה לכל עמוד שירות ומאמר בלוג, פישוט טופס ל-4 שדות עם Progressive Profiling, Sticky bars, וטבלת checklist יישום עם Acceptance Criterion ניתן לאימות — הכל בטיוטה הממתינה לאישור.",
+        "ready": true
+      }
+    ],
     "created": "2026-09-12",
-    "updated": "2026-09-12",
+    "updated": "2026-09-21",
     "kind": "leads_action",
     "priority": "leads",
     "channel": "leads"
@@ -18547,7 +18576,7 @@
     "channel": "leads",
     "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
     "action_key": "salesforce-attribution-fix",
-    "owner": "Sales Ops מכין; Alon מאשר ומפיץ",
+    "owner": "מנהל מכירות מפיץ; Alon מאשר הנחיה",
     "success_metric": "ייחוס לידים: בסיס לא-מיוחס; יעד המדד מקור אמיתי. יש להשוות תקופות תואמות."
   },
   "2769e4c7": {
@@ -18601,7 +18630,7 @@
   "d758c0c3": {
     "id": "d758c0c3",
     "title": "השווה את קליקי האתר ב-GSC בין שתי תקופות באותו אורך, לפי עמוד ושאילתה. תעד פערים לפני החלטה על שינוי תוכן.",
-    "status": "awaiting_approval",
+    "status": "approved",
     "revisions": 1,
     "history": [
       {
