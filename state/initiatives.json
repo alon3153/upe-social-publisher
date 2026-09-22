@@ -18138,7 +18138,7 @@
   "c3ec361d": {
     "id": "c3ec361d",
     "title": "סגור פער ייחוס: ודא שנציגי מכירות מסמנים 'Google Organic' / 'Web' ב-Salesforce בכל lead שהזכיר את האתר — 'Other' (1 ליד) ו-'Web' (3 לידים) עשויים להסתיר Google Organic נוספים שיחשפו היכן באמת לדחוף",
-    "status": "awaiting_approval",
+    "status": "approved",
     "revisions": 1,
     "history": [
       {
@@ -18320,17 +18320,27 @@
       {
         "date": "2026-09-21",
         "error": "action deadline exceeded"
+      },
+      {
+        "date": "2026-09-22",
+        "error": "action deadline exceeded",
+        "diagnostics": {
+          "events_received": 4748,
+          "last_event": "content_block_delta",
+          "last_block_type": "text",
+          "text_characters": 21157
+        }
       }
     ],
     "created": "2026-09-12",
     "updated": "2026-09-12",
     "kind": "recommendation",
-    "priority": "P1",
+    "priority": "P0",
     "channel": "linkedin",
     "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
     "action_key": "linkedin-executive-advocacy",
-    "owner": "מנכ\"ל מכין טיוטות; Alon מאשר; דף החברה עושה repost בלבד",
-    "success_metric": "לידים מיוחסים לדיגיטל: בסיס 5; יעד המדד 3. יש להשוות תקופות תואמות."
+    "owner": "מנכ\"ל מפרסם; Alon מאשר כל פוסט",
+    "success_metric": "נוכחות סושיאל (רצפה): בסיס 7.0; יעד המדד 5. יש להשוות תקופות תואמות."
   },
   "8c4f9ebe": {
     "id": "8c4f9ebe",
@@ -18418,7 +18428,7 @@
   "0de24bb6": {
     "id": "0de24bb6",
     "title": "ה-CTA pipeline: ודא שיש CTA 'קבל הצעת מחיר' בולט בכל דף שירות ובסוף כל מאמר; האתר כבר ממיר — פישוט מסע המשתמש לטופס מגדיל conversion ללא תנועה נוספת (id 879b4850)",
-    "status": "awaiting_approval",
+    "status": "approved",
     "revisions": 1,
     "history": [
       {
@@ -18436,11 +18446,17 @@
   "7661040d": {
     "id": "7661040d",
     "title": "LinkedIn executive posting: פוסט case-study אחד + פוסט insight אחד/שבוע מפרופיל מנכ\"ל — B2B ישראלי מחליט על סמך מוניטין אישי; lead מ-LinkedIn מגיע עם trust מובנה (id 341e6ab8)",
-    "status": "todo",
-    "revisions": 0,
-    "history": [],
+    "status": "in_progress",
+    "revisions": 1,
+    "history": [
+      {
+        "date": "2026-09-22",
+        "summary": "(no summary)",
+        "ready": false
+      }
+    ],
     "created": "2026-09-12",
-    "updated": "2026-09-12",
+    "updated": "2026-09-22",
     "kind": "leads_action",
     "priority": "leads",
     "channel": "leads"
@@ -18448,11 +18464,17 @@
   "51595e3f": {
     "id": "51595e3f",
     "title": "סגירת פער ייחוס: הדרך נציגי מכירות לסמן 'Google Organic' ו-'Web' ב-Salesforce כשלקוח מזכיר את האתר; 'Other' (1 ליד) ו-'Web' (3 לידים) עשויים להסתיר Google Organic שמכוון את ההשקעה (id c3ec361d)",
-    "status": "todo",
-    "revisions": 0,
-    "history": [],
+    "status": "awaiting_approval",
+    "revisions": 1,
+    "history": [
+      {
+        "date": "2026-09-22",
+        "summary": "הופק חבילת יישום מלאה לסגירת פער ייחוס ב-Salesforce: SOP לנציגי מכירות, עץ החלטה, טבלת מיפוי מקורות, 3 Validation Rules מוכנות להטמעה, כרטיס עזר להדפסה, מייל הדרכה מוכן לשליחה, נוהל תיקון 4 הלידים ההיסטוריים, ודוח ביקורת חודשי — הכל טיוטה לאישור אלון.",
+        "ready": true
+      }
+    ],
     "created": "2026-09-12",
-    "updated": "2026-09-12",
+    "updated": "2026-09-22",
     "kind": "leads_action",
     "priority": "leads",
     "channel": "leads"
@@ -18460,11 +18482,17 @@
   "c193c607": {
     "id": "c193c607",
     "title": "עדכון llms-full.txt עם נתונים מדויקים: 1,500+ אירועים, 130+ יעדים, 25,000+ משתתפים — AI citations כבר מייצרות demand; תיקון נתונים שגויים (200/20) מונע אובדן אמון אצל decision-makers שבודקים ב-AI (id 76ad88de)",
-    "status": "todo",
-    "revisions": 0,
-    "history": [],
+    "status": "awaiting_approval",
+    "revisions": 1,
+    "history": [
+      {
+        "date": "2026-09-22",
+        "summary": "הופק קובץ llms-full.txt מלא וקובץ llms.txt תמציתי עבור UPE, הכוללים נתונים קנוניים מדויקים (1,500+ אירועים, 130+ יעדים, 25,000+ משתתפים, 2010), תיאורי שירותים, FAQ למנועי AI, והנחיות יישום טכני — טיוטה לאישור Alon בלבד.",
+        "ready": true
+      }
+    ],
     "created": "2026-09-12",
-    "updated": "2026-09-12",
+    "updated": "2026-09-22",
     "kind": "leads_action",
     "priority": "leads",
     "channel": "leads"
@@ -18576,17 +18604,23 @@
     "channel": "leads",
     "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
     "action_key": "salesforce-attribution-fix",
-    "owner": "מנהל מכירות מפיץ; Alon מאשר הנחיה",
+    "owner": "מנהל מכירות מפיץ; Alon מאשר",
     "success_metric": "ייחוס לידים: בסיס לא-מיוחס; יעד המדד מקור אמיתי. יש להשוות תקופות תואמות."
   },
   "2769e4c7": {
     "id": "2769e4c7",
     "title": "טיוטת הנחיית ייחוס המקורות כבר הוכנה וממתינה לבדיקה. טרם הופצה; אין ליצור אותה מחדש.",
-    "status": "todo",
-    "revisions": 0,
-    "history": [],
+    "status": "awaiting_approval",
+    "revisions": 1,
+    "history": [
+      {
+        "date": "2026-09-22",
+        "summary": "הוכנה טיוטת הנחיית ייחוס מקורות מלאה ל-UPE הכוללת: מבנה UTM סטנדרטי, רשימת sources סגורה, כללי CRM למניעת דריסה, הנחיות ייחודיות לאירועים אופליין, מודלי attribution, checklist לאימות, וטבלת quick-reference — ממתינה לאישור Alon לפני הפצה לצוות.",
+        "ready": true
+      }
+    ],
     "created": "2026-09-14",
-    "updated": "2026-09-14",
+    "updated": "2026-09-22",
     "kind": "leads_action",
     "priority": "leads",
     "channel": "leads"
@@ -18648,5 +18682,27 @@
     "action_key": "organic-click-period-review",
     "owner": "בדיקת נתונים",
     "success_metric": "קליקים אורגניים/שבוע: בסיס 40; יעד המדד 300. יש להשוות תקופות תואמות."
+  },
+  "ad653159": {
+    "id": "ad653159",
+    "title": "קדם את initiative הקיים (awaiting_approval, id: b7c0af4b): clips של 30-60 שניות מאחורי הקלעים מהפקות קיימות, כיתוב עברי, ללא תסריט — שיתוף מקביל ל-Instagram Reels לחיסכון בתפוקה. הגש 2 טיוטות ראשונות לאישור. P2 כיוון שתנועה/לידים מ-TikTok B2B לא מוכחת עדיין בנתוני UPE.",
+    "status": "awaiting_approval",
+    "revisions": 1,
+    "history": [
+      {
+        "date": "2026-09-22",
+        "summary": "הוכנו 2 טיוטות TikTok/Reels מוכנות לביצוע עבור initiative b7c0af4b: shot list, כיתוב עברי RTL לכל פלטפורמה, text overlays, הוראות טכניות לשיתוף מקביל — ממתינות לאישור Alon ולבחירת חומר גלם מהארכיב.",
+        "ready": true
+      }
+    ],
+    "created": "2026-09-22",
+    "updated": "2026-09-22",
+    "kind": "recommendation",
+    "priority": "P2",
+    "channel": "tiktok",
+    "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
+    "action_key": "tiktok-behind-scenes-launch",
+    "owner": "מפיק תוכן מכין clips; Alon מאשר כל פרסום",
+    "success_metric": "נוכחות סושיאל (רצפה): בסיס 7.0; יעד המדד 5. יש להשוות תקופות תואמות."
   }
 }
