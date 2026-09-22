@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-20",
+  "updated": "2026-09-22",
   "note": "External authority evidence and actions. needs_verification belongs to automation, remains visible in the weekly digest, and is not an overdue founder decision. Review due items in the existing weekly UPE automation; never infer active membership from historical notes alone.",
   "items": [
     {
@@ -104,9 +104,9 @@
       "action": "נמצא רישום היסטורי מ-08.08 שלפיו אלון אישר ביצוע חברות ICCA/IAPCO, מול תור ענן שעדיין ביקש החלטה. נדרש אימות מסמכי חברות ופרופיל לכל גוף בנפרד. חיפוש דואר ממוקד ב-13.09 לא החזיר אסמכתה מהגופים; אין בכך הוכחה שלא שולמה חברות. אין לבקש תשלום חוזר או לסמן חברות פעילה ללא אסמכתה.",
       "target_url": "",
       "kind": "directory",
-      "last_reviewed": "2026-09-13",
+      "last_reviewed": "2026-09-22",
       "owner": "automation",
-      "next_review_at": "2026-09-15",
+      "next_review_at": "2026-09-29",
       "unverifiable": true,
       "review_reason": "Conflicting historical evidence; do not request a second membership payment.",
       "evidence": [
@@ -119,6 +119,45 @@
           "source": "Outlook search 2026-09-13",
           "query": "from:iccaworld.org / from:iapco.org / from:helmsbriscoe.com received>=2026-07-01",
           "result": "no_results_in_targeted_search_not_exhaustive"
+        },
+        {
+          "reviewed_at": "2026-09-22",
+          "source": "Read-only Outlook and public web search",
+          "organizations": [
+            {
+              "name": "ICCA",
+              "domain": "iccaworld.org",
+              "mail_query": "from:iccaworld.org received>=2026-08-08",
+              "mail_result": "no_results",
+              "public_query": "site:iccaworld.org \"Uproduction\" and \"Uproduction\" \"ICCA\"",
+              "public_result": "no_results_returned_by_search; direct member profile unavailable"
+            },
+            {
+              "name": "IAPCO",
+              "domain": "iapco.org",
+              "mail_query": "from:iapco.org received>=2026-08-08",
+              "mail_result": "no_results",
+              "public_query": "site:iapco.org \"Uproduction\" and \"Uproduction\" \"IAPCO\"",
+              "public_result": "no_results_returned_by_search; direct member profile unavailable"
+            },
+            {
+              "name": "MPI",
+              "domain": "mpi.org",
+              "mail_query": "from:mpi.org received>=2026-08-08",
+              "mail_result": "no_results",
+              "public_query": "site:mpi.org \"Uproduction\" and \"Uproduction\" \"MPI\"",
+              "public_result": "no_results_returned_by_search; direct member profile unavailable"
+            },
+            {
+              "name": "HelmsBriscoe",
+              "domain": "helmsbriscoe.com",
+              "mail_query": "from:helmsbriscoe.com received>=2026-08-08",
+              "mail_result": "no_results",
+              "public_query": "site:helmsbriscoe.com \"Uproduction\" and \"Uproduction\" \"HelmsBriscoe\"",
+              "public_result": "no_results_returned_by_search; direct member profile unavailable"
+            }
+          ],
+          "result": "Inconclusive. Historical approval retained. No current membership confirmed; absence of search results does not prove absence of membership. No payment or renewed approval requested."
         }
       ]
     },
