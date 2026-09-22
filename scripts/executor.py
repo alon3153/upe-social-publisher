@@ -51,12 +51,20 @@ def bounded_agent(it, seconds):
     """Hard wall-clock limit, including retries and slow response bodies (Unix runner)."""
     def expire(signum, frame):
         raise ActionDeadline('action deadline exceeded')
+    progress = {}
+    request = dict(it, _stream_progress=progress)
     previous = signal.signal(signal.SIGALRM, expire)
     signal.setitimer(signal.ITIMER_REAL, seconds)
     try:
-        return run_agent(it)
+        result = run_agent(request)
+        if result.get('error') and progress:
+            result['diagnostics'] = dict(progress)
+        return result
     except ActionDeadline:
-        return {'error': 'action deadline exceeded'}
+        result = {'error': 'action deadline exceeded'}
+        if progress:
+            result['diagnostics'] = dict(progress)
+        return result
     finally:
         signal.setitimer(signal.ITIMER_REAL, 0)
         signal.signal(signal.SIGALRM, previous)
@@ -280,7 +288,7 @@ class StreamFailure(ValueError):
     """A response that must not be registered as a complete draft."""
 
 
-def read_message_stream(response):
+def read_message_stream(response, progress=None):
     """Accumulate text SSE blocks; never accept a disconnected or failed stream.
 
     Pings/search events keep the socket alive while the 240s outer deadline
@@ -302,6 +310,16 @@ def read_message_stream(response):
             raise StreamFailure("malformed stream event") from exc
         data_lines = []
         kind = event.get("type")
+        if progress is not None:
+            progress['events_received'] = progress.get('events_received', 0) + 1
+            known = {'message_start', 'message_delta', 'message_stop', 'content_block_start',
+                     'content_block_delta', 'content_block_stop', 'ping', 'error'}
+            progress['last_event'] = kind if kind in known else 'other'
+            if kind == 'content_block_start':
+                block_type = event.get('content_block', {}).get('type')
+                progress['last_block_type'] = block_type if block_type in ('text', 'server_tool_use', 'web_search_tool_result', 'thinking') else 'other'
+            if kind == 'content_block_delta' and event.get('delta', {}).get('type') == 'text_delta':
+                progress['text_characters'] = progress.get('text_characters', 0) + len(event['delta'].get('text', ''))
         if kind == "error":
             # Avoid persisting upstream messages, which may echo private inputs.
             raise StreamFailure("provider stream error")
@@ -365,7 +383,7 @@ def run_agent(it):
         try:
             req = urllib.request.Request("https://api.anthropic.com/v1/messages", data=data, headers=headers)
             with urllib.request.urlopen(req, timeout=90) as r:
-                resp = read_message_stream(r)
+                resp = read_message_stream(r, progress=it.get("_stream_progress"))
             break
         except StreamFailure as e:
             return {"error": f"anthropic {e}"}
@@ -487,7 +505,11 @@ def main():
         attempted += 1
         if res.get("error"):
             print(f"  ✗ {it['id']}: {res['error']}", file=sys.stderr)
-            it["history"].append({"date": _today(), "error": res["error"]})
+            failure = {"date": _today(), "error": res["error"]}
+            if res.get('diagnostics'):
+                failure['diagnostics'] = res['diagnostics']
+                print('  stream progress: ' + json.dumps(res['diagnostics']), flush=True)
+            it["history"].append(failure)
             checkpoint(inits, advanced, attempted, len(todo))
             continue
         (DELIV_DIR / f"{it['id']}.md").write_text(
