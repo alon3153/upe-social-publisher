@@ -1,20 +1,20 @@
 {
-  "updated_at": "2026-09-21",
+  "updated_at": "2026-09-22",
   "scores": {
-    "instagram": 28,
-    "facebook": 32,
+    "instagram": 20,
+    "facebook": 15,
     "tiktok": 10,
-    "linkedin": 35,
+    "linkedin": 28,
     "youtube": 55,
-    "google_organic_geo": 72,
-    "overall": 68
+    "google_organic_geo": 42,
+    "overall": 72
   },
   "recommendations": [
     {
       "category": "gated",
       "priority": "P0",
       "action_key": "salesforce-attribution-fix",
-      "owner": "מנהל מכירות מפיץ; Alon מאשר הנחיה",
+      "owner": "מנהל מכירות מפיץ; Alon מאשר",
       "success_metric": "ייחוס לידים: בסיס לא-מיוחס; יעד המדד מקור אמיתי. יש להשוות תקופות תואמות.",
       "evidence": {
         "source": "scorecard",
@@ -25,10 +25,54 @@
         "status": "❌"
       },
       "evidence_url": null,
-      "target_url": null,
-      "action": "הנחיית הייחוס (draft_ready בנתיב Uproduction Operations/Marketing-Council/verification-2026-09-13/lead-source-guidance.md) עדיין לא הופצה ו-CRM לא שונה. הפץ את הקובץ הקיים לנציגי מכירות עם session הסבר קצרה (15 דקות). הגדר כללי זרימה: כל ליד שציין את האתר/גוגל → 'Web' או 'Google Organic'; 'Advertisement' = ממומן מתועד בלבד; 'Other' = ברירת מחדל אסורה ללא הסבר.",
+      "target_url": "Uproduction Operations/Marketing-Council/verification-2026-09-13/lead-source-guidance.md",
+      "action": "הפץ את טיוטת הנחיית הייחוס הקיימת (draft_ready, לא distributed) לנציגי המכירות: כלל-הסיווג הוא 'כשלקוח מזכיר חיפוש — Google Organic; כשמזכיר אתר UPE — Web; אחרת בלבד — Other'. אין ליצור מסמך חדש — הטיוטה קיימת.",
       "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
       "channel": "leads",
+      "status": "candidate",
+      "detail": "הצעה לבדיקה על בסיס המדד המתועד; לא בוצע שינוי."
+    },
+    {
+      "category": "gated",
+      "priority": "P0",
+      "action_key": "linkedin-executive-advocacy",
+      "owner": "מנכ\"ל מפרסם; Alon מאשר כל פוסט",
+      "success_metric": "נוכחות סושיאל (רצפה): בסיס 7.0; יעד המדד 5. יש להשוות תקופות תואמות.",
+      "evidence": {
+        "source": "scorecard",
+        "metric": "נוכחות סושיאל (רצפה)",
+        "value": 7.0,
+        "target": 5,
+        "unit": "",
+        "status": "✅"
+      },
+      "evidence_url": "https://connectsafely.ai/articles/b2b-linkedin-marketing-complete-guide-2026",
+      "target_url": null,
+      "action": "הפעל את initiative הקיים (in_progress, id: ba5e2d8e): 2 פוסטים/שבוע מפרופיל אישי מנכ\"ל — case study מהפקה אחרונה + insight עסקי. דף החברה עושה repost בלבד. כיתוביות חובה. קישור — בתגובה הראשונה.",
+      "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
+      "channel": "linkedin",
+      "status": "candidate",
+      "detail": "הצעה לבדיקה על בסיס המדד המתועד; לא בוצע שינוי."
+    },
+    {
+      "category": "gated",
+      "priority": "P2",
+      "action_key": "tiktok-behind-scenes-launch",
+      "owner": "מפיק תוכן מכין clips; Alon מאשר כל פרסום",
+      "success_metric": "נוכחות סושיאל (רצפה): בסיס 7.0; יעד המדד 5. יש להשוות תקופות תואמות.",
+      "evidence": {
+        "source": "scorecard",
+        "metric": "נוכחות סושיאל (רצפה)",
+        "value": 7.0,
+        "target": 5,
+        "unit": "",
+        "status": "✅"
+      },
+      "evidence_url": null,
+      "target_url": null,
+      "action": "קדם את initiative הקיים (awaiting_approval, id: b7c0af4b): clips של 30-60 שניות מאחורי הקלעים מהפקות קיימות, כיתוב עברי, ללא תסריט — שיתוף מקביל ל-Instagram Reels לחיסכון בתפוקה. הגש 2 טיוטות ראשונות לאישור. P2 כיוון שתנועה/לידים מ-TikTok B2B לא מוכחת עדיין בנתוני UPE.",
+      "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
+      "channel": "tiktok",
       "status": "candidate",
       "detail": "הצעה לבדיקה על בסיס המדד המתועד; לא בוצע שינוי."
     }
