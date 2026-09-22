@@ -214,11 +214,21 @@ def sync_backlog(inits):
 
 
 def pick_to_advance(inits, approved, limit):
+    # The council filters new recommendations, but older backlog entries survive
+    # daily syncs. Respect the same verified ledger before spending on a draft.
+    try:
+        verified = json.loads((STATE_DIR / "council_verified_actions.json").read_text())
+    except (OSError, ValueError):
+        verified = {}
+    completed = set(verified.get("completed_action_keys", []))
+    superseded = verified.get("superseded_initiatives", {})
     open_states = ("todo", "in_progress", "awaiting_approval")
     cands = []
     for it in inits.values():
         if it["id"] in approved:
             it["status"] = "approved"; continue
+        if it.get("action_key") in completed or it["id"] in superseded:
+            continue  # Keep history, artifacts and approval IDs intact.
         if it.get("status") not in open_states:
             continue
         if it.get("status") == "awaiting_approval" or it.get("revisions", 0) >= MAX_REVISIONS:
