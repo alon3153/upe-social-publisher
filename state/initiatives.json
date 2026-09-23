@@ -18156,11 +18156,17 @@
   "107ed80f": {
     "id": "107ed80f",
     "title": "שלב 1 (חודשים 1-3): בסס executive presence: 2 מנהלים בכירים פעילים ב-LinkedIn באופן אישי — מטרה 500 followers חדשים לדפי UPE דרך amplification אורגני",
-    "status": "todo",
-    "revisions": 0,
-    "history": [],
+    "status": "awaiting_approval",
+    "revisions": 1,
+    "history": [
+      {
+        "date": "2026-09-23",
+        "summary": "הופקה תוכנית executive presence מלאה ל-90 יום ל-LinkedIn של UPE, כולל אופטימיזציית פרופיל, 6 פוסטים מוכנים (עברית + אנגלית), לוח זמנים שבועי, מנגנון amplification אורגני, ו-tracker מדיד — מטרה: 500 followers חדשים לדף UPE תוך 3 חודשים.",
+        "ready": true
+      }
+    ],
     "created": "2026-09-11",
-    "updated": "2026-09-11",
+    "updated": "2026-09-23",
     "kind": "follower_plan",
     "priority": "follower",
     "channel": "growth"
@@ -18330,6 +18336,16 @@
           "last_block_type": "text",
           "text_characters": 21157
         }
+      },
+      {
+        "date": "2026-09-23",
+        "error": "action deadline exceeded",
+        "diagnostics": {
+          "events_received": 4752,
+          "last_event": "content_block_delta",
+          "last_block_type": "text",
+          "text_characters": 21288
+        }
       }
     ],
     "created": "2026-09-12",
@@ -18447,16 +18463,21 @@
     "id": "7661040d",
     "title": "LinkedIn executive posting: פוסט case-study אחד + פוסט insight אחד/שבוע מפרופיל מנכ\"ל — B2B ישראלי מחליט על סמך מוניטין אישי; lead מ-LinkedIn מגיע עם trust מובנה (id 341e6ab8)",
     "status": "in_progress",
-    "revisions": 1,
+    "revisions": 2,
     "history": [
       {
         "date": "2026-09-22",
         "summary": "(no summary)",
         "ready": false
+      },
+      {
+        "date": "2026-09-23",
+        "summary": "(no summary)",
+        "ready": false
       }
     ],
     "created": "2026-09-12",
-    "updated": "2026-09-22",
+    "updated": "2026-09-23",
     "kind": "leads_action",
     "priority": "leads",
     "channel": "leads"
@@ -18464,7 +18485,7 @@
   "51595e3f": {
     "id": "51595e3f",
     "title": "סגירת פער ייחוס: הדרך נציגי מכירות לסמן 'Google Organic' ו-'Web' ב-Salesforce כשלקוח מזכיר את האתר; 'Other' (1 ליד) ו-'Web' (3 לידים) עשויים להסתיר Google Organic שמכוון את ההשקעה (id c3ec361d)",
-    "status": "awaiting_approval",
+    "status": "approved",
     "revisions": 1,
     "history": [
       {
@@ -18604,7 +18625,7 @@
     "channel": "leads",
     "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
     "action_key": "salesforce-attribution-fix",
-    "owner": "מנהל מכירות מפיץ; Alon מאשר",
+    "owner": "Ops/Marketing מכין; Alon מאשר ומפיץ",
     "success_metric": "ייחוס לידים: בסיס לא-מיוחס; יעד המדד מקור אמיתי. יש להשוות תקופות תואמות."
   },
   "2769e4c7": {
@@ -18628,11 +18649,17 @@
   "ba98f3b0": {
     "id": "ba98f3b0",
     "title": "בדוק את המקור של רשומות Web, Advertisement ו-Other מול ראיה מתועדת. שינוי תווית מקור אינו מוסיף ליד לספירה הכוללת.",
-    "status": "todo",
-    "revisions": 0,
-    "history": [],
+    "status": "awaiting_approval",
+    "revisions": 1,
+    "history": [
+      {
+        "date": "2026-09-23",
+        "summary": "הופק פרוטוקול ביקורת מלא ומוכן לשימוש לאימות מקורות לידים Web/Advertisement/Other — כולל עצי החלטה לכל קטגוריה, טבלת Audit Log, כללי Re-labeling, לוח זמנים, והמלצות מניעה — ללא שינוי בספירת הלידים הכוללת.",
+        "ready": true
+      }
+    ],
     "created": "2026-09-14",
-    "updated": "2026-09-14",
+    "updated": "2026-09-23",
     "kind": "leads_action",
     "priority": "leads",
     "channel": "leads"
@@ -18640,11 +18667,17 @@
   "5e8e44d0": {
     "id": "5e8e44d0",
     "title": "הבחן בין Google Organic לתנועה ממומנת באמצעות פרטי הפנייה והייחוס. תשובה כללית ״מצאתי בגוגל״ אינה מספיקה לסיווג כאורגני.",
-    "status": "todo",
-    "revisions": 0,
-    "history": [],
+    "status": "awaiting_approval",
+    "revisions": 1,
+    "history": [
+      {
+        "date": "2026-09-23",
+        "summary": "הופקה מסגרת ייחוס לידים מלאה ל-UPE הכוללת: מטריצת סיווג Organic לעומת Paid, קוד JavaScript לכידת UTM, שדות CRM ו-Workflow אוטומטי, נוהל Drill-Down לנציגים, ו-Naming Convention לקמפיינים — כל זאת על מנת לוודא שתשובת 'מצאתי בגוגל' לא תסווג אוטומטית כ-Organic.",
+        "ready": true
+      }
+    ],
     "created": "2026-09-14",
-    "updated": "2026-09-14",
+    "updated": "2026-09-23",
     "kind": "leads_action",
     "priority": "leads",
     "channel": "leads"
@@ -18652,11 +18685,17 @@
   "d2424296": {
     "id": "d2424296",
     "title": "עקוב אחרי הפניות הקיימות ותעד את שלב הטיפול. אין לשנות רשומות CRM או להפיץ הנחיות ללא ההרשאה המתאימה.",
-    "status": "todo",
-    "revisions": 0,
-    "history": [],
+    "status": "awaiting_approval",
+    "revisions": 1,
+    "history": [
+      {
+        "date": "2026-09-23",
+        "summary": "הוכן מסמך מעקב פניות מלא ל-UPE הכולל: 9 שלבי פייפליין מוגדרים, תבנית תיעוד לכל פנייה, לוח מחוונים, סקריפטים לפולו-אפ, פרוטוקול נרשור, כללי תיעוד ו-KPIs — טיוטה לאישור אלון לפני כל סנכרון עם CRM.",
+        "ready": true
+      }
+    ],
     "created": "2026-09-14",
-    "updated": "2026-09-14",
+    "updated": "2026-09-23",
     "kind": "leads_action",
     "priority": "leads",
     "channel": "leads"
@@ -18686,7 +18725,7 @@
   "ad653159": {
     "id": "ad653159",
     "title": "קדם את initiative הקיים (awaiting_approval, id: b7c0af4b): clips של 30-60 שניות מאחורי הקלעים מהפקות קיימות, כיתוב עברי, ללא תסריט — שיתוף מקביל ל-Instagram Reels לחיסכון בתפוקה. הגש 2 טיוטות ראשונות לאישור. P2 כיוון שתנועה/לידים מ-TikTok B2B לא מוכחת עדיין בנתוני UPE.",
-    "status": "awaiting_approval",
+    "status": "approved",
     "revisions": 1,
     "history": [
       {
@@ -18702,7 +18741,7 @@
     "channel": "tiktok",
     "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
     "action_key": "tiktok-behind-scenes-launch",
-    "owner": "מפיק תוכן מכין clips; Alon מאשר כל פרסום",
-    "success_metric": "נוכחות סושיאל (רצפה): בסיס 7.0; יעד המדד 5. יש להשוות תקופות תואמות."
+    "owner": "Content מכין; Alon מאשר 2 טיוטות ראשונות לפני פרסום",
+    "success_metric": "נוכחות סושיאל (רצפה): בסיס 12.0; יעד המדד 5. יש להשוות תקופות תואמות."
   }
 }
