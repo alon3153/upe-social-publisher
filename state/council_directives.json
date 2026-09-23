@@ -1,76 +1,7 @@
 {
-  "updated_at": "2026-09-22",
+  "updated_at": "2026-09-23",
   "source": "daily-council",
-  "directives": [
-    {
-      "category": "safe_auto",
-      "action": "ניסוי Perplexity: לכל 3 שאלות בתוצאות top_opportunities הספרדיות ('gestión de proveedores para eventos' ו-'mejores destinos') — ודא שהתשובה בדף הרלוונטי מתחילה בהגדרה ישירה לשאלה + נתון ספציפי אחד, לפי עיקרון 'answer first sentence'. הגש לצינור האישורים כטיוטת עריכה.",
-      "detail": "הצעה לבדיקה על בסיס המדד המתועד; לא בוצע שינוי.",
-      "channel": "google_organic_geo",
-      "evidence": {
-        "source": "scorecard",
-        "metric": "קליקים אורגניים/שבוע",
-        "value": 43,
-        "target": 300,
-        "unit": "",
-        "status": "❌"
-      },
-      "status": "candidate",
-      "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
-      "success_metric": "קליקים אורגניים/שבוע: בסיס 43; יעד המדד 300. יש להשוות תקופות תואמות."
-    },
-    {
-      "category": "safe_auto",
-      "action": "ניסוי YouTube: לכל 6 הסרטונים שפורסמו השבוע — ודא שלכל אחד יש תיאור בן 200+ מילים עם מונח עברי/אנגלי רלוונטי + timestamp + קישור לדף שירות; הגש כ-draft SEO-description לאישור לפני עדכון.",
-      "detail": "הצעה לבדיקה על בסיס המדד המתועד; לא בוצע שינוי.",
-      "channel": "youtube",
-      "evidence": {
-        "source": "scorecard",
-        "metric": "קליקים אורגניים/שבוע",
-        "value": 43,
-        "target": 300,
-        "unit": "",
-        "status": "❌"
-      },
-      "status": "candidate",
-      "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
-      "success_metric": "קליקים אורגניים/שבוע: בסיס 43; יעד המדד 300. יש להשוות תקופות תואמות."
-    },
-    {
-      "category": "safe_auto",
-      "action": "הצע לוח תוכן שבועי לצינור האישורים: Instagram ו-TikTok — 2 פוסטים/שבוע מסוג 'אחורי הקלעים' (clip מהפקה קיימת, ללא כתיבה מחדש); Facebook — 1 repost של Instagram; LinkedIn — 2 פוסטים מנכ\"ל. הצעה קדמית בלבד.",
-      "detail": "הצעה לבדיקה על בסיס המדד המתועד; לא בוצע שינוי.",
-      "channel": "instagram",
-      "evidence": {
-        "source": "scorecard",
-        "metric": "נוכחות סושיאל (רצפה)",
-        "value": 7.0,
-        "target": 5,
-        "unit": "",
-        "status": "✅"
-      },
-      "status": "candidate",
-      "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
-      "success_metric": "נוכחות סושיאל (רצפה): בסיס 7.0; יעד המדד 5. יש להשוות תקופות תואמות."
-    },
-    {
-      "category": "safe_auto",
-      "action": "ניטור top_opportunities עברי: עקוב חודשי אחרי 5 מונחי-ההזדמנות ('הפקת נופש חברה' pos.18, 'אירועי קונספט' pos.18, 'הפקות אירועים עסקיים' pos.17 ועוד) — תעד שינוי עמדה לאחר חלוף ה-cooldown של כל דף. אין לשנות דפים בcooldown.",
-      "detail": "הצעה לבדיקה על בסיס המדד המתועד; לא בוצע שינוי.",
-      "channel": "google_organic_geo",
-      "evidence": {
-        "source": "scorecard",
-        "metric": "קליקים אורגניים/שבוע",
-        "value": 43,
-        "target": 300,
-        "unit": "",
-        "status": "❌"
-      },
-      "status": "candidate",
-      "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
-      "success_metric": "קליקים אורגניים/שבוע: בסיס 43; יעד המדד 300. יש להשוות תקופות תואמות."
-    }
-  ],
+  "directives": [],
   "channel_cadence": {
     "facebook": {
       "max_posts_per_week": 1,
