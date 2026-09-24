@@ -1,7 +1,59 @@
 {
-  "updated_at": "2026-09-23",
+  "updated_at": "2026-09-24",
   "source": "daily-council",
-  "directives": [],
+  "directives": [
+    {
+      "category": "safe_auto",
+      "action": "הגדרת מסגרת תוכן LinkedIn לפרופיל מנכ\"ל: פורמט 'תובנת שוק' (case-study אמיתי מהפקה ספציפית + שאלה אחת לדיון) — 1,300-3,000 תווים, לא יותר מ-3 האשטגים רלוונטיים (#אירועיחברה #MICE #הפקתאירועים); לשתף את הפוסט לדף החברה בלבד כ-repost (לא כתוכן עצמאי חדש). ניסוי: 4 פוסטים לפרופיל אישי במשך שבועיים, מדידת dwell-time ו-comments רלוונטיים.",
+      "detail": "הצעה לבדיקה על בסיס המדד המתועד; לא בוצע שינוי.",
+      "channel": "linkedin",
+      "evidence": {
+        "source": "scorecard",
+        "metric": "נוכחות סושיאל (רצפה)",
+        "value": 15.0,
+        "target": 5,
+        "unit": "",
+        "status": "✅"
+      },
+      "status": "candidate",
+      "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
+      "success_metric": "נוכחות סושיאל (רצפה): בסיס 15.0; יעד המדד 5. יש להשוות תקופות תואמות."
+    },
+    {
+      "category": "safe_auto",
+      "action": "ניסוי זוויות תוכן Instagram: השוואה בין פוסט מספרי B2B (כגון 'Cost Per Attendee' — הפוסט הטוב ביותר בתקופה עם 42 חשיפות) לבין פוסט ויזואלי 'behind the scenes' מהפקה — 2 פוסטים בשבוע עם ניטור חשיפות אחרי 7 ימים לכל פורמט. התוצאה תכתיב את הפורמט המועדף לחודש הבא.",
+      "detail": "הצעה לבדיקה על בסיס המדד המתועד; לא בוצע שינוי.",
+      "channel": "instagram",
+      "evidence": {
+        "source": "scorecard",
+        "metric": "נוכחות סושיאל (רצפה)",
+        "value": 15.0,
+        "target": 5,
+        "unit": "",
+        "status": "✅"
+      },
+      "status": "candidate",
+      "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
+      "success_metric": "נוכחות סושיאל (רצפה): בסיס 15.0; יעד המדד 5. יש להשוות תקופות תואמות."
+    },
+    {
+      "category": "safe_auto",
+      "action": "ניסוי YouTube: לאחר שחרור cooldown (אחרי 7.10) — בדוק 3 הסרטונים המתוכננים (0a16e409) מול שאילתות קונים: 'כמה עולה הפקת כנס', 'איך בוחרים חברת הפקה', 'נופש חברה vs טיול תמריץ' — ודא שלכל סרטון יש description 300+ מילים עם קישור לדף שירות קיים. הכן template לאישור לפני הפקה.",
+      "detail": "הצעה לבדיקה על בסיס המדד המתועד; לא בוצע שינוי.",
+      "channel": "youtube",
+      "evidence": {
+        "source": "scorecard",
+        "metric": "קליקים אורגניים/שבוע",
+        "value": 25,
+        "target": 300,
+        "unit": "",
+        "status": "❌"
+      },
+      "status": "candidate",
+      "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
+      "success_metric": "קליקים אורגניים/שבוע: בסיס 25; יעד המדד 300. יש להשוות תקופות תואמות."
+    }
+  ],
   "channel_cadence": {
     "facebook": {
       "max_posts_per_week": 1,
@@ -12,11 +64,11 @@
       "reason": "מכסה מוצעת לבדיקה בתקופת המדידה; אין מסקנה סיבתית על אלגוריתם."
     },
     "linkedin": {
-      "max_posts_per_week": 3,
+      "max_posts_per_week": 4,
       "reason": "מכסה מוצעת לבדיקה בתקופת המדידה; אין מסקנה סיבתית על אלגוריתם."
     },
     "tiktok": {
-      "max_posts_per_week": 2,
+      "max_posts_per_week": 0,
       "reason": "מכסה מוצעת לבדיקה בתקופת המדידה; אין מסקנה סיבתית על אלגוריתם."
     },
     "youtube": {
@@ -26,8 +78,8 @@
   },
   "channel_priority": [
     "youtube",
-    "linkedin",
     "instagram",
+    "linkedin",
     "facebook",
     "tiktok"
   ],
