@@ -18174,8 +18174,8 @@
   "2c8d880c": {
     "id": "2c8d880c",
     "title": "שלב 2 (חודשים 2-6): הפעל TikTok + Instagram Reels בסדרת 'behind the scenes' — 3 פוסטים/שבוע; תוכן אותנטי מאחורי הקלעים הוא מנוע העוקבים המהיר ביותר ב-B2B ויזואלי",
-    "status": "todo",
-    "revisions": 0,
+    "status": "awaiting_approval",
+    "revisions": 1,
     "history": [
       {
         "date": "2026-09-24",
@@ -18186,10 +18186,15 @@
           "last_block_type": "text",
           "text_characters": 17015
         }
+      },
+      {
+        "date": "2026-09-25",
+        "summary": "הופק לוח תוכן מלא ל-8 שבועות לסדרת Behind the Scenes של UPE ב-TikTok + Instagram Reels, כולל 20 תסריטי וידאו מוכנים לצילום (10 מלאים, 10 בבריף), caption templates בעברית ואנגלית, מפרטים טכניים מבוססי נתוני 2026, RACI, ו-KPIs למדידה לאחר 60 יום.",
+        "ready": true
       }
     ],
     "created": "2026-09-11",
-    "updated": "2026-09-11",
+    "updated": "2026-09-25",
     "kind": "follower_plan",
     "priority": "follower",
     "channel": "growth"
@@ -18233,8 +18238,8 @@
   "058304a7": {
     "id": "058304a7",
     "title": "שלב 5 (שנה 2): שותפויות תוכן עם ספקי MICE (מלונות, venues, קייטרינג) לcross-promotion — הגדלה ל-50K+ followers דרך קהלים משלימים",
-    "status": "todo",
-    "revisions": 0,
+    "status": "awaiting_approval",
+    "revisions": 1,
     "history": [
       {
         "date": "2026-09-24",
@@ -18245,10 +18250,15 @@
           "last_block_type": "text",
           "text_characters": 11065
         }
+      },
+      {
+        "date": "2026-09-25",
+        "summary": "הופק מסמך שותפויות תוכן מלא ל-UPE: אסטרטגיה, רשימת מטרות MICE, 5 פוסטי LinkedIn מוכנים לתזמון (עברית + אנגלית), 4 תבניות Outreach (HE+EN), מסגרת MOU, לוח זמנים ל-90 יום ו-KPIs מדידים — הכל כטיוטה לאישור אלון.",
+        "ready": true
       }
     ],
     "created": "2026-09-11",
-    "updated": "2026-09-11",
+    "updated": "2026-09-25",
     "kind": "follower_plan",
     "priority": "follower",
     "channel": "growth"
@@ -18256,11 +18266,17 @@
   "62db6d85": {
     "id": "62db6d85",
     "title": "שלב 6 (שנה 3): YouTube SEO compounding — 50+ סרטונים ממוטבים יוצרים long-tail discovery אורגני; YouTube הוא מנוע העוקבים ל-500K בטווח הארוך עם ROI גבוה ביותר",
-    "status": "todo",
-    "revisions": 0,
-    "history": [],
+    "status": "awaiting_approval",
+    "revisions": 1,
+    "history": [
+      {
+        "date": "2026-09-25",
+        "summary": "הופק דליברבל מלא ומוכן לשימוש: 51 כותרות YouTube ממוטבות SEO עם 2 שורות תיאור + CTA לכל סרטון, מיפוי 30 מילות מפתח long-tail, ארכיטקטורת 5 פלייליסטים, תבנית description לשימוש חוזר, לוח שנה שנתי, ו-checklist analytics חודשי — הכל מבוסס best practices 2026.",
+        "ready": true
+      }
+    ],
     "created": "2026-09-11",
-    "updated": "2026-09-11",
+    "updated": "2026-09-25",
     "kind": "follower_plan",
     "priority": "follower",
     "channel": "growth"
@@ -18390,17 +18406,27 @@
           "last_block_type": "text",
           "text_characters": 20273
         }
+      },
+      {
+        "date": "2026-09-25",
+        "error": "action deadline exceeded",
+        "diagnostics": {
+          "events_received": 4739,
+          "last_event": "content_block_delta",
+          "last_block_type": "text",
+          "text_characters": 21649
+        }
       }
     ],
     "created": "2026-09-12",
     "updated": "2026-09-12",
     "kind": "recommendation",
-    "priority": "P1",
+    "priority": "P0",
     "channel": "linkedin",
     "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
     "action_key": "linkedin-executive-advocacy",
-    "owner": "מנכ\"ל כותב; מנהל/ת תוכן מעצב/ת; Alon מאשר לפני פרסום",
-    "success_metric": "נוכחות סושיאל (רצפה): בסיס 15.0; יעד המדד 5. יש להשוות תקופות תואמות."
+    "owner": "מנכ\"ל / CMO מפרסם; Alon מאשר כל פוסט",
+    "success_metric": "קליקים אורגניים/שבוע: בסיס 25; יעד המדד 300. יש להשוות תקופות תואמות."
   },
   "8c4f9ebe": {
     "id": "8c4f9ebe",
@@ -18570,11 +18596,17 @@
   "411f35dc": {
     "id": "411f35dc",
     "title": "שלב 1 (חודשים 1-3) — Executive presence: הפעל 2 מנהלים בכירים ב-LinkedIn עם 2 פוסטים/שבוע כל אחד; יעד 500 followers חדשים לדף החברה דרך amplification אורגני (id 107ed80f)",
-    "status": "todo",
-    "revisions": 0,
-    "history": [],
+    "status": "awaiting_approval",
+    "revisions": 1,
+    "history": [
+      {
+        "date": "2026-09-25",
+        "summary": "הופק מדריך מלא ומוכן לתזמון לשלב 1 של Executive Presence ב-LinkedIn: 48 פוסטים מוכנים (עברית + אנגלית) ל-12 שבועות עבור שני מנהלים בכירים, כולל פרוטוקול Amplification אורגני, checklist לפרופיל, דשבורד מדידה שבועי, ובנק נושאים לחודשים 2–3 — הכל כ-DRAFT הממתין לאישור אלון.",
+        "ready": true
+      }
+    ],
     "created": "2026-09-12",
-    "updated": "2026-09-12",
+    "updated": "2026-09-25",
     "kind": "follower_plan",
     "priority": "follower",
     "channel": "growth"
@@ -18584,7 +18616,18 @@
     "title": "שלב 2 (חודשים 2-6) — TikTok + Reels: 3 סרטוני 'אחורי הקלעים' מהפקות/שבוע בפורמט 60 שניות; שיתוף מקביל ל-Instagram Reels; תוכן אותנטי ולא מסרק הוא מנוע הגדילה המהיר ביותר (id 2c8d880c)",
     "status": "todo",
     "revisions": 0,
-    "history": [],
+    "history": [
+      {
+        "date": "2026-09-25",
+        "error": "action deadline exceeded",
+        "diagnostics": {
+          "events_received": 2875,
+          "last_event": "content_block_delta",
+          "last_block_type": "text",
+          "text_characters": 9294
+        }
+      }
+    ],
     "created": "2026-09-12",
     "updated": "2026-09-12",
     "kind": "follower_plan",
@@ -18674,7 +18717,7 @@
     "channel": "leads",
     "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
     "action_key": "salesforce-attribution-fix",
-    "owner": "מנהל/ת CRM מכין/ה; Alon מאשר ומפיץ",
+    "owner": "RevOps / Alon מאשר ומפיץ",
     "success_metric": "ייחוס לידים: בסיס לא-מיוחס; יעד המדד מקור אמיתי. יש להשוות תקופות תואמות."
   },
   "2769e4c7": {
