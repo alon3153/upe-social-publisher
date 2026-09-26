@@ -1,20 +1,20 @@
 {
-  "updated_at": "2026-09-25",
+  "updated_at": "2026-09-26",
   "scores": {
-    "instagram": 42,
+    "instagram": 38,
     "facebook": 18,
     "tiktok": 10,
-    "linkedin": 28,
-    "youtube": 55,
-    "google_organic_geo": 52,
-    "overall": 68
+    "linkedin": 32,
+    "youtube": 52,
+    "google_organic_geo": 62,
+    "overall": 72
   },
   "recommendations": [
     {
       "category": "gated",
       "priority": "P0",
       "action_key": "salesforce-attribution-fix",
-      "owner": "RevOps / Alon מאשר ומפיץ",
+      "owner": "Ops/RevOps מכין; Alon מאשר ומפיץ",
       "success_metric": "ייחוס לידים: בסיס לא-מיוחס; יעד המדד מקור אמיתי. יש להשוות תקופות תואמות.",
       "evidence": {
         "source": "scorecard",
@@ -24,33 +24,11 @@
         "unit": "",
         "status": "❌"
       },
-      "evidence_url": null,
+      "evidence_url": "https://www.terminusapp.com/blog/salesforce-utm-capture-lead-source-attribution/",
       "target_url": null,
-      "action": "הפץ את טיוטת הנחיית ייחוס המקורות (deliverable קיים בנתיב Uproduction Operations/Marketing-Council/verification-2026-09-13/lead-source-guidance.md) — שנה את שדה LeadSource ב-Salesforce רק לאחר אישור; הכשר את צוות המכירות לתיעוד מקור בזמן הפנייה הראשונה. אין לשנות ספירת לידים כוללת.",
+      "action": "הפץ את טיוטת הנחיית ייחוס המקורות הקיימת (id 2769e4c7, path: Uproduction Operations/Marketing-Council/verification-2026-09-13/lead-source-guidance.md) לכל נציגי המכירות; הוסף validation rule ב-Salesforce שחוסם שמירת Lead/Opportunity עם LeadSource='Other' ללא הערה בשדה Description; הוסף hidden UTM fields לטפסי האתר כדי לשמר first-touch attribution בעת המרה.",
       "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
       "channel": "leads",
-      "status": "candidate",
-      "detail": "הצעה לבדיקה על בסיס המדד המתועד; לא בוצע שינוי."
-    },
-    {
-      "category": "gated",
-      "priority": "P0",
-      "action_key": "linkedin-executive-advocacy",
-      "owner": "מנכ\"ל / CMO מפרסם; Alon מאשר כל פוסט",
-      "success_metric": "קליקים אורגניים/שבוע: בסיס 25; יעד המדד 300. יש להשוות תקופות תואמות.",
-      "evidence": {
-        "source": "scorecard",
-        "metric": "קליקים אורגניים/שבוע",
-        "value": 25,
-        "target": 300,
-        "unit": "",
-        "status": "❌"
-      },
-      "evidence_url": "https://www.digitalapplied.com/blog/linkedin-algorithm-2026-engagement-strategy-guide",
-      "target_url": null,
-      "action": "הפעל posting אישי של מנכ\"ל: case study קצר (200-300 מילים) + insight תעשייתי אחד/שבוע — דף החברה עושה repost בלבד, ללא קישורים חיצוניים בגוף הפוסט (הכנסם לתגובה ראשונה בהתאם לאלגוריתם 2026). יוזמה ba5e2d8e in-progress.",
-      "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
-      "channel": "linkedin",
       "status": "candidate",
       "detail": "הצעה לבדיקה על בסיס המדד המתועד; לא בוצע שינוי."
     }

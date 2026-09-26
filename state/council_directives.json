@@ -1,40 +1,23 @@
 {
-  "updated_at": "2026-09-25",
+  "updated_at": "2026-09-26",
   "source": "daily-council",
   "directives": [
     {
       "category": "safe_auto",
-      "action": "ניסוי hashtag ו-topic: תגי LinkedIn לתוכן executive — בדוק hashtags כגון #MICE #אירועיחברה #incentivetravel בפוסטים אישיים של מנכ\"ל; השמט קישורים חיצוניים מהפוסט עצמו (הכנסם לתגובה ראשונה) כדי לא לספוג את עונש -60% הדיסטריביושן של אלגוריתם LinkedIn 2026.",
+      "action": "ייחוס CRM — הנחיות זרימת עבודה: הכן draft-checklist לנציגי מכירות: בעת כניסת ליד חדש, חובה לבחור מקור ספציפי (Web-Organic / Web-Paid / LinkedIn / Advertisement / Referral / WOM); אסור להשאיר 'Other' ללא הערה מנומקת; הנחיית ייחוס UTM לטפסי אתר ממתינה ל-id 2769e4c7.",
       "detail": "הצעה לבדיקה על בסיס המדד המתועד; לא בוצע שינוי.",
-      "channel": "linkedin",
+      "channel": "leads",
       "evidence": {
         "source": "scorecard",
-        "metric": "נוכחות סושיאל (רצפה)",
-        "value": 16.0,
-        "target": 5,
+        "metric": "ייחוס לידים",
+        "value": "לא-מיוחס",
+        "target": "מקור אמיתי",
         "unit": "",
-        "status": "✅"
+        "status": "❌"
       },
       "status": "candidate",
       "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
-      "success_metric": "נוכחות סושיאל (רצפה): בסיס 16.0; יעד המדד 5. יש להשוות תקופות תואמות."
-    },
-    {
-      "category": "safe_auto",
-      "action": "ניסוי זווית תוכן Instagram: בדוק פוסטים מבוססי-נתון עסקי ('Cost Per Attendee') מול פוסטים ויזואליים מהפקה (BTS) — 3 מכל סוג, מדוד impressions ו-saves בכל קבוצה לאחר 14 יום לפני המלצה על פורמט קבוע.",
-      "detail": "הצעה לבדיקה על בסיס המדד המתועד; לא בוצע שינוי.",
-      "channel": "instagram",
-      "evidence": {
-        "source": "scorecard",
-        "metric": "נוכחות סושיאל (רצפה)",
-        "value": 16.0,
-        "target": 5,
-        "unit": "",
-        "status": "✅"
-      },
-      "status": "candidate",
-      "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
-      "success_metric": "נוכחות סושיאל (רצפה): בסיס 16.0; יעד המדד 5. יש להשוות תקופות תואמות."
+      "success_metric": "ייחוס לידים: בסיס לא-מיוחס; יעד המדד מקור אמיתי. יש להשוות תקופות תואמות."
     }
   ],
   "channel_cadence": {
@@ -47,11 +30,11 @@
       "reason": "מכסה מוצעת לבדיקה בתקופת המדידה; אין מסקנה סיבתית על אלגוריתם."
     },
     "linkedin": {
-      "max_posts_per_week": 3,
+      "max_posts_per_week": 5,
       "reason": "מכסה מוצעת לבדיקה בתקופת המדידה; אין מסקנה סיבתית על אלגוריתם."
     },
     "tiktok": {
-      "max_posts_per_week": 0,
+      "max_posts_per_week": 3,
       "reason": "מכסה מוצעת לבדיקה בתקופת המדידה; אין מסקנה סיבתית על אלגוריתם."
     },
     "youtube": {
