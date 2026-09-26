@@ -1,21 +1,21 @@
 {
   "schema_version": 1,
   "source_key": "executor",
-  "generated_at": "2026-09-25T12:21:23.714575+00:00",
-  "workflow_run_id": "36132538338",
+  "generated_at": "2026-09-26T11:55:49.458138+00:00",
+  "workflow_run_id": "36239327194",
   "status": "partial",
   "complete": false,
   "drafting_complete": false,
   "postprocessing": "complete",
   "planned": 6,
   "attempted": 6,
-  "advanced": 4,
+  "advanced": 5,
   "active_id": null,
   "source": "Executor durable checkpoint; drafts only",
   "facts": [
     [
       "טיוטות שקודמו",
-      4
+      5
     ],
     [
       "ניסיונות",

@@ -18416,6 +18416,16 @@
           "last_block_type": "text",
           "text_characters": 21649
         }
+      },
+      {
+        "date": "2026-09-26",
+        "error": "action deadline exceeded",
+        "diagnostics": {
+          "events_received": 4730,
+          "last_event": "content_block_delta",
+          "last_block_type": "text",
+          "text_characters": 20203
+        }
       }
     ],
     "created": "2026-09-12",
@@ -18614,8 +18624,8 @@
   "50eb7a05": {
     "id": "50eb7a05",
     "title": "שלב 2 (חודשים 2-6) — TikTok + Reels: 3 סרטוני 'אחורי הקלעים' מהפקות/שבוע בפורמט 60 שניות; שיתוף מקביל ל-Instagram Reels; תוכן אותנטי ולא מסרק הוא מנוע הגדילה המהיר ביותר (id 2c8d880c)",
-    "status": "todo",
-    "revisions": 0,
+    "status": "awaiting_approval",
+    "revisions": 1,
     "history": [
       {
         "date": "2026-09-25",
@@ -18626,10 +18636,15 @@
           "last_block_type": "text",
           "text_characters": 9294
         }
+      },
+      {
+        "date": "2026-09-26",
+        "summary": "הופק מסמך מבצעי מלא לתכנית TikTok + Reels של UPE לשלב 2 (חודשים 2–6): 3 עמודי תוכן שבועיים עם storyboards מפורטים ל-8 שבועות ראשונים, תבניות קפשן נפרדות לכל פלטפורמה, כללי הפקה טכניים, מאגר hashtags, Batch System, מדדי KPI ורשימת פעולות לאישור.",
+        "ready": true
       }
     ],
     "created": "2026-09-12",
-    "updated": "2026-09-12",
+    "updated": "2026-09-26",
     "kind": "follower_plan",
     "priority": "follower",
     "channel": "growth"
@@ -18637,11 +18652,17 @@
   "5930aefd": {
     "id": "5930aefd",
     "title": "שלב 3 (חודשים 3-9) — פורמט קבוע: 'הפקה ב-60 שניות' בכל פלטפורמה — פורמט חוזר וניתן לזכירה; עקביות פורמט בונה subscriber behavior ומגדיל retention (id 251cdb63)",
-    "status": "todo",
-    "revisions": 0,
-    "history": [],
+    "status": "awaiting_approval",
+    "revisions": 1,
+    "history": [
+      {
+        "date": "2026-09-26",
+        "summary": "נבנה דליבר מוכן לאישור הכולל: DNA מלא של פורמט 'הפקה ב-60 שניות', ספריית 12 פרקים עם concept cards, תסריט מלא לפרק A1, טמפלייטים לכל פלטפורמה (LinkedIn/Instagram/YouTube Shorts) בעברית ואנגלית, לוח שידור ל-12 שבועות, כללי ייצור, ו-KPIs לבדיקה — מבוסס על best practices 2026.",
+        "ready": true
+      }
+    ],
     "created": "2026-09-12",
-    "updated": "2026-09-12",
+    "updated": "2026-09-26",
     "kind": "follower_plan",
     "priority": "follower",
     "channel": "growth"
@@ -18649,11 +18670,17 @@
   "b3c7daa3": {
     "id": "b3c7daa3",
     "title": "שלב 4 (חודשים 6-12) — LinkedIn Newsletter: שגר newsletter עברי חודשי ל-HR/CMO — 'מדריך מנהלים לאירועי חברה'; newsletters מקבלים push notification priority ובונים subscriber base נפרד מ-followers (id 04925d91)",
-    "status": "todo",
-    "revisions": 0,
-    "history": [],
+    "status": "awaiting_approval",
+    "revisions": 1,
+    "history": [
+      {
+        "date": "2026-09-26",
+        "summary": "הוכנה ערכת השקה מלאה ל-LinkedIn Newsletter העברי של UPE — כולל זהות הניוזלטר, לוח שנה עריכתי של 7 גיליונות (ינואר–יולי), שני גיליונות מלאים ומוכנים לפרסום (#1 ו-#4), checklist הגדרות טכניות, Growth Playbook וקריטריון קבלה מדיד.",
+        "ready": true
+      }
+    ],
     "created": "2026-09-12",
-    "updated": "2026-09-12",
+    "updated": "2026-09-26",
     "kind": "follower_plan",
     "priority": "follower",
     "channel": "growth"
@@ -18661,11 +18688,17 @@
   "d53cb010": {
     "id": "d53cb010",
     "title": "שלב 5 (שנה 2) — שותפויות MICE: cross-promotion עם ספקי מלונות, venues וקייטרינג — גישה לקהלים משלימים של 50K+ followers (id 058304a7)",
-    "status": "todo",
-    "revisions": 0,
-    "history": [],
+    "status": "awaiting_approval",
+    "revisions": 1,
+    "history": [
+      {
+        "date": "2026-09-26",
+        "summary": "הופקה תוכנית cross-promotion מלאה ומוכנה לביצוע לשלב 5 (שנה 2) הכוללת: מטריצת שותפי MICE מטורגטת (10 שותפים, פוטנציאל 120K+ followers), ערכת פנייה מלאה בעברית ואנגלית (connection notes + 2 follow-ups), 6 פורמטי תוכן co-branded מוכנים לפרסום, לוח זמנים תפעולי ל-90 יום וקריטריון הצלחה מדיד.",
+        "ready": true
+      }
+    ],
     "created": "2026-09-12",
-    "updated": "2026-09-12",
+    "updated": "2026-09-26",
     "kind": "follower_plan",
     "priority": "follower",
     "channel": "growth"
@@ -18673,11 +18706,17 @@
   "3d0441f7": {
     "id": "3d0441f7",
     "title": "שלב 6 (שנה 3) — YouTube compounding: 50+ סרטונים ממוטבי-SEO יוצרים long-tail discovery אורגני; YouTube הוא המנוע שמוביל ל-500K בטווח הארוך עם ROI גבוה ביותר (id 62db6d85)",
-    "status": "todo",
-    "revisions": 0,
-    "history": [],
+    "status": "awaiting_approval",
+    "revisions": 1,
+    "history": [
+      {
+        "date": "2026-09-26",
+        "summary": "הופק דליברבל מלא ומוכן לאישור של 50 כותרות + תיאורים + CTA + hashtags + tags ממוטבי-SEO long-tail עבור ערוץ YouTube של UPE, מחולקים ל-6 פלייליסטים אסטרטגיים עם מפת מילות מפתח ולוח עלייה לאוויר ל-12 חודשים.",
+        "ready": true
+      }
+    ],
     "created": "2026-09-12",
-    "updated": "2026-09-12",
+    "updated": "2026-09-26",
     "kind": "follower_plan",
     "priority": "follower",
     "channel": "growth"
@@ -18717,7 +18756,7 @@
     "channel": "leads",
     "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
     "action_key": "salesforce-attribution-fix",
-    "owner": "RevOps / Alon מאשר ומפיץ",
+    "owner": "Ops/RevOps מכין; Alon מאשר ומפיץ",
     "success_metric": "ייחוס לידים: בסיס לא-מיוחס; יעד המדד מקור אמיתי. יש להשוות תקופות תואמות."
   },
   "2769e4c7": {
