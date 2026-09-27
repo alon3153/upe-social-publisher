@@ -18337,7 +18337,8 @@
   "ba5e2d8e": {
     "id": "ba5e2d8e",
     "title": "הפעל executive posting: 2 פוסטים/שבוע מפרופיל אישי של מנכ\"ל (case-study + insight תעשייתי), דף החברה עושה repost בלבד — מיישם את id 12c66867 שאושר ונתקע",
-    "status": "in_progress",
+    "status": "needs_attention",
+    "consecutive_failures": 13,
     "revisions": 1,
     "history": [
       {
@@ -18429,7 +18430,7 @@
       }
     ],
     "created": "2026-09-12",
-    "updated": "2026-09-12",
+    "updated": "2026-09-27",
     "kind": "recommendation",
     "priority": "P0",
     "channel": "linkedin",
