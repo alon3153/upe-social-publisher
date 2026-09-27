@@ -189,7 +189,8 @@ def build_scorecard(cur, prev, leads, seo_geo=None):
         row(scored, "מונחי מעקב ב-Top-3", top3 if top3 is not None else "לא נמדד",
             org_t["top3_keywords_min"],
             top3 >= org_t["top3_keywords_min"] if top3 is not None else None,
-            window_from=month_from, window_to=month_to, snapshot_date=seo_snap)
+            window_from=month_from, window_to=month_to, snapshot_date=seo_snap,
+            tracked_terms=parts["matched"])
         row(context, "מונחי Top-3 בכל השאילתות (מידע)",
             all_queries if all_queries is not None else "לא נמדד", None, None,
             window_from=month_from, window_to=month_to, snapshot_date=seo_snap)

@@ -22,8 +22,9 @@ import os, sys, json, base64, urllib.request, urllib.error
 from pathlib import Path
 from council_source_evidence import engine_evidence, valid_week
 
-# The Organic SEO Weekly keyword list is not stored in this repo. These paths are
-# checked so a later checked-in list is picked up; nothing here invents the 30 terms.
+# Scored Top-3 uses this list, never the guardian's precomputed top3_keywords.
+# The weekly cohort measures 30 Google queries, but those query strings are not
+# in the SEO snapshot. The checked-in file is the live service-page query set.
 _TRACKED_KEYWORD_FILES = (
     Path(__file__).resolve().parent / "organic_seo_weekly_keywords.json",
     Path(__file__).resolve().parent.parent / "state" / "organic_seo_weekly_keywords.json",
@@ -98,24 +99,28 @@ def split_top3(data):
     terms_present = bool(sites) and all(isinstance(s.get("top3_terms"), list) for s in sites)
     if terms_present:
         all_queries = sum(len(s.get("top3_terms") or []) for s in sites)
-    elif isinstance(data.get("top3_keywords_all_queries"), int) and not isinstance(data.get("top3_keywords_all_queries"), bool):
-        all_queries = data["top3_keywords_all_queries"]
+    elif isinstance(data.get("top3_all_queries"), int) and not isinstance(data.get("top3_all_queries"), bool):
+        all_queries = data["top3_all_queries"]
     elif isinstance(data.get("top3_keywords"), int) and not isinstance(data.get("top3_keywords"), bool):
+        # Legacy snapshots stored the all-query count here. It is info only.
         all_queries = data["top3_keywords"]
     else:
         all_queries = None
     keywords = tracked_keywords(data)
+    matched = []
     tracked = None
     if keywords and terms_present:
         wanted = {item.casefold() for item in keywords}
-        found = set()
+        seen = set()
         for site in sites:
             for term in site.get("top3_terms") or []:
                 query = _query_text(term)
-                if query and query.casefold() in wanted:
-                    found.add(query.casefold())
-        tracked = len(found)
-    return {"all_queries": all_queries, "tracked": tracked,
+                key = query.casefold() if query else ""
+                if key and key in wanted and key not in seen:
+                    seen.add(key)
+                    matched.append(query)
+        tracked = len(matched)
+    return {"all_queries": all_queries, "tracked": tracked, "matched": matched,
             "tracked_list_size": len(keywords) if keywords else None}
 
 
@@ -160,9 +165,11 @@ def normalize(data):
         data["weekly_window_verified"] = True
     else:
         data["weekly_window_verified"] = False
+    # The incoming top3_keywords integer is the guardian's all-query count.
+    # Always replace it. Scoring reads the recomputed tracked count only.
     parts = split_top3(data)
-    data["top3_keywords_all_queries"] = parts["all_queries"]
-    # Scored field. None until the tracked keyword list exists — never the all-query count.
+    data["top3_all_queries"] = parts["all_queries"]
+    data["top3_tracked_terms"] = parts["matched"]
     data["top3_keywords"] = parts["tracked"]
     data["tracked_keyword_list_size"] = parts["tracked_list_size"]
     avg_28d = weekly_average_28d(data)

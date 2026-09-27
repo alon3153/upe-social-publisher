@@ -59,7 +59,8 @@ def test_tracked_top3_ignores_unlisted_questions_and_keeps_all_queries_out_of_sc
     assert "top3_keywords_all_queries" not in card["components"]
 
 
-def test_missing_keyword_list_is_not_invented_and_all_queries_do_not_score():
+def test_missing_keyword_list_is_not_replaced_by_the_precomputed_count(monkeypatch):
+    monkeypatch.setattr(seo_geo_source, "tracked_keywords", lambda data=None: None)
     card = council.build_scorecard(_base_cur(), {"totals": {"impressions": 1}}, _leads(), _seo())
     tracked = next(r for r in card["scored_rows"] if r["metric"] == "מונחי מעקב ב-Top-3")
     all_queries = next(r for r in card["context_rows"] if "בכל השאילתות" in r["metric"])
@@ -69,6 +70,16 @@ def test_missing_keyword_list_is_not_invented_and_all_queries_do_not_score():
     assert clicks["value"] == 25 and clicks["weekly_avg_28d"] == 41.75
     assert card["components"]["organic"] == 25 / 300
     assert any("אינה במאגר" in note for note in card["warnings"])
+
+
+def test_23_09_snapshot_recomputes_top3_and_ignores_precomputed_10():
+    seo = json.loads((ROOT / "reports/metrics/2026-09-23.json").read_text())["seo_geo"]
+    assert seo["top3_keywords"] == 10
+    out = seo_geo_source.normalize(json.loads(json.dumps(seo)))
+    assert out["top3_all_queries"] == 10
+    assert out["top3_keywords"] == 1
+    assert out["top3_tracked_terms"] == ["טיולי חברה"]
+    assert seo["top3_keywords"] == 10
 
 
 def test_28_day_average_is_info_and_rows_carry_windows_and_snapshot_dates():
@@ -118,8 +129,10 @@ def test_september_26_score_drops_the_untracked_top3_credit():
     assert clicks["snapshot_date"] == "2026-09-23"
     all_queries = next(r for r in card["context_rows"] if "בכל השאילתות" in r["metric"])
     assert all_queries["value"] == 10 and all_queries["status"] == "—"
-    assert card["components"]["organic"] == 25 / 300
-    assert card["weighted"] == 82
+    tracked = next(r for r in card["scored_rows"] if r["metric"] == "מונחי מעקב ב-Top-3")
+    assert tracked["value"] == 1 and tracked["tracked_terms"] == ["טיולי חברה"]
+    assert card["components"]["organic"] == (25 / 300 + 1 / 3) / 2
+    assert card["weighted"] == 84
     mention = next(r for r in card["context_rows"] if "אזכור לא-ממותג" in r["metric"])
     assert mention["snapshot_date"] == "2026-09-25"
     assert mention["by_engine"]["chatgpt"] == 25
@@ -136,7 +149,8 @@ def test_normalize_counts_only_a_supplied_tracked_list():
     out = seo_geo_source.normalize(raw)
     assert out["weekly_clicks"] == 25
     assert out["top3_keywords"] == 1
-    assert out["top3_keywords_all_queries"] == 2
+    assert out["top3_all_queries"] == 2
+    assert out["top3_tracked_terms"] == ["טיולי חברה"]
     assert out["weekly_clicks_28d_avg"] == 41.75
 
 
