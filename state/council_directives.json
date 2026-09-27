@@ -1,23 +1,23 @@
 {
-  "updated_at": "2026-09-26",
+  "updated_at": "2026-09-27",
   "source": "daily-council",
   "directives": [
     {
       "category": "safe_auto",
-      "action": "ייחוס CRM — הנחיות זרימת עבודה: הכן draft-checklist לנציגי מכירות: בעת כניסת ליד חדש, חובה לבחור מקור ספציפי (Web-Organic / Web-Paid / LinkedIn / Advertisement / Referral / WOM); אסור להשאיר 'Other' ללא הערה מנומקת; הנחיית ייחוס UTM לטפסי אתר ממתינה ל-id 2769e4c7.",
+      "action": "ניסוי Instagram: שינוי פוסט רומא הקיים (73 impressions, 0 interactions) ל-Reel קצר של 30-45 שניות — השוואת impressions מול פוסט סטטי בשבוע הבא",
       "detail": "הצעה לבדיקה על בסיס המדד המתועד; לא בוצע שינוי.",
-      "channel": "leads",
+      "channel": "instagram",
       "evidence": {
         "source": "scorecard",
-        "metric": "ייחוס לידים",
-        "value": "לא-מיוחס",
-        "target": "מקור אמיתי",
+        "metric": "נוכחות סושיאל (רצפה)",
+        "value": 16.0,
+        "target": 5,
         "unit": "",
-        "status": "❌"
+        "status": "✅"
       },
       "status": "candidate",
       "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
-      "success_metric": "ייחוס לידים: בסיס לא-מיוחס; יעד המדד מקור אמיתי. יש להשוות תקופות תואמות."
+      "success_metric": "נוכחות סושיאל (רצפה): בסיס 16.0; יעד המדד 5. יש להשוות תקופות תואמות."
     }
   ],
   "channel_cadence": {
@@ -30,11 +30,11 @@
       "reason": "מכסה מוצעת לבדיקה בתקופת המדידה; אין מסקנה סיבתית על אלגוריתם."
     },
     "linkedin": {
-      "max_posts_per_week": 5,
+      "max_posts_per_week": 3,
       "reason": "מכסה מוצעת לבדיקה בתקופת המדידה; אין מסקנה סיבתית על אלגוריתם."
     },
     "tiktok": {
-      "max_posts_per_week": 3,
+      "max_posts_per_week": 2,
       "reason": "מכסה מוצעת לבדיקה בתקופת המדידה; אין מסקנה סיבתית על אלגוריתם."
     },
     "youtube": {
