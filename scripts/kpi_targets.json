@@ -74,7 +74,8 @@
   "organic_targets": {
     "weekly_clicks_min": 300,
     "top3_keywords_min": 3,
-    "_note": "weekly_clicks_min is compared against clicks_7d from the astro snapshot (true 7-day window since 05.09.2026; before that the 28-day total was labelled weekly). top3 = queries at position <= 3.5 with >= 10 impressions in 28 days."
+    "_note": "weekly_clicks_min is compared against clicks_7d from the astro snapshot (true 7-day window since 05.09.2026; before that the 28-day total was labelled weekly). top3_keywords_min is compared only with the Organic SEO Weekly tracked-keyword list, not with every Search Console query in positions 1-3. The all-query count and the 28-day weekly click average are informational.",
+    "_todo": "TODO(Alon): do not change weekly_clicks_min (300), top3_keywords_min (3), or any other target number to match the current result. Target values are Alon's decision."
   },
   "context_metrics": {
     "_comment": "Shown for visibility, NOT scored. Engagement/impressions no longer drag the headline.",

@@ -88,10 +88,14 @@ class ImprovementTests(unittest.TestCase):
             with self.assertRaises(ValueError):
                 ma.pull_posts('tiktok', datetime.datetime.now(), datetime.datetime.now(), 't', 'u', 'b', strict=True)
 
-    def test_existing_snapshot_score_is_unchanged(self):
+    def test_existing_snapshot_score_excludes_untracked_top3(self):
+        # 2026-09-11 previously scored 88 because every Search Console query in
+        # positions 1-3 counted toward top3. That all-query count is now
+        # informational. The Organic SEO Weekly keyword list is not in this
+        # snapshot, so organic is the 7-day click fraction only.
         cur = json.loads((council.ROOT / 'reports/metrics/2026-09-11.json').read_text())
         score = council.build_scorecard(cur, cur, cur['leads'], cur['seo_geo'])
-        self.assertEqual(score['weighted'], 88)
+        self.assertEqual(score['weighted'], 79)
 
     def test_prompt_formats_with_canonical_facts_and_measurement_policy(self):
         rendered = council.COUNCIL_PROMPT.format(data='{}', scorecard='{}', site_inventory='{}', blog_hint=100)

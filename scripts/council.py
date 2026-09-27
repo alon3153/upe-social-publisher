@@ -35,6 +35,7 @@ import metricool_analytics as ma
 import leads_source
 import seo_geo_source
 import site_inventory
+import council_source_evidence
 
 API_KEY = os.environ.get("ANTHROPIC_API_KEY", "")
 MODEL = os.environ.get("COUNCIL_MODEL") or "claude-sonnet-4-6"
@@ -50,13 +51,36 @@ def _today():
 
 
 def digital_attributed_leads(leads, digital_sources):
-    """Count opportunities whose LeadSource is a digital channel (case-insensitive).
-    This is source attribution, not a conversion rate; ambiguous defaults are excluded."""
+    """Count website and other non-ambiguous digital LeadSource values.
+
+    The scorecard labels this component "Website leads (not paid)". Ambiguous
+    defaults, including Advertisement when Salesforce did not mark it paid, are
+    excluded. This is source attribution, not a conversion rate."""
     by_source = (leads or {}).get("by_source") or {}
     wanted = {s.lower() for s in digital_sources}
     ambiguous = {s.lower() for s in (leads or {}).get("ambiguous_sources", [])}
     return sum(n for src, n in by_source.items() if str(src).lower() in wanted
                and str(src).lower() not in ambiguous)
+
+
+def _day(value):
+    if not isinstance(value, str) or len(value) < 10:
+        return None
+    try:
+        datetime.date.fromisoformat(value[:10])
+    except ValueError:
+        return None
+    return value[:10]
+
+
+def _lead_window(leads, snapshot_date):
+    """Salesforce LAST_N_DAYS is inclusive of the snapshot date."""
+    end = _day(snapshot_date)
+    days = (leads or {}).get("period_days")
+    if not end or isinstance(days, bool) or not isinstance(days, int) or days < 1:
+        return None, None
+    start = (datetime.date.fromisoformat(end) - datetime.timedelta(days=days - 1)).isoformat()
+    return start, end
 
 
 def weighted_score(components, weights):
@@ -87,81 +111,157 @@ def build_scorecard(cur, prev, leads, seo_geo=None):
     ct, pt = cur["totals"], prev["totals"]
     scored, context, warnings = [], [], []
 
-    def row(bucket, label, value, target, ok, unit=""):
-        bucket.append({"metric": label, "value": value, "target": target,
-                       "unit": unit, "status": "—" if ok is None else ("✅" if ok else "❌")})
+    def row(bucket, label, value, target, ok, unit="", window_from=None, window_to=None,
+            snapshot_date=None, **fields):
+        item = {"metric": label, "value": value, "target": target, "unit": unit,
+                "status": "—" if ok is None else ("✅" if ok else "❌"),
+                "window_from": window_from, "window_to": window_to,
+                "snapshot_date": snapshot_date}
+        item.update(fields)
+        bucket.append(item)
 
     comp = {}
+    snap = _day(cur.get("generated_at"))
+    social_from, social_to = _day(cur.get("period_start")), _day(cur.get("period_end"))
+    lead_from, lead_to = _lead_window(leads, snap)
+    seo_snap = week_from = week_to = month_from = month_to = None
+    if seo_geo and seo_geo.get("ok"):
+        seo_snap = _day(seo_geo.get("gsc_generated_at") or seo_geo.get("generated_at"))
+        week_from, week_to = seo_geo_source.measurement_window(seo_geo, "weekly")
+        month_from, month_to = seo_geo_source.measurement_window(seo_geo, "current")
 
     # 1) qualified leads (scored)
     if leads.get("ok"):
         ql = leads.get("qualified_leads") or 0
         comp["qualified_leads"] = ql / lead_target if lead_target else None
-        row(scored, "לידים לפי ההגדרה התפעולית (30 ימים)", ql, lead_target, ql >= lead_target)
+        row(scored, "לידים לפי ההגדרה התפעולית (30 ימים)", ql, lead_target, ql >= lead_target,
+            window_from=lead_from, window_to=lead_to, snapshot_date=snap)
         if leads.get("definition"):
             warnings.append("ספירת הלידים כוללת הזדמנויות ופניות טופס שלא סומנו כלא מתאימות; אינה הוכחה שכל פנייה הוסמכה במכירות.")
     else:
         comp["qualified_leads"] = None
-        row(scored, "לידים/חודש", "לא נמדד", lead_target, None)
+        row(scored, "לידים/חודש", "לא נמדד", lead_target, None,
+            window_from=lead_from, window_to=lead_to, snapshot_date=snap)
 
-    # 2) digital-attributed leads (scored) — target = 3 of the 10
+    # 2) Website leads (not paid). The weight key stays digital_leads; the 26.09
+    # count is Web + Google Organic. Paid-marked sources are not this number.
     dig_target = max(1, round(lead_target * 0.3))
     if leads.get("ok"):
         dl = digital_attributed_leads(leads, TARGETS["digital_lead_sources"])
         comp["digital_leads"] = dl / dig_target
-        row(scored, "לידים מיוחסים לדיגיטל", dl, dig_target, dl >= dig_target)
+        row(scored, "Website leads (not paid)", dl, dig_target, dl >= dig_target,
+            window_from=lead_from, window_to=lead_to, snapshot_date=snap)
     else:
         comp["digital_leads"] = None
-        row(scored, "לידים מיוחסים לדיגיטל", "לא נמדד", dig_target, None)
+        row(scored, "Website leads (not paid)", "לא נמדד", dig_target, None,
+            window_from=lead_from, window_to=lead_to, snapshot_date=snap)
 
-    # 3) organic (scored) — clicks + top3 keywords, averaged
+    # 3) organic — scored 7-day clicks, plus tracked top3 when the keyword list exists.
+    # The all-query top3 count and the 28-day weekly average are context only.
     if seo_geo and seo_geo.get("ok"):
         clicks = seo_geo.get("weekly_clicks")
-        top3 = seo_geo.get("top3_keywords")
-        comp["organic"] = ((min(1.0, clicks / org_t["weekly_clicks_min"]) +
-                            min(1.0, top3 / org_t["top3_keywords_min"])) / 2
-                           if clicks is not None and top3 is not None else None)
-        row(scored, "קליקים אורגניים/שבוע", clicks if clicks is not None else "לא נמדד", org_t["weekly_clicks_min"],
-            clicks >= org_t["weekly_clicks_min"] if clicks is not None else None)
-        row(scored, "מונחים ב-Top-3", top3 if top3 is not None else "לא נמדד", org_t["top3_keywords_min"],
-            top3 >= org_t["top3_keywords_min"] if top3 is not None else None)
+        parts = seo_geo_source.split_top3(seo_geo)
+        top3 = parts["tracked"]
+        all_queries = parts["all_queries"]
+        avg_28 = seo_geo_source.weekly_average_28d(seo_geo)
+        clicks_frac = (min(1.0, clicks / org_t["weekly_clicks_min"])
+                       if isinstance(clicks, (int, float)) and not isinstance(clicks, bool) else None)
+        top3_frac = (min(1.0, top3 / org_t["top3_keywords_min"])
+                     if isinstance(top3, (int, float)) and not isinstance(top3, bool) else None)
+        # Missing tracked keywords must not be filled with the all-query count, and
+        # must not drop organic out of the weighted score (that would raise it).
+        if clicks_frac is None and top3_frac is None:
+            comp["organic"] = None
+        elif top3_frac is None:
+            comp["organic"] = clicks_frac
+        elif clicks_frac is None:
+            comp["organic"] = top3_frac
+        else:
+            comp["organic"] = (clicks_frac + top3_frac) / 2
+        row(scored, "קליקים אורגניים/שבוע", clicks if clicks_frac is not None else "לא נמדד",
+            org_t["weekly_clicks_min"],
+            clicks >= org_t["weekly_clicks_min"] if clicks_frac is not None else None,
+            window_from=week_from, window_to=week_to, snapshot_date=seo_snap,
+            weekly_avg_28d=avg_28)
+        row(context, "ממוצע קליקים שבועי מ-28 יום (מידע)",
+            avg_28 if avg_28 is not None else "לא נמדד", org_t["weekly_clicks_min"], None,
+            window_from=month_from, window_to=month_to, snapshot_date=seo_snap)
+        row(scored, "מונחי מעקב ב-Top-3", top3 if top3 is not None else "לא נמדד",
+            org_t["top3_keywords_min"],
+            top3 >= org_t["top3_keywords_min"] if top3 is not None else None,
+            window_from=month_from, window_to=month_to, snapshot_date=seo_snap)
+        row(context, "מונחי Top-3 בכל השאילתות (מידע)",
+            all_queries if all_queries is not None else "לא נמדד", None, None,
+            window_from=month_from, window_to=month_to, snapshot_date=seo_snap)
+        if top3 is None:
+            shown = all_queries if all_queries is not None else "לא ידוע"
+            if clicks_frac is not None:
+                organic_note = "הציון האורגני משתמש בקליקים של 7 הימים בלבד."
+            else:
+                organic_note = "קליקים של 7 הימים גם הם לא נמדדו, ולכן הרכיב האורגני אינו בציון."
+            warnings.append(
+                "מונחי Top-3 מכל שאילתות Search Console (" + str(shown) + ") אינם נכנסים לציון, "
+                "כולל שאלות ארוכות עם 0 קליקים. הספירה לציון היא רק רשימת מילות המפתח של "
+                "Organic SEO Weekly, והרשימה אינה במאגר הזה. " + organic_note)
     else:
         comp["organic"] = None
-        row(scored, "אורגני (GSC)", "לא נמדד", org_t["weekly_clicks_min"], None)
+        row(scored, "אורגני (GSC)", "לא נמדד", org_t["weekly_clicks_min"], None,
+            window_from=None, window_to=None, snapshot_date=seo_snap)
 
-    # 4) AEO (scored) — cited in N engines out of 3
-    if seo_geo and seo_geo.get("ok") and seo_geo.get("aeo_cited_engines") is not None:
-        cited = seo_geo.get("aeo_cited_engines") or 0
-        comp["aeo"] = min(1.0, cited / 3)
-        row(scored, "נראות ב-AI (מנועים)", cited, 3, cited >= 3)
+    # 4) AEO — engines checked, not mentions. Mention rate is context only.
+    evidence = (seo_geo or {}).get("aeo_engine_evidence") if seo_geo else None
+    evidence_date = _day(evidence.get("date")) if isinstance(evidence, dict) else None
+    engines_known = (isinstance(evidence, dict) and isinstance(evidence.get("measured_engines"), int)
+                     and not isinstance(evidence.get("measured_engines"), bool))
+    if seo_geo and seo_geo.get("ok") and (engines_known or seo_geo.get("aeo_cited_engines") is not None):
+        checked = evidence["measured_engines"] if engines_known else (seo_geo.get("aeo_cited_engines") or 0)
+        comp["aeo"] = min(1.0, checked / 3)
+        row(scored, "מנועי AI שנבדקו (לא אזכורים)", checked, 3, checked >= 3,
+            window_from=evidence_date or seo_snap, window_to=evidence_date or seo_snap,
+            snapshot_date=evidence_date or seo_snap)
     else:
         comp["aeo"] = None
-        row(scored, "נראות ב-AI (מנועים)", "לא נמדד", 3, None)
+        row(scored, "מנועי AI שנבדקו (לא אזכורים)", "לא נמדד", 3, None,
+            window_from=evidence_date or seo_snap, window_to=evidence_date or seo_snap,
+            snapshot_date=evidence_date or seo_snap)
+    if evidence_date:
+        mention = council_source_evidence.unbranded_mention_rates(date=evidence_date)
+        if mention:
+            detail = ", ".join(f"{name} {rate}" for name, rate in mention["by_engine"].items())
+            row(context, "שיעור אזכור לא-ממותג (מידע)", mention["pooled_pct"], "מידע", None, "%",
+                window_from=mention["date"], window_to=mention["date"], snapshot_date=mention["date"],
+                by_engine=mention["by_engine"], engines_detail=detail)
     if seo_geo and seo_geo.get("aeo_engine_evidence"):
         ev = seo_geo["aeo_engine_evidence"]
         warnings.append("מדידת מנועי AI מתאריך " + str(ev.get("date", "לא זמין")) +
                         ": ציטוטי כתובת או תווית דומיין ממקור חיפוש, בשאלות לא ממותגות; אינה מדידת מקום ראשון.")
     if seo_geo and seo_geo.get("aeo_cited_questions") is not None:
         row(context, "שאלות עם ציטוט במנוע Perplexity (מדידה נפרדת)",
-            seo_geo["aeo_cited_questions"], seo_geo.get("aeo_measured_questions"), None)
+            seo_geo["aeo_cited_questions"], seo_geo.get("aeo_measured_questions"), None,
+            window_from=seo_snap, window_to=seo_snap, snapshot_date=seo_snap)
 
     # 5) social presence floor (scored) — cadence met, NOT growth
     posts_week = round(ct["posts"] / (cur["period_days"] / 7.0), 1) if cur["period_days"] else 0
     floor_ok = posts_week >= t["posts_per_week_min"]
     comp["social_presence"] = 1.0 if floor_ok else min(1.0, posts_week / t["posts_per_week_min"])
-    row(scored, "נוכחות סושיאל (רצפה)", posts_week, t["posts_per_week_min"], floor_ok)
+    row(scored, "נוכחות סושיאל (רצפה)", posts_week, t["posts_per_week_min"], floor_ok,
+        window_from=social_from, window_to=social_to, snapshot_date=snap)
 
     # CONTEXT (not scored): engagement + impressions growth
     imp_growth = round(((ct["impressions"] - pt["impressions"]) / pt["impressions"] * 100)
                        if pt.get("impressions") else 0.0, 1)
     if cur.get("unavailable_networks") or prev.get("unavailable_networks"):
-        row(context, "צמיחת חשיפות", "נתונים חלקיים", t["weekly_impressions_growth_pct"], False)
+        row(context, "צמיחת חשיפות", "נתונים חלקיים", t["weekly_impressions_growth_pct"], False,
+            window_from=social_from, window_to=social_to, snapshot_date=snap)
     else:
         row(context, "צמיחת חשיפות", imp_growth, t["weekly_impressions_growth_pct"],
-            imp_growth >= t["weekly_impressions_growth_pct"], "%")
+            imp_growth >= t["weekly_impressions_growth_pct"], "%",
+            window_from=social_from, window_to=social_to, snapshot_date=snap)
     row(context, "Engagement rate", ct["engagement_rate_pct"], t["min_avg_engagement_rate_pct"],
-        ct["engagement_rate_pct"] >= t["min_avg_engagement_rate_pct"], "%")
-    row(context, "חשיפות (תקופה)", ct["impressions"], "↑", ct["impressions"] > 0)
+        ct["engagement_rate_pct"] >= t["min_avg_engagement_rate_pct"], "%",
+        window_from=social_from, window_to=social_to, snapshot_date=snap)
+    row(context, "חשיפות (תקופה)", ct["impressions"], "↑", ct["impressions"] > 0,
+        window_from=social_from, window_to=social_to, snapshot_date=snap)
 
     # Snapshot age (context): the council scored a 19-day-old GSC snapshot on
     # 05.09.2026 without saying so — one 403 property had killed the weekly job.
@@ -169,17 +269,20 @@ def build_scorecard(cur, prev, leads, seo_geo=None):
         try:
             stamp = seo_geo.get("gsc_generated_at") or seo_geo["generated_at"]
             age = (datetime.date.today() - datetime.date.fromisoformat(stamp[:10])).days
-            row(context, "עדכניות snapshot אורגני (ימים)", age, "≤8", age <= 8)
+            row(context, "עדכניות snapshot אורגני (ימים)", age, "≤8", age <= 8,
+                window_from=seo_snap, window_to=seo_snap, snapshot_date=seo_snap)
         except Exception:
             pass
 
     # attribution note (kept from old scorecard) as a context row
     if leads.get("ok") and leads.get("dominant_source"):
         if leads.get("attribution_gap"):
-            row(context, "ייחוס לידים", "לא-מיוחס", "מקור אמיתי", False)
+            row(context, "ייחוס לידים", "לא-מיוחס", "מקור אמיתי", False,
+                window_from=lead_from, window_to=lead_to, snapshot_date=snap)
         else:
             row(context, f"חלק מקור הלידים ({leads['dominant_source']})",
-                leads.get("dominant_share_pct", 0), "הקשר בלבד", None, "%")
+                leads.get("dominant_share_pct", 0), "הקשר בלבד", None, "%",
+                window_from=lead_from, window_to=lead_to, snapshot_date=snap)
 
     weighted = weighted_score(comp, W)
     # Leads are the PRIMARY definition of winning (55% of intended weight). If BOTH
@@ -219,9 +322,12 @@ or local supplier.
 
 GOALS (scored deterministically — do not invent your own overall number; the headline score
 is computed from business outcomes, your "overall" is an advisory second opinion):
-- PRIMARY: 10 real NEW qualified leads/month, of which >=3 are digital-attributed (LeadSource
-  not Word-of-Mouth). This is what winning means.
-- SECONDARY: Google-organic momentum (clicks + Top-3 Hebrew keywords) and AI/AEO citations.
+- PRIMARY: 10 real NEW qualified leads/month, of which >=3 are website leads (not paid).
+  This component is website LeadSource values, not paid-ads results. This is what winning means.
+- SECONDARY: Google-organic momentum uses last-7-days clicks plus tracked Top-3 keywords from
+  the Organic SEO Weekly list. The all-query Top-3 count and the 28-day weekly click average
+  are context only and do not enter the score.
+- "מנועי AI שנבדקו" counts engines checked, not mentions. Unbranded mention rate is context only.
 - CONTEXT ONLY — engagement/impressions are CONTEXT, not goals. A low engagement rate on
   Israeli-B2B social is EXPECTED and must NOT dominate your assessment or the overall score.
 - Follower growth is exploratory context. There is no evidenced forecast, timetable or path to 500,000 followers. Propose measurable small experiments, not promises.
@@ -510,13 +616,16 @@ def render_html(cur, scorecard, verdict, applied, cadence=None, report_date=None
         net_rows += (f"<tr><td>{label}</td><td dir='ltr'>{s['posts']}</td><td dir='ltr'>{s['impressions']:,}</td>"
                      f"<td dir='ltr'>{s['reach']:,}</td><td dir='ltr'>{s['interactions']:,}</td>"
                      f"<td>{str(s['engagement_rate_pct']) + '%' if not cav else 'לא אמין'}{cav}</td><td dir='ltr'>{sc.get(net,'—')}</td></tr>")
-    sb_rows = "".join(
-        f"<tr><td>{escape(str(r['metric']).replace('Engagement rate', 'מעורבות'))}</td>{cell(r['value'], r['unit'])}"
-        f"{cell(r['target'], r['unit'])}<td>{r['status']}</td></tr>" for r in scorecard["scored_rows"])
-    ctx_rows = "".join(
-        f"<tr><td>{escape(str(r['metric']).replace('Engagement rate', 'מעורבות'))}</td>{cell(r['value'], r['unit'])}"
-        f"{cell(r['target'], r['unit'])}<td>{r['status']}</td></tr>"
-        for r in scorecard.get("context_rows", []))
+    def metric_row(r):
+        window = (f"{r['window_from']} – {r['window_to']}"
+                  if r.get("window_from") and r.get("window_to") else "—")
+        snap = r.get("snapshot_date") or "—"
+        return (f"<tr><td>{escape(str(r['metric']).replace('Engagement rate', 'מעורבות'))}</td>"
+                f"{cell(r['value'], r['unit'])}{cell(r['target'], r['unit'])}"
+                f"<td dir='ltr'>{escape(window)}</td><td dir='ltr'>{escape(str(snap))}</td>"
+                f"<td>{r['status']}</td></tr>")
+    sb_rows = "".join(metric_row(r) for r in scorecard["scored_rows"])
+    ctx_rows = "".join(metric_row(r) for r in scorecard.get("context_rows", []))
     recs = "".join(
         f"<li><b>[{escape(str(r.get('priority','')))}]</b> {escape(str(r.get('action','')))} "
         f"<span style='color:#555'>— {escape(str(r.get('expected_impact','')))}</span> "
@@ -550,12 +659,12 @@ def render_html(cur, scorecard, verdict, applied, cadence=None, report_date=None
 
 <h3>מדדים מול יעדים</h3>
 <table dir="rtl" border="0" cellpadding="6" style="border-collapse:collapse;width:100%;font-size:13px;">
-<tr style="background:#222;color:#fff;"><th>מדד</th><th>ערך</th><th>יעד</th><th></th></tr>
+<tr style="background:#222;color:#fff;"><th>מדד</th><th>ערך</th><th>יעד</th><th>חלון מדידה</th><th>תאריך המדידה</th><th></th></tr>
 {sb_rows}</table>
 
 <h3>הקשר (לא נספר בציון)</h3>
 <table dir="rtl" border="0" cellpadding="6" style="border-collapse:collapse;width:100%;font-size:13px;color:#555;">
-<tr style="background:#666;color:#fff;"><th>מדד</th><th>ערך</th><th>יעד</th><th></th></tr>
+<tr style="background:#666;color:#fff;"><th>מדד</th><th>ערך</th><th>יעד</th><th>חלון מדידה</th><th>תאריך המדידה</th><th></th></tr>
 {ctx_rows}</table>
 
 <h3>הערות מדידה ובדיקת ראיות</h3><ul>{chips(scorecard.get('warnings', []) + verdict.get('evidence_notes', []))}</ul>

@@ -19,11 +19,131 @@ the GEO data is unwired (never fabricates).
 CLI:  python3 scripts/seo_geo_source.py
 """
 import os, sys, json, base64, urllib.request, urllib.error
+from pathlib import Path
 from council_source_evidence import engine_evidence, valid_week
+
+# The Organic SEO Weekly keyword list is not stored in this repo. These paths are
+# checked so a later checked-in list is picked up; nothing here invents the 30 terms.
+_TRACKED_KEYWORD_FILES = (
+    Path(__file__).resolve().parent / "organic_seo_weekly_keywords.json",
+    Path(__file__).resolve().parent.parent / "state" / "organic_seo_weekly_keywords.json",
+)
 
 PAT = os.environ.get("GH_PAT", "")
 REPO = os.environ.get("SEO_GEO_REPO", "alon3153/uproduction-astro")
 PATH = os.environ.get("SEO_GEO_PATH", "reports/seo-geo-latest.json")
+
+
+def _string_list(value):
+    if isinstance(value, dict):
+        value = value.get("keywords")
+    if not isinstance(value, list) or not value:
+        return None
+    if not all(isinstance(item, str) and item.strip() for item in value):
+        return None
+    return [item.strip() for item in value]
+
+
+def tracked_keywords(data):
+    """Return the Organic SEO Weekly keyword list, or None if it is not stored.
+
+    Accepted sources, in order: snapshot fields `tracked_keywords` /
+    `organic_weekly_keywords`, query strings under `category_visibility`, then a
+    JSON file in this repo. Category totals such as engines.google.total == 30
+    are not a list of terms and are ignored.
+    """
+    data = data or {}
+    for key in ("tracked_keywords", "organic_weekly_keywords"):
+        found = _string_list(data.get(key))
+        if found:
+            return found
+    visibility = data.get("category_visibility")
+    if isinstance(visibility, dict):
+        for key in ("queries", "keywords", "tracked_keywords"):
+            found = _string_list(visibility.get(key))
+            if found:
+                return found
+    for path in _TRACKED_KEYWORD_FILES:
+        if not path.is_file():
+            continue
+        try:
+            payload = json.loads(path.read_text())
+        except (OSError, ValueError):
+            continue
+        found = _string_list(payload)
+        if found:
+            return found
+    return None
+
+
+def _query_text(term):
+    if isinstance(term, (list, tuple)) and term and isinstance(term[0], str):
+        return term[0].strip()
+    if isinstance(term, str):
+        return term.strip()
+    return None
+
+
+def split_top3(data):
+    """Separate the scored tracked-keyword count from the all-query count.
+
+    `top3_terms` / the legacy `top3_keywords` integer count every Search Console
+    query in positions 1-3, including long questions with 0 clicks. That number
+    is `all_queries` and must not enter the score. `tracked` counts only the
+    Organic SEO Weekly keyword list. When that list is absent, `tracked` is
+    None rather than a guessed list or the all-query count.
+    """
+    data = data or {}
+    sites = [s for s in (data.get("sites") or []) if isinstance(s, dict)]
+    terms_present = bool(sites) and all(isinstance(s.get("top3_terms"), list) for s in sites)
+    if terms_present:
+        all_queries = sum(len(s.get("top3_terms") or []) for s in sites)
+    elif isinstance(data.get("top3_keywords_all_queries"), int) and not isinstance(data.get("top3_keywords_all_queries"), bool):
+        all_queries = data["top3_keywords_all_queries"]
+    elif isinstance(data.get("top3_keywords"), int) and not isinstance(data.get("top3_keywords"), bool):
+        all_queries = data["top3_keywords"]
+    else:
+        all_queries = None
+    keywords = tracked_keywords(data)
+    tracked = None
+    if keywords and terms_present:
+        wanted = {item.casefold() for item in keywords}
+        found = set()
+        for site in sites:
+            for term in site.get("top3_terms") or []:
+                query = _query_text(term)
+                if query and query.casefold() in wanted:
+                    found.add(query.casefold())
+        tracked = len(found)
+    return {"all_queries": all_queries, "tracked": tracked,
+            "tracked_list_size": len(keywords) if keywords else None}
+
+
+def measurement_window(data, key):
+    """Shared from/to dates for one GSC window. Differing site windows stay unset."""
+    sites = [s for s in ((data or {}).get("sites") or []) if isinstance(s, dict)]
+    found = []
+    for site in sites:
+        window = (site.get("windows") or {}).get(key) or {}
+        start, end = window.get("start"), window.get("end")
+        if isinstance(start, str) and isinstance(end, str) and start and end:
+            found.append((start[:10], end[:10]))
+    unique = list(dict.fromkeys(found))
+    if len(unique) == 1:
+        return unique[0]
+    return (None, None)
+
+
+def weekly_average_28d(data):
+    """Clicks per week across the 28-day GSC total. This is not the scored 7-day value."""
+    if not isinstance(data, dict):
+        return None
+    clicks = data.get("clicks_28d")
+    days = data.get("window_days")
+    if (isinstance(clicks, (int, float)) and not isinstance(clicks, bool)
+            and isinstance(days, (int, float)) and not isinstance(days, bool) and days >= 7):
+        return round(float(clicks) / (float(days) / 7.0), 2)
+    return None
 
 
 def normalize(data):
@@ -40,10 +160,14 @@ def normalize(data):
         data["weekly_window_verified"] = True
     else:
         data["weekly_window_verified"] = False
-    if "top3_keywords" not in data:
-        data["top3_keywords"] = (sum(len(s["top3_terms"]) for s in sites)
-                                  if sites and all(isinstance(s.get("top3_terms"), list) for s in sites)
-                                  else None)
+    parts = split_top3(data)
+    data["top3_keywords_all_queries"] = parts["all_queries"]
+    # Scored field. None until the tracked keyword list exists — never the all-query count.
+    data["top3_keywords"] = parts["tracked"]
+    data["tracked_keyword_list_size"] = parts["tracked_list_size"]
+    avg_28d = weekly_average_28d(data)
+    if avg_28d is not None:
+        data["weekly_clicks_28d_avg"] = avg_28d
     geo = data.get("geo") or {}
     data["aeo_cited_questions"] = geo.get("cited")
     data["aeo_measured_questions"] = geo.get("measured", geo.get("total"))
