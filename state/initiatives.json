@@ -18625,7 +18625,7 @@
   "50eb7a05": {
     "id": "50eb7a05",
     "title": "שלב 2 (חודשים 2-6) — TikTok + Reels: 3 סרטוני 'אחורי הקלעים' מהפקות/שבוע בפורמט 60 שניות; שיתוף מקביל ל-Instagram Reels; תוכן אותנטי ולא מסרק הוא מנוע הגדילה המהיר ביותר (id 2c8d880c)",
-    "status": "awaiting_approval",
+    "status": "approved",
     "revisions": 1,
     "history": [
       {
@@ -18653,7 +18653,7 @@
   "5930aefd": {
     "id": "5930aefd",
     "title": "שלב 3 (חודשים 3-9) — פורמט קבוע: 'הפקה ב-60 שניות' בכל פלטפורמה — פורמט חוזר וניתן לזכירה; עקביות פורמט בונה subscriber behavior ומגדיל retention (id 251cdb63)",
-    "status": "awaiting_approval",
+    "status": "approved",
     "revisions": 1,
     "history": [
       {
@@ -18671,7 +18671,7 @@
   "b3c7daa3": {
     "id": "b3c7daa3",
     "title": "שלב 4 (חודשים 6-12) — LinkedIn Newsletter: שגר newsletter עברי חודשי ל-HR/CMO — 'מדריך מנהלים לאירועי חברה'; newsletters מקבלים push notification priority ובונים subscriber base נפרד מ-followers (id 04925d91)",
-    "status": "awaiting_approval",
+    "status": "approved",
     "revisions": 1,
     "history": [
       {
@@ -18689,7 +18689,7 @@
   "d53cb010": {
     "id": "d53cb010",
     "title": "שלב 5 (שנה 2) — שותפויות MICE: cross-promotion עם ספקי מלונות, venues וקייטרינג — גישה לקהלים משלימים של 50K+ followers (id 058304a7)",
-    "status": "awaiting_approval",
+    "status": "approved",
     "revisions": 1,
     "history": [
       {
@@ -18707,7 +18707,7 @@
   "3d0441f7": {
     "id": "3d0441f7",
     "title": "שלב 6 (שנה 3) — YouTube compounding: 50+ סרטונים ממוטבי-SEO יוצרים long-tail discovery אורגני; YouTube הוא המנוע שמוביל ל-500K בטווח הארוך עם ROI גבוה ביותר (id 62db6d85)",
-    "status": "awaiting_approval",
+    "status": "approved",
     "revisions": 1,
     "history": [
       {
@@ -18757,7 +18757,7 @@
     "channel": "leads",
     "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
     "action_key": "salesforce-attribution-fix",
-    "owner": "Ops/RevOps מכין; Alon מאשר ומפיץ",
+    "owner": "Marketing Ops מכין; Alon מאשר הפצה; CRM Admin מיישם לאחר אישור",
     "success_metric": "ייחוס לידים: בסיס לא-מיוחס; יעד המדד מקור אמיתי. יש להשוות תקופות תואמות."
   },
   "2769e4c7": {
@@ -18875,5 +18875,51 @@
     "action_key": "tiktok-behind-scenes-launch",
     "owner": "מפיק תוכן מכין; Alon מאשר לפני כל פרסום",
     "success_metric": "נוכחות סושיאל (רצפה): בסיס 15.0; יעד המדד 5. יש להשוות תקופות תואמות."
+  },
+  "d477123a": {
+    "id": "d477123a",
+    "title": "הפעל initiative 7661040d: הכן טיוטות פוסט case-study ו-insight מפרופיל המנכ\"ל — פורמט: carousel קצר (3 שקפים) עם נתון ממשי מהפקה + שאלה לקהל; כל פוסט ממתין לאישור מפורש לפני פרסום; אל תבטיח reach target",
+    "status": "in_progress",
+    "revisions": 1,
+    "history": [
+      {
+        "date": "2026-09-27",
+        "summary": "(no summary)",
+        "ready": false
+      }
+    ],
+    "created": "2026-09-27",
+    "updated": "2026-09-27",
+    "kind": "recommendation",
+    "priority": "P1",
+    "channel": "linkedin",
+    "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
+    "action_key": "linkedin-executive-posting",
+    "owner": "2 מנהלים בכירים מפרסמים; Content lead מכין טיוטות; Alon מאשר כל פוסט",
+    "success_metric": "מונחי מעקב ב-Top-3: בסיס 1; יעד המדד 3. יש להשוות תקופות תואמות.",
+    "consecutive_failures": 0
+  },
+  "8eb50644": {
+    "id": "8eb50644",
+    "title": "הפעל initiative b7c0af4b שמחכה לאישור: 2 סרטוני 'אחורי הקלעים' ראשונים (60 שניות, אותנטי, כיתוב עברי) — שיתוף מקביל ל-Instagram Reels לחיסכון בתפוקה; שני הסרטונים ממתינים לאישור מפורש לפני פרסום",
+    "status": "awaiting_approval",
+    "revisions": 1,
+    "history": [
+      {
+        "date": "2026-09-27",
+        "summary": "הופקו שני תסריטים מלאים ומוכנים לצילום לסרטוני 'אחורי הקלעים' של UPE (60 שניות, ורטיקל 9:16, כיתוב עברי RTL), כולל hook, מונטאז׳, ציטוט אנושי, CTA, קפשן TikTok + Instagram Reels לכל סרטון, מפרט טכני לקרוס-פוסטינג, ולוח פעולות — הכל ממתין לאישור אלון לפני כל פרסום.",
+        "ready": true
+      }
+    ],
+    "created": "2026-09-27",
+    "updated": "2026-09-27",
+    "kind": "recommendation",
+    "priority": "P2",
+    "channel": "tiktok",
+    "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
+    "action_key": "tiktok-launch",
+    "owner": "Content lead מכין תסריטים; Alon מאשר כל סרטון",
+    "success_metric": "נוכחות סושיאל (רצפה): בסיס 16.0; יעד המדד 5. יש להשוות תקופות תואמות.",
+    "consecutive_failures": 0
   }
 }
