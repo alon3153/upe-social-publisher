@@ -132,9 +132,13 @@ def product_search_entry(row):
     if not isinstance(row, dict) or not isinstance(row.get('date'), str) or not row.get('date'):
         return None
     models = row.get('models') if isinstance(row.get('models'), dict) else {}
-    return {'date': row['date'],
-            'scores': {name: _product_search_value(models.get(name))
-                       for name in PRODUCT_SEARCH_ENGINES}}
+    entry = {'date': row['date'],
+             'scores': {name: _product_search_value(models.get(name))
+                        for name in PRODUCT_SEARCH_ENGINES}}
+    recorded = row.get('product_search_source')
+    if isinstance(recorded, str) and recorded.strip():
+        entry['product_search_source'] = recorded.strip()
+    return entry
 
 
 def _product_search_entries(path, source):
@@ -179,8 +183,34 @@ def latest_product_search(daily_path=None, weekly_path=None):
     return _last_on_date(weekly, newest) or _last_on_date(daily, newest)
 
 
+_SOURCE_LABELS = {
+    'weekly': 'שבועי',
+    'daily': 'יומי',
+    'שבועי': 'שבועי',
+    'יומי': 'יומי',
+}
+
+
+def product_search_source_label(entry):
+    """Hebrew battery label. A recorded product_search_source wins over the file."""
+    if not isinstance(entry, dict):
+        return None
+    raw = entry.get('product_search_source') or entry.get('source')
+    if not isinstance(raw, str) or not raw.strip():
+        return None
+    key = raw.strip()
+    if key in _SOURCE_LABELS:
+        return _SOURCE_LABELS[key]
+    lowered = key.casefold().replace('\\', '/')
+    if 'aeo_daily_history' in lowered:
+        return 'יומי'
+    if 'aeo_history' in lowered or lowered.endswith('/aeo_history.json'):
+        return 'שבועי'
+    return None
+
+
 def format_product_search(entry):
-    """Claude 24 · ChatGPT 21 · Gemini 18 (27.09.2026). Missing engines say אין נתון."""
+    """Claude 24 · ChatGPT 21 · Gemini 18 (27.09.2026, שבועי). Missing engines say אין נתון."""
     if not entry:
         return PRODUCT_SEARCH_MISSING
     parts = []
@@ -189,7 +219,9 @@ def format_product_search(entry):
         shown = PRODUCT_SEARCH_MISSING if score is None else str(score)
         parts.append(f"{PRODUCT_SEARCH_LABELS[name]} {shown}")
     shown_date = datetime.date.fromisoformat(entry['date']).strftime('%d.%m.%Y')
-    return ' · '.join(parts) + f' ({shown_date})'
+    label = product_search_source_label(entry)
+    stamp = f'{shown_date}, {label}' if label else shown_date
+    return ' · '.join(parts) + f' ({stamp})'
 
 
 def valid_week(window):

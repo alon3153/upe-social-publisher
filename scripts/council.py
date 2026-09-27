@@ -250,7 +250,7 @@ def build_scorecard(cur, prev, leads, seo_geo=None):
         row(context, ps_label, council_source_evidence.format_product_search(ps_entry),
             ps_target, None, window_from=ps_entry["date"], window_to=ps_entry["date"],
             snapshot_date=ps_entry["date"], product_search=ps_entry["scores"],
-            product_search_source=ps_entry.get("source"))
+            product_search_source=ps_entry.get("product_search_source") or ps_entry.get("source"))
     else:
         row(context, ps_label, council_source_evidence.PRODUCT_SEARCH_MISSING, ps_target, None,
             window_from=None, window_to=None, snapshot_date=None)

@@ -16,10 +16,10 @@ def test_history_entries_match_the_recorded_product_search_scores():
     weekly = evidence.product_search_for_date("2026-09-27")
     assert daily["source"] == "daily"
     assert daily["scores"] == {"claude": 20, "chatgpt": 19, "gemini": 17}
-    assert evidence.format_product_search(daily) == "Claude 20 · ChatGPT 19 · Gemini 17 (23.09.2026)"
+    assert evidence.format_product_search(daily) == "Claude 20 · ChatGPT 19 · Gemini 17 (23.09.2026, יומי)"
     assert weekly["source"] == "weekly"
     assert weekly["scores"] == {"claude": 24, "chatgpt": 21, "gemini": 18}
-    assert evidence.format_product_search(weekly) == "Claude 24 · ChatGPT 21 · Gemini 18 (27.09.2026)"
+    assert evidence.format_product_search(weekly) == "Claude 24 · ChatGPT 21 · Gemini 18 (27.09.2026, שבועי)"
 
 
 def test_missing_engine_is_blank_and_not_carried(tmp_path):
@@ -39,10 +39,23 @@ def test_missing_engine_is_blank_and_not_carried(tmp_path):
     weekly.write_text("[]")
     entry = evidence.product_search_for_date("2026-09-27", daily, weekly)
     assert entry["scores"] == {"claude": 24, "chatgpt": None, "gemini": None}
-    assert evidence.format_product_search(entry) == "Claude 24 · ChatGPT אין נתון · Gemini אין נתון (27.09.2026)"
+    assert evidence.format_product_search(entry) == "Claude 24 · ChatGPT אין נתון · Gemini אין נתון (27.09.2026, יומי)"
     latest = evidence.latest_product_search(daily, weekly)
     assert latest["date"] == "2026-09-27"
     assert latest["scores"]["chatgpt"] is None
+
+
+def test_recorded_source_overrides_the_file(tmp_path):
+    daily = tmp_path / "aeo_daily_history.json"
+    weekly = tmp_path / "aeo_history.json"
+    daily.write_text(json.dumps([{"date": "2026-09-23", "product_search_source": "weekly", "models": {
+        "claude": {"product_search": 20}, "chatgpt": {"product_search": 19}, "gemini": {"product_search": 17},
+    }}]))
+    weekly.write_text("[]")
+    entry = evidence.product_search_for_date("2026-09-23", daily, weekly)
+    assert entry["product_search_source"] == "weekly"
+    assert entry["source"] == "daily"
+    assert evidence.format_product_search(entry) == "Claude 20 · ChatGPT 19 · Gemini 17 (23.09.2026, שבועי)"
 
 
 def test_same_day_uses_the_weekly_battery_without_mixing(tmp_path):
@@ -67,7 +80,8 @@ def test_scorecard_row_shows_latest_product_search_without_changing_aeo_weight()
     row = next(r for r in card["context_rows"] if r["metric"].startswith("ציון בולטות AI"))
     assert row["metric"] == f"ציון בולטות AI (יעד {target})"
     assert row["target"] == target
-    assert row["value"] == "Claude 24 · ChatGPT 21 · Gemini 18 (27.09.2026)"
+    assert row["value"] == "Claude 24 · ChatGPT 21 · Gemini 18 (27.09.2026, שבועי)"
+    assert row["product_search_source"] == "weekly"
     assert row["snapshot_date"] == "2026-09-27"
     assert row["product_search"] == {"claude": 24, "chatgpt": 21, "gemini": 18}
     assert row["status"] == "—"
