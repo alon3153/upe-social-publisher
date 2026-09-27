@@ -241,6 +241,20 @@ def build_scorecard(cur, prev, leads, seo_geo=None):
             seo_geo["aeo_cited_questions"], seo_geo.get("aeo_measured_questions"), None,
             window_from=seo_snap, window_to=seo_snap, snapshot_date=seo_snap)
 
+    # Product-search prominence is display only. It does not enter comp["aeo"]
+    # (the 15-point engines-checked component) or the weighted headline.
+    ps_target = TARGETS["aeo_targets"]["per_dimension_min"]["product_search"]
+    ps_entry = council_source_evidence.latest_product_search()
+    ps_label = f"ציון בולטות AI (יעד {ps_target})"
+    if ps_entry:
+        row(context, ps_label, council_source_evidence.format_product_search(ps_entry),
+            ps_target, None, window_from=ps_entry["date"], window_to=ps_entry["date"],
+            snapshot_date=ps_entry["date"], product_search=ps_entry["scores"],
+            product_search_source=ps_entry.get("source"))
+    else:
+        row(context, ps_label, council_source_evidence.PRODUCT_SEARCH_MISSING, ps_target, None,
+            window_from=None, window_to=None, snapshot_date=None)
+
     # 5) social presence floor (scored) — cadence met, NOT growth
     posts_week = round(ct["posts"] / (cur["period_days"] / 7.0), 1) if cur["period_days"] else 0
     floor_ok = posts_week >= t["posts_per_week_min"]
