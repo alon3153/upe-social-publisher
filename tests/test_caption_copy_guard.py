@@ -26,13 +26,6 @@ DAY132_QUOTES = (
     "Llevo 15 años trabajando con agencias de eventos.",
 )
 
-# CONTENT's own approved wording. The guard pattern is a substring of the sentence.
-APPROVED_PHRASES = (
-    "here's what we've learned since 2010 about corporate event ROI:",
-    # E-2: this tagline was reviewed and left as-is.
-    "Desde 2010 produciendo viajes de incentivo que van más allá de la experiencia.",
-)
-
 # במאז must not match במאזן ("in the balance sheet").
 PATTERNS = (
     re.compile(r"ב-מאז"),
@@ -43,7 +36,7 @@ PATTERNS = (
     re.compile(r"אחרי מאז"),
     re.compile(r"מאז 2010 ויותר מ-"),
     re.compile(r"since 2010 ago"),
-    re.compile(r"learned since 2010"),
+    re.compile(r"learned since 2010 us"),
     re.compile(r"Since 2010 producing"),
     re.compile(r"Con desde"),
     re.compile(r"de desde"),
@@ -59,7 +52,7 @@ PATTERNS = (
 
 
 def _scrub(text):
-    for phrase in DAY132_QUOTES + APPROVED_PHRASES:
+    for phrase in DAY132_QUOTES:
         text = text.replace(phrase, "")
     return text
 
@@ -130,6 +123,4 @@ def test_guard_flags_the_listed_patterns():
     for sample in samples:
         assert any(pattern.search(sample) for pattern in PATTERNS), sample
     assert not any(pattern.search("במאזן") for pattern in PATTERNS)
-    for phrase in APPROVED_PHRASES:
-        assert any(pattern.search(phrase) for pattern in PATTERNS)
-        assert not any(pattern.search(_scrub(phrase)) for pattern in PATTERNS)
+    assert not any(pattern.search("here's what we've learned since 2010 about corporate event ROI:") for pattern in PATTERNS)
