@@ -1,20 +1,20 @@
 {
-  "updated_at": "2026-09-27",
+  "updated_at": "2026-09-28",
   "scores": {
-    "instagram": 38,
-    "facebook": 18,
-    "tiktok": 10,
-    "linkedin": 22,
+    "instagram": 30,
+    "facebook": 10,
+    "tiktok": 5,
+    "linkedin": 20,
     "youtube": 45,
-    "google_organic_geo": 28,
-    "overall": 62
+    "google_organic_geo": 22,
+    "overall": 58
   },
   "recommendations": [
     {
       "category": "gated",
       "priority": "P0",
       "action_key": "salesforce-attribution-fix",
-      "owner": "Marketing Ops מכין; Alon מאשר הפצה; CRM Admin מיישם לאחר אישור",
+      "owner": "מנהל תפעול שיווק מכין; Alon מאשר ומפיץ",
       "success_metric": "ייחוס לידים: בסיס לא-מיוחס; יעד המדד מקור אמיתי. יש להשוות תקופות תואמות.",
       "evidence": {
         "source": "scorecard",
@@ -26,7 +26,7 @@
       },
       "evidence_url": null,
       "target_url": null,
-      "action": "הפץ את טיוטת הנחיית הייחוס הקיימת (Uproduction Operations/Marketing-Council/verification-2026-09-13/lead-source-guidance.md) — הטיוטה מוכנה, ממתינה לאישור ולא הופצה; בדוק 8 רשומות עמומות מול ראיה מתועדת לפני שינוי CRM; שינוי תווית אינו מוסיף ליד לספירה",
+      "action": "הפץ את טיוטת הנחיית ייחוס המקורות הקיימת (path: Uproduction Operations/Marketing-Council/verification-2026-09-13/lead-source-guidance.md) — הנחיה לצוות מכירות לתיעוד מקור ראשוני בשיחת כניסה ולהבחנה בין Web, Web-Organic ו-Advertisement. לא לשנות רשומות CRM רטרואקטיביות ולא לרכז מחדש.",
       "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
       "channel": "leads",
       "status": "candidate",
@@ -34,31 +34,9 @@
     },
     {
       "category": "gated",
-      "priority": "P1",
-      "action_key": "linkedin-executive-posting",
-      "owner": "2 מנהלים בכירים מפרסמים; Content lead מכין טיוטות; Alon מאשר כל פוסט",
-      "success_metric": "מונחי מעקב ב-Top-3: בסיס 1; יעד המדד 3. יש להשוות תקופות תואמות.",
-      "evidence": {
-        "source": "scorecard",
-        "metric": "מונחי מעקב ב-Top-3",
-        "value": 1,
-        "target": 3,
-        "unit": "",
-        "status": "❌"
-      },
-      "evidence_url": "https://getshft.com/blog/b2b-linkedin-strategy-2026",
-      "target_url": null,
-      "action": "הפעל initiative 7661040d: הכן טיוטות פוסט case-study ו-insight מפרופיל המנכ\"ל — פורמט: carousel קצר (3 שקפים) עם נתון ממשי מהפקה + שאלה לקהל; כל פוסט ממתין לאישור מפורש לפני פרסום; אל תבטיח reach target",
-      "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
-      "channel": "linkedin",
-      "status": "candidate",
-      "detail": "הצעה לבדיקה על בסיס המדד המתועד; לא בוצע שינוי."
-    },
-    {
-      "category": "gated",
       "priority": "P2",
       "action_key": "tiktok-launch",
-      "owner": "Content lead מכין תסריטים; Alon מאשר כל סרטון",
+      "owner": "מפיק תוכן מכין; Alon מאשר 2 סרטונים ראשונים לפני פרסום",
       "success_metric": "נוכחות סושיאל (רצפה): בסיס 16.0; יעד המדד 5. יש להשוות תקופות תואמות.",
       "evidence": {
         "source": "scorecard",
@@ -70,7 +48,7 @@
       },
       "evidence_url": null,
       "target_url": null,
-      "action": "הפעל initiative b7c0af4b שמחכה לאישור: 2 סרטוני 'אחורי הקלעים' ראשונים (60 שניות, אותנטי, כיתוב עברי) — שיתוף מקביל ל-Instagram Reels לחיסכון בתפוקה; שני הסרטונים ממתינים לאישור מפורש לפני פרסום",
+      "action": "הפעל את initiative 8eb50644 (b7c0af4b): הפק 2 סרטוני 'אחורי הקלעים' (60 שניות, אותנטי, כיתוב עברי) ושתפם במקביל ל-Instagram Reels לחיסכון בתפוקה. TikTok פעיל 0 שבועות — pilot של 2 סרטונים קודם לכל התחייבות קצב.",
       "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
       "channel": "tiktok",
       "status": "candidate",

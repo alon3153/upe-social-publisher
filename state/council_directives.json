@@ -1,23 +1,91 @@
 {
-  "updated_at": "2026-09-27",
+  "updated_at": "2026-09-28",
   "source": "daily-council",
   "directives": [
     {
       "category": "safe_auto",
-      "action": "ניסוי Instagram: שינוי פוסט רומא הקיים (73 impressions, 0 interactions) ל-Reel קצר של 30-45 שניות — השוואת impressions מול פוסט סטטי בשבוע הבא",
+      "action": "ניסוי LinkedIn: מעבר לפרופיל אישי כמנוע התוכן הראשי — הכן טיוטה לפוסט קרוסל אחד (3 שקפים, PDF native) של מנכ\"ל UPE עם תוצאה מדידה מהפקה אחרונה; הפרסום גדור לאישור. מטרת הניסוי: האם פרופיל אישי מייצר 5x reach לעומת דף החברה בתוך 14 יום.",
+      "detail": "הצעה לבדיקה על בסיס המדד המתועד; לא בוצע שינוי.",
+      "channel": "linkedin",
+      "evidence": {
+        "source": "scorecard",
+        "metric": "Engagement rate",
+        "value": 0.06,
+        "target": 2.0,
+        "unit": "%",
+        "status": "❌"
+      },
+      "status": "candidate",
+      "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
+      "success_metric": "Engagement rate: בסיס 0.06; יעד המדד 2.0. יש להשוות תקופות תואמות."
+    },
+    {
+      "category": "safe_auto",
+      "action": "ניסוי LinkedIn video: הכן טיוטת וידאו קצר (עד 90 שניות, native upload, כתוביות עבריות) מאחורי הקלעים הפקה פעילה — מדוד dwell time ו-reach לעומת פוסט טקסט מהשבוע הקודם.",
+      "detail": "הצעה לבדיקה על בסיס המדד המתועד; לא בוצע שינוי.",
+      "channel": "linkedin",
+      "evidence": {
+        "source": "scorecard",
+        "metric": "מונחי מעקב ב-Top-3",
+        "value": 1,
+        "target": 3,
+        "unit": "",
+        "status": "❌"
+      },
+      "status": "candidate",
+      "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
+      "success_metric": "מונחי מעקב ב-Top-3: בסיס 1; יעד המדד 3. יש להשוות תקופות תואמות."
+    },
+    {
+      "category": "safe_auto",
+      "action": "הצעת זווית תוכן אורגני לבלוג: זהה ב-GSC שאילתות בפוזיציות 4–15 עם >20 חשיפות ו-CTR<2% (לדוגמה: 'הפקת נופש חברה' pos.18, 319 חשיפות; 'אירועי קונספט לחברות' pos.18, 158 חשיפות) — הכן רשימת זוויות עריכה קיימות לדפי השירות הרלוונטיים לאחר תום קירור 10/10.",
+      "detail": "הצעה לבדיקה על בסיס המדד המתועד; לא בוצע שינוי.",
+      "channel": "google_organic",
+      "evidence": {
+        "source": "scorecard",
+        "metric": "קליקים אורגניים/שבוע",
+        "value": 25,
+        "target": 300,
+        "unit": "",
+        "status": "❌"
+      },
+      "status": "candidate",
+      "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
+      "success_metric": "קליקים אורגניים/שבוע: בסיס 25; יעד המדד 300. יש להשוות תקופות תואמות."
+    },
+    {
+      "category": "safe_auto",
+      "action": "ניסוי hashtag/topic אינסטגרם: בדוק האם פוסטים עם מיקוד ב-destination-specific B2B (לדוגמה: 'רומא לחברות') מייצרים reach גבוה יותר מפוסטים גנריים — השווה 2 פוסטים destination-specific ל-2 גנריים ב-14 ימים.",
       "detail": "הצעה לבדיקה על בסיס המדד המתועד; לא בוצע שינוי.",
       "channel": "instagram",
       "evidence": {
         "source": "scorecard",
-        "metric": "נוכחות סושיאל (רצפה)",
-        "value": 16.0,
-        "target": 5,
-        "unit": "",
-        "status": "✅"
+        "metric": "Engagement rate",
+        "value": 0.06,
+        "target": 2.0,
+        "unit": "%",
+        "status": "❌"
       },
       "status": "candidate",
       "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
-      "success_metric": "נוכחות סושיאל (רצפה): בסיס 16.0; יעד המדד 5. יש להשוות תקופות תואמות."
+      "success_metric": "Engagement rate: בסיס 0.06; יעד המדד 2.0. יש להשוות תקופות תואמות."
+    },
+    {
+      "category": "safe_auto",
+      "action": "הפץ מיידית את טיוטת הנחיית ייחוס המקורות הקיימת (deliverable: salesforce-attribution-fix, נוצרה 13/09) לצוות המכירות — ללא שינוי CRM, רק הנחיה לתיעוד שיחת כניסה וסיווג Web לעומת Web-Organic.",
+      "detail": "הצעה לבדיקה על בסיס המדד המתועד; לא בוצע שינוי.",
+      "channel": "leads",
+      "evidence": {
+        "source": "scorecard",
+        "metric": "ייחוס לידים",
+        "value": "לא-מיוחס",
+        "target": "מקור אמיתי",
+        "unit": "",
+        "status": "❌"
+      },
+      "status": "candidate",
+      "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
+      "success_metric": "ייחוס לידים: בסיס לא-מיוחס; יעד המדד מקור אמיתי. יש להשוות תקופות תואמות."
     }
   ],
   "channel_cadence": {
