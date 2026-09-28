@@ -118,12 +118,17 @@ the `arcads-external-api` skill's character-sheet flow, at image prices rather
 than video prices, and keep the hero still as a permanent reference. Every later
 render then gets real continuity for a few credits.
 
-## One inconsistency to settle
+## The brand stat, now settled
 
-The repo states the brand's track record two different ways:
+This batch originally carried *200+ events across 120+ countries*, taken from the
+published Sofia captions, while `content/video_scripts/` said *1,500 events across
+130+ destinations*. Both could not be right on a public feed.
 
-- `content/sofia/` captions and `content/days/day100`: **15 years, 200+ events, 120+ countries**
-- `content/video_scripts/*.json`: **1,500 events across 130+ destinations**
+Main settled it on 2026-09-28: a sweep across 386 content files standardised on
+**Since 2010, 1,500+ events, 130+ destinations**, rewrote the two published Sofia
+captions, and added `tests/test_caption_copy_guard.py`, which now fails on
+`200+ events`, `120 countries` and `15 years` anywhere in `content/`.
 
-This batch uses the first, because that is what the published Sofia captions
-say. The two cannot both be right on a public feed, so it is worth picking one.
+The batch follows that standard. The authority line in all five captions reads
+*After 1,500+ events across 130+ destinations,* — the same sentence the published
+Prague and Barcelona films now use — and `brand_stats` matches. The guard passes.
