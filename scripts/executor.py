@@ -22,7 +22,15 @@ State:
   state/initiatives.json               (the team's backlog + status)
   deliverables/<id>.md                 (each agent's work product)
 
-Checkpoints after every attempt. Incomplete runs exit nonzero.
+Checkpoints after every attempt. A run exits nonzero only when a started draft
+fails for a reason other than a deadline on an item already flagged
+needs_attention, or when approval registration or the digest email fails.
+Drafts deferred because the remaining budget is below ACTION_SECONDS, and
+drafts skipped as needs_attention, do not fail the run.
+
+Redrafts use REDRAFT_MAX_TOKENS (10000). The previous 16000 cap let one
+LinkedIn draft stream about 20,000 characters and never finish inside the
+240-second per-draft deadline.
 
 Usage:
   python3 scripts/executor.py                 # one cycle + email
@@ -41,6 +49,12 @@ API_KEY = os.environ.get("ANTHROPIC_API_KEY", "")
 MODEL = os.environ.get("EXECUTOR_MODEL") or "claude-sonnet-4-6"
 ACTION_SECONDS = 240
 RUN_SECONDS = 1200
+# Two consecutive failures park the draft for Alon. One miss stays in the queue.
+ATTENTION_AFTER_FAILURES = 2
+# 16000 tokens let initiative ba5e2d8e keep generating ~20k characters until the
+# 240s deadline killed it. 10000 is the redraft cap so one draft can finish
+# inside ACTION_SECONDS instead of streaming until the alarm.
+REDRAFT_MAX_TOKENS = 10000
 
 
 class ActionDeadline(RuntimeError):
@@ -51,23 +65,32 @@ def bounded_agent(it, seconds):
     """Hard wall-clock limit, including retries and slow response bodies (Unix runner)."""
     def expire(signum, frame):
         raise ActionDeadline('action deadline exceeded')
+    progress = {}
+    request = dict(it, _stream_progress=progress)
     previous = signal.signal(signal.SIGALRM, expire)
     signal.setitimer(signal.ITIMER_REAL, seconds)
     try:
-        return run_agent(it)
+        result = run_agent(request)
+        if result.get('error') and progress:
+            result['diagnostics'] = dict(progress)
+        return result
     except ActionDeadline:
-        return {'error': 'action deadline exceeded'}
+        result = {'error': 'action deadline exceeded'}
+        if progress:
+            result['diagnostics'] = dict(progress)
+        return result
     finally:
         signal.setitimer(signal.ITIMER_REAL, 0)
         signal.signal(signal.SIGALRM, previous)
 
 
-def checkpoint(inits, advanced, attempted, planned, *, finished=False, active_id=None, postprocessing='pending'):
+def checkpoint(inits, advanced, attempted, planned, *, finished=False, active_id=None, postprocessing='pending', deferred=0):
     STATE_DIR.mkdir(parents=True, exist_ok=True)
     temporary = INIT_PATH.with_suffix('.tmp')
     temporary.write_text(json.dumps(inits, ensure_ascii=False, indent=2))
     temporary.replace(INIT_PATH)
-    drafting_complete = finished and attempted == planned and len(advanced) == attempted
+    # Deferred drafts were not started, so they are not failed attempts.
+    drafting_complete = finished and attempted + deferred == planned and len(advanced) == attempted
     complete = drafting_complete and postprocessing in ('complete','not_needed')
     feed = {'schema_version': 1, 'source_key': 'executor',
             'generated_at': datetime.datetime.now(datetime.timezone.utc).isoformat(),
@@ -75,8 +98,9 @@ def checkpoint(inits, advanced, attempted, planned, *, finished=False, active_id
             'status': 'ok' if complete else 'partial', 'complete': complete,
             'drafting_complete': drafting_complete, 'postprocessing': postprocessing,
             'planned': planned, 'attempted': attempted, 'advanced': len(advanced),
+            'deferred': deferred,
             'active_id': active_id, 'source': 'Executor durable checkpoint; drafts only',
-            'facts': [['טיוטות שקודמו',len(advanced)],['ניסיונות',attempted],['בתוכנית',planned]],
+            'facts': [['טיוטות שקודמו',len(advanced)],['ניסיונות',attempted],['בתוכנית',planned],['נדחו',deferred]],
             'findings': [{'severity':'info' if complete else 'warn',
                           'text': 'סבב הטיוטות הסתיים ונשמר; אין בכך אישור לפרסום או ביצוע שיווקי.' if complete else 'הטיוטות נשמרות בנפרד; הסבב או שלבי הרישום והדיווח טרם הושלמו במלואם.'}]}
     path=ROOT/'reports/executor.json';path.parent.mkdir(exist_ok=True)
@@ -213,12 +237,52 @@ def sync_backlog(inits):
     return inits, None
 
 
+def _failure_count(it):
+    try:
+        return int(it.get("consecutive_failures") or 0)
+    except (TypeError, ValueError):
+        return 0
+
+
+def flagged_for_attention(it):
+    """Repeated failures, or an explicit needs_attention status, wait on Alon."""
+    return it.get("status") == "needs_attention" or _failure_count(it) >= ATTENTION_AFTER_FAILURES
+
+
+def started_failure_fails_run(it, error):
+    """Deadline on an item already flagged for Alon does not fail the run."""
+    return not (flagged_for_attention(it) and error == "action deadline exceeded")
+
+
+def record_failure(it):
+    it["consecutive_failures"] = _failure_count(it) + 1
+    if it["consecutive_failures"] >= ATTENTION_AFTER_FAILURES:
+        it["status"] = "needs_attention"
+    it["updated"] = _today()
+
+
+def record_success(it):
+    it["consecutive_failures"] = 0
+
+
 def pick_to_advance(inits, approved, limit):
+    # The council filters new recommendations, but older backlog entries survive
+    # daily syncs. Respect the same verified ledger before spending on a draft.
+    try:
+        verified = json.loads((STATE_DIR / "council_verified_actions.json").read_text())
+    except (OSError, ValueError):
+        verified = {}
+    completed = set(verified.get("completed_action_keys", []))
+    superseded = verified.get("superseded_initiatives", {})
     open_states = ("todo", "in_progress", "awaiting_approval")
     cands = []
     for it in inits.values():
         if it["id"] in approved:
             it["status"] = "approved"; continue
+        if it.get("action_key") in completed or it["id"] in superseded:
+            continue  # Keep history, artifacts and approval IDs intact.
+        if flagged_for_attention(it):
+            continue  # Alon has to look; another daily attempt will not unblock it.
         if it.get("status") not in open_states:
             continue
         if it.get("status") == "awaiting_approval" or it.get("revisions", 0) >= MAX_REVISIONS:
@@ -270,7 +334,7 @@ class StreamFailure(ValueError):
     """A response that must not be registered as a complete draft."""
 
 
-def read_message_stream(response):
+def read_message_stream(response, progress=None):
     """Accumulate text SSE blocks; never accept a disconnected or failed stream.
 
     Pings/search events keep the socket alive while the 240s outer deadline
@@ -292,6 +356,16 @@ def read_message_stream(response):
             raise StreamFailure("malformed stream event") from exc
         data_lines = []
         kind = event.get("type")
+        if progress is not None:
+            progress['events_received'] = progress.get('events_received', 0) + 1
+            known = {'message_start', 'message_delta', 'message_stop', 'content_block_start',
+                     'content_block_delta', 'content_block_stop', 'ping', 'error'}
+            progress['last_event'] = kind if kind in known else 'other'
+            if kind == 'content_block_start':
+                block_type = event.get('content_block', {}).get('type')
+                progress['last_block_type'] = block_type if block_type in ('text', 'server_tool_use', 'web_search_tool_result', 'thinking') else 'other'
+            if kind == 'content_block_delta' and event.get('delta', {}).get('type') == 'text_delta':
+                progress['text_characters'] = progress.get('text_characters', 0) + len(event['delta'].get('text', ''))
         if kind == "error":
             # Avoid persisting upstream messages, which may echo private inputs.
             raise StreamFailure("provider stream error")
@@ -344,7 +418,7 @@ def run_agent(it):
     prompt += "\nOWNER: " + str(it.get("owner") or "executor prepares draft; Alon approves")
     prompt += "\nMEASURABLE ACCEPTANCE CRITERION: " + str(it.get("success_metric") or "state a verifiable completion check")
     prompt += "\nTreat traffic/ranking/lead uplift as hypotheses; never claim a draft was published or a KPI improved without measured evidence."
-    body = {"model": MODEL, "max_tokens": 16000, "stream": True,
+    body = {"model": MODEL, "max_tokens": REDRAFT_MAX_TOKENS, "stream": True,
             "tools": [{"type": "web_search_20250305", "name": "web_search", "max_uses": 4}],
             "messages": [{"role": "user", "content": prompt}]}
     data = json.dumps(body).encode()
@@ -355,7 +429,7 @@ def run_agent(it):
         try:
             req = urllib.request.Request("https://api.anthropic.com/v1/messages", data=data, headers=headers)
             with urllib.request.urlopen(req, timeout=90) as r:
-                resp = read_message_stream(r)
+                resp = read_message_stream(r, progress=it.get("_stream_progress"))
             break
         except StreamFailure as e:
             return {"error": f"anthropic {e}"}
@@ -399,6 +473,21 @@ def render_html(inits, advanced):
     for it in inits.values():
         counts[it.get("status", "?")] = counts.get(it.get("status", "?"), 0) + 1
     summary = " · ".join(f"{k}: {v}" for k, v in sorted(counts.items()))
+    attention = [it for it in inits.values() if flagged_for_attention(it)]
+    attention.sort(key=lambda it: (PRIORITY_ORDER.get(it.get("priority"), 5), it.get("id", "")))
+    if attention:
+        summary += f" · needs Alon's attention: {len(attention)}"
+    attention_html = ""
+    if attention:
+        items = "".join(
+            f"<li><code>{it.get('id')}</code> — {(it.get('title') or '')[:90]} "
+            f"(consecutive_failures: {_failure_count(it)}, status: {it.get('status')})</li>"
+            for it in attention)
+        attention_html = (
+            "<p style='background:#fff4e5;padding:10px;border-right:3px solid #b00;'>"
+            "<b>Needs Alon's attention</b> — היוזמות האלה סומנו <code>needs_attention</code> "
+            "אחרי כשלונות רצופים. הצוות לא ימשיך אותן עד ש-Alon יטפל.</p>"
+            f"<ul>{items}</ul>")
     rows = ""
     for it, res in advanced:
         oq = res.get("open_questions") or []
@@ -421,6 +510,7 @@ def render_html(inits, advanced):
 <div dir="rtl" style="direction:rtl;text-align:right;max-width:720px;">
 <h2>🤖 צוות הביצוע — דוח {d}</h2>
 <p>קידמתי <b>{len(advanced)}</b> יוזמות בסבב הזה. מצב מצטבר: {summary}</p>
+{attention_html}
 <p style="background:#f6f6f6;padding:10px;border-right:3px solid #333;font-size:12px;">
 כל התוצרים הם <b>טיוטות לאישורך</b> — שום דבר לא פורסם/נשלח. התוצרים נשמרו ב-<code>deliverables/</code> ברפו.</p>
 <table dir="rtl" cellpadding="6" style="border-collapse:collapse;width:100%;font-size:13px;">
@@ -462,37 +552,51 @@ def main():
     DELIV_DIR.mkdir(parents=True, exist_ok=True); STATE_DIR.mkdir(parents=True, exist_ok=True)
     advanced = []
     attempted = 0
+    deferred = 0
+    run_failed = False
     deadline = time.monotonic() + RUN_SECONDS
-    checkpoint(inits, advanced, attempted, len(todo))
-    for it in todo:
+    checkpoint(inits, advanced, attempted, len(todo), deferred=deferred)
+    for index, it in enumerate(todo):
         remaining = deadline - time.monotonic()
-        if remaining <= 1:
+        if remaining < ACTION_SECONDS:
+            deferred = len(todo) - index
+            for skipped in todo[index:]:
+                print(f"  deferred {skipped['id']}: {remaining:.0f}s left, below {ACTION_SECONDS}s", flush=True)
             break
-        checkpoint(inits, advanced, attempted, len(todo), active_id=it['id'])
-        print(f"  starting {it['id']} with {min(ACTION_SECONDS, remaining):.0f}s deadline", flush=True)
+        checkpoint(inits, advanced, attempted, len(todo), active_id=it['id'], deferred=deferred)
+        print(f"  starting {it['id']} with {ACTION_SECONDS:.0f}s deadline ({remaining:.0f}s budget left)", flush=True)
         try:
-            res = bounded_agent(it, min(ACTION_SECONDS, remaining))
+            res = bounded_agent(it, ACTION_SECONDS)
         except Exception as exc:
             res = {'error': 'agent failed: ' + type(exc).__name__}
         attempted += 1
         if res.get("error"):
             print(f"  ✗ {it['id']}: {res['error']}", file=sys.stderr)
-            it["history"].append({"date": _today(), "error": res["error"]})
-            checkpoint(inits, advanced, attempted, len(todo))
+            fails_run = started_failure_fails_run(it, res["error"])
+            record_failure(it)
+            failure = {"date": _today(), "error": res["error"]}
+            if res.get('diagnostics'):
+                failure['diagnostics'] = res['diagnostics']
+                print('  stream progress: ' + json.dumps(res['diagnostics']), flush=True)
+            it.setdefault("history", []).append(failure)
+            checkpoint(inits, advanced, attempted, len(todo), deferred=deferred)
+            if fails_run:
+                run_failed = True
             continue
         (DELIV_DIR / f"{it['id']}.md").write_text(
             f"# {it.get('title')}\n\n_{it.get('priority')} · {it.get('channel')} · updated {_today()}_\n\n"
             + res.get("deliverable_md", ""))
+        record_success(it)
         it["revisions"] = it.get("revisions", 0) + 1
         it["status"] = "awaiting_approval" if res.get("ready_for_approval") else "in_progress"
         it["updated"] = _today()
-        it["history"].append({"date": _today(), "summary": res.get("summary", ""),
+        it.setdefault("history", []).append({"date": _today(), "summary": res.get("summary", ""),
                               "ready": res.get("ready_for_approval", False)})
         advanced.append((it, res))
-        checkpoint(inits, advanced, attempted, len(todo))
+        checkpoint(inits, advanced, attempted, len(todo), deferred=deferred)
         print(f"  ✓ {it['id']} [{it.get('status')}] {res.get('summary','')[:60]}")
 
-    checkpoint(inits, advanced, attempted, len(todo), finished=True)
+    checkpoint(inits, advanced, attempted, len(todo), finished=True, deferred=deferred)
 
     registration_ok = True
     for it, _ in advanced:  # ensure an approval row exists so the email links resolve
@@ -510,8 +614,10 @@ def main():
         except Exception as e:
             print(f"email failed: {e}", file=sys.stderr)
     postprocessing = 'not_needed' if not advanced else ('complete' if registration_ok and notification_ok else 'failed')
-    checkpoint(inits, advanced, attempted, len(todo), finished=True, postprocessing=postprocessing)
-    return 0 if attempted == len(todo) and len(advanced) == attempted and postprocessing != 'failed' else 1
+    checkpoint(inits, advanced, attempted, len(todo), finished=True, postprocessing=postprocessing, deferred=deferred)
+    # Deferred and skipped drafts are not failures. A deadline on an item that
+    # was already needs_attention is not a failure either.
+    return 1 if run_failed or postprocessing == 'failed' else 0
 
 
 if __name__ == "__main__":

@@ -60,6 +60,47 @@ def engine_evidence(path=None, today=None):
             'definition': 'Distinct engines citing UPE in grounded nonbranded answers; direct URLs and grounding source-domain labels distinguished. Not recommendation rank.'}
 
 
+def unbranded_mention_rates(path=None, date=None):
+    """Info-only unbranded mention rates from an AEO history row.
+
+    Returns None when that date has no mention_rate_nonbranded values. The
+    council score counts engines checked, not this rate.
+    """
+    if not date:
+        return None
+    try:
+        rows = json.loads(Path(path or HISTORY).read_text())
+        row = next(item for item in rows if item.get("date") == date)
+    except (OSError, ValueError, StopIteration, TypeError):
+        return None
+    by_engine = {}
+    mentioned = measured = 0
+    have_counts = True
+    for name, block in (row.get("models") or {}).items():
+        if name not in EXPECTED_MODELS or not isinstance(block, dict) or block.get("degraded"):
+            continue
+        rate = block.get("mention_rate_nonbranded")
+        if isinstance(rate, bool) or not isinstance(rate, (int, float)):
+            continue
+        by_engine[name] = rate
+        got = block.get("mentioned_nonbranded")
+        asked = block.get("n_nonbranded")
+        if isinstance(got, int) and not isinstance(got, bool) and isinstance(asked, int) and asked > 0:
+            mentioned += got
+            measured += asked
+        else:
+            have_counts = False
+    if not by_engine:
+        return None
+    if have_counts and measured:
+        pooled = round(100.0 * mentioned / measured, 1)
+    else:
+        pooled = round(sum(by_engine.values()) / len(by_engine), 1)
+        mentioned = measured = None
+    return {"date": date, "by_engine": by_engine, "pooled_pct": pooled,
+            "mentioned_nonbranded": mentioned, "n_nonbranded": measured}
+
+
 def valid_week(window):
     try:
         return (datetime.date.fromisoformat(window['end']) -

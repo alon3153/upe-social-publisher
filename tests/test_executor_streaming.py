@@ -86,4 +86,33 @@ def test_hard_deadline_still_bounds_a_stream_with_continuous_pings(tmp_path):
                 yield b'\n'
     with patch.object(e,'DELIV_DIR',tmp_path),patch.object(e.urllib.request,'urlopen',return_value=SlowStream()):
         result=e.bounded_agent({'id':'one'},0.025)
-    assert result == {'error':'action deadline exceeded'}
+    assert result['error']=='action deadline exceeded'
+    assert result['diagnostics']['last_event']=='ping'
+    assert result['diagnostics']['events_received'] > 0
+
+
+def test_progress_records_only_counts_and_known_event_names():
+    progress={}
+    e.read_message_stream(stream(complete('PRIVATE_TEXT')),progress)
+    assert progress['text_characters']==len('PRIVATE_TEXT')
+    assert progress['last_block_type']=='text'
+    assert progress['last_event']=='message_stop'
+    assert 'PRIVATE_TEXT' not in json.dumps(progress)
+
+
+def test_unrecognized_event_payload_is_not_persisted():
+    progress={}
+    with pytest.raises(e.StreamFailure):
+        e.read_message_stream(stream([{'type':'PRIVATE_EVENT_NAME','payload':'PRIVATE_INPUT'}]),progress)
+    assert progress=={'events_received':1,'last_event':'other'}
+
+
+def test_diagnostics_do_not_mutate_initiative_state():
+    original={'id':'one','history':[]}
+    def fail(it):
+        it['_stream_progress'].update(events_received=3,last_event='ping')
+        return {'error':'failure'}
+    with patch.object(e,'run_agent',side_effect=fail):
+        result=e.bounded_agent(original,1)
+    assert result['diagnostics']['events_received']==3
+    assert original=={'id':'one','history':[]}

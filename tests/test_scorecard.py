@@ -144,7 +144,8 @@ def test_normalize_maps_guardian_nested_schema_to_flat_fields():
            "geo": {"status": "ok", "cited": 3, "total": 7}}
     n = seo_geo_source.normalize(raw)
     assert n["weekly_clicks"] == 50           # exact weekly totals, never 28-day totals
-    assert n["top3_keywords"] == 1            # only "b" at pos 2.0 <= 3
+    assert n["top3_all_queries"] == 1        # every query already in top3_terms; incoming count ignored
+    assert n["top3_keywords"] == 0           # "b" is not a tracked service-page keyword
     assert n["aeo_cited_engines"] is None    # three prompts are not three engines
     assert n["aeo_cited_questions"] == 3
 

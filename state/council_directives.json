@@ -1,57 +1,23 @@
 {
-  "updated_at": "2026-09-18",
+  "updated_at": "2026-09-27",
   "source": "daily-council",
   "directives": [
     {
       "category": "safe_auto",
-      "action": "ניסוי LinkedIn: ניתוח תוכן — בדוק אם carousel/document posts (PDF ויזואלי) ב-2 עמודות עם case-study מהפקה אמיתית מייצרים יותר תגובות מאשר text-only posts, לאור נתוני 2026 המראים ש-document posts מובילים ב-engagement בפלטפורמה",
-      "detail": "הצעה לבדיקה על בסיס המדד המתועד; לא בוצע שינוי.",
-      "channel": "linkedin",
-      "evidence": {
-        "source": "scorecard",
-        "metric": "נוכחות סושיאל (רצפה)",
-        "value": 8.0,
-        "target": 5,
-        "unit": "",
-        "status": "✅"
-      },
-      "status": "candidate",
-      "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
-      "success_metric": "נוכחות סושיאל (רצפה): בסיס 8.0; יעד המדד 5. יש להשוות תקופות תואמות."
-    },
-    {
-      "category": "safe_auto",
-      "action": "ניסוי YouTube: בדוק האם הוספת Chapters (timestamps) ותיאורים בעברית של 300+ מילים עם מונח-יעד מסחרי (לדוגמה: 'הפקת כנסים') בסרטונים קיימים מגדילה את CTR ב-GSC — מדוד 28 יום לאחר שינוי מטא בלבד, ללא שינוי תוכן",
-      "detail": "הצעה לבדיקה על בסיס המדד המתועד; לא בוצע שינוי.",
-      "channel": "youtube",
-      "evidence": {
-        "source": "scorecard",
-        "metric": "קליקים אורגניים/שבוע",
-        "value": 36,
-        "target": 300,
-        "unit": "",
-        "status": "❌"
-      },
-      "status": "candidate",
-      "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
-      "success_metric": "קליקים אורגניים/שבוע: בסיס 36; יעד המדד 300. יש להשוות תקופות תואמות."
-    },
-    {
-      "category": "safe_auto",
-      "action": "ניסוי Instagram: בדוק האם פוסטים שמתחילים ב'מה קרה כשקיבלנו שיחה על כנס 600 איש עם 9 שבועות' (פתיחת סיפור אמיתי) מייצרים יותר saves/shares מאשר פתיחה בשאלה רטורית — 6 פוסטים, 3 בכל פורמט",
+      "action": "ניסוי Instagram: שינוי פוסט רומא הקיים (73 impressions, 0 interactions) ל-Reel קצר של 30-45 שניות — השוואת impressions מול פוסט סטטי בשבוע הבא",
       "detail": "הצעה לבדיקה על בסיס המדד המתועד; לא בוצע שינוי.",
       "channel": "instagram",
       "evidence": {
         "source": "scorecard",
         "metric": "נוכחות סושיאל (רצפה)",
-        "value": 8.0,
+        "value": 16.0,
         "target": 5,
         "unit": "",
         "status": "✅"
       },
       "status": "candidate",
       "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
-      "success_metric": "נוכחות סושיאל (רצפה): בסיס 8.0; יעד המדד 5. יש להשוות תקופות תואמות."
+      "success_metric": "נוכחות סושיאל (רצפה): בסיס 16.0; יעד המדד 5. יש להשוות תקופות תואמות."
     }
   ],
   "channel_cadence": {
@@ -60,7 +26,7 @@
       "reason": "מכסה מוצעת לבדיקה בתקופת המדידה; אין מסקנה סיבתית על אלגוריתם."
     },
     "instagram": {
-      "max_posts_per_week": 3,
+      "max_posts_per_week": 4,
       "reason": "מכסה מוצעת לבדיקה בתקופת המדידה; אין מסקנה סיבתית על אלגוריתם."
     },
     "linkedin": {
@@ -68,11 +34,11 @@
       "reason": "מכסה מוצעת לבדיקה בתקופת המדידה; אין מסקנה סיבתית על אלגוריתם."
     },
     "tiktok": {
-      "max_posts_per_week": 0,
+      "max_posts_per_week": 2,
       "reason": "מכסה מוצעת לבדיקה בתקופת המדידה; אין מסקנה סיבתית על אלגוריתם."
     },
     "youtube": {
-      "max_posts_per_week": 1,
+      "max_posts_per_week": 2,
       "reason": "מכסה מוצעת לבדיקה בתקופת המדידה; אין מסקנה סיבתית על אלגוריתם."
     }
   },

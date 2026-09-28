@@ -17889,6 +17889,18 @@
       {
         "date": "2026-09-18",
         "error": "action deadline exceeded"
+      },
+      {
+        "date": "2026-09-19",
+        "error": "action deadline exceeded"
+      },
+      {
+        "date": "2026-09-20",
+        "error": "action deadline exceeded"
+      },
+      {
+        "date": "2026-09-21",
+        "error": "action deadline exceeded"
       }
     ],
     "created": "2026-09-11",
@@ -17996,7 +18008,7 @@
   "251c2671": {
     "id": "251c2671",
     "title": "כפיל SEO עברי מסחרי על /נופש-חברה/ ו-/אירוע-קונספט/ — שתי עמדות pos.17-19 עם 645 חיפושים חודשיים מצטברים; כניסה ל-Top-5 מוסיפה 1-2 לידים/חודש ישירות",
-    "status": "awaiting_approval",
+    "status": "approved",
     "revisions": 1,
     "history": [
       {
@@ -18030,8 +18042,8 @@
   "425ff99d": {
     "id": "425ff99d",
     "title": "הגדל internal linking מ-292 מאמרי בלוג קיימים לדפי שירות מסחריים — עלות אפסית, אפקט מיידי על crawl authority; מקד 10 מאמרים בעלי traffic גבוה לכל דף שירות",
-    "status": "todo",
-    "revisions": 0,
+    "status": "approved",
+    "revisions": 1,
     "history": [
       {
         "date": "2026-09-14",
@@ -18052,10 +18064,15 @@
       {
         "date": "2026-09-18",
         "error": "action deadline exceeded"
+      },
+      {
+        "date": "2026-09-19",
+        "summary": "הופק מסמך Internal Linking מלא ומוכן לשימוש: מיפוי 70 מאמרי בלוג ל-7 דפי שירות מסחריים של UPE, כולל anchor text מגוון, SOP שבועי, טבלת מעקב וקריטריון השלמה מדיד.",
+        "ready": true
       }
     ],
     "created": "2026-09-11",
-    "updated": "2026-09-11",
+    "updated": "2026-09-19",
     "kind": "leads_action",
     "priority": "leads",
     "channel": "leads"
@@ -18063,11 +18080,17 @@
   "879b4850": {
     "id": "879b4850",
     "title": "הוסף CTA ברור ('קבל הצעת מחיר') בכל דף שירות ובסוף כל מאמר בלוג — Web leads (33% נתח) מעידים שהאתר ממיר, אך יש לפשט את מסע המשתמש לטופס",
-    "status": "todo",
-    "revisions": 0,
-    "history": [],
+    "status": "approved",
+    "revisions": 1,
+    "history": [
+      {
+        "date": "2026-09-19",
+        "summary": "הופק מדריך יישום מלא וקוד HTML/CSS מוכן-להדבקה של CTA 'קבל הצעת מחיר' לכלל דפי השירות ומאמרי הבלוג של UPE — כולל 3 מיקומי CTA לדפי שירות, תבנית סוף מאמר בעברית ואנגלית, בלוק אינליין לבלוג, טבלת A/B וריאנטים, עקרונות נגישות, וצ'קליסט בדיקה עם קריטריון קבלה מדיד.",
+        "ready": true
+      }
+    ],
     "created": "2026-09-11",
-    "updated": "2026-09-11",
+    "updated": "2026-09-19",
     "kind": "leads_action",
     "priority": "leads",
     "channel": "leads"
@@ -18075,11 +18098,21 @@
   "341e6ab8": {
     "id": "341e6ab8",
     "title": "הפעל LinkedIn executive posting: ציטוט לקוח אחד/שבוע + תובנה אחת/שבוע מפרופיל אישי — B2B ישראלי מקבל החלטות דרך מוניטין אישי; lead שנוצר ב-LinkedIn מגיע עם trust גבוה",
-    "status": "todo",
-    "revisions": 0,
-    "history": [],
+    "status": "approved",
+    "revisions": 1,
+    "history": [
+      {
+        "date": "2026-09-19",
+        "error": "action deadline exceeded"
+      },
+      {
+        "date": "2026-09-20",
+        "summary": "הופקה תוכנית LinkedIn executive posting מלאה ל-4 שבועות: 8 פוסטים מוכנים לפרסום (4 ציטוטי לקוח + 4 תובנות מקצועיות) בעברית ובאנגלית, עם לו\"ז, הנחיות טכניות מבוססות נתוני 2026, ושאלות פתוחות לאישור Alon.",
+        "ready": true
+      }
+    ],
     "created": "2026-09-11",
-    "updated": "2026-09-11",
+    "updated": "2026-09-20",
     "kind": "leads_action",
     "priority": "leads",
     "channel": "leads"
@@ -18087,11 +18120,17 @@
   "76ad88de": {
     "id": "76ad88de",
     "title": "עדכן llms-full.txt הקיים בנתונים כמותיים (16+ שנה, 200+ אירועים, 20+ מדינות) — AI citations כבר מחזירות UPE; נתונים ספציפיים מגדילים את שיעור ה'נבחר' (לא רק 'מוזכר') ב-AI",
-    "status": "todo",
-    "revisions": 0,
-    "history": [],
+    "status": "approved",
+    "revisions": 1,
+    "history": [
+      {
+        "date": "2026-09-20",
+        "summary": "נוצר קובץ llms-full.txt מלא ומוכן לאישור עבור UPE, הכולל את כל הנתונים הכמותיים הקנוניים (16+ שנה, 1,500+ אירועים, 25,000+ משתתפים, 130+ יעדים, 20+ מדינות) בפורמט Markdown מובנה לצריכת AI, לצד קובץ llms.txt קומפניון ורשימת משימות ליישום.",
+        "ready": true
+      }
+    ],
     "created": "2026-09-11",
-    "updated": "2026-09-11",
+    "updated": "2026-09-20",
     "kind": "leads_action",
     "priority": "leads",
     "channel": "leads"
@@ -18099,11 +18138,17 @@
   "c3ec361d": {
     "id": "c3ec361d",
     "title": "סגור פער ייחוס: ודא שנציגי מכירות מסמנים 'Google Organic' / 'Web' ב-Salesforce בכל lead שהזכיר את האתר — 'Other' (1 ליד) ו-'Web' (3 לידים) עשויים להסתיר Google Organic נוספים שיחשפו היכן באמת לדחוף",
-    "status": "todo",
-    "revisions": 0,
-    "history": [],
+    "status": "approved",
+    "revisions": 1,
+    "history": [
+      {
+        "date": "2026-09-21",
+        "summary": "הופקה חבילת סגירת פער ייחוס מלאה הכוללת: כרטיס עזר לנציגים לסיווג נכון של Lead Source (Google Organic / Web / Other), שני Validation Rules מוכנים להעתקה ב-Salesforce, הגדרת Restricted Picklist, טבלת Audit ל-4 לידים קיימים, תבנית בירור לנציג, דוח שבועי שוטף, והודעת Rollout לסלאק — עם מדד הצלחה ניתן לאימות.",
+        "ready": true
+      }
+    ],
     "created": "2026-09-11",
-    "updated": "2026-09-11",
+    "updated": "2026-09-21",
     "kind": "leads_action",
     "priority": "leads",
     "channel": "leads"
@@ -18111,11 +18156,17 @@
   "107ed80f": {
     "id": "107ed80f",
     "title": "שלב 1 (חודשים 1-3): בסס executive presence: 2 מנהלים בכירים פעילים ב-LinkedIn באופן אישי — מטרה 500 followers חדשים לדפי UPE דרך amplification אורגני",
-    "status": "todo",
-    "revisions": 0,
-    "history": [],
+    "status": "awaiting_approval",
+    "revisions": 1,
+    "history": [
+      {
+        "date": "2026-09-23",
+        "summary": "הופקה תוכנית executive presence מלאה ל-90 יום ל-LinkedIn של UPE, כולל אופטימיזציית פרופיל, 6 פוסטים מוכנים (עברית + אנגלית), לוח זמנים שבועי, מנגנון amplification אורגני, ו-tracker מדיד — מטרה: 500 followers חדשים לדף UPE תוך 3 חודשים.",
+        "ready": true
+      }
+    ],
     "created": "2026-09-11",
-    "updated": "2026-09-11",
+    "updated": "2026-09-23",
     "kind": "follower_plan",
     "priority": "follower",
     "channel": "growth"
@@ -18123,11 +18174,27 @@
   "2c8d880c": {
     "id": "2c8d880c",
     "title": "שלב 2 (חודשים 2-6): הפעל TikTok + Instagram Reels בסדרת 'behind the scenes' — 3 פוסטים/שבוע; תוכן אותנטי מאחורי הקלעים הוא מנוע העוקבים המהיר ביותר ב-B2B ויזואלי",
-    "status": "todo",
-    "revisions": 0,
-    "history": [],
+    "status": "awaiting_approval",
+    "revisions": 1,
+    "history": [
+      {
+        "date": "2026-09-24",
+        "error": "action deadline exceeded",
+        "diagnostics": {
+          "events_received": 4741,
+          "last_event": "content_block_delta",
+          "last_block_type": "text",
+          "text_characters": 17015
+        }
+      },
+      {
+        "date": "2026-09-25",
+        "summary": "הופק לוח תוכן מלא ל-8 שבועות לסדרת Behind the Scenes של UPE ב-TikTok + Instagram Reels, כולל 20 תסריטי וידאו מוכנים לצילום (10 מלאים, 10 בבריף), caption templates בעברית ואנגלית, מפרטים טכניים מבוססי נתוני 2026, RACI, ו-KPIs למדידה לאחר 60 יום.",
+        "ready": true
+      }
+    ],
     "created": "2026-09-11",
-    "updated": "2026-09-11",
+    "updated": "2026-09-25",
     "kind": "follower_plan",
     "priority": "follower",
     "channel": "growth"
@@ -18135,11 +18202,17 @@
   "251cdb63": {
     "id": "251cdb63",
     "title": "שלב 3 (חודשים 3-9): בנה 'הפקת האירועים ב-60 שניות' — פורמט קבוע שבועי בכל הפלטפורמות; פורמט חוזר וניתן לצפייה הוא הדרך להגיע ל-10K+ followers ראשונים",
-    "status": "todo",
-    "revisions": 0,
-    "history": [],
+    "status": "awaiting_approval",
+    "revisions": 1,
+    "history": [
+      {
+        "date": "2026-09-24",
+        "summary": "נוצר פורמט שבועי קבוע מלא 'הפקת האירועים ב-60 שניות' הכולל: DNA הפורמט, 26 נושאי פרקים, 4 סקריפטים מוכנים לצילום בעברית ואנגלית עם captions לכל פלטפורמה, workflow שבועי חוזר, מפרט טכני ויזואלי, אסטרטגיית hashtags, מדדי בסיס ופוסט השקה — הכל מוכן לאישור לון לפני ביצוע.",
+        "ready": true
+      }
+    ],
     "created": "2026-09-11",
-    "updated": "2026-09-11",
+    "updated": "2026-09-24",
     "kind": "follower_plan",
     "priority": "follower",
     "channel": "growth"
@@ -18147,11 +18220,17 @@
   "04925d91": {
     "id": "04925d91",
     "title": "שלב 4 (חודשים 6-12): שגר LinkedIn Newsletter עברי ל-HR/CMO ישראלי — 'מדריך מנהלים לאירועי חברה'; Newsletters ב-LinkedIn מקבלים distribution priority ובונים subscriber base נפרד",
-    "status": "todo",
-    "revisions": 0,
-    "history": [],
+    "status": "awaiting_approval",
+    "revisions": 1,
+    "history": [
+      {
+        "date": "2026-09-24",
+        "summary": "הופק חומר עבודה מלא ומוכן לאישור להשקת LinkedIn Newsletter עברי של UPE — 'מדריך מנהלים לאירועי חברה': כולל Setup Card, pipeline שנתי של 12 גיליונות עם כותרות, גיליון #1 מלא (כ-1,500 מילים), פוסט השקה לפיד, אסטרטגיית hashtag, tactics צמיחה לחצי שנה, ציפיות ריאליסטיות וchecklist לפני פרסום.",
+        "ready": true
+      }
+    ],
     "created": "2026-09-11",
-    "updated": "2026-09-11",
+    "updated": "2026-09-24",
     "kind": "follower_plan",
     "priority": "follower",
     "channel": "growth"
@@ -18159,11 +18238,27 @@
   "058304a7": {
     "id": "058304a7",
     "title": "שלב 5 (שנה 2): שותפויות תוכן עם ספקי MICE (מלונות, venues, קייטרינג) לcross-promotion — הגדלה ל-50K+ followers דרך קהלים משלימים",
-    "status": "todo",
-    "revisions": 0,
-    "history": [],
+    "status": "awaiting_approval",
+    "revisions": 1,
+    "history": [
+      {
+        "date": "2026-09-24",
+        "error": "action deadline exceeded",
+        "diagnostics": {
+          "events_received": 2783,
+          "last_event": "content_block_delta",
+          "last_block_type": "text",
+          "text_characters": 11065
+        }
+      },
+      {
+        "date": "2026-09-25",
+        "summary": "הופק מסמך שותפויות תוכן מלא ל-UPE: אסטרטגיה, רשימת מטרות MICE, 5 פוסטי LinkedIn מוכנים לתזמון (עברית + אנגלית), 4 תבניות Outreach (HE+EN), מסגרת MOU, לוח זמנים ל-90 יום ו-KPIs מדידים — הכל כטיוטה לאישור אלון.",
+        "ready": true
+      }
+    ],
     "created": "2026-09-11",
-    "updated": "2026-09-11",
+    "updated": "2026-09-25",
     "kind": "follower_plan",
     "priority": "follower",
     "channel": "growth"
@@ -18171,11 +18266,17 @@
   "62db6d85": {
     "id": "62db6d85",
     "title": "שלב 6 (שנה 3): YouTube SEO compounding — 50+ סרטונים ממוטבים יוצרים long-tail discovery אורגני; YouTube הוא מנוע העוקבים ל-500K בטווח הארוך עם ROI גבוה ביותר",
-    "status": "todo",
-    "revisions": 0,
-    "history": [],
+    "status": "awaiting_approval",
+    "revisions": 1,
+    "history": [
+      {
+        "date": "2026-09-25",
+        "summary": "הופק דליברבל מלא ומוכן לשימוש: 51 כותרות YouTube ממוטבות SEO עם 2 שורות תיאור + CTA לכל סרטון, מיפוי 30 מילות מפתח long-tail, ארכיטקטורת 5 פלייליסטים, תבנית description לשימוש חוזר, לוח שנה שנתי, ו-checklist analytics חודשי — הכל מבוסס best practices 2026.",
+        "ready": true
+      }
+    ],
     "created": "2026-09-11",
-    "updated": "2026-09-11",
+    "updated": "2026-09-25",
     "kind": "follower_plan",
     "priority": "follower",
     "channel": "growth"
@@ -18209,6 +18310,18 @@
       {
         "date": "2026-09-18",
         "error": "action deadline exceeded"
+      },
+      {
+        "date": "2026-09-19",
+        "error": "action deadline exceeded"
+      },
+      {
+        "date": "2026-09-20",
+        "error": "action deadline exceeded"
+      },
+      {
+        "date": "2026-09-21",
+        "error": "action deadline exceeded"
       }
     ],
     "created": "2026-09-12",
@@ -18224,7 +18337,8 @@
   "ba5e2d8e": {
     "id": "ba5e2d8e",
     "title": "הפעל executive posting: 2 פוסטים/שבוע מפרופיל אישי של מנכ\"ל (case-study + insight תעשייתי), דף החברה עושה repost בלבד — מיישם את id 12c66867 שאושר ונתקע",
-    "status": "in_progress",
+    "status": "needs_attention",
+    "consecutive_failures": 13,
     "revisions": 1,
     "history": [
       {
@@ -18251,17 +18365,79 @@
       {
         "date": "2026-09-18",
         "error": "action deadline exceeded"
+      },
+      {
+        "date": "2026-09-19",
+        "error": "action deadline exceeded"
+      },
+      {
+        "date": "2026-09-20",
+        "error": "action deadline exceeded"
+      },
+      {
+        "date": "2026-09-21",
+        "error": "action deadline exceeded"
+      },
+      {
+        "date": "2026-09-22",
+        "error": "action deadline exceeded",
+        "diagnostics": {
+          "events_received": 4748,
+          "last_event": "content_block_delta",
+          "last_block_type": "text",
+          "text_characters": 21157
+        }
+      },
+      {
+        "date": "2026-09-23",
+        "error": "action deadline exceeded",
+        "diagnostics": {
+          "events_received": 4752,
+          "last_event": "content_block_delta",
+          "last_block_type": "text",
+          "text_characters": 21288
+        }
+      },
+      {
+        "date": "2026-09-24",
+        "error": "action deadline exceeded",
+        "diagnostics": {
+          "events_received": 4787,
+          "last_event": "content_block_delta",
+          "last_block_type": "text",
+          "text_characters": 20273
+        }
+      },
+      {
+        "date": "2026-09-25",
+        "error": "action deadline exceeded",
+        "diagnostics": {
+          "events_received": 4739,
+          "last_event": "content_block_delta",
+          "last_block_type": "text",
+          "text_characters": 21649
+        }
+      },
+      {
+        "date": "2026-09-26",
+        "error": "action deadline exceeded",
+        "diagnostics": {
+          "events_received": 4730,
+          "last_event": "content_block_delta",
+          "last_block_type": "text",
+          "text_characters": 20203
+        }
       }
     ],
     "created": "2026-09-12",
-    "updated": "2026-09-12",
+    "updated": "2026-09-27",
     "kind": "recommendation",
-    "priority": "P1",
+    "priority": "P0",
     "channel": "linkedin",
     "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
     "action_key": "linkedin-executive-advocacy",
-    "owner": "מנכ\"ל (פרופיל אישי) מכין טיוטות; Alon מאשר לפני פרסום",
-    "success_metric": "לידים מיוחסים לדיגיטל: בסיס 5; יעד המדד 3. יש להשוות תקופות תואמות."
+    "owner": "מנכ\"ל / CMO מפרסם; Alon מאשר כל פוסט",
+    "success_metric": "קליקים אורגניים/שבוע: בסיס 25; יעד המדד 300. יש להשוות תקופות תואמות."
   },
   "8c4f9ebe": {
     "id": "8c4f9ebe",
@@ -18334,7 +18510,12 @@
     "title": "דחוף ביותר — SEO מסחרי עברי: אופטימיזציה של /נופש-חברה/ ו-/אירוע-קונספט/ (pos.17-19) + internal linking מ-10 מאמרים לכל דף — Web leads (33%) מוכיחים שהאתר ממיר; יותר תנועה = יותר לידים (id 251c2671, id 425ff99d)",
     "status": "todo",
     "revisions": 0,
-    "history": [],
+    "history": [
+      {
+        "date": "2026-09-21",
+        "error": "action deadline exceeded"
+      }
+    ],
     "created": "2026-09-12",
     "updated": "2026-09-12",
     "kind": "leads_action",
@@ -18344,11 +18525,17 @@
   "0de24bb6": {
     "id": "0de24bb6",
     "title": "ה-CTA pipeline: ודא שיש CTA 'קבל הצעת מחיר' בולט בכל דף שירות ובסוף כל מאמר; האתר כבר ממיר — פישוט מסע המשתמש לטופס מגדיל conversion ללא תנועה נוספת (id 879b4850)",
-    "status": "todo",
-    "revisions": 0,
-    "history": [],
+    "status": "approved",
+    "revisions": 1,
+    "history": [
+      {
+        "date": "2026-09-21",
+        "summary": "הוכן מסמך עבודה מלא עם ספציפיקציית CTA מקצה לקצה: קוד HTML מוכן להדבקה לכל עמוד שירות ומאמר בלוג, פישוט טופס ל-4 שדות עם Progressive Profiling, Sticky bars, וטבלת checklist יישום עם Acceptance Criterion ניתן לאימות — הכל בטיוטה הממתינה לאישור.",
+        "ready": true
+      }
+    ],
     "created": "2026-09-12",
-    "updated": "2026-09-12",
+    "updated": "2026-09-21",
     "kind": "leads_action",
     "priority": "leads",
     "channel": "leads"
@@ -18356,11 +18543,27 @@
   "7661040d": {
     "id": "7661040d",
     "title": "LinkedIn executive posting: פוסט case-study אחד + פוסט insight אחד/שבוע מפרופיל מנכ\"ל — B2B ישראלי מחליט על סמך מוניטין אישי; lead מ-LinkedIn מגיע עם trust מובנה (id 341e6ab8)",
-    "status": "todo",
-    "revisions": 0,
-    "history": [],
+    "status": "awaiting_approval",
+    "revisions": 3,
+    "history": [
+      {
+        "date": "2026-09-22",
+        "summary": "(no summary)",
+        "ready": false
+      },
+      {
+        "date": "2026-09-23",
+        "summary": "(no summary)",
+        "ready": false
+      },
+      {
+        "date": "2026-09-24",
+        "summary": "שופר הדרפט מ-v2 ל-v3: הוסלמה הרציונל האסטרטגי עם נתוני 2026 (trust barometer, depth score, comment weight, sequence effect), פוסט #1 חודד עם ציר זמן קונקרטי (4→18→36→48ש'), פוסט #2 הושלם ב-framework שלושת-הרמות כ-saves hook ו-DM funnel קונקרטי, נוסף לוח פרסום שבועי, ונוספו 6 שאלות פתוחות ו-acceptance criterion מדיד.",
+        "ready": true
+      }
+    ],
     "created": "2026-09-12",
-    "updated": "2026-09-12",
+    "updated": "2026-09-24",
     "kind": "leads_action",
     "priority": "leads",
     "channel": "leads"
@@ -18368,11 +18571,17 @@
   "51595e3f": {
     "id": "51595e3f",
     "title": "סגירת פער ייחוס: הדרך נציגי מכירות לסמן 'Google Organic' ו-'Web' ב-Salesforce כשלקוח מזכיר את האתר; 'Other' (1 ליד) ו-'Web' (3 לידים) עשויים להסתיר Google Organic שמכוון את ההשקעה (id c3ec361d)",
-    "status": "todo",
-    "revisions": 0,
-    "history": [],
+    "status": "approved",
+    "revisions": 1,
+    "history": [
+      {
+        "date": "2026-09-22",
+        "summary": "הופק חבילת יישום מלאה לסגירת פער ייחוס ב-Salesforce: SOP לנציגי מכירות, עץ החלטה, טבלת מיפוי מקורות, 3 Validation Rules מוכנות להטמעה, כרטיס עזר להדפסה, מייל הדרכה מוכן לשליחה, נוהל תיקון 4 הלידים ההיסטוריים, ודוח ביקורת חודשי — הכל טיוטה לאישור אלון.",
+        "ready": true
+      }
+    ],
     "created": "2026-09-12",
-    "updated": "2026-09-12",
+    "updated": "2026-09-22",
     "kind": "leads_action",
     "priority": "leads",
     "channel": "leads"
@@ -18380,11 +18589,17 @@
   "c193c607": {
     "id": "c193c607",
     "title": "עדכון llms-full.txt עם נתונים מדויקים: 1,500+ אירועים, 130+ יעדים, 25,000+ משתתפים — AI citations כבר מייצרות demand; תיקון נתונים שגויים (200/20) מונע אובדן אמון אצל decision-makers שבודקים ב-AI (id 76ad88de)",
-    "status": "todo",
-    "revisions": 0,
-    "history": [],
+    "status": "awaiting_approval",
+    "revisions": 1,
+    "history": [
+      {
+        "date": "2026-09-22",
+        "summary": "הופק קובץ llms-full.txt מלא וקובץ llms.txt תמציתי עבור UPE, הכוללים נתונים קנוניים מדויקים (1,500+ אירועים, 130+ יעדים, 25,000+ משתתפים, 2010), תיאורי שירותים, FAQ למנועי AI, והנחיות יישום טכני — טיוטה לאישור Alon בלבד.",
+        "ready": true
+      }
+    ],
     "created": "2026-09-12",
-    "updated": "2026-09-12",
+    "updated": "2026-09-22",
     "kind": "leads_action",
     "priority": "leads",
     "channel": "leads"
@@ -18392,11 +18607,17 @@
   "411f35dc": {
     "id": "411f35dc",
     "title": "שלב 1 (חודשים 1-3) — Executive presence: הפעל 2 מנהלים בכירים ב-LinkedIn עם 2 פוסטים/שבוע כל אחד; יעד 500 followers חדשים לדף החברה דרך amplification אורגני (id 107ed80f)",
-    "status": "todo",
-    "revisions": 0,
-    "history": [],
+    "status": "awaiting_approval",
+    "revisions": 1,
+    "history": [
+      {
+        "date": "2026-09-25",
+        "summary": "הופק מדריך מלא ומוכן לתזמון לשלב 1 של Executive Presence ב-LinkedIn: 48 פוסטים מוכנים (עברית + אנגלית) ל-12 שבועות עבור שני מנהלים בכירים, כולל פרוטוקול Amplification אורגני, checklist לפרופיל, דשבורד מדידה שבועי, ובנק נושאים לחודשים 2–3 — הכל כ-DRAFT הממתין לאישור אלון.",
+        "ready": true
+      }
+    ],
     "created": "2026-09-12",
-    "updated": "2026-09-12",
+    "updated": "2026-09-25",
     "kind": "follower_plan",
     "priority": "follower",
     "channel": "growth"
@@ -18404,11 +18625,27 @@
   "50eb7a05": {
     "id": "50eb7a05",
     "title": "שלב 2 (חודשים 2-6) — TikTok + Reels: 3 סרטוני 'אחורי הקלעים' מהפקות/שבוע בפורמט 60 שניות; שיתוף מקביל ל-Instagram Reels; תוכן אותנטי ולא מסרק הוא מנוע הגדילה המהיר ביותר (id 2c8d880c)",
-    "status": "todo",
-    "revisions": 0,
-    "history": [],
+    "status": "approved",
+    "revisions": 1,
+    "history": [
+      {
+        "date": "2026-09-25",
+        "error": "action deadline exceeded",
+        "diagnostics": {
+          "events_received": 2875,
+          "last_event": "content_block_delta",
+          "last_block_type": "text",
+          "text_characters": 9294
+        }
+      },
+      {
+        "date": "2026-09-26",
+        "summary": "הופק מסמך מבצעי מלא לתכנית TikTok + Reels של UPE לשלב 2 (חודשים 2–6): 3 עמודי תוכן שבועיים עם storyboards מפורטים ל-8 שבועות ראשונים, תבניות קפשן נפרדות לכל פלטפורמה, כללי הפקה טכניים, מאגר hashtags, Batch System, מדדי KPI ורשימת פעולות לאישור.",
+        "ready": true
+      }
+    ],
     "created": "2026-09-12",
-    "updated": "2026-09-12",
+    "updated": "2026-09-26",
     "kind": "follower_plan",
     "priority": "follower",
     "channel": "growth"
@@ -18416,11 +18653,17 @@
   "5930aefd": {
     "id": "5930aefd",
     "title": "שלב 3 (חודשים 3-9) — פורמט קבוע: 'הפקה ב-60 שניות' בכל פלטפורמה — פורמט חוזר וניתן לזכירה; עקביות פורמט בונה subscriber behavior ומגדיל retention (id 251cdb63)",
-    "status": "todo",
-    "revisions": 0,
-    "history": [],
+    "status": "approved",
+    "revisions": 1,
+    "history": [
+      {
+        "date": "2026-09-26",
+        "summary": "נבנה דליבר מוכן לאישור הכולל: DNA מלא של פורמט 'הפקה ב-60 שניות', ספריית 12 פרקים עם concept cards, תסריט מלא לפרק A1, טמפלייטים לכל פלטפורמה (LinkedIn/Instagram/YouTube Shorts) בעברית ואנגלית, לוח שידור ל-12 שבועות, כללי ייצור, ו-KPIs לבדיקה — מבוסס על best practices 2026.",
+        "ready": true
+      }
+    ],
     "created": "2026-09-12",
-    "updated": "2026-09-12",
+    "updated": "2026-09-26",
     "kind": "follower_plan",
     "priority": "follower",
     "channel": "growth"
@@ -18428,11 +18671,17 @@
   "b3c7daa3": {
     "id": "b3c7daa3",
     "title": "שלב 4 (חודשים 6-12) — LinkedIn Newsletter: שגר newsletter עברי חודשי ל-HR/CMO — 'מדריך מנהלים לאירועי חברה'; newsletters מקבלים push notification priority ובונים subscriber base נפרד מ-followers (id 04925d91)",
-    "status": "todo",
-    "revisions": 0,
-    "history": [],
+    "status": "approved",
+    "revisions": 1,
+    "history": [
+      {
+        "date": "2026-09-26",
+        "summary": "הוכנה ערכת השקה מלאה ל-LinkedIn Newsletter העברי של UPE — כולל זהות הניוזלטר, לוח שנה עריכתי של 7 גיליונות (ינואר–יולי), שני גיליונות מלאים ומוכנים לפרסום (#1 ו-#4), checklist הגדרות טכניות, Growth Playbook וקריטריון קבלה מדיד.",
+        "ready": true
+      }
+    ],
     "created": "2026-09-12",
-    "updated": "2026-09-12",
+    "updated": "2026-09-26",
     "kind": "follower_plan",
     "priority": "follower",
     "channel": "growth"
@@ -18440,11 +18689,17 @@
   "d53cb010": {
     "id": "d53cb010",
     "title": "שלב 5 (שנה 2) — שותפויות MICE: cross-promotion עם ספקי מלונות, venues וקייטרינג — גישה לקהלים משלימים של 50K+ followers (id 058304a7)",
-    "status": "todo",
-    "revisions": 0,
-    "history": [],
+    "status": "approved",
+    "revisions": 1,
+    "history": [
+      {
+        "date": "2026-09-26",
+        "summary": "הופקה תוכנית cross-promotion מלאה ומוכנה לביצוע לשלב 5 (שנה 2) הכוללת: מטריצת שותפי MICE מטורגטת (10 שותפים, פוטנציאל 120K+ followers), ערכת פנייה מלאה בעברית ואנגלית (connection notes + 2 follow-ups), 6 פורמטי תוכן co-branded מוכנים לפרסום, לוח זמנים תפעולי ל-90 יום וקריטריון הצלחה מדיד.",
+        "ready": true
+      }
+    ],
     "created": "2026-09-12",
-    "updated": "2026-09-12",
+    "updated": "2026-09-26",
     "kind": "follower_plan",
     "priority": "follower",
     "channel": "growth"
@@ -18452,11 +18707,17 @@
   "3d0441f7": {
     "id": "3d0441f7",
     "title": "שלב 6 (שנה 3) — YouTube compounding: 50+ סרטונים ממוטבי-SEO יוצרים long-tail discovery אורגני; YouTube הוא המנוע שמוביל ל-500K בטווח הארוך עם ROI גבוה ביותר (id 62db6d85)",
-    "status": "todo",
-    "revisions": 0,
-    "history": [],
+    "status": "approved",
+    "revisions": 1,
+    "history": [
+      {
+        "date": "2026-09-26",
+        "summary": "הופק דליברבל מלא ומוכן לאישור של 50 כותרות + תיאורים + CTA + hashtags + tags ממוטבי-SEO long-tail עבור ערוץ YouTube של UPE, מחולקים ל-6 פלייליסטים אסטרטגיים עם מפת מילות מפתח ולוח עלייה לאוויר ל-12 חודשים.",
+        "ready": true
+      }
+    ],
     "created": "2026-09-12",
-    "updated": "2026-09-12",
+    "updated": "2026-09-26",
     "kind": "follower_plan",
     "priority": "follower",
     "channel": "growth"
@@ -18464,7 +18725,7 @@
   "af90d50d": {
     "id": "af90d50d",
     "title": "הפץ את טיוטת lead-source-guidance.md (סטטוס draft_ready, לא הופצה) לנציגי המכירות; הגדר picklist סגור ב-Salesforce עם ערכים: Google Organic, Web (Form), LinkedIn, Advertisement (Paid), Word of Mouth, Existing Customer, Other (חייב הערה); קיים 15 דקות הכשרה; בדוק עמידה בסוף חודש.",
-    "status": "awaiting_approval",
+    "status": "approved",
     "revisions": 1,
     "history": [
       {
@@ -18496,17 +18757,23 @@
     "channel": "leads",
     "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
     "action_key": "salesforce-attribution-fix",
-    "owner": "מנהל מכירות מכין; Alon מאשר; נציגי מכירות מיישמים",
+    "owner": "Marketing Ops מכין; Alon מאשר הפצה; CRM Admin מיישם לאחר אישור",
     "success_metric": "ייחוס לידים: בסיס לא-מיוחס; יעד המדד מקור אמיתי. יש להשוות תקופות תואמות."
   },
   "2769e4c7": {
     "id": "2769e4c7",
     "title": "טיוטת הנחיית ייחוס המקורות כבר הוכנה וממתינה לבדיקה. טרם הופצה; אין ליצור אותה מחדש.",
-    "status": "todo",
-    "revisions": 0,
-    "history": [],
+    "status": "awaiting_approval",
+    "revisions": 1,
+    "history": [
+      {
+        "date": "2026-09-22",
+        "summary": "הוכנה טיוטת הנחיית ייחוס מקורות מלאה ל-UPE הכוללת: מבנה UTM סטנדרטי, רשימת sources סגורה, כללי CRM למניעת דריסה, הנחיות ייחודיות לאירועים אופליין, מודלי attribution, checklist לאימות, וטבלת quick-reference — ממתינה לאישור Alon לפני הפצה לצוות.",
+        "ready": true
+      }
+    ],
     "created": "2026-09-14",
-    "updated": "2026-09-14",
+    "updated": "2026-09-22",
     "kind": "leads_action",
     "priority": "leads",
     "channel": "leads"
@@ -18514,11 +18781,17 @@
   "ba98f3b0": {
     "id": "ba98f3b0",
     "title": "בדוק את המקור של רשומות Web, Advertisement ו-Other מול ראיה מתועדת. שינוי תווית מקור אינו מוסיף ליד לספירה הכוללת.",
-    "status": "todo",
-    "revisions": 0,
-    "history": [],
+    "status": "awaiting_approval",
+    "revisions": 1,
+    "history": [
+      {
+        "date": "2026-09-23",
+        "summary": "הופק פרוטוקול ביקורת מלא ומוכן לשימוש לאימות מקורות לידים Web/Advertisement/Other — כולל עצי החלטה לכל קטגוריה, טבלת Audit Log, כללי Re-labeling, לוח זמנים, והמלצות מניעה — ללא שינוי בספירת הלידים הכוללת.",
+        "ready": true
+      }
+    ],
     "created": "2026-09-14",
-    "updated": "2026-09-14",
+    "updated": "2026-09-23",
     "kind": "leads_action",
     "priority": "leads",
     "channel": "leads"
@@ -18526,11 +18799,17 @@
   "5e8e44d0": {
     "id": "5e8e44d0",
     "title": "הבחן בין Google Organic לתנועה ממומנת באמצעות פרטי הפנייה והייחוס. תשובה כללית ״מצאתי בגוגל״ אינה מספיקה לסיווג כאורגני.",
-    "status": "todo",
-    "revisions": 0,
-    "history": [],
+    "status": "awaiting_approval",
+    "revisions": 1,
+    "history": [
+      {
+        "date": "2026-09-23",
+        "summary": "הופקה מסגרת ייחוס לידים מלאה ל-UPE הכוללת: מטריצת סיווג Organic לעומת Paid, קוד JavaScript לכידת UTM, שדות CRM ו-Workflow אוטומטי, נוהל Drill-Down לנציגים, ו-Naming Convention לקמפיינים — כל זאת על מנת לוודא שתשובת 'מצאתי בגוגל' לא תסווג אוטומטית כ-Organic.",
+        "ready": true
+      }
+    ],
     "created": "2026-09-14",
-    "updated": "2026-09-14",
+    "updated": "2026-09-23",
     "kind": "leads_action",
     "priority": "leads",
     "channel": "leads"
@@ -18538,13 +18817,109 @@
   "d2424296": {
     "id": "d2424296",
     "title": "עקוב אחרי הפניות הקיימות ותעד את שלב הטיפול. אין לשנות רשומות CRM או להפיץ הנחיות ללא ההרשאה המתאימה.",
-    "status": "todo",
-    "revisions": 0,
-    "history": [],
+    "status": "awaiting_approval",
+    "revisions": 1,
+    "history": [
+      {
+        "date": "2026-09-23",
+        "summary": "הוכן מסמך מעקב פניות מלא ל-UPE הכולל: 9 שלבי פייפליין מוגדרים, תבנית תיעוד לכל פנייה, לוח מחוונים, סקריפטים לפולו-אפ, פרוטוקול נרשור, כללי תיעוד ו-KPIs — טיוטה לאישור אלון לפני כל סנכרון עם CRM.",
+        "ready": true
+      }
+    ],
     "created": "2026-09-14",
-    "updated": "2026-09-14",
+    "updated": "2026-09-23",
     "kind": "leads_action",
     "priority": "leads",
     "channel": "leads"
+  },
+  "d758c0c3": {
+    "id": "d758c0c3",
+    "title": "השווה את קליקי האתר ב-GSC בין שתי תקופות באותו אורך, לפי עמוד ושאילתה. תעד פערים לפני החלטה על שינוי תוכן.",
+    "status": "approved",
+    "revisions": 1,
+    "history": [
+      {
+        "date": "2026-09-20",
+        "summary": "הופק מדריך עבודה (SOP) מלא ומוכן לשימוש להשוואת תקופות ב-GSC לפי עמוד ושאילתה, כולל טבלאות תיעוד, עץ החלטה, אזהרות נתונים ל-2026 (AI Overview, באג Impressions), ולוח זמנים — הכל לפני כל שינוי תוכן.",
+        "ready": true
+      }
+    ],
+    "created": "2026-09-20",
+    "updated": "2026-09-20",
+    "kind": "recommendation",
+    "priority": "P1",
+    "channel": "google_organic_geo",
+    "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
+    "action_key": "organic-click-period-review",
+    "owner": "בדיקת נתונים",
+    "success_metric": "קליקים אורגניים/שבוע: בסיס 40; יעד המדד 300. יש להשוות תקופות תואמות."
+  },
+  "ad653159": {
+    "id": "ad653159",
+    "title": "קדם את initiative הקיים (awaiting_approval, id: b7c0af4b): clips של 30-60 שניות מאחורי הקלעים מהפקות קיימות, כיתוב עברי, ללא תסריט — שיתוף מקביל ל-Instagram Reels לחיסכון בתפוקה. הגש 2 טיוטות ראשונות לאישור. P2 כיוון שתנועה/לידים מ-TikTok B2B לא מוכחת עדיין בנתוני UPE.",
+    "status": "approved",
+    "revisions": 1,
+    "history": [
+      {
+        "date": "2026-09-22",
+        "summary": "הוכנו 2 טיוטות TikTok/Reels מוכנות לביצוע עבור initiative b7c0af4b: shot list, כיתוב עברי RTL לכל פלטפורמה, text overlays, הוראות טכניות לשיתוף מקביל — ממתינות לאישור Alon ולבחירת חומר גלם מהארכיב.",
+        "ready": true
+      }
+    ],
+    "created": "2026-09-22",
+    "updated": "2026-09-22",
+    "kind": "recommendation",
+    "priority": "P2",
+    "channel": "tiktok",
+    "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
+    "action_key": "tiktok-behind-scenes-launch",
+    "owner": "מפיק תוכן מכין; Alon מאשר לפני כל פרסום",
+    "success_metric": "נוכחות סושיאל (רצפה): בסיס 15.0; יעד המדד 5. יש להשוות תקופות תואמות."
+  },
+  "d477123a": {
+    "id": "d477123a",
+    "title": "הפעל initiative 7661040d: הכן טיוטות פוסט case-study ו-insight מפרופיל המנכ\"ל — פורמט: carousel קצר (3 שקפים) עם נתון ממשי מהפקה + שאלה לקהל; כל פוסט ממתין לאישור מפורש לפני פרסום; אל תבטיח reach target",
+    "status": "in_progress",
+    "revisions": 1,
+    "history": [
+      {
+        "date": "2026-09-27",
+        "summary": "(no summary)",
+        "ready": false
+      }
+    ],
+    "created": "2026-09-27",
+    "updated": "2026-09-27",
+    "kind": "recommendation",
+    "priority": "P1",
+    "channel": "linkedin",
+    "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
+    "action_key": "linkedin-executive-posting",
+    "owner": "2 מנהלים בכירים מפרסמים; Content lead מכין טיוטות; Alon מאשר כל פוסט",
+    "success_metric": "מונחי מעקב ב-Top-3: בסיס 1; יעד המדד 3. יש להשוות תקופות תואמות.",
+    "consecutive_failures": 0
+  },
+  "8eb50644": {
+    "id": "8eb50644",
+    "title": "הפעל initiative b7c0af4b שמחכה לאישור: 2 סרטוני 'אחורי הקלעים' ראשונים (60 שניות, אותנטי, כיתוב עברי) — שיתוף מקביל ל-Instagram Reels לחיסכון בתפוקה; שני הסרטונים ממתינים לאישור מפורש לפני פרסום",
+    "status": "awaiting_approval",
+    "revisions": 1,
+    "history": [
+      {
+        "date": "2026-09-27",
+        "summary": "הופקו שני תסריטים מלאים ומוכנים לצילום לסרטוני 'אחורי הקלעים' של UPE (60 שניות, ורטיקל 9:16, כיתוב עברי RTL), כולל hook, מונטאז׳, ציטוט אנושי, CTA, קפשן TikTok + Instagram Reels לכל סרטון, מפרט טכני לקרוס-פוסטינג, ולוח פעולות — הכל ממתין לאישור אלון לפני כל פרסום.",
+        "ready": true
+      }
+    ],
+    "created": "2026-09-27",
+    "updated": "2026-09-27",
+    "kind": "recommendation",
+    "priority": "P2",
+    "channel": "tiktok",
+    "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
+    "action_key": "tiktok-launch",
+    "owner": "Content lead מכין תסריטים; Alon מאשר כל סרטון",
+    "success_metric": "נוכחות סושיאל (רצפה): בסיס 16.0; יעד המדד 5. יש להשוות תקופות תואמות.",
+    "consecutive_failures": 0
   }
 }

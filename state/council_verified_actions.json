@@ -49,5 +49,37 @@
       "distributed": false,
       "crm_modified": false
     }
-  ]
+  ],
+  "superseded_initiatives": {
+    "f764f2de": {
+      "reviewed_at": "2026-09-22",
+      "reason": "Legacy request repeats verified service-page audits; third retreat page changed 2026-09-09 and is in cooldown. Search impressions are not search volume.",
+      "evidence": [
+        "state/council_verified_actions.json#page_audits",
+        "state/aeo_shipped_changes.json",
+        "https://github.com/alon3153/uproduction-astro/pull/138"
+      ],
+      "replacement": "Retain live audited content; observe GSC after the latest substantive-change cooldown. No arbitrary word or link counts."
+    },
+    "15fdd24e": {
+      "reviewed_at": "2026-09-22",
+      "reason": "Exact completed seo-service-page-optimization action; existing FAQ and CTA verified.",
+      "evidence": [
+        "state/council_verified_actions.json#page_audits",
+        "state/aeo_shipped_changes.json",
+        "https://github.com/alon3153/uproduction-astro/pull/138"
+      ],
+      "replacement": "Retain live audited content; observe GSC after the latest substantive-change cooldown. No arbitrary word or link counts."
+    },
+    "a78a8d0c": {
+      "reviewed_at": "2026-09-22",
+      "reason": "Repeats completed audits and linking work, and infers conversion from Web lead share without evidence.",
+      "evidence": [
+        "state/council_verified_actions.json#page_audits",
+        "state/aeo_shipped_changes.json",
+        "https://github.com/alon3153/uproduction-astro/pull/138"
+      ],
+      "replacement": "Retain live audited content; observe GSC after the latest substantive-change cooldown. No arbitrary word or link counts."
+    }
+  }
 }

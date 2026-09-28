@@ -28,4 +28,5 @@ jobs:
       - run: >-
           python -m pytest
           tests/test_watchdog_workflows.py tests/test_watchdog_linkedin.py
-          tests/test_publish_approved_linkedin.py tests/test_publish_retry_transient.py -q
+          tests/test_publish_approved_linkedin.py tests/test_publish_retry_transient.py
+          tests/test_social_health_snapshot.py -q

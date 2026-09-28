@@ -1,20 +1,20 @@
 {
-  "updated_at": "2026-09-18",
+  "updated_at": "2026-09-27",
   "scores": {
-    "instagram": 52,
-    "facebook": 28,
+    "instagram": 38,
+    "facebook": 18,
     "tiktok": 10,
-    "linkedin": 35,
-    "youtube": 62,
-    "google_organic_geo": 68,
-    "overall": 72
+    "linkedin": 22,
+    "youtube": 45,
+    "google_organic_geo": 28,
+    "overall": 62
   },
   "recommendations": [
     {
       "category": "gated",
       "priority": "P0",
       "action_key": "salesforce-attribution-fix",
-      "owner": "מנהל מכירות מכין; Alon מאשר; נציגי מכירות מיישמים",
+      "owner": "Marketing Ops מכין; Alon מאשר הפצה; CRM Admin מיישם לאחר אישור",
       "success_metric": "ייחוס לידים: בסיס לא-מיוחס; יעד המדד מקור אמיתי. יש להשוות תקופות תואמות.",
       "evidence": {
         "source": "scorecard",
@@ -26,7 +26,7 @@
       },
       "evidence_url": null,
       "target_url": null,
-      "action": "הפץ את טיוטת lead-source-guidance.md (draft_ready, לא הופצה) לנציגי המכירות; הגדר picklist סגור ב-Salesforce (Google Organic, Web/Form, LinkedIn, Advertisement/Paid, Word of Mouth, Existing Customer, Other+הערת חובה); קיים הכשרה של 15 דקות; בדוק עמידה בסוף החודש.",
+      "action": "הפץ את טיוטת הנחיית הייחוס הקיימת (Uproduction Operations/Marketing-Council/verification-2026-09-13/lead-source-guidance.md) — הטיוטה מוכנה, ממתינה לאישור ולא הופצה; בדוק 8 רשומות עמומות מול ראיה מתועדת לפני שינוי CRM; שינוי תווית אינו מוסיף ליד לספירה",
       "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
       "channel": "leads",
       "status": "candidate",
@@ -35,22 +35,44 @@
     {
       "category": "gated",
       "priority": "P1",
-      "action_key": "linkedin-executive-advocacy",
-      "owner": "מנכ\"ל (פרופיל אישי) מכין טיוטות; Alon מאשר לפני פרסום",
-      "success_metric": "לידים מיוחסים לדיגיטל: בסיס 5; יעד המדד 3. יש להשוות תקופות תואמות.",
+      "action_key": "linkedin-executive-posting",
+      "owner": "2 מנהלים בכירים מפרסמים; Content lead מכין טיוטות; Alon מאשר כל פוסט",
+      "success_metric": "מונחי מעקב ב-Top-3: בסיס 1; יעד המדד 3. יש להשוות תקופות תואמות.",
       "evidence": {
         "source": "scorecard",
-        "metric": "לידים מיוחסים לדיגיטל",
-        "value": 5,
+        "metric": "מונחי מעקב ב-Top-3",
+        "value": 1,
         "target": 3,
+        "unit": "",
+        "status": "❌"
+      },
+      "evidence_url": "https://getshft.com/blog/b2b-linkedin-strategy-2026",
+      "target_url": null,
+      "action": "הפעל initiative 7661040d: הכן טיוטות פוסט case-study ו-insight מפרופיל המנכ\"ל — פורמט: carousel קצר (3 שקפים) עם נתון ממשי מהפקה + שאלה לקהל; כל פוסט ממתין לאישור מפורש לפני פרסום; אל תבטיח reach target",
+      "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
+      "channel": "linkedin",
+      "status": "candidate",
+      "detail": "הצעה לבדיקה על בסיס המדד המתועד; לא בוצע שינוי."
+    },
+    {
+      "category": "gated",
+      "priority": "P2",
+      "action_key": "tiktok-launch",
+      "owner": "Content lead מכין תסריטים; Alon מאשר כל סרטון",
+      "success_metric": "נוכחות סושיאל (רצפה): בסיס 16.0; יעד המדד 5. יש להשוות תקופות תואמות.",
+      "evidence": {
+        "source": "scorecard",
+        "metric": "נוכחות סושיאל (רצפה)",
+        "value": 16.0,
+        "target": 5,
         "unit": "",
         "status": "✅"
       },
-      "evidence_url": "https://heropost.io/linkedin-b2b-marketing-strategy-2026/",
+      "evidence_url": null,
       "target_url": null,
-      "action": "הפעל את המהלך הקיים (in_progress): פרסם 2 פוסטים/שבוע מפרופיל אישי של מנכ\"ל — case-study מהפקה אמיתית + insight תפעולי; דף החברה עושה repost בלבד. השתמש בפורמט קצר (פחות מ-90 שניות לווידאו, text+hook חזק לכתוב). כל פוסט עובר אישור לפני פרסום.",
+      "action": "הפעל initiative b7c0af4b שמחכה לאישור: 2 סרטוני 'אחורי הקלעים' ראשונים (60 שניות, אותנטי, כיתוב עברי) — שיתוף מקביל ל-Instagram Reels לחיסכון בתפוקה; שני הסרטונים ממתינים לאישור מפורש לפני פרסום",
       "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
-      "channel": "linkedin",
+      "channel": "tiktok",
       "status": "candidate",
       "detail": "הצעה לבדיקה על בסיס המדד המתועד; לא בוצע שינוי."
     }
