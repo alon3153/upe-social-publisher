@@ -93,6 +93,15 @@ python3 scripts/publish.py --dry-run
 - `content/images/dayN_*_branded.png` — one image per day (must exist or the day is skipped)
 - `state.json` — per-account publication history (committed back by the workflow)
 
+## Security
+
+Audited against OWASP Top 10:2025 in September 2026 — see
+`docs/security/owasp-top10-2025-audit.md` for the category map, what was fixed and
+what stays open. The hardening is pinned by `tests/test_security_hardening.py` and by
+`supabase/tests/*.test.mjs` (run with
+`node --experimental-strip-types --test supabase/tests/*.test.mjs`).
+Edge-function changes only take effect after the `Deploy Edge Function` workflow runs.
+
 ## Migration history
 
 - Until 2026-05-03: legacy browser-based publisher on a local Mac (`upe` user). Stopped working when LinkedIn + Instagram changed DOM and the Mac user migration broke launchd paths.

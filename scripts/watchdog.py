@@ -11,7 +11,7 @@ Covers the silent-failure gaps that publishing/token jobs don't:
 
 Exit 0 always (a watchdog must not fail the schedule); it reports via email.
 """
-import os, re, sys, glob, datetime, json, urllib.request, urllib.parse, urllib.error
+import os, re, sys, glob, datetime, json, html, urllib.request, urllib.parse, urllib.error
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, ROOT)
@@ -393,11 +393,12 @@ def send_graph(subject, body_text):
                 f"https://login.microsoftonline.com/{tenant}/oauth2/v2.0/token", data=tok,
                 headers={"Content-Type": "application/x-www-form-urlencoded"}), timeout=30) as r:
             access = json.loads(r.read().decode()).get("access_token")
-        html = ('<html dir="rtl" lang="he"><body style="font-family:Arial;direction:rtl;text-align:right;font-size:14px;">'
-                + "".join(f"<div>{l}</div>" for l in body_text.split("\n"))
+        # Issue lines embed DB error text and API responses: escape before mailing.
+        body_html = ('<html dir="rtl" lang="he"><body style="font-family:Arial;direction:rtl;text-align:right;font-size:14px;">'
+                + "".join(f"<div>{html.escape(l, quote=True)}</div>" for l in body_text.split("\n"))
                 + '<p style="color:#FBCE0A;"><b>uproduction</b> watchdog</p></body></html>')
         payload = json.dumps({"message": {"subject": subject,
-            "body": {"contentType": "HTML", "content": html},
+            "body": {"contentType": "HTML", "content": body_html},
             "toRecipients": [{"emailAddress": {"address": TO}}]}, "saveToSentItems": True}).encode()
         with urllib.request.urlopen(urllib.request.Request(
                 f"https://graph.microsoft.com/v1.0/users/{sender}/sendMail", data=payload,
