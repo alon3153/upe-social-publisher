@@ -2,16 +2,26 @@
   "changes": [
     {
       "url": "https://upe.co.il/הפקת-כנסים/",
-      "last_changed": "2026-09-09",
+      "last_changed": "2026-09-21",
       "aliases": [
         "הפקת כנסים בינלאומיים",
         "הפקת כנסים עסקיים בחול",
         "international conference production"
       ],
-      "source": "uproduction-astro service-depth changes published 2026-09-09",
+      "source": "https://github.com/alon3153/uproduction-astro/commit/6f14ec2baca97af39dc9fc47f3749ec86a07092d",
       "intents": [
         "bh_il_kenes"
-      ]
+      ],
+      "change_history": [
+        {
+          "previous_last_changed": "2026-09-09",
+          "previous_source": "uproduction-astro service-depth changes published 2026-09-09",
+          "recorded_at": "2026-09-29"
+        }
+      ],
+      "evaluation_not_before": "2026-10-19",
+      "change_evidence": "User-approved title/H1 and substantive service-copy changes; September28 brand-name substitution reviewed as minor and does not restart the content evaluation.",
+      "last_change_verified_at": "2026-09-29"
     },
     {
       "url": "https://upe.co.il/נופש-חברה-בחול/",
@@ -91,6 +101,21 @@
       "url": "https://upe.co.il/en/international-conference-production-tech-companies/",
       "last_changed": "2026-09-12",
       "source": "uproduction-astro PR135 cumulative-participation correction, published 2026-09-12"
+    },
+    {
+      "url": "https://upe.co.il/בוטיק-מול-סוכנות-אירועים-גדולה/",
+      "change_history": [
+        {
+          "previous_last_changed": null,
+          "previous_source": null,
+          "recorded_at": "2026-09-29"
+        }
+      ],
+      "last_changed": "2026-09-28",
+      "evaluation_not_before": "2026-10-26",
+      "source": "https://github.com/alon3153/uproduction-astro/commit/d2c228031700dab20e18e41bf6541622945d225b",
+      "change_evidence": "Removed unsupported six-continents reach claim from visible company description. Live HTTP200/self-canonical and removal verified September29.",
+      "last_change_verified_at": "2026-09-29"
     }
   ],
   "verified_existing_pages": [
@@ -135,11 +160,21 @@
       "aliases": [
         "boutique vs large"
       ],
-      "source": "uproduction-astro PR135 cumulative-participation correction, published 2026-09-12",
+      "source": "https://github.com/alon3153/uproduction-astro/commit/d2c228031700dab20e18e41bf6541622945d225b",
       "intents": [
         "cmp_vs_bcd"
       ],
-      "last_changed": "2026-09-12"
+      "last_changed": "2026-09-28",
+      "change_history": [
+        {
+          "previous_last_changed": "2026-09-12",
+          "previous_source": "uproduction-astro PR135 cumulative-participation correction, published 2026-09-12",
+          "recorded_at": "2026-09-29"
+        }
+      ],
+      "evaluation_not_before": "2026-10-26",
+      "change_evidence": "Removed unsupported six-continents reach claim from visible company description; factual scope of company offering changed.",
+      "last_change_verified_at": "2026-09-29"
     },
     {
       "url": "https://upe.co.il/בחירת-חברה-להפקת-כנסים/",
@@ -167,5 +202,16 @@
         "evidence": "Live 200/self-canonical; 6 selection criteria, budget/destination/team, boutique-vs-network section and 6 valid FAQPage questions verified 2026-09-13. Content matches master 97a820e 2026-07-30."
       }
     }
-  ]
+  ],
+  "measurement_review_2026_09_29": {
+    "source": "GitHub page history and exact commit diffs; live Hebrew comparison page",
+    "baseline_policy": "Keep September13 baseline immutable as historical evidence. For changed URLs use 28-day pre-window before latest substantive change and final post-window; refresh baseline before claiming comparable lift. Unknown metrics are not zero.",
+    "minor_changes_not_resetting_cooldown": [
+      "September27 removal of redundant numeric company age",
+      "September28 founded-in-2010 to operating-since-2010 phrasing in tech/outside-US pages",
+      "September28 Hebrew conference brand-name normalization"
+    ],
+    "earliest_due_hebrew_comparison": "2026-10-26",
+    "no_gsc_zero_fabricated": true
+  }
 }
