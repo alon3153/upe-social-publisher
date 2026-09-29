@@ -164,3 +164,34 @@ def test_unbranded_mention_rate_reads_the_named_history_date(tmp_path):
     found = unbranded_mention_rates(path, "2026-09-24")
     assert found["pooled_pct"] == 21.9
     assert found["by_engine"] == {"claude": 22}
+
+
+def test_keyword_file_is_the_30_keywords_of_the_2026_09_21_weekly_report():
+    payload = json.loads((ROOT / "scripts" / "organic_seo_weekly_keywords.json").read_text())
+    keywords = payload["keywords"]
+    assert len(keywords) == 30 and len(set(keywords)) == 30
+    assert "2026-09-21" in payload["_note"] and "30 keywords" in payload["_note"]
+    assert "NFC" in payload["_note"]
+    hebrew = [k for k in keywords if any("\u0590" <= ch <= "\u05ff" for ch in k)]
+    assert len(hebrew) == 8
+    assert keywords[:12][0] == "global event production" and keywords[11] == "incentive travel spain"
+    assert keywords[12] == "evento neutro en carbono" and keywords[21] == "coctel corporativo"
+    assert "why uproduction events trust" not in keywords
+    for old in ("אירוע קונספט", "נופש חברה", "כנסים עסקיים", "טיולי תמריץ לחברות"):
+        assert old not in keywords
+    assert seo_geo_source.tracked_keywords({}) == keywords
+
+
+def test_top3_matching_normalizes_case_and_whitespace_in_all_three_languages():
+    raw = _seo()
+    raw["tracked_keywords"] = ["Global Event Production", "congresos híbridos", "טיולי חברה"]
+    raw["sites"][0]["top3_terms"] = [
+        ["  global   EVENT production ", 2.0, 40, 0],
+        ["CONGRESOS\tHÍBRIDOS", 2.5, 12, 0],
+        ["טיולי  חברה", 1.3, 110, 0],
+        ["טיולי חברה יוקרתיים", 1.2, 26, 0],
+    ]
+    parts = seo_geo_source.split_top3(raw)
+    assert parts["tracked"] == 3
+    assert parts["all_queries"] == 4
+    assert seo_geo_source.keyword_key("Congresos  Hi\u0301bridos") == seo_geo_source.keyword_key("congresos híbridos")
