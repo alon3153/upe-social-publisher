@@ -1,20 +1,20 @@
 {
-  "updated_at": "2026-09-28",
+  "updated_at": "2026-09-29",
   "scores": {
-    "instagram": 30,
-    "facebook": 10,
+    "instagram": 38,
+    "facebook": 12,
     "tiktok": 5,
-    "linkedin": 20,
-    "youtube": 45,
-    "google_organic_geo": 22,
-    "overall": 58
+    "linkedin": 42,
+    "youtube": 30,
+    "google_organic_geo": 28,
+    "overall": 55
   },
   "recommendations": [
     {
       "category": "gated",
       "priority": "P0",
       "action_key": "salesforce-attribution-fix",
-      "owner": "מנהל תפעול שיווק מכין; Alon מאשר ומפיץ",
+      "owner": "Ops/RevOps מכין; Alon מאשר הפצה",
       "success_metric": "ייחוס לידים: בסיס לא-מיוחס; יעד המדד מקור אמיתי. יש להשוות תקופות תואמות.",
       "evidence": {
         "source": "scorecard",
@@ -26,7 +26,7 @@
       },
       "evidence_url": null,
       "target_url": null,
-      "action": "הפץ את טיוטת הנחיית ייחוס המקורות הקיימת (path: Uproduction Operations/Marketing-Council/verification-2026-09-13/lead-source-guidance.md) — הנחיה לצוות מכירות לתיעוד מקור ראשוני בשיחת כניסה ולהבחנה בין Web, Web-Organic ו-Advertisement. לא לשנות רשומות CRM רטרואקטיביות ולא לרכז מחדש.",
+      "action": "הפץ את טיוטת הנחיית ייחוס המקורות הקיימת (נמצאת ב-Uproduction Operations/Marketing-Council/verification-2026-09-13/lead-source-guidance.md) לצוות המכירות; הוסף הוראה ספציפית להבחין בין Web (אורגני) לפרסום ממומן בעת יצירת Opportunity — שינוי תווית מקור אינו מוסיף ליד לספירה",
       "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
       "channel": "leads",
       "status": "candidate",
@@ -34,23 +34,23 @@
     },
     {
       "category": "gated",
-      "priority": "P2",
-      "action_key": "tiktok-launch",
-      "owner": "מפיק תוכן מכין; Alon מאשר 2 סרטונים ראשונים לפני פרסום",
-      "success_metric": "נוכחות סושיאל (רצפה): בסיס 16.0; יעד המדד 5. יש להשוות תקופות תואמות.",
+      "priority": "P1",
+      "action_key": "linkedin-executive-posting",
+      "owner": "מנכ\"ל/מנהל בכיר מכין טיוטה; Alon מאשר כל פוסט",
+      "success_metric": "נוכחות סושיאל (רצפה): בסיס 17.0; יעד המדד 5. יש להשוות תקופות תואמות.",
       "evidence": {
         "source": "scorecard",
         "metric": "נוכחות סושיאל (רצפה)",
-        "value": 16.0,
+        "value": 17.0,
         "target": 5,
         "unit": "",
         "status": "✅"
       },
-      "evidence_url": null,
+      "evidence_url": "https://getshft.com/blog/b2b-linkedin-strategy-2026",
       "target_url": null,
-      "action": "הפעל את initiative 8eb50644 (b7c0af4b): הפק 2 סרטוני 'אחורי הקלעים' (60 שניות, אותנטי, כיתוב עברי) ושתפם במקביל ל-Instagram Reels לחיסכון בתפוקה. TikTok פעיל 0 שבועות — pilot של 2 סרטונים קודם לכל התחייבות קצב.",
+      "action": "הפעל initiative d477123a: הכן טיוטת פוסט case-study אחד (carousel 3 שקפים עם נתון ממשי מהפקה) ופוסט insight אחד (וידאו עד 90 שניות עם כתוביות) מפרופיל מנכ\"ל — שניהם ממתינים לאישור מפורש לפני פרסום; עקוב אחרי profile views ממקבלי החלטות בחברות יעד",
       "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
-      "channel": "tiktok",
+      "channel": "linkedin",
       "status": "candidate",
       "detail": "הצעה לבדיקה על בסיס המדד המתועד; לא בוצע שינוי."
     }
