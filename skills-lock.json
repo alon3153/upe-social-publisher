@@ -805,6 +805,12 @@
       "skillPath": "skills/cloud/spanner-basics/SKILL.md",
       "computedHash": "1f30c39e0cdcb8cfaca52646f7e8c453141e36282ea41d799769d4c1a5a998f2"
     },
+    "unslop": {
+      "source": "theclaymethod/unslop",
+      "sourceType": "github",
+      "skillPath": "SKILL.md",
+      "computedHash": "d72fb3b3f3ee5ff8007406910f789a278e6798ee1e90e966723bc5fe112f1bdf"
+    },
     "workload-manager-basics": {
       "source": "google/skills",
       "sourceType": "github",
