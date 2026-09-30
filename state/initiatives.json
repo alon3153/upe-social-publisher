@@ -18757,7 +18757,7 @@
     "channel": "leads",
     "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
     "action_key": "salesforce-attribution-fix",
-    "owner": "Ops/RevOps מכין; Alon מאשר הפצה",
+    "owner": "מנהל CRM מכין; Alon מאשר ומפיץ",
     "success_metric": "ייחוס לידים: בסיס לא-מיוחס; יעד המדד מקור אמיתי. יש להשוות תקופות תואמות."
   },
   "2769e4c7": {
@@ -18924,6 +18924,29 @@
     "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
     "action_key": "tiktok-launch",
     "owner": "מפיק תוכן מכין; Alon מאשר 2 סרטונים ראשונים לפני פרסום",
+    "success_metric": "נוכחות סושיאל (רצפה): בסיס 16.0; יעד המדד 5. יש להשוות תקופות תואמות.",
+    "consecutive_failures": 0
+  },
+  "dc82116b": {
+    "id": "dc82116b",
+    "title": "הפעל initiative b7c0af4b: 3 קליפים 'מאחורי הקלעים' (60 שניות, vertical, ללא תסריט) מהפקה אמיתית בשבוע — פרסם ב-TikTok ושתף ב-Instagram Reels לחיסכון בתפוקה; כל קליפ ממתין לאישור מפורש",
+    "status": "awaiting_approval",
+    "revisions": 1,
+    "history": [
+      {
+        "date": "2026-09-30",
+        "summary": "הופק מסמך הפקה מלא ומוכן לאישור עבור Initiative b7c0af4b: 3 בריפים מפורטים לקליפי 'מאחורי הקלעים' (60 שניות, vertical, ללא תסריט) כולל shot-lists, captions בעברית ואנגלית, מפרט טכני 2026, לוח זמנים שבועי ורשימות אישור לכל קליפ — ממתין לאישור Alon לפני פרסום.",
+        "ready": true
+      }
+    ],
+    "created": "2026-09-30",
+    "updated": "2026-09-30",
+    "kind": "recommendation",
+    "priority": "P1",
+    "channel": "tiktok",
+    "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
+    "action_key": "tiktok-behind-scenes",
+    "owner": "צוות הפקה מצלם; Alon מאשר לפני פרסום",
     "success_metric": "נוכחות סושיאל (רצפה): בסיס 16.0; יעד המדד 5. יש להשוות תקופות תואמות.",
     "consecutive_failures": 0
   }
