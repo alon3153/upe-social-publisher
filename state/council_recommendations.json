@@ -1,20 +1,20 @@
 {
-  "updated_at": "2026-10-01",
+  "updated_at": "2026-10-02",
   "scores": {
-    "instagram": 38,
-    "facebook": 15,
+    "instagram": 28,
+    "facebook": 10,
     "tiktok": 5,
-    "linkedin": 42,
-    "youtube": 30,
+    "linkedin": 38,
+    "youtube": 32,
     "google_organic_geo": 22,
-    "overall": 58
+    "overall": 51
   },
   "recommendations": [
     {
       "category": "gated",
-      "priority": "P1",
+      "priority": "P0",
       "action_key": "linkedin-executive-posting",
-      "owner": "מנכ\"ל + עורך תוכן — טיוטות; אלון מאשר כל פוסט",
+      "owner": "2 מנהלים בכירים מכינים טיוטות; Alon מאשר כל פוסט לפני פרסום",
       "success_metric": "מונחי מעקב ב-Top-3: בסיס 1; יעד המדד 3. יש להשוות תקופות תואמות.",
       "evidence": {
         "source": "scorecard",
@@ -26,7 +26,7 @@
       },
       "evidence_url": "https://www.digitalapplied.com/blog/linkedin-algorithm-2026-engagement-strategy-guide",
       "target_url": null,
-      "action": "הפעל initiative d477123a: הכן 2 טיוטות carousel קצרות (8 שקפים) מפרופיל המנכ\"ל — שקף 1: נתון ממשי מהפקה אחרונה; שקפים 2–7: insight/לקח; שקף 8: שאלה פתוחה ל-CMO/HR; ללא קישור חיצוני בגוף; פרסם רק לאחר אישור מפורש; תייג פוסטים בcohort נפרד למדידה.",
+      "action": "הפעל initiative d477123a: 2 מנהלים בכירים מפרסמים מפרופיל אישי — פורמט מוצע: carousel 7–10 שקפים (case-study אמיתי מהפקה) ופוסט טקסט-ארוך (insight תפעולי); ללא קישורים חיצוניים בגוף הפוסט; כל פוסט ממתין לאישור מפורש",
       "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
       "channel": "linkedin",
       "status": "candidate",
@@ -34,21 +34,21 @@
     },
     {
       "category": "gated",
-      "priority": "P2",
+      "priority": "P1",
       "action_key": "tiktok-behind-scenes",
-      "owner": "מנהל תוכן + צוות שטח — צילום; אלון מאשר כל קליפ",
-      "success_metric": "נוכחות סושיאל (רצפה): בסיס 14.0; יעד המדד 5. יש להשוות תקופות תואמות.",
+      "owner": "צוות הפקה מצלם; Alon מאשר כל קליפ לפני פרסום",
+      "success_metric": "נוכחות סושיאל (רצפה): בסיס 15.0; יעד המדד 5. יש להשוות תקופות תואמות.",
       "evidence": {
         "source": "scorecard",
         "metric": "נוכחות סושיאל (רצפה)",
-        "value": 14.0,
+        "value": 15.0,
         "target": 5,
         "unit": "",
         "status": "✅"
       },
       "evidence_url": null,
       "target_url": null,
-      "action": "הפעל initiative dc82116b: זיהוי הפקה פעילה בשבועיים הקרובים לצילום 3 קליפים vertical (60 שניות, ללא תסריט, כיתוב עברי) — העלה ל-TikTok ושתף ב-Instagram Reels; כל קליפ ממתין לאישור מפורש לפני פרסום.",
+      "action": "הפעל initiative dc82116b: 3 קליפים 'מאחורי הקלעים' (60 שניות, vertical, ללא תסריט, כיתוב עברי) מהפקה אמיתית — פרסם ב-TikTok ושתף ב-Instagram Reels לחיסכון בתפוקה; TikTok לא פעיל עדיין (0 פוסטים, 0 חשיפות), לכן כל reach הוא רווח ניסיוני",
       "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
       "channel": "tiktok",
       "status": "candidate",

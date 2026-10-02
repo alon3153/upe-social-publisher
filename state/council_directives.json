@@ -1,40 +1,57 @@
 {
-  "updated_at": "2026-10-01",
+  "updated_at": "2026-10-02",
   "source": "daily-council",
   "directives": [
     {
       "category": "safe_auto",
-      "action": "הכנת ניתוח ירידת חשיפות YouTube: בדוק אם הדלתא (-1,774 חשיפות) מיוחסת לפוסט בודד מהתקופה הקודמת שגלש מהחלון — אם כן, תעד ממצא וסמן 'cliff מכני', אל תשנה קצב פרסום בהתאם.",
+      "action": "ניסוי תוכן LinkedIn: carousel מסמך (7–10 שקפים) על 'מה CMO צריך לדעת לפני שמפיק כנס בינלאומי' — ללא קישור חיצוני בפוסט עצמו; מטרה: השוואת Depth Score לפוסטים קיימים",
       "detail": "הצעה לבדיקה על בסיס המדד המתועד; לא בוצע שינוי.",
-      "channel": "youtube",
+      "channel": "linkedin",
       "evidence": {
         "source": "scorecard",
-        "metric": "צמיחת חשיפות",
-        "value": -62.9,
-        "target": 10,
-        "unit": "%",
+        "metric": "מונחי מעקב ב-Top-3",
+        "value": 1,
+        "target": 3,
+        "unit": "",
         "status": "❌"
       },
       "status": "candidate",
       "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
-      "success_metric": "צמיחת חשיפות: בסיס -62.9; יעד המדד 10. יש להשוות תקופות תואמות."
+      "success_metric": "מונחי מעקב ב-Top-3: בסיס 1; יעד המדד 3. יש להשוות תקופות תואמות."
     },
     {
       "category": "safe_auto",
-      "action": "הכנת 3 נושאי תוכן TikTok/Reels מ'מאחורי הקלעים' על בסיס initiative dc82116b הממתין לאישור: זיהוי 3 הפקות פעילות בחודש הקרוב עם פוטנציאל vertical video — תיאום לוח צילומים לפני יצירה; לא לפרסם ללא אישור.",
+      "action": "ניסוי זווית תוכן Instagram: השוואה 'מה מבדיל נופש חברה מטיול מאורגן' — פורמט Reel 30-45 שניות, כיתוב עברי, ללא מוזיקה מוגנת; מדוד reach בשבוע הראשון",
       "detail": "הצעה לבדיקה על בסיס המדד המתועד; לא בוצע שינוי.",
-      "channel": "tiktok",
+      "channel": "instagram",
       "evidence": {
         "source": "scorecard",
         "metric": "נוכחות סושיאל (רצפה)",
-        "value": 14.0,
+        "value": 15.0,
         "target": 5,
         "unit": "",
         "status": "✅"
       },
       "status": "candidate",
       "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
-      "success_metric": "נוכחות סושיאל (רצפה): בסיס 14.0; יעד המדד 5. יש להשוות תקופות תואמות."
+      "success_metric": "נוכחות סושיאל (רצפה): בסיס 15.0; יעד המדד 5. יש להשוות תקופות תואמות."
+    },
+    {
+      "category": "safe_auto",
+      "action": "בדוק אם ירידת החשיפות -49.3% מרוכזת ב-YouTube (8 פוסטים שבוע קודם לעומת 4 השבוע, 2308→932 חשיפות) — אם כן, תעד כ'cliff מכני' ואל תשנה אסטרטגיה; אם לא, זהה רשת ספציפית",
+      "detail": "הצעה לבדיקה על בסיס המדד המתועד; לא בוצע שינוי.",
+      "channel": "youtube",
+      "evidence": {
+        "source": "scorecard",
+        "metric": "צמיחת חשיפות",
+        "value": -49.3,
+        "target": 10,
+        "unit": "%",
+        "status": "❌"
+      },
+      "status": "candidate",
+      "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
+      "success_metric": "צמיחת חשיפות: בסיס -49.3; יעד המדד 10. יש להשוות תקופות תואמות."
     }
   ],
   "channel_cadence": {
@@ -43,11 +60,11 @@
       "reason": "מכסה מוצעת לבדיקה בתקופת המדידה; אין מסקנה סיבתית על אלגוריתם."
     },
     "instagram": {
-      "max_posts_per_week": 4,
+      "max_posts_per_week": 5,
       "reason": "מכסה מוצעת לבדיקה בתקופת המדידה; אין מסקנה סיבתית על אלגוריתם."
     },
     "linkedin": {
-      "max_posts_per_week": 3,
+      "max_posts_per_week": 5,
       "reason": "מכסה מוצעת לבדיקה בתקופת המדידה; אין מסקנה סיבתית על אלגוריתם."
     },
     "tiktok": {
@@ -61,8 +78,8 @@
   },
   "channel_priority": [
     "linkedin",
-    "instagram",
     "youtube",
+    "instagram",
     "facebook",
     "tiktok"
   ],
