@@ -18757,7 +18757,7 @@
     "channel": "leads",
     "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
     "action_key": "salesforce-attribution-fix",
-    "owner": "מנהל CRM מכין; Alon מאשר ומפיץ",
+    "owner": "מנהל CRM מכין; Alon מאשר לפני הפצה",
     "success_metric": "ייחוס לידים: בסיס לא-מיוחס; יעד המדד מקור אמיתי. יש להשוות תקופות תואמות."
   },
   "2769e4c7": {
@@ -18900,7 +18900,7 @@
     "channel": "linkedin",
     "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
     "action_key": "linkedin-executive-posting",
-    "owner": "2 מנהלים בכירים מכינים טיוטות; Alon מאשר כל פוסט לפני פרסום",
+    "owner": "מנהל תוכן מכין טיוטות; מנכ\"ל מאשר ומפרסם",
     "success_metric": "מונחי מעקב ב-Top-3: בסיס 1; יעד המדד 3. יש להשוות תקופות תואמות.",
     "consecutive_failures": 0
   },
@@ -18942,12 +18942,12 @@
     "created": "2026-09-30",
     "updated": "2026-09-30",
     "kind": "recommendation",
-    "priority": "P1",
+    "priority": "P2",
     "channel": "tiktok",
     "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
     "action_key": "tiktok-behind-scenes",
-    "owner": "צוות הפקה מצלם; Alon מאשר כל קליפ לפני פרסום",
-    "success_metric": "נוכחות סושיאל (רצפה): בסיס 15.0; יעד המדד 5. יש להשוות תקופות תואמות.",
+    "owner": "צלם/עורך מכין; Alon מאשר כל קליפ",
+    "success_metric": "נוכחות סושיאל (רצפה): בסיס 13.0; יעד המדד 5. יש להשוות תקופות תואמות.",
     "consecutive_failures": 0
   }
 }
