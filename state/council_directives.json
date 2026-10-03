@@ -1,10 +1,27 @@
 {
-  "updated_at": "2026-10-02",
+  "updated_at": "2026-10-03",
   "source": "daily-council",
   "directives": [
     {
       "category": "safe_auto",
-      "action": "ניסוי תוכן LinkedIn: carousel מסמך (7–10 שקפים) על 'מה CMO צריך לדעת לפני שמפיק כנס בינלאומי' — ללא קישור חיצוני בפוסט עצמו; מטרה: השוואת Depth Score לפוסטים קיימים",
+      "action": "ניסוי CTR בכותרות GSC: זהה 5 שאילתות עם >20 חשיפות ו-CTR<1% (avg pos 4–20) בלוח הבקרה, ונסח כותרות חלופיות עם מונח מסחרי בפתיחה ו'curiosity gap' — הצע 2 גרסאות לכל דף לאישור לפני כל שינוי",
+      "detail": "הצעה לבדיקה על בסיס המדד המתועד; לא בוצע שינוי.",
+      "channel": "google_organic",
+      "evidence": {
+        "source": "scorecard",
+        "metric": "קליקים אורגניים/שבוע",
+        "value": 27,
+        "target": 300,
+        "unit": "",
+        "status": "❌"
+      },
+      "status": "candidate",
+      "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
+      "success_metric": "קליקים אורגניים/שבוע: בסיס 27; יעד המדד 300. יש להשוות תקופות תואמות."
+    },
+    {
+      "category": "safe_auto",
+      "action": "ניסוי LinkedIn — פורמט carousel PDF: הכן טיוטת carousel (10 שקפים, עברית) על \"5 שאלות שכל CMO צריך לשאול חברת הפקה\" — שקף ראשון hook טקסטואלי, שקף אחרון CTA; ממתין לאישור לפני פרסום",
       "detail": "הצעה לבדיקה על בסיס המדד המתועד; לא בוצע שינוי.",
       "channel": "linkedin",
       "evidence": {
@@ -21,37 +38,54 @@
     },
     {
       "category": "safe_auto",
-      "action": "ניסוי זווית תוכן Instagram: השוואה 'מה מבדיל נופש חברה מטיול מאורגן' — פורמט Reel 30-45 שניות, כיתוב עברי, ללא מוזיקה מוגנת; מדוד reach בשבוע הראשון",
+      "action": "אסטרטגיית hashtag/נושאים לינקדאין: הגדר 3 נושאי ליבה קבועים (#הפקתאירועים, #incentivetravel, #corporateevents) ותג אחד מצבי לאירוע שוק — קבע בקנון התוכן כהנחיה לצינור האישור",
       "detail": "הצעה לבדיקה על בסיס המדד המתועד; לא בוצע שינוי.",
-      "channel": "instagram",
+      "channel": "linkedin",
       "evidence": {
         "source": "scorecard",
         "metric": "נוכחות סושיאל (רצפה)",
-        "value": 15.0,
+        "value": 13.0,
         "target": 5,
         "unit": "",
         "status": "✅"
       },
       "status": "candidate",
       "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
-      "success_metric": "נוכחות סושיאל (רצפה): בסיס 15.0; יעד המדד 5. יש להשוות תקופות תואמות."
+      "success_metric": "נוכחות סושיאל (רצפה): בסיס 13.0; יעד המדד 5. יש להשוות תקופות תואמות."
     },
     {
       "category": "safe_auto",
-      "action": "בדוק אם ירידת החשיפות -49.3% מרוכזת ב-YouTube (8 פוסטים שבוע קודם לעומת 4 השבוע, 2308→932 חשיפות) — אם כן, תעד כ'cliff מכני' ואל תשנה אסטרטגיה; אם לא, זהה רשת ספציפית",
+      "action": "ניסוי YouTube thumbnails + timestamps: הכן הנחיות עריכה ל-3 הסרטונים הקיימים — הוסף timestamps בתיאור ו-hook בשניות 0-5 של הוידאו; הצג ל-Alon לאישור לפני שינוי",
       "detail": "הצעה לבדיקה על בסיס המדד המתועד; לא בוצע שינוי.",
       "channel": "youtube",
       "evidence": {
         "source": "scorecard",
-        "metric": "צמיחת חשיפות",
-        "value": -49.3,
-        "target": 10,
+        "metric": "נוכחות סושיאל (רצפה)",
+        "value": 13.0,
+        "target": 5,
+        "unit": "",
+        "status": "✅"
+      },
+      "status": "candidate",
+      "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
+      "success_metric": "נוכחות סושיאל (רצפה): בסיס 13.0; יעד המדד 5. יש להשוות תקופות תואמות."
+    },
+    {
+      "category": "safe_auto",
+      "action": "ניסוי Instagram: הכן טיוטת סדרה (3 פוסטים) של \"before & after\" הפקה — תמונה בניית הבמה לעומת שעת האירוע, כיתוב עברי קצר עם hook בשורה 1; ממתין לאישור לפני פרסום",
+      "detail": "הצעה לבדיקה על בסיס המדד המתועד; לא בוצע שינוי.",
+      "channel": "instagram",
+      "evidence": {
+        "source": "scorecard",
+        "metric": "Engagement rate",
+        "value": 0.13,
+        "target": 2.0,
         "unit": "%",
         "status": "❌"
       },
       "status": "candidate",
       "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
-      "success_metric": "צמיחת חשיפות: בסיס -49.3; יעד המדד 10. יש להשוות תקופות תואמות."
+      "success_metric": "Engagement rate: בסיס 0.13; יעד המדד 2.0. יש להשוות תקופות תואמות."
     }
   ],
   "channel_cadence": {
@@ -60,11 +94,11 @@
       "reason": "מכסה מוצעת לבדיקה בתקופת המדידה; אין מסקנה סיבתית על אלגוריתם."
     },
     "instagram": {
-      "max_posts_per_week": 5,
+      "max_posts_per_week": 4,
       "reason": "מכסה מוצעת לבדיקה בתקופת המדידה; אין מסקנה סיבתית על אלגוריתם."
     },
     "linkedin": {
-      "max_posts_per_week": 5,
+      "max_posts_per_week": 4,
       "reason": "מכסה מוצעת לבדיקה בתקופת המדידה; אין מסקנה סיבתית על אלגוריתם."
     },
     "tiktok": {
@@ -72,14 +106,14 @@
       "reason": "מכסה מוצעת לבדיקה בתקופת המדידה; אין מסקנה סיבתית על אלגוריתם."
     },
     "youtube": {
-      "max_posts_per_week": 2,
+      "max_posts_per_week": 1,
       "reason": "מכסה מוצעת לבדיקה בתקופת המדידה; אין מסקנה סיבתית על אלגוריתם."
     }
   },
   "channel_priority": [
     "linkedin",
-    "youtube",
     "instagram",
+    "youtube",
     "facebook",
     "tiktok"
   ],

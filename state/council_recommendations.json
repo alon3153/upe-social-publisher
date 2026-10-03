@@ -1,20 +1,42 @@
 {
-  "updated_at": "2026-10-02",
+  "updated_at": "2026-10-03",
   "scores": {
-    "instagram": 28,
-    "facebook": 10,
+    "instagram": 38,
+    "facebook": 15,
     "tiktok": 5,
-    "linkedin": 38,
-    "youtube": 32,
+    "linkedin": 42,
+    "youtube": 30,
     "google_organic_geo": 22,
-    "overall": 51
+    "overall": 58
   },
   "recommendations": [
     {
       "category": "gated",
       "priority": "P0",
+      "action_key": "salesforce-attribution-fix",
+      "owner": "מנהל CRM מכין; Alon מאשר לפני הפצה",
+      "success_metric": "ייחוס לידים: בסיס לא-מיוחס; יעד המדד מקור אמיתי. יש להשוות תקופות תואמות.",
+      "evidence": {
+        "source": "scorecard",
+        "metric": "ייחוס לידים",
+        "value": "לא-מיוחס",
+        "target": "מקור אמיתי",
+        "unit": "",
+        "status": "❌"
+      },
+      "evidence_url": null,
+      "target_url": null,
+      "action": "הפץ את הנחיית ייחוס המקורות (טיוטה קיימת: lead-source-guidance.md) — בירור רשומות Web, Advertisement, Other מול ראיה מתועדת; שינוי תווית אינו מוסיף לידים אך מאפשר מדידה אמינה של ערוץ אורגני",
+      "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
+      "channel": "leads",
+      "status": "candidate",
+      "detail": "הצעה לבדיקה על בסיס המדד המתועד; לא בוצע שינוי."
+    },
+    {
+      "category": "gated",
+      "priority": "P0",
       "action_key": "linkedin-executive-posting",
-      "owner": "2 מנהלים בכירים מכינים טיוטות; Alon מאשר כל פוסט לפני פרסום",
+      "owner": "מנהל תוכן מכין טיוטות; מנכ\"ל מאשר ומפרסם",
       "success_metric": "מונחי מעקב ב-Top-3: בסיס 1; יעד המדד 3. יש להשוות תקופות תואמות.",
       "evidence": {
         "source": "scorecard",
@@ -24,9 +46,9 @@
         "unit": "",
         "status": "❌"
       },
-      "evidence_url": "https://www.digitalapplied.com/blog/linkedin-algorithm-2026-engagement-strategy-guide",
+      "evidence_url": "https://brixongroup.com/en/linkedin-algorithm-dos-donts-for-organic-visibility-in-the-b2b-sector",
       "target_url": null,
-      "action": "הפעל initiative d477123a: 2 מנהלים בכירים מפרסמים מפרופיל אישי — פורמט מוצע: carousel 7–10 שקפים (case-study אמיתי מהפקה) ופוסט טקסט-ארוך (insight תפעולי); ללא קישורים חיצוניים בגוף הפוסט; כל פוסט ממתין לאישור מפורש",
+      "action": "הפעל initiative linkedin-executive-posting (id d477123a): הכן טיוטות carousel (3 שקפים: נתון מהפקה + לקח + שאלה לקהל) ו-insight (200-400 מילים) מפרופיל מנכ\"ל — כל פוסט ממתין לאישור מפורש; אל תכלול קישורים חיצוניים בגוף הפוסט",
       "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
       "channel": "linkedin",
       "status": "candidate",
@@ -34,21 +56,21 @@
     },
     {
       "category": "gated",
-      "priority": "P1",
+      "priority": "P2",
       "action_key": "tiktok-behind-scenes",
-      "owner": "צוות הפקה מצלם; Alon מאשר כל קליפ לפני פרסום",
-      "success_metric": "נוכחות סושיאל (רצפה): בסיס 15.0; יעד המדד 5. יש להשוות תקופות תואמות.",
+      "owner": "צלם/עורך מכין; Alon מאשר כל קליפ",
+      "success_metric": "נוכחות סושיאל (רצפה): בסיס 13.0; יעד המדד 5. יש להשוות תקופות תואמות.",
       "evidence": {
         "source": "scorecard",
         "metric": "נוכחות סושיאל (רצפה)",
-        "value": 15.0,
+        "value": 13.0,
         "target": 5,
         "unit": "",
         "status": "✅"
       },
       "evidence_url": null,
       "target_url": null,
-      "action": "הפעל initiative dc82116b: 3 קליפים 'מאחורי הקלעים' (60 שניות, vertical, ללא תסריט, כיתוב עברי) מהפקה אמיתית — פרסם ב-TikTok ושתף ב-Instagram Reels לחיסכון בתפוקה; TikTok לא פעיל עדיין (0 פוסטים, 0 חשיפות), לכן כל reach הוא רווח ניסיוני",
+      "action": "הפעל initiative tiktok-behind-scenes (id dc82116b): 3 קליפים 'מאחורי הקלעים' (60 שניות, vertical, ללא תסריט) מהפקה אמיתית — פרסם ב-TikTok ושתף ב-Instagram Reels; כל קליפ ממתין לאישור מפורש לפני פרסום",
       "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
       "channel": "tiktok",
       "status": "candidate",
