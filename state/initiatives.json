@@ -18900,8 +18900,8 @@
     "channel": "linkedin",
     "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
     "action_key": "linkedin-executive-posting",
-    "owner": "מנהל תוכן מכין טיוטות; מנכ\"ל מאשר ומפרסם",
-    "success_metric": "מונחי מעקב ב-Top-3: בסיס 1; יעד המדד 3. יש להשוות תקופות תואמות.",
+    "owner": "מנכ\"ל מפרסם; Alon מאשר כל פוסט לפני פרסום",
+    "success_metric": "Engagement rate: בסיס 0.13; יעד המדד 2.0. יש להשוות תקופות תואמות.",
     "consecutive_failures": 0
   },
   "8eb50644": {
@@ -18942,12 +18942,35 @@
     "created": "2026-09-30",
     "updated": "2026-09-30",
     "kind": "recommendation",
-    "priority": "P2",
+    "priority": "P1",
     "channel": "tiktok",
     "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
     "action_key": "tiktok-behind-scenes",
-    "owner": "צלם/עורך מכין; Alon מאשר כל קליפ",
-    "success_metric": "נוכחות סושיאל (רצפה): בסיס 13.0; יעד המדד 5. יש להשוות תקופות תואמות.",
+    "owner": "צוות תוכן מצלם; Alon מאשר כל קליפ לפני פרסום",
+    "success_metric": "נוכחות סושיאל (רצפה): בסיס 12.0; יעד המדד 5. יש להשוות תקופות תואמות.",
+    "consecutive_failures": 0
+  },
+  "192a6beb": {
+    "id": "192a6beb",
+    "title": "בדוק ב-GSC אילו דפים קיימים מקבלים את החשיפות של 5 מונחי ההזדמנות (הפקת אירועים לחברות pos.15/420, הפקת נופש חברה pos.17/342, הפקות אירועים לחברות pos.19/278, נופש חברה pos.18/214, אירועי קונספט pos.18/185) — אם נמצא פגם מתועד, הכן draft שינוי ממוקד לאישור; אין לבצע שינוי ללא audit מלא",
+    "status": "in_progress",
+    "revisions": 1,
+    "history": [
+      {
+        "date": "2026-10-04",
+        "summary": "(no summary)",
+        "ready": false
+      }
+    ],
+    "created": "2026-10-04",
+    "updated": "2026-10-04",
+    "kind": "recommendation",
+    "priority": "P1",
+    "channel": "google_organic_geo",
+    "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
+    "action_key": "opportunity-page-gsc-audit",
+    "owner": "SEO lead מכין draft; Alon מאשר שינוי לפני פרסום",
+    "success_metric": "מונחי מעקב ב-Top-3: בסיס 1; יעד המדד 3. יש להשוות תקופות תואמות.",
     "consecutive_failures": 0
   }
 }
