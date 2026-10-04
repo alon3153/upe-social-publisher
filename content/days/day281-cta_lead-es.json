@@ -1,0 +1,31 @@
+{
+  "day": 281,
+  "category": "cta_lead",
+  "language": "es",
+  "date": "",
+  "weekday": "",
+  "theme": "What does your next event actually need to achieve?",
+  "linkedin": {
+    "profile": "Uproduction Events (Company Page)",
+    "text": "Antes de hablar de venue, concepto creativo o presupuesto de producción, siempre hacemos la misma pregunta a nuestros clientes:\n\n¿Qué tiene que lograr este evento — en términos medibles?\n\nNo 'que sea memorable'. Eso es el piso mínimo. Hablamos de: ¿qué cambio de comportamiento esperás en el equipo de ventas? ¿Qué mensaje tiene que quedar instalado en los clientes? ¿Qué métrica de retención estás moviendo?\n\nCon más de 1,500 eventos y presencia en más de 130 destinos, esa conversación inicial es la que define si un evento se recuerda o se actúa.\n\nSi estás en etapa de planificación y querés intercambiar perspectivas sobre tu próximo proyecto, escribinos por mensaje directo. Sin agenda comercial — puro intercambio entre profesionales."
+  },
+  "instagram": {
+    "profile": "@uproductionevents",
+    "text": "Más de 1,500 eventos. Más de 130 destinos. Más de 25,000 participantes.\n\nLos que más impacto generan comparten algo en común: empezaron con una pregunta clara sobre el resultado esperado, no solo sobre la experiencia.\n\n¿Estás armando tu próximo evento? Mándanos tu brief — aunque sea en borrador. Te damos una mirada honesta. 👇"
+  },
+  "facebook": {
+    "profile": "Uproduction Events (Page)",
+    "text": "Cada evento que producimos empieza con la misma pregunta: ¿qué tiene que lograr este evento, más allá de una buena producción?\n\nRetención de talento. Alineación del equipo comercial. Reconocimiento. Cultura. Resultados medibles.\n\nCon más de 1,500 eventos en más de 130 destinos, aprendimos que cuando esa respuesta es clara desde el principio, todo lo demás se ordena solo.\n\n¿Estás definiendo un evento para los próximos meses? Escríbenos por mensaje privado o déjanos un comentario. Sin discurso de ventas — solo una conversación útil."
+  },
+  "image_file": "content/images/one_convo_real.jpg",
+  "image_source": "real_archive_reused",
+  "image_credit": "📷 Un fotograma real de una producción de Uproduction",
+  "brand": {
+    "colors": [
+      "#1C1C1C",
+      "#FBCE0A"
+    ],
+    "font": "Comfortaa",
+    "logo": "uproduction_official_logo.png"
+  }
+}
