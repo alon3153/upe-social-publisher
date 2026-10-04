@@ -1,27 +1,27 @@
 {
-  "updated_at": "2026-10-03",
+  "updated_at": "2026-10-04",
   "source": "daily-council",
   "directives": [
     {
       "category": "safe_auto",
-      "action": "ניסוי CTR בכותרות GSC: זהה 5 שאילתות עם >20 חשיפות ו-CTR<1% (avg pos 4–20) בלוח הבקרה, ונסח כותרות חלופיות עם מונח מסחרי בפתיחה ו'curiosity gap' — הצע 2 גרסאות לכל דף לאישור לפני כל שינוי",
+      "action": "ניסוי LinkedIn — פוסט carousel מסמך (PDF 4-6 שקפים) על תובנה ממשית מהפקה אחרונה, ללא קישורים חיצוניים בגוף הפוסט; מדוד dwell-time (saves + reshares) לעומת פוסט תמונה רגיל — 4 שבועות השוואה",
       "detail": "הצעה לבדיקה על בסיס המדד המתועד; לא בוצע שינוי.",
-      "channel": "google_organic",
+      "channel": "linkedin",
       "evidence": {
         "source": "scorecard",
-        "metric": "קליקים אורגניים/שבוע",
-        "value": 27,
-        "target": 300,
-        "unit": "",
+        "metric": "Engagement rate",
+        "value": 0.13,
+        "target": 2.0,
+        "unit": "%",
         "status": "❌"
       },
       "status": "candidate",
       "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
-      "success_metric": "קליקים אורגניים/שבוע: בסיס 27; יעד המדד 300. יש להשוות תקופות תואמות."
+      "success_metric": "Engagement rate: בסיס 0.13; יעד המדד 2.0. יש להשוות תקופות תואמות."
     },
     {
       "category": "safe_auto",
-      "action": "ניסוי LinkedIn — פורמט carousel PDF: הכן טיוטת carousel (10 שקפים, עברית) על \"5 שאלות שכל CMO צריך לשאול חברת הפקה\" — שקף ראשון hook טקסטואלי, שקף אחרון CTA; ממתין לאישור לפני פרסום",
+      "action": "ניסוי תוכן LinkedIn — פוסט טקסט ארוך מפרופיל מנכ\"ל ('שבוע שעבר לקוח שאל אותי...') ללא קישור בגוף, לעומת פוסט company-page; מדד: impressions ו-comments אחרי 72 שעות",
       "detail": "הצעה לבדיקה על בסיס המדד המתועד; לא בוצע שינוי.",
       "channel": "linkedin",
       "evidence": {
@@ -38,54 +38,37 @@
     },
     {
       "category": "safe_auto",
-      "action": "אסטרטגיית hashtag/נושאים לינקדאין: הגדר 3 נושאי ליבה קבועים (#הפקתאירועים, #incentivetravel, #corporateevents) ותג אחד מצבי לאירוע שוק — קבע בקנון התוכן כהנחיה לצינור האישור",
-      "detail": "הצעה לבדיקה על בסיס המדד המתועד; לא בוצע שינוי.",
-      "channel": "linkedin",
-      "evidence": {
-        "source": "scorecard",
-        "metric": "נוכחות סושיאל (רצפה)",
-        "value": 13.0,
-        "target": 5,
-        "unit": "",
-        "status": "✅"
-      },
-      "status": "candidate",
-      "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
-      "success_metric": "נוכחות סושיאל (רצפה): בסיס 13.0; יעד המדד 5. יש להשוות תקופות תואמות."
-    },
-    {
-      "category": "safe_auto",
-      "action": "ניסוי YouTube thumbnails + timestamps: הכן הנחיות עריכה ל-3 הסרטונים הקיימים — הוסף timestamps בתיאור ו-hook בשניות 0-5 של הוידאו; הצג ל-Alon לאישור לפני שינוי",
-      "detail": "הצעה לבדיקה על בסיס המדד המתועד; לא בוצע שינוי.",
-      "channel": "youtube",
-      "evidence": {
-        "source": "scorecard",
-        "metric": "נוכחות סושיאל (רצפה)",
-        "value": 13.0,
-        "target": 5,
-        "unit": "",
-        "status": "✅"
-      },
-      "status": "candidate",
-      "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
-      "success_metric": "נוכחות סושיאל (רצפה): בסיס 13.0; יעד המדד 5. יש להשוות תקופות תואמות."
-    },
-    {
-      "category": "safe_auto",
-      "action": "ניסוי Instagram: הכן טיוטת סדרה (3 פוסטים) של \"before & after\" הפקה — תמונה בניית הבמה לעומת שעת האירוע, כיתוב עברי קצר עם hook בשורה 1; ממתין לאישור לפני פרסום",
+      "action": "ניסוי hashtag מיקוד ב-Instagram — השתמש ב-3-5 hashtags ענפיים ספציפיים (#MICE, #הפקתאירועים, #incentivetravel) בכל פוסט, לעומת ללא hashtags; בדוק reach 2 שבועות",
       "detail": "הצעה לבדיקה על בסיס המדד המתועד; לא בוצע שינוי.",
       "channel": "instagram",
       "evidence": {
         "source": "scorecard",
-        "metric": "Engagement rate",
-        "value": 0.13,
-        "target": 2.0,
+        "metric": "צמיחת חשיפות",
+        "value": -52.0,
+        "target": 10,
         "unit": "%",
         "status": "❌"
       },
       "status": "candidate",
       "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
-      "success_metric": "Engagement rate: בסיס 0.13; יעד המדד 2.0. יש להשוות תקופות תואמות."
+      "success_metric": "צמיחת חשיפות: בסיס -52.0; יעד המדד 10. יש להשוות תקופות תואמות."
+    },
+    {
+      "category": "safe_auto",
+      "action": "YouTube — הכן אסטרטגיית נושאים ל-3 סרטונים בהתבסס על שאלות GSC עם חשיפות גבוהות: 'הפקת אירועים קולינריים' (pos.3, 31 חשיפות), 'נופש חברה לקבוצות גדולות' (pos.3.5, 26 חשיפות), 'מה זה ערב גאלה' (pos.2.7, 28 חשיפות) — טיוטת כותרות ותיאורים בלבד",
+      "detail": "הצעה לבדיקה על בסיס המדד המתועד; לא בוצע שינוי.",
+      "channel": "youtube",
+      "evidence": {
+        "source": "scorecard",
+        "metric": "קליקים אורגניים/שבוע",
+        "value": 27,
+        "target": 300,
+        "unit": "",
+        "status": "❌"
+      },
+      "status": "candidate",
+      "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
+      "success_metric": "קליקים אורגניים/שבוע: בסיס 27; יעד המדד 300. יש להשוות תקופות תואמות."
     }
   ],
   "channel_cadence": {
@@ -106,14 +89,14 @@
       "reason": "מכסה מוצעת לבדיקה בתקופת המדידה; אין מסקנה סיבתית על אלגוריתם."
     },
     "youtube": {
-      "max_posts_per_week": 1,
+      "max_posts_per_week": 2,
       "reason": "מכסה מוצעת לבדיקה בתקופת המדידה; אין מסקנה סיבתית על אלגוריתם."
     }
   },
   "channel_priority": [
+    "youtube",
     "linkedin",
     "instagram",
-    "youtube",
     "facebook",
     "tiktok"
   ],
