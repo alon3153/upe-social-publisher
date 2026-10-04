@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-29",
+  "updated": "2026-10-04",
   "note": "External authority evidence and actions. needs_verification belongs to automation, remains visible in the weekly digest, and is not an overdue founder decision. Review due items in the existing weekly UPE automation; never infer active membership from historical notes alone.",
   "items": [
     {
@@ -79,7 +79,7 @@
       "kind": "directory",
       "reviews": 1,
       "unverifiable": false,
-      "last_check": "2026-09-27",
+      "last_check": "2026-10-04",
       "last_check_result": "blocked",
       "last_check_error_type": "HTTPError"
     },
@@ -210,7 +210,7 @@
       "target_url": "https://www.crunchbase.com/organization/uproduction-events",
       "kind": "entity",
       "unverifiable": false,
-      "last_check": "2026-09-27",
+      "last_check": "2026-10-04",
       "last_check_result": "blocked",
       "last_check_error_type": "HTTPError"
     },
@@ -225,7 +225,7 @@
       "note": "Founder sameAs confirmed in OrganizationSchema.astro in deployed website source (PR137); do not recreate this completed task.",
       "last_reviewed": "2026-09-13",
       "unverifiable": false,
-      "last_check": "2026-09-20",
+      "last_check": "2026-10-04",
       "last_check_result": "cited"
     },
     {
@@ -237,7 +237,7 @@
       "target_url": "https://www.linkedin.com/pulse/how-choose-corporate-event-production-kq3re/",
       "kind": "content",
       "unverifiable": false,
-      "last_check": "2026-09-20",
+      "last_check": "2026-10-04",
       "last_check_result": "cited"
     },
     {
