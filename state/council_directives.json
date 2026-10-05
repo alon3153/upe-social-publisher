@@ -1,63 +1,29 @@
 {
-  "updated_at": "2026-10-04",
+  "updated_at": "2026-10-05",
   "source": "daily-council",
   "directives": [
     {
       "category": "safe_auto",
-      "action": "ניסוי LinkedIn — פוסט carousel מסמך (PDF 4-6 שקפים) על תובנה ממשית מהפקה אחרונה, ללא קישורים חיצוניים בגוף הפוסט; מדוד dwell-time (saves + reshares) לעומת פוסט תמונה רגיל — 4 שבועות השוואה",
+      "action": "ניסוי Instagram — בדוק אם פוסטי שאלה-תשובה (פורמט: שאלת CMO/HR + תשובת UPE ב-3 שורות) מניבים interactions גבוהים יותר מ-0; תעד תוצאות אחרי 2 שבועות.",
       "detail": "הצעה לבדיקה על בסיס המדד המתועד; לא בוצע שינוי.",
-      "channel": "linkedin",
+      "channel": "instagram",
       "evidence": {
         "source": "scorecard",
         "metric": "Engagement rate",
-        "value": 0.13,
+        "value": 0.29,
         "target": 2.0,
         "unit": "%",
         "status": "❌"
       },
       "status": "candidate",
       "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
-      "success_metric": "Engagement rate: בסיס 0.13; יעד המדד 2.0. יש להשוות תקופות תואמות."
+      "success_metric": "Engagement rate: בסיס 0.29; יעד המדד 2.0. יש להשוות תקופות תואמות."
     },
     {
       "category": "safe_auto",
-      "action": "ניסוי תוכן LinkedIn — פוסט טקסט ארוך מפרופיל מנכ\"ל ('שבוע שעבר לקוח שאל אותי...') ללא קישור בגוף, לעומת פוסט company-page; מדד: impressions ו-comments אחרי 72 שעות",
+      "action": "הכן זווית תוכן חדשה לבלוג/LinkedIn — 'שאלות שCMO שואל לפני בחירת חברת הפקה': בנה על 5 מונחי ההזדמנות (הפקת אירועים לחברות, נופש חברה, אירועי קונספט) ותאם לדפים הקיימים; כל פרסום ממתין לאישור.",
       "detail": "הצעה לבדיקה על בסיס המדד המתועד; לא בוצע שינוי.",
-      "channel": "linkedin",
-      "evidence": {
-        "source": "scorecard",
-        "metric": "מונחי מעקב ב-Top-3",
-        "value": 1,
-        "target": 3,
-        "unit": "",
-        "status": "❌"
-      },
-      "status": "candidate",
-      "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
-      "success_metric": "מונחי מעקב ב-Top-3: בסיס 1; יעד המדד 3. יש להשוות תקופות תואמות."
-    },
-    {
-      "category": "safe_auto",
-      "action": "ניסוי hashtag מיקוד ב-Instagram — השתמש ב-3-5 hashtags ענפיים ספציפיים (#MICE, #הפקתאירועים, #incentivetravel) בכל פוסט, לעומת ללא hashtags; בדוק reach 2 שבועות",
-      "detail": "הצעה לבדיקה על בסיס המדד המתועד; לא בוצע שינוי.",
-      "channel": "instagram",
-      "evidence": {
-        "source": "scorecard",
-        "metric": "צמיחת חשיפות",
-        "value": -52.0,
-        "target": 10,
-        "unit": "%",
-        "status": "❌"
-      },
-      "status": "candidate",
-      "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
-      "success_metric": "צמיחת חשיפות: בסיס -52.0; יעד המדד 10. יש להשוות תקופות תואמות."
-    },
-    {
-      "category": "safe_auto",
-      "action": "YouTube — הכן אסטרטגיית נושאים ל-3 סרטונים בהתבסס על שאלות GSC עם חשיפות גבוהות: 'הפקת אירועים קולינריים' (pos.3, 31 חשיפות), 'נופש חברה לקבוצות גדולות' (pos.3.5, 26 חשיפות), 'מה זה ערב גאלה' (pos.2.7, 28 חשיפות) — טיוטת כותרות ותיאורים בלבד",
-      "detail": "הצעה לבדיקה על בסיס המדד המתועד; לא בוצע שינוי.",
-      "channel": "youtube",
+      "channel": "google_organic_geo",
       "evidence": {
         "source": "scorecard",
         "metric": "קליקים אורגניים/שבוע",
@@ -81,11 +47,11 @@
       "reason": "מכסה מוצעת לבדיקה בתקופת המדידה; אין מסקנה סיבתית על אלגוריתם."
     },
     "linkedin": {
-      "max_posts_per_week": 4,
+      "max_posts_per_week": 3,
       "reason": "מכסה מוצעת לבדיקה בתקופת המדידה; אין מסקנה סיבתית על אלגוריתם."
     },
     "tiktok": {
-      "max_posts_per_week": 3,
+      "max_posts_per_week": 0,
       "reason": "מכסה מוצעת לבדיקה בתקופת המדידה; אין מסקנה סיבתית על אלגוריתם."
     },
     "youtube": {
@@ -95,8 +61,8 @@
   },
   "channel_priority": [
     "youtube",
-    "linkedin",
     "instagram",
+    "linkedin",
     "facebook",
     "tiktok"
   ],

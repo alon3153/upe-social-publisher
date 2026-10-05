@@ -1,64 +1,42 @@
 {
-  "updated_at": "2026-10-04",
+  "updated_at": "2026-10-05",
   "scores": {
-    "instagram": 38,
+    "instagram": 32,
     "facebook": 18,
-    "tiktok": 10,
-    "linkedin": 42,
-    "youtube": 45,
+    "tiktok": 5,
+    "linkedin": 28,
+    "youtube": 38,
     "google_organic_geo": 22,
-    "overall": 28
+    "overall": 52
   },
   "recommendations": [
     {
       "category": "gated",
       "priority": "P0",
-      "action_key": "linkedin-executive-posting",
-      "owner": "מנכ\"ל מפרסם; Alon מאשר כל פוסט לפני פרסום",
-      "success_metric": "Engagement rate: בסיס 0.13; יעד המדד 2.0. יש להשוות תקופות תואמות.",
+      "action_key": "salesforce-attribution-fix",
+      "owner": "מנהל מכירות/RevOps מכין; Alon מאשר לפני הפצה",
+      "success_metric": "ייחוס לידים: בסיס לא-מיוחס; יעד המדד מקור אמיתי. יש להשוות תקופות תואמות.",
       "evidence": {
         "source": "scorecard",
-        "metric": "Engagement rate",
-        "value": 0.13,
-        "target": 2.0,
-        "unit": "%",
-        "status": "❌"
-      },
-      "evidence_url": "https://inspiredmarketingb2b.com/b2b-linkedin-strategy-in-2026-what-actually-works-and-what-doesnt/",
-      "target_url": null,
-      "action": "הפעל את initiative d477123a: טיוטות פוסט carousel (3 שקפים, נתון ממשי + שאלה לקהל) מפרופיל מנכ\"ל — כל פוסט ממתין לאישור מפורש לפני פרסום; אין פרסום מדף החברה לפני בדיקת ביצועי הפרופיל האישי",
-      "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
-      "channel": "linkedin",
-      "status": "candidate",
-      "detail": "הצעה לבדיקה על בסיס המדד המתועד; לא בוצע שינוי."
-    },
-    {
-      "category": "gated",
-      "priority": "P1",
-      "action_key": "tiktok-behind-scenes",
-      "owner": "צוות תוכן מצלם; Alon מאשר כל קליפ לפני פרסום",
-      "success_metric": "נוכחות סושיאל (רצפה): בסיס 12.0; יעד המדד 5. יש להשוות תקופות תואמות.",
-      "evidence": {
-        "source": "scorecard",
-        "metric": "נוכחות סושיאל (רצפה)",
-        "value": 12.0,
-        "target": 5,
+        "metric": "ייחוס לידים",
+        "value": "לא-מיוחס",
+        "target": "מקור אמיתי",
         "unit": "",
-        "status": "✅"
+        "status": "❌"
       },
       "evidence_url": null,
       "target_url": null,
-      "action": "הפעל את initiative dc82116b: 3 קליפים 'מאחורי הקלעים' (60 שניות, vertical, ללא תסריט) מהפקה אמיתית — פרסם ב-TikTok ושתף ב-Instagram Reels לחיסכון בתפוקה; כל קליפ ממתין לאישור מפורש",
+      "action": "הפץ את טיוטת הנחיית ייחוס המקורות הקיימת (lead-source-guidance.md, הוכנה 2026-09-13, לא הופצה) — עדכן שדה LeadSource ב-Salesforce לפי ראיה מתועדת בלבד; בדוק 9 רשומות עמומות מול פרטי הפנייה; תעד שינויים. אין ליצור הנחיה חדשה.",
       "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
-      "channel": "tiktok",
+      "channel": "leads",
       "status": "candidate",
       "detail": "הצעה לבדיקה על בסיס המדד המתועד; לא בוצע שינוי."
     },
     {
       "category": "gated",
-      "priority": "P1",
+      "priority": "P0",
       "action_key": "opportunity-page-gsc-audit",
-      "owner": "SEO lead מכין draft; Alon מאשר שינוי לפני פרסום",
+      "owner": "SEO lead מבצע audit; Alon מאשר כל שינוי תוכן",
       "success_metric": "מונחי מעקב ב-Top-3: בסיס 1; יעד המדד 3. יש להשוות תקופות תואמות.",
       "evidence": {
         "source": "scorecard",
@@ -68,11 +46,55 @@
         "unit": "",
         "status": "❌"
       },
-      "evidence_url": null,
+      "evidence_url": "https://www.tenspeed.io/blog/b2b-seo-strategies",
       "target_url": "https://upe.co.il/הפקת-אירועים-לחברות/",
-      "action": "בדוק ב-GSC אילו דפים קיימים מקבלים את החשיפות של 5 מונחי ההזדמנות (הפקת אירועים לחברות pos.15/420, הפקת נופש חברה pos.17/342, הפקות אירועים לחברות pos.19/278, נופש חברה pos.18/214, אירועי קונספט pos.18/185) — אם נמצא פגם מתועד, הכן draft שינוי ממוקד לאישור; אין לבצע שינוי ללא audit מלא",
+      "action": "השלם את audit הדפים הקיים (initiative 192a6beb, in_progress): בדוק ב-GSC אילו דפים קולטים חשיפות ל-5 מונחי ההזדמנות; אם נמצא פגם מתועד בדף שאינו בקולדאון — הכן draft ממוקד לאישור. אין לשנות דפים בקולדאון (נופש-חברה-בחול עד 07/10, הפקת-כנסים עד 19/10).",
       "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
       "channel": "google_organic_geo",
+      "status": "candidate",
+      "detail": "הצעה לבדיקה על בסיס המדד המתועד; לא בוצע שינוי."
+    },
+    {
+      "category": "gated",
+      "priority": "P1",
+      "action_key": "linkedin-executive-posting",
+      "owner": "מנכ\"ל מספק תוכן; עורך/מנהל שיווק מכין טיוטה; Alon מאשר לפני פרסום",
+      "success_metric": "מונחי מעקב ב-Top-3: בסיס 1; יעד המדד 3. יש להשוות תקופות תואמות.",
+      "evidence": {
+        "source": "scorecard",
+        "metric": "מונחי מעקב ב-Top-3",
+        "value": 1,
+        "target": 3,
+        "unit": "",
+        "status": "❌"
+      },
+      "evidence_url": "https://www.digitalapplied.com/blog/linkedin-algorithm-2026-engagement-strategy-guide",
+      "target_url": null,
+      "action": "הפעל initiative d477123a: הכן טיוטות carousel (3 שקפים, נתון אמיתי מהפקה + שאלה לקהל) ופוסט טקסטואלי עם תובנה ספציפית מפרופיל מנכ\"ל — פרסום רק אחרי אישור מפורש. מדד impressions/post ו-saves בנפרד מדף החברה.",
+      "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
+      "channel": "linkedin",
+      "status": "candidate",
+      "detail": "הצעה לבדיקה על בסיס המדד המתועד; לא בוצע שינוי."
+    },
+    {
+      "category": "gated",
+      "priority": "P2",
+      "action_key": "tiktok-behind-scenes",
+      "owner": "מפיק תוכן מצלם; Alon מאשר לפני פרסום",
+      "success_metric": "נוכחות סושיאל (רצפה): בסיס 10.0; יעד המדד 5. יש להשוות תקופות תואמות.",
+      "evidence": {
+        "source": "scorecard",
+        "metric": "נוכחות סושיאל (רצפה)",
+        "value": 10.0,
+        "target": 5,
+        "unit": "",
+        "status": "✅"
+      },
+      "evidence_url": null,
+      "target_url": null,
+      "action": "הפעל initiative dc82116b: 3 קליפים 'מאחורי הקלעים' (60 שניות, vertical, ללא תסריט) מהפקה אמיתית — פרסם ב-TikTok ושתף ב-Instagram Reels לחיסכון בתפוקה; כל קליפ ממתין לאישור מפורש. אין לפרסם ללא אישור.",
+      "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
+      "channel": "tiktok",
       "status": "candidate",
       "detail": "הצעה לבדיקה על בסיס המדד המתועד; לא בוצע שינוי."
     }
