@@ -17970,21 +17970,29 @@
   "b7c0af4b": {
     "id": "b7c0af4b",
     "title": "הפעל TikTok לראשונה: 3 Reels/שבוע של '60 שניות מאחורי הקלעים' בהפקות — בלי תסריט, אותנטי, עם כיתוב עברי; שתף מקביל ב-Instagram Reels לחיסכון בתפוקה",
-    "status": "awaiting_approval",
+    "status": "archived",
     "revisions": 1,
     "history": [
       {
         "date": "2026-09-11",
         "summary": "הופק פלייבוק TikTok מלא ומוכן לשימוש עבור UPE הכולל 12 סקריפטים לצילום (שבועות 1–4), כיתובים נפרדים לTikTok ולInstagram Reels, SOP קרוס-פוסטינג, כללי הפקה אנטי-תסריט, לוח שידורים חודשי ו-KPIs למדידה.",
         "ready": true
+      },
+      {
+        "date": "2026-10-06",
+        "summary": "merged into dc82116b (marketing council dedupe, X2)",
+        "ready": false
       }
     ],
     "created": "2026-09-11",
-    "updated": "2026-09-11",
+    "updated": "2026-10-06",
     "kind": "recommendation",
     "priority": "P2",
     "channel": "tiktok",
-    "expected_impact": "TikTok בישראל 2026 בעל פוטנציאל B2B גבוה לsocial proof; short-form authentic content מושך decision-makers צעירים; cross-posting ל-Instagram מכפיל ערך ביחידת מאמץ"
+    "expected_impact": "TikTok בישראל 2026 בעל פוטנציאל B2B גבוה לsocial proof; short-form authentic content מושך decision-makers צעירים; cross-posting ל-Instagram מכפיל ערך ביחידת מאמץ",
+    "status_before_merge": "awaiting_approval",
+    "merged_into": "dc82116b",
+    "merged_at": "2026-10-06"
   },
   "fc7f6750": {
     "id": "fc7f6750",
@@ -18471,17 +18479,38 @@
         "date": "2026-09-12",
         "summary": "הופקו שני קבצים מוכנים לאישור: llms-full.txt מעודכן עם נתוני UPE המדויקים בפורמט Q&A (1,500+ אירועים, 130+ יעדים, 25,000+ משתתפים מאז 2010), ו-3 בלוקי FAQPage JSON-LD לדפי כנסים, incentive travel וגיבוש — כולל צ'קליסט implementation ל-Alon.",
         "ready": true
+      },
+      {
+        "date": "2026-09-22",
+        "summary": "הופק קובץ llms-full.txt מלא וקובץ llms.txt תמציתי עבור UPE, הכוללים נתונים קנוניים מדויקים (1,500+ אירועים, 130+ יעדים, 25,000+ משתתפים, 2010), תיאורי שירותים, FAQ למנועי AI, והנחיות יישום טכני — טיוטה לאישור Alon בלבד.",
+        "ready": true,
+        "merged_from": "c193c607"
       }
     ],
     "created": "2026-09-12",
-    "updated": "2026-09-12",
+    "updated": "2026-10-06",
     "kind": "recommendation",
     "priority": "P1",
     "channel": "google_organic_geo",
     "expected_impact": "AI citations כבר מחזירות UPE; תיקון הנתונים השגויים ישפר אמינות ו-conversion rate בתוך תשובות AI שמשפיעות ישירות על decision-makers",
     "action_key": "aeo-llms-txt-update",
     "owner": "מנהל שיווק מכין; Alon מאשר נתונים לפני commit",
-    "success_metric": "בסיס: cited=4/7 engines, נתוני חברה שגויים (200/20) בתשובות AI; יעד: 0 אזכורים עם נתונים שגויים, cited rate ≥5/7 תוך 45 יום"
+    "success_metric": "בסיס: cited=4/7 engines, נתוני חברה שגויים (200/20) בתשובות AI; יעד: 0 אזכורים עם נתונים שגויים, cited rate ≥5/7 תוך 45 יום",
+    "merged_from": [
+      {
+        "id": "c193c607",
+        "merged_at": "2026-10-06",
+        "title": "עדכון llms-full.txt עם נתונים מדויקים: 1,500+ אירועים, 130+ יעדים, 25,000+ משתתפים — AI citations כבר מייצרות demand; תיקון נתונים שגויים (200/20) מונע אובדן אמון אצל decision-makers שבודקים ב-AI (id 76ad88de)",
+        "status": "awaiting_approval",
+        "kind": "leads_action",
+        "priority": "leads",
+        "channel": "leads",
+        "revisions": 1,
+        "created": "2026-09-12",
+        "updated": "2026-09-22",
+        "deliverable": "deliverables/c193c607.md"
+      }
+    ]
   },
   "0a16e409": {
     "id": "0a16e409",
@@ -18543,7 +18572,7 @@
   "7661040d": {
     "id": "7661040d",
     "title": "LinkedIn executive posting: פוסט case-study אחד + פוסט insight אחד/שבוע מפרופיל מנכ\"ל — B2B ישראלי מחליט על סמך מוניטין אישי; lead מ-LinkedIn מגיע עם trust מובנה (id 341e6ab8)",
-    "status": "awaiting_approval",
+    "status": "archived",
     "revisions": 3,
     "history": [
       {
@@ -18560,13 +18589,21 @@
         "date": "2026-09-24",
         "summary": "שופר הדרפט מ-v2 ל-v3: הוסלמה הרציונל האסטרטגי עם נתוני 2026 (trust barometer, depth score, comment weight, sequence effect), פוסט #1 חודד עם ציר זמן קונקרטי (4→18→36→48ש'), פוסט #2 הושלם ב-framework שלושת-הרמות כ-saves hook ו-DM funnel קונקרטי, נוסף לוח פרסום שבועי, ונוספו 6 שאלות פתוחות ו-acceptance criterion מדיד.",
         "ready": true
+      },
+      {
+        "date": "2026-10-06",
+        "summary": "merged into d477123a (marketing council dedupe, X2)",
+        "ready": false
       }
     ],
     "created": "2026-09-12",
-    "updated": "2026-09-24",
+    "updated": "2026-10-06",
     "kind": "leads_action",
     "priority": "leads",
-    "channel": "leads"
+    "channel": "leads",
+    "status_before_merge": "awaiting_approval",
+    "merged_into": "d477123a",
+    "merged_at": "2026-10-06"
   },
   "51595e3f": {
     "id": "51595e3f",
@@ -18589,20 +18626,28 @@
   "c193c607": {
     "id": "c193c607",
     "title": "עדכון llms-full.txt עם נתונים מדויקים: 1,500+ אירועים, 130+ יעדים, 25,000+ משתתפים — AI citations כבר מייצרות demand; תיקון נתונים שגויים (200/20) מונע אובדן אמון אצל decision-makers שבודקים ב-AI (id 76ad88de)",
-    "status": "awaiting_approval",
+    "status": "archived",
     "revisions": 1,
     "history": [
       {
         "date": "2026-09-22",
         "summary": "הופק קובץ llms-full.txt מלא וקובץ llms.txt תמציתי עבור UPE, הכוללים נתונים קנוניים מדויקים (1,500+ אירועים, 130+ יעדים, 25,000+ משתתפים, 2010), תיאורי שירותים, FAQ למנועי AI, והנחיות יישום טכני — טיוטה לאישור Alon בלבד.",
         "ready": true
+      },
+      {
+        "date": "2026-10-06",
+        "summary": "merged into 1869d5aa (marketing council dedupe, X2)",
+        "ready": false
       }
     ],
     "created": "2026-09-12",
-    "updated": "2026-09-22",
+    "updated": "2026-10-06",
     "kind": "leads_action",
     "priority": "leads",
-    "channel": "leads"
+    "channel": "leads",
+    "status_before_merge": "awaiting_approval",
+    "merged_into": "1869d5aa",
+    "merged_at": "2026-10-06"
   },
   "411f35dc": {
     "id": "411f35dc",
@@ -18883,6 +18928,24 @@
     "revisions": 2,
     "history": [
       {
+        "date": "2026-09-22",
+        "summary": "(no summary)",
+        "ready": false,
+        "merged_from": "7661040d"
+      },
+      {
+        "date": "2026-09-23",
+        "summary": "(no summary)",
+        "ready": false,
+        "merged_from": "7661040d"
+      },
+      {
+        "date": "2026-09-24",
+        "summary": "שופר הדרפט מ-v2 ל-v3: הוסלמה הרציונל האסטרטגי עם נתוני 2026 (trust barometer, depth score, comment weight, sequence effect), פוסט #1 חודד עם ציר זמן קונקרטי (4→18→36→48ש'), פוסט #2 הושלם ב-framework שלושת-הרמות כ-saves hook ו-DM funnel קונקרטי, נוסף לוח פרסום שבועי, ונוספו 6 שאלות פתוחות ו-acceptance criterion מדיד.",
+        "ready": true,
+        "merged_from": "7661040d"
+      },
+      {
         "date": "2026-09-27",
         "summary": "(no summary)",
         "ready": false
@@ -18894,7 +18957,7 @@
       }
     ],
     "created": "2026-09-27",
-    "updated": "2026-09-28",
+    "updated": "2026-10-06",
     "kind": "recommendation",
     "priority": "P1",
     "channel": "linkedin",
@@ -18902,7 +18965,22 @@
     "action_key": "linkedin-executive-posting",
     "owner": "מנכ\"ל מספק תוכן; עורך/מנהל שיווק מכין טיוטה; Alon מאשר לפני פרסום",
     "success_metric": "מונחי מעקב ב-Top-3: בסיס 1; יעד המדד 3. יש להשוות תקופות תואמות.",
-    "consecutive_failures": 0
+    "consecutive_failures": 0,
+    "merged_from": [
+      {
+        "id": "7661040d",
+        "merged_at": "2026-10-06",
+        "title": "LinkedIn executive posting: פוסט case-study אחד + פוסט insight אחד/שבוע מפרופיל מנכ\"ל — B2B ישראלי מחליט על סמך מוניטין אישי; lead מ-LinkedIn מגיע עם trust מובנה (id 341e6ab8)",
+        "status": "awaiting_approval",
+        "kind": "leads_action",
+        "priority": "leads",
+        "channel": "leads",
+        "revisions": 3,
+        "created": "2026-09-12",
+        "updated": "2026-09-24",
+        "deliverable": "deliverables/7661040d.md"
+      }
+    ]
   },
   "8eb50644": {
     "id": "8eb50644",
@@ -18934,13 +19012,19 @@
     "revisions": 1,
     "history": [
       {
+        "date": "2026-09-11",
+        "summary": "הופק פלייבוק TikTok מלא ומוכן לשימוש עבור UPE הכולל 12 סקריפטים לצילום (שבועות 1–4), כיתובים נפרדים לTikTok ולInstagram Reels, SOP קרוס-פוסטינג, כללי הפקה אנטי-תסריט, לוח שידורים חודשי ו-KPIs למדידה.",
+        "ready": true,
+        "merged_from": "b7c0af4b"
+      },
+      {
         "date": "2026-09-30",
         "summary": "הופק מסמך הפקה מלא ומוכן לאישור עבור Initiative b7c0af4b: 3 בריפים מפורטים לקליפי 'מאחורי הקלעים' (60 שניות, vertical, ללא תסריט) כולל shot-lists, captions בעברית ואנגלית, מפרט טכני 2026, לוח זמנים שבועי ורשימות אישור לכל קליפ — ממתין לאישור Alon לפני פרסום.",
         "ready": true
       }
     ],
     "created": "2026-09-30",
-    "updated": "2026-09-30",
+    "updated": "2026-10-06",
     "kind": "recommendation",
     "priority": "P2",
     "channel": "tiktok",
@@ -18948,7 +19032,23 @@
     "action_key": "tiktok-behind-scenes",
     "owner": "מפיק תוכן מצלם; Alon מאשר לפני פרסום",
     "success_metric": "נוכחות סושיאל (רצפה): בסיס 10.0; יעד המדד 5. יש להשוות תקופות תואמות.",
-    "consecutive_failures": 0
+    "consecutive_failures": 0,
+    "merged_from": [
+      {
+        "id": "b7c0af4b",
+        "merged_at": "2026-10-06",
+        "title": "הפעל TikTok לראשונה: 3 Reels/שבוע של '60 שניות מאחורי הקלעים' בהפקות — בלי תסריט, אותנטי, עם כיתוב עברי; שתף מקביל ב-Instagram Reels לחיסכון בתפוקה",
+        "status": "awaiting_approval",
+        "kind": "recommendation",
+        "priority": "P2",
+        "channel": "tiktok",
+        "expected_impact": "TikTok בישראל 2026 בעל פוטנציאל B2B גבוה לsocial proof; short-form authentic content מושך decision-makers צעירים; cross-posting ל-Instagram מכפיל ערך ביחידת מאמץ",
+        "revisions": 1,
+        "created": "2026-09-11",
+        "updated": "2026-09-11",
+        "deliverable": "deliverables/b7c0af4b.md"
+      }
+    ]
   },
   "192a6beb": {
     "id": "192a6beb",

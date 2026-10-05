@@ -80,6 +80,36 @@
         "https://github.com/alon3153/uproduction-astro/pull/138"
       ],
       "replacement": "Retain live audited content; observe GSC after the latest substantive-change cooldown. No arbitrary word or link counts."
+    },
+    "7661040d": {
+      "reviewed_at": "2026-10-06",
+      "reason": "Duplicate initiative merged into d477123a (marketing council X2; merge rules approved by DATA). History kept on both records; see state/initiatives.json merged_into/merged_from.",
+      "evidence": [
+        "state/initiatives.json#7661040d",
+        "state/initiatives.json#d477123a",
+        "deliverables/7661040d.md"
+      ],
+      "replacement": "d477123a"
+    },
+    "b7c0af4b": {
+      "reviewed_at": "2026-10-06",
+      "reason": "Duplicate initiative merged into dc82116b (marketing council X2; merge rules approved by DATA). History kept on both records; see state/initiatives.json merged_into/merged_from.",
+      "evidence": [
+        "state/initiatives.json#b7c0af4b",
+        "state/initiatives.json#dc82116b",
+        "deliverables/b7c0af4b.md"
+      ],
+      "replacement": "dc82116b"
+    },
+    "c193c607": {
+      "reviewed_at": "2026-10-06",
+      "reason": "Duplicate initiative merged into 1869d5aa (marketing council X2; merge rules approved by DATA). History kept on both records; see state/initiatives.json merged_into/merged_from.",
+      "evidence": [
+        "state/initiatives.json#c193c607",
+        "state/initiatives.json#1869d5aa",
+        "deliverables/c193c607.md"
+      ],
+      "replacement": "1869d5aa"
     }
   }
 }
