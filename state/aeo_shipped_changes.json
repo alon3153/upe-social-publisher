@@ -116,6 +116,14 @@
       "source": "https://github.com/alon3153/uproduction-astro/commit/d2c228031700dab20e18e41bf6541622945d225b",
       "change_evidence": "Removed unsupported six-continents reach claim from visible company description. Live HTTP200/self-canonical and removal verified September29.",
       "last_change_verified_at": "2026-09-29"
+    },
+    {
+      "url": "https://upe.co.il/en/choosing-global-corporate-event-conference-production-company/",
+      "last_changed": "2026-09-23",
+      "evaluation_not_before": "2026-10-21",
+      "source": "https://github.com/alon3153/uproduction-astro/commit/265e340ae466e242307012e1af6c0d7ac2359214",
+      "last_change_verified_at": "2026-10-06",
+      "change_evidence": "Alon-approved AEO opening changed September23; later numeric-age/founding-wording corrections are minor. HTTP200 and self-canonical verified October6."
     }
   ],
   "verified_existing_pages": [
@@ -213,5 +221,12 @@
     ],
     "earliest_due_hebrew_comparison": "2026-10-26",
     "no_gsc_zero_fabricated": true
+  },
+  "gsc_page_review_automation": {
+    "verified_at": "2026-10-06",
+    "source": "https://github.com/alon3153/uproduction-astro/pull/189",
+    "config": "uproduction-astro/content-ops/gsc-page-reviews.json",
+    "report": "uproduction-astro/reports/gsc-page-reviews-latest.json",
+    "note": "Matched 28-day pre/post windows; final-data guard, Unicode/encoded exact URL match, stop on unreviewed source commit. Existing weekly workflow only. No claims of lift until measured."
   }
 }
