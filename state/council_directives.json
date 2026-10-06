@@ -1,40 +1,57 @@
 {
-  "updated_at": "2026-10-05",
+  "updated_at": "2026-10-06",
   "source": "daily-council",
   "directives": [
     {
       "category": "safe_auto",
-      "action": "ניסוי Instagram — בדוק אם פוסטי שאלה-תשובה (פורמט: שאלת CMO/HR + תשובת UPE ב-3 שורות) מניבים interactions גבוהים יותר מ-0; תעד תוצאות אחרי 2 שבועות.",
+      "action": "בדיקת מקור הירידה בחשיפות: ייחס את 58% הירידה לפי רשת — האם YouTube/Instagram בודד גלל החוצה מהחלון? תעד ממצא לפני הסקת מסקנה מערכתית.",
+      "detail": "הצעה לבדיקה על בסיס המדד המתועד; לא בוצע שינוי.",
+      "channel": "youtube",
+      "evidence": {
+        "source": "scorecard",
+        "metric": "צמיחת חשיפות",
+        "value": -58.1,
+        "target": 10,
+        "unit": "%",
+        "status": "❌"
+      },
+      "status": "candidate",
+      "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
+      "success_metric": "צמיחת חשיפות: בסיס -58.1; יעד המדד 10. יש להשוות תקופות תואמות."
+    },
+    {
+      "category": "safe_auto",
+      "action": "אסטרטגיית תוכן LinkedIn לפרופיל מנכ\"ל: הכן 3 טיוטות פוסט carousel (3 שקפים, native PDF) עם case-study + נתון מדיד מהפקה אמיתית — ללא קישור חיצוני בגוף הפוסט.",
+      "detail": "הצעה לבדיקה על בסיס המדד המתועד; לא בוצע שינוי.",
+      "channel": "linkedin",
+      "evidence": {
+        "source": "scorecard",
+        "metric": "מונחי מעקב ב-Top-3",
+        "value": 1,
+        "target": 3,
+        "unit": "",
+        "status": "❌"
+      },
+      "status": "candidate",
+      "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
+      "success_metric": "מונחי מעקב ב-Top-3: בסיס 1; יעד המדד 3. יש להשוות תקופות תואמות."
+    },
+    {
+      "category": "safe_auto",
+      "action": "הנחיית hashtag ותוכן Instagram: השתמש ב-3-5 תגיות תפקיד-ממוקדות (CMO, HR, event-lead) + מונח שירות עברי אחד; בדוק ניסיונית פוסט Reel קצר (30-45 שניות) עם כתוביות לעומת תמונת carousel.",
       "detail": "הצעה לבדיקה על בסיס המדד המתועד; לא בוצע שינוי.",
       "channel": "instagram",
       "evidence": {
         "source": "scorecard",
         "metric": "Engagement rate",
-        "value": 0.29,
+        "value": 0.11,
         "target": 2.0,
         "unit": "%",
         "status": "❌"
       },
       "status": "candidate",
       "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
-      "success_metric": "Engagement rate: בסיס 0.29; יעד המדד 2.0. יש להשוות תקופות תואמות."
-    },
-    {
-      "category": "safe_auto",
-      "action": "הכן זווית תוכן חדשה לבלוג/LinkedIn — 'שאלות שCMO שואל לפני בחירת חברת הפקה': בנה על 5 מונחי ההזדמנות (הפקת אירועים לחברות, נופש חברה, אירועי קונספט) ותאם לדפים הקיימים; כל פרסום ממתין לאישור.",
-      "detail": "הצעה לבדיקה על בסיס המדד המתועד; לא בוצע שינוי.",
-      "channel": "google_organic_geo",
-      "evidence": {
-        "source": "scorecard",
-        "metric": "קליקים אורגניים/שבוע",
-        "value": 27,
-        "target": 300,
-        "unit": "",
-        "status": "❌"
-      },
-      "status": "candidate",
-      "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
-      "success_metric": "קליקים אורגניים/שבוע: בסיס 27; יעד המדד 300. יש להשוות תקופות תואמות."
+      "success_metric": "Engagement rate: בסיס 0.11; יעד המדד 2.0. יש להשוות תקופות תואמות."
     }
   ],
   "channel_cadence": {
@@ -51,7 +68,7 @@
       "reason": "מכסה מוצעת לבדיקה בתקופת המדידה; אין מסקנה סיבתית על אלגוריתם."
     },
     "tiktok": {
-      "max_posts_per_week": 0,
+      "max_posts_per_week": 3,
       "reason": "מכסה מוצעת לבדיקה בתקופת המדידה; אין מסקנה סיבתית על אלגוריתם."
     },
     "youtube": {
@@ -60,8 +77,8 @@
     }
   },
   "channel_priority": [
-    "youtube",
     "instagram",
+    "youtube",
     "linkedin",
     "facebook",
     "tiktok"
