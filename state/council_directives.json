@@ -1,27 +1,10 @@
 {
-  "updated_at": "2026-10-06",
+  "updated_at": "2026-10-07",
   "source": "daily-council",
   "directives": [
     {
       "category": "safe_auto",
-      "action": "בדיקת מקור הירידה בחשיפות: ייחס את 58% הירידה לפי רשת — האם YouTube/Instagram בודד גלל החוצה מהחלון? תעד ממצא לפני הסקת מסקנה מערכתית.",
-      "detail": "הצעה לבדיקה על בסיס המדד המתועד; לא בוצע שינוי.",
-      "channel": "youtube",
-      "evidence": {
-        "source": "scorecard",
-        "metric": "צמיחת חשיפות",
-        "value": -58.1,
-        "target": 10,
-        "unit": "%",
-        "status": "❌"
-      },
-      "status": "candidate",
-      "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
-      "success_metric": "צמיחת חשיפות: בסיס -58.1; יעד המדד 10. יש להשוות תקופות תואמות."
-    },
-    {
-      "category": "safe_auto",
-      "action": "אסטרטגיית תוכן LinkedIn לפרופיל מנכ\"ל: הכן 3 טיוטות פוסט carousel (3 שקפים, native PDF) עם case-study + נתון מדיד מהפקה אמיתית — ללא קישור חיצוני בגוף הפוסט.",
+      "action": "ניסוי תוכן LinkedIn: השוואת פורמטים — document carousel (3-5 שקפים, insight מהפקה אמיתית) מול text-only POV post",
       "detail": "הצעה לבדיקה על בסיס המדד המתועד; לא בוצע שינוי.",
       "channel": "linkedin",
       "evidence": {
@@ -38,20 +21,20 @@
     },
     {
       "category": "safe_auto",
-      "action": "הנחיית hashtag ותוכן Instagram: השתמש ב-3-5 תגיות תפקיד-ממוקדות (CMO, HR, event-lead) + מונח שירות עברי אחד; בדוק ניסיונית פוסט Reel קצר (30-45 שניות) עם כתוביות לעומת תמונת carousel.",
+      "action": "ניסוי hashtag/topic ב-Instagram: בדוק 3 קבוצות תגיות שונות (ישראל B2B, MICE גלובלי, event production) — כל קבוצה על פוסט נפרד",
       "detail": "הצעה לבדיקה על בסיס המדד המתועד; לא בוצע שינוי.",
       "channel": "instagram",
       "evidence": {
         "source": "scorecard",
         "metric": "Engagement rate",
-        "value": 0.11,
+        "value": 0.0,
         "target": 2.0,
         "unit": "%",
         "status": "❌"
       },
       "status": "candidate",
       "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
-      "success_metric": "Engagement rate: בסיס 0.11; יעד המדד 2.0. יש להשוות תקופות תואמות."
+      "success_metric": "Engagement rate: בסיס 0.0; יעד המדד 2.0. יש להשוות תקופות תואמות."
     }
   ],
   "channel_cadence": {
@@ -64,7 +47,7 @@
       "reason": "מכסה מוצעת לבדיקה בתקופת המדידה; אין מסקנה סיבתית על אלגוריתם."
     },
     "linkedin": {
-      "max_posts_per_week": 3,
+      "max_posts_per_week": 4,
       "reason": "מכסה מוצעת לבדיקה בתקופת המדידה; אין מסקנה סיבתית על אלגוריתם."
     },
     "tiktok": {
