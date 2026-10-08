@@ -23,7 +23,7 @@ def _exchange(refresh_token):
         "client_id": CID, "client_secret": CSECRET}).encode()
     req = urllib.request.Request("https://www.linkedin.com/oauth/v2/accessToken", data=data,
         headers={"Content-Type": "application/x-www-form-urlencoded", "User-Agent": UA}, method="POST")
-    with urllib.request.urlopen(req) as r:
+    with urllib.request.urlopen(req, timeout=60) as r:
         return json.loads(r.read().decode())
 
 

@@ -20,6 +20,7 @@ jobs:
   engage:
     runs-on: ubuntu-latest
     timeout-minutes: 10
+    if: github.event_name == 'schedule' || github.actor == 'alon3153'
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -33,9 +34,11 @@ jobs:
           LINKEDIN_CLIENT_SECRET:    ${{ secrets.LINKEDIN_CLIENT_SECRET }}
           ANTHROPIC_API_KEY:         ${{ secrets.ANTHROPIC_API_KEY }}
           ENGAGE_WINDOW_HOURS:       "6"
+          DRY_RUN:                   ${{ inputs.dry_run == true }}
         run: |
-          python3 scripts/linkedin_engage.py \
-            ${{ inputs.dry_run && '--dry-run' || '' }}
+          args=()
+          if [ "$DRY_RUN" = "true" ]; then args+=(--dry-run); fi
+          python3 scripts/linkedin_engage.py "${args[@]}"
 
       - name: Persist the "already commented" record
         if: ${{ !inputs.dry_run }}

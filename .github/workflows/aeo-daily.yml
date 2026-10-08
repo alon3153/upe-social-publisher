@@ -15,9 +15,13 @@ concurrency:
   group: aeo-state-write
   cancel-in-progress: false
 
+permissions:
+  contents: write   # persists daily history + citation state back to main
+
 jobs:
   monitor:
     runs-on: ubuntu-latest
+    if: github.event_name == 'schedule' || github.actor == 'alon3153'
     steps:
       - name: Checkout engine
         uses: actions/checkout@v4

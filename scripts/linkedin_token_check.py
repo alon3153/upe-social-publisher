@@ -7,7 +7,7 @@ safely persist a rotated repository secret, and printing the replacement token
 would expose it in the job log. The separate refresh workflow persists tokens in
 Supabase for the publisher; this monitor owns only the manual re-auth alert.
 """
-import os, sys, json, time, urllib.request, urllib.parse, urllib.error
+import os, sys, json, time, html, urllib.request, urllib.parse, urllib.error
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, ROOT)
@@ -27,7 +27,7 @@ def _post(url, fields):
     data = urllib.parse.urlencode(fields).encode()
     req = urllib.request.Request(url, data=data, headers={
         "Content-Type": "application/x-www-form-urlencoded", "User-Agent": UA}, method="POST")
-    with urllib.request.urlopen(req) as r:
+    with urllib.request.urlopen(req, timeout=60) as r:
         return json.loads(r.read().decode())
 
 
@@ -55,7 +55,7 @@ def email(subject, html):
     req = urllib.request.Request("https://api.resend.com/emails", data=body, headers={
         "Authorization": f"Bearer {RESEND_KEY}", "Content-Type": "application/json", "User-Agent": UA})
     try:
-        urllib.request.urlopen(req); print("alert emailed")
+        urllib.request.urlopen(req, timeout=60); print("alert emailed")
     except urllib.error.HTTPError as e:
         print("email err", e.code, e.read().decode()[:160])
 
@@ -63,7 +63,7 @@ def email(subject, html):
 def reauth_html(reason):
     return ("<html dir=\"rtl\" lang=\"he\"><body style=\"font-family:Arial;direction:rtl;text-align:right;\">"
             f"<h2 style=\"color:#e0533d;\">⚠️ טוקן LinkedIn דורש חידוש</h2>"
-            f"<p>{reason}</p>"
+            f"<p>{html.escape(reason, quote=True)}</p>"
             "<p>הטוקן הזה מפרסם לעמוד החברה (אנגלי + ספרד) ולפרופיל האישי. "
             "כדי לחדש — תגיד ל-UPE \"חדש את טוקן הלינקדאין\" ואני מריץ את ה-OAuth דרך הדפדפן המחובר "
             "(app <b>78nrl43hscor4q</b>, scopes: w_organization_social r_organization_social "
