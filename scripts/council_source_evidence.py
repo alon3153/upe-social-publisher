@@ -6,7 +6,11 @@ from pathlib import Path
 from urllib.parse import urlsplit
 
 HISTORY = Path(__file__).resolve().parent / 'aeo_daily_history.json'
+WEEKLY_HISTORY = Path(__file__).resolve().parent / 'aeo_history.json'
 EXPECTED_MODELS = {'claude', 'chatgpt', 'gemini'}
+PRODUCT_SEARCH_ENGINES = ('claude', 'chatgpt', 'gemini')
+PRODUCT_SEARCH_LABELS = {'claude': 'Claude', 'chatgpt': 'ChatGPT', 'gemini': 'Gemini'}
+PRODUCT_SEARCH_MISSING = 'אין נתון'
 
 
 def citation_basis(value):
@@ -99,6 +103,125 @@ def unbranded_mention_rates(path=None, date=None):
         mentioned = measured = None
     return {"date": date, "by_engine": by_engine, "pooled_pct": pooled,
             "mentioned_nonbranded": mentioned, "n_nonbranded": measured}
+
+
+def _history_rows(path):
+    try:
+        rows = json.loads(Path(path).read_text())
+    except (OSError, ValueError):
+        return []
+    return rows if isinstance(rows, list) else []
+
+
+def _product_search_value(block):
+    """A measured product_search score, or None when this engine has no usable value.
+
+    Degraded blocks and missing or non-numeric scores stay empty. Callers must
+    not fill them from another engine or an older row.
+    """
+    if not isinstance(block, dict) or block.get('degraded'):
+        return None
+    value = block.get('product_search')
+    if isinstance(value, bool) or not isinstance(value, (int, float)):
+        return None
+    return int(value) if isinstance(value, float) and value.is_integer() else value
+
+
+def product_search_entry(row):
+    """Scores from one history row. Engines absent from that row stay None."""
+    if not isinstance(row, dict) or not isinstance(row.get('date'), str) or not row.get('date'):
+        return None
+    models = row.get('models') if isinstance(row.get('models'), dict) else {}
+    entry = {'date': row['date'],
+             'scores': {name: _product_search_value(models.get(name))
+                        for name in PRODUCT_SEARCH_ENGINES}}
+    recorded = row.get('product_search_source')
+    if isinstance(recorded, str) and recorded.strip():
+        entry['product_search_source'] = recorded.strip()
+    return entry
+
+
+def _product_search_entries(path, source):
+    entries = []
+    for row in _history_rows(path):
+        entry = product_search_entry(row)
+        if entry:
+            entries.append(dict(entry, source=source))
+    return entries
+
+
+def _last_on_date(entries, date):
+    found = [entry for entry in entries if entry['date'] == date]
+    return found[-1] if found else None
+
+
+def product_search_for_date(date, daily_path=None, weekly_path=None):
+    """The product_search row for one date.
+
+    The weekly history wins when both files have that date, so engines are
+    never mixed across the two batteries. Within one file, the last appended
+    row for the date is the one shown.
+    """
+    weekly = _last_on_date(_product_search_entries(weekly_path or WEEKLY_HISTORY, 'weekly'), date)
+    if weekly:
+        return weekly
+    return _last_on_date(_product_search_entries(daily_path or HISTORY, 'daily'), date)
+
+
+def latest_product_search(daily_path=None, weekly_path=None):
+    """Newest product_search entry across the daily and weekly histories.
+
+    A same-day tie uses the weekly battery. A missing engine on that entry
+    stays missing; it is not filled from the other file or an older date.
+    """
+    weekly = _product_search_entries(weekly_path or WEEKLY_HISTORY, 'weekly')
+    daily = _product_search_entries(daily_path or HISTORY, 'daily')
+    dates = [entry['date'] for entry in weekly + daily]
+    if not dates:
+        return None
+    newest = max(dates)
+    return _last_on_date(weekly, newest) or _last_on_date(daily, newest)
+
+
+_SOURCE_LABELS = {
+    'weekly': 'שבועי',
+    'daily': 'יומי',
+    'שבועי': 'שבועי',
+    'יומי': 'יומי',
+}
+
+
+def product_search_source_label(entry):
+    """Hebrew battery label. A recorded product_search_source wins over the file."""
+    if not isinstance(entry, dict):
+        return None
+    raw = entry.get('product_search_source') or entry.get('source')
+    if not isinstance(raw, str) or not raw.strip():
+        return None
+    key = raw.strip()
+    if key in _SOURCE_LABELS:
+        return _SOURCE_LABELS[key]
+    lowered = key.casefold().replace('\\', '/')
+    if 'aeo_daily_history' in lowered:
+        return 'יומי'
+    if 'aeo_history' in lowered or lowered.endswith('/aeo_history.json'):
+        return 'שבועי'
+    return None
+
+
+def format_product_search(entry):
+    """Claude 24 · ChatGPT 21 · Gemini 18 (27.09.2026, שבועי). Missing engines say אין נתון."""
+    if not entry:
+        return PRODUCT_SEARCH_MISSING
+    parts = []
+    for name in PRODUCT_SEARCH_ENGINES:
+        score = (entry.get('scores') or {}).get(name)
+        shown = PRODUCT_SEARCH_MISSING if score is None else str(score)
+        parts.append(f"{PRODUCT_SEARCH_LABELS[name]} {shown}")
+    shown_date = datetime.date.fromisoformat(entry['date']).strftime('%d.%m.%Y')
+    label = product_search_source_label(entry)
+    stamp = f'{shown_date}, {label}' if label else shown_date
+    return ' · '.join(parts) + f' ({stamp})'
 
 
 def valid_week(window):
