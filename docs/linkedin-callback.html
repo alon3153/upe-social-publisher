@@ -3,6 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex,nofollow">
+<meta name="referrer" content="no-referrer">
 <title>UPE — LinkedIn OAuth Callback</title>
 <style>
   body { font-family: -apple-system, Segoe UI, Arial, sans-serif; background: #111; color: #eee; padding: 40px 20px; max-width: 720px; margin: 0 auto; text-align: center; }
@@ -24,6 +26,8 @@
 <div id="result"></div>
 
 <script>
+// All URL parameters are attacker-controllable (anyone can craft a link to this page),
+// so every value is rendered with textContent — never innerHTML — to prevent reflected XSS.
 const params = new URLSearchParams(window.location.search);
 const code = params.get('code');
 const error = params.get('error');
@@ -31,24 +35,49 @@ const errorDesc = params.get('error_description');
 const state = params.get('state');
 const out = document.getElementById('result');
 
+function el(tag, className, text) {
+  const node = document.createElement(tag);
+  if (className) node.className = className;
+  if (text !== undefined) node.textContent = text;
+  return node;
+}
+function meta(text) {
+  const node = el('div', '', text);
+  node.style.cssText = 'font-size:12px;color:#666;margin-top:10px;';
+  return node;
+}
+
 if (error) {
-  out.innerHTML = `
-    <div class="code-box">
-      <div class="label">❌ שגיאה</div>
-      <div class="code error">${error}</div>
-      ${errorDesc ? `<div style="color:#aaa;margin-top:10px;font-size:13px;">${decodeURIComponent(errorDesc)}</div>` : ''}
-    </div>`;
+  const box = el('div', 'code-box');
+  box.appendChild(el('div', 'label', '❌ שגיאה'));
+  box.appendChild(el('div', 'code error', error));
+  if (errorDesc) {
+    const d = el('div', '', errorDesc);
+    d.style.cssText = 'color:#aaa;margin-top:10px;font-size:13px;';
+    box.appendChild(d);
+  }
+  out.appendChild(box);
 } else if (code) {
-  out.innerHTML = `
-    <div class="code-box">
-      <div class="label">✅ קוד אימות (לחץ להעתקה)</div>
-      <div class="code" id="code-text">${code}</div>
-      <button onclick="navigator.clipboard.writeText('${code}'); this.textContent='הועתק ✓'">📋 העתק קוד</button>
-    </div>
-    ${state ? `<div style="font-size:12px;color:#666;margin-top:10px;">state: ${state}</div>` : ''}
-    <p class="sub" style="margin-top:30px;">חזור לטרמינל והדבק את הקוד בבקשה.</p>`;
+  const box = el('div', 'code-box');
+  box.appendChild(el('div', 'label', '✅ קוד אימות (לחץ להעתקה)'));
+  const codeEl = el('div', 'code', code);
+  codeEl.id = 'code-text';
+  box.appendChild(codeEl);
+  const btn = el('button', '', '📋 העתק קוד');
+  btn.type = 'button';
+  btn.addEventListener('click', () => {
+    navigator.clipboard.writeText(code).then(() => { btn.textContent = 'הועתק ✓'; }).catch(() => {});
+  });
+  box.appendChild(btn);
+  out.appendChild(box);
+  if (state) out.appendChild(meta('state: ' + state));
+  const back = el('p', 'sub', 'חזור לטרמינל והדבק את הקוד בבקשה.');
+  back.style.marginTop = '30px';
+  out.appendChild(back);
 } else {
-  out.innerHTML = `<div class="code-box"><div class="error">לא נמצא קוד או שגיאה ב-URL</div></div>`;
+  const box = el('div', 'code-box');
+  box.appendChild(el('div', 'error', 'לא נמצא קוד או שגיאה ב-URL'));
+  out.appendChild(box);
 }
 </script>
 
