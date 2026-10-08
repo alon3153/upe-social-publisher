@@ -24,6 +24,8 @@ def scrub(text: Any) -> str:
 _TRANSIENT_HTTP_CODES = {429, 500, 502, 503, 504}
 # Graph API transient error subcodes: rate-limit (4, 17, 32), temporary (1, 2)
 _TRANSIENT_GRAPH_CODES = {1, 2, 4, 17, 32, 613}
+# IG media_publish can return this while the container id is not yet publishable.
+TRANSIENT_ERROR_MESSAGES = ("media id is not available",)
 
 
 def is_transient(response: requests.Response) -> bool:
@@ -32,6 +34,9 @@ def is_transient(response: requests.Response) -> bool:
     try:
         err = response.json().get("error", {})
         if err.get("code") in _TRANSIENT_GRAPH_CODES:
+            return True
+        message = str(err.get("message") or "")
+        if any(marker in message.lower() for marker in TRANSIENT_ERROR_MESSAGES):
             return True
     except Exception:
         pass

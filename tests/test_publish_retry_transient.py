@@ -64,6 +64,19 @@ def test_old_failure_is_reported_not_republished(monkeypatch, capsys):
     assert "STALE-FAILED" in capsys.readouterr().out
 
 
+def test_media_id_unavailable_is_retryable(monkeypatch):
+    marks = _rows(monkeypatch, [{
+        "id": "r1", "day": 48, "network": "instagram", "account": "ig_uproductionevents",
+        "error": "HTTP 400: MEDIA ID IS NOT AVAILABLE",
+        "scheduled_date": _today(),
+    }])
+
+    assert publish_approved._is_transient_error("HTTP 400: Media ID is not available")
+    assert publish_approved._retry_transient_failures() == 1
+    assert marks[0][1]["status"] == "approved"
+    assert "media id is not available" in marks[0][1]["error"].lower()
+
+
 def test_content_defect_is_not_retried(monkeypatch):
     marks = _rows(monkeypatch, [{
         "id": "r1", "day": 107, "network": "instagram", "account": "ig_uproductionevents",
