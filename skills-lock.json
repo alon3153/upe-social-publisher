@@ -91,6 +91,12 @@
       "skillPath": "skills/cloud/application-design-center-design-deploy/SKILL.md",
       "computedHash": "95cad310ca700d9a3f943fc1827647e8b3d69694970824c56d73369c48971dd3"
     },
+    "arcads-external-api": {
+      "source": "krusemediallc/arcads-claude-code",
+      "sourceType": "github",
+      "skillPath": "skills/arcads-external-api/SKILL.md",
+      "computedHash": "dc2e826cba693c466d0540a8bb6020d33f4fe04a815d0f5a75bfbdf4c10ce4bb"
+    },
     "bigquery-ai-ml": {
       "source": "google/skills",
       "sourceType": "github",
@@ -114,6 +120,12 @@
       "sourceType": "github",
       "skillPath": "skills/cloud/bigtable-basics/SKILL.md",
       "computedHash": "d0260840b6aa7a1c89a548ee81e7b5c1b0e548ac246b2d0930303f6261bc17fa"
+    },
+    "chatgpt-image-ad": {
+      "source": "krusemediallc/arcads-claude-code",
+      "sourceType": "github",
+      "skillPath": "skills/chatgpt-image-ad/SKILL.md",
+      "computedHash": "8aec8f7d83e2b6479af2a761e083fac951d0128a65096de390d9bbafe50e8252"
     },
     "cloud-build-basics": {
       "source": "google/skills",
@@ -294,6 +306,12 @@
       "sourceType": "github",
       "skillPath": "skills/cloud/gemini-live-api/SKILL.md",
       "computedHash": "29cd4c824a8a4ef4eb2b4437ce222a2507261dc107b106f9e71c866076141ef2"
+    },
+    "generate-youtube-thumbnail": {
+      "source": "krusemediallc/arcads-claude-code",
+      "sourceType": "github",
+      "skillPath": "skills/generate-youtube-thumbnail/SKILL.md",
+      "computedHash": "44334fb201b10c5e9d56f14e7cb52639598ea79ce28e0e3bc86072a1915a113d"
     },
     "gke-ai-troubleshooting-handle-disruption-gpu-tpu": {
       "source": "google/skills",
@@ -775,6 +793,12 @@
       "skillPath": "skills/ads/ima-sdk-client-side/SKILL.md",
       "computedHash": "fc2f46850e05331ed63e3b4519a204f37d79dad72bd2689e903faa4c66754267"
     },
+    "image-ad-clone": {
+      "source": "krusemediallc/arcads-claude-code",
+      "sourceType": "github",
+      "skillPath": "skills/image-ad-clone/SKILL.md",
+      "computedHash": "3804db13ef4e37b99da4a4b4c789f7dfcb861119a350d8ec2538a66d933e934a"
+    },
     "managed-airflow-dag-authoring": {
       "source": "google/skills",
       "sourceType": "github",
@@ -792,6 +816,18 @@
       "sourceType": "github",
       "skillPath": "skills/cloud/managed-airflow-migrations/SKILL.md",
       "computedHash": "8ca7dd5521fbc7342c195fba4b3662a50c50b21b71476b6b9f662d4bef30a9d7"
+    },
+    "meta-ad-builder": {
+      "source": "krusemediallc/arcads-claude-code",
+      "sourceType": "github",
+      "skillPath": "shared/skills/meta-ad-builder/SKILL.md",
+      "computedHash": "1859d2e973732272420478e2d42679a6327f3754b10250d0d01381193a1882af"
+    },
+    "nano-banana-image-ad": {
+      "source": "krusemediallc/arcads-claude-code",
+      "sourceType": "github",
+      "skillPath": "skills/nano-banana-image-ad/SKILL.md",
+      "computedHash": "ab78bda77c6a91e18e993a28d25726460a3ac22ddd71aac6356ff1f0f7fa61d6"
     },
     "retrieving-developer-knowledge": {
       "source": "google/skills",

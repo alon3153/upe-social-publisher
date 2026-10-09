@@ -15,3 +15,9 @@ scripts/send_approval_demo.py
 
 # AEO loop scratch output (dry-run)
 reports/aeo/scratch/
+
+# Arcads skill pack: reference media is local-only (face photos, product shots,
+# style boards). Drop refs into references/influencers/, references/products/,
+# references/aesthetics/ — they stay on your machine.
+references/*
+!references/README.md
