@@ -18802,7 +18802,7 @@
     "channel": "leads",
     "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
     "action_key": "salesforce-attribution-fix",
-    "owner": "Marketing ops מבצע; Alon מאשר הפצה",
+    "owner": "Marketing Ops מכין; Alon מאשר; Sales Ops מיישם ב-CRM",
     "success_metric": "ייחוס לידים: בסיס לא-מיוחס; יעד המדד מקור אמיתי. יש להשוות תקופות תואמות."
   },
   "2769e4c7": {
@@ -19030,8 +19030,8 @@
     "channel": "tiktok",
     "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
     "action_key": "tiktok-behind-scenes",
-    "owner": "צוות תוכן מצלם; Alon מאשר כל קליפ לפני פרסום",
-    "success_metric": "נוכחות סושיאל (רצפה): בסיס 9.0; יעד המדד 5. יש להשוות תקופות תואמות.",
+    "owner": "צוות הפקה מצלם; Marketing עורך; Alon מאשר לפני כל פרסום",
+    "success_metric": "נוכחות סושיאל (רצפה): בסיס 10.0; יעד המדד 5. יש להשוות תקופות תואמות.",
     "consecutive_failures": 0,
     "merged_from": [
       {
