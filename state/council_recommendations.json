@@ -1,20 +1,20 @@
 {
-  "updated_at": "2026-10-09",
+  "updated_at": "2026-10-10",
   "scores": {
-    "instagram": 38,
-    "facebook": 12,
-    "tiktok": 5,
-    "linkedin": 18,
-    "youtube": 22,
-    "google_organic_geo": 28,
-    "overall": 52
+    "instagram": 52,
+    "facebook": 20,
+    "tiktok": 72,
+    "linkedin": 28,
+    "youtube": 35,
+    "google_organic_geo": 22,
+    "overall": 61
   },
   "recommendations": [
     {
       "category": "gated",
       "priority": "P0",
       "action_key": "salesforce-attribution-fix",
-      "owner": "Marketing Ops מכין; Alon מאשר; Sales Ops מיישם ב-CRM",
+      "owner": "מנהל CRM מכין; Alon מאשר ומפיץ",
       "success_metric": "ייחוס לידים: בסיס לא-מיוחס; יעד המדד מקור אמיתי. יש להשוות תקופות תואמות.",
       "evidence": {
         "source": "scorecard",
@@ -26,7 +26,7 @@
       },
       "evidence_url": null,
       "target_url": null,
-      "action": "הפץ את טיוטת הנחיית ייחוס המקורות (נוצרה 2026-09-13, נמצאת ב-Uproduction Operations/Marketing-Council/verification-2026-09-13/lead-source-guidance.md) — הפצה לצוות מכירות + עדכון כללי Lead Source ב-Salesforce; אל תיצור מסמך חדש. בדוק 6 הרשומות העמומות מול ראיה מתועדת: רצועת הפנייה, מייל, שיחה.",
+      "action": "הפץ את טיוטת הנחיית ייחוס המקורות הקיימת (deliverables/lead-source-guidance.md, מוכן מ-2026-09-13) ל-CRM ולנציגי מכירות; בצע בדיקה פרטנית של 6 רשומות Other/Advertisement/Web מול ראיה מתועדת (פנייה, דף נחיתה, UTM). אין ליצור מחדש — המסמך קיים ומחכה.",
       "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
       "channel": "leads",
       "status": "candidate",
@@ -34,23 +34,67 @@
     },
     {
       "category": "gated",
-      "priority": "P2",
+      "priority": "P0",
+      "action_key": "linkedin-executive-posting",
+      "owner": "עורך תוכן מכין טיוטות; מנכ\"ל/בכיר מאשר ומפרסם",
+      "success_metric": "מונחי מעקב ב-Top-3: בסיס 1; יעד המדד 3. יש להשוות תקופות תואמות.",
+      "evidence": {
+        "source": "scorecard",
+        "metric": "מונחי מעקב ב-Top-3",
+        "value": 1,
+        "target": 3,
+        "unit": "",
+        "status": "❌"
+      },
+      "evidence_url": "https://www.digitalapplied.com/blog/linkedin-algorithm-2026-engagement-strategy-guide",
+      "target_url": null,
+      "action": "הפעל את initiative d477123a: הכן טיוטות carousel קצרות (3 שקפים, insight מהפקה אמיתית + שאלה) מפרופיל אישי של מנכ\"ל — פרסם רק לאחר אישור מפורש. אין לשכפל פוסטים זהים בין פרופילים שונים. מדוד impressions/interactions בנפרד מדף החברה.",
+      "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
+      "channel": "linkedin",
+      "status": "candidate",
+      "detail": "הצעה לבדיקה על בסיס המדד המתועד; לא בוצע שינוי."
+    },
+    {
+      "category": "gated",
+      "priority": "P1",
       "action_key": "tiktok-behind-scenes",
-      "owner": "צוות הפקה מצלם; Marketing עורך; Alon מאשר לפני כל פרסום",
-      "success_metric": "נוכחות סושיאל (רצפה): בסיס 10.0; יעד המדד 5. יש להשוות תקופות תואמות.",
+      "owner": "מפיק תוכן מכין; Alon מאשר כל קליפ לפני פרסום",
+      "success_metric": "נוכחות סושיאל (רצפה): בסיס 12.0; יעד המדד 5. יש להשוות תקופות תואמות.",
       "evidence": {
         "source": "scorecard",
         "metric": "נוכחות סושיאל (רצפה)",
-        "value": 10.0,
+        "value": 12.0,
         "target": 5,
         "unit": "",
         "status": "✅"
       },
       "evidence_url": null,
       "target_url": null,
-      "action": "הפעל initiative dc82116b: 3-4 קליפים 'מאחורי הקלעים' (60 שניות, vertical, ללא תסריט מוקרא) מהפקה אמיתית — פרסם ב-TikTok ושתף ב-Instagram Reels לחיסכון בתפוקה. TikTok: 0 פוסטים בתקופה הנוכחית — זהו ניסוי מדידה ראשון ולא התחייבות לקצב.",
+      "action": "הפעל initiative dc82116b: 3 קליפים 'מאחורי הקלעים' (60 שניות, vertical, ללא תסריט) מהפקה אמיתית — פרסם TikTok ושתף ב-Instagram Reels לחיסכון בתפוקה. שמור על פורמט זהה לפוסט שהניב 17,988 חשיפות. כל קליפ ממתין לאישור מפורש לפני פרסום.",
       "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
       "channel": "tiktok",
+      "status": "candidate",
+      "detail": "הצעה לבדיקה על בסיס המדד המתועד; לא בוצע שינוי."
+    },
+    {
+      "category": "gated",
+      "priority": "P2",
+      "action_key": "youtube-seo-videos",
+      "owner": "מפיק וידאו מכין; Alon מאשר תסריט ופרסום",
+      "success_metric": "קליקים אורגניים/שבוע: בסיס 34; יעד המדד 300. יש להשוות תקופות תואמות.",
+      "evidence": {
+        "source": "scorecard",
+        "metric": "קליקים אורגניים/שבוע",
+        "value": 34,
+        "target": 300,
+        "unit": "",
+        "status": "❌"
+      },
+      "evidence_url": null,
+      "target_url": null,
+      "action": "הפעל initiative 0a16e409: הפק סרטון YouTube ראשון (5-8 דקות) על שאלת קונה מוכחת מנתוני GSC — 'הפקת כנסים בחו\"ל: מה כולל ומה עולה?' (pos. 1.4, 25 חשיפות); כלול timestamps, תיאור 300+ מילים עם מונחי GSC, קישור לדף /הפקת-כנסים/ הקיים. ממתין לאישור לפני העלאה.",
+      "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
+      "channel": "youtube",
       "status": "candidate",
       "detail": "הצעה לבדיקה על בסיס המדד המתועד; לא בוצע שינוי."
     }

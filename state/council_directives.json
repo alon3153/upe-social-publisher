@@ -1,61 +1,61 @@
 {
-  "updated_at": "2026-10-09",
+  "updated_at": "2026-10-10",
   "source": "daily-council",
   "directives": [
     {
       "category": "safe_auto",
-      "action": "ניסוי LinkedIn: פרסם 2 פוסטים/שבוע מפרופיל מנכ\"ל (לא דף חברה) — פורמט carousel PDF קצר (3 שקפים) עם insight אמיתי מהפקה; ללא קישור חיצוני בגוף הפוסט",
+      "action": "הצעת ניסוי תוכן LinkedIn: ניסוי מבוקר — שבוע אחד של 3 פוסטים מפרופיל אישי של מנכ\"ל (carousel קצר, native video, טקסט+POV) לעומת שבוע של 3 פוסטים מדף החברה; מדוד impressions ו-interactions בכל קבוצה ותעד את הפער לפני שינוי קאדנס.",
       "detail": "הצעה לבדיקה על בסיס המדד המתועד; לא בוצע שינוי.",
       "channel": "linkedin",
       "evidence": {
         "source": "scorecard",
-        "metric": "נוכחות סושיאל (רצפה)",
-        "value": 10.0,
-        "target": 5,
+        "metric": "מונחי מעקב ב-Top-3",
+        "value": 1,
+        "target": 3,
         "unit": "",
-        "status": "✅"
-      },
-      "status": "candidate",
-      "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
-      "success_metric": "נוכחות סושיאל (רצפה): בסיס 10.0; יעד המדד 5. יש להשוות תקופות תואמות."
-    },
-    {
-      "category": "safe_auto",
-      "action": "ניסוי Instagram: בדוק אם תוכן חירום/מקצועי (כמו הפוסט המוביל השבוע 167 חשיפות, 1 אינטראקציה) מניב CTR גבוה יותר מתוכן ויזואלי כללי — מדוד 4 שבועות",
-      "detail": "הצעה לבדיקה על בסיס המדד המתועד; לא בוצע שינוי.",
-      "channel": "instagram",
-      "evidence": {
-        "source": "scorecard",
-        "metric": "Engagement rate",
-        "value": 0.09,
-        "target": 2.0,
-        "unit": "%",
         "status": "❌"
       },
       "status": "candidate",
       "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
-      "success_metric": "Engagement rate: בסיס 0.09; יעד המדד 2.0. יש להשוות תקופות תואמות."
+      "success_metric": "מונחי מעקב ב-Top-3: בסיס 1; יעד המדד 3. יש להשוות תקופות תואמות."
     },
     {
       "category": "safe_auto",
-      "action": "אסטרטגיית האשטאג LinkedIn 2026: הסר hashtags גנריים (#events, #israel) — השתמש ב-3 hashtags ממוקדים ב-ICP (#MICE, #corporateevents, #incentivetravel) והוסף שאלה פתוחה בסוף הפוסט לעידוד תגובות עם עומק",
+      "action": "הצעת ניסוי TikTok/Reels: בשבוע הבא, העלה קליפ 'מאחורי הקלעים' נוסף בפורמט זהה לפוסט שהניב 17,988 חשיפות — רשום את הנושוע, האורך והטקסטים להשוואה עם פוסט הביצועים הגבוה.",
       "detail": "הצעה לבדיקה על בסיס המדד המתועד; לא בוצע שינוי.",
-      "channel": "linkedin",
+      "channel": "tiktok",
       "evidence": {
         "source": "scorecard",
         "metric": "נוכחות סושיאל (רצפה)",
-        "value": 10.0,
+        "value": 12.0,
         "target": 5,
         "unit": "",
         "status": "✅"
       },
       "status": "candidate",
       "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
-      "success_metric": "נוכחות סושיאל (רצפה): בסיס 10.0; יעד המדד 5. יש להשוות תקופות תואמות."
+      "success_metric": "נוכחות סושיאל (רצפה): בסיס 12.0; יעד המדד 5. יש להשוות תקופות תואמות."
     },
     {
       "category": "safe_auto",
-      "action": "YouTube: הכן brief לסרטון תשובה לשאלה 'מה זה ערב גאלה' (pos.2.7, 31 חשיפות GSC) — פורמט 3-5 דקות, timestamps ברורים, תיאור 300+ מילים עברי, קישור ל-/הפקת-אירועים-עסקיים/ בתיאור; כל פרסום ממתין לאישור",
+      "action": "הצעת אסטרטגיית hashtag ל-LinkedIn: בחן שימוש ב-3 hashtags ממוקדים בכל פוסט (לדוגמה: #הפקתאירועים #MICEIsrael #incentivetravel) לעומת פוסטים ללא hashtags — מדוד reach לפוסט במשך 4 שבועות.",
+      "detail": "הצעה לבדיקה על בסיס המדד המתועד; לא בוצע שינוי.",
+      "channel": "linkedin",
+      "evidence": {
+        "source": "scorecard",
+        "metric": "נוכחות סושיאל (רצפה)",
+        "value": 12.0,
+        "target": 5,
+        "unit": "",
+        "status": "✅"
+      },
+      "status": "candidate",
+      "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
+      "success_metric": "נוכחות סושיאל (רצפה): בסיס 12.0; יעד המדד 5. יש להשוות תקופות תואמות."
+    },
+    {
+      "category": "safe_auto",
+      "action": "הצעת ניסוי קאדנס YouTube: בחן פרסום של 1 סרטון 60-90 שניות native vertical (לא ערוך, behind-the-scenes) לעומת 1 סרטון מוסרט ארוך (5-8 דקות) — השווה watch-time ו-CTR ב-14 יום אחרי כל פרסום, לפני הסקת מסקנות על פורמט.",
       "detail": "הצעה לבדיקה על בסיס המדד המתועד; לא בוצע שינוי.",
       "channel": "youtube",
       "evidence": {
@@ -89,16 +89,16 @@
       "reason": "מכסה מוצעת לבדיקה בתקופת המדידה; אין מסקנה סיבתית על אלגוריתם."
     },
     "youtube": {
-      "max_posts_per_week": 2,
+      "max_posts_per_week": 1,
       "reason": "מכסה מוצעת לבדיקה בתקופת המדידה; אין מסקנה סיבתית על אלגוריתם."
     }
   },
   "channel_priority": [
+    "tiktok",
     "instagram",
     "youtube",
     "linkedin",
-    "facebook",
-    "tiktok"
+    "facebook"
   ],
   "channel_plan_basis": [
     "facebook: מכסה מוצעת לבדיקה בתקופת המדידה; אין מסקנה סיבתית על אלגוריתם.",
