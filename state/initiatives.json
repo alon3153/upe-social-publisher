@@ -18529,10 +18529,10 @@
     "kind": "recommendation",
     "priority": "P2",
     "channel": "youtube",
-    "expected_impact": "YouTube long-tail discovery מצטבר; כל סרטון מוסיף נוכחות ב-Google Video tab שמתחרה בפחות מפיקים ישראלים; מזין גם את ה-AEO כי AI מצטט YouTube",
+    "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
     "action_key": "youtube-seo-videos",
-    "owner": "מפיק וידאו מכין; Alon מאשר script ו-upload",
-    "success_metric": "בסיס: 4,133 impressions מ-3 סרטונים; יעד: 3 סרטוני SEO ממוטבים חדשים עם CTR ≥3% ו-50+ שעות צפייה תוך 60 יום מ-publish"
+    "owner": "מפיק וידאו מכין; Alon מאשר תסריט ופרסום",
+    "success_metric": "קליקים אורגניים/שבוע: בסיס 34; יעד המדד 300. יש להשוות תקופות תואמות."
   },
   "a78a8d0c": {
     "id": "a78a8d0c",
@@ -18802,7 +18802,7 @@
     "channel": "leads",
     "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
     "action_key": "salesforce-attribution-fix",
-    "owner": "Marketing Ops מכין; Alon מאשר; Sales Ops מיישם ב-CRM",
+    "owner": "מנהל CRM מכין; Alon מאשר ומפיץ",
     "success_metric": "ייחוס לידים: בסיס לא-מיוחס; יעד המדד מקור אמיתי. יש להשוות תקופות תואמות."
   },
   "2769e4c7": {
@@ -18959,12 +18959,12 @@
     "created": "2026-09-27",
     "updated": "2026-10-06",
     "kind": "recommendation",
-    "priority": "P1",
+    "priority": "P0",
     "channel": "linkedin",
     "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
     "action_key": "linkedin-executive-posting",
-    "owner": "מנכ\"ל/מנהל בכיר מכין תוכן; Alon מאשר כל פוסט לפני פרסום",
-    "success_metric": "Engagement rate: בסיס 0.0; יעד המדד 2.0. יש להשוות תקופות תואמות.",
+    "owner": "עורך תוכן מכין טיוטות; מנכ\"ל/בכיר מאשר ומפרסם",
+    "success_metric": "מונחי מעקב ב-Top-3: בסיס 1; יעד המדד 3. יש להשוות תקופות תואמות.",
     "consecutive_failures": 0,
     "merged_from": [
       {
@@ -19026,12 +19026,12 @@
     "created": "2026-09-30",
     "updated": "2026-10-06",
     "kind": "recommendation",
-    "priority": "P2",
+    "priority": "P1",
     "channel": "tiktok",
     "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
     "action_key": "tiktok-behind-scenes",
-    "owner": "צוות הפקה מצלם; Marketing עורך; Alon מאשר לפני כל פרסום",
-    "success_metric": "נוכחות סושיאל (רצפה): בסיס 10.0; יעד המדד 5. יש להשוות תקופות תואמות.",
+    "owner": "מפיק תוכן מכין; Alon מאשר כל קליפ לפני פרסום",
+    "success_metric": "נוכחות סושיאל (רצפה): בסיס 12.0; יעד המדד 5. יש להשוות תקופות תואמות.",
     "consecutive_failures": 0,
     "merged_from": [
       {
