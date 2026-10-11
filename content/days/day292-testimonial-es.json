@@ -1,0 +1,31 @@
+{
+  "day": 292,
+  "category": "testimonial",
+  "language": "es",
+  "date": "",
+  "weekday": "",
+  "theme": "When the brief was impossible — and we delivered anyway",
+  "linkedin": {
+    "profile": "Uproduction Events (Company Page)",
+    "text": "Un cliente describió su evento como 'el que casi cancelamos.' Tres países. 400 participantes. Un cronograma sin margen para errores. Tomamos el brief, construimos el plan y ejecutamos cada detalle — y su devolución fue clara: 'Dejamos de preocuparnos en el momento en que UPE tomó las riendas.' Quienes gestionan eventos de alto impacto saben que la diferencia entre un proveedor y un verdadero socio se nota exactamente ahí: cuando la complejidad aprieta. Con 1.500+ eventos entregados en 130+ destinos, los proyectos difíciles son donde construimos confianza a largo plazo. Si estás frente a algo que parece demasiado ambicioso para encararlo solo, escribime por DM — prefiero esa conversación ahora que verte resolver incendios después."
+  },
+  "instagram": {
+    "profile": "@uproductionevents",
+    "text": "Tres países. 400 participantes. Un plazo que ponía los pelos de punta. Cuando terminó, nuestro cliente dijo algo que lo resume todo: 'Dejamos de preocuparnos en el momento en que UPE tomó las riendas.' Con más de 1.500 eventos y 130+ destinos recorridos, lo complejo es nuestro punto de partida — no nuestro límite. ¿Tenés un evento desafiante en mente? Mandanos un DM y lo resolvemos juntos. #ProducciónDeEventos #IncentiveTravel #EventosCorporativos #MICE #UproductionEvents"
+  },
+  "facebook": {
+    "profile": "Uproduction Events (Page)",
+    "text": "Nuestro cliente lo llamó 'el evento que casi no hacemos.' Tres países, 400 participantes, un plazo que no daba margen de error. Su evaluación cuando todo terminó: 'Dejamos de preocuparnos en el momento en que UPE tomó las riendas.' Eso es lo que buscamos en cada proyecto. Si tenés un evento que parece demasiado complicado para encarar solo, escribinos. Estamos para eso."
+  },
+  "image_file": "content/images/signature_event_real.jpg",
+  "image_source": "real_archive_reused",
+  "image_credit": "📷 Un fotograma real de una producción de Uproduction",
+  "brand": {
+    "colors": [
+      "#1C1C1C",
+      "#FBCE0A"
+    ],
+    "font": "Comfortaa",
+    "logo": "uproduction_official_logo.png"
+  }
+}

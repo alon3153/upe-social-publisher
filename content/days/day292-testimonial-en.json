@@ -1,0 +1,31 @@
+{
+  "day": 292,
+  "category": "testimonial",
+  "language": "en",
+  "date": "",
+  "weekday": "",
+  "theme": "When the brief was impossible — and we delivered anyway",
+  "linkedin": {
+    "profile": "Uproduction Events (Company Page)",
+    "text": "A client recently described their event as 'the one we almost cancelled.' Three countries. 400 participants. A timeline that left no room for mistakes. We took the brief, built the plan and executed — and their post-event feedback was direct: 'We stopped worrying the moment UPE took over.' Senior event owners know the feeling: the bigger the stakes, the more you need a partner who's done it before — not someone learning on your budget. Across 1,500+ events and 130+ destinations, the complex ones are where we earn the relationship. Running something that feels too ambitious? I'd rather you DM me now than stress about it alone."
+  },
+  "instagram": {
+    "profile": "@uproductionevents",
+    "text": "Three countries. 400 participants. A deadline that made everyone nervous. After it was over, our client said: 'We stopped worrying the moment UPE took over.' Sixteen years and 1,500+ events later, complex is just another Tuesday for us. If your next event feels like a stretch — that's exactly when you should call us. DM us and let's figure it out together. #EventProduction #IncentiveTravel #CorporateEvents #MICEIndustry #UproductionEvents"
+  },
+  "facebook": {
+    "profile": "Uproduction Events (Page)",
+    "text": "Our client called it 'the event we almost didn't do.' Tight deadline, three countries involved, 400 participants, zero margin for error. Their words after it wrapped: 'We stopped worrying the moment UPE took over.' That's the only metric we care about. If you're sitting on an event that feels too complex to pull off — let's talk. Drop a comment or send us a DM."
+  },
+  "image_file": "content/images/signature_event_real.jpg",
+  "image_source": "real_archive_reused",
+  "image_credit": "📷 A real frame from a Uproduction production",
+  "brand": {
+    "colors": [
+      "#1C1C1C",
+      "#FBCE0A"
+    ],
+    "font": "Comfortaa",
+    "logo": "uproduction_official_logo.png"
+  }
+}
