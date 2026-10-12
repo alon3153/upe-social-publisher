@@ -1,20 +1,20 @@
 {
-  "updated_at": "2026-10-11",
+  "updated_at": "2026-10-12",
   "scores": {
-    "instagram": 42,
-    "facebook": 18,
+    "instagram": 38,
+    "facebook": 12,
     "tiktok": 72,
-    "linkedin": 22,
-    "youtube": 30,
-    "google_organic_geo": 20,
-    "overall": 58
+    "linkedin": 20,
+    "youtube": 25,
+    "google_organic_geo": 18,
+    "overall": 52
   },
   "recommendations": [
     {
       "category": "gated",
       "priority": "P0",
       "action_key": "salesforce-attribution-fix",
-      "owner": "RevOps מכין; Alon מאשר ומפיץ",
+      "owner": "מנהל CRM מכין; Alon מאשר ומפיץ",
       "success_metric": "ייחוס לידים: בסיס לא-מיוחס; יעד המדד מקור אמיתי. יש להשוות תקופות תואמות.",
       "evidence": {
         "source": "scorecard",
@@ -24,9 +24,9 @@
         "unit": "",
         "status": "❌"
       },
-      "evidence_url": "https://www.terminusapp.com/blog/salesforce-utm-capture-lead-source-attribution/",
+      "evidence_url": null,
       "target_url": null,
-      "action": "הפץ את טיוטת הנחיית הייחוס הקיימת (deliverable salesforce-attribution-fix, נכתבה 2026-09-13, טרם הופצה). הוסף שדות UTM_Source__c ו-UTM_Medium__c לטפסי האתר; נעל picklist מקורות Salesforce לערכים סטנדרטיים בלבד; אמן את מחלקת המכירות לא לדרוס Lead Source ידנית.",
+      "action": "הפץ את הנחיית ייחוס המקורות הקיימת (2769e4c7) לצוות המכירות — ודא שמנהל CRM מיישם תיוג מקור מדויק ל-6 הרשומות הלא-מיוחסות; אל תשנה ספירת לידים, רק שפר דיוק מקור",
       "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
       "channel": "leads",
       "status": "candidate",
@@ -34,20 +34,43 @@
     },
     {
       "category": "gated",
-      "priority": "P1",
-      "action_key": "tiktok-behind-scenes",
-      "owner": "צוות הפקה מצלם; עורך מגיש לאישור Alon לפני כל העלאה",
-      "success_metric": "Engagement rate: בסיס 5.86; יעד המדד 2.0. יש להשוות תקופות תואמות.",
+      "priority": "P0",
+      "action_key": "linkedin-executive-posting",
+      "owner": "מנהל תוכן מכין טיוטות; Alon מאשר כל פוסט לפני פרסום",
+      "success_metric": "נוכחות סושיאל (רצפה): בסיס 14.0; יעד המדד 5. יש להשוות תקופות תואמות.",
       "evidence": {
         "source": "scorecard",
-        "metric": "Engagement rate",
-        "value": 5.86,
-        "target": 2.0,
-        "unit": "%",
+        "metric": "נוכחות סושיאל (רצפה)",
+        "value": 14.0,
+        "target": 5,
+        "unit": "",
         "status": "✅"
       },
+      "evidence_url": "https://www.tiberius.co.nz/wiki/linkedin-organic-content-b2b-algorithm-strategy/",
       "target_url": null,
-      "action": "הפעל initiative dc82116b: 3 קליפים 'מאחורי הקלעים' בשבוע (60 שניות, vertical) מהפקה אמיתית — שתף ב-Instagram Reels לחיסכון בתפוקה. כל קליפ ממתין לאישור מפורש לפני פרסום.",
+      "action": "הפעל את d477123a: טיוטות carousel קצר (3 שקפים) מפרופיל המנכ\"ל — נתון ממשי מהפקה + שאלה לקהל B2B; LinkedIn 2026 מעדיף פרופיל אישי על דף חברה; כל פוסט ממתין לאישור מפורש",
+      "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
+      "channel": "linkedin",
+      "status": "candidate",
+      "detail": "הצעה לבדיקה על בסיס המדד המתועד; לא בוצע שינוי."
+    },
+    {
+      "category": "gated",
+      "priority": "P1",
+      "action_key": "tiktok-behind-scenes",
+      "owner": "צוות הפקת וידאו מצלם; Alon מאשר כל קליפ לפני פרסום",
+      "success_metric": "נוכחות סושיאל (רצפה): בסיס 14.0; יעד המדד 5. יש להשוות תקופות תואמות.",
+      "evidence": {
+        "source": "scorecard",
+        "metric": "נוכחות סושיאל (רצפה)",
+        "value": 14.0,
+        "target": 5,
+        "unit": "",
+        "status": "✅"
+      },
+      "evidence_url": null,
+      "target_url": null,
+      "action": "הפעל dc82116b: 3 קליפים 'מאחורי הקלעים' (60 שניות, vertical) מהפקה אמיתית — פרסם ב-TikTok ושתף ב-Instagram Reels; TikTok הוא הרשת החזקה ביותר עם 6.25% ER מוכח בשבוע הנוכחי",
       "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
       "channel": "tiktok",
       "status": "candidate",
