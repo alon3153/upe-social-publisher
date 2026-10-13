@@ -8,7 +8,7 @@
         "הפקת כנסים עסקיים בחול",
         "international conference production"
       ],
-      "source": "https://github.com/alon3153/uproduction-astro/commit/6f14ec2baca97af39dc9fc47f3749ec86a07092d",
+      "source": "https://github.com/alon3153/uproduction-astro/commit/1681de0f90d46b92dc0d118eedf0542c70b0b49b",
       "intents": [
         "bh_il_kenes"
       ],
@@ -20,8 +20,8 @@
         }
       ],
       "evaluation_not_before": "2026-10-19",
-      "change_evidence": "User-approved title/H1 and substantive service-copy changes; September28 brand-name substitution reviewed as minor and does not restart the content evaluation.",
-      "last_change_verified_at": "2026-09-29"
+      "change_evidence": "Approved September21 title/H1 and service-copy changes, commit 6f14ec2baca97af39dc9fc47f3749ec86a07092d. September28 brand normalization is minor.",
+      "last_change_verified_at": "2026-10-13"
     },
     {
       "url": "https://upe.co.il/נופש-חברה-בחול/",
@@ -61,11 +61,14 @@
       "aliases": [
         "כנסים לחברות הייטק"
       ],
-      "source": "uproduction-astro PR135 merged and live verified 2026-09-12",
+      "source": "https://github.com/alon3153/uproduction-astro/commit/d1c10cdcaeb6570d0ee8d85dea9a1c8fcd34ccd2",
       "intents": [
         "bh_il_hitech"
       ],
-      "last_changed": "2026-09-12"
+      "last_changed": "2026-09-12",
+      "evaluation_not_before": "2026-10-10",
+      "change_evidence": "PR135 September12; no later source changes.",
+      "last_change_verified_at": "2026-10-13"
     },
     {
       "url": "https://upe.co.il/en/about-us/",
@@ -80,7 +83,10 @@
     {
       "url": "https://upe.co.il/en/corporate-conference-production-outside-the-us/",
       "last_changed": "2026-09-12",
-      "source": "uproduction-astro PR135 cumulative-participation correction, published 2026-09-12"
+      "source": "https://github.com/alon3153/uproduction-astro/commit/f7121740f6a67d12c414134fd9ce6dbb8ba0fb93",
+      "evaluation_not_before": "2026-10-10",
+      "change_evidence": "PR135 September12. September28 age wording and October10 headquarters corrections do not change service intent.",
+      "last_change_verified_at": "2026-10-13"
     },
     {
       "url": "https://upe.co.il/en/corporate-event-production-europe-10-to-25000-attendees/",
@@ -100,7 +106,10 @@
     {
       "url": "https://upe.co.il/en/international-conference-production-tech-companies/",
       "last_changed": "2026-09-12",
-      "source": "uproduction-astro PR135 cumulative-participation correction, published 2026-09-12"
+      "source": "https://github.com/alon3153/uproduction-astro/commit/f7121740f6a67d12c414134fd9ce6dbb8ba0fb93",
+      "evaluation_not_before": "2026-10-10",
+      "change_evidence": "PR135 September12. Later since-2010 and headquarters corrections reviewed as factual wording fixes, with service intent unchanged.",
+      "last_change_verified_at": "2026-10-13"
     },
     {
       "url": "https://upe.co.il/בוטיק-מול-סוכנות-אירועים-גדולה/",
@@ -113,17 +122,57 @@
       ],
       "last_changed": "2026-09-28",
       "evaluation_not_before": "2026-10-26",
-      "source": "https://github.com/alon3153/uproduction-astro/commit/d2c228031700dab20e18e41bf6541622945d225b",
-      "change_evidence": "Removed unsupported six-continents reach claim from visible company description. Live HTTP200/self-canonical and removal verified September29.",
-      "last_change_verified_at": "2026-09-29"
+      "source": "https://github.com/alon3153/uproduction-astro/commit/f7121740f6a67d12c414134fd9ce6dbb8ba0fb93",
+      "change_evidence": "September28 removed six-continents scope claim, d2c228031700dab20e18e41bf6541622945d225b. October10 headquarters-only wording is minor.",
+      "last_change_verified_at": "2026-10-13"
     },
     {
       "url": "https://upe.co.il/en/choosing-global-corporate-event-conference-production-company/",
       "last_changed": "2026-09-23",
       "evaluation_not_before": "2026-10-21",
-      "source": "https://github.com/alon3153/uproduction-astro/commit/265e340ae466e242307012e1af6c0d7ac2359214",
-      "last_change_verified_at": "2026-10-06",
-      "change_evidence": "Alon-approved AEO opening changed September23; later numeric-age/founding-wording corrections are minor. HTTP200 and self-canonical verified October6."
+      "source": "https://github.com/alon3153/uproduction-astro/commit/374674c941c201c04ce725e291b8545c8f6667b8",
+      "last_change_verified_at": "2026-10-13",
+      "change_evidence": "Alon-approved substantive AEO opening, commit 265e340ae466e242307012e1af6c0d7ac2359214"
+    },
+    {
+      "url": "https://upe.co.il/en/corporate-events-barcelona-guide/",
+      "last_changed": "2026-09-08",
+      "evaluation_not_before": "2026-10-06",
+      "source": "https://github.com/alon3153/uproduction-astro/commit/f7cf8c6d64ebd0389a3f2a3deedaf7114938eeb4",
+      "change_evidence": "PR132, substantive title/service/planning improvements merged 2026-09-08",
+      "last_change_verified_at": "2026-10-13"
+    },
+    {
+      "url": "https://upe.co.il/es/eventos-corporativos-barcelona-guia-empresas-2026/",
+      "last_changed": "2026-10-10",
+      "evaluation_not_before": "2026-11-07",
+      "source": "https://github.com/alon3153/uproduction-astro/commit/ec593e7421a1368bf10e8b474468d6facf13ca47",
+      "change_evidence": "PR197 added answer-first comparison FAQs and expanded supplier-type routing on 2026-10-10, so the prior PR132 evaluation window is no longer causally clean.",
+      "last_change_verified_at": "2026-10-13"
+    },
+    {
+      "url": "https://upe.co.il/en/incentive-travel-to-spain-the-ultimate-planning-guide-for-international-companie/",
+      "last_changed": "2026-10-10",
+      "evaluation_not_before": "2026-11-07",
+      "source": "https://github.com/alon3153/uproduction-astro/commit/2167e135923ab85e44881d4addf6a9883f74f430",
+      "change_evidence": "PR197 added a new answer-first opening and three intent-matched FAQs on 2026-10-10, so the prior PR132 evaluation window is no longer causally clean.",
+      "last_change_verified_at": "2026-10-13"
+    },
+    {
+      "url": "https://upe.co.il/en/event-production-costs-europe-2026/",
+      "last_changed": "2026-09-14",
+      "evaluation_not_before": "2026-10-12",
+      "source": "https://github.com/alon3153/uproduction-astro/commit/2167e135923ab85e44881d4addf6a9883f74f430",
+      "change_evidence": "PR143 deployed September14 local date, 2b39cd2e9e9f99a5b116d74e4fb1936ca01bf014. October11 adds a disclaimer to already illustrative calculations, without changing service intent or prices.",
+      "last_change_verified_at": "2026-10-13"
+    },
+    {
+      "url": "https://upe.co.il/en/faq-corporate-event-venues-europe/",
+      "last_changed": "2026-09-27",
+      "evaluation_not_before": "2026-10-25",
+      "source": "https://github.com/alon3153/uproduction-astro/commit/7b76e00b42e24249cc9f3ca13804698729ae8c8d",
+      "change_evidence": "September27 e4d68801b22aea8c6f8e3f651d699969c5462aa1 replaced 20+ European countries with 130+ destinations. Conservatively reset for geographic-scope correction; subsequent present-perfect edit is minor.",
+      "last_change_verified_at": "2026-10-13"
     }
   ],
   "verified_existing_pages": [
@@ -157,18 +206,28 @@
       "aliases": [
         "boutique global corporate conference"
       ],
-      "source": "uproduction-astro PR135 cumulative-participation correction, published 2026-09-12",
+      "source": "https://github.com/alon3153/uproduction-astro/commit/53075605592fca6b16a849ab03ea645d51021768",
       "intents": [
         "ex_en_boutique_eu"
       ],
-      "last_changed": "2026-09-12"
+      "last_changed": "2026-10-11",
+      "change_history": [
+        {
+          "previous_last_changed": "2026-09-12",
+          "previous_source": "uproduction-astro PR135 cumulative-participation correction, published 2026-09-12",
+          "recorded_at": "2026-10-13"
+        }
+      ],
+      "evaluation_not_before": "2026-11-08",
+      "change_evidence": "PR202 October11 removed the six-continents offering claim. Conservatively reset for this scope correction, consistently with the comparison pages September28 review.",
+      "last_change_verified_at": "2026-10-13"
     },
     {
       "url": "https://upe.co.il/en/boutique-vs-large-event-agency/",
       "aliases": [
         "boutique vs large"
       ],
-      "source": "https://github.com/alon3153/uproduction-astro/commit/d2c228031700dab20e18e41bf6541622945d225b",
+      "source": "https://github.com/alon3153/uproduction-astro/commit/f7121740f6a67d12c414134fd9ce6dbb8ba0fb93",
       "intents": [
         "cmp_vs_bcd"
       ],
@@ -181,8 +240,8 @@
         }
       ],
       "evaluation_not_before": "2026-10-26",
-      "change_evidence": "Removed unsupported six-continents reach claim from visible company description; factual scope of company offering changed.",
-      "last_change_verified_at": "2026-09-29"
+      "change_evidence": "September28 removed six-continents scope claim, d2c228031700dab20e18e41bf6541622945d225b. October10 headquarters-only wording is minor.",
+      "last_change_verified_at": "2026-10-13"
     },
     {
       "url": "https://upe.co.il/בחירת-חברה-להפקת-כנסים/",
@@ -228,5 +287,36 @@
     "config": "uproduction-astro/content-ops/gsc-page-reviews.json",
     "report": "uproduction-astro/reports/gsc-page-reviews-latest.json",
     "note": "Matched 28-day pre/post windows; final-data guard, Unicode/encoded exact URL match, stop on unreviewed source commit. Existing weekly workflow only. No claims of lift until measured."
+  },
+  "measurement_review_2026_10_13": {
+    "existing_cloud_report": "https://github.com/alon3153/uproduction-astro/blob/master/reports/gsc-page-reviews-latest.json",
+    "coverage_fix_pr": "https://github.com/alon3153/uproduction-astro/pull/208",
+    "coverage_fix_status": "tested_pending_authorized_merge_master_update_rule",
+    "tests": "60 local measurement tests; PR checks and build successful; nine additional live pages HTTP200 and self-canonical",
+    "barcelona_en": {
+      "before": {
+        "start": "2026-08-11",
+        "end": "2026-09-07",
+        "clicks": 0,
+        "impressions": 92,
+        "position": 42.858695652173914
+      },
+      "after": {
+        "start": "2026-09-09",
+        "end": "2026-10-06",
+        "clicks": 0,
+        "impressions": 56,
+        "position": 39.660714285714285
+      },
+      "interpretation": "Sparse observational results; no verified causal improvement."
+    },
+    "category": {
+      "measured_at": "2026-10-07",
+      "first_page_found": 2,
+      "measured": 30,
+      "exact_top10_ascertainment": 9,
+      "exact_top10_total_score": null
+    },
+    "unmeasured_due_pages": "Three September12 baseline pages not in deployed four-page review config. Await PR208 merge; do not represent missing measurements as zero."
   }
 }
