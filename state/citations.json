@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-11",
+  "updated": "2026-10-13",
   "note": "External authority evidence and actions. needs_verification belongs to automation, remains visible in the weekly digest, and is not an overdue founder decision. Review due items in the existing weekly UPE automation; never infer active membership from historical notes alone.",
   "items": [
     {
@@ -104,9 +104,9 @@
       "action": "נמצא רישום היסטורי מ-08.08 שלפיו אלון אישר ביצוע חברות ICCA/IAPCO, מול תור ענן שעדיין ביקש החלטה. נדרש אימות מסמכי חברות ופרופיל לכל גוף בנפרד. חיפוש דואר ממוקד ב-13.09 לא החזיר אסמכתה מהגופים; אין בכך הוכחה שלא שולמה חברות. אין לבקש תשלום חוזר או לסמן חברות פעילה ללא אסמכתה.",
       "target_url": "",
       "kind": "directory",
-      "last_reviewed": "2026-10-06",
+      "last_reviewed": "2026-10-13",
       "owner": "automation",
-      "next_review_at": "2026-10-13",
+      "next_review_at": "2026-10-20",
       "unverifiable": true,
       "review_reason": "Conflicting historical evidence; do not request a second membership payment.",
       "evidence": [
@@ -246,6 +246,39 @@
             }
           ],
           "result": "Unresolved. ICCA page inaccessible; other returned pages show no matching public profile. Dynamic/restricted profiles not excluded; MPI chapter directory is not an individual member register. Historical approval remains intact; no payment or renewed approval requested."
+        },
+        {
+          "reviewed_at": "2026-10-13",
+          "source": "Read-only Outlook domain searches and official public directories",
+          "mail_search_since": "2026-10-06",
+          "mail_results": {
+            "ICCA": 0,
+            "IAPCO": 0,
+            "MPI": 0,
+            "HelmsBriscoe": 0
+          },
+          "public_checks": [
+            {
+              "url": "https://www.iccaworld.org/",
+              "error": "HTTPError"
+            },
+            {
+              "url": "https://www.iapco.org/find-a-member.html",
+              "status": 200,
+              "matches": []
+            },
+            {
+              "url": "https://www.mpi.org/membership/chapter-directory",
+              "status": 200,
+              "matches": []
+            },
+            {
+              "url": "https://www.helmsbriscoe.com/associates/",
+              "status": 200,
+              "matches": []
+            }
+          ],
+          "result": "Inconclusive. No new matching correspondence. ICCA HTTP error; no name matches in other returned HTML; MPI chapter directory is not an individual membership register. Dynamic/private records remain possible. Historical approval retained; no renewed payment or approval requested."
         }
       ]
     },
