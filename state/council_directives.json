@@ -1,74 +1,40 @@
 {
-  "updated_at": "2026-10-12",
+  "updated_at": "2026-10-13",
   "source": "daily-council",
   "directives": [
     {
       "category": "safe_auto",
-      "action": "ניסוי קידינציה LinkedIn: לבדוק אם פוסטים מפרופיל אישי (מנכ\"ל/מייסד) יניבו חשיפות גבוהות מפרופיל החברה — לתעד חשיפות ואינטראקציות לכל פוסט נפרד ל-3 שבועות",
+      "action": "LinkedIn — ניסוי פורמט carousel/document: הכן 3 טיוטות פוסט document (PDF) בנושאי case-study אמיתי — 'איך הפקנו כנס ל-300 איש בפורטוגל' — שקף פתיחה עם נתון מפתיע, 4-5 שקפים תוכן, שקף סיום עם שאלה; פורמט זה מייצר dwell time ומשפר Depth Score לפי מדידות 2026.",
       "detail": "הצעה לבדיקה על בסיס המדד המתועד; לא בוצע שינוי.",
       "channel": "linkedin",
       "evidence": {
         "source": "scorecard",
         "metric": "נוכחות סושיאל (רצפה)",
-        "value": 14.0,
+        "value": 17.0,
         "target": 5,
         "unit": "",
         "status": "✅"
       },
       "status": "candidate",
       "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
-      "success_metric": "נוכחות סושיאל (רצפה): בסיס 14.0; יעד המדד 5. יש להשוות תקופות תואמות."
+      "success_metric": "נוכחות סושיאל (רצפה): בסיס 17.0; יעד המדד 5. יש להשוות תקופות תואמות."
     },
     {
       "category": "safe_auto",
-      "action": "ניסוי פורמט TikTok/Reels: לתעד אם קליפ 'לפני-אחרי' מהפקה (split-screen 30 שניות) מניב reach גבוה יותר מקליפ editorial — השוואה של 2 פוסטים בשבוע אחד",
+      "action": "TikTok/Reels — תיוג מדויק לקהל B2B ישראלי: בדוק האם הוספת hashtags עבריים כגון #הפקתאירועים #טיולתמריץ #כנסעסקי בפוסטים מגדילה reach לקהל אנשי B2B לעומת תיוגים גנריים — תעד impressions ב-7 ימים כניסוי מבוקר.",
       "detail": "הצעה לבדיקה על בסיס המדד המתועד; לא בוצע שינוי.",
       "channel": "tiktok",
       "evidence": {
         "source": "scorecard",
         "metric": "נוכחות סושיאל (רצפה)",
-        "value": 14.0,
+        "value": 17.0,
         "target": 5,
         "unit": "",
         "status": "✅"
       },
       "status": "candidate",
       "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
-      "success_metric": "נוכחות סושיאל (רצפה): בסיס 14.0; יעד המדד 5. יש להשוות תקופות תואמות."
-    },
-    {
-      "category": "safe_auto",
-      "action": "אסטרטגיית hashtag Instagram: לנסות החלפת hashtags כלליים (#events #corporate) ב-3 hashtags ממוקדים עבריים (#הפקתאירועים #טיולתמריץ #נופשחברה) — לבדוק שינוי reach ב-3 פוסטים",
-      "detail": "הצעה לבדיקה על בסיס המדד המתועד; לא בוצע שינוי.",
-      "channel": "instagram",
-      "evidence": {
-        "source": "scorecard",
-        "metric": "נוכחות סושיאל (רצפה)",
-        "value": 14.0,
-        "target": 5,
-        "unit": "",
-        "status": "✅"
-      },
-      "status": "candidate",
-      "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
-      "success_metric": "נוכחות סושיאל (רצפה): בסיס 14.0; יעד המדד 5. יש להשוות תקופות תואמות."
-    },
-    {
-      "category": "safe_auto",
-      "action": "הנחיית אנגולות תוכן GSC: לזהות את 5 השאילתות עם 20+ חשיפות ו-pos.2-5 (למשל: 'הפקת אירועים בינלאומיים' pos.1.7, 'הפקת כנסים בחו\"ל' pos.1.4) ולהעביר לצוות התוכן כמונחים לשילוב בפוסטים הבאים — ניסוי editorial בלבד",
-      "detail": "הצעה לבדיקה על בסיס המדד המתועד; לא בוצע שינוי.",
-      "channel": "google_organic_geo",
-      "evidence": {
-        "source": "scorecard",
-        "metric": "מונחי מעקב ב-Top-3",
-        "value": 1,
-        "target": 3,
-        "unit": "",
-        "status": "❌"
-      },
-      "status": "candidate",
-      "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
-      "success_metric": "מונחי מעקב ב-Top-3: בסיס 1; יעד המדד 3. יש להשוות תקופות תואמות."
+      "success_metric": "נוכחות סושיאל (רצפה): בסיס 17.0; יעד המדד 5. יש להשוות תקופות תואמות."
     }
   ],
   "channel_cadence": {
@@ -81,7 +47,7 @@
       "reason": "מכסה מוצעת לבדיקה בתקופת המדידה; אין מסקנה סיבתית על אלגוריתם."
     },
     "linkedin": {
-      "max_posts_per_week": 3,
+      "max_posts_per_week": 4,
       "reason": "מכסה מוצעת לבדיקה בתקופת המדידה; אין מסקנה סיבתית על אלגוריתם."
     },
     "tiktok": {
@@ -96,8 +62,8 @@
   "channel_priority": [
     "tiktok",
     "instagram",
-    "youtube",
     "linkedin",
+    "youtube",
     "facebook"
   ],
   "channel_plan_basis": [
