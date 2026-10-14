@@ -18959,12 +18959,12 @@
     "created": "2026-09-27",
     "updated": "2026-10-06",
     "kind": "recommendation",
-    "priority": "P1",
+    "priority": "P0",
     "channel": "linkedin",
     "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
     "action_key": "linkedin-executive-posting",
-    "owner": "מנהל שיווק מכין טיוטות; מנכ\"ל/בכיר מאשר ומפרסם",
-    "success_metric": "מונחי מעקב ב-Top-3: בסיס 1; יעד המדד 3. יש להשוות תקופות תואמות.",
+    "owner": "מנהל תוכן מכין טיוטות; מנכ\"ל מאשר ומפרסם מפרופיל אישי",
+    "success_metric": "נוכחות סושיאל (רצפה): בסיס 14.0; יעד המדד 5. יש להשוות תקופות תואמות.",
     "consecutive_failures": 0,
     "merged_from": [
       {
@@ -19030,8 +19030,8 @@
     "channel": "tiktok",
     "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
     "action_key": "tiktok-behind-scenes",
-    "owner": "צוות הפקה מצלם; עורך מכין; Alon מאשר לפני פרסום",
-    "success_metric": "נוכחות סושיאל (רצפה): בסיס 17.0; יעד המדד 5. יש להשוות תקופות תואמות.",
+    "owner": "צלם/עורך מכין; אלון מאשר כל קליפ לפני פרסום",
+    "success_metric": "Engagement rate: בסיס 5.32; יעד המדד 2.0. יש להשוות תקופות תואמות.",
     "consecutive_failures": 0,
     "merged_from": [
       {
