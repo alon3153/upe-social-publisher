@@ -1,40 +1,23 @@
 {
-  "updated_at": "2026-10-13",
+  "updated_at": "2026-10-14",
   "source": "daily-council",
   "directives": [
     {
       "category": "safe_auto",
-      "action": "LinkedIn — ניסוי פורמט carousel/document: הכן 3 טיוטות פוסט document (PDF) בנושאי case-study אמיתי — 'איך הפקנו כנס ל-300 איש בפורטוגל' — שקף פתיחה עם נתון מפתיע, 4-5 שקפים תוכן, שקף סיום עם שאלה; פורמט זה מייצר dwell time ומשפר Depth Score לפי מדידות 2026.",
+      "action": "ניסוי cross-posting מ-TikTok ל-Instagram Reels: 2 מתוך 2 הקליפים שהופקו השבוע ב-TikTok — שמור גרסה ללא watermark ופרסם כ-Reel; מדוד ER יחסית לפוסטי תמונה קיימים.",
       "detail": "הצעה לבדיקה על בסיס המדד המתועד; לא בוצע שינוי.",
-      "channel": "linkedin",
+      "channel": "instagram",
       "evidence": {
         "source": "scorecard",
-        "metric": "נוכחות סושיאל (רצפה)",
-        "value": 17.0,
-        "target": 5,
-        "unit": "",
+        "metric": "Engagement rate",
+        "value": 5.32,
+        "target": 2.0,
+        "unit": "%",
         "status": "✅"
       },
       "status": "candidate",
       "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
-      "success_metric": "נוכחות סושיאל (רצפה): בסיס 17.0; יעד המדד 5. יש להשוות תקופות תואמות."
-    },
-    {
-      "category": "safe_auto",
-      "action": "TikTok/Reels — תיוג מדויק לקהל B2B ישראלי: בדוק האם הוספת hashtags עבריים כגון #הפקתאירועים #טיולתמריץ #כנסעסקי בפוסטים מגדילה reach לקהל אנשי B2B לעומת תיוגים גנריים — תעד impressions ב-7 ימים כניסוי מבוקר.",
-      "detail": "הצעה לבדיקה על בסיס המדד המתועד; לא בוצע שינוי.",
-      "channel": "tiktok",
-      "evidence": {
-        "source": "scorecard",
-        "metric": "נוכחות סושיאל (רצפה)",
-        "value": 17.0,
-        "target": 5,
-        "unit": "",
-        "status": "✅"
-      },
-      "status": "candidate",
-      "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
-      "success_metric": "נוכחות סושיאל (רצפה): בסיס 17.0; יעד המדד 5. יש להשוות תקופות תואמות."
+      "success_metric": "Engagement rate: בסיס 5.32; יעד המדד 2.0. יש להשוות תקופות תואמות."
     }
   ],
   "channel_cadence": {
@@ -43,11 +26,11 @@
       "reason": "מכסה מוצעת לבדיקה בתקופת המדידה; אין מסקנה סיבתית על אלגוריתם."
     },
     "instagram": {
-      "max_posts_per_week": 4,
+      "max_posts_per_week": 3,
       "reason": "מכסה מוצעת לבדיקה בתקופת המדידה; אין מסקנה סיבתית על אלגוריתם."
     },
     "linkedin": {
-      "max_posts_per_week": 4,
+      "max_posts_per_week": 3,
       "reason": "מכסה מוצעת לבדיקה בתקופת המדידה; אין מסקנה סיבתית על אלגוריתם."
     },
     "tiktok": {
@@ -62,9 +45,9 @@
   "channel_priority": [
     "tiktok",
     "instagram",
-    "linkedin",
     "youtube",
-    "facebook"
+    "facebook",
+    "linkedin"
   ],
   "channel_plan_basis": [
     "facebook: מכסה מוצעת לבדיקה בתקופת המדידה; אין מסקנה סיבתית על אלגוריתם.",
