@@ -1,23 +1,57 @@
 {
-  "updated_at": "2026-10-14",
+  "updated_at": "2026-10-15",
   "source": "daily-council",
   "directives": [
     {
       "category": "safe_auto",
-      "action": "ניסוי cross-posting מ-TikTok ל-Instagram Reels: 2 מתוך 2 הקליפים שהופקו השבוע ב-TikTok — שמור גרסה ללא watermark ופרסם כ-Reel; מדוד ER יחסית לפוסטי תמונה קיימים.",
+      "action": "הגדרת אסטרטגיית תוכן LinkedIn: פוסטי carousel/PDF (3–7 שקפים) מפרופיל אישי של מנכ\"ל בנושא case-study אחד — עם נתון מדיד מהפקה אמיתית — ולא פוסט טקסט רגיל. אל לכלול קישור חיצוני בגוף הפוסט.",
       "detail": "הצעה לבדיקה על בסיס המדד המתועד; לא בוצע שינוי.",
-      "channel": "instagram",
+      "channel": "linkedin",
       "evidence": {
         "source": "scorecard",
-        "metric": "Engagement rate",
-        "value": 5.32,
-        "target": 2.0,
-        "unit": "%",
+        "metric": "נוכחות סושיאל (רצפה)",
+        "value": 16.0,
+        "target": 5,
+        "unit": "",
         "status": "✅"
       },
       "status": "candidate",
       "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
-      "success_metric": "Engagement rate: בסיס 5.32; יעד המדד 2.0. יש להשוות תקופות תואמות."
+      "success_metric": "נוכחות סושיאל (רצפה): בסיס 16.0; יעד המדד 5. יש להשוות תקופות תואמות."
+    },
+    {
+      "category": "safe_auto",
+      "action": "הגדרת אסטרטגיית hashtag ו-topic ל-TikTok: זיהוי 3 מונחי Top-10 GSC שממוקמים ב-Top-3 (כגון 'טיולי חברה') ושילובם כ-on-screen text ב-hook הראשון של הסרטון הבא — לאמוד אם חיפוש TikTok מניע traffic לפרופיל.",
+      "detail": "הצעה לבדיקה על בסיס המדד המתועד; לא בוצע שינוי.",
+      "channel": "tiktok",
+      "evidence": {
+        "source": "scorecard",
+        "metric": "מונחי מעקב ב-Top-3",
+        "value": 1,
+        "target": 3,
+        "unit": "",
+        "status": "❌"
+      },
+      "status": "candidate",
+      "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
+      "success_metric": "מונחי מעקב ב-Top-3: בסיס 1; יעד המדד 3. יש להשוות תקופות תואמות."
+    },
+    {
+      "category": "safe_auto",
+      "action": "הגדרת קאדנס תוכן YouTube: כל 5 סרטונים שפורסמו בשבוע זה — בדיקה אם תיאורי הסרטונים כוללים 300+ מילים עברית/אנגלית עם מונח מעקב אחד לפחות; אם לא — להכין טיוטת תיאור מחדש ממתינה לאישור.",
+      "detail": "הצעה לבדיקה על בסיס המדד המתועד; לא בוצע שינוי.",
+      "channel": "youtube",
+      "evidence": {
+        "source": "scorecard",
+        "metric": "קליקים אורגניים/שבוע",
+        "value": 33,
+        "target": 300,
+        "unit": "",
+        "status": "❌"
+      },
+      "status": "candidate",
+      "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
+      "success_metric": "קליקים אורגניים/שבוע: בסיס 33; יעד המדד 300. יש להשוות תקופות תואמות."
     }
   ],
   "channel_cadence": {
@@ -26,7 +60,7 @@
       "reason": "מכסה מוצעת לבדיקה בתקופת המדידה; אין מסקנה סיבתית על אלגוריתם."
     },
     "instagram": {
-      "max_posts_per_week": 3,
+      "max_posts_per_week": 4,
       "reason": "מכסה מוצעת לבדיקה בתקופת המדידה; אין מסקנה סיבתית על אלגוריתם."
     },
     "linkedin": {
@@ -46,8 +80,8 @@
     "tiktok",
     "instagram",
     "youtube",
-    "facebook",
-    "linkedin"
+    "linkedin",
+    "facebook"
   ],
   "channel_plan_basis": [
     "facebook: מכסה מוצעת לבדיקה בתקופת המדידה; אין מסקנה סיבתית על אלגוריתם.",
