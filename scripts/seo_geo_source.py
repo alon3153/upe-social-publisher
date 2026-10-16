@@ -18,13 +18,13 @@ the GEO data is unwired (never fabricates).
 
 CLI:  python3 scripts/seo_geo_source.py
 """
-import os, sys, json, base64, urllib.request, urllib.error
+import os, sys, json, base64, unicodedata, urllib.request, urllib.error
 from pathlib import Path
 from council_source_evidence import engine_evidence, valid_week
 
 # Scored Top-3 uses this list, never the guardian's precomputed top3_keywords.
-# The weekly cohort measures 30 Google queries, but those query strings are not
-# in the SEO snapshot. The checked-in file is the live service-page query set.
+# The checked-in file holds the 30 keywords of the weekly Organic SEO report
+# (Search Console), because those query strings are not in the SEO snapshot.
 _TRACKED_KEYWORD_FILES = (
     Path(__file__).resolve().parent / "organic_seo_weekly_keywords.json",
     Path(__file__).resolve().parent.parent / "state" / "organic_seo_weekly_keywords.json",
@@ -77,6 +77,13 @@ def tracked_keywords(data):
     return None
 
 
+def keyword_key(text):
+    """Match key for EN/ES/HE queries: Unicode NFC, collapsed whitespace, casefold."""
+    if not isinstance(text, str):
+        return ""
+    return " ".join(unicodedata.normalize("NFC", text).split()).casefold()
+
+
 def _query_text(term):
     if isinstance(term, (list, tuple)) and term and isinstance(term[0], str):
         return term[0].strip()
@@ -110,12 +117,12 @@ def split_top3(data):
     matched = []
     tracked = None
     if keywords and terms_present:
-        wanted = {item.casefold() for item in keywords}
+        wanted = {keyword_key(item) for item in keywords}
         seen = set()
         for site in sites:
             for term in site.get("top3_terms") or []:
                 query = _query_text(term)
-                key = query.casefold() if query else ""
+                key = keyword_key(query)
                 if key and key in wanted and key not in seen:
                     seen.add(key)
                     matched.append(query)
