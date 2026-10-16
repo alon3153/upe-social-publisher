@@ -4,7 +4,8 @@ import tempfile
 import unittest
 from pathlib import Path
 from unittest.mock import patch
-from scripts.social_health_snapshot import collect, collect_failed_ids, export_failed_ids
+from scripts.social_health_snapshot import (
+    collect, collect_failed_ids, collect_stale_failed_ids, export_failed_ids)
 
 class SnapshotTests(unittest.TestCase):
     def test_paginated_aggregate_only(self):
@@ -122,3 +123,58 @@ class SnapshotTests(unittest.TestCase):
             self.assertFalse(missing_feed.exists())
             self.assertIn('RuntimeError', summary.read_text())
             self.assertNotIn('SECRET', text)
+            stale = json.loads(cloud.read_text())['stale_failed_rows']
+            self.assertFalse(stale['complete'])
+            self.assertEqual(stale['error_type'], 'RuntimeError')
+            self.assertNotIn('SECRET', json.dumps(stale))
+
+    def test_stale_failed_rows_count_every_age_and_keep_recent_query(self):
+        calls = []
+
+        def read(method, path, params):
+            calls.append((method, path, dict(params)))
+            if params.get('limit') == '20':
+                assert 'created_at' not in params
+                assert 'offset' not in params
+                return [{
+                    'id': 'recent-only-shape', 'day': 1, 'network': 'facebook',
+                    'account': 'a', 'lang': 'he', 'status': 'failed',
+                    'caption': 'POST TEXT',
+                }]
+            assert params['limit'] == '500'
+            assert params['status'] == 'eq.failed'
+            assert params['select'] == 'id,day,network,account,lang,status'
+            assert 'created_at' not in params
+            offset = int(params['offset'])
+            if offset == 0:
+                return [{
+                    'id': f'id-{i}', 'day': i, 'network': 'facebook', 'account': 'a',
+                    'lang': 'he', 'status': 'failed', 'error': 'SECRET', 'caption': 'POST TEXT',
+                } for i in range(500)]
+            if offset == 500:
+                return [{
+                    'id': 'old-d4262229', 'day': 48, 'network': 'facebook',
+                    'account': 'uproduction_spain', 'lang': 'es', 'status': 'failed',
+                }]
+            return []
+
+        listed = collect_stale_failed_ids(read)
+        self.assertEqual(listed['count'], 501)
+        self.assertEqual(len(listed['rows']), 20)
+        self.assertEqual(listed['rows'][0]['id'], 'id-0')
+        self.assertNotIn('SECRET', json.dumps(listed))
+        self.assertNotIn('POST TEXT', json.dumps(listed))
+        self.assertTrue(all(call[2].get('limit') == '500' for call in calls))
+
+        calls.clear()
+        with tempfile.TemporaryDirectory() as directory:
+            cloud = Path(directory) / 'social-health-cloud.json'
+            export_failed_ids(cloud, Path(directory) / 'missing.json', read)
+            saved = json.loads(cloud.read_text())
+        recent = next(params for _method, _path, params in calls if params.get('limit') == '20')
+        assert 'created_at' not in recent
+        assert recent['status'] == 'eq.failed'
+        self.assertEqual(saved['failed_rows']['count'], 1)
+        self.assertEqual(saved['failed_rows']['rows'][0]['id'], 'recent-only-shape')
+        self.assertEqual(saved['stale_failed_rows']['count'], 501)
+        self.assertEqual(len(saved['stale_failed_rows']['rows']), 20)

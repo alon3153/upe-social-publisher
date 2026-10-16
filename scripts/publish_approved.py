@@ -5,6 +5,10 @@ import os, re, sys, datetime
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, ROOT)
 from publishers import queue, facebook, instagram, linkedin
+from publishers.meta_reconcile import (
+    ExistenceCheckError, attempt_window, find_facebook_post, find_instagram_media,
+)
+from publishers.safe import TRANSIENT_ERROR_MESSAGES
 from publishers.content import find_image_path, find_image_url, get_day
 
 # Anti-flood throttle: a personal LinkedIn PROFILE (Alon's, or an advocate's) must
@@ -137,7 +141,8 @@ TRANSIENT_MARKERS = (
     "only photo or video can be accepted",   # IG fetcher race on a valid image
     "timed out", "timeout", "temporarily unavailable",
     "please retry", "try again later", "rate limit", "connection reset",
-)
+) + TRANSIENT_ERROR_MESSAGES
+_SERVER_ERROR = re.compile(r"\bhttp\s*(\d{3})\b")
 PUBLISH_MAX_RETRIES = int(os.environ.get("PUBLISH_MAX_RETRIES", "3"))
 # Only retry recent failures. Re-publishing a two-month-old row would push stale
 # content out with no warning — those need a human decision, not an auto-retry.
@@ -148,6 +153,66 @@ _RETRY_TAG = re.compile(r"^retry (\d+)/\d+ · ")
 def _is_transient_error(error):
     value = (error or "").lower()
     return any(marker in value for marker in TRANSIENT_MARKERS)
+
+
+def _is_meta_server_error(error):
+    """5xx or Meta's unknown-server-error text. Not a content or auth rejection."""
+    value = (error or "").lower()
+    if "an unknown error has occurred" in value:
+        return True
+    match = _SERVER_ERROR.search(value)
+    return bool(match and 500 <= int(match.group(1)) <= 599)
+
+
+def _needs_verification_error(error):
+    note = "NEEDS_VERIFICATION: existence check failed; row left failed."
+    return f"{note} {error}"[:400]
+
+
+def _lookup_live_post(row, result, started_at, now=None, facebook_find=None, instagram_find=None):
+    start, end = attempt_window(started_at, now)
+    network = row.get("network")
+    account = row.get("account") or ""
+    caption = row.get("caption") or ""
+    if network == "facebook":
+        page_id = os.environ.get(f"FB_{account.upper()}_PAGE_ID")
+        token = os.environ.get(f"FB_{account.upper()}_PAGE_TOKEN")
+        finder = facebook_find or find_facebook_post
+        return finder(page_id, token, caption, start, end)
+    if network == "instagram":
+        ig_key = account.replace("ig_", "")
+        env_suffix = ig_key.upper().removeprefix("IG_")
+        ig_user_id = os.environ.get(f"IG_{env_suffix}_USER_ID")
+        token = os.environ.get(f"IG_{env_suffix}_ACCESS_TOKEN")
+        finder = instagram_find or find_instagram_media
+        return finder(ig_user_id, token, caption, start, end,
+                      container_id=result.get("container_id"))
+    return None
+
+
+def settle_failed_publish(row, result, started_at, mark, now=None,
+                          facebook_find=None, instagram_find=None):
+    """Record a failed attempt. A live Meta post is stored as published instead.
+
+    If the existence check itself fails, status stays failed and the existing
+    error field carries a NEEDS_VERIFICATION note. No new column is written.
+    """
+    err = str(result.get("error") or "")
+    if row.get("network") == "linkedin" and _is_linkedin_auth_error(err):
+        err = "AUTH_BLOCKED: " + err
+    if row.get("network") in ("facebook", "instagram") and _is_meta_server_error(err):
+        try:
+            found = _lookup_live_post(row, result, started_at, now, facebook_find, instagram_find)
+        except ExistenceCheckError:
+            mark(row["id"], status="failed", error=_needs_verification_error(err))
+            return "failed", None
+        if found:
+            mark(row["id"], status="published",
+                 published_at=datetime.datetime.now(datetime.timezone.utc).isoformat().replace("+00:00", "Z"),
+                 post_id=str(found), error=None)
+            return "published", str(found)
+    mark(row["id"], status="failed", error=err[:400])
+    return "failed", None
 
 
 def _retry_attempts(error):
@@ -289,6 +354,7 @@ def main():
             if pkey is not None:
                 run_count[pkey] = run_count.get(pkey, 0) + 1
             print(f"[DRY] would publish {label}"); continue
+        started_at = datetime.datetime.now(datetime.timezone.utc)
         try:
             res = publish_row(r, linkedin_target=li_target)
         except Exception as e:
@@ -301,11 +367,13 @@ def main():
                 run_count[pkey] = run_count.get(pkey, 0) + 1
             print(f"OK  {label} -> {res.get('post_id')}"); ok += 1
         else:
-            err = str(res.get("error"))
-            if r.get("network") == "linkedin" and _is_linkedin_auth_error(err):
-                err = "AUTH_BLOCKED: " + err
-            queue.mark(r["id"], status="failed", error=err[:400])
-            print(f"ERR {label} -> {res.get('error')}")
+            outcome, found_id = settle_failed_publish(r, res, started_at, queue.mark)
+            if outcome == "published":
+                if pkey is not None:
+                    run_count[pkey] = run_count.get(pkey, 0) + 1
+                print(f"OK  {label} -> already live {found_id}"); ok += 1
+            else:
+                print(f"ERR {label} -> {res.get('error')}")
     holds = []
     if deferred:
         holds.append(f"held {deferred} personal-profile post(s) for next run")

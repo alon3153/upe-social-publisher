@@ -40,7 +40,9 @@ def _publish_timeout_sec() -> int:
 
 
 class InstagramPublishError(Exception):
-    pass
+    def __init__(self, message, container_id=None):
+        super().__init__(message)
+        self.container_id = container_id
 
 
 @with_retry(max_attempts=3, base_delay=2.0)
@@ -59,6 +61,22 @@ def _post(url: str, data: dict) -> dict:
         msg = err.get("message", body) if err else body
         raise InstagramPublishError(f"HTTP {r.status_code}: {scrub(msg)}")
     return body
+
+
+def _publish_container(ig_user_id: str, access_token: str, container_id: str) -> str:
+    """Publish a finished container. Retries live inside _post (bounded backoff)."""
+    try:
+        result = _post(
+            f"{GRAPH_API}/{ig_user_id}/media_publish",
+            {"creation_id": container_id, "access_token": access_token},
+        )
+    except InstagramPublishError as exc:
+        raise InstagramPublishError(str(exc), container_id=container_id) from None
+    media_id = result.get("id")
+    if not media_id:
+        raise InstagramPublishError(
+            f"No media id in publish response: {scrub(result)}", container_id=container_id)
+    return media_id
 
 
 def _wait_container_ready(container_id: str, access_token: str) -> None:
@@ -115,15 +133,7 @@ def post_to_account(
         raise InstagramPublishError(f"No container id in response: {scrub(container)}")
 
     _wait_container_ready(container_id, access_token)
-
-    result = _post(
-        f"{GRAPH_API}/{ig_user_id}/media_publish",
-        {"creation_id": container_id, "access_token": access_token},
-    )
-    media_id = result.get("id")
-    if not media_id:
-        raise InstagramPublishError(f"No media id in publish response: {scrub(result)}")
-    return True, media_id
+    return True, _publish_container(ig_user_id, access_token, container_id)
 
 
 def verify_account(ig_user_id: str, access_token: str) -> Tuple[bool, str]:
@@ -195,16 +205,7 @@ def post_carousel(
     if not carousel_id:
         raise InstagramPublishError(f"No carousel container id: {scrub(carousel)}")
     _wait_container_ready(carousel_id, access_token)
-
-    # 3) Publish
-    result = _post(
-        f"{GRAPH_API}/{ig_user_id}/media_publish",
-        {"creation_id": carousel_id, "access_token": access_token},
-    )
-    media_id = result.get("id")
-    if not media_id:
-        raise InstagramPublishError(f"No media id in publish response: {scrub(result)}")
-    return True, media_id
+    return True, _publish_container(ig_user_id, access_token, carousel_id)
 
 
 def publish_carousel(account_key: str, caption: str, image_urls: list) -> dict:
@@ -218,7 +219,10 @@ def publish_carousel(account_key: str, caption: str, image_urls: list) -> dict:
         ok, media_id = post_carousel(ig_user_id, access_token, caption, image_urls)
         return {"success": ok, "account": account_key, "ig_user_id": ig_user_id, "post_id": media_id}
     except InstagramPublishError as e:
-        return {"success": False, "account": account_key, "error": scrub(e)}
+        failure = {"success": False, "account": account_key, "error": scrub(e)}
+        if e.container_id:
+            failure["container_id"] = e.container_id
+        return failure
     except Exception as e:
         return {"success": False, "account": account_key, "error": f"Unexpected: {scrub(e)}"}
 
@@ -273,15 +277,7 @@ def post_reel(
         raise InstagramPublishError(f"No container id in response: {scrub(container)}")
 
     _wait_reels_ready(container_id, access_token)
-
-    result = _post(
-        f"{GRAPH_API}/{ig_user_id}/media_publish",
-        {"creation_id": container_id, "access_token": access_token},
-    )
-    media_id = result.get("id")
-    if not media_id:
-        raise InstagramPublishError(f"No media id in publish response: {scrub(result)}")
-    return True, media_id
+    return True, _publish_container(ig_user_id, access_token, container_id)
 
 
 def publish_reel(account_key: str, caption: str, video_url: str, share_to_feed: bool = True) -> dict:
@@ -295,7 +291,10 @@ def publish_reel(account_key: str, caption: str, video_url: str, share_to_feed: 
         ok, media_id = post_reel(ig_user_id, access_token, caption, video_url, share_to_feed)
         return {"success": ok, "account": account_key, "ig_user_id": ig_user_id, "post_id": media_id}
     except InstagramPublishError as e:
-        return {"success": False, "account": account_key, "error": scrub(e)}
+        failure = {"success": False, "account": account_key, "error": scrub(e)}
+        if e.container_id:
+            failure["container_id"] = e.container_id
+        return failure
     except Exception as e:
         return {"success": False, "account": account_key, "error": f"Unexpected: {scrub(e)}"}
 
@@ -321,6 +320,9 @@ def publish_post(account_key: str, caption: str, image_url: str) -> dict:
             "post_id": media_id,
         }
     except InstagramPublishError as e:
-        return {"success": False, "account": account_key, "error": scrub(e)}
+        failure = {"success": False, "account": account_key, "error": scrub(e)}
+        if e.container_id:
+            failure["container_id"] = e.container_id
+        return failure
     except Exception as e:
         return {"success": False, "account": account_key, "error": f"Unexpected: {scrub(e)}"}
