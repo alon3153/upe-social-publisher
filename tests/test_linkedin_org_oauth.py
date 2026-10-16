@@ -40,11 +40,26 @@ def test_promote_callback_requires_staged_credential(get_advocate):
     assert oauth.promote_callback_token() == 1
 
 
-def test_authorize_url_uses_registered_callback_state(monkeypatch):
+def test_authorize_url_starts_at_the_registered_callback(monkeypatch):
+    """The consent redirect must be issued by the edge function (CSRF nonce +
+    cookie); a hand-built LinkedIn URL with a bare state is refused on return."""
     monkeypatch.setattr(oauth, "CID", "client-id")
     url = oauth.authorize_url()
-    assert "state=main_callback" in url
-    assert "functions%2Fv1%2Flinkedin-oauth" in url
+    assert url.startswith(oauth.REDIRECT + "?")
+    assert "advocate=main_callback" in url
+    assert "linkedin.com" not in url
+    assert "client-id" not in url
+
+
+def test_org_scopes_match_the_edge_function():
+    """scripts/linkedin_org_oauth.SCOPES documents what the function requests for
+    the shared credential; the function's ORG_SCOPES is the value actually sent."""
+    import re, os
+    src = open(os.path.join(os.path.dirname(__file__), "..", "supabase", "functions",
+                            "linkedin-oauth", "handler.ts"), encoding="utf-8").read()
+    m = re.search(r'export const ORG_SCOPES =\s*"([^"]+)"', src)
+    assert m, "ORG_SCOPES not found in handler.ts"
+    assert set(m.group(1).split()) == set(oauth.SCOPES.split())
 
 
 def test_authorize_url_only_requests_scopes_the_app_is_allowed():

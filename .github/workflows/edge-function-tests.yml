@@ -1,0 +1,27 @@
+name: Edge function tests
+
+# The Supabase functions handle public, unauthenticated links (approval clicks,
+# LinkedIn connect). Their request logic lives in handler.ts files that run under
+# Node's TypeScript type-stripping, so the security behaviour (CSRF nonce, token
+# checks, no-overwrite of connected advocates, failed writes never reported as
+# success) is verified on every change without a Deno toolchain.
+on:
+  pull_request:
+    paths:
+      - 'supabase/**'
+      - '.github/workflows/edge-function-tests.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: node --experimental-strip-types --test supabase/tests/*.test.mjs

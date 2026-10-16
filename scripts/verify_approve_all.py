@@ -49,7 +49,7 @@ def main():
     req = urllib.request.Request(f"{FN}?action=approve_all&day={day}&token={token}",
                                  headers={"User-Agent": UA})
     try:
-        with urllib.request.urlopen(req) as r:
+        with urllib.request.urlopen(req, timeout=60) as r:
             print(f"approve_all returned HTTP {r.status}")
     except urllib.error.HTTPError as e:
         print(f"approve_all returned HTTP {e.code}")

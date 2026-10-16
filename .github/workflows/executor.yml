@@ -22,6 +22,7 @@ jobs:
   executor:
     runs-on: ubuntu-latest
     timeout-minutes: 30
+    if: github.event_name == 'schedule' || github.actor == 'alon3153'
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -41,7 +42,8 @@ jobs:
           MS_GRAPH_CLIENT_ID:     ${{ secrets.MS_GRAPH_CLIENT_ID }}
           MS_GRAPH_CLIENT_SECRET: ${{ secrets.MS_GRAPH_CLIENT_SECRET }}
           MS_GRAPH_FROM:          ${{ secrets.MS_GRAPH_FROM }}
-        run: python3 -u scripts/executor.py --max "${{ github.event.inputs.max || '6' }}"
+          MAX_INITIATIVES:        ${{ inputs.max || '6' }}
+        run: python3 -u scripts/executor.py --max "$MAX_INITIATIVES"
       - name: Preserve executor checkpoints
         if: always()
         uses: actions/upload-artifact@v4

@@ -32,6 +32,10 @@ jobs:
         env:
           SUPABASE_URL:              ${{ secrets.SUPABASE_URL }}
           SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
+          APPLY: ${{ inputs.apply == true }}
+          DAY: ${{ inputs.day }}
         run: |
-          python3 scripts/dedupe_approved.py \
-            ${{ inputs.apply && '--apply' || '' }} ${{ inputs.day }}
+          args=()
+          if [ "$APPLY" = "true" ]; then args+=(--apply); fi
+          if [ -n "$DAY" ]; then args+=("$DAY"); fi
+          python3 scripts/dedupe_approved.py "${args[@]}"

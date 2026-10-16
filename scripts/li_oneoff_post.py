@@ -24,7 +24,7 @@ def _diag():
     req = urllib.request.Request(url, headers={"Authorization": f"Bearer {tok}",
         "User-Agent": UA, "X-Restli-Protocol-Version": "2.0.0"})
     try:
-        d = json.loads(urllib.request.urlopen(req).read().decode())
+        d = json.loads(urllib.request.urlopen(req, timeout=60).read().decode())
         for el in d.get("elements", []):
             nm = (el.get("organization~", {}) or {}).get("localizedName", "?")
             print(f"  {el.get('organization')} | role={el.get('role')} state={el.get('state')} | {nm}")

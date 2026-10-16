@@ -19,6 +19,7 @@ jobs:
   watchdog:
     runs-on: ubuntu-latest
     timeout-minutes: 8
+    if: github.event_name == 'schedule' || github.actor == 'alon3153'
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -42,8 +43,9 @@ jobs:
           MS_GRAPH_CLIENT_ID:        ${{ secrets.MS_GRAPH_CLIENT_ID }}
           MS_GRAPH_CLIENT_SECRET:    ${{ secrets.MS_GRAPH_CLIENT_SECRET }}
           MS_GRAPH_FROM:             ${{ secrets.MS_GRAPH_FROM }}
+          CHECK_ONLY:                ${{ inputs.check_only == true }}
         run: |
-          if [ "${{ inputs.check_only }}" = "true" ]; then
+          if [ "$CHECK_ONLY" = "true" ]; then
             python3 scripts/watchdog.py --workflows-only
           else
             python3 scripts/watchdog.py

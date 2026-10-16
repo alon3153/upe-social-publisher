@@ -24,6 +24,8 @@
 <div id="result"></div>
 
 <script>
+// Every value below comes from the URL (attacker-controllable on a public page).
+// Render with textContent / DOM APIs only; no HTML string assembly, no inline handlers.
 const params = new URLSearchParams(window.location.search);
 const code = params.get('code');
 const error = params.get('error');
@@ -31,24 +33,46 @@ const errorDesc = params.get('error_description');
 const state = params.get('state');
 const out = document.getElementById('result');
 
+function el(tag, cls, text) {
+  const e = document.createElement(tag);
+  if (cls) e.className = cls;
+  if (text != null) e.textContent = text;
+  return e;
+}
+function meta(text) {
+  const d = el('div', null, text);
+  d.style.cssText = 'font-size:12px;color:#666;margin-top:10px;';
+  return d;
+}
+
+const box = el('div', 'code-box');
 if (error) {
-  out.innerHTML = `
-    <div class="code-box">
-      <div class="label">❌ שגיאה</div>
-      <div class="code error">${error}</div>
-      ${errorDesc ? `<div style="color:#aaa;margin-top:10px;font-size:13px;">${decodeURIComponent(errorDesc)}</div>` : ''}
-    </div>`;
+  box.appendChild(el('div', 'label', '❌ שגיאה'));
+  box.appendChild(el('div', 'code error', error));
+  if (errorDesc) {
+    const d = el('div', null, errorDesc);
+    d.style.cssText = 'color:#aaa;margin-top:10px;font-size:13px;';
+    box.appendChild(d);
+  }
+  out.appendChild(box);
 } else if (code) {
-  out.innerHTML = `
-    <div class="code-box">
-      <div class="label">✅ קוד אימות (לחץ להעתקה)</div>
-      <div class="code" id="code-text">${code}</div>
-      <button onclick="navigator.clipboard.writeText('${code}'); this.textContent='הועתק ✓'">📋 העתק קוד</button>
-    </div>
-    ${state ? `<div style="font-size:12px;color:#666;margin-top:10px;">state: ${state}</div>` : ''}
-    <p class="sub" style="margin-top:30px;">חזור לטרמינל והדבק את הקוד בבקשה.</p>`;
+  box.appendChild(el('div', 'label', '✅ קוד אימות (לחץ להעתקה)'));
+  const codeEl = el('div', 'code', code);
+  codeEl.id = 'code-text';
+  box.appendChild(codeEl);
+  const btn = el('button', null, '📋 העתק קוד');
+  btn.addEventListener('click', () => {
+    navigator.clipboard.writeText(code).then(() => { btn.textContent = 'הועתק ✓'; });
+  });
+  box.appendChild(btn);
+  out.appendChild(box);
+  if (state) out.appendChild(meta('state: ' + state));
+  const hint = el('p', 'sub', 'חזור לטרמינל והדבק את הקוד בבקשה.');
+  hint.style.marginTop = '30px';
+  out.appendChild(hint);
 } else {
-  out.innerHTML = `<div class="code-box"><div class="error">לא נמצא קוד או שגיאה ב-URL</div></div>`;
+  box.appendChild(el('div', 'error', 'לא נמצא קוד או שגיאה ב-URL'));
+  out.appendChild(box);
 }
 </script>
 

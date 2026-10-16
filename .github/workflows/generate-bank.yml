@@ -18,6 +18,7 @@ jobs:
   generate:
     runs-on: ubuntu-latest
     timeout-minutes: 20
+    if: github.event_name == 'schedule' || github.actor == 'alon3153'
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -26,7 +27,8 @@ jobs:
       - name: Generate posts
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
-        run: python3 scripts/generate_posts.py --count "${{ inputs.count || 7 }}"
+          COUNT: ${{ inputs.count || 7 }}
+        run: python3 scripts/generate_posts.py --count "$COUNT"
       - name: Commit new bank days
         run: |
           git config user.name  "upe-bank-generator"

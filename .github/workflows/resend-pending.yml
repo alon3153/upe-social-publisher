@@ -33,4 +33,5 @@ jobs:
           MS_GRAPH_CLIENT_ID: ${{ secrets.MS_GRAPH_CLIENT_ID }}
           MS_GRAPH_CLIENT_SECRET: ${{ secrets.MS_GRAPH_CLIENT_SECRET }}
           MS_GRAPH_FROM: ${{ secrets.MS_GRAPH_FROM }}
-        run: python3 scripts/resend_pending.py "${{ github.event.inputs.min_age_days }}"
+          MIN_AGE_DAYS: ${{ inputs.min_age_days }}
+        run: python3 scripts/resend_pending.py "$MIN_AGE_DAYS"
