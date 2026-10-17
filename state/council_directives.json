@@ -1,23 +1,40 @@
 {
-  "updated_at": "2026-10-16",
+  "updated_at": "2026-10-17",
   "source": "daily-council",
   "directives": [
     {
       "category": "safe_auto",
-      "action": "ניסוי LinkedIn: פוסטים מפרופיל אישי של מנהל (לא דף חברה) — 2 פוסטים/שבוע",
+      "action": "ניסוי hashtag/topic ב-TikTok: בדוק 3 גישות תיוג שונות (אירועי B2B עברי, MICE אנגלי, תיוג יעד-ספציפי) — תצפית reach לפי גישה לאורך 3 שבועות",
       "detail": "הצעה לבדיקה על בסיס המדד המתועד; לא בוצע שינוי.",
-      "channel": "linkedin",
+      "channel": "tiktok",
       "evidence": {
         "source": "scorecard",
-        "metric": "נוכחות סושיאל (רצפה)",
-        "value": 14.0,
-        "target": 5,
-        "unit": "",
-        "status": "✅"
+        "metric": "צמיחת חשיפות",
+        "value": -76.5,
+        "target": 10,
+        "unit": "%",
+        "status": "❌"
       },
       "status": "candidate",
       "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
-      "success_metric": "נוכחות סושיאל (רצפה): בסיס 14.0; יעד המדד 5. יש להשוות תקופות תואמות."
+      "success_metric": "צמיחת חשיפות: בסיס -76.5; יעד המדד 10. יש להשוות תקופות תואמות."
+    },
+    {
+      "category": "safe_auto",
+      "action": "בדיקת אנגל תוכן אורגני לשאילתות opportunity: הכן קווי תוכן לשאלות GSC ב-positions 14-20 (הפקת אירועים לחברות, הפקת נופש חברה) — הצעה לפרסום בלבד, כפופה לאישור",
+      "detail": "הצעה לבדיקה על בסיס המדד המתועד; לא בוצע שינוי.",
+      "channel": "google_organic_geo",
+      "evidence": {
+        "source": "scorecard",
+        "metric": "מונחי מעקב ב-Top-3",
+        "value": 1,
+        "target": 3,
+        "unit": "",
+        "status": "❌"
+      },
+      "status": "candidate",
+      "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
+      "success_metric": "מונחי מעקב ב-Top-3: בסיס 1; יעד המדד 3. יש להשוות תקופות תואמות."
     }
   ],
   "channel_cadence": {
@@ -34,11 +51,11 @@
       "reason": "מכסה מוצעת לבדיקה בתקופת המדידה; אין מסקנה סיבתית על אלגוריתם."
     },
     "tiktok": {
-      "max_posts_per_week": 3,
+      "max_posts_per_week": 2,
       "reason": "מכסה מוצעת לבדיקה בתקופת המדידה; אין מסקנה סיבתית על אלגוריתם."
     },
     "youtube": {
-      "max_posts_per_week": 2,
+      "max_posts_per_week": 1,
       "reason": "מכסה מוצעת לבדיקה בתקופת המדידה; אין מסקנה סיבתית על אלגוריתם."
     }
   },
