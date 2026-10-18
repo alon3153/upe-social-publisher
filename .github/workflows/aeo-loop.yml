@@ -38,6 +38,12 @@ jobs:
         with:
           python-version: "3.12"
 
+      # aeo_publish runs uproduction-astro's scripts/check-canonical-facts.mjs; pin the
+      # site's Node version instead of relying on the runner default.
+      - uses: actions/setup-node@v5
+        with:
+          node-version: "22"
+
       - name: Install deps
         run: pip install -r requirements.txt -r requirements-dev.txt
 
@@ -70,7 +76,8 @@ jobs:
           fi
 
       - name: Persist scorecard history + citation/veto state
-        if: ${{ inputs.dry_run != true }}
+        # !cancelled(): a blocked run (exit 1) must still persist the scorecard it paid for.
+        if: ${{ !cancelled() && inputs.dry_run != true }}
         run: |
           git config user.name "upe-aeo-bot"
           git config user.email "alon@upe.co.il"

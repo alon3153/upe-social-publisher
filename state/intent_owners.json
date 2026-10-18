@@ -1,0 +1,107 @@
+{
+  "source": "AEO plan-to-70-2026-10-09.md section 4 + 2F, PR #203 review, and AEO recheck 18.10.2026 (every URL checked live: 200, self-canonical, in sitemap). Edit with AEO; an intent listed here never gets a new generated page, only a strengthen-existing brief.",
+  "updated": "2026-10-18",
+  "owners": {
+    "bh_il_kenes": [
+      "/הפקת-כנסים/"
+    ],
+    "bh_il_hitech": [
+      "/כנסים-לחברות-הייטק/"
+    ],
+    "bh_il_gala": [
+      "/hafakat-erev-gala/"
+    ],
+    "bh_il_europe": [
+      "/טיולי-תמריץ-בחול/",
+      "/טיולי-תמריץ-לחברות/"
+    ],
+    "bh_il_nofesh": [
+      "/טיולי-תמריץ-בחול/",
+      "/טיולי-תמריץ-לחברות/"
+    ],
+    "bh_il_criteria": [
+      "/טיולי-תמריץ-בחול/",
+      "/בוטיק-מול-סוכנות-אירועים-גדולה/"
+    ],
+    "bh_il_greece": [
+      "/אירוע-חברה-ביוון/",
+      "/אירוע-חברה-בקפריסין/"
+    ],
+    "bh_en_il_mice": [
+      "/en/israel-mice-event-production-agencies/"
+    ],
+    "bh_en_il_tech": [
+      "/en/corporate-incentive-travel-event-production/"
+    ],
+    "ex_es_congresos": [
+      "/es/organizacion-congresos-espana/"
+    ],
+    "ex_es_agencias_bcn": [
+      "/es/eventos-corporativos-barcelona-guia-empresas-2026/"
+    ],
+    "ex_es_bcn_incentivo": [
+      "/es/viajes-de-incentivo-para-empresas/"
+    ],
+    "ex_es_retiro": [
+      "/es/retiros-corporativos-espana-europa-guia-completa/"
+    ],
+    "ex_en_europe_mid": [
+      "/en/corporate-event-production-europe-10-to-25000-attendees/"
+    ],
+    "ex_en_destination": [
+      "/en/corporate-event-production-europe-10-to-25000-attendees/",
+      "/en/boutique-vs-large-event-agency/",
+      "/en/choosing-global-corporate-event-conference-production-company/"
+    ],
+    "ex_en_boutique_eu": [
+      "/en/boutique-global-corporate-conference-production/"
+    ],
+    "ps_conf_global": [
+      "/en/corporate-conference-producer-incentive-travel/"
+    ],
+    "cmp_vs_bcd": [
+      "/en/boutique-vs-large-event-agency/"
+    ],
+    "cmp_il_boutique": [
+      "/בוטיק-מול-סוכנות-אירועים-גדולה/"
+    ],
+    "ex_es_boutique": [
+      "/es/productora-boutique-vs-grandes-redes-eventos-corporativos/"
+    ],
+    "ps_dmc_spain": [
+      "/en/event-production-in-spain-everything-international-companies-need-to-know/",
+      "/en/incentive-travel-to-spain-the-ultimate-planning-guide-for-international-companie/"
+    ],
+    "cmp_full_service": [
+      "/en/choosing-global-corporate-event-conference-production-company/"
+    ],
+    "ex_es_elegir": [
+      "/es/guia-elegir-productora-eventos-corporativos-conferencias-globales/"
+    ]
+  },
+  "service_pages": {
+    "he": [
+      "/הפקת-כנסים/",
+      "/טיולי-תמריץ-בחול/",
+      "/טיולי-תמריץ-לחברות/",
+      "/hafakat-erev-gala/",
+      "/כנסים-לחברות-הייטק/"
+    ],
+    "en": [
+      "/en/corporate-event-production-europe-10-to-25000-attendees/",
+      "/en/corporate-conference-producer-incentive-travel/",
+      "/en/boutique-vs-large-event-agency/",
+      "/en/israel-mice-event-production-agencies/"
+    ],
+    "es": [
+      "/es/organizacion-congresos-espana/",
+      "/es/viajes-de-incentivo-para-empresas/",
+      "/es/eventos-corporativos-barcelona-guia-empresas-2026/"
+    ]
+  },
+  "open_decisions": {
+    "ps_il_incentive": "AEO optional: both incentive pages (/טיולי-תמריץ-בחול/, /טיולי-תמריץ-לחברות/)",
+    "cmp_il_criteria": "AEO optional: /איך-בוחרים-חברת-הפקת-אירועים-עסקיים/",
+    "bh_il_spain": "unmapped: SEO decision"
+  }
+}
