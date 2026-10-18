@@ -1,20 +1,20 @@
 {
-  "updated_at": "2026-10-17",
+  "updated_at": "2026-10-18",
   "scores": {
     "instagram": 42,
     "facebook": 35,
     "tiktok": 58,
-    "linkedin": 22,
+    "linkedin": 18,
     "youtube": 30,
-    "google_organic_geo": 24,
-    "overall": 61
+    "google_organic_geo": 22,
+    "overall": 55
   },
   "recommendations": [
     {
       "category": "gated",
       "priority": "P0",
       "action_key": "salesforce-attribution-fix",
-      "owner": "מנהל CRM מטמיע; אלון מאשר ומפיץ",
+      "owner": "executor drafts; Alon approves",
       "success_metric": "ייחוס לידים: בסיס לא-מיוחס; יעד המדד מקור אמיתי. יש להשוות תקופות תואמות.",
       "evidence": {
         "source": "scorecard",
@@ -24,9 +24,9 @@
         "unit": "",
         "status": "❌"
       },
-      "evidence_url": "https://israelseofreelancer.com/blog/israel-b2b-seo-pipeline",
-      "target_url": "Uproduction Operations/Marketing-Council/verification-2026-09-13/lead-source-guidance.md",
-      "action": "הפץ את טיוטת הנחיית הייחוס הקיימת (2769e4c7, נכתבה 2026-09-13, טרם הופצה): הגדר כללי UTM ברורים להפרדת Web-Organic מ-Web-Paid ומ-Outbound; בדוק רשומות Other/Web מול ראיה תועדת לפי הנחיה ba98f3b0 ו-5e8e44d0 — אסור לשנות ספירת הלידים הכוללת",
+      "evidence_url": null,
+      "target_url": null,
+      "action": "הפץ את טיוטת הנחיית ייחוס המקורות (deliverable שהוכן 2026-09-13, טרם הופץ) לצוות המכירות — הגדר כללי סיווג ברורים בין Web, Web-Organic, Google Ads ו-Outbound; אל תשנה רשומות קיימות ללא ראיה מתועדת",
       "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
       "channel": "leads",
       "status": "candidate",
@@ -34,43 +34,21 @@
     },
     {
       "category": "gated",
-      "priority": "P0",
-      "action_key": "linkedin-executive-posting",
-      "owner": "מנהל שיווק מכין טיוטות; מנכ\"ל/מנהל בכיר מאשר ומפרסם",
-      "success_metric": "נוכחות סושיאל (רצפה): בסיס 13.0; יעד המדד 5. יש להשוות תקופות תואמות.",
+      "priority": "P1",
+      "action_key": "tiktok-behind-scenes",
+      "owner": "executor drafts; Alon approves",
+      "success_metric": "נוכחות סושיאל (רצפה): בסיס 11.0; יעד המדד 5. יש להשוות תקופות תואמות.",
       "evidence": {
         "source": "scorecard",
         "metric": "נוכחות סושיאל (רצפה)",
-        "value": 13.0,
+        "value": 11.0,
         "target": 5,
         "unit": "",
         "status": "✅"
       },
-      "evidence_url": "https://www.tryordinal.com/blog/linkedin-marketing-strategy",
-      "target_url": "https://www.linkedin.com/feed/update/urn:li:share:7516031946754453505",
-      "action": "הפעל initiative d477123a: הכן 2 טיוטות/שבוע לפרופיל אישי של מנהל בפורמט carousel קצר (3 שקפים) עם נתון ממשי מהפקה — לפי מדריך הנחיות שנשמר; כל פוסט ממתין לאישור מפורש לפני פרסום; אין להבטיח reach",
-      "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
-      "channel": "linkedin",
-      "status": "candidate",
-      "detail": "הצעה לבדיקה על בסיס המדד המתועד; לא בוצע שינוי."
-    },
-    {
-      "category": "gated",
-      "priority": "P1",
-      "action_key": "tiktok-behind-scenes",
-      "owner": "צוות הפקה מצלם; מנהל שיווק עורך; אלון מאשר",
-      "success_metric": "צמיחת חשיפות: בסיס -76.5; יעד המדד 10. יש להשוות תקופות תואמות.",
-      "evidence": {
-        "source": "scorecard",
-        "metric": "צמיחת חשיפות",
-        "value": -76.5,
-        "target": 10,
-        "unit": "%",
-        "status": "❌"
-      },
-      "evidence_url": "https://www.digitalapplied.com/blog/linkedin-algorithm-2026-engagement-strategy-guide",
+      "evidence_url": "https://tlinky.com/organic-tiktok-strategy/",
       "target_url": null,
-      "action": "הפעל initiative dc82116b: 2 קליפים מאחורי הקלעים (60 שניות, vertical) מהפקה אמיתית; פרסם ב-TikTok ושתף ב-Instagram Reels לחיסכון בתפוקה; בדוק 3 גישות hashtag שונות לניסוי מדיד — כל קליפ ממתין לאישור מפורש",
+      "action": "הפק 3 קליפים (60 שניות, vertical, authentic) מהפקה בשבוע הקרוב — פרסם ב-TikTok ושתף ב-Instagram Reels לחיסכון בתפוקה; בחן 2 פתיחות שונות (שאלת רוכש מול behind-the-scenes) לניתוח; זהו המשך initiative dc82116b",
       "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
       "channel": "tiktok",
       "status": "candidate",
