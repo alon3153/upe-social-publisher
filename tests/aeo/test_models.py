@@ -1,3 +1,4 @@
+import pytest
 import importlib
 
 
@@ -203,3 +204,56 @@ def test_ask_meta_gemini_unmasks_vertexai_redirects(monkeypatch):
 
     out = m.ask_meta("gemini", "hi", _http=fake_http, grounded=True)
     assert out["citations"] == ["clutch.co", "https://real.com/page"]
+
+
+# --- PR #203 regression: a max_tokens stop must not be returned as a finished page ---
+
+def test_require_complete_raises_on_max_tokens():
+    import json, pytest
+    import scripts.aeo_models as am
+
+    def http(url, data, headers):
+        return json.dumps({"content": [{"type": "text", "text": "…מזג אוויר קי"}], "stop_reason": "max_tokens"})
+    with pytest.raises(am.TruncatedOutputError):
+        am.ask("claude", "p", max_tokens=4096, _http=http, require_complete=True)
+    assert am.ask("claude", "p", _http=http) == "…מזג אוויר קי"  # default behaviour unchanged
+
+    def ok(url, data, headers):
+        return json.dumps({"content": [{"type": "text", "text": "Done."}], "stop_reason": "end_turn"})
+    assert am.ask("claude", "p", _http=ok, require_complete=True) == "Done."
+
+
+
+@pytest.mark.parametrize("model,payload", [
+    ("chatgpt", {"choices": [{"message": {"content": "cut"}, "finish_reason": "length"}]}),
+    ("gemini", {"candidates": [{"content": {"parts": [{"text": "cut"}]}, "finishReason": "MAX_TOKENS"}]}),
+    ("claude", {"content": [{"type": "text", "text": "cut"}], "stop_reason": "max_tokens"}),
+])
+def test_length_stops_raise_for_every_provider(model, payload, monkeypatch):
+    import json
+    import scripts.aeo_models as am
+    monkeypatch.setenv("GEMINI_API_KEY", "x")
+    with pytest.raises(am.TruncatedOutputError):
+        am.ask(model, "p", _http=lambda u, d, h: json.dumps(payload), require_complete=True)
+
+
+@pytest.mark.parametrize("model,payload", [
+    ("claude", {"content": [{"type": "text", "text": "Done."}], "stop_reason": "stop_sequence"}),
+    ("chatgpt", {"choices": [{"message": {"content": "Done."}, "finish_reason": "stop"}]}),
+    ("gemini", {"candidates": [{"content": {"parts": [{"text": "Done."}]}, "finishReason": "STOP"}]}),
+])
+def test_natural_stops_pass(model, payload):
+    import json
+    import scripts.aeo_models as am
+    assert am.ask(model, "p", _http=lambda u, d, h: json.dumps(payload), require_complete=True) == "Done."
+
+
+def test_openai_responses_incomplete_raises_and_completed_passes():
+    import json
+    import scripts.aeo_models as am
+    def resp(status):
+        return lambda u, d, h: json.dumps({"status": status, "output": [
+            {"type": "message", "content": [{"type": "output_text", "text": "x."}]}]})
+    with pytest.raises(am.TruncatedOutputError):
+        am.ask("chatgpt", "p", _http=resp("incomplete"), grounded=True, require_complete=True)
+    assert am.ask("chatgpt", "p", _http=resp("completed"), grounded=True, require_complete=True) == "x."

@@ -9,13 +9,13 @@ BRIEF = {"type": "category_guide", "topic": "choosing a global event producer",
 def fake_ask(model, prompt):
     meta = json.dumps({
         "title": "How to choose a global corporate event production company",
-        "description": "A practical guide. Uproduction Events — 16 years, 1,500+ events across 130+ destinations.",
+        "description": "A practical guide. Uproduction Events — operating since 2010, 1,500+ events across 130+ destinations.",
         "h1": "Choosing a global event production company",
         "slug": "choose-global-event-production-company",
         "faqs": [{"question": "What is event production?",
-                  "answer": "It is the end-to-end planning and delivery of corporate events."}],
+                  "answer": "It is the end-to-end planning and delivery of corporate events, as Uproduction Events does."}],
     })
-    return meta + "\n===BODY===\n## Overview\nUproduction Events produces corporate events worldwide.\n"
+    return meta + "\n===BODY===\nUproduction Events has operated since 2010. See [conferences](/en/corporate-conference-producer-incentive-travel/) and [Europe](/en/corporate-event-production-europe-10-to-25000-attendees/).\n\n## Overview\nUproduction Events produces corporate events worldwide.\n"
 
 
 def test_generate_page_builds_valid_frontmatter():
@@ -58,7 +58,7 @@ def test_guard_violation_is_regenerated_not_dropped():
         assert "REJECTED" in prompt and "2,000" in prompt  # correction was fed back
         meta = json.dumps({"title": "A global event production guide", "description": "d",
                            "h1": "h", "slug": "guide-clean", "faqs": []})
-        return meta + "\n===BODY===\nUproduction Events — 16 years, 1,500+ events.\n"
+        return meta + "\n===BODY===\nUproduction Events has operated since 2010. See [conferences](/en/corporate-conference-producer-incentive-travel/) and [Europe](/en/corporate-event-production-europe-10-to-25000-attendees/).\n\nUproduction Events — operating since 2010, 1,500+ events.\n"
 
     page = gen.generate_page(BRIEF, "en", flaky_ask, "2026-06-28")
     assert page["violations"] == []
@@ -120,7 +120,7 @@ def test_missing_keys_trigger_regeneration_before_fallback():
         assert "h1" in prompt  # correction named the missing field
         meta = json.dumps({"title": "T", "description": "d", "h1": "Real H1",
                            "slug": "real-slug", "faqs": []})
-        return meta + "\n===BODY===\nUproduction Events — 16 years.\n"
+        return meta + "\n===BODY===\nUproduction Events has operated since 2010. See [conferences](/en/corporate-conference-producer-incentive-travel/) and [Europe](/en/corporate-event-production-europe-10-to-25000-attendees/).\n\nUproduction Events — operating since 2010.\n"
 
     page = gen.generate_page(BRIEF, "en", flaky_ask, "2026-07-31")
     assert page["frontmatter"]["h1"] == "Real H1"
@@ -173,3 +173,16 @@ def test_destination_violation_cannot_escape_final_attempt():
         return json.dumps({"title": "Guide", "description": "d", "h1": "Maritz", "slug": "guide"}) + "\n===BODY===\nBuyer criteria"
     page = gen.generate_page(BRIEF, "en", ask, "2026-09-13")
     assert any("destination competitor guard" in x for x in page["violations"])
+
+
+
+def test_model_cannot_opt_a_faq_into_schema():
+    # AEO recheck 18.10 blocker 4
+    def ask(model, prompt):
+        meta = {"title": "T", "description": "d", "h1": "h", "slug": "s",
+                "faqs": [{"question": "q", "answer": "Uproduction Events answers.", "excludeFromSchema": False}]}
+        return json.dumps(meta) + "\n===BODY===\nUproduction Events. [a](/en/a/) [b](/en/b/)."
+    page = gen.generate_page(BRIEF, "en", ask, "2026-10-18")
+    assert "excludeFromSchema" not in page["frontmatter"]["faqs"][0]
+    md = gen.to_markdown({"faqs": [{"question": "q", "answer": "a.", "excludeFromSchema": False}]}, "b.")
+    assert "excludeFromSchema: false" not in md and "    excludeFromSchema: true" in md

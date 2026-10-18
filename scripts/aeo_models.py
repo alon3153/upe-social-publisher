@@ -17,6 +17,18 @@ MODEL_LABELS = {"claude": "Claude", "chatgpt": "ChatGPT", "gemini": "Gemini"}
 _KEY_ENV = {"claude": "ANTHROPIC_API_KEY", "chatgpt": "OPENAI_API_KEY", "gemini": "GEMINI_API_KEY"}
 
 
+# Stop reasons that mean the model finished on its own. Anything else (Claude
+# "max_tokens", OpenAI "length"/"incomplete", Gemini "MAX_TOKENS") is a cut-off answer.
+# PR #203 (11.10.2026) shipped two Hebrew pages that ended mid-word because the
+# generator asked for 4096 tokens and never looked at stop_reason.
+COMPLETE_STOP_REASONS = {"end_turn", "stop_sequence", "stop", "completed", "STOP"}
+HTTP_TIMEOUT = int(os.environ.get("AEO_HTTP_TIMEOUT", "300"))
+
+
+class TruncatedOutputError(RuntimeError):
+    """The model stopped before finishing (token limit or similar)."""
+
+
 def available_models():
     return [m for m in ("claude", "chatgpt", "gemini") if os.environ.get(_KEY_ENV[m])]
 
@@ -24,15 +36,20 @@ def available_models():
 def _post(url, data, headers):
     req = urllib.request.Request(url, data=data, headers=headers, method="POST")
     try:
-        with urllib.request.urlopen(req, timeout=180) as r:
+        with urllib.request.urlopen(req, timeout=HTTP_TIMEOUT) as r:
             return r.read().decode("utf-8")
     except urllib.error.HTTPError as e:
         body = e.read().decode("utf-8", errors="replace")[:400]
         raise RuntimeError(f"HTTP {e.code} from {url}: {body}") from None
 
 
-def ask(model, prompt, system="", max_tokens=4096, _http=None, grounded=False):
-    return ask_meta(model, prompt, system, max_tokens, _http, grounded)["text"]
+def ask(model, prompt, system="", max_tokens=4096, _http=None, grounded=False, require_complete=False):
+    meta = ask_meta(model, prompt, system, max_tokens, _http, grounded)
+    if require_complete and meta.get("stop_reason") not in COMPLETE_STOP_REASONS:
+        raise TruncatedOutputError(
+            f"{model} output incomplete (stop_reason={meta.get('stop_reason')!r}, "
+            f"max_tokens={max_tokens}, {len(meta.get('text') or '')} chars)")
+    return meta["text"]
 
 
 def ask_meta(model, prompt, system="", max_tokens=4096, _http=None, grounded=False):
@@ -89,7 +106,8 @@ def _ask_once(model, prompt, system, max_tokens, _http, grounded):
                 for r in b.get("content") or []:
                     if isinstance(r, dict):
                         cites.append(r.get("url", ""))
-        return {"text": "".join(text).strip(), "citations": _dedup(cites)}
+        return {"text": "".join(text).strip(), "citations": _dedup(cites),
+                "stop_reason": data.get("stop_reason")}
     if model == "chatgpt":
         headers = {"authorization": f"Bearer {os.environ.get('OPENAI_API_KEY','')}", "content-type": "application/json"}
         if grounded:
@@ -119,16 +137,18 @@ def _ask_once(model, prompt, system, max_tokens, _http, grounded):
                 # empty grounded answer is a failed instrument, not an empty opinion --
                 # raise so ask_meta labels it instead of banking a blank as data
                 raise RuntimeError(f"openai responses returned no text (status={data.get('status')!r})")
-            return {"text": text, "citations": _dedup(cites)}
+            return {"text": text, "citations": _dedup(cites), "stop_reason": data.get("status")}
         body = {"model": os.environ.get("AEO_OPENAI_MODEL") or "gpt-4o",
                 "max_tokens": max_tokens,
                 "messages": ([{"role": "system", "content": system}] if system else []) +
                             [{"role": "user", "content": prompt}]}
         data = json.loads(http("https://api.openai.com/v1/chat/completions", json.dumps(body).encode(), headers))
-        msg = data["choices"][0]["message"]
+        choice = data["choices"][0]
+        msg = choice["message"]
         cites = [a.get("url_citation", {}).get("url", "") for a in msg.get("annotations") or []
                  if a.get("type") == "url_citation"]
-        return {"text": msg["content"].strip(), "citations": _dedup(cites)}
+        return {"text": msg["content"].strip(), "citations": _dedup(cites),
+                "stop_reason": choice.get("finish_reason")}
     if model == "gemini":
         mdl = os.environ.get("AEO_GEMINI_MODEL") or "gemini-2.5-flash"
         key = os.environ.get("GEMINI_API_KEY", "")
@@ -147,5 +167,6 @@ def _ask_once(model, prompt, system, max_tokens, _http, grounded):
             uri, title = web.get("uri", ""), web.get("title", "")
             # gemini masks sources behind a vertexaisearch redirect; title carries the real domain
             cites.append(title if ("vertexaisearch" in uri and title) else uri)
-        return {"text": "".join(p.get("text", "") for p in parts).strip(), "citations": _dedup(cites)}
+        return {"text": "".join(p.get("text", "") for p in parts).strip(), "citations": _dedup(cites),
+                "stop_reason": cand.get("finishReason")}
     raise ValueError(f"unknown model {model}")

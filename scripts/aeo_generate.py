@@ -1,11 +1,12 @@
 """Generate astro-schema markdown pages for a content brief, in he/en/es, with guards."""
 import json, re
 import aeo_guards
+import aeo_policy
 
 COLLECTION = {"category_guide": "blog", "comparison": "blog", "trust": "services"}
 SCHEMA_TYPE = {"category_guide": "Article", "comparison": "Article", "trust": "WebPage"}
 
-CANON_LINE = "Uproduction Events — 16 years, 1,500+ events across 130+ destinations, 25K+ participants."
+CANON_LINE = "Uproduction Events — operating since 2010, 1,500+ events across 130+ destinations, 25K+ participants."
 
 BODY_DELIM = "===BODY==="
 
@@ -15,15 +16,24 @@ MAX_GEN_ATTEMPTS = 3
 
 GEN_SYSTEM = (
     "You write factual, non-promotional GEO/AEO web content for Uproduction Events (upe.co.il), a boutique global "
-    "corporate event & conference production company. STRICT FACTS — the ONLY company stats you may state: founded 2010, "
-    "16 years, 1,500+ events, 130+ destinations, 25K+ participants. NEVER write 200+, 2000, 120+, 800+, or 27 years. "
+    "corporate event & conference production company. STRICT FACTS — the ONLY company stats you may state: operating "
+    "since 2010, 1,500+ events, 130+ destinations, 25K+ participants. NEVER write 'founded in 2010' or any company age "
+    "in years (no '16 years'), and NEVER write 200+, 2000, 120+, 800+, or 27 years. "
     "NEVER state the year a specific event took place. Write the way clients actually search; do not keyword-stuff.\n"
     "Reply in EXACTLY this format and nothing else:\n"
     'A single-line JSON object with metadata: {"title":str,"description":str,"h1":str,"slug":str,'
     '"faqs":[{"question":str,"answer":str}]}\n'
     "Then a line containing only ===BODY===\n"
     "Then the article body in Markdown (free to use newlines, quotes, headings, lists).\n"
-    "Keep every JSON string value on a single line with no raw newlines."
+    "Keep every JSON string value on a single line with no raw newlines.\n"
+    "Finish the article: the body and every FAQ answer must end with a complete sentence.\n"
+    "IRON RULES (a page that breaks one is rejected): never call Uproduction Events leading, premier, best, "
+    "number one or any superlative (no מובילה / ביותר / הכי); state no prices or budget ranges; state no "
+    "planning lead times (months/weeks/days), group sizes, headcounts or event frequencies; no percentages "
+    "or multipliers unless the same line carries an inline source link; never name clients or hotel chains; "
+    "never mention an office in Barcelona; never promise, guarantee or mention insurance coverage as a UPE "
+    "commitment. Mention Uproduction Events by name in the first paragraph and in at least one FAQ answer, "
+    "and link to at least two of the Uproduction pages listed in the prompt using root-relative Markdown links."
 )
 
 
@@ -72,6 +82,9 @@ def _normalize_payload(payload, brief):
     brief is always publishable (see MAX_GEN_ATTEMPTS / 'never drop a page')."""
     p = dict(payload)
     p.setdefault("faqs", [])
+    # keep only question/answer: the model must not set excludeFromSchema (or anything else)
+    p["faqs"] = [{"question": str(f.get("question", "")), "answer": str(f.get("answer", ""))}
+                 for f in (p["faqs"] or []) if isinstance(f, dict)]
     title = (p.get("title") or p.get("h1") or brief["topic"]).strip()
     p["title"] = title
     p["h1"] = (p.get("h1") or title).strip()
@@ -109,8 +122,19 @@ def _build_page(brief, lang, payload, body, date):
     }
     text_to_check = json.dumps(fm, ensure_ascii=False) + "\n" + body
     violations = (aeo_guards.check_content(text_to_check)
-                  + aeo_guards.destination_violations(text_to_check))
-    return {"collection": COLLECTION[brief["type"]], "lang": lang, "slug": slug_base,
+                  + aeo_guards.destination_violations(text_to_check)
+                  + aeo_guards.completeness_violations(body, fm["faqs"])
+                  + aeo_policy.page_violations(fm, body))
+    collection = COLLECTION[brief["type"]]
+    if collection != "blog" and fm["faqs"]:
+        # Only the blog schema has `excludeFromSchema` (uproduction-astro #215). The
+        # services schema would strip the flag and could emit unreviewed FAQPage, so
+        # services pages carry their FAQs as plain visible text instead.
+        heading = {"he": "שאלות נפוצות", "es": "Preguntas frecuentes"}.get(lang, "FAQ")
+        qa = "\n\n".join(f"### {f['question']}\n\n{f['answer']}" for f in fm["faqs"])
+        body = f"{body.rstrip()}\n\n## {heading}\n\n{qa}\n"
+        fm.pop("faqs")
+    return {"collection": collection, "lang": lang, "slug": slug_base,
             "intent": brief.get("intent"),
             "frontmatter": fm, "body": body, "violations": violations}
 
@@ -119,8 +143,10 @@ def _correction(violations):
     return (
         "\n\nYOUR PREVIOUS DRAFT WAS REJECTED by an automated fact-guard with these violations: "
         f"{violations}. Regenerate the ENTIRE page and remove every offending token. "
-        "State NO company statistic other than the five allowed facts (founded 2010, 16 years, "
-        "1,500+ events, 130+ destinations, 25K+ participants); if you need a number for venue size, "
+        "State NO company statistic other than the four allowed facts (operating since 2010, "
+        "1,500+ events, 130+ destinations, 25K+ participants), never a company age in years or a founding "
+        "year; obey every IRON RULE (no superlatives about UPE, prices, lead times, group sizes, client names, "
+        "Barcelona office, promises/insurance; brand in the first paragraph; 2+ internal links); if you need a number for venue size, "
         "headcount or budget, rephrase to avoid 2000/2,000/200+/120+/800+, and never place a "
         "2011-2024 year next to an event/case mention. Do not name competing firms: "
         "replace a company roster with buyer criteria and neutral service-model tradeoffs."
@@ -151,7 +177,9 @@ def generate_page(brief, lang, ask_fn, date):
         + (f" (lost on: {', '.join(brief.get('lost_on') or [])})" if brief.get("lost_on") else "")
         + ".\n"
         f"{_differentiation_line(brief)}\n"
-        f"Include 3-5 FAQs (40-80 word answers). Write the body in {lang}."
+        f"Include 3-5 FAQs (40-80 word answers). Write the body in {lang}.\n"
+        f"Uproduction pages you may link to (use at least two, root-relative): "
+        f"{', '.join(aeo_policy.service_pages(lang)) or '/'}"
     )
     correction = ""
     page = None
@@ -201,6 +229,11 @@ def to_markdown(frontmatter, body):
             for f in v:
                 lines.append(f"  - question: {_yaml_scalar(f['question'])}")
                 lines.append(f"    answer: {_yaml_scalar(f['answer'])}")
+                # Generated FAQs stay visible but out of FAQPage until AEO reviews them
+                # (uproduction-astro blog schema supports this since #215 / b779c37).
+                # Always true, whatever the model returned: opting a pair into FAQPage is a
+                # manual AEO decision in the PR, never the generator's.
+                lines.append("    excludeFromSchema: true")
         elif isinstance(v, (list, dict)):
             lines.append(f"{k}: {json.dumps(v, ensure_ascii=False)}")
         else:

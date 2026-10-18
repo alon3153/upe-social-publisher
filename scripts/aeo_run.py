@@ -4,11 +4,14 @@ from pathlib import Path
 
 import aeo_models, aeo_probe, aeo_gaps, aeo_generate, aeo_guards, aeo_publish, aeo_report
 import aeo_intents
+import aeo_policy
 import citations_pipeline
 import held_pages
 import indexnow_ping
 
 ROOT = Path(__file__).resolve().parent
+# 4096 cut both Hebrew pages of PR #203 mid-word (Hebrew costs ~2x the tokens of English).
+GEN_MAX_TOKENS = int(os.environ.get("AEO_GEN_MAX_TOKENS", "12000"))
 HISTORY = ROOT / "aeo_history.json"
 TARGETS = json.loads((ROOT / "kpi_targets.json").read_text(encoding="utf-8"))["aeo_targets"]
 _QDOC = json.loads((ROOT / "aeo_questions.json").read_text(encoding="utf-8"))
@@ -31,7 +34,8 @@ def run(repo, dry_run, ask_fn=None, judge_fn=None, send_fn=None, runner=None, to
     # generation and judging stay ungrounded.
     grounded = os.environ.get("AEO_GROUNDED", "1") != "0"
     probe_fn = probe_fn or ask_fn or (lambda model, text: aeo_models.ask_meta(model, text, grounded=grounded))
-    ask_fn = ask_fn or (lambda model, text: aeo_models.ask(model, text))
+    ask_fn = ask_fn or (lambda model, text: aeo_models.ask(
+        model, text, max_tokens=GEN_MAX_TOKENS, require_complete=True))
     models = aeo_models.available_models() or ["claude"]
     failures = [f"{m}: no key" for m in ("chatgpt", "gemini") if m not in models]
     # The judge scores EVERY model's answers, so pinning it to one provider made that
@@ -86,12 +90,23 @@ def run(repo, dry_run, ask_fn=None, judge_fn=None, send_fn=None, runner=None, to
     except FileNotFoundError:
         pass  # no pipeline state — behave as before
 
+    # Cannibalization (AEO plan-to-70 section 4): an intent that already has an owner
+    # URL gets a strengthen-existing brief in the weekly email, never a new page.
+    briefs, strengthen = aeo_policy.split_owned(briefs)
+    citations_status += aeo_policy.strengthen_html(strengthen)
+
     pages = []
+    blocked = []  # truncated / incomplete / non-canonical output fails the whole run
+    content_tasks = []  # blocked briefs become manual tasks for CONTENT in the weekly email
     held_now = []
     comparative = []
     for brief in briefs:
         try:
             rendered = aeo_generate.render_brief(brief, ask_fn, today)
+        except aeo_models.TruncatedOutputError as e:
+            blocked.append(f"truncated output for {brief['type']}: {str(e)[:160]}")
+            content_tasks.append(aeo_policy.content_task(brief, ["truncated model output"]))
+            continue
         except Exception as e:  # generation error for one brief must not kill the whole run
             failures.append(f"generation failed for {brief['type']} ({type(e).__name__}: {str(e)[:160]})")
             continue
@@ -109,18 +124,29 @@ def run(repo, dry_run, ask_fn=None, judge_fn=None, send_fn=None, runner=None, to
                 page["_competitors"] = comp
                 problems += aeo_guards.comparative_violations(body, comp)
             if problems:
-                failures.append(f"guard rejected {page['slug']}: {problems}")
+                # one line per violation so the weekly email lists every reason
+                failures.extend(f"guard rejected {page['slug']}: {p}" for p in problems)
+                if any(aeo_guards.is_blocking(p) for p in problems):
+                    reasons = [p for p in problems if aeo_guards.is_blocking(p)]
+                    blocked.append(f"{page['slug']}: {reasons}")
+                    content_tasks.append(aeo_policy.content_task(brief, reasons))
                 continue
             if comp:
                 comparative.append({"slug": page["slug"], "competitors": comp})
             pages.append(page)
+
+    citations_status += aeo_policy.content_tasks_html(content_tasks)
+    if blocked:
+        # Do not open a partial PR: a cut-off or non-canonical page means the run is broken.
+        failures.append("RUN BLOCKED, no PR opened: " + " | ".join(blocked))
+        pages = []
 
     # Founder-veto window (council 05.07): persist newly-held competitor-naming
     # pages instead of discarding them, and merge any prior-held page whose 24h
     # window has elapsed and that Alon did not veto. The weekly email surfaces
     # what's held + when it will merge.
     merged_from_hold = []
-    if not dry_run:
+    if not dry_run and not blocked:
         held_pages.hold(held_now, today)
         merged_from_hold = held_pages.due_for_merge(today)
         pages.extend(merged_from_hold)
@@ -131,10 +157,12 @@ def run(repo, dry_run, ask_fn=None, judge_fn=None, send_fn=None, runner=None, to
     if runner:
         pub_kwargs["runner"] = runner
     try:
-        publish = aeo_publish.publish(astro_repo, pages, f"aeo/{today}", today, **pub_kwargs) if pages else \
+        # draft/** never triggers uproduction-astro's auto-merge.yml.
+        publish = aeo_publish.publish(astro_repo, pages, f"draft/aeo-{today}", today, **pub_kwargs) if pages else \
             {"branch": None, "files": [], "pr_url": None, "dry_run": dry_run}
     except (ValueError, RuntimeError) as exc:
         failures.append(f"publication preflight failed: {exc}")
+        blocked.append(f"publication preflight: {str(exc)[:300]}")
         publish = {"branch": None, "files": [], "pr_url": None, "dry_run": dry_run}
         pages = []  # no PR means no shipped report, intent recording, or IndexNow ping
         merged_from_hold = []  # retain held entries for review/retry
@@ -173,7 +201,8 @@ def run(repo, dry_run, ask_fn=None, judge_fn=None, send_fn=None, runner=None, to
     return {"scorecard": scorecard, "briefs": briefs, "deferred": deferred,
             "pages": pages, "publish": publish, "email_sent": email_sent,
             "comparative": comparative, "shipped": shipped, "not_live": not_live,
-            "failures": failures}
+            "failures": failures, "blocked": blocked, "strengthen": strengthen,
+            "content_tasks": content_tasks}
 
 
 def main():
@@ -188,6 +217,9 @@ def main():
           f"deferred={out['deferred']} email_sent={out['email_sent']}")
     for f in out.get("failures", []):
         print(f"  FAILURE: {f}")
+    if out.get("blocked"):
+        print("::error::AEO run blocked (truncated/incomplete/non-canonical output); no PR opened.")
+        sys.exit(1)
 
 
 if __name__ == "__main__":
