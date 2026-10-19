@@ -18802,7 +18802,7 @@
     "channel": "leads",
     "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
     "action_key": "salesforce-attribution-fix",
-    "owner": "executor drafts; Alon approves",
+    "owner": "מנהל RevOps מכין; Alon מאשר; CRM Admin מיישם",
     "success_metric": "ייחוס לידים: בסיס לא-מיוחס; יעד המדד מקור אמיתי. יש להשוות תקופות תואמות."
   },
   "2769e4c7": {
@@ -18959,12 +18959,12 @@
     "created": "2026-09-27",
     "updated": "2026-10-06",
     "kind": "recommendation",
-    "priority": "P0",
+    "priority": "P1",
     "channel": "linkedin",
     "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
     "action_key": "linkedin-executive-posting",
-    "owner": "מנהל שיווק מכין טיוטות; מנכ\"ל/מנהל בכיר מאשר ומפרסם",
-    "success_metric": "נוכחות סושיאל (רצפה): בסיס 13.0; יעד המדד 5. יש להשוות תקופות תואמות.",
+    "owner": "מנכ\"ל/מנהל בכיר מספק נתון/סיפור; מרקטינג מכין טיוטה; Alon מאשר לפני כל פרסום",
+    "success_metric": "נוכחות סושיאל (רצפה): בסיס 12.0; יעד המדד 5. יש להשוות תקופות תואמות.",
     "consecutive_failures": 0,
     "merged_from": [
       {
@@ -19026,12 +19026,12 @@
     "created": "2026-09-30",
     "updated": "2026-10-06",
     "kind": "recommendation",
-    "priority": "P1",
+    "priority": "P2",
     "channel": "tiktok",
     "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
     "action_key": "tiktok-behind-scenes",
-    "owner": "executor drafts; Alon approves",
-    "success_metric": "נוכחות סושיאל (רצפה): בסיס 11.0; יעד המדד 5. יש להשוות תקופות תואמות.",
+    "owner": "צוות הפקה מצלם; מרקטינג עורך ומכין; Alon מאשר כל קליפ לפני פרסום",
+    "success_metric": "נוכחות סושיאל (רצפה): בסיס 12.0; יעד המדד 5. יש להשוות תקופות תואמות.",
     "consecutive_failures": 0,
     "merged_from": [
       {
