@@ -1,57 +1,57 @@
 {
-  "updated_at": "2026-10-18",
+  "updated_at": "2026-10-19",
   "source": "daily-council",
   "directives": [
     {
       "category": "safe_auto",
-      "action": "ניסוי TikTok hook-first: בחינת פתיחת 2 שניות עם שאלת רוכש ('כמה עולה הפקת כנס ל-200 איש?') לעומת פתיחת behind-the-scenes — מדידת completion rate ו-reach לכל פורמט ב-4 שבועות",
+      "action": "ניסוי פורמט carousel/document ב-LinkedIn: הכן 2 טיוטות carousel (3-5 שקפים) עם נתון ממשי מהפקה — פורמט זה מייצר dwell-time גבוה יותר ויזכה ל-Depth Score טוב יותר לפי אלגוריתם 2026",
       "detail": "הצעה לבדיקה על בסיס המדד המתועד; לא בוצע שינוי.",
-      "channel": "tiktok",
+      "channel": "linkedin",
       "evidence": {
         "source": "scorecard",
         "metric": "נוכחות סושיאל (רצפה)",
-        "value": 11.0,
+        "value": 12.0,
         "target": 5,
         "unit": "",
         "status": "✅"
       },
       "status": "candidate",
       "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
-      "success_metric": "נוכחות סושיאל (רצפה): בסיס 11.0; יעד המדד 5. יש להשוות תקופות תואמות."
+      "success_metric": "נוכחות סושיאל (רצפה): בסיס 12.0; יעד המדד 5. יש להשוות תקופות תואמות."
     },
     {
       "category": "safe_auto",
-      "action": "כיוון hashtag/נושאי LinkedIn לתקופת Q4: החלפת hashtags כלליים ב-hashtags ספציפיים לקהל יעד (#אירועיחברה #נסיעותתמריץ #HRישראל #CMO) — הנחיה לצינור התוכן הקיים בלבד, ללא פרסום ישיר",
+      "action": "ניסוי 'מנהל מספר לאחד' ב-LinkedIn: הכן טיוטת פוסט אישי לאחד ממנהלי UPE (לא דף החברה) — פרופיל אישי מייצר ~8 מעורבות גבוהה יותר מדף חברה לפי מדידות 2026",
       "detail": "הצעה לבדיקה על בסיס המדד המתועד; לא בוצע שינוי.",
       "channel": "linkedin",
       "evidence": {
         "source": "scorecard",
-        "metric": "מונחי מעקב ב-Top-3",
-        "value": 1,
-        "target": 3,
+        "metric": "נוכחות סושיאל (רצפה)",
+        "value": 12.0,
+        "target": 5,
         "unit": "",
-        "status": "❌"
+        "status": "✅"
       },
       "status": "candidate",
       "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
-      "success_metric": "מונחי מעקב ב-Top-3: בסיס 1; יעד המדד 3. יש להשוות תקופות תואמות."
+      "success_metric": "נוכחות סושיאל (רצפה): בסיס 12.0; יעד המדד 5. יש להשוות תקופות תואמות."
     },
     {
       "category": "safe_auto",
-      "action": "הכנת מפת מונחים ל-Top-3: זיהוי שני המונחים הקרובים לסף (ארגון אירועים בינלאומיים pos. 2.4, טיול חברה pos. 3.0) ומיפוי הדפים המשויכים להם ב-GSC — הפקת דוח מפורט לצוות SEO לאישור לפני כל פעולה בדפים",
+      "action": "ניסוי TikTok: הכן תסריט לקליפ 60 שניות אחד 'מאחורי הקלעים' מהפקה אמיתית — ממשיך initiative dc82116b (tiktok-behind-scenes); אין לחזות reach",
       "detail": "הצעה לבדיקה על בסיס המדד המתועד; לא בוצע שינוי.",
-      "channel": "google_organic_geo",
+      "channel": "tiktok",
       "evidence": {
         "source": "scorecard",
-        "metric": "מונחי מעקב ב-Top-3",
-        "value": 1,
-        "target": 3,
+        "metric": "נוכחות סושיאל (רצפה)",
+        "value": 12.0,
+        "target": 5,
         "unit": "",
-        "status": "❌"
+        "status": "✅"
       },
       "status": "candidate",
       "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
-      "success_metric": "מונחי מעקב ב-Top-3: בסיס 1; יעד המדד 3. יש להשוות תקופות תואמות."
+      "success_metric": "נוכחות סושיאל (רצפה): בסיס 12.0; יעד המדד 5. יש להשוות תקופות תואמות."
     }
   ],
   "channel_cadence": {
@@ -77,11 +77,11 @@
     }
   },
   "channel_priority": [
-    "tiktok",
+    "youtube",
     "instagram",
     "facebook",
-    "youtube",
-    "linkedin"
+    "linkedin",
+    "tiktok"
   ],
   "channel_plan_basis": [
     "facebook: מכסה מוצעת לבדיקה בתקופת המדידה; אין מסקנה סיבתית על אלגוריתם.",
