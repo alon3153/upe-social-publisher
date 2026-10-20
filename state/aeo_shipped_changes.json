@@ -291,7 +291,7 @@
   "measurement_review_2026_10_13": {
     "existing_cloud_report": "https://github.com/alon3153/uproduction-astro/blob/master/reports/gsc-page-reviews-latest.json",
     "coverage_fix_pr": "https://github.com/alon3153/uproduction-astro/pull/208",
-    "coverage_fix_status": "tested_pending_authorized_merge_master_update_rule",
+    "coverage_fix_status": "merged_2026-10-14_cloud_13_page_report_verified_2026-10-20",
     "tests": "60 local measurement tests; PR checks and build successful; nine additional live pages HTTP200 and self-canonical",
     "barcelona_en": {
       "before": {
@@ -318,5 +318,453 @@
       "exact_top10_total_score": null
     },
     "unmeasured_due_pages": "Three September12 baseline pages not in deployed four-page review config. Await PR208 merge; do not represent missing measurements as zero."
+  },
+  "measurement_review_2026_10_20": {
+    "reviewed_at": "2026-10-20",
+    "coverage_fix_pr": "https://github.com/alon3153/uproduction-astro/pull/208",
+    "merged_at": "2026-10-14T04:32:43Z",
+    "report_generated_at": "2026-10-19",
+    "tracked_pages": 13,
+    "measured_pages": [
+      {
+        "url": "https://upe.co.il/en/corporate-events-barcelona-guide/",
+        "windows": {
+          "before": {
+            "startDate": "2026-08-11",
+            "endDate": "2026-09-07"
+          },
+          "after": {
+            "startDate": "2026-09-09",
+            "endDate": "2026-10-06"
+          }
+        },
+        "metrics": {
+          "before": {
+            "clicks": 0,
+            "impressions": 92,
+            "ctr": 0,
+            "position": 42.858695652173914
+          },
+          "after": {
+            "clicks": 0,
+            "impressions": 56,
+            "ctr": 0,
+            "position": 39.660714285714285
+          }
+        }
+      },
+      {
+        "url": "https://upe.co.il/כנסים-לחברות-הייטק/",
+        "historical_baseline": {
+          "change_date": "2026-09-12",
+          "pre_window": {
+            "start": "2026-08-15",
+            "end": "2026-09-11"
+          },
+          "clicks": 0,
+          "impressions": 477,
+          "ctr": 0.0,
+          "position": 49.41509433962264,
+          "note": "September13 frozen final-data evidence. Compare only when windows match; otherwise retain as history, not current baseline."
+        },
+        "windows": {
+          "before": {
+            "startDate": "2026-08-15",
+            "endDate": "2026-09-11"
+          },
+          "after": {
+            "startDate": "2026-09-13",
+            "endDate": "2026-10-10"
+          }
+        },
+        "metrics": {
+          "before": {
+            "clicks": 0,
+            "impressions": 477,
+            "ctr": 0,
+            "position": 49.41509433962264
+          },
+          "after": {
+            "clicks": 0,
+            "impressions": 263,
+            "ctr": 0,
+            "position": 37.68821292775665
+          }
+        }
+      },
+      {
+        "url": "https://upe.co.il/en/international-conference-production-tech-companies/",
+        "historical_baseline": {
+          "change_date": "2026-09-12",
+          "pre_window": {
+            "start": "2026-08-15",
+            "end": "2026-09-11"
+          },
+          "clicks": 0,
+          "impressions": 39,
+          "ctr": 0.0,
+          "position": 38.8974358974359,
+          "note": "September13 frozen final-data evidence. Compare only when windows match; otherwise retain as history, not current baseline."
+        },
+        "windows": {
+          "before": {
+            "startDate": "2026-08-15",
+            "endDate": "2026-09-11"
+          },
+          "after": {
+            "startDate": "2026-09-13",
+            "endDate": "2026-10-10"
+          }
+        },
+        "metrics": {
+          "before": {
+            "clicks": 0,
+            "impressions": 39,
+            "ctr": 0,
+            "position": 38.8974358974359
+          },
+          "after": {
+            "clicks": 0,
+            "impressions": 9,
+            "ctr": 0,
+            "position": 41.111111111111114
+          }
+        }
+      },
+      {
+        "url": "https://upe.co.il/en/corporate-conference-production-outside-the-us/",
+        "historical_baseline": {
+          "change_date": "2026-09-12",
+          "pre_window": {
+            "start": "2026-08-15",
+            "end": "2026-09-11"
+          },
+          "clicks": 0,
+          "impressions": 4,
+          "ctr": 0.0,
+          "position": 6.5,
+          "note": "September13 frozen final-data evidence. Compare only when windows match; otherwise retain as history, not current baseline."
+        },
+        "windows": {
+          "before": {
+            "startDate": "2026-08-15",
+            "endDate": "2026-09-11"
+          },
+          "after": {
+            "startDate": "2026-09-13",
+            "endDate": "2026-10-10"
+          }
+        },
+        "metrics": {
+          "before": {
+            "clicks": 0,
+            "impressions": 4,
+            "ctr": 0,
+            "position": 6.5
+          },
+          "after": {
+            "clicks": 0,
+            "impressions": 9,
+            "ctr": 0,
+            "position": 6
+          }
+        }
+      },
+      {
+        "url": "https://upe.co.il/en/event-production-costs-europe-2026/",
+        "windows": {
+          "before": {
+            "startDate": "2026-08-17",
+            "endDate": "2026-09-13"
+          },
+          "after": {
+            "startDate": "2026-09-15",
+            "endDate": "2026-10-12"
+          }
+        },
+        "metrics": {
+          "before": {
+            "clicks": 1,
+            "impressions": 54,
+            "ctr": 0.018518518518518517,
+            "position": 6.111111111111111
+          },
+          "after": {
+            "clicks": 1,
+            "impressions": 41,
+            "ctr": 0.024390243902439025,
+            "position": 5.658536585365853
+          }
+        }
+      }
+    ],
+    "waiting_pages": [
+      {
+        "url": "https://upe.co.il/en/choosing-global-corporate-event-conference-production-company/",
+        "changed_at": "2026-09-23",
+        "status": "waiting_final_data",
+        "collect_not_before": "2026-10-24"
+      },
+      {
+        "url": "https://upe.co.il/es/eventos-corporativos-barcelona-guia-empresas-2026/",
+        "changed_at": "2026-10-10",
+        "status": "waiting_final_data",
+        "collect_not_before": "2026-11-10"
+      },
+      {
+        "url": "https://upe.co.il/en/incentive-travel-to-spain-the-ultimate-planning-guide-for-international-companie/",
+        "changed_at": "2026-10-10",
+        "status": "waiting_final_data",
+        "collect_not_before": "2026-11-10"
+      },
+      {
+        "url": "https://upe.co.il/הפקת-כנסים/",
+        "changed_at": "2026-09-28",
+        "status": "waiting_final_data",
+        "collect_not_before": "2026-10-29"
+      },
+      {
+        "url": "https://upe.co.il/en/boutique-global-corporate-conference-production/",
+        "changed_at": "2026-10-11",
+        "status": "waiting_final_data",
+        "collect_not_before": "2026-11-11"
+      },
+      {
+        "url": "https://upe.co.il/en/boutique-vs-large-event-agency/",
+        "changed_at": "2026-09-28",
+        "status": "waiting_final_data",
+        "collect_not_before": "2026-10-29"
+      },
+      {
+        "url": "https://upe.co.il/בוטיק-מול-סוכנות-אירועים-גדולה/",
+        "changed_at": "2026-09-28",
+        "status": "waiting_final_data",
+        "collect_not_before": "2026-10-29"
+      },
+      {
+        "url": "https://upe.co.il/en/faq-corporate-event-venues-europe/",
+        "changed_at": "2026-09-27",
+        "status": "waiting_final_data",
+        "collect_not_before": "2026-10-28"
+      }
+    ],
+    "category_snapshot": {
+      "measured_at": "2026-10-19T04:32:25.654632+00:00",
+      "method": "serpapi-google",
+      "cohort": "aaf546d73c2324a7",
+      "metric": "first_page_organic_visibility",
+      "top10": {
+        "verified_queries": 9,
+        "found": 5,
+        "score": null
+      },
+      "context": {
+        "en": {
+          "gl": "es",
+          "hl": "en"
+        },
+        "es": {
+          "gl": "es",
+          "hl": "es"
+        },
+        "he": {
+          "gl": "il",
+          "hl": "iw"
+        },
+        "device": "desktop",
+        "scope": "first-page-organic-up-to-10",
+        "max_results": 10
+      },
+      "engines": {
+        "google": {
+          "measured": 30,
+          "total": 30,
+          "found": 5,
+          "score": 16.7
+        },
+        "bing": {
+          "measured": 0,
+          "total": 30,
+          "found": null,
+          "score": null
+        },
+        "perplexity": {
+          "measured": 0,
+          "total": 30,
+          "found": null,
+          "score": null
+        }
+      },
+      "status": "complete",
+      "by_category": {
+        "authority": {
+          "found": 0,
+          "measured": 1,
+          "total": 1,
+          "score": 0.0
+        },
+        "brand": {
+          "found": 1,
+          "measured": 3,
+          "total": 3,
+          "score": 33.3
+        },
+        "content": {
+          "found": 0,
+          "measured": 5,
+          "total": 5,
+          "score": 0.0
+        },
+        "local": {
+          "found": 1,
+          "measured": 4,
+          "total": 4,
+          "score": 25.0
+        },
+        "service": {
+          "found": 3,
+          "measured": 17,
+          "total": 17,
+          "score": 17.6
+        }
+      },
+      "by_language": {
+        "en": {
+          "found": 4,
+          "measured": 15,
+          "total": 15,
+          "score": 26.7
+        },
+        "es": {
+          "found": 0,
+          "measured": 8,
+          "total": 8,
+          "score": 0.0
+        },
+        "he": {
+          "found": 1,
+          "measured": 7,
+          "total": 7,
+          "score": 14.3
+        }
+      },
+      "by_language_group": {
+        "en_es": {
+          "found": 4,
+          "measured": 23,
+          "total": 23,
+          "score": 17.4
+        },
+        "he": {
+          "found": 1,
+          "measured": 7,
+          "total": 7,
+          "score": 14.3
+        }
+      },
+      "rank_changes": [
+        {
+          "q": "best corporate event company in Israel",
+          "lang": "en",
+          "before": 9,
+          "now": 6,
+          "change": 3
+        },
+        {
+          "q": "corporate event production company Tel Aviv",
+          "lang": "en",
+          "before": null,
+          "now": 5,
+          "change": null
+        },
+        {
+          "q": "MICE services Israel",
+          "lang": "en",
+          "before": null,
+          "now": 5,
+          "change": null
+        },
+        {
+          "q": "conference production company Europe",
+          "lang": "en",
+          "before": null,
+          "now": 3,
+          "change": null
+        },
+        {
+          "q": "חברת אינסנטיב לחו\"ל",
+          "lang": "he",
+          "before": null,
+          "now": 7,
+          "change": null
+        }
+      ],
+      "comparison_baseline": {
+        "measured_at": "2026-10-14T10:24:42.273975+00:00",
+        "method": "serpapi-google",
+        "cohort": "aaf546d73c2324a7",
+        "context": {
+          "en": {
+            "gl": "es",
+            "hl": "en"
+          },
+          "es": {
+            "gl": "es",
+            "hl": "es"
+          },
+          "he": {
+            "gl": "il",
+            "hl": "iw"
+          },
+          "device": "desktop",
+          "scope": "first-page-organic-up-to-10",
+          "max_results": 10
+        }
+      },
+      "entered_first_page": [
+        {
+          "q": "corporate event production company Tel Aviv",
+          "lang": "en"
+        },
+        {
+          "q": "MICE services Israel",
+          "lang": "en"
+        },
+        {
+          "q": "conference production company Europe",
+          "lang": "en"
+        },
+        {
+          "q": "חברת אינסנטיב לחו\"ל",
+          "lang": "he"
+        }
+      ],
+      "exited_first_page": [],
+      "comparison": "comparable",
+      "unmeasured_reasons": [],
+      "provider_account": {
+        "total_searches_left": 623,
+        "plan_renewal_date": "2026-10-21"
+      }
+    },
+    "aeo_coverage": {
+      "weekly_date": "2026-10-18",
+      "weekly_chatgpt": "16/36 answers; 20 credit-related errors, not a complete battery. Zero reputation/brand recall are not valid absence measurements when no branded answers returned.",
+      "daily_date": "2026-10-19",
+      "daily_chatgpt": "32/32 nonbranded answers; previous credit error not reproduced",
+      "daily_gemini": "31/32 answers; one JSON parse failure. Treat as partial, not a complete comparison.",
+      "action": "No paid rerun or credit purchase. Retain raw history; do not interpret partial batteries as complete."
+    },
+    "council": {
+      "date": "2026-10-19",
+      "run_id": 39242039494,
+      "json_and_html_on_main": true,
+      "gsc_window": [
+        "2026-10-13",
+        "2026-10-19"
+      ],
+      "note": "Seven inclusive calendar days. Headline current-week totals are not substituted for matched final-data page windows."
+    },
+    "decision": "No page rewrite: five matched final-data comparisons do not establish a click gain; remaining eight pages still within documented observation/final-data windows. Preserve newer reviewed dates in deployed config."
   }
 }
