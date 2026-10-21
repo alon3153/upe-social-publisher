@@ -18802,7 +18802,7 @@
     "channel": "leads",
     "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
     "action_key": "salesforce-attribution-fix",
-    "owner": "מנהל CRM מכין; אלון מאשר לפני הפצה",
+    "owner": "מנהל CRM מכין; Alon מאשר ומפיץ",
     "success_metric": "ייחוס לידים: בסיס לא-מיוחס; יעד המדד מקור אמיתי. יש להשוות תקופות תואמות."
   },
   "2769e4c7": {
@@ -18959,12 +18959,12 @@
     "created": "2026-09-27",
     "updated": "2026-10-06",
     "kind": "recommendation",
-    "priority": "P0",
+    "priority": "P1",
     "channel": "linkedin",
     "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
     "action_key": "linkedin-executive-posting",
-    "owner": "מנהל תוכן מכין טיוטות; אלון מאשר כל פוסט לפני פרסום",
-    "success_metric": "נוכחות סושיאל (רצפה): בסיס 15.0; יעד המדד 5. יש להשוות תקופות תואמות.",
+    "owner": "מנהל תוכן מכין טיוטות; Alon ו-מנהל בכיר נוסף מאשרים ומפרסמים",
+    "success_metric": "מונחי מעקב ב-Top-3: בסיס 1; יעד המדד 3. יש להשוות תקופות תואמות.",
     "consecutive_failures": 0,
     "merged_from": [
       {
@@ -19030,7 +19030,7 @@
     "channel": "tiktok",
     "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
     "action_key": "tiktok-behind-scenes",
-    "owner": "צלם/עורך מכין; אלון מאשר כל קליפ לפני פרסום",
+    "owner": "צלם/עורך מכין; Alon מאשר כל קליפ לפני פרסום",
     "success_metric": "צמיחת חשיפות: בסיס -95.8; יעד המדד 10. יש להשוות תקופות תואמות.",
     "consecutive_failures": 0,
     "merged_from": [
@@ -19076,6 +19076,29 @@
     "action_key": "opportunity-page-gsc-audit",
     "owner": "SEO lead מבצע audit; Alon מאשר כל שינוי תוכן",
     "success_metric": "מונחי מעקב ב-Top-3: בסיס 1; יעד המדד 3. יש להשוות תקופות תואמות.",
+    "consecutive_failures": 0
+  },
+  "a177161f": {
+    "id": "a177161f",
+    "title": "הכן רשימת 10 פרסומים ישראליים רלוונטיים (HR פורטל, MICE Israel, כלכלה ועסקים) לdigital PR מבוסס נתוני UPE (1,500+ אירועים, 130+ יעדים) — בקש ציטוט מומחה, לא ליגיטציה. הדפס טיוטה לאישור Alon לפני פנייה.",
+    "status": "awaiting_approval",
+    "revisions": 1,
+    "history": [
+      {
+        "date": "2026-10-21",
+        "summary": "הוכנה רשימת 10 פרסומים ישראליים רלוונטיים לDigital PR של UPE (HR פורטל, כלכליסט, TheMarker, גלובס, ICX, HRD, ניהול אנשים, Geektime, MICE Israel, פורבס ישראל) עם טיוטות ציטוט מומחה, תבנית מייל פנייה גנרית וטבלת עדיפויות — המסמך מוכן לאישור Alon לפני כל פנייה חיצונית.",
+        "ready": true
+      }
+    ],
+    "created": "2026-10-21",
+    "updated": "2026-10-21",
+    "kind": "recommendation",
+    "priority": "P0",
+    "channel": "google_organic_geo",
+    "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
+    "action_key": "organic-authority-backlink-outreach",
+    "owner": "מנהל SEO מכין רשימת יעדים; Alon מאשר פנייה",
+    "success_metric": "קליקים אורגניים/שבוע: בסיס 36; יעד המדד 300. יש להשוות תקופות תואמות.",
     "consecutive_failures": 0
   }
 }
