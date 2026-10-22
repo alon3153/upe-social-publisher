@@ -1,20 +1,20 @@
 {
-  "updated_at": "2026-10-21",
+  "updated_at": "2026-10-22",
   "scores": {
-    "instagram": 40,
-    "facebook": 38,
-    "tiktok": 30,
-    "linkedin": 25,
-    "youtube": 42,
+    "instagram": 42,
+    "facebook": 18,
+    "tiktok": 35,
+    "linkedin": 22,
+    "youtube": 30,
     "google_organic_geo": 28,
-    "overall": 62
+    "overall": 58
   },
   "recommendations": [
     {
       "category": "gated",
       "priority": "P0",
       "action_key": "salesforce-attribution-fix",
-      "owner": "מנהל CRM מכין; Alon מאשר ומפיץ",
+      "owner": "Ops/CRM מכין נוהל; Alon מאשר לפני הפצה",
       "success_metric": "ייחוס לידים: בסיס לא-מיוחס; יעד המדד מקור אמיתי. יש להשוות תקופות תואמות.",
       "evidence": {
         "source": "scorecard",
@@ -26,7 +26,7 @@
       },
       "evidence_url": null,
       "target_url": null,
-      "action": "הפץ את טיוטת הנחיית ייחוס המקורות הקיימת (2769e4c7, נכתבה 2026-09-13, טרם הופצה). הנחה את צוות המכירות להבחין בין Google Organic לתנועה ממומנת באמצעות UTM/referrer מתועד, לא הצהרת לקוח בלבד.",
+      "action": "הפץ את טיוטת הנחיית ייחוס המקורות (deliverable קיים: lead-source-guidance.md, מוכן מ-2026-09-13, לא הופץ) — הוסף אבחנה בין Google Organic ל-Google Ads ב-Salesforce; הכשר צוות מכירות לסווג נכון רשומות נכנסות חדשות. אין לשנות רשומות היסטוריות.",
       "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
       "channel": "leads",
       "status": "candidate",
@@ -34,31 +34,9 @@
     },
     {
       "category": "gated",
-      "priority": "P0",
-      "action_key": "organic-authority-backlink-outreach",
-      "owner": "מנהל SEO מכין רשימת יעדים; Alon מאשר פנייה",
-      "success_metric": "קליקים אורגניים/שבוע: בסיס 36; יעד המדד 300. יש להשוות תקופות תואמות.",
-      "evidence": {
-        "source": "scorecard",
-        "metric": "קליקים אורגניים/שבוע",
-        "value": 36,
-        "target": 300,
-        "unit": "",
-        "status": "❌"
-      },
-      "evidence_url": "https://brandwisp.com/link-building-for-b2b-5-strategies-that-actually-work-in-2026/",
-      "target_url": "https://upe.co.il/הפקת-אירועים-עסקיים/",
-      "action": "הכן רשימת 10 פרסומים ישראליים רלוונטיים (HR פורטל, MICE Israel, כלכלה ועסקים) לdigital PR מבוסס נתוני UPE (1,500+ אירועים, 130+ יעדים) — בקש ציטוט מומחה, לא ליגיטציה. הדפס טיוטה לאישור Alon לפני פנייה.",
-      "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
-      "channel": "google_organic_geo",
-      "status": "candidate",
-      "detail": "הצעה לבדיקה על בסיס המדד המתועד; לא בוצע שינוי."
-    },
-    {
-      "category": "gated",
       "priority": "P1",
       "action_key": "linkedin-executive-posting",
-      "owner": "מנהל תוכן מכין טיוטות; Alon ו-מנהל בכיר נוסף מאשרים ומפרסמים",
+      "owner": "מנכ\"ל/מנהל בכיר מכין; עורך תוכן מסייע; Alon מאשר כל פוסט",
       "success_metric": "מונחי מעקב ב-Top-3: בסיס 1; יעד המדד 3. יש להשוות תקופות תואמות.",
       "evidence": {
         "source": "scorecard",
@@ -68,9 +46,9 @@
         "unit": "",
         "status": "❌"
       },
-      "evidence_url": "https://www.tryordinal.com/blog/linkedin-marketing-strategy",
+      "evidence_url": "https://getshft.com/blog/b2b-linkedin-strategy-2026",
       "target_url": null,
-      "action": "הפעל initiative קיים (d477123a): הכן 3 טיוטות פוסט case-study מפרופיל מנכ\"ל בפורמט 'סיפור הפקה + לקח' (טקסט-only, hook בשורה 1). כל טיוטה ממתינה לאישור מפורש. אל תפרסם מדף החברה בלבד.",
+      "action": "הפעל initiative d477123a: הכן 4 טיוטות פוסט (טקסט בלבד, 150-200 מילים, hook ראשון מניח בעיה, case-study ספציפי מהפקה אמיתית, ללא קישור בגוף) מפרופיל מנכ\"ל — שלח לאישור מפורש לפני כל פרסום; תעד impressions לאחר 7 ימים לכל פוסט.",
       "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
       "channel": "linkedin",
       "status": "candidate",
@@ -78,21 +56,21 @@
     },
     {
       "category": "gated",
-      "priority": "P1",
+      "priority": "P2",
       "action_key": "tiktok-behind-scenes",
-      "owner": "צלם/עורך מכין; Alon מאשר כל קליפ לפני פרסום",
-      "success_metric": "צמיחת חשיפות: בסיס -95.8; יעד המדד 10. יש להשוות תקופות תואמות.",
+      "owner": "מפיק תוכן מצלם ועורך; Alon מאשר לפני פרסום",
+      "success_metric": "נוכחות סושיאל (רצפה): בסיס 14.0; יעד המדד 5. יש להשוות תקופות תואמות.",
       "evidence": {
         "source": "scorecard",
-        "metric": "צמיחת חשיפות",
-        "value": -95.8,
-        "target": 10,
-        "unit": "%",
-        "status": "❌"
+        "metric": "נוכחות סושיאל (רצפה)",
+        "value": 14.0,
+        "target": 5,
+        "unit": "",
+        "status": "✅"
       },
       "evidence_url": null,
       "target_url": null,
-      "action": "הפעל initiative קיים (dc82116b): הפק 3 קליפי 'מאחורי הקלעים' (60 שניות, vertical) מהפקה אמיתית בשבוע הקרוב — פרסם ב-TikTok ושתף ב-Instagram Reels לחיסכון בתפוקה. כל קליפ לאישור מפורש.",
+      "action": "הפעל initiative dc82116b: בכל הפקה — צלם 2-3 קליפים vertical 45-60 שניות 'רגע בלתי צפוי מהשטח', ערוך ללא תסריט, פרסם ב-TikTok ושתף ל-Instagram Reels; כל קליפ ממתין לאישור מפורש לפני פרסום.",
       "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
       "channel": "tiktok",
       "status": "candidate",

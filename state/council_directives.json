@@ -1,23 +1,23 @@
 {
-  "updated_at": "2026-10-21",
+  "updated_at": "2026-10-22",
   "source": "daily-council",
   "directives": [
     {
       "category": "safe_auto",
-      "action": "ניסוי hashtag עברי ממוקד LinkedIn: החלף hashtags גנריים ב-#הפקת_אירועים #כנסים_עסקיים #טיולי_תמריץ בכל פוסט LinkedIn בשבועיים הקרובים, ומדוד חשיפות מול 4 הפוסטים הנוכחיים (ממוצע 30.75 חשיפות/פוסט)",
+      "action": "ניסוי TikTok/Reels: בשבוע שבו יש הפקה — צלם קליפ vertical 45-60 שניות 'רגע אחד שלא תכננת' מהשטח; העלה ל-TikTok ושתף ל-Instagram Reels; תעד reach ו-saves לעומת קליפים ללא הפקה — 4 שבועות.",
       "detail": "הצעה לבדיקה על בסיס המדד המתועד; לא בוצע שינוי.",
-      "channel": "linkedin",
+      "channel": "tiktok",
       "evidence": {
         "source": "scorecard",
         "metric": "נוכחות סושיאל (רצפה)",
-        "value": 16.0,
+        "value": 14.0,
         "target": 5,
         "unit": "",
         "status": "✅"
       },
       "status": "candidate",
       "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
-      "success_metric": "נוכחות סושיאל (רצפה): בסיס 16.0; יעד המדד 5. יש להשוות תקופות תואמות."
+      "success_metric": "נוכחות סושיאל (רצפה): בסיס 14.0; יעד המדד 5. יש להשוות תקופות תואמות."
     }
   ],
   "channel_cadence": {
@@ -43,11 +43,11 @@
     }
   },
   "channel_priority": [
-    "youtube",
     "instagram",
-    "facebook",
     "tiktok",
-    "linkedin"
+    "youtube",
+    "linkedin",
+    "facebook"
   ],
   "channel_plan_basis": [
     "facebook: מכסה מוצעת לבדיקה בתקופת המדידה; אין מסקנה סיבתית על אלגוריתם.",
