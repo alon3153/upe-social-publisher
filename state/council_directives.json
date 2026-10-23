@@ -1,23 +1,57 @@
 {
-  "updated_at": "2026-10-22",
+  "updated_at": "2026-10-23",
   "source": "daily-council",
   "directives": [
     {
       "category": "safe_auto",
-      "action": "ניסוי TikTok/Reels: בשבוע שבו יש הפקה — צלם קליפ vertical 45-60 שניות 'רגע אחד שלא תכננת' מהשטח; העלה ל-TikTok ושתף ל-Instagram Reels; תעד reach ו-saves לעומת קליפים ללא הפקה — 4 שבועות.",
+      "action": "ניסוי TikTok: הכן 2 קליפים 'מאחורי הקלעים' (60 שניות, vertical, ללא תסריט) מהפקה אמיתית — הגש לאישור לפי initiative dc82116b; מדד: reach per clip לאחר 48 שעות",
       "detail": "הצעה לבדיקה על בסיס המדד המתועד; לא בוצע שינוי.",
       "channel": "tiktok",
       "evidence": {
         "source": "scorecard",
         "metric": "נוכחות סושיאל (רצפה)",
-        "value": 14.0,
+        "value": 18.0,
         "target": 5,
         "unit": "",
         "status": "✅"
       },
       "status": "candidate",
       "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
-      "success_metric": "נוכחות סושיאל (רצפה): בסיס 14.0; יעד המדד 5. יש להשוות תקופות תואמות."
+      "success_metric": "נוכחות סושיאל (רצפה): בסיס 18.0; יעד המדד 5. יש להשוות תקופות תואמות."
+    },
+    {
+      "category": "safe_auto",
+      "action": "ניסוי מונח SEO: הכן טיוטת אנגל-תוכן למונח 'הפקת אירועים לחברות' (pos. ממוצע 15.2, 354 impressions) — בחן אם הדף הקיים https://upe.co.il/הפקת-אירועים-לחברות/ מכיל CTA ברור; תיעד כ-open issue לפני כל עדכון",
+      "detail": "הצעה לבדיקה על בסיס המדד המתועד; לא בוצע שינוי.",
+      "channel": "google_organic_geo",
+      "evidence": {
+        "source": "scorecard",
+        "metric": "מונחי מעקב ב-Top-3",
+        "value": 1,
+        "target": 3,
+        "unit": "",
+        "status": "❌"
+      },
+      "status": "candidate",
+      "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
+      "success_metric": "מונחי מעקב ב-Top-3: בסיס 1; יעד המדד 3. יש להשוות תקופות תואמות."
+    },
+    {
+      "category": "safe_auto",
+      "action": "ניסוי hashtag/topic ל-Instagram: בדוק אנגלים של פוסטי B2B-insight ('5 החלטות שקובעות') מול פוסטי visual-only — מדד: impressions per post אחרי 7 ימים (baseline: 168 top-post vs 300 סה\"כ 5 פוסטים)",
+      "detail": "הצעה לבדיקה על בסיס המדד המתועד; לא בוצע שינוי.",
+      "channel": "instagram",
+      "evidence": {
+        "source": "scorecard",
+        "metric": "Engagement rate",
+        "value": 0.3,
+        "target": 2.0,
+        "unit": "%",
+        "status": "❌"
+      },
+      "status": "candidate",
+      "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
+      "success_metric": "Engagement rate: בסיס 0.3; יעד המדד 2.0. יש להשוות תקופות תואמות."
     }
   ],
   "channel_cadence": {
@@ -34,7 +68,7 @@
       "reason": "מכסה מוצעת לבדיקה בתקופת המדידה; אין מסקנה סיבתית על אלגוריתם."
     },
     "tiktok": {
-      "max_posts_per_week": 3,
+      "max_posts_per_week": 2,
       "reason": "מכסה מוצעת לבדיקה בתקופת המדידה; אין מסקנה סיבתית על אלגוריתם."
     },
     "youtube": {
@@ -44,10 +78,10 @@
   },
   "channel_priority": [
     "instagram",
-    "tiktok",
     "youtube",
     "linkedin",
-    "facebook"
+    "facebook",
+    "tiktok"
   ],
   "channel_plan_basis": [
     "facebook: מכסה מוצעת לבדיקה בתקופת המדידה; אין מסקנה סיבתית על אלגוריתם.",
