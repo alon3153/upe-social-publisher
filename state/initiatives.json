@@ -19026,12 +19026,12 @@
     "created": "2026-09-30",
     "updated": "2026-10-06",
     "kind": "recommendation",
-    "priority": "P2",
+    "priority": "P1",
     "channel": "tiktok",
     "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
     "action_key": "tiktok-behind-scenes",
-    "owner": "מפיק תוכן מצלם ועורך; Alon מאשר לפני פרסום",
-    "success_metric": "נוכחות סושיאל (רצפה): בסיס 14.0; יעד המדד 5. יש להשוות תקופות תואמות.",
+    "owner": "מפיק תוכן מצלם; אלון מאשר כל קליפ לפני פרסום",
+    "success_metric": "צמיחת חשיפות: בסיס -97.8; יעד המדד 10. יש להשוות תקופות תואמות.",
     "consecutive_failures": 0,
     "merged_from": [
       {
