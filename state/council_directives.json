@@ -1,23 +1,40 @@
 {
-  "updated_at": "2026-10-24",
+  "updated_at": "2026-10-25",
   "source": "daily-council",
   "directives": [
     {
       "category": "safe_auto",
-      "action": "ניסוי hashtag/topic ב-Instagram: בדוק 3 שבועות עם תגיות מיועדות להחלטנים (#מנהלי_HR, #CMO_ישראל, #אירועי_חברה) מול 3 שבועות ללא תגיות, ורשום reach לפי קבוצה; ה-ER הנוכחי (0%) לא מאפשר מסקנה מה עובד.",
+      "action": "ניסוי LinkedIn — פורמט document-carousel לבמאי אירועים: צור 3 טיוטות carousel בפורמט PDF ל-LinkedIn (10 שקפים) בנושאים 'שאלות שחייבים לשאול חברת הפקה לפני חתימה', 'תקציב כנס לחברת הייטק — מה שאף אחד לא מספר', 'לפני ואחרי: ערב גאלה בתקציב vs פרימיום' — פורמטים אלה נמדדים כמייצרים dwell-time גבוה יותר ב-B2B LinkedIn ב-2026, בהתאמה ל-initiative d477123a.",
+      "detail": "הצעה לבדיקה על בסיס המדד המתועד; לא בוצע שינוי.",
+      "channel": "linkedin",
+      "evidence": {
+        "source": "scorecard",
+        "metric": "מונחי מעקב ב-Top-3",
+        "value": 1,
+        "target": 3,
+        "unit": "",
+        "status": "❌"
+      },
+      "status": "candidate",
+      "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
+      "success_metric": "מונחי מעקב ב-Top-3: בסיס 1; יעד המדד 3. יש להשוות תקופות תואמות."
+    },
+    {
+      "category": "safe_auto",
+      "action": "ניסוי Instagram — מבנה תוכן לידים: נסה פורמט 'carousel שאלות לקוח אמיתי' (6 שקפים, עברית) על תהליך בחירת ספק הפקה — מדוד saves ו-profile-visits (לא ER) כ-proxy לכוונת קנייה, ב-0 אינטראקציות שבוע נוכחי מחיה המחשה שפורמט הפוסט הנוכחי אינו מייצר מעורבות.",
       "detail": "הצעה לבדיקה על בסיס המדד המתועד; לא בוצע שינוי.",
       "channel": "instagram",
       "evidence": {
         "source": "scorecard",
         "metric": "Engagement rate",
-        "value": 0.16,
+        "value": 0.22,
         "target": 2.0,
         "unit": "%",
         "status": "❌"
       },
       "status": "candidate",
       "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
-      "success_metric": "Engagement rate: בסיס 0.16; יעד המדד 2.0. יש להשוות תקופות תואמות."
+      "success_metric": "Engagement rate: בסיס 0.22; יעד המדד 2.0. יש להשוות תקופות תואמות."
     }
   ],
   "channel_cadence": {
@@ -38,15 +55,15 @@
       "reason": "מכסה מוצעת לבדיקה בתקופת המדידה; אין מסקנה סיבתית על אלגוריתם."
     },
     "youtube": {
-      "max_posts_per_week": 2,
+      "max_posts_per_week": 1,
       "reason": "מכסה מוצעת לבדיקה בתקופת המדידה; אין מסקנה סיבתית על אלגוריתם."
     }
   },
   "channel_priority": [
-    "instagram",
-    "youtube",
-    "linkedin",
     "tiktok",
+    "instagram",
+    "linkedin",
+    "youtube",
     "facebook"
   ],
   "channel_plan_basis": [

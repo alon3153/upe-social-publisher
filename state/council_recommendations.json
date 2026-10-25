@@ -1,12 +1,12 @@
 {
-  "updated_at": "2026-10-24",
+  "updated_at": "2026-10-25",
   "scores": {
-    "instagram": 42,
-    "facebook": 28,
-    "tiktok": 30,
-    "linkedin": 32,
-    "youtube": 38,
-    "google_organic_geo": 31,
+    "instagram": 38,
+    "facebook": 22,
+    "tiktok": 45,
+    "linkedin": 30,
+    "youtube": 28,
+    "google_organic_geo": 32,
     "overall": 58
   },
   "recommendations": [
@@ -14,7 +14,7 @@
       "category": "gated",
       "priority": "P0",
       "action_key": "salesforce-attribution-fix",
-      "owner": "Ops/RevOps מכין; Alon מאשר הפצה",
+      "owner": "Marketing ops מכין; Alon מאשר הפצה",
       "success_metric": "ייחוס לידים: בסיס לא-מיוחס; יעד המדד מקור אמיתי. יש להשוות תקופות תואמות.",
       "evidence": {
         "source": "scorecard",
@@ -24,9 +24,9 @@
         "unit": "",
         "status": "❌"
       },
-      "evidence_url": null,
+      "evidence_url": "https://www.terminusapp.com/blog/salesforce-utm-capture-lead-source-attribution/",
       "target_url": null,
-      "action": "הפץ את טיוטת הנחיית ייחוס המקורות הקיימת (deliverable salesforce-attribution-fix, status: draft_ready) לצוות המכירות; בדוק רשומות Web ו-Other מול פרטי הפנייה (referer, UTM) לפני עדכון Salesforce — שינוי תווית אינו מוסיף ליד חדש לספירה.",
+      "action": "הפץ את טיוטת הנחיית ייחוס המקורות הקיימת (deliverable: lead-source-guidance.md, initiative 2769e4c7) — הטמע שדות UTM_Source__c / UTM_Medium__c על Lead object, הוסף hidden fields לטופס web-to-lead, ובדוק שה-mapping שורד Lead conversion. אין ליצור הנחיה חדשה — קיימת; רק לאשר ולהפיץ.",
       "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
       "channel": "leads",
       "status": "candidate",
@@ -34,43 +34,21 @@
     },
     {
       "category": "gated",
-      "priority": "P1",
-      "action_key": "linkedin-executive-posting",
-      "owner": "מנכ\"ל/מנהל בכיר מייצר תוכן; Alon מאשר כל פוסט לפני פרסום",
-      "success_metric": "מונחי מעקב ב-Top-3: בסיס 1; יעד המדד 3. יש להשוות תקופות תואמות.",
-      "evidence": {
-        "source": "scorecard",
-        "metric": "מונחי מעקב ב-Top-3",
-        "value": 1,
-        "target": 3,
-        "unit": "",
-        "status": "❌"
-      },
-      "evidence_url": "https://heropost.io/linkedin-b2b-marketing-strategy-2026/",
-      "target_url": null,
-      "action": "הפעל initiative d477123a: הכן 4 טיוטות פוסט (carousel PDF, 3 שקפים) מפרופיל המנכ\"ל — נושאים: case study אמיתי, insight מהשטח, שאלה לקהל HR/CMO. כל פוסט ממתין לאישור; אין קישור חיצוני בגוף הפוסט (suppresses reach). פרסם 3 פוסטים/שבוע מפרופיל אישי לפי cadence שנקבעה.",
-      "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
-      "channel": "linkedin",
-      "status": "candidate",
-      "detail": "הצעה לבדיקה על בסיס המדד המתועד; לא בוצע שינוי."
-    },
-    {
-      "category": "gated",
       "priority": "P2",
       "action_key": "tiktok-behind-scenes",
-      "owner": "צוות שטח מצלם; Alon מאשר כל קליפ לפני פרסום",
-      "success_metric": "נוכחות סושיאל (רצפה): בסיס 14.0; יעד המדד 5. יש להשוות תקופות תואמות.",
+      "owner": "צוות הפקה מצלם; Alon מאשר כל קליפ לפני פרסום",
+      "success_metric": "נוכחות סושיאל (רצפה): בסיס 15.0; יעד המדד 5. יש להשוות תקופות תואמות.",
       "evidence": {
         "source": "scorecard",
         "metric": "נוכחות סושיאל (רצפה)",
-        "value": 14.0,
+        "value": 15.0,
         "target": 5,
         "unit": "",
         "status": "✅"
       },
       "evidence_url": null,
       "target_url": null,
-      "action": "הפעל initiative dc82116b: צלם 2 קליפים 'מאחורי הקלעים' (60 שניות, vertical, ללא תסריט) מהפקה קרובה — פרסם ב-TikTok ושתף ב-Instagram Reels; 0 פוסטים TikTok השבוע הנוכחי מחייב הפעלה מחדש של הצינור.",
+      "action": "אשר והפעל initiative dc82116b (tiktok-behind-scenes): 2 קליפים/שבוע מאחורי הקלעים מהפקה אמיתית (60 שניות, vertical, ללא תסריט); שתף ב-Instagram Reels לחיסכון בתפוקה. שבוע זה: 0 פוסטים TikTok — יש לחדש את הצינור. כל קליפ ממתין לאישור לפני פרסום.",
       "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
       "channel": "tiktok",
       "status": "candidate",
