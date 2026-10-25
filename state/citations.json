@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-20",
+  "updated": "2026-10-25",
   "note": "External authority evidence and actions. needs_verification belongs to automation, remains visible in the weekly digest, and is not an overdue founder decision. Review due items in the existing weekly UPE automation; never infer active membership from historical notes alone.",
   "items": [
     {
@@ -92,7 +92,7 @@
       "target_url": "https://www.g2.com/products/uproduction-events/reviews",
       "kind": "directory",
       "unverifiable": false,
-      "last_check": "2026-10-11",
+      "last_check": "2026-10-25",
       "last_check_result": "cited",
       "last_check_error_type": "HTTPError"
     },
@@ -331,7 +331,7 @@
       "target_url": "https://www.crunchbase.com/organization/uproduction-events",
       "kind": "entity",
       "unverifiable": false,
-      "last_check": "2026-10-18",
+      "last_check": "2026-10-25",
       "last_check_result": "blocked",
       "last_check_error_type": "HTTPError"
     },
@@ -370,8 +370,8 @@
       "target_url": "https://themanifest.com/company/uproduction-events",
       "kind": "directory",
       "unverifiable": false,
-      "last_check": "2026-10-11",
-      "last_check_result": "cited",
+      "last_check": "2026-10-25",
+      "last_check_result": "blocked",
       "last_check_error_type": "HTTPError"
     }
   ]
