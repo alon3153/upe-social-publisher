@@ -1,0 +1,31 @@
+{
+  "day": 315,
+  "category": "social_proof",
+  "language": "es",
+  "date": "",
+  "weekday": "",
+  "theme": "Clients Who Come Back Say It Best",
+  "linkedin": {
+    "profile": "Uproduction Events (Company Page)",
+    "text": "En producción de eventos corporativos, el indicador más honesto no es el número de asistentes.\n\nEs el cliente que vuelve.\n\nEn 16 años hemos entregado más de 1.500 eventos en más de 130 destinos para más de 25.000 participantes. Una parte significativa de ese volumen proviene de clientes que, al cerrar un proyecto, ya estaban abriendo el siguiente.\n\nEn este sector, la reincidencia tiene un solo significado: la experiencia estuvo a la altura de la expectativa — operativa, creativa y comercialmente.\n\nSi estás evaluando partners para tu próxima convención, viaje de incentivo o evento corporativo, con gusto conversamos. Déjame un comentario o escríbeme por mensaje directo."
+  },
+  "instagram": {
+    "profile": "@uproductionevents",
+    "text": "La mejor reseña no viene en un formulario.\n\nViene cuando el cliente te escribe antes de que termine el evento para hablar del próximo.\n\nMás de 1.500 eventos. Más de 130 destinos. Más de 25.000 participantes.\nLa fidelidad del cliente dice más que cualquier calificación.\n\n¿Tienes un evento en mente? Escríbenos por DM. 👇\n\n#EventosCorporativos #ViajesDeIncentivo #ProducciónDeEventos #EventosB2B #RRHH #GalaDinner #TeamBuilding #Convenciones #UproductionEvents"
+  },
+  "facebook": {
+    "profile": "Uproduction Events (Page)",
+    "text": "Hay una frase que escuchamos más que cualquier otra al terminar un evento: '¿Cuándo hacemos el siguiente?'\n\nNo la pedimos. Simplemente pasa cuando el trabajo habla por sí solo.\n\nCon más de 1.500 eventos en más de 130 destinos, esa pregunta se ha convertido en nuestra métrica favorita.\n\nSi estás organizando algo y buscas un equipo que trate tu proyecto como si fuera el único, escríbenos. Nos encargamos del resto."
+  },
+  "image_file": "content/images/book_2027_real.jpg",
+  "image_source": "real_archive_reused",
+  "image_credit": "📷 Un fotograma real de una producción de Uproduction",
+  "brand": {
+    "colors": [
+      "#1C1C1C",
+      "#FBCE0A"
+    ],
+    "font": "Comfortaa",
+    "logo": "uproduction_official_logo.png"
+  }
+}
