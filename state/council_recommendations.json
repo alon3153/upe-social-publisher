@@ -1,12 +1,12 @@
 {
-  "updated_at": "2026-10-25",
+  "updated_at": "2026-10-26",
   "scores": {
-    "instagram": 38,
+    "instagram": 32,
     "facebook": 22,
-    "tiktok": 45,
-    "linkedin": 30,
-    "youtube": 28,
-    "google_organic_geo": 32,
+    "tiktok": 10,
+    "linkedin": 20,
+    "youtube": 15,
+    "google_organic_geo": 22,
     "overall": 58
   },
   "recommendations": [
@@ -14,7 +14,7 @@
       "category": "gated",
       "priority": "P0",
       "action_key": "salesforce-attribution-fix",
-      "owner": "Marketing ops מכין; Alon מאשר הפצה",
+      "owner": "מנהל CRM/Operations מכין; Alon מאשר הפצה",
       "success_metric": "ייחוס לידים: בסיס לא-מיוחס; יעד המדד מקור אמיתי. יש להשוות תקופות תואמות.",
       "evidence": {
         "source": "scorecard",
@@ -24,9 +24,9 @@
         "unit": "",
         "status": "❌"
       },
-      "evidence_url": "https://www.terminusapp.com/blog/salesforce-utm-capture-lead-source-attribution/",
+      "evidence_url": null,
       "target_url": null,
-      "action": "הפץ את טיוטת הנחיית ייחוס המקורות הקיימת (deliverable: lead-source-guidance.md, initiative 2769e4c7) — הטמע שדות UTM_Source__c / UTM_Medium__c על Lead object, הוסף hidden fields לטופס web-to-lead, ובדוק שה-mapping שורד Lead conversion. אין ליצור הנחיה חדשה — קיימת; רק לאשר ולהפיץ.",
+      "action": "הפץ את טיוטת הנחיית ייחוס ה-Salesforce (deliverable שהוכן 13/09/2026, נמצא ב-Uproduction Operations/Marketing-Council/verification-2026-09-13/lead-source-guidance.md) — אישור Alon נדרש לפני הפצה; לאחר הפצה, בדוק ותקן 5 רשומות \"Other\"/\"(none)\" מול ראיה מתועדת (אין שינוי ספירה כוללת)",
       "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
       "channel": "leads",
       "status": "candidate",
@@ -36,19 +36,19 @@
       "category": "gated",
       "priority": "P2",
       "action_key": "tiktok-behind-scenes",
-      "owner": "צוות הפקה מצלם; Alon מאשר כל קליפ לפני פרסום",
-      "success_metric": "נוכחות סושיאל (רצפה): בסיס 15.0; יעד המדד 5. יש להשוות תקופות תואמות.",
+      "owner": "מפיק שטח מצלם; Alon מאשר כל קליפ לפני פרסום",
+      "success_metric": "נוכחות סושיאל (רצפה): בסיס 13.0; יעד המדד 5. יש להשוות תקופות תואמות.",
       "evidence": {
         "source": "scorecard",
         "metric": "נוכחות סושיאל (רצפה)",
-        "value": 15.0,
+        "value": 13.0,
         "target": 5,
         "unit": "",
         "status": "✅"
       },
       "evidence_url": null,
       "target_url": null,
-      "action": "אשר והפעל initiative dc82116b (tiktok-behind-scenes): 2 קליפים/שבוע מאחורי הקלעים מהפקה אמיתית (60 שניות, vertical, ללא תסריט); שתף ב-Instagram Reels לחיסכון בתפוקה. שבוע זה: 0 פוסטים TikTok — יש לחדש את הצינור. כל קליפ ממתין לאישור לפני פרסום.",
+      "action": "הפעל initiative dc82116b: 3 קליפים 60 שניות vertical מהפקה אמיתית בשבוע — פרסם ב-TikTok וכפל ל-Instagram Reels לחיסכון בתפוקה; ללא תסריט, אותנטי; כל קליפ ממתין לאישור מפורש; TikTok כרגע 0 פוסטים — זהו ניסוי ראשוני",
       "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
       "channel": "tiktok",
       "status": "candidate",

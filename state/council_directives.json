@@ -1,12 +1,46 @@
 {
-  "updated_at": "2026-10-25",
+  "updated_at": "2026-10-26",
   "source": "daily-council",
   "directives": [
     {
       "category": "safe_auto",
-      "action": "ניסוי LinkedIn — פורמט document-carousel לבמאי אירועים: צור 3 טיוטות carousel בפורמט PDF ל-LinkedIn (10 שקפים) בנושאים 'שאלות שחייבים לשאול חברת הפקה לפני חתימה', 'תקציב כנס לחברת הייטק — מה שאף אחד לא מספר', 'לפני ואחרי: ערב גאלה בתקציב vs פרימיום' — פורמטים אלה נמדדים כמייצרים dwell-time גבוה יותר ב-B2B LinkedIn ב-2026, בהתאמה ל-initiative d477123a.",
+      "action": "ניסוי LinkedIn: בדוק האם פוסטים מפרופיל אישי של מנכ\"ל/מנהל בכיר (ולא מדף החברה) מגדילים impressions — שמור 3 פוסטים טקסט-בלבד (ללא קישור בגוף) בפורמט case-study קצר ומדוד dwell signals לאחר 14 ימים",
       "detail": "הצעה לבדיקה על בסיס המדד המתועד; לא בוצע שינוי.",
       "channel": "linkedin",
+      "evidence": {
+        "source": "scorecard",
+        "metric": "Engagement rate",
+        "value": 0.26,
+        "target": 2.0,
+        "unit": "%",
+        "status": "❌"
+      },
+      "status": "candidate",
+      "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
+      "success_metric": "Engagement rate: בסיס 0.26; יעד המדד 2.0. יש להשוות תקופות תואמות."
+    },
+    {
+      "category": "safe_auto",
+      "action": "ניסוי Instagram: בחן פורמט carousel (3-5 שקפים, \"5 החלטות שמצילות אירוע משפחות\") מול פוסט תמונה בודדת — בשל ה-0 אינטראקציות השבוע, הצלב נתונים אחרי 2 שבועות לפני הגדלת תדירות",
+      "detail": "הצעה לבדיקה על בסיס המדד המתועד; לא בוצע שינוי.",
+      "channel": "instagram",
+      "evidence": {
+        "source": "scorecard",
+        "metric": "Engagement rate",
+        "value": 0.26,
+        "target": 2.0,
+        "unit": "%",
+        "status": "❌"
+      },
+      "status": "candidate",
+      "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
+      "success_metric": "Engagement rate: בסיס 0.26; יעד המדד 2.0. יש להשוות תקופות תואמות."
+    },
+    {
+      "category": "safe_auto",
+      "action": "זהה בגיליון עבודה אילו מ-4 מונחי ההזדמנות המובילים (הפקת אירועים לחברות pos.15.2, נופש חברה pos.18.3, גיבוש pos.9.1, הפקת אירועים לחברות הייטק pos.18.1) ממופות לדף שלא עבר שינוי מהותי מאז ספטמבר 2026 — רק תיעוד, ללא עריכה",
+      "detail": "הצעה לבדיקה על בסיס המדד המתועד; לא בוצע שינוי.",
+      "channel": "google_organic_geo",
       "evidence": {
         "source": "scorecard",
         "metric": "מונחי מעקב ב-Top-3",
@@ -18,23 +52,6 @@
       "status": "candidate",
       "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
       "success_metric": "מונחי מעקב ב-Top-3: בסיס 1; יעד המדד 3. יש להשוות תקופות תואמות."
-    },
-    {
-      "category": "safe_auto",
-      "action": "ניסוי Instagram — מבנה תוכן לידים: נסה פורמט 'carousel שאלות לקוח אמיתי' (6 שקפים, עברית) על תהליך בחירת ספק הפקה — מדוד saves ו-profile-visits (לא ER) כ-proxy לכוונת קנייה, ב-0 אינטראקציות שבוע נוכחי מחיה המחשה שפורמט הפוסט הנוכחי אינו מייצר מעורבות.",
-      "detail": "הצעה לבדיקה על בסיס המדד המתועד; לא בוצע שינוי.",
-      "channel": "instagram",
-      "evidence": {
-        "source": "scorecard",
-        "metric": "Engagement rate",
-        "value": 0.22,
-        "target": 2.0,
-        "unit": "%",
-        "status": "❌"
-      },
-      "status": "candidate",
-      "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
-      "success_metric": "Engagement rate: בסיס 0.22; יעד המדד 2.0. יש להשוות תקופות תואמות."
     }
   ],
   "channel_cadence": {
@@ -43,7 +60,7 @@
       "reason": "מכסה מוצעת לבדיקה בתקופת המדידה; אין מסקנה סיבתית על אלגוריתם."
     },
     "instagram": {
-      "max_posts_per_week": 4,
+      "max_posts_per_week": 3,
       "reason": "מכסה מוצעת לבדיקה בתקופת המדידה; אין מסקנה סיבתית על אלגוריתם."
     },
     "linkedin": {
@@ -55,16 +72,16 @@
       "reason": "מכסה מוצעת לבדיקה בתקופת המדידה; אין מסקנה סיבתית על אלגוריתם."
     },
     "youtube": {
-      "max_posts_per_week": 1,
+      "max_posts_per_week": 2,
       "reason": "מכסה מוצעת לבדיקה בתקופת המדידה; אין מסקנה סיבתית על אלגוריתם."
     }
   },
   "channel_priority": [
-    "tiktok",
     "instagram",
+    "facebook",
     "linkedin",
     "youtube",
-    "facebook"
+    "tiktok"
   ],
   "channel_plan_basis": [
     "facebook: מכסה מוצעת לבדיקה בתקופת המדידה; אין מסקנה סיבתית על אלגוריתם.",
