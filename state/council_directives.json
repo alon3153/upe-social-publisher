@@ -1,46 +1,12 @@
 {
-  "updated_at": "2026-10-26",
+  "updated_at": "2026-10-27",
   "source": "daily-council",
   "directives": [
     {
       "category": "safe_auto",
-      "action": "ניסוי LinkedIn: בדוק האם פוסטים מפרופיל אישי של מנכ\"ל/מנהל בכיר (ולא מדף החברה) מגדילים impressions — שמור 3 פוסטים טקסט-בלבד (ללא קישור בגוף) בפורמט case-study קצר ומדוד dwell signals לאחר 14 ימים",
+      "action": "ניסוי זווית תוכן LinkedIn: פוסט טקסט-only (ללא קישור בגוף) בפרופיל אישי של מנכ\"ל, בפורמט 'לקח מהפקה אחת' — 800-1,300 תווים, hook בשתי שורות ראשונות. מדידה: impressions ואינטראקציות בחלון 7 ימים לעומת פוסטי החברה השבוע.",
       "detail": "הצעה לבדיקה על בסיס המדד המתועד; לא בוצע שינוי.",
       "channel": "linkedin",
-      "evidence": {
-        "source": "scorecard",
-        "metric": "Engagement rate",
-        "value": 0.26,
-        "target": 2.0,
-        "unit": "%",
-        "status": "❌"
-      },
-      "status": "candidate",
-      "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
-      "success_metric": "Engagement rate: בסיס 0.26; יעד המדד 2.0. יש להשוות תקופות תואמות."
-    },
-    {
-      "category": "safe_auto",
-      "action": "ניסוי Instagram: בחן פורמט carousel (3-5 שקפים, \"5 החלטות שמצילות אירוע משפחות\") מול פוסט תמונה בודדת — בשל ה-0 אינטראקציות השבוע, הצלב נתונים אחרי 2 שבועות לפני הגדלת תדירות",
-      "detail": "הצעה לבדיקה על בסיס המדד המתועד; לא בוצע שינוי.",
-      "channel": "instagram",
-      "evidence": {
-        "source": "scorecard",
-        "metric": "Engagement rate",
-        "value": 0.26,
-        "target": 2.0,
-        "unit": "%",
-        "status": "❌"
-      },
-      "status": "candidate",
-      "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
-      "success_metric": "Engagement rate: בסיס 0.26; יעד המדד 2.0. יש להשוות תקופות תואמות."
-    },
-    {
-      "category": "safe_auto",
-      "action": "זהה בגיליון עבודה אילו מ-4 מונחי ההזדמנות המובילים (הפקת אירועים לחברות pos.15.2, נופש חברה pos.18.3, גיבוש pos.9.1, הפקת אירועים לחברות הייטק pos.18.1) ממופות לדף שלא עבר שינוי מהותי מאז ספטמבר 2026 — רק תיעוד, ללא עריכה",
-      "detail": "הצעה לבדיקה על בסיס המדד המתועד; לא בוצע שינוי.",
-      "channel": "google_organic_geo",
       "evidence": {
         "source": "scorecard",
         "metric": "מונחי מעקב ב-Top-3",
@@ -52,6 +18,40 @@
       "status": "candidate",
       "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
       "success_metric": "מונחי מעקב ב-Top-3: בסיס 1; יעד המדד 3. יש להשוות תקופות תואמות."
+    },
+    {
+      "category": "safe_auto",
+      "action": "ניסוי hashtag עברי ממוקד LinkedIn: הוסף 3 hashtag רלוונטיים (#הפקתאירועים #כנסיםעסקיים #טיולתמריץ) לפוסט הבא — בסוף הפוסט, לא בגוף. מדוד האם impressions עולות לעומת פוסטים ללא hashtag.",
+      "detail": "הצעה לבדיקה על בסיס המדד המתועד; לא בוצע שינוי.",
+      "channel": "linkedin",
+      "evidence": {
+        "source": "scorecard",
+        "metric": "נוכחות סושיאל (רצפה)",
+        "value": 13.0,
+        "target": 5,
+        "unit": "",
+        "status": "✅"
+      },
+      "status": "candidate",
+      "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
+      "success_metric": "נוכחות סושיאל (רצפה): בסיס 13.0; יעד המדד 5. יש להשוות תקופות תואמות."
+    },
+    {
+      "category": "safe_auto",
+      "action": "ניסוי TikTok/Reels: קליפ 60 שניות מאחורי הקלעים של הפקה בלי תסריט — הפעל את יוזמת dc82116b עם שיתוף מקביל ב-Instagram Reels לחיסכון בתפוקה. מדד: reach ו-interactions לעומת הפוסט היחיד בשבוע זה (56 impressions, 1 interaction).",
+      "detail": "הצעה לבדיקה על בסיס המדד המתועד; לא בוצע שינוי.",
+      "channel": "tiktok",
+      "evidence": {
+        "source": "scorecard",
+        "metric": "נוכחות סושיאל (רצפה)",
+        "value": 13.0,
+        "target": 5,
+        "unit": "",
+        "status": "✅"
+      },
+      "status": "candidate",
+      "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
+      "success_metric": "נוכחות סושיאל (רצפה): בסיס 13.0; יעד המדד 5. יש להשוות תקופות תואמות."
     }
   ],
   "channel_cadence": {
@@ -64,7 +64,7 @@
       "reason": "מכסה מוצעת לבדיקה בתקופת המדידה; אין מסקנה סיבתית על אלגוריתם."
     },
     "linkedin": {
-      "max_posts_per_week": 3,
+      "max_posts_per_week": 4,
       "reason": "מכסה מוצעת לבדיקה בתקופת המדידה; אין מסקנה סיבתית על אלגוריתם."
     },
     "tiktok": {
@@ -72,16 +72,16 @@
       "reason": "מכסה מוצעת לבדיקה בתקופת המדידה; אין מסקנה סיבתית על אלגוריתם."
     },
     "youtube": {
-      "max_posts_per_week": 2,
+      "max_posts_per_week": 1,
       "reason": "מכסה מוצעת לבדיקה בתקופת המדידה; אין מסקנה סיבתית על אלגוריתם."
     }
   },
   "channel_priority": [
+    "tiktok",
     "instagram",
-    "facebook",
     "linkedin",
-    "youtube",
-    "tiktok"
+    "facebook",
+    "youtube"
   ],
   "channel_plan_basis": [
     "facebook: מכסה מוצעת לבדיקה בתקופת המדידה; אין מסקנה סיבתית על אלגוריתם.",

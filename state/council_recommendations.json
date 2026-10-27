@@ -1,11 +1,11 @@
 {
-  "updated_at": "2026-10-26",
+  "updated_at": "2026-10-27",
   "scores": {
-    "instagram": 32,
+    "instagram": 30,
     "facebook": 22,
-    "tiktok": 10,
-    "linkedin": 20,
-    "youtube": 15,
+    "tiktok": 38,
+    "linkedin": 25,
+    "youtube": 18,
     "google_organic_geo": 22,
     "overall": 58
   },
@@ -14,7 +14,7 @@
       "category": "gated",
       "priority": "P0",
       "action_key": "salesforce-attribution-fix",
-      "owner": "מנהל CRM/Operations מכין; Alon מאשר הפצה",
+      "owner": "מנהל/ת CRM מכין טיוטה; Alon מאשר ומפיץ",
       "success_metric": "ייחוס לידים: בסיס לא-מיוחס; יעד המדד מקור אמיתי. יש להשוות תקופות תואמות.",
       "evidence": {
         "source": "scorecard",
@@ -26,31 +26,9 @@
       },
       "evidence_url": null,
       "target_url": null,
-      "action": "הפץ את טיוטת הנחיית ייחוס ה-Salesforce (deliverable שהוכן 13/09/2026, נמצא ב-Uproduction Operations/Marketing-Council/verification-2026-09-13/lead-source-guidance.md) — אישור Alon נדרש לפני הפצה; לאחר הפצה, בדוק ותקן 5 רשומות \"Other\"/\"(none)\" מול ראיה מתועדת (אין שינוי ספירה כוללת)",
+      "action": "הפץ את טיוטת הנחיית Salesforce attribution הקיימת (מסלול: Uproduction Operations/Marketing-Council/verification-2026-09-13/lead-source-guidance.md, status: draft_ready, לא הופצה). בדוק 5 רשומות 'Other'/'(none)' מול ראיות (הפניות, UTM, ראיון לקוח) — אל תשנה תווית ללא ראיה. פרסום ה-SOP ב-CRM מחייב אישור Alon.",
       "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
       "channel": "leads",
-      "status": "candidate",
-      "detail": "הצעה לבדיקה על בסיס המדד המתועד; לא בוצע שינוי."
-    },
-    {
-      "category": "gated",
-      "priority": "P2",
-      "action_key": "tiktok-behind-scenes",
-      "owner": "מפיק שטח מצלם; Alon מאשר כל קליפ לפני פרסום",
-      "success_metric": "נוכחות סושיאל (רצפה): בסיס 13.0; יעד המדד 5. יש להשוות תקופות תואמות.",
-      "evidence": {
-        "source": "scorecard",
-        "metric": "נוכחות סושיאל (רצפה)",
-        "value": 13.0,
-        "target": 5,
-        "unit": "",
-        "status": "✅"
-      },
-      "evidence_url": null,
-      "target_url": null,
-      "action": "הפעל initiative dc82116b: 3 קליפים 60 שניות vertical מהפקה אמיתית בשבוע — פרסם ב-TikTok וכפל ל-Instagram Reels לחיסכון בתפוקה; ללא תסריט, אותנטי; כל קליפ ממתין לאישור מפורש; TikTok כרגע 0 פוסטים — זהו ניסוי ראשוני",
-      "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
-      "channel": "tiktok",
       "status": "candidate",
       "detail": "הצעה לבדיקה על בסיס המדד המתועד; לא בוצע שינוי."
     }
