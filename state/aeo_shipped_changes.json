@@ -766,5 +766,259 @@
       "note": "Seven inclusive calendar days. Headline current-week totals are not substituted for matched final-data page windows."
     },
     "decision": "No page rewrite: five matched final-data comparisons do not establish a click gain; remaining eight pages still within documented observation/final-data windows. Preserve newer reviewed dates in deployed config."
+  },
+  "measurement_review_2026_10_27": {
+    "reviewed_at": "2026-10-27",
+    "gsc_run_id": 40478090202,
+    "run_conclusion": "success",
+    "send_email": false,
+    "gsc_review_only": true,
+    "paid_report_step": "skipped",
+    "report_persisted": true,
+    "conference_review": {
+      "url": "https://upe.co.il/en/choosing-global-corporate-event-conference-production-company/",
+      "source_path": "src/content/blog/en/choosing-global-corporate-event-conference-production-company.md",
+      "changed_at": "2026-09-23",
+      "reviewed_source_commit": "374674c941c201c04ce725e291b8545c8f6667b8",
+      "change_evidence": "Alon-approved substantive AEO opening, commit 265e340ae466e242307012e1af6c0d7ac2359214",
+      "source_review_date": "2026-10-06",
+      "minor_later_changes": "Numeric age/founding wording and contact email corrections do not change the service intent or reset this evaluation window.",
+      "windows": {
+        "before": {
+          "startDate": "2026-08-26",
+          "endDate": "2026-09-22"
+        },
+        "after": {
+          "startDate": "2026-09-24",
+          "endDate": "2026-10-21"
+        }
+      },
+      "reviewed_at": "2026-10-27",
+      "metrics": {
+        "before": {
+          "clicks": 1,
+          "impressions": 123,
+          "ctr": 0.008130081300813009,
+          "position": 19.878048780487806
+        },
+        "after": {
+          "clicks": 0,
+          "impressions": 280,
+          "ctr": 0,
+          "position": 21.70357142857143
+        }
+      },
+      "status": "measured",
+      "observed_source_commit": "374674c941c201c04ce725e291b8545c8f6667b8",
+      "collect_not_before": "2026-10-24",
+      "interpretation": "Matched 28-day windows; observational, not causal evidence. Sparse data cannot establish ranking lift."
+    },
+    "live_conference_page_http_status": 200,
+    "category": {
+      "measured_at": "2026-10-21T10:25:08.648876+00:00",
+      "method": "serpapi-google",
+      "cohort": "aaf546d73c2324a7",
+      "metric": "first_page_organic_visibility",
+      "top10": {
+        "verified_queries": 10,
+        "found": 4,
+        "score": null
+      },
+      "context": {
+        "en": {
+          "gl": "es",
+          "hl": "en"
+        },
+        "es": {
+          "gl": "es",
+          "hl": "es"
+        },
+        "he": {
+          "gl": "il",
+          "hl": "iw"
+        },
+        "device": "desktop",
+        "scope": "first-page-organic-up-to-10",
+        "max_results": 10
+      },
+      "engines": {
+        "google": {
+          "measured": 30,
+          "total": 30,
+          "found": 4,
+          "score": 13.3
+        },
+        "bing": {
+          "measured": 0,
+          "total": 30,
+          "found": null,
+          "score": null
+        },
+        "perplexity": {
+          "measured": 0,
+          "total": 30,
+          "found": null,
+          "score": null
+        }
+      },
+      "status": "complete",
+      "by_category": {
+        "authority": {
+          "found": 0,
+          "measured": 1,
+          "total": 1,
+          "score": 0.0
+        },
+        "brand": {
+          "found": 1,
+          "measured": 3,
+          "total": 3,
+          "score": 33.3
+        },
+        "content": {
+          "found": 0,
+          "measured": 5,
+          "total": 5,
+          "score": 0.0
+        },
+        "local": {
+          "found": 1,
+          "measured": 4,
+          "total": 4,
+          "score": 25.0
+        },
+        "service": {
+          "found": 2,
+          "measured": 17,
+          "total": 17,
+          "score": 11.8
+        }
+      },
+      "by_language": {
+        "en": {
+          "found": 4,
+          "measured": 15,
+          "total": 15,
+          "score": 26.7
+        },
+        "es": {
+          "found": 0,
+          "measured": 8,
+          "total": 8,
+          "score": 0.0
+        },
+        "he": {
+          "found": 0,
+          "measured": 7,
+          "total": 7,
+          "score": 0.0
+        }
+      },
+      "by_language_group": {
+        "en_es": {
+          "found": 4,
+          "measured": 23,
+          "total": 23,
+          "score": 17.4
+        },
+        "he": {
+          "found": 0,
+          "measured": 7,
+          "total": 7,
+          "score": 0.0
+        }
+      },
+      "rank_changes": [
+        {
+          "q": "best corporate event company in Israel",
+          "lang": "en",
+          "before": 6,
+          "now": 8,
+          "change": -2
+        },
+        {
+          "q": "corporate event production company Tel Aviv",
+          "lang": "en",
+          "before": 5,
+          "now": 7,
+          "change": -2
+        },
+        {
+          "q": "conference production company Europe",
+          "lang": "en",
+          "before": 3,
+          "now": 4,
+          "change": -1
+        },
+        {
+          "q": "חברת אינסנטיב לחו\"ל",
+          "lang": "he",
+          "before": 7,
+          "now": null,
+          "change": null
+        }
+      ],
+      "comparison_baseline": {
+        "measured_at": "2026-10-19T04:32:25.654632+00:00",
+        "method": "serpapi-google",
+        "cohort": "aaf546d73c2324a7",
+        "context": {
+          "en": {
+            "gl": "es",
+            "hl": "en"
+          },
+          "es": {
+            "gl": "es",
+            "hl": "es"
+          },
+          "he": {
+            "gl": "il",
+            "hl": "iw"
+          },
+          "device": "desktop",
+          "scope": "first-page-organic-up-to-10",
+          "max_results": 10
+        }
+      },
+      "entered_first_page": [],
+      "exited_first_page": [
+        {
+          "q": "חברת אינסנטיב לחו\"ל",
+          "lang": "he"
+        }
+      ],
+      "comparison": "comparable",
+      "unmeasured_reasons": [],
+      "provider_account": {
+        "total_searches_left": 1000,
+        "plan_renewal_date": "2026-11-21"
+      }
+    },
+    "aeo": {
+      "weekly_date": "2026-10-25",
+      "weekly_answers_by_engine": {
+        "claude": 36,
+        "chatgpt": 36,
+        "gemini": 36
+      },
+      "weekly_errors": 0,
+      "daily_date": "2026-10-26",
+      "daily_answers_by_engine": {
+        "claude": 32,
+        "chatgpt": 22,
+        "gemini": 32
+      },
+      "daily_errors": 10,
+      "daily_limitation": "ChatGPT HTTP429 no credits remaining; partial battery, not a complete score comparison. No paid rerun or credit purchase performed."
+    },
+    "council": {
+      "date": "2026-10-26",
+      "run_id": 40314806175,
+      "json_and_html_verified_on_main": true,
+      "gsc_week_from": "2026-10-15",
+      "gsc_week_to": "2026-10-21",
+      "inclusive_days": 7
+    },
+    "decision": "No content rewrite. Conference impressions increased 123 to 280 but clicks fell 1 to 0 and mean position worsened 19.88 to 21.70. Sparse noncausal evidence; observe query mix before further changes. Respect remaining observation windows."
   }
 }
