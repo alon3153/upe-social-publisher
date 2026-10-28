@@ -1,12 +1,12 @@
 {
-  "updated_at": "2026-10-27",
+  "updated_at": "2026-10-28",
   "source": "daily-council",
   "directives": [
     {
       "category": "safe_auto",
-      "action": "ניסוי זווית תוכן LinkedIn: פוסט טקסט-only (ללא קישור בגוף) בפרופיל אישי של מנכ\"ל, בפורמט 'לקח מהפקה אחת' — 800-1,300 תווים, hook בשתי שורות ראשונות. מדידה: impressions ואינטראקציות בחלון 7 ימים לעומת פוסטי החברה השבוע.",
+      "action": "הגדר אסטרטגיית hashtag ל-TikTok ו-Instagram Reels: שלב תגיות ספציפיות (הפקת אירועים, MICE, טיול תמריץ, corporate events) עם 1-2 תגיות רחבות — ולא יותר מ-5 תגיות כולל; בדוק ביצועים על 4 פוסטים לפני שינוי.",
       "detail": "הצעה לבדיקה על בסיס המדד המתועד; לא בוצע שינוי.",
-      "channel": "linkedin",
+      "channel": "tiktok",
       "evidence": {
         "source": "scorecard",
         "metric": "מונחי מעקב ב-Top-3",
@@ -21,37 +21,20 @@
     },
     {
       "category": "safe_auto",
-      "action": "ניסוי hashtag עברי ממוקד LinkedIn: הוסף 3 hashtag רלוונטיים (#הפקתאירועים #כנסיםעסקיים #טיולתמריץ) לפוסט הבא — בסוף הפוסט, לא בגוף. מדוד האם impressions עולות לעומת פוסטים ללא hashtag.",
+      "action": "הכן רשימת שאלות AEO לבדיקה ב-ChatGPT ו-Bing Copilot: לפחות 5 שאלות לא-ממותגות בעברית ובאנגלית (לדוג׳: 'מה החברה הטובה ביותר להפקת כנסים בינלאומיים?') — לתיעוד בסיס מדידה חודשי.",
       "detail": "הצעה לבדיקה על בסיס המדד המתועד; לא בוצע שינוי.",
-      "channel": "linkedin",
+      "channel": "google_organic_geo",
       "evidence": {
         "source": "scorecard",
-        "metric": "נוכחות סושיאל (רצפה)",
-        "value": 13.0,
-        "target": 5,
+        "metric": "מנועי AI שנבדקו (לא אזכורים)",
+        "value": 2,
+        "target": 3,
         "unit": "",
-        "status": "✅"
+        "status": "❌"
       },
       "status": "candidate",
       "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
-      "success_metric": "נוכחות סושיאל (רצפה): בסיס 13.0; יעד המדד 5. יש להשוות תקופות תואמות."
-    },
-    {
-      "category": "safe_auto",
-      "action": "ניסוי TikTok/Reels: קליפ 60 שניות מאחורי הקלעים של הפקה בלי תסריט — הפעל את יוזמת dc82116b עם שיתוף מקביל ב-Instagram Reels לחיסכון בתפוקה. מדד: reach ו-interactions לעומת הפוסט היחיד בשבוע זה (56 impressions, 1 interaction).",
-      "detail": "הצעה לבדיקה על בסיס המדד המתועד; לא בוצע שינוי.",
-      "channel": "tiktok",
-      "evidence": {
-        "source": "scorecard",
-        "metric": "נוכחות סושיאל (רצפה)",
-        "value": 13.0,
-        "target": 5,
-        "unit": "",
-        "status": "✅"
-      },
-      "status": "candidate",
-      "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
-      "success_metric": "נוכחות סושיאל (רצפה): בסיס 13.0; יעד המדד 5. יש להשוות תקופות תואמות."
+      "success_metric": "מנועי AI שנבדקו (לא אזכורים): בסיס 2; יעד המדד 3. יש להשוות תקופות תואמות."
     }
   ],
   "channel_cadence": {
@@ -68,7 +51,7 @@
       "reason": "מכסה מוצעת לבדיקה בתקופת המדידה; אין מסקנה סיבתית על אלגוריתם."
     },
     "tiktok": {
-      "max_posts_per_week": 2,
+      "max_posts_per_week": 3,
       "reason": "מכסה מוצעת לבדיקה בתקופת המדידה; אין מסקנה סיבתית על אלגוריתם."
     },
     "youtube": {
@@ -79,8 +62,8 @@
   "channel_priority": [
     "tiktok",
     "instagram",
-    "linkedin",
     "facebook",
+    "linkedin",
     "youtube"
   ],
   "channel_plan_basis": [

@@ -1,20 +1,42 @@
 {
-  "updated_at": "2026-10-27",
+  "updated_at": "2026-10-28",
   "scores": {
-    "instagram": 30,
-    "facebook": 22,
-    "tiktok": 38,
-    "linkedin": 25,
-    "youtube": 18,
-    "google_organic_geo": 22,
-    "overall": 58
+    "instagram": 22,
+    "facebook": 18,
+    "tiktok": 48,
+    "linkedin": 15,
+    "youtube": 10,
+    "google_organic_geo": 24,
+    "overall": 41
   },
   "recommendations": [
     {
       "category": "gated",
       "priority": "P0",
+      "action_key": "linkedin-executive-posting",
+      "owner": "מנכ\"ל מכין טיוטות; Alon מאשר לפני פרסום",
+      "success_metric": "Engagement rate: בסיס 0.63; יעד המדד 2.0. יש להשוות תקופות תואמות.",
+      "evidence": {
+        "source": "scorecard",
+        "metric": "Engagement rate",
+        "value": 0.63,
+        "target": 2.0,
+        "unit": "%",
+        "status": "❌"
+      },
+      "evidence_url": "https://heropost.io/linkedin-b2b-marketing-strategy-2026/",
+      "target_url": "https://www.linkedin.com/feed/update/urn:li:ugcPost:7513921612686061568",
+      "action": "הפעל פרסום אישי של המנכ\"ל ב-LinkedIn: 2-3 פוסטים/שבוע בפורמט text-only או carousel PDF עם case study מספרי מהפקה אמיתית (ללא קישור בגוף הפוסט); כל פוסט ממתין לאישור Alon לפני פרסום.",
+      "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
+      "channel": "linkedin",
+      "status": "candidate",
+      "detail": "הצעה לבדיקה על בסיס המדד המתועד; לא בוצע שינוי."
+    },
+    {
+      "category": "gated",
+      "priority": "P0",
       "action_key": "salesforce-attribution-fix",
-      "owner": "מנהל/ת CRM מכין טיוטה; Alon מאשר ומפיץ",
+      "owner": "מנהל CRM מיישם; Alon מאשר הפצה",
       "success_metric": "ייחוס לידים: בסיס לא-מיוחס; יעד המדד מקור אמיתי. יש להשוות תקופות תואמות.",
       "evidence": {
         "source": "scorecard",
@@ -26,9 +48,31 @@
       },
       "evidence_url": null,
       "target_url": null,
-      "action": "הפץ את טיוטת הנחיית Salesforce attribution הקיימת (מסלול: Uproduction Operations/Marketing-Council/verification-2026-09-13/lead-source-guidance.md, status: draft_ready, לא הופצה). בדוק 5 רשומות 'Other'/'(none)' מול ראיות (הפניות, UTM, ראיון לקוח) — אל תשנה תווית ללא ראיה. פרסום ה-SOP ב-CRM מחייב אישור Alon.",
+      "action": "הפץ את הנחיית ייחוס המקורות הקיימת (deliverable: lead-source-guidance.md שהוכנה 2026-09-13) לצוות המכירות; עדכן CRM בהתאם; בדוק 5 רשומות Other/(none) מול ראיה מתועדת — אל תשנה תווית ללא ראיה.",
       "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
       "channel": "leads",
+      "status": "candidate",
+      "detail": "הצעה לבדיקה על בסיס המדד המתועד; לא בוצע שינוי."
+    },
+    {
+      "category": "gated",
+      "priority": "P1",
+      "action_key": "tiktok-behind-scenes",
+      "owner": "מפיק תוכן מצלם; Alon מאשר לפני פרסום",
+      "success_metric": "מנועי AI שנבדקו (לא אזכורים): בסיס 2; יעד המדד 3. יש להשוות תקופות תואמות.",
+      "evidence": {
+        "source": "scorecard",
+        "metric": "מנועי AI שנבדקו (לא אזכורים)",
+        "value": 2,
+        "target": 3,
+        "unit": "",
+        "status": "❌"
+      },
+      "evidence_url": null,
+      "target_url": null,
+      "action": "הפק 3 קליפי 'מאחורי הקלעים' שבועיים מהפקה אמיתית (60 שניות, vertical, ללא תסריט); פרסם ב-TikTok ושתף כ-Instagram Reels לחיסכון בתפוקה; כל קליפ ממתין לאישור מפורש לפני פרסום.",
+      "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
+      "channel": "tiktok",
       "status": "candidate",
       "detail": "הצעה לבדיקה על בסיס המדד המתועד; לא בוצע שינוי."
     }
