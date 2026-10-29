@@ -1,27 +1,44 @@
 {
-  "updated_at": "2026-10-28",
+  "updated_at": "2026-10-29",
   "source": "daily-council",
   "directives": [
     {
       "category": "safe_auto",
-      "action": "הגדר אסטרטגיית hashtag ל-TikTok ו-Instagram Reels: שלב תגיות ספציפיות (הפקת אירועים, MICE, טיול תמריץ, corporate events) עם 1-2 תגיות רחבות — ולא יותר מ-5 תגיות כולל; בדוק ביצועים על 4 פוסטים לפני שינוי.",
+      "action": "ניסוי LinkedIn: החלף 2 מ-4 פוסטי דף החברה השבועיים בפוסטים מפרופיל אישי של מנהל בכיר — טקסט בלבד או carousel קצר עם נתון מספרי אחד מהפקה אמיתית; מדוד impressions ואינטראקציות אחרי 4 שבועות לעומת פוסטי דף החברה.",
       "detail": "הצעה לבדיקה על בסיס המדד המתועד; לא בוצע שינוי.",
-      "channel": "tiktok",
+      "channel": "linkedin",
       "evidence": {
         "source": "scorecard",
-        "metric": "מונחי מעקב ב-Top-3",
-        "value": 1,
+        "metric": "מנועי AI שנבדקו (לא אזכורים)",
+        "value": 2,
         "target": 3,
         "unit": "",
         "status": "❌"
       },
       "status": "candidate",
       "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
-      "success_metric": "מונחי מעקב ב-Top-3: בסיס 1; יעד המדד 3. יש להשוות תקופות תואמות."
+      "success_metric": "מנועי AI שנבדקו (לא אזכורים): בסיס 2; יעד המדד 3. יש להשוות תקופות תואמות."
     },
     {
       "category": "safe_auto",
-      "action": "הכן רשימת שאלות AEO לבדיקה ב-ChatGPT ו-Bing Copilot: לפחות 5 שאלות לא-ממותגות בעברית ובאנגלית (לדוג׳: 'מה החברה הטובה ביותר להפקת כנסים בינלאומיים?') — לתיעוד בסיס מדידה חודשי.",
+      "action": "ניסוי TikTok/Reels: תעד את הסוג של תוכן הפוסט שהניב 10,559 חשיפות (נושא, אורך, פורמט פתיחה) ונסה לשחזרו בפוסט הבא — האם פתיחת hook זהה מניבה תוצאה דומה? דווח תוצאות בתוך 2 שבועות.",
+      "detail": "הצעה לבדיקה על בסיס המדד המתועד; לא בוצע שינוי.",
+      "channel": "tiktok",
+      "evidence": {
+        "source": "scorecard",
+        "metric": "צמיחת חשיפות",
+        "value": 966.0,
+        "target": 10,
+        "unit": "%",
+        "status": "✅"
+      },
+      "status": "candidate",
+      "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
+      "success_metric": "צמיחת חשיפות: בסיס 966.0; יעד המדד 10. יש להשוות תקופות תואמות."
+    },
+    {
+      "category": "safe_auto",
+      "action": "הכן רשימת 5 שאלות GEO לבדיקה ב-Perplexity (עברית) — בפורמט 'מי מפיק X בישראל' ו-'איך בוחרים חברת הפקה ל-Y' — ותעד האם UPE מצוטטת; זהו הכנה לתיקון תוכני ממוקד לפני העברה ל-gated.",
       "detail": "הצעה לבדיקה על בסיס המדד המתועד; לא בוצע שינוי.",
       "channel": "google_organic_geo",
       "evidence": {
@@ -39,7 +56,7 @@
   ],
   "channel_cadence": {
     "facebook": {
-      "max_posts_per_week": 1,
+      "max_posts_per_week": 2,
       "reason": "מכסה מוצעת לבדיקה בתקופת המדידה; אין מסקנה סיבתית על אלגוריתם."
     },
     "instagram": {
@@ -51,20 +68,20 @@
       "reason": "מכסה מוצעת לבדיקה בתקופת המדידה; אין מסקנה סיבתית על אלגוריתם."
     },
     "tiktok": {
-      "max_posts_per_week": 3,
+      "max_posts_per_week": 2,
       "reason": "מכסה מוצעת לבדיקה בתקופת המדידה; אין מסקנה סיבתית על אלגוריתם."
     },
     "youtube": {
-      "max_posts_per_week": 1,
+      "max_posts_per_week": 2,
       "reason": "מכסה מוצעת לבדיקה בתקופת המדידה; אין מסקנה סיבתית על אלגוריתם."
     }
   },
   "channel_priority": [
     "tiktok",
+    "youtube",
     "instagram",
     "facebook",
-    "linkedin",
-    "youtube"
+    "linkedin"
   ],
   "channel_plan_basis": [
     "facebook: מכסה מוצעת לבדיקה בתקופת המדידה; אין מסקנה סיבתית על אלגוריתם.",
