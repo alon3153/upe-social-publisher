@@ -18802,7 +18802,7 @@
     "channel": "leads",
     "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
     "action_key": "salesforce-attribution-fix",
-    "owner": "מנהל CRM מיישם; Alon מאשר הפצה",
+    "owner": "Ops/CRM; Alon מאשר הפצה",
     "success_metric": "ייחוס לידים: בסיס לא-מיוחס; יעד המדד מקור אמיתי. יש להשוות תקופות תואמות."
   },
   "2769e4c7": {
@@ -18959,12 +18959,12 @@
     "created": "2026-09-27",
     "updated": "2026-10-06",
     "kind": "recommendation",
-    "priority": "P0",
+    "priority": "P1",
     "channel": "linkedin",
     "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
     "action_key": "linkedin-executive-posting",
-    "owner": "מנכ\"ל מכין טיוטות; Alon מאשר לפני פרסום",
-    "success_metric": "Engagement rate: בסיס 0.63; יעד המדד 2.0. יש להשוות תקופות תואמות.",
+    "owner": "מנהל בכיר + מנהל תוכן; Alon מאשר כל פוסט",
+    "success_metric": "מונחי מעקב ב-Top-3: בסיס 1; יעד המדד 3. יש להשוות תקופות תואמות.",
     "consecutive_failures": 0,
     "merged_from": [
       {
