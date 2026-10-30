@@ -1,20 +1,20 @@
 {
-  "updated_at": "2026-10-29",
+  "updated_at": "2026-10-30",
   "scores": {
-    "instagram": 28,
-    "facebook": 20,
-    "tiktok": 55,
-    "linkedin": 18,
+    "instagram": 10,
+    "facebook": 10,
+    "tiktok": 62,
+    "linkedin": 38,
     "youtube": 42,
-    "google_organic_geo": 31,
-    "overall": 52
+    "google_organic_geo": 30,
+    "overall": 68
   },
   "recommendations": [
     {
       "category": "gated",
       "priority": "P0",
       "action_key": "salesforce-attribution-fix",
-      "owner": "Ops/CRM; Alon מאשר הפצה",
+      "owner": "RevOps/מכירות מפיצים; Alon מאשר הפצה",
       "success_metric": "ייחוס לידים: בסיס לא-מיוחס; יעד המדד מקור אמיתי. יש להשוות תקופות תואמות.",
       "evidence": {
         "source": "scorecard",
@@ -25,32 +25,10 @@
         "status": "❌"
       },
       "evidence_url": null,
-      "target_url": "Uproduction Operations/Marketing-Council/verification-2026-09-13/lead-source-guidance.md",
-      "action": "הפץ את הנחיית ייחוס המקורות שהוכנה (2769e4c7) לצוות CRM/מכירות — אין לכתוב מחדש; המסמך קיים ומחכה לחתימת אישור. כלול הגדרה ברורה לארבע קטגוריות: Outbound, Web Organic, Google Ads, Referral — ותעד מה לעשות כשמקור לא ידוע.",
+      "target_url": null,
+      "action": "הפץ את מסמך הנחיית ייחוס המקורות שהוכן ב-Uproduction Operations/Marketing-Council/verification-2026-09-13/lead-source-guidance.md — הוא מוכן ולא הופץ. אל תיצור מסמך חדש. מדיניות: בדוק מקור Web, Other ו-(none) מול ראיה מתועדת (referer, UTM, שיחה); אל תשנה ספירה כוללת.",
       "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
       "channel": "leads",
-      "status": "candidate",
-      "detail": "הצעה לבדיקה על בסיס המדד המתועד; לא בוצע שינוי."
-    },
-    {
-      "category": "gated",
-      "priority": "P1",
-      "action_key": "linkedin-executive-posting",
-      "owner": "מנהל בכיר + מנהל תוכן; Alon מאשר כל פוסט",
-      "success_metric": "מונחי מעקב ב-Top-3: בסיס 1; יעד המדד 3. יש להשוות תקופות תואמות.",
-      "evidence": {
-        "source": "scorecard",
-        "metric": "מונחי מעקב ב-Top-3",
-        "value": 1,
-        "target": 3,
-        "unit": "",
-        "status": "❌"
-      },
-      "evidence_url": "https://chiefcontentmarketer.com/linkedin-organic-reach-in-2026-5-tactics-b2b-leaders-are-using-to-win/",
-      "target_url": "https://www.linkedin.com/feed/update/urn:li:ugcPost:7513921612686061568",
-      "action": "הפעל את יוזמת d477123a: הכן 2 טיוטות פוסט מפרופיל אישי של מנכ\"ל/סמנכ\"ל — פורמט carousel 3 שקפים עם נתון מספרי מהפקה אמיתית + שאלה פתוחה. אל תפרסם מדף החברה בלבד. כל טיוטה ממתינה לאישור מפורש לפני פרסום.",
-      "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
-      "channel": "linkedin",
       "status": "candidate",
       "detail": "הצעה לבדיקה על בסיס המדד המתועד; לא בוצע שינוי."
     }
