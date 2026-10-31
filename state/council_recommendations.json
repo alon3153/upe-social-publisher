@@ -1,20 +1,20 @@
 {
-  "updated_at": "2026-10-30",
+  "updated_at": "2026-10-31",
   "scores": {
     "instagram": 10,
     "facebook": 10,
     "tiktok": 62,
-    "linkedin": 38,
-    "youtube": 42,
-    "google_organic_geo": 30,
-    "overall": 68
+    "linkedin": 28,
+    "youtube": 35,
+    "google_organic_geo": 38,
+    "overall": 72
   },
   "recommendations": [
     {
       "category": "gated",
       "priority": "P0",
       "action_key": "salesforce-attribution-fix",
-      "owner": "RevOps/מכירות מפיצים; Alon מאשר הפצה",
+      "owner": "Operations/CRM lead מכין; Alon מאשר ומפיץ",
       "success_metric": "ייחוס לידים: בסיס לא-מיוחס; יעד המדד מקור אמיתי. יש להשוות תקופות תואמות.",
       "evidence": {
         "source": "scorecard",
@@ -26,9 +26,75 @@
       },
       "evidence_url": null,
       "target_url": null,
-      "action": "הפץ את מסמך הנחיית ייחוס המקורות שהוכן ב-Uproduction Operations/Marketing-Council/verification-2026-09-13/lead-source-guidance.md — הוא מוכן ולא הופץ. אל תיצור מסמך חדש. מדיניות: בדוק מקור Web, Other ו-(none) מול ראיה מתועדת (referer, UTM, שיחה); אל תשנה ספירה כוללת.",
+      "action": "הפץ את טיוטת הנחיית ייחוס המקורות (salesforce-attribution-fix, הוכנה 2026-09-13, טרם הופצה) לצוות המכירות. הבחן בין Google Organic לתנועה ממומנת בכל רשומה חדשה. אל תסווג מחדש רשומות קיימות ללא ראיה מתועדת.",
       "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
       "channel": "leads",
+      "status": "candidate",
+      "detail": "הצעה לבדיקה על בסיס המדד המתועד; לא בוצע שינוי."
+    },
+    {
+      "category": "gated",
+      "priority": "P1",
+      "action_key": "linkedin-executive-posting",
+      "owner": "Content lead מכין טיוטות; מנהלים בכירים ו-Alon מאשרים לפני פרסום",
+      "success_metric": "נוכחות סושיאל (רצפה): בסיס 7.0; יעד המדד 5. יש להשוות תקופות תואמות.",
+      "evidence": {
+        "source": "scorecard",
+        "metric": "נוכחות סושיאל (רצפה)",
+        "value": 7.0,
+        "target": 5,
+        "unit": "",
+        "status": "✅"
+      },
+      "evidence_url": "https://www.tiberius.co.nz/wiki/linkedin-organic-content-b2b-algorithm-strategy/",
+      "target_url": "https://www.linkedin.com/feed/update/urn:li:ugcPost:7513921612686061568",
+      "action": "הפעל initiative d477123a: פרסם 2-3 פוסטים/שבוע מפרופיל אישי של מנהל בכיר — פורמט carousel (3 שקפים) עם נתון אמיתי מהפקה + שאלה לקהל. כל פוסט ממתין לאישור מפורש. אל תפרסם מדף החברה בלבד.",
+      "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
+      "channel": "linkedin",
+      "status": "candidate",
+      "detail": "הצעה לבדיקה על בסיס המדד המתועד; לא בוצע שינוי."
+    },
+    {
+      "category": "gated",
+      "priority": "P1",
+      "action_key": "tiktok-behind-scenes",
+      "owner": "Content/Production team מצלמים; Alon מאשר לפני פרסום",
+      "success_metric": "נוכחות סושיאל (רצפה): בסיס 7.0; יעד המדד 5. יש להשוות תקופות תואמות.",
+      "evidence": {
+        "source": "scorecard",
+        "metric": "נוכחות סושיאל (רצפה)",
+        "value": 7.0,
+        "target": 5,
+        "unit": "",
+        "status": "✅"
+      },
+      "evidence_url": null,
+      "target_url": null,
+      "action": "הפעל initiative dc82116b: 2 קליפי 'מאחורי הקלעים' שבועיים (60 שניות, vertical) מהפקות אמיתיות — שתף גם ב-Instagram Reels לחיסכון בתפוקה. כל קליפ ממתין לאישור לפני פרסום.",
+      "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
+      "channel": "tiktok",
+      "status": "candidate",
+      "detail": "הצעה לבדיקה על בסיס המדד המתועד; לא בוצע שינוי."
+    },
+    {
+      "category": "gated",
+      "priority": "P2",
+      "action_key": "youtube-seo-videos",
+      "owner": "Content/Production team מפיקים; Alon מאשר לפני פרסום",
+      "success_metric": "קליקים אורגניים/שבוע: בסיס 52; יעד המדד 300. יש להשוות תקופות תואמות.",
+      "evidence": {
+        "source": "scorecard",
+        "metric": "קליקים אורגניים/שבוע",
+        "value": 52,
+        "target": 300,
+        "unit": "",
+        "status": "❌"
+      },
+      "evidence_url": null,
+      "target_url": null,
+      "action": "הפעל initiative 0a16e409: הפק 3 סרטוני YouTube (5-8 דקות) על שאלות קונים: 'כמה עולה הפקת כנס', 'איך בוחרים חברת הפקה', 'נופש חברה vs טיול תמריץ' — כולל timestamps ותיאור 300+ מילים עם קישור לדף שירות קיים. פרסום רק לאחר אישור.",
+      "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
+      "channel": "youtube",
       "status": "candidate",
       "detail": "הצעה לבדיקה על בסיס המדד המתועד; לא בוצע שינוי."
     }
