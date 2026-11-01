@@ -31,7 +31,7 @@ def candidates(scorecard, weights=None):
     weights = weights or DEFAULT_WEIGHTS
     by_intent = {}
     for model, block in (scorecard.get("models") or {}).items():
-        if block.get("degraded"):
+        if block.get("degraded") or block.get("status") == "skipped_schedule":
             continue
         for a in block.get("answers", []):
             if a.get("branded") or a.get("upe_mentioned"):

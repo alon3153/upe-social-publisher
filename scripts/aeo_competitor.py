@@ -1,6 +1,7 @@
 """Competitor keyword-gap research: when UPE has a visibility gap, find the
 Hebrew + English keywords/phrases competitors win that UPE should target."""
 import json, re
+import aeo_probe
 import aeo_recommendations
 
 MAX_PER_LANG = 5     # keep only the highest-impact keywords per language
@@ -22,7 +23,7 @@ RESEARCH_SYSTEM = (
 def collect_competitors(scorecard):
     seen = []
     for block in scorecard.get("models", {}).values():
-        if block.get("degraded"):
+        if block.get("degraded") or aeo_probe.is_skipped_schedule(block):
             continue
         for ans in block.get("answers", []):
             for c in ans.get("competitors", []) or []:
@@ -34,7 +35,7 @@ def collect_competitors(scorecard):
 def _weak_notes(scorecard, min_score=90):
     notes = []
     for model, block in scorecard.get("models", {}).items():
-        if block.get("degraded"):
+        if block.get("degraded") or aeo_probe.is_skipped_schedule(block):
             continue
         for dim in ("product_search", "comparison"):
             if block.get(dim, 0) < min_score:

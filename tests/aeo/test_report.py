@@ -141,6 +141,41 @@ def test_below_target_is_a_score_gap_not_a_ranking_gap():
     assert "#1" not in html + subject
 
 
+def test_skipped_schedule_is_not_an_alert_and_trend_uses_last_run():
+    cur = {"date": "2026-11-04", "battery_version": "v", "models": {
+        "claude": _block(product_search=80, mention_rate_nonbranded=10),
+        "chatgpt": _block(product_search=50, mention_rate_nonbranded=10),
+    }}
+    prev_skip = {"date": "2026-11-03", "battery_version": "v", "models": {
+        "claude": _block(product_search=80),
+        "chatgpt": {"status": "skipped_schedule", "reason": "not scheduled"},
+    }}
+    trends = {"chatgpt": {"prev_product_search": 40, "prev_date": "2026-11-02",
+                          "avg7_mention_rate_nonbranded": 20.0, "avg7_mention_days": 2},
+              "claude": {"avg7_mention_rate_nonbranded": 10.0, "avg7_mention_days": 7}}
+    subject, html = rep.build_daily_email(
+        cur, prev_skip, {"he": [], "en": [], "competitors": [], "priority_actions": []},
+        failures=[], target=70, trends=trends)
+    assert "▲ +10" in html
+    assert "▲ +50" not in html
+    assert "20.0%" in html
+    assert "תקלות" not in html
+    assert "429" not in subject + html
+
+    off = {"date": "2026-11-03", "models": {
+        "claude": _block(product_search=80),
+        "chatgpt": {"status": "skipped_schedule", "reason": "not scheduled"},
+    }}
+    subject, html = rep.build_daily_email(
+        off, None, {"he": [], "en": [], "competitors": [], "priority_actions": []},
+        failures=[], target=70)
+    assert "not scheduled" in html
+    assert "לא מתוזמן" in html
+    assert "תקלות" not in html
+    assert "מכשיר תקול" not in html
+    assert "יעד הציון הושג" in subject
+
+
 def test_empty_model_set_does_not_claim_target_achieved():
     subject, html = rep.build_daily_email({"date": "2026-09-09", "models": {}}, None, {}, [], target=70)
     assert "יעד הציון הושג" not in subject + html

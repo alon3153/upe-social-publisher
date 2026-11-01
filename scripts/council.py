@@ -216,8 +216,16 @@ def build_scorecard(cur, prev, leads, seo_geo=None):
                      and not isinstance(evidence.get("measured_engines"), bool))
     if seo_geo and seo_geo.get("ok") and (engines_known or seo_geo.get("aeo_cited_engines") is not None):
         checked = evidence["measured_engines"] if engines_known else (seo_geo.get("aeo_cited_engines") or 0)
-        comp["aeo"] = min(1.0, checked / 3)
-        row(scored, "מנועי AI שנבדקו (לא אזכורים)", checked, 3, checked >= 3,
+        # Snapshots written before the Mon/Wed/Fri gate have no expected_engines
+        # and still mean "all three". A skipped_schedule day lowers the target
+        # to the engines that were supposed to run, so ChatGPT's day off is not a miss.
+        expected_engines = 3
+        declared = evidence.get("expected_engines") if isinstance(evidence, dict) else None
+        if isinstance(declared, int) and not isinstance(declared, bool) and declared > 0:
+            expected_engines = declared
+        comp["aeo"] = min(1.0, checked / expected_engines)
+        row(scored, "מנועי AI שנבדקו (לא אזכורים)", checked, expected_engines,
+            checked >= expected_engines,
             window_from=evidence_date or seo_snap, window_to=evidence_date or seo_snap,
             snapshot_date=evidence_date or seo_snap)
     else:
@@ -234,8 +242,12 @@ def build_scorecard(cur, prev, leads, seo_geo=None):
                 by_engine=mention["by_engine"], engines_detail=detail)
     if seo_geo and seo_geo.get("aeo_engine_evidence"):
         ev = seo_geo["aeo_engine_evidence"]
-        warnings.append("מדידת מנועי AI מתאריך " + str(ev.get("date", "לא זמין")) +
-                        ": ציטוטי כתובת או תווית דומיין ממקור חיפוש, בשאלות לא ממותגות; אינה מדידת מקום ראשון.")
+        note = ("מדידת מנועי AI מתאריך " + str(ev.get("date", "לא זמין")) +
+                ": ציטוטי כתובת או תווית דומיין ממקור חיפוש, בשאלות לא ממותגות; אינה מדידת מקום ראשון.")
+        skipped = ev.get("skipped_schedule") or []
+        if skipped:
+            note += " ChatGPT not scheduled (skipped_schedule) — לא תקלה."
+        warnings.append(note)
     if seo_geo and seo_geo.get("aeo_cited_questions") is not None:
         row(context, "שאלות עם ציטוט במנוע Perplexity (מדידה נפרדת)",
             seo_geo["aeo_cited_questions"], seo_geo.get("aeo_measured_questions"), None,

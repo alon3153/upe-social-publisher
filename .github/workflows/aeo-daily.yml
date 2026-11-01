@@ -1,6 +1,9 @@
 name: Daily AEO Monitor
 on:
   schedule:
+    # One run at 06:00 UTC every day. ChatGPT is gated inside scripts/aeo_monitor.py
+    # to Monday/Wednesday/Friday by this run's UTC weekday. Claude and Gemini stay
+    # daily. A second cron would split the single history write.
     - cron: "0 6 * * *"        # every day 06:00 UTC
   workflow_dispatch:
     inputs:

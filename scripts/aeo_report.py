@@ -1,4 +1,7 @@
 """RTL Hebrew summary email for each AEO loop run."""
+import math
+
+import aeo_probe
 
 DIM_HE = {"product_search": "חיפוש מוצר", "comparison": "השוואה", "reputation": "מוניטין", "aeo": "ציון כולל",
           "mention_rate": "שיעור אזכור (KPI ראשי)", "citation_rate": "שיעור ציטוט"}
@@ -25,7 +28,6 @@ def _min_delta(n_questions):
     """Two questions' worth of movement, rounded up."""
     if not n_questions:
         return 0
-    import math
     return math.ceil(2 * 100 / n_questions)
 
 
@@ -48,7 +50,6 @@ def _comparable(scorecard, prev):
 
 
 def _outreach_html(scorecard, top=10):
-    import aeo_probe
     targets = aeo_probe.outreach_targets(scorecard, top=top)
     if not targets:
         return ""
@@ -177,12 +178,49 @@ def build_email(scorecard, prev, shipped, queued, failures, pr_url, citations_st
     return subject, html
 
 
-def build_daily_email(scorecard, prev, keywords, failures, target=90, reminders=None):
+def _avg7_html(trends):
+    """7-day unbranded-mention means. Each model contributes only days it ran."""
+    if not trends:
+        return ""
+    bits = []
+    for model in ("claude", "chatgpt", "gemini"):
+        item = trends.get(model) or {}
+        avg = item.get("avg7_mention_rate_nonbranded")
+        n = item.get("avg7_mention_days") or 0
+        label = MODEL_HE.get(model, model)
+        if avg is None:
+            bits.append(f"{label} —")
+        else:
+            bits.append(f'<span dir="ltr">{label} {avg}% ({n})</span>')
+    return ('<p dir="rtl">ממוצע 7 ימים לאזכור לא-ממותג — רק ימים שהמודל נמדד בהם: '
+            + " · ".join(bits) + "</p>")
+
+
+def build_daily_email(scorecard, prev, keywords, failures, target=90, reminders=None, trends=None):
     """Report mentions and the judge rubric score; recommendation rank is unmeasured."""
+    trends = trends or {}
     prev, baseline_note = _comparable(scorecard, prev)
-    rows, all_at_target = "", bool(scorecard["models"])
+    ran = [b for b in scorecard.get("models", {}).values() if aeo_probe.model_ran(b)]
+    rows, all_at_target = "", bool(ran)
     for model, block in scorecard["models"].items():
+        if aeo_probe.is_skipped_schedule(block):
+            # Not a miss and not an outage. Keep it out of the failure banner.
+            label = MODEL_HE.get(model, model)
+            rows += (f'<tr><td dir="rtl" style="padding:4px 8px;">{label}</td>'
+                     f'<td dir="rtl" style="padding:4px 8px;text-align:center;">—</td>'
+                     f'<td dir="rtl" style="padding:4px 8px;text-align:center;">—</td>'
+                     f'<td dir="rtl" style="padding:4px 8px;text-align:center;">—</td>'
+                     f'<td dir="rtl" style="padding:4px 8px;">לא מתוזמן (not scheduled)</td></tr>')
+            continue
         pblock = (prev or {}).get("models", {}).get(model, {}) if prev else {}
+        trend = trends.get(model) or {}
+        if aeo_probe.model_ran(pblock):
+            prev_ps = pblock.get("product_search")
+        elif prev is not None:
+            # Yesterday's row may be a scheduled skip. Compare to the last day it ran.
+            prev_ps = trend.get("prev_product_search")
+        else:
+            prev_ps = None
         degraded = block.get("degraded")
         ps = block.get("product_search", 0)
         # the honest headline: mentions on questions that do NOT name the company
@@ -197,7 +235,7 @@ def build_daily_email(scorecard, prev, keywords, failures, target=90, reminders=
             all_at_target = False
         else:
             status = "✅ יעד הציון הושג" if ps >= target else f"פער {target - ps} נקודות ליעד {target}"
-            arrow = _arrow(ps, pblock.get("product_search") if pblock else None, md)
+            arrow = _arrow(ps, prev_ps, md)
         frac = f' <span dir="ltr">({block.get("mentioned_nonbranded", 0)}/{n})</span>' if n else ""
         mr_cell = f"{mr}%{frac}" if mr is not None else "—"
         label = MODEL_HE.get(model, model) + (" ⛔" if degraded else "")
@@ -240,6 +278,7 @@ def build_daily_email(scorecard, prev, keywords, failures, target=90, reminders=
 <th dir="rtl" style="padding:4px 8px;">שינוי</th><th dir="rtl" style="padding:4px 8px;">סטטוס יעד הציון</th></tr>
 {rows}
 </table>
+{_avg7_html(trends)}
 {baseline_note}
 {_degraded_html(scorecard)}
 {_outreach_html(scorecard)}
