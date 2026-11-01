@@ -26,6 +26,25 @@ def test_engine_count_uses_grounded_nonbranded_evidence(tmp_path):
     assert engine_evidence(p, '2026-09-17')['ok'] is False
 
 
+def test_skipped_schedule_is_not_partial_coverage(tmp_path):
+    answer = lambda url: dict(grounded=True, branded=False, cited_urls=[url])
+    data = [{'date': '2026-11-03', 'models': {
+        'claude': {'answers': [answer('https://upe.co.il/')]},
+        'gemini': {'answers': [answer('https://upe.co.il/x')]},
+        'chatgpt': {'status': 'skipped_schedule', 'reason': 'not scheduled',
+                    'mention_rate_nonbranded': 0},
+    }}]
+    p = tmp_path / 'history.json'
+    p.write_text(json.dumps(data))
+    result = engine_evidence(p, '2026-11-03')
+    assert result['ok'] is True
+    assert result['measured_engines'] == 2
+    assert result['expected_engines'] == 2
+    assert result['skipped_schedule'] == ['chatgpt']
+    assert 'chatgpt' not in result['engines']
+    assert 'Partial' not in result['reason']
+
+
 def test_perplexity_questions_are_never_counted_as_engines():
     value = seo_geo_source.normalize({'ok': True, 'geo': {'cited': 4, 'total': 7},
                                       'aeo_cited_engines': 4})

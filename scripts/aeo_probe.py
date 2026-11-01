@@ -69,8 +69,17 @@ def _rate(hits, total):
     return round(100 * hits / total) if total else 0
 
 
-def run_probe(questions, models, ask_fn, judge_fn):
-    date = datetime.date.today().isoformat()
+def run_probe(questions, models, ask_fn, judge_fn, on_date=None):
+    # on_date is the run's calendar day (UTC in the daily workflow). Callers that
+    # omit it keep the previous behaviour: the machine-local date.
+    if on_date is None:
+        date = datetime.date.today().isoformat()
+    elif isinstance(on_date, datetime.datetime):
+        date = on_date.date().isoformat()
+    elif isinstance(on_date, datetime.date):
+        date = on_date.isoformat()
+    else:
+        date = str(on_date)[:10]
     battery_version = ""
     qpath = ROOT / "aeo_questions.json"
     if qpath.exists():
@@ -184,3 +193,117 @@ def append_history(scorecard, path):
     data = json.loads(p.read_text()) if p.exists() else []
     data.append(scorecard)
     p.write_text(json.dumps(data, ensure_ascii=False, indent=2), encoding="utf-8")
+
+
+# ChatGPT is probed Monday, Wednesday and Friday only. The status is a
+# non-measurement: readers must not treat it as a zero, a 429, or a failure.
+SKIPPED_SCHEDULE = "skipped_schedule"
+CHATGPT_WEEKDAYS = (0, 2, 4)  # Monday, Wednesday, Friday (date.weekday)
+_MEASURED_FIELDS = ("mention_rate_nonbranded", "product_search")
+
+
+def is_skipped_schedule(block):
+    return isinstance(block, dict) and block.get("status") == SKIPPED_SCHEDULE
+
+
+def model_ran(block):
+    """A real probe result. Legacy rows have no status and still count.
+
+    `skipped_schedule` is an intentional day off. It has no score, so it cannot
+    enter an average or a trend.
+    """
+    if not isinstance(block, dict) or is_skipped_schedule(block):
+        return False
+    for field in _MEASURED_FIELDS:
+        value = block.get(field)
+        if isinstance(value, (int, float)) and not isinstance(value, bool):
+            return True
+    return False
+
+
+def skipped_schedule_block(model="chatgpt"):
+    return {
+        "status": SKIPPED_SCHEDULE,
+        "reason": "not scheduled",
+        "model": model,
+        "schedule": "Mon/Wed/Fri 06:00 UTC",
+    }
+
+
+def chatgpt_scheduled(day):
+    """True on Monday, Wednesday and Friday of the run's UTC calendar date."""
+    if isinstance(day, datetime.datetime):
+        if day.tzinfo is not None:
+            day = day.astimezone(datetime.timezone.utc)
+        day = day.date()
+    elif isinstance(day, str):
+        day = datetime.date.fromisoformat(day[:10])
+    elif not isinstance(day, datetime.date):
+        raise TypeError(f"expected a date, got {type(day).__name__}")
+    return day.weekday() in CHATGPT_WEEKDAYS
+
+
+def _as_date(value):
+    if isinstance(value, datetime.datetime):
+        return value.date()
+    if isinstance(value, datetime.date):
+        return value
+    return datetime.date.fromisoformat(str(value)[:10])
+
+
+def seven_day_stats(history, model, field, end_date, days=7, battery_version=None):
+    """Mean of `field` over the inclusive window, using only days the model ran.
+
+    Skipped-schedule rows are omitted from the sum and the count. When
+    `battery_version` is set, rows from another methodology are omitted too.
+    """
+    end = _as_date(end_date)
+    start = end - datetime.timedelta(days=days - 1)
+    values = []
+    for row in history or []:
+        if not isinstance(row, dict):
+            continue
+        try:
+            stamp = _as_date(row.get("date"))
+        except (TypeError, ValueError):
+            continue
+        if stamp < start or stamp > end:
+            continue
+        if battery_version and row.get("battery_version") != battery_version:
+            continue
+        block = (row.get("models") or {}).get(model)
+        if not model_ran(block):
+            continue
+        value = block.get(field)
+        if isinstance(value, bool) or not isinstance(value, (int, float)):
+            continue
+        values.append(value)
+    average = round(sum(values) / len(values), 1) if values else None
+    return {"average": average, "days": len(values)}
+
+
+def last_ran(history, model, before_date):
+    """Latest measured block strictly before `before_date`.
+
+    Returns (block, iso_date, battery_version). Skipped days are not candidates.
+    """
+    try:
+        cutoff = _as_date(before_date)
+    except (TypeError, ValueError):
+        return None, None, None
+    found = found_date = found_battery = None
+    for row in history or []:
+        if not isinstance(row, dict):
+            continue
+        try:
+            stamp = _as_date(row.get("date"))
+        except (TypeError, ValueError):
+            continue
+        if stamp >= cutoff:
+            continue
+        block = (row.get("models") or {}).get(model)
+        if not model_ran(block):
+            continue
+        if found_date is None or stamp > found_date:
+            found, found_date, found_battery = block, stamp, row.get("battery_version")
+    return found, (found_date.isoformat() if found_date else None), found_battery

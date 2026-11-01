@@ -5,6 +5,8 @@ import re
 from pathlib import Path
 from urllib.parse import urlsplit
 
+import aeo_probe
+
 HISTORY = Path(__file__).resolve().parent / 'aeo_daily_history.json'
 EXPECTED_MODELS = {'claude', 'chatgpt', 'gemini'}
 
@@ -35,8 +37,15 @@ def engine_evidence(path=None, today=None):
     except (OSError, ValueError, KeyError, TypeError):
         return {'ok': False, 'reason': 'AEO history unavailable or invalid'}
     engines = {}
+    skipped = []
     for name, model in latest.get('models', {}).items():
-        if name not in EXPECTED_MODELS or model.get('degraded'):
+        if name not in EXPECTED_MODELS:
+            continue
+        # A scheduled day off is not missing coverage and not a degraded instrument.
+        if aeo_probe.is_skipped_schedule(model):
+            skipped.append(name)
+            continue
+        if model.get('degraded'):
             continue
         answers = [a for a in model.get('answers', [])
                    if a.get('grounded') is True and a.get('branded') is False]
@@ -52,12 +61,14 @@ def engine_evidence(path=None, today=None):
         engines[name] = {'grounded_nonbranded_answers': len(answers),
                          'direct_url_answers': direct, 'source_domain_answers': labels,
                          'cited': direct + labels > 0}
-    complete = set(engines) == EXPECTED_MODELS
+    expected = EXPECTED_MODELS - set(skipped)
+    complete = bool(expected) and set(engines) == expected
     return {'ok': complete, 'reason': '' if complete else 'Partial grounded engine coverage',
             'date': latest['date'], 'battery_version': latest.get('battery_version'),
             'engines': engines, 'measured_engines': len(engines),
+            'expected_engines': len(expected), 'skipped_schedule': skipped,
             'cited_engines': sum(v['cited'] for v in engines.values()),
-            'definition': 'Distinct engines citing UPE in grounded nonbranded answers; direct URLs and grounding source-domain labels distinguished. Not recommendation rank.'}
+            'definition': 'Distinct engines citing UPE in grounded nonbranded answers; direct URLs and grounding source-domain labels distinguished. Not recommendation rank. skipped_schedule is not a failure.'}
 
 
 def unbranded_mention_rates(path=None, date=None):
@@ -78,6 +89,8 @@ def unbranded_mention_rates(path=None, date=None):
     have_counts = True
     for name, block in (row.get("models") or {}).items():
         if name not in EXPECTED_MODELS or not isinstance(block, dict) or block.get("degraded"):
+            continue
+        if aeo_probe.is_skipped_schedule(block):
             continue
         rate = block.get("mention_rate_nonbranded")
         if isinstance(rate, bool) or not isinstance(rate, (int, float)):

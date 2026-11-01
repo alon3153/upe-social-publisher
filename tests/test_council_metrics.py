@@ -154,6 +154,20 @@ def test_normalize_counts_only_a_supplied_tracked_list():
     assert out["weekly_clicks_28d_avg"] == 41.75
 
 
+def test_skipped_chatgpt_does_not_fail_the_engine_target():
+    seo = _seo()
+    seo["aeo_engine_evidence"] = {
+        "ok": True, "date": "2026-11-03", "measured_engines": 2,
+        "expected_engines": 2, "cited_engines": 2, "skipped_schedule": ["chatgpt"],
+    }
+    card = council.build_scorecard(_base_cur(), {"totals": {"impressions": 1}}, _leads(), seo)
+    engines = next(r for r in card["scored_rows"] if "מנועי AI" in r["metric"])
+    assert engines["value"] == 2 and engines["target"] == 2 and engines["status"] == "✅"
+    assert card["components"]["aeo"] == 1.0
+    assert any("not scheduled" in note and "לא תקלה" in note for note in card["warnings"])
+    assert all("429" not in note for note in card["warnings"])
+
+
 def test_unbranded_mention_rate_reads_the_named_history_date(tmp_path):
     path = tmp_path / "history.json"
     path.write_text(json.dumps([
