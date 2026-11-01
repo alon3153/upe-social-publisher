@@ -1,0 +1,31 @@
+{
+  "day": 325,
+  "category": "social_proof",
+  "language": "es",
+  "date": "",
+  "weekday": "",
+  "theme": "The Numbers Behind the Trust",
+  "linkedin": {
+    "profile": "Uproduction Events (Company Page)",
+    "text": "Diapositiva 1 — La pregunta que todo responsable de eventos termina haciendo:\n«¿Cómo sé que van a responder cuando realmente importa?»\n\nDiapositiva 2 — Nuestra respuesta no es un testimonio. Es un historial.\n16 años. Más de 1.500 eventos producidos. Más de 130 destinos. Más de 25.000 participantes — desde conferencias de alta dirección hasta viajes de incentivo donde lo que estaba en juego era la motivación de todo un equipo comercial.\n\nDiapositiva 3 — Lo que hemos observado: los clientes que producen un evento con nosotros raramente vuelven a un proceso de RFP. No porque se lo pidamos — sino porque la certeza operativa se convierte en parte de su propia credibilidad interna.\n\nCuando tu evento habla de ti, ¿en quién confías?\n\nPregunta abierta: ¿Cuál es el mayor riesgo operativo que te quita el sueño antes de un gran evento corporativo? Déjalo en los comentarios — leo cada respuesta. 👇"
+  },
+  "instagram": {
+    "profile": "@uproductionevents",
+    "text": "Más de 1.500 eventos. Más de 130 destinos. Más de 25.000 participantes que volvieron a casa con algo que contar.\n\nLa prueba social real no es un muro de logos — es el cliente que reserva el próximo evento antes de que termine el actual. 🎯\n\nEse es el nivel al que nos medimos en cada producción.\n\n¿Cuál es tu próximo evento corporativo? Cuéntanos abajo 👇\n\n#EventosCorporativos #ViajesDeIncentivo #ProducciónDeEventos #EventosB2B #UproductionEvents #FromBusinessToPleasure #TeamBuilding #GalaDinner #PlanificaciónDeEventos #Incentivos"
+  },
+  "facebook": {
+    "profile": "Uproduction Events (Page)",
+    "text": "Cuando un cliente te confía una sala con 400 ejecutivos y dice 'que sea inolvidable', no hay espacio para la improvisación.\n\nEn 16 años produciendo más de 1.500 eventos en más de 130 destinos, hemos aprendido que la confianza no se gana en una presentación comercial. Se gana en los detalles: la logística que funcionó en silencio, el traslado que llegó antes de tiempo, la cena que terminó con aplausos de pie.\n\nEso es lo que representan más de 25.000 participantes en la práctica.\n\n¿Estás organizando algo importante? Cuéntanos en los comentarios."
+  },
+  "image_file": "content/images/d104_real.jpg",
+  "image_source": "real_archive_reused",
+  "image_credit": "📷 Un fotograma real de una producción de Uproduction",
+  "brand": {
+    "colors": [
+      "#1C1C1C",
+      "#FBCE0A"
+    ],
+    "font": "Comfortaa",
+    "logo": "uproduction_official_logo.png"
+  }
+}
