@@ -18802,7 +18802,7 @@
     "channel": "leads",
     "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
     "action_key": "salesforce-attribution-fix",
-    "owner": "Operations/CRM lead מכין; Alon מאשר ומפיץ",
+    "owner": "מנהל CRM מכין; אלון מאשר ומפיץ",
     "success_metric": "ייחוס לידים: בסיס לא-מיוחס; יעד המדד מקור אמיתי. יש להשוות תקופות תואמות."
   },
   "2769e4c7": {
@@ -18963,8 +18963,8 @@
     "channel": "linkedin",
     "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
     "action_key": "linkedin-executive-posting",
-    "owner": "Content lead מכין טיוטות; מנהלים בכירים ו-Alon מאשרים לפני פרסום",
-    "success_metric": "נוכחות סושיאל (רצפה): בסיס 7.0; יעד המדד 5. יש להשוות תקופות תואמות.",
+    "owner": "מנכ\"ל / מנהל בכיר מספק תוכן; צוות שיווק מכין טיוטה; אלון מאשר כל פוסט",
+    "success_metric": "מונחי מעקב ב-Top-3: בסיס 1; יעד המדד 3. יש להשוות תקופות תואמות.",
     "consecutive_failures": 0,
     "merged_from": [
       {
@@ -19026,11 +19026,11 @@
     "created": "2026-09-30",
     "updated": "2026-10-06",
     "kind": "recommendation",
-    "priority": "P1",
+    "priority": "P2",
     "channel": "tiktok",
     "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
     "action_key": "tiktok-behind-scenes",
-    "owner": "Content/Production team מצלמים; Alon מאשר לפני פרסום",
+    "owner": "צוות הפקת תוכן מצלם ועורך; אלון מאשר כל קליפ",
     "success_metric": "נוכחות סושיאל (רצפה): בסיס 7.0; יעד המדד 5. יש להשוות תקופות תואמות.",
     "consecutive_failures": 0,
     "merged_from": [
