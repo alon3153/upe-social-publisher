@@ -19030,8 +19030,8 @@
     "channel": "tiktok",
     "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
     "action_key": "tiktok-behind-scenes",
-    "owner": "צוות הפקת תוכן מצלם ועורך; אלון מאשר כל קליפ",
-    "success_metric": "נוכחות סושיאל (רצפה): בסיס 7.0; יעד המדד 5. יש להשוות תקופות תואמות.",
+    "owner": "צוות תוכן מכין קליפ; Alon מאשר לפני פרסום",
+    "success_metric": "נוכחות סושיאל (רצפה): בסיס 6.0; יעד המדד 5. יש להשוות תקופות תואמות.",
     "consecutive_failures": 0,
     "merged_from": [
       {
@@ -19099,6 +19099,29 @@
     "action_key": "organic-authority-backlink-outreach",
     "owner": "מנהל SEO מכין רשימת יעדים; Alon מאשר פנייה",
     "success_metric": "קליקים אורגניים/שבוע: בסיס 36; יעד המדד 300. יש להשוות תקופות תואמות.",
+    "consecutive_failures": 0
+  },
+  "0f6d0467": {
+    "id": "0f6d0467",
+    "title": "הפץ את טיוטת הנחיית ייחוס המקורות הקיימת (deliverable: lead-source-guidance.md, status: draft_ready, לא הופצה) — הגדר כלל עבור Other ו-(none): בדוק referrer + UTM ב-GA4/GSC לפני שמירה; שינוי תווית אינו מוסיף לידים לספירה הכוללת.",
+    "status": "awaiting_approval",
+    "revisions": 1,
+    "history": [
+      {
+        "date": "2026-11-02",
+        "summary": "הופק מסמך הנחיית ייחוס מקורות lead-source-guidance.md מלא וקוד-מוכן להפצה פנימית, כולל כלל מחייב לבדיקת referrer+UTM ב-GA4/GSC לפני שמירה, טבלאות סיווג, UTM taxonomy, חלוקת אחריות ולוח זמנים — ממתין לאישור Alon.",
+        "ready": true
+      }
+    ],
+    "created": "2026-11-02",
+    "updated": "2026-11-02",
+    "kind": "recommendation",
+    "priority": "P0",
+    "channel": "google_organic_geo",
+    "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
+    "action_key": "salesforce-attribution-fix",
+    "owner": "RevOps/Marketing Ops מפיץ הנחיה; Alon מאשר הפצה",
+    "success_metric": "ייחוס לידים: בסיס לא-מיוחס; יעד המדד מקור אמיתי. יש להשוות תקופות תואמות.",
     "consecutive_failures": 0
   }
 }
