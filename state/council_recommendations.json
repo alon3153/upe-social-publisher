@@ -1,20 +1,20 @@
 {
-  "updated_at": "2026-11-02",
+  "updated_at": "2026-11-03",
   "scores": {
     "instagram": 10,
     "facebook": 10,
-    "tiktok": 62,
-    "linkedin": 38,
-    "youtube": 42,
-    "google_organic_geo": 44,
-    "overall": 58
+    "tiktok": 10,
+    "linkedin": 45,
+    "youtube": 25,
+    "google_organic_geo": 38,
+    "overall": 48
   },
   "recommendations": [
     {
       "category": "gated",
       "priority": "P0",
       "action_key": "salesforce-attribution-fix",
-      "owner": "RevOps/Marketing Ops מפיץ הנחיה; Alon מאשר הפצה",
+      "owner": "מנהל/ת תפעול שיווק; אישור: Alon",
       "success_metric": "ייחוס לידים: בסיס לא-מיוחס; יעד המדד מקור אמיתי. יש להשוות תקופות תואמות.",
       "evidence": {
         "source": "scorecard",
@@ -26,29 +26,51 @@
       },
       "evidence_url": null,
       "target_url": null,
-      "action": "הפץ את טיוטת הנחיית ייחוס המקורות הקיימת (deliverable: lead-source-guidance.md, status: draft_ready, לא הופצה) — הגדר כלל עבור Other ו-(none): בדוק referrer + UTM ב-GA4/GSC לפני שמירה; שינוי תווית אינו מוסיף לידים לספירה הכוללת.",
+      "action": "הפץ את טיוטת הנחיית ייחוס המקורות הקיימת (lead-source-guidance.md, status: draft_ready, לא הופצה) לצוות המכירות — הגדר כלל: בדוק referrer + UTM ב-GA4 לפני שמירת מקור Other/(none); אין לשנות רשומות CRM ללא ראיה.",
       "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
-      "channel": "google_organic_geo",
+      "channel": "leads",
       "status": "candidate",
       "detail": "הצעה לבדיקה על בסיס המדד המתועד; לא בוצע שינוי."
     },
     {
       "category": "gated",
-      "priority": "P2",
-      "action_key": "tiktok-behind-scenes",
-      "owner": "צוות תוכן מכין קליפ; Alon מאשר לפני פרסום",
-      "success_metric": "נוכחות סושיאל (רצפה): בסיס 6.0; יעד המדד 5. יש להשוות תקופות תואמות.",
+      "priority": "P0",
+      "action_key": "linkedin-executive-posting",
+      "owner": "מנכ\"ל/מנהל בכיר מכין; Alon מאשר כל פוסט",
+      "success_metric": "נוכחות סושיאל (רצפה): בסיס 3.0; יעד המדד 5. יש להשוות תקופות תואמות.",
       "evidence": {
         "source": "scorecard",
         "metric": "נוכחות סושיאל (רצפה)",
-        "value": 6.0,
+        "value": 3.0,
         "target": 5,
         "unit": "",
-        "status": "✅"
+        "status": "❌"
+      },
+      "evidence_url": "https://www.tiberius.co.nz/wiki/linkedin-organic-content-b2b-algorithm-strategy/",
+      "target_url": null,
+      "action": "הפעל initiative d477123a: הכן 2 טיוטות carousel (3 שקפים) מפרופיל המנכ\"ל — נתון ממשי מהפקה + שאלה לקהל; פרסם לאחר אישור מפורש. אל תתבסס על AI-generated copy — LinkedIn מענישה תוכן ניסוחי אוטומטי עד 47% פחות reach.",
+      "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
+      "channel": "linkedin",
+      "status": "candidate",
+      "detail": "הצעה לבדיקה על בסיס המדד המתועד; לא בוצע שינוי."
+    },
+    {
+      "category": "gated",
+      "priority": "P1",
+      "action_key": "tiktok-behind-scenes",
+      "owner": "צלם/מפיק תוכן; Alon מאשר כל קליפ",
+      "success_metric": "נוכחות סושיאל (רצפה): בסיס 3.0; יעד המדד 5. יש להשוות תקופות תואמות.",
+      "evidence": {
+        "source": "scorecard",
+        "metric": "נוכחות סושיאל (רצפה)",
+        "value": 3.0,
+        "target": 5,
+        "unit": "",
+        "status": "❌"
       },
       "evidence_url": null,
       "target_url": null,
-      "action": "הפעל initiative dc82116b: 3 קליפים 'מאחורי הקלעים' (60 שניות, vertical, ללא תסריט) מהפקה אמיתית — הגש לאישור; לאחר אישור פרסם ב-TikTok ושתף ב-Instagram Reels; אל תפרסם Instagram ללא אישור נפרד.",
+      "action": "הפעל initiative dc82116b: 3 קליפים 60 שניות vertical מהפקה אמיתית — פרסם ב-TikTok ושתף ב-Instagram Reels. אין לפרסם ללא אישור מפורש. תיעד reach ו-engagement לכל קליפ בנפרד.",
       "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
       "channel": "tiktok",
       "status": "candidate",
