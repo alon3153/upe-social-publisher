@@ -2,6 +2,10 @@
 import json, re, datetime
 from pathlib import Path
 from statistics import mean
+try:
+    from aeo_models import redact_obj
+except ImportError:  # imported as scripts.aeo_probe (tests)
+    from scripts.aeo_models import redact_obj
 
 DIMS = ("product_search", "comparison", "reputation")
 ROOT = Path(__file__).resolve().parent
@@ -191,7 +195,7 @@ def outreach_targets(scorecard, top=15):
 def append_history(scorecard, path):
     p = Path(path)
     data = json.loads(p.read_text()) if p.exists() else []
-    data.append(scorecard)
+    data.append(redact_obj(scorecard))  # never persist a key echoed in an error string
     p.write_text(json.dumps(data, ensure_ascii=False, indent=2), encoding="utf-8")
 
 

@@ -107,7 +107,7 @@ def run_daily(history_dir=None, ask_fn=None, judge_fn=None, send_fn=None, today=
                 try:
                     return aeo_models.ask(m, prompt, system=aeo_probe.JUDGE_SYSTEM)
                 except Exception as e:
-                    errors.append(f"{m}: {type(e).__name__}: {str(e)[:120]}")
+                    errors.append(f"{m}: {type(e).__name__}: {aeo_models.redact(str(e))[:120]}")
             raise RuntimeError("all judges failed — " + " | ".join(errors))
 
     prior = _load_history(history_path)
@@ -147,9 +147,9 @@ def run_daily(history_dir=None, ask_fn=None, judge_fn=None, send_fn=None, today=
         folder = Path(output_dir)
         folder.mkdir(parents=True, exist_ok=True)
         (folder / 'daily-report.html').write_text(html, encoding='utf-8')
-        (folder / 'daily-report.json').write_text(json.dumps({
+        (folder / 'daily-report.json').write_text(json.dumps(aeo_models.redact_obj({
             'scorecard': scorecard, 'keywords': keywords, 'failures': failures, 'trends': trends,
-        }, ensure_ascii=False, indent=2), encoding='utf-8')
+        }), ensure_ascii=False, indent=2), encoding='utf-8')
     ok = False
     if send_email:
         ok, _ = aeo_report.send(subject, html, send_fn=send_fn)
