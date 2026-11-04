@@ -65,6 +65,8 @@ jobs:
           git config user.email "alon@upe.co.il"
           # citations.json advances as the daily crawler verifies external pages
           git add scripts/aeo_daily_history.json state/citations.json 2>/dev/null || true
+          # never push a key that leaked into an error string (secret-scanning alert #1)
+          python scripts/check_no_secrets.py --staged || { git reset -q; echo "::error::secret detected in daily output, not committing"; exit 1; }
           git commit -m "chore(aeo): daily monitor history + citation state $(date -u +%F)" || echo "no change"
           for attempt in 1 2 3; do
             if git pull --rebase origin main && git push; then

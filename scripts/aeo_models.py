@@ -11,7 +11,64 @@ as data: an ungrounded model answers from frozen training recall and will report
 visibility collapse that never happened. This is exactly how ChatGPT's citation rate
 silently fell to 0 on 2026-08-23 when `gpt-4o-search-preview` was retired (2026-07-23).
 """
-import os, json, urllib.request, urllib.error
+import os, re, json, urllib.request, urllib.error
+
+# --- secret redaction -------------------------------------------------------------
+# Provider errors used to echo the request URL (Gemini's ?key=...) into exceptions, which
+# aeo_monitor wrote to scripts/aeo_daily_history.json and the workflow pushed to a PUBLIC
+# repo (GitHub secret-scanning alert #1, 2026-11-04). Every string that can reach a log,
+# history file or report goes through redact() first.
+_SECRET_PATTERNS = [
+    (re.compile(r"-----BEGIN [A-Z ]*PRIVATE KEY-----.*?-----END [A-Z ]*PRIVATE KEY-----", re.S),
+     "[REDACTED_PRIVATE_KEY]"),
+    (re.compile(r'("private_key"\s*:\s*")[^"]*(")'), r"\1[REDACTED]\2"),
+    (re.compile(r"([?&](?:key|api_key|apikey|access_token|token|secret|client_secret)=)[^&\s\"'#]+",
+                re.I), r"\1[REDACTED]"),
+    (re.compile(r"(?i)(bearer\s+)[A-Za-z0-9._~+/=\-]{8,}"), r"\1[REDACTED]"),
+    (re.compile(r"(?i)((?:x-goog-api-key|x-api-key|authorization)\s*[:=]\s*['\"]?)[^\s'\",}]+"),
+     r"\1[REDACTED]"),
+    (re.compile(r"AQ\.[A-Za-z0-9_\-]{20,}"), "AQ.[REDACTED]"),
+    (re.compile(r"AIza[0-9A-Za-z_\-]{30,}"), "AIza[REDACTED]"),
+    (re.compile(r"(?<![A-Za-z0-9\-])sk-(?:proj-|ant-|svcacct-)?(?=[A-Za-z_\-]*[0-9])[A-Za-z0-9_\-]{20,}"), "sk-[REDACTED]"),
+    (re.compile(r"\bgh[pousr]_[A-Za-z0-9]{30,}"), "gh_[REDACTED]"),
+    (re.compile(r"\bEAA[A-Za-z0-9]{40,}"), "EAA[REDACTED]"),
+]
+SECRET_DETECTORS = [re.compile(x) for x in (
+    r"AQ\.[A-Za-z0-9_\-]{20,}", r"AIza[0-9A-Za-z_\-]{30,}",
+    r"(?<![A-Za-z0-9\-])sk-(?:proj-|ant-|svcacct-)?(?=[A-Za-z_\-]*[0-9])[A-Za-z0-9_\-]{20,}", r"\bgh[pousr]_[A-Za-z0-9]{30,}",
+    r"-----BEGIN [A-Z ]*PRIVATE KEY-----", r"[?&](?:key|api_key|apikey|access_token)=(?!\[REDACTED\])[A-Za-z0-9._\-]{8,}",
+    r"(?i)bearer\s+(?!\[REDACTED\])[A-Za-z0-9._~+/=\-]{16,}",
+)]
+
+
+def redact(text):
+    """Mask API keys, tokens and credential query params in any string."""
+    if not isinstance(text, str):
+        text = str(text)
+    for pat, repl in _SECRET_PATTERNS:
+        text = pat.sub(repl, text)
+    return text
+
+
+def redact_obj(obj):
+    """Recursively redact every string in a JSON-like structure (dict/list/str)."""
+    if isinstance(obj, str):
+        return redact(obj)
+    if isinstance(obj, dict):
+        return {k: redact_obj(v) for k, v in obj.items()}
+    if isinstance(obj, (list, tuple)):
+        return [redact_obj(v) for v in obj]
+    return obj
+
+
+def find_secrets(text):
+    """Return masked fingerprints (never the value) of secret-looking matches in text."""
+    hits = []
+    for det in SECRET_DETECTORS:
+        for m in det.finditer(text):
+            v = m.group(0)
+            hits.append(v[:6] + "***(len=%d)" % len(v))
+    return hits
 
 MODEL_LABELS = {"claude": "Claude", "chatgpt": "ChatGPT", "gemini": "Gemini"}
 _KEY_ENV = {"claude": "ANTHROPIC_API_KEY", "chatgpt": "OPENAI_API_KEY", "gemini": "GEMINI_API_KEY"}
@@ -28,7 +85,9 @@ def _post(url, data, headers):
             return r.read().decode("utf-8")
     except urllib.error.HTTPError as e:
         body = e.read().decode("utf-8", errors="replace")[:400]
-        raise RuntimeError(f"HTTP {e.code} from {url}: {body}") from None
+        raise RuntimeError(redact(f"HTTP {e.code} from {url}: {body}")) from None
+    except urllib.error.URLError as e:
+        raise RuntimeError(redact(f"URL error from {url}: {e.reason}")) from None
 
 
 def ask(model, prompt, system="", max_tokens=4096, _http=None, grounded=False):
@@ -132,12 +191,14 @@ def _ask_once(model, prompt, system, max_tokens, _http, grounded):
     if model == "gemini":
         mdl = os.environ.get("AEO_GEMINI_MODEL") or "gemini-2.5-flash"
         key = os.environ.get("GEMINI_API_KEY", "")
-        url = f"https://generativelanguage.googleapis.com/v1beta/models/{mdl}:generateContent?key={key}"
+        # key goes in a header, never the URL: URLs end up in exception text and logs
+        url = f"https://generativelanguage.googleapis.com/v1beta/models/{mdl}:generateContent"
         body = {"contents": [{"parts": [{"text": (system + "\n\n" + prompt) if system else prompt}]}],
                 "generationConfig": {"maxOutputTokens": max_tokens}}
         if grounded:
             body["tools"] = [{"google_search": {}}]
-        data = json.loads(http(url, json.dumps(body).encode(), {"content-type": "application/json"}))
+        data = json.loads(http(url, json.dumps(body).encode(),
+                               {"content-type": "application/json", "x-goog-api-key": key}))
         cand = data["candidates"][0]
         parts = cand["content"]["parts"]
         chunks = (cand.get("groundingMetadata") or {}).get("groundingChunks") or []
