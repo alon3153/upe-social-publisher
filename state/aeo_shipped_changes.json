@@ -2,13 +2,13 @@
   "changes": [
     {
       "url": "https://upe.co.il/הפקת-כנסים/",
-      "last_changed": "2026-09-21",
+      "last_changed": "2026-11-01",
       "aliases": [
         "הפקת כנסים בינלאומיים",
         "הפקת כנסים עסקיים בחול",
         "international conference production"
       ],
-      "source": "https://github.com/alon3153/uproduction-astro/commit/1681de0f90d46b92dc0d118eedf0542c70b0b49b",
+      "source": "https://github.com/alon3153/uproduction-astro/commit/7530030adbe451d4125670e5eff27466410b867f",
       "intents": [
         "bh_il_kenes"
       ],
@@ -17,11 +17,16 @@
           "previous_last_changed": "2026-09-09",
           "previous_source": "uproduction-astro service-depth changes published 2026-09-09",
           "recorded_at": "2026-09-29"
+        },
+        {
+          "previous_last_changed": "2026-09-21",
+          "previous_source": "https://github.com/alon3153/uproduction-astro/commit/1681de0f90d46b92dc0d118eedf0542c70b0b49b",
+          "recorded_at": "2026-11-04"
         }
       ],
-      "evaluation_not_before": "2026-10-19",
-      "change_evidence": "Approved September21 title/H1 and service-copy changes, commit 6f14ec2baca97af39dc9fc47f3749ec86a07092d. September28 brand normalization is minor.",
-      "last_change_verified_at": "2026-10-13"
+      "evaluation_not_before": "2026-11-29",
+      "change_evidence": "Merged PR228 on November1, commit 7530030adbe451d4125670e5eff27466410b867f. Hi-tech page has a new answer-first opening; conference and comparison pages have new cross-language internal links. Conservatively restart the SEO observation window for all four affected pages. Preserve prior windows as history; source drift is not zero traffic.",
+      "last_change_verified_at": "2026-11-04"
     },
     {
       "url": "https://upe.co.il/נופש-חברה-בחול/",
@@ -61,14 +66,21 @@
       "aliases": [
         "כנסים לחברות הייטק"
       ],
-      "source": "https://github.com/alon3153/uproduction-astro/commit/d1c10cdcaeb6570d0ee8d85dea9a1c8fcd34ccd2",
+      "source": "https://github.com/alon3153/uproduction-astro/commit/7530030adbe451d4125670e5eff27466410b867f",
       "intents": [
         "bh_il_hitech"
       ],
-      "last_changed": "2026-09-12",
-      "evaluation_not_before": "2026-10-10",
-      "change_evidence": "PR135 September12; no later source changes.",
-      "last_change_verified_at": "2026-10-13"
+      "last_changed": "2026-11-01",
+      "evaluation_not_before": "2026-11-29",
+      "change_evidence": "Merged PR228 on November1, commit 7530030adbe451d4125670e5eff27466410b867f. Hi-tech page has a new answer-first opening; conference and comparison pages have new cross-language internal links. Conservatively restart the SEO observation window for all four affected pages. Preserve prior windows as history; source drift is not zero traffic.",
+      "last_change_verified_at": "2026-11-04",
+      "change_history": [
+        {
+          "previous_last_changed": "2026-09-12",
+          "previous_source": "https://github.com/alon3153/uproduction-astro/commit/d1c10cdcaeb6570d0ee8d85dea9a1c8fcd34ccd2",
+          "recorded_at": "2026-11-04"
+        }
+      ]
     },
     {
       "url": "https://upe.co.il/en/about-us/",
@@ -118,13 +130,18 @@
           "previous_last_changed": null,
           "previous_source": null,
           "recorded_at": "2026-09-29"
+        },
+        {
+          "previous_last_changed": "2026-09-28",
+          "previous_source": "https://github.com/alon3153/uproduction-astro/commit/f7121740f6a67d12c414134fd9ce6dbb8ba0fb93",
+          "recorded_at": "2026-11-04"
         }
       ],
-      "last_changed": "2026-09-28",
-      "evaluation_not_before": "2026-10-26",
-      "source": "https://github.com/alon3153/uproduction-astro/commit/f7121740f6a67d12c414134fd9ce6dbb8ba0fb93",
-      "change_evidence": "September28 removed six-continents scope claim, d2c228031700dab20e18e41bf6541622945d225b. October10 headquarters-only wording is minor.",
-      "last_change_verified_at": "2026-10-13"
+      "last_changed": "2026-11-01",
+      "evaluation_not_before": "2026-11-29",
+      "source": "https://github.com/alon3153/uproduction-astro/commit/7530030adbe451d4125670e5eff27466410b867f",
+      "change_evidence": "Merged PR228 on November1, commit 7530030adbe451d4125670e5eff27466410b867f. Hi-tech page has a new answer-first opening; conference and comparison pages have new cross-language internal links. Conservatively restart the SEO observation window for all four affected pages. Preserve prior windows as history; source drift is not zero traffic.",
+      "last_change_verified_at": "2026-11-04"
     },
     {
       "url": "https://upe.co.il/en/choosing-global-corporate-event-conference-production-company/",
@@ -227,21 +244,26 @@
       "aliases": [
         "boutique vs large"
       ],
-      "source": "https://github.com/alon3153/uproduction-astro/commit/f7121740f6a67d12c414134fd9ce6dbb8ba0fb93",
+      "source": "https://github.com/alon3153/uproduction-astro/commit/7530030adbe451d4125670e5eff27466410b867f",
       "intents": [
         "cmp_vs_bcd"
       ],
-      "last_changed": "2026-09-28",
+      "last_changed": "2026-11-01",
       "change_history": [
         {
           "previous_last_changed": "2026-09-12",
           "previous_source": "uproduction-astro PR135 cumulative-participation correction, published 2026-09-12",
           "recorded_at": "2026-09-29"
+        },
+        {
+          "previous_last_changed": "2026-09-28",
+          "previous_source": "https://github.com/alon3153/uproduction-astro/commit/f7121740f6a67d12c414134fd9ce6dbb8ba0fb93",
+          "recorded_at": "2026-11-04"
         }
       ],
-      "evaluation_not_before": "2026-10-26",
-      "change_evidence": "September28 removed six-continents scope claim, d2c228031700dab20e18e41bf6541622945d225b. October10 headquarters-only wording is minor.",
-      "last_change_verified_at": "2026-10-13"
+      "evaluation_not_before": "2026-11-29",
+      "change_evidence": "Merged PR228 on November1, commit 7530030adbe451d4125670e5eff27466410b867f. Hi-tech page has a new answer-first opening; conference and comparison pages have new cross-language internal links. Conservatively restart the SEO observation window for all four affected pages. Preserve prior windows as history; source drift is not zero traffic.",
+      "last_change_verified_at": "2026-11-04"
     },
     {
       "url": "https://upe.co.il/בחירת-חברה-להפקת-כנסים/",
@@ -1020,5 +1042,399 @@
       "inclusive_days": 7
     },
     "decision": "No content rewrite. Conference impressions increased 123 to 280 but clicks fell 1 to 0 and mean position worsened 19.88 to 21.70. Sparse noncausal evidence; observe query mix before further changes. Respect remaining observation windows."
+  },
+  "measurement_review_2026_11_04": {
+    "reviewed_at": "2026-11-04",
+    "category": {
+      "measured_at": "2026-11-04T13:09:50.325860+00:00",
+      "method": "serpapi-google",
+      "cohort": "aaf546d73c2324a7",
+      "metric": "first_page_organic_visibility",
+      "top10": {
+        "verified_queries": 12,
+        "found": 6,
+        "score": null
+      },
+      "context": {
+        "en": {
+          "gl": "es",
+          "hl": "en"
+        },
+        "es": {
+          "gl": "es",
+          "hl": "es"
+        },
+        "he": {
+          "gl": "il",
+          "hl": "iw"
+        },
+        "device": "desktop",
+        "scope": "first-page-organic-up-to-10",
+        "max_results": 10
+      },
+      "engines": {
+        "google": {
+          "measured": 30,
+          "total": 30,
+          "found": 6,
+          "score": 20.0
+        },
+        "bing": {
+          "measured": 0,
+          "total": 30,
+          "found": null,
+          "score": null
+        },
+        "perplexity": {
+          "measured": 0,
+          "total": 30,
+          "found": null,
+          "score": null
+        }
+      },
+      "status": "complete",
+      "by_category": {
+        "authority": {
+          "found": 0,
+          "measured": 1,
+          "total": 1,
+          "score": 0.0
+        },
+        "brand": {
+          "found": 1,
+          "measured": 3,
+          "total": 3,
+          "score": 33.3
+        },
+        "content": {
+          "found": 0,
+          "measured": 5,
+          "total": 5,
+          "score": 0.0
+        },
+        "local": {
+          "found": 1,
+          "measured": 4,
+          "total": 4,
+          "score": 25.0
+        },
+        "service": {
+          "found": 4,
+          "measured": 17,
+          "total": 17,
+          "score": 23.5
+        }
+      },
+      "by_language": {
+        "en": {
+          "found": 3,
+          "measured": 15,
+          "total": 15,
+          "score": 20.0
+        },
+        "es": {
+          "found": 0,
+          "measured": 8,
+          "total": 8,
+          "score": 0.0
+        },
+        "he": {
+          "found": 3,
+          "measured": 7,
+          "total": 7,
+          "score": 42.9
+        }
+      },
+      "by_language_group": {
+        "en_es": {
+          "found": 3,
+          "measured": 23,
+          "total": 23,
+          "score": 13.0
+        },
+        "he": {
+          "found": 3,
+          "measured": 7,
+          "total": 7,
+          "score": 42.9
+        }
+      },
+      "rank_changes": [
+        {
+          "q": "best corporate event company in Israel",
+          "lang": "en",
+          "before": 6,
+          "now": 8,
+          "change": -2
+        },
+        {
+          "q": "corporate event production company Tel Aviv",
+          "lang": "en",
+          "before": null,
+          "now": 9,
+          "change": null
+        },
+        {
+          "q": "הפקת אירועים לחברות בישראל",
+          "lang": "he",
+          "before": 9,
+          "now": 7,
+          "change": 2
+        },
+        {
+          "q": "הפקת כנסים מקצועיים",
+          "lang": "he",
+          "before": null,
+          "now": 8,
+          "change": null
+        },
+        {
+          "q": "ימי גיבוש לחברות",
+          "lang": "he",
+          "before": null,
+          "now": 3,
+          "change": null
+        }
+      ],
+      "comparison_baseline": {
+        "measured_at": "2026-10-28T11:28:59.386463+00:00",
+        "method": "serpapi-google",
+        "cohort": "aaf546d73c2324a7",
+        "context": {
+          "en": {
+            "gl": "es",
+            "hl": "en"
+          },
+          "es": {
+            "gl": "es",
+            "hl": "es"
+          },
+          "he": {
+            "gl": "il",
+            "hl": "iw"
+          },
+          "device": "desktop",
+          "scope": "first-page-organic-up-to-10",
+          "max_results": 10
+        }
+      },
+      "entered_first_page": [
+        {
+          "q": "corporate event production company Tel Aviv",
+          "lang": "en"
+        },
+        {
+          "q": "הפקת כנסים מקצועיים",
+          "lang": "he"
+        },
+        {
+          "q": "ימי גיבוש לחברות",
+          "lang": "he"
+        }
+      ],
+      "exited_first_page": [],
+      "comparison": "comparable",
+      "unmeasured_reasons": [],
+      "provider_account": {
+        "total_searches_left": 926,
+        "plan_renewal_date": "2026-11-21"
+      }
+    },
+    "gsc_report_generated_at": "2026-11-04",
+    "measured_pages": [
+      {
+        "url": "https://upe.co.il/en/choosing-global-corporate-event-conference-production-company/",
+        "windows": {
+          "before": {
+            "startDate": "2026-08-26",
+            "endDate": "2026-09-22"
+          },
+          "after": {
+            "startDate": "2026-09-24",
+            "endDate": "2026-10-21"
+          }
+        },
+        "metrics": {
+          "before": {
+            "clicks": 1,
+            "impressions": 123,
+            "ctr": 0.008130081300813009,
+            "position": 19.878048780487806
+          },
+          "after": {
+            "clicks": 0,
+            "impressions": 280,
+            "ctr": 0,
+            "position": 21.70357142857143
+          }
+        }
+      },
+      {
+        "url": "https://upe.co.il/en/corporate-events-barcelona-guide/",
+        "windows": {
+          "before": {
+            "startDate": "2026-08-11",
+            "endDate": "2026-09-07"
+          },
+          "after": {
+            "startDate": "2026-09-09",
+            "endDate": "2026-10-06"
+          }
+        },
+        "metrics": {
+          "before": {
+            "clicks": 0,
+            "impressions": 92,
+            "ctr": 0,
+            "position": 42.858695652173914
+          },
+          "after": {
+            "clicks": 0,
+            "impressions": 56,
+            "ctr": 0,
+            "position": 39.660714285714285
+          }
+        }
+      },
+      {
+        "url": "https://upe.co.il/en/international-conference-production-tech-companies/",
+        "windows": {
+          "before": {
+            "startDate": "2026-08-15",
+            "endDate": "2026-09-11"
+          },
+          "after": {
+            "startDate": "2026-09-13",
+            "endDate": "2026-10-10"
+          }
+        },
+        "metrics": {
+          "before": {
+            "clicks": 0,
+            "impressions": 39,
+            "ctr": 0,
+            "position": 38.8974358974359
+          },
+          "after": {
+            "clicks": 0,
+            "impressions": 9,
+            "ctr": 0,
+            "position": 41.111111111111114
+          }
+        }
+      },
+      {
+        "url": "https://upe.co.il/en/corporate-conference-production-outside-the-us/",
+        "windows": {
+          "before": {
+            "startDate": "2026-08-15",
+            "endDate": "2026-09-11"
+          },
+          "after": {
+            "startDate": "2026-09-13",
+            "endDate": "2026-10-10"
+          }
+        },
+        "metrics": {
+          "before": {
+            "clicks": 0,
+            "impressions": 4,
+            "ctr": 0,
+            "position": 6.5
+          },
+          "after": {
+            "clicks": 0,
+            "impressions": 9,
+            "ctr": 0,
+            "position": 6
+          }
+        }
+      },
+      {
+        "url": "https://upe.co.il/en/event-production-costs-europe-2026/",
+        "windows": {
+          "before": {
+            "startDate": "2026-08-17",
+            "endDate": "2026-09-13"
+          },
+          "after": {
+            "startDate": "2026-09-15",
+            "endDate": "2026-10-12"
+          }
+        },
+        "metrics": {
+          "before": {
+            "clicks": 1,
+            "impressions": 54,
+            "ctr": 0.018518518518518517,
+            "position": 6.111111111111111
+          },
+          "after": {
+            "clicks": 1,
+            "impressions": 41,
+            "ctr": 0.024390243902439025,
+            "position": 5.658536585365853
+          }
+        }
+      },
+      {
+        "url": "https://upe.co.il/en/faq-corporate-event-venues-europe/",
+        "windows": {
+          "before": {
+            "startDate": "2026-08-30",
+            "endDate": "2026-09-26"
+          },
+          "after": {
+            "startDate": "2026-09-28",
+            "endDate": "2026-10-25"
+          }
+        },
+        "metrics": {
+          "before": {
+            "clicks": 0,
+            "impressions": 60,
+            "ctr": 0,
+            "position": 7.916666666666667
+          },
+          "after": {
+            "clicks": 0,
+            "impressions": 54,
+            "ctr": 0,
+            "position": 6.87037037037037
+          }
+        }
+      }
+    ],
+    "source_review_fix": {
+      "pr": "https://github.com/alon3153/uproduction-astro/pull/231",
+      "status": "tests_passed_merge_blocked_by_master_policy",
+      "source_commit": "7530030adbe451d4125670e5eff27466410b867f",
+      "affected_urls": [
+        "https://upe.co.il/הפקת-כנסים/",
+        "https://upe.co.il/כנסים-לחברות-הייטק/",
+        "https://upe.co.il/en/boutique-vs-large-event-agency/",
+        "https://upe.co.il/בוטיק-מול-סוכנות-אירועים-גדולה/"
+      ],
+      "changed_at": "2026-11-01",
+      "collect_not_before": "2026-12-02",
+      "note": "Conservative restart for new opening/internal linking; prior windows preserved in proposed config. Deployed config still reports source_changed_needs_review until merge."
+    },
+    "aeo": {
+      "daily_date": "2026-11-04",
+      "complete_engines": [
+        "claude"
+      ],
+      "chatgpt": "0/32; HTTP429 credit failure",
+      "gemini": "0/32; HTTP402 billing error",
+      "note": "Missing engines are unmeasured, not zero visibility. No rerun or spending."
+    },
+    "council": {
+      "date": "2026-11-04",
+      "json_html_on_main": true,
+      "gsc_week_from": "2026-10-22",
+      "gsc_week_to": "2026-10-28",
+      "note": "Seven inclusive days; source dated, not current final-data claim."
+    },
+    "decision": "No further page rewrite; pending reviewed config merge and provider billing resolution. Barcelona ES and incentive guide remain in observation until November10."
   }
 }
