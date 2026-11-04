@@ -1,10 +1,10 @@
 {
-  "updated_at": "2026-11-03",
+  "updated_at": "2026-11-04",
   "source": "daily-council",
   "directives": [
     {
       "category": "safe_auto",
-      "action": "הגדר 3 עמודי תוכן LinkedIn לצוות המנהלים: (1) insight מהפקה אמיתית — מספר/עובדה ושאלה לקהל; (2) תהליך מאחורי הקלעים — טקסט + תמונה אחת; (3) השוואת יעדים/פורמטים — carousel קצר 3 שקפים. כל פוסט ממתין לאישור מפורש.",
+      "action": "ניסוי תוכן LinkedIn: השבוע הבא — הכן 2 טיוטות carousel (3-4 שקפים, PDF native) עם insight אמיתי מהפקה (נתון מספרי + לקח), לעומת פוסט טקסט רגיל; מדוד dwell-time ו-comments לאחר 7 ימים לקביעת פורמט מנצח",
       "detail": "הצעה לבדיקה על בסיס המדד המתועד; לא בוצע שינוי.",
       "channel": "linkedin",
       "evidence": {
@@ -21,7 +21,24 @@
     },
     {
       "category": "safe_auto",
-      "action": "הכן תוכנית קליפים TikTok/Reels 60 שניות מהפקות ספטמבר–נובמבר: 3 קליפים vertical ללא תסריט מהפקה אמיתית — תגית עברית (#הפקתאירועים) + תגית אנגלית (#corporateevents). כל קליפ ממתין לאישור.",
+      "action": "ניסוי hashtag ו-topic strategy לפוסטים עבריים: בדוק 3 גרסאות hashtag (ענפי MICE, תפקיד CMO/HR, יעד גיאוגרפי) על פוסטים שונים ב-LinkedIn — תעד impressions per hashtag-set אחרי 14 יום",
+      "detail": "הצעה לבדיקה על בסיס המדד המתועד; לא בוצע שינוי.",
+      "channel": "linkedin",
+      "evidence": {
+        "source": "scorecard",
+        "metric": "מונחי מעקב ב-Top-3",
+        "value": 1,
+        "target": 3,
+        "unit": "",
+        "status": "❌"
+      },
+      "status": "candidate",
+      "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
+      "success_metric": "מונחי מעקב ב-Top-3: בסיס 1; יעד המדד 3. יש להשוות תקופות תואמות."
+    },
+    {
+      "category": "safe_auto",
+      "action": "הכן 2 טיוטות TikTok/Reels 'מאחורי הקלעים' (vertical, 60 שניות, ללא תסריט) מהפקה אמיתית — הטמע כתוביות; ממתינות לאישור מפורש לפני פרסום (initiative dc82116b)",
       "detail": "הצעה לבדיקה על בסיס המדד המתועד; לא בוצע שינוי.",
       "channel": "tiktok",
       "evidence": {
@@ -38,25 +55,42 @@
     },
     {
       "category": "safe_auto",
-      "action": "הכן רשימת שאלות גישוש למנוע AI שלישי (ChatGPT) בנושאים: 'חברת הפקה לכנסים בינלאומיים', 'טיולי תמריץ לחברות ישראליות' — כדי לבדוק ציטוט ב-ChatGPT ולהשלים את יעד 3 מנועים נמדדים.",
+      "action": "הכן אסטרטגיית מונחי SEO עברי לשאילתות הזדמנות: 'גיבוש' (pos 7.6, 426 חשיפות) ו-'הפקת נופש חברה' (pos 16.2, 272 חשיפות) — מפה לדפים קיימים ב-opportunity_pages; אין ליצור דפים חדשים",
       "detail": "הצעה לבדיקה על בסיס המדד המתועד; לא בוצע שינוי.",
       "channel": "google_organic_geo",
       "evidence": {
         "source": "scorecard",
-        "metric": "מנועי AI שנבדקו (לא אזכורים)",
-        "value": 2,
-        "target": 3,
+        "metric": "קליקים אורגניים/שבוע",
+        "value": 52,
+        "target": 300,
         "unit": "",
         "status": "❌"
       },
       "status": "candidate",
       "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
-      "success_metric": "מנועי AI שנבדקו (לא אזכורים): בסיס 2; יעד המדד 3. יש להשוות תקופות תואמות."
+      "success_metric": "קליקים אורגניים/שבוע: בסיס 52; יעד המדד 300. יש להשוות תקופות תואמות."
+    },
+    {
+      "category": "safe_auto",
+      "action": "הכן briefing document לתוכן YouTube: 3 שאלות קונים עם ראיות GSC ('כמה עולה הפקת כנס', 'נופש חברה vs טיול תמריץ', 'איך בוחרים חברת הפקה') — timestamps מוצעים, description 300+ מילים, קישור לדף שירות רלוונטי; ממתין לאישור (initiative 0a16e409)",
+      "detail": "הצעה לבדיקה על בסיס המדד המתועד; לא בוצע שינוי.",
+      "channel": "youtube",
+      "evidence": {
+        "source": "scorecard",
+        "metric": "נוכחות סושיאל (רצפה)",
+        "value": 3.0,
+        "target": 5,
+        "unit": "",
+        "status": "❌"
+      },
+      "status": "candidate",
+      "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
+      "success_metric": "נוכחות סושיאל (רצפה): בסיס 3.0; יעד המדד 5. יש להשוות תקופות תואמות."
     }
   ],
   "channel_cadence": {
     "facebook": {
-      "max_posts_per_week": 1,
+      "max_posts_per_week": 2,
       "reason": "מכסה מוצעת לבדיקה בתקופת המדידה; אין מסקנה סיבתית על אלגוריתם."
     },
     "instagram": {
@@ -79,9 +113,9 @@
   "channel_priority": [
     "linkedin",
     "youtube",
+    "tiktok",
     "facebook",
-    "instagram",
-    "tiktok"
+    "instagram"
   ],
   "channel_plan_basis": [
     "facebook: מכסה מוצעת לבדיקה בתקופת המדידה; אין מסקנה סיבתית על אלגוריתם.",
