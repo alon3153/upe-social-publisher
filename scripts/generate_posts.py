@@ -17,8 +17,23 @@ import os, re, sys, json, glob, argparse, urllib.request, urllib.error
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DAYS_DIR = os.path.join(ROOT, "content", "days")
 DIRECTIVES_PATH = os.path.join(ROOT, "state", "council_directives.json")
+SWIPE_PATH = os.path.join(ROOT, "state", "ig_swipe.json")
 API_KEY = os.environ.get("ANTHROPIC_API_KEY", "")
 MODEL = os.environ.get("GEN_MODEL", "claude-sonnet-4-6")
+
+
+def swipe_steering():
+    """Real Instagram evidence (state/ig_swipe.json, refreshed monthly by ig-viral):
+    hook patterns that over-perform vs. their account median, and ones that flop.
+    Returns a prompt block, or '' if the file is missing."""
+    try:
+        d = json.load(open(SWIPE_PATH))
+    except (OSError, ValueError):
+        return ""
+    win = "\n".join(f"- {x}" for x in d.get("winning_patterns", []))
+    lose = "\n".join(f"- {x}" for x in d.get("losing_patterns", []))
+    return ("\nINSTAGRAM EVIDENCE (" + str(d.get("updated_at", "")) + ") - copy these hook SHAPES, never wording:\n"
+            + win + "\nNEVER open with:\n" + lose)
 
 
 def council_steering():
@@ -28,7 +43,7 @@ def council_steering():
     try:
         d = json.load(open(DIRECTIVES_PATH))
     except (OSError, ValueError):
-        return ""
+        return swipe_steering()
     lines = []
     for f in d.get("directives", []):
         ch = f.get("channel", "")
@@ -40,7 +55,7 @@ def council_steering():
                   " — follow these when shaping angle/CTA/format):\n" + "\n".join(lines[:8]))
     if leads:
         block += "\nLEAD-GEN FOCUS (bias posts toward driving these):\n" + "\n".join(f"- {x}" for x in leads)
-    return block
+    return block + swipe_steering()
 
 BRAND = """Uproduction Events (UPE) — B2B corporate event production & incentive travel.
 Tagline: "from business to pleasure". Founded 2010 (16 years). 1,500+ events delivered,

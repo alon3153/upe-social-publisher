@@ -14,6 +14,8 @@ Usage:
 import os, re, sys, json, glob, argparse, urllib.request, urllib.error
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+sys.path.insert(0, os.path.join(ROOT, "scripts"))
+from generate_posts import swipe_steering
 OUT = os.path.join(ROOT, "content", "video_scripts")
 API_KEY = os.environ.get("ANTHROPIC_API_KEY", "")
 MODEL = os.environ.get("GEN_MODEL", "claude-sonnet-4-6")
@@ -65,6 +67,7 @@ def call_claude(topic):
     prompt = f"""{BRAND}
 
 {RULES}
+{swipe_steering()}
 
 Write a Sofia short-form video script about: {topic}.
 
