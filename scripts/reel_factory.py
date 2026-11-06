@@ -227,12 +227,12 @@ def main():
               "accounts": ["uproductionevents"], "scheduled_date": s, "day": 80000 + int(m["name"][-8:-4]),
               "kind": "reel_factory", "source_event": m["event"]}
              for m, s in zip(made, slots(len(made)))]
-    qpath = os.path.join(ROOT, "content", "sofia", "queue", f"{qname}.json")
-    json.dump(queue, open(qpath, "w"), ensure_ascii=False, indent=1)
-    sh(["git", "-C", ROOT, "pull", "-q", "--rebase"])
-    sh(["git", "-C", ROOT, "add", qpath])
-    sh(["git", "-C", ROOT, "commit", "-q", "-m", f"chore(reels): queue {len(queue)} factory reels for approval"])
-    sh(["git", "-C", ROOT, "push", "-q"])
+    # write the queue file straight to main via the API: the local checkout may sit on any branch
+    import base64
+    body = json.dumps(queue, ensure_ascii=False, indent=1).encode()
+    sh(["gh", "api", "-X", "PUT", f"repos/{REPO}/contents/content/sofia/queue/{qname}.json",
+        "-f", f"message=chore(reels): queue {len(queue)} factory reels for approval",
+        "-f", f"content={base64.b64encode(body).decode()}", "-f", "branch=main"])
     sh(["gh", "workflow", "run", "sofia-approve.yml", "-R", REPO, "-f", f"queue_file={qname}"])
     print(f"queued {len(queue)} reels -> approval emails dispatched ({qname})")
     return 0
