@@ -17,14 +17,14 @@ APPROVAL_TO = os.environ.get("APPROVAL_TO", "")
 NET_HE = {"uproduction_spain": "Uproduction Spain", "uproductionevents": "Uproduction Events"}
 
 
-def email_html(acc, headline, rid, token, caption, video_url):
+def email_html(acc, headline, rid, token, caption, video_url, title="🎬 Sofia — אישור סרטון לפרסום"):
     approve = f"{FN}?id={rid}&token={token}&action=approve"
     reject = f"{FN}?id={rid}&token={token}&action=reject"
     cap_html = caption.replace("\n", "<br>")
     return f"""<html dir="rtl" lang="he"><head><meta charset="utf-8"></head>
 <body dir="rtl" style="font-family:Arial,Helvetica,sans-serif;font-size:14px;direction:rtl;text-align:right;background:#f4f4f4;padding:18px;">
 <div dir="rtl" style="max-width:520px;margin:auto;background:#fff;border-radius:14px;overflow:hidden;">
-  <div style="background:#1C1C1C;color:#FBCE0A;padding:16px 20px;font-size:18px;font-weight:bold;">🎬 Sofia — אישור סרטון לפרסום</div>
+  <div style="background:#1C1C1C;color:#FBCE0A;padding:16px 20px;font-size:18px;font-weight:bold;">{title}</div>
   <div dir="rtl" style="padding:20px;direction:rtl;text-align:right;">
     <p style="font-size:16px;font-weight:bold;margin:0 0 4px;">{headline}</p>
     <p style="color:#888;margin:0 0 14px;">חשבון: {NET_HE.get(acc, acc)} · Instagram Reels</p>
@@ -60,14 +60,18 @@ def main():
         for i, acc in enumerate(p["accounts"]):
             rows.append({"day": p["day"] * 10 + i, "network": "instagram", "account": f"ig_{acc}",
                          "lang": "en", "headline": p["headline"], "caption": p["caption"],
-                         "video_url": p["video_url"], "scheduled_date": p["scheduled_date"]})
+                         "video_url": p["video_url"], "scheduled_date": p["scheduled_date"],
+                         "_kind": p.get("kind", "sofia")})
+    kinds = [r.pop("_kind") for r in rows]
     inserted = queue.insert_rows(rows)
     print(f"Enqueued {len(inserted)} Sofia rows")
     sent = 0
-    for r in inserted:
-        subj = f"🎬 אישור סרטון Sofia — {NET_HE.get(r['account'].replace('ig_',''), r['account'])} — {r.get('headline','')}"
+    for r, kind in zip(inserted, kinds):
+        label = "ריל מהשטח" if kind == "reel_factory" else "סרטון Sofia"
+        subj = f"🎬 אישור {label} — {NET_HE.get(r['account'].replace('ig_',''), r['account'])} — {r.get('headline','')}"
         ok, info = send_resend(subj, email_html(r['account'].replace('ig_', ''), r.get('headline', ''),
-                                                r['id'], r['token'], r['caption'], r['video_url']))
+                                                r['id'], r['token'], r['caption'], r['video_url'],
+                                                title=f"🎬 {label} — אישור לפרסום"))
         print(f"{'OK ' if ok else 'ERR'} {r['account']}: {info}")
         sent += ok
     print(f"Emailed {sent}/{len(inserted)}")
