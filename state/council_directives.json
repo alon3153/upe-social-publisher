@@ -1,66 +1,49 @@
 {
-  "updated_at": "2026-11-05",
+  "updated_at": "2026-11-06",
   "source": "daily-council",
   "directives": [
     {
       "category": "safe_auto",
-      "action": "ניסוי carousel LinkedIn: הכן 2 טיוטות document-post (PDF, 5-7 שקפים) מנקודת מבט מנהלית — פורמט 'לקחים מהפקה אמיתית' עם תמונות אמיתיות מאירועים; הצע ל-Alon לאישור לפני פרסום. לא להשתמש בתוכן AI גנרי — LinkedIn מזהה ומוריד את ה-reach שלו.",
-      "detail": "הצעה לבדיקה על בסיס המדד המתועד; לא בוצע שינוי.",
-      "channel": "linkedin",
-      "evidence": {
-        "source": "scorecard",
-        "metric": "נוכחות סושיאל (רצפה)",
-        "value": 3.0,
-        "target": 5,
-        "unit": "",
-        "status": "❌"
-      },
-      "status": "candidate",
-      "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
-      "success_metric": "נוכחות סושיאל (רצפה): בסיס 3.0; יעד המדד 5. יש להשוות תקופות תואמות."
-    },
-    {
-      "category": "safe_auto",
-      "action": "הכן רשימת נושאי תוכן שבועיים לתקופה 4 שבועות: TikTok+Instagram Reels — 2 קליפים 'behind the scenes' בשבוע (vertical, 30-60 שניות, מאירוע אמיתי); שמור להגשה לאישור לפני פרסום. מטרה: לעמוד על רצפת 5 פוסטים/שבוע.",
+      "action": "ניסוי TikTok: 1 קליפ 60 שניות vertical 'מאחורי הקלעים' מהפקה אמיתית — שתף גם ב-Instagram Reels לחיסכון בתפוקה; מדוד reach בשבוע הראשון לפני החלטה על המשך",
       "detail": "הצעה לבדיקה על בסיס המדד המתועד; לא בוצע שינוי.",
       "channel": "tiktok",
       "evidence": {
         "source": "scorecard",
         "metric": "נוכחות סושיאל (רצפה)",
-        "value": 3.0,
+        "value": 4.0,
         "target": 5,
         "unit": "",
         "status": "❌"
       },
       "status": "candidate",
       "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
-      "success_metric": "נוכחות סושיאל (רצפה): בסיס 3.0; יעד המדד 5. יש להשוות תקופות תואמות."
+      "success_metric": "נוכחות סושיאל (רצפה): בסיס 4.0; יעד המדד 5. יש להשוות תקופות תואמות."
     },
     {
       "category": "safe_auto",
-      "action": "הכן מסמך מעקב AEO: רשימת 10 שאלות קונים עבריות ו-5 אנגליות שיש לבדוק ידנית מדי חודש ב-ChatGPT, Perplexity וGemini; תעד האם UPE מוזכרת ואיזה URL מצוטט.",
+      "action": "הכן רשימת שאילתות מועמדות ל-ChatGPT AEO — 5 שאלות לא-ממותגות ברמת MICE (עברית + אנגלית) לבדיקה בסבב הבא כדי להגיע ליעד 2 מנועי AI",
       "detail": "הצעה לבדיקה על בסיס המדד המתועד; לא בוצע שינוי.",
       "channel": "google_organic_geo",
       "evidence": {
         "source": "scorecard",
         "metric": "מנועי AI שנבדקו (לא אזכורים)",
         "value": 1,
-        "target": 3,
+        "target": 2,
         "unit": "",
         "status": "❌"
       },
       "status": "candidate",
       "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
-      "success_metric": "מנועי AI שנבדקו (לא אזכורים): בסיס 1; יעד המדד 3. יש להשוות תקופות תואמות."
+      "success_metric": "מנועי AI שנבדקו (לא אזכורים): בסיס 1; יעד המדד 2. יש להשוות תקופות תואמות."
     }
   ],
   "channel_cadence": {
     "facebook": {
-      "max_posts_per_week": 2,
+      "max_posts_per_week": 1,
       "reason": "מכסה מוצעת לבדיקה בתקופת המדידה; אין מסקנה סיבתית על אלגוריתם."
     },
     "instagram": {
-      "max_posts_per_week": 3,
+      "max_posts_per_week": 2,
       "reason": "מכסה מוצעת לבדיקה בתקופת המדידה; אין מסקנה סיבתית על אלגוריתם."
     },
     "linkedin": {
@@ -68,7 +51,7 @@
       "reason": "מכסה מוצעת לבדיקה בתקופת המדידה; אין מסקנה סיבתית על אלגוריתם."
     },
     "tiktok": {
-      "max_posts_per_week": 3,
+      "max_posts_per_week": 1,
       "reason": "מכסה מוצעת לבדיקה בתקופת המדידה; אין מסקנה סיבתית על אלגוריתם."
     },
     "youtube": {
@@ -79,9 +62,9 @@
   "channel_priority": [
     "linkedin",
     "tiktok",
+    "youtube",
     "facebook",
-    "instagram",
-    "youtube"
+    "instagram"
   ],
   "channel_plan_basis": [
     "facebook: מכסה מוצעת לבדיקה בתקופת המדידה; אין מסקנה סיבתית על אלגוריתם.",

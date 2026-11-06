@@ -1,20 +1,20 @@
 {
-  "updated_at": "2026-11-05",
+  "updated_at": "2026-11-06",
   "scores": {
     "instagram": 10,
     "facebook": 10,
-    "tiktok": 15,
-    "linkedin": 45,
-    "youtube": 10,
-    "google_organic_geo": 38,
-    "overall": 72
+    "tiktok": 20,
+    "linkedin": 30,
+    "youtube": 15,
+    "google_organic_geo": 35,
+    "overall": 55
   },
   "recommendations": [
     {
       "category": "gated",
       "priority": "P0",
       "action_key": "salesforce-attribution-fix",
-      "owner": "מנהל הפעילות / RevOps מכין, Alon מאשר ומפיץ",
+      "owner": "executor drafts; Alon approves",
       "success_metric": "ייחוס לידים: בסיס לא-מיוחס; יעד המדד מקור אמיתי. יש להשוות תקופות תואמות.",
       "evidence": {
         "source": "scorecard",
@@ -26,7 +26,7 @@
       },
       "evidence_url": null,
       "target_url": null,
-      "action": "הפץ את טיוטת הנחיית הייחוס הקיימת (deliverable: lead-source-guidance.md, status: draft_ready, לא הופצה). הגדר כלל תפעולי: לפני שמירת רשומה עם מקור 'Other' או '(none)', בדוק referrer+UTM ב-GA4/GSC ותעד. שינוי תווית מקור אינו מוסיף לידים לספירה הכוללת.",
+      "action": "הפץ את טיוטת lead-source-guidance.md הקיימת (status: draft_ready, לא הופצה) — הגדר כלל: לכל רשומת Other/(none) בדוק UTM+referrer ב-GA4 לפני שמירה; שינוי תווית אינו מוסיף לידים לספירה. זהו deliverable קיים שמחכה להפצה בלבד.",
       "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
       "channel": "leads",
       "status": "candidate",
@@ -34,23 +34,23 @@
     },
     {
       "category": "gated",
-      "priority": "P1",
-      "action_key": "linkedin-executive-posting",
-      "owner": "מנהל שיווק מכין טיוטות carousel, Alon/מנכ\"ל מאשר ומפרסם",
-      "success_metric": "נוכחות סושיאל (רצפה): בסיס 3.0; יעד המדד 5. יש להשוות תקופות תואמות.",
+      "priority": "P2",
+      "action_key": "tiktok-behind-scenes",
+      "owner": "executor drafts; Alon approves",
+      "success_metric": "נוכחות סושיאל (רצפה): בסיס 4.0; יעד המדד 5. יש להשוות תקופות תואמות.",
       "evidence": {
         "source": "scorecard",
         "metric": "נוכחות סושיאל (רצפה)",
-        "value": 3.0,
+        "value": 4.0,
         "target": 5,
         "unit": "",
         "status": "❌"
       },
-      "evidence_url": "https://www.b4b.co.uk/news/the-complete-guide-to-linkedin-marketing-strategy-content-ads-and-roi/",
-      "target_url": "https://www.linkedin.com/feed/update/urn:li:ugcPost:7513921830496366593",
-      "action": "הפעל את initiative d477123a: הכן 4 טיוטות carousel קצר (5-7 שקפים PDF) מנקודת מבט מנהלית — תוכן: לקח מהפקה אמיתית + נתון מדיד + שאלה לקהל; תמונות אמיתיות מאירועים (לא AI-generated). פרסום רק לאחר אישור מפורש. לא לכלול תוכן פרומואוטיבי מעל 10% מהתמהיל.",
+      "evidence_url": null,
+      "target_url": null,
+      "action": "הכן 2 קליפים 'מאחורי הקלעים' (60 שניות, vertical, ללא תסריט) מהפקה קרובה — שתף ב-Instagram Reels לחיסכון בתפוקה; כל קליפ ממתין לאישור מפורש. זהו המשך initiative dc82116b קיים ולא initiative חדש.",
       "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
-      "channel": "linkedin",
+      "channel": "tiktok",
       "status": "candidate",
       "detail": "הצעה לבדיקה על בסיס המדד המתועד; לא בוצע שינוי."
     }
