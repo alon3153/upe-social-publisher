@@ -1,0 +1,23 @@
+{
+  "updated_at": "2026-11-06",
+  "source": "Hand-read Instagram reels, 12 accounts, 23 reels, ranked by views / account median (ig-viral method). Small sample: directional, not proof.",
+  "baseline": {
+    "uproductionevents": {"followers": 38000, "median_views": 50},
+    "uproduction_spain": {"followers": 18000, "median_views": 93},
+    "competitor_typical": "2K-60K followers, 3K-35K median views, outliers 100K-340K"
+  },
+  "winning_patterns": [
+    "Overheard quote from a real participant as the hook, on raw phone footage (e.g. a guest line from the trip, 31x outlier)",
+    "One real person as the story: a guide, a performer, a participant (22x, 9x outliers)",
+    "Direct Hebrew question to the HR buyer about their pain: 'looking for a team day your employees won't stop talking about?' (7x)",
+    "Crowd/social-proof moment: 'crazy how many people came' over a packed room (8x)",
+    "Founder on camera introducing herself/himself in first person (happyworldmexico, 860K followers)",
+    "Real moment first, branding never in the first 2 seconds"
+  ],
+  "losing_patterns": [
+    "Branded collage opener with logo and title card ('TOKYO - The Uproduction Way')",
+    "Company stats as the hook ('16 years. 1,500+ events. 130+ destinations')",
+    "Generic destination-brochure English copy on the Hebrew account ('Some destinations impress you')",
+    "Quiz/guess hooks with stock imagery"
+  ]
+}
