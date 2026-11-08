@@ -1,20 +1,20 @@
 {
-  "updated_at": "2026-11-07",
+  "updated_at": "2026-11-08",
   "scores": {
-    "instagram": 20,
-    "facebook": 20,
-    "tiktok": 35,
+    "instagram": 10,
+    "facebook": 10,
+    "tiktok": 20,
     "linkedin": 30,
-    "youtube": 25,
+    "youtube": 15,
     "google_organic_geo": 42,
-    "overall": 51
+    "overall": 55
   },
   "recommendations": [
     {
       "category": "gated",
       "priority": "P0",
       "action_key": "salesforce-attribution-fix",
-      "owner": "מנהל מכירות/RevOps מכין; Alon מאשר ומפיץ",
+      "owner": "מנהל CRM מכין; אלון מאשר הפצה",
       "success_metric": "ייחוס לידים: בסיס לא-מיוחס; יעד המדד מקור אמיתי. יש להשוות תקופות תואמות.",
       "evidence": {
         "source": "scorecard",
@@ -26,9 +26,31 @@
       },
       "evidence_url": null,
       "target_url": null,
-      "action": "הפץ את lead-source-guidance.md הקיים (status: draft_ready, לא הופצה) — הגדר כלל: לפני שמירת 'Other' ו-'(none)', בדוק referrer + UTM ב-GA4/GSC. שינוי תווית אינו מוסיף לידים לספירה הכוללת.",
+      "action": "הפץ את lead-source-guidance.md הקיימת (status: draft_ready, לא הופצה) — הגדר כלל: בדוק referrer + UTM ב-GA4/GSC לפני שמירת Other או (none); שינוי תווית לא מוסיף לידים לספירה",
       "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
-      "channel": "leads",
+      "channel": "google_organic_geo",
+      "status": "candidate",
+      "detail": "הצעה לבדיקה על בסיס המדד המתועד; לא בוצע שינוי."
+    },
+    {
+      "category": "gated",
+      "priority": "P1",
+      "action_key": "top3-keyword-ranking-push",
+      "owner": "מנהל SEO מכין טיוטות; אלון מאשר לפני פרסום",
+      "success_metric": "מונחי מעקב ב-Top-3: בסיס 1; יעד המדד 3. יש להשוות תקופות תואמות.",
+      "evidence": {
+        "source": "scorecard",
+        "metric": "מונחי מעקב ב-Top-3",
+        "value": 1,
+        "target": 3,
+        "unit": "",
+        "status": "❌"
+      },
+      "evidence_url": null,
+      "target_url": "https://upe.co.il/25-%D7%A8%D7%A2%D7%99%D7%95%D7%A0%D7%95%D7%AA-%D7%9C%D7%99%D7%95%D7%9D-%D7%92%D7%99%D7%91%D7%95%D7%A9-%D7%9C%D7%97%D7%91%D7%A8%D7%94/",
+      "action": "בדוק אם לדפי ה-opportunity (גיבוש pos.6.8/545 impressions, הפקת אירועי חברה pos.17.4/385 impressions) יש update_required פתוח ומתועד לפני כל עדכון — אין לשכתב דפים שנמצאים ב-cooldown; דפי הפקת-כנסים וכנסים-לחברות-הייטק ב-cooldown עד 2026-11-29",
+      "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
+      "channel": "google_organic",
       "status": "candidate",
       "detail": "הצעה לבדיקה על בסיס המדד המתועד; לא בוצע שינוי."
     },
@@ -36,7 +58,7 @@
       "category": "gated",
       "priority": "P1",
       "action_key": "linkedin-executive-posting",
-      "owner": "מנכ\"ל/מנהל בכיר מכין תוכן; Alon מאשר כל פוסט לפני פרסום",
+      "owner": "מנהל תוכן מכין טיוטות; מנכ\"ל מאשר ומפרסם מחשבון אישי",
       "success_metric": "נוכחות סושיאל (רצפה): בסיס 4.0; יעד המדד 5. יש להשוות תקופות תואמות.",
       "evidence": {
         "source": "scorecard",
@@ -47,32 +69,10 @@
         "status": "❌"
       },
       "evidence_url": "https://www.tiberius.co.nz/wiki/linkedin-organic-content-b2b-algorithm-strategy/",
-      "target_url": "https://www.linkedin.com/feed/update/urn:li:ugcPost:7523003499081572352",
-      "action": "הכן 3 טיוטות פוסט carousel קצר (3 שקפים) מפרופיל מנכ\"ל — נושאים: תובנה מהפקה אמיתית, שאלה שקיבלנו מלקוח ב-RFP, לקח מכנס. פורמט אישי-אנושי (לא AI גנרי). כל פוסט ממתין לאישור מפורש.",
+      "target_url": null,
+      "action": "הפעל initiative d477123a: טיוטות carousel (3 שקפים) מחשבון מנכ\"ל — נתון ממשי מהפקה + שאלה לקהל; פרסום רק לאחר אישור מפורש; אל תפרסם מדף החברה בלבד (personal profiles מקבלים 5-10x reach לעומת company pages)",
       "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
       "channel": "linkedin",
-      "status": "candidate",
-      "detail": "הצעה לבדיקה על בסיס המדד המתועד; לא בוצע שינוי."
-    },
-    {
-      "category": "gated",
-      "priority": "P2",
-      "action_key": "tiktok-behind-scenes",
-      "owner": "צוות הפקה/תוכן מצלם; Alon מאשר כל קליפ לפני פרסום",
-      "success_metric": "נוכחות סושיאל (רצפה): בסיס 4.0; יעד המדד 5. יש להשוות תקופות תואמות.",
-      "evidence": {
-        "source": "scorecard",
-        "metric": "נוכחות סושיאל (רצפה)",
-        "value": 4.0,
-        "target": 5,
-        "unit": "",
-        "status": "❌"
-      },
-      "evidence_url": null,
-      "target_url": null,
-      "action": "הפק 2 קליפים 'מאחורי הקלעים' (60 שניות, vertical, ללא תסריט) מהפקה אמיתית — TikTok ראשון, שיתוף Instagram Reels לאחר אישור. לא לפרסם ללא אישור מפורש.",
-      "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
-      "channel": "tiktok",
       "status": "candidate",
       "detail": "הצעה לבדיקה על בסיס המדד המתועד; לא בוצע שינוי."
     }
