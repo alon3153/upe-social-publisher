@@ -18963,7 +18963,7 @@
     "channel": "linkedin",
     "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
     "action_key": "linkedin-executive-posting",
-    "owner": "מנכ\"ל/מנהל בכיר מכין תוכן; Alon מאשר כל פוסט לפני פרסום",
+    "owner": "מנהל תוכן מכין טיוטות; מנכ\"ל מאשר ומפרסם מחשבון אישי",
     "success_metric": "נוכחות סושיאל (רצפה): בסיס 4.0; יעד המדד 5. יש להשוות תקופות תואמות.",
     "consecutive_failures": 0,
     "merged_from": [
@@ -19120,8 +19120,31 @@
     "channel": "google_organic_geo",
     "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
     "action_key": "salesforce-attribution-fix",
-    "owner": "מנהל RevOps מכין; Alon מאשר ומפיץ",
+    "owner": "מנהל CRM מכין; אלון מאשר הפצה",
     "success_metric": "ייחוס לידים: בסיס לא-מיוחס; יעד המדד מקור אמיתי. יש להשוות תקופות תואמות.",
+    "consecutive_failures": 0
+  },
+  "ba53f03e": {
+    "id": "ba53f03e",
+    "title": "בדוק אם לדפי ה-opportunity (גיבוש pos.6.8/545 impressions, הפקת אירועי חברה pos.17.4/385 impressions) יש update_required פתוח ומתועד לפני כל עדכון — אין לשכתב דפים שנמצאים ב-cooldown; דפי הפקת-כנסים וכנסים-לחברות-הייטק ב-cooldown עד 2026-11-29",
+    "status": "awaiting_approval",
+    "revisions": 1,
+    "history": [
+      {
+        "date": "2026-11-08",
+        "summary": "הופקה טיוטת update_required מלאה לשני דפי ה-Opportunity הפתוחים (גיבוש חברתי ו-הפקת אירועי חברה) — כולל בדיקת cooldown, copy מוכן (H1, meta, פסקת פתיחה, סעיפי תוכן, טבלאות), schema JSON-LD, מיפוי מונחים ולוח זמנים; דפי הפקת-כנסים וכנסים-לחברות-הייטק סומנו כ-cooldown עד 29/11 ולא נגעו.",
+        "ready": true
+      }
+    ],
+    "created": "2026-11-08",
+    "updated": "2026-11-08",
+    "kind": "recommendation",
+    "priority": "P1",
+    "channel": "google_organic",
+    "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
+    "action_key": "top3-keyword-ranking-push",
+    "owner": "מנהל SEO מכין טיוטות; אלון מאשר לפני פרסום",
+    "success_metric": "מונחי מעקב ב-Top-3: בסיס 1; יעד המדד 3. יש להשוות תקופות תואמות.",
     "consecutive_failures": 0
   }
 }
