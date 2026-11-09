@@ -19030,7 +19030,7 @@
     "channel": "tiktok",
     "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
     "action_key": "tiktok-behind-scenes",
-    "owner": "צוות הפקה/תוכן מצלם; Alon מאשר כל קליפ לפני פרסום",
+    "owner": "צוות ייצור מפיק; Alon מאשר כל קליפ",
     "success_metric": "נוכחות סושיאל (רצפה): בסיס 4.0; יעד המדד 5. יש להשוות תקופות תואמות.",
     "consecutive_failures": 0,
     "merged_from": [
@@ -19146,5 +19146,33 @@
     "owner": "מנהל SEO מכין טיוטות; אלון מאשר לפני פרסום",
     "success_metric": "מונחי מעקב ב-Top-3: בסיס 1; יעד המדד 3. יש להשוות תקופות תואמות.",
     "consecutive_failures": 0
+  },
+  "091d2112": {
+    "id": "091d2112",
+    "title": "בדוק update_required מתועד לדפי הזדמנות מחוץ ל-cooldown: הפקת-אירועי-חברה (pos 17.4, 385 impressions) ואירועים-לחברות (pos 18.3, 308 impressions); אם update_required=true וקיים גיליון פתוח — הכן טיוטת עדכון ממוקד (תשובה-ראשית, FAQ תואם כוונת קנייה) לאישור. אל תשכתב דפים בלי issue מתועד.",
+    "status": "todo",
+    "revisions": 0,
+    "history": [
+      {
+        "date": "2026-11-09",
+        "error": "anthropic incomplete message (stop=max_tokens)",
+        "diagnostics": {
+          "events_received": 3694,
+          "last_event": "message_stop",
+          "last_block_type": "text",
+          "text_characters": 17651
+        }
+      }
+    ],
+    "created": "2026-11-09",
+    "updated": "2026-11-09",
+    "kind": "recommendation",
+    "priority": "P0",
+    "channel": "google_organic_geo",
+    "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
+    "action_key": "top3-keyword-ranking-push",
+    "owner": "SEO drafts; Alon approves",
+    "success_metric": "מונחי מעקב ב-Top-3: בסיס 1; יעד המדד 3. יש להשוות תקופות תואמות.",
+    "consecutive_failures": 1
   }
 }
