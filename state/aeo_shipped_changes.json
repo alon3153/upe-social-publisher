@@ -1436,5 +1436,339 @@
       "note": "Seven inclusive days; source dated, not current final-data claim."
     },
     "decision": "No further page rewrite; pending reviewed config merge and provider billing resolution. Barcelona ES and incentive guide remain in observation until November10."
+  },
+  "measurement_review_2026_11_10": {
+    "reviewed_at": "2026-11-10",
+    "category": {
+      "measured_at": "2026-11-10T05:31:06.368539+00:00",
+      "method": "serpapi-google",
+      "cohort": "aaf546d73c2324a7",
+      "metric": "first_page_organic_visibility",
+      "top10": {
+        "verified_queries": 10,
+        "found": 3,
+        "score": null
+      },
+      "context": {
+        "en": {
+          "gl": "es",
+          "hl": "en"
+        },
+        "es": {
+          "gl": "es",
+          "hl": "es"
+        },
+        "he": {
+          "gl": "il",
+          "hl": "iw"
+        },
+        "device": "desktop",
+        "scope": "first-page-organic-up-to-10",
+        "max_results": 10
+      },
+      "engines": {
+        "google": {
+          "measured": 30,
+          "total": 30,
+          "found": 3,
+          "score": 10.0
+        },
+        "bing": {
+          "measured": 0,
+          "total": 30,
+          "found": null,
+          "score": null
+        },
+        "perplexity": {
+          "measured": 0,
+          "total": 30,
+          "found": null,
+          "score": null
+        }
+      },
+      "status": "complete",
+      "by_category": {
+        "authority": {
+          "found": 0,
+          "measured": 1,
+          "total": 1,
+          "score": 0.0
+        },
+        "brand": {
+          "found": 1,
+          "measured": 3,
+          "total": 3,
+          "score": 33.3
+        },
+        "content": {
+          "found": 0,
+          "measured": 5,
+          "total": 5,
+          "score": 0.0
+        },
+        "local": {
+          "found": 0,
+          "measured": 4,
+          "total": 4,
+          "score": 0.0
+        },
+        "service": {
+          "found": 2,
+          "measured": 17,
+          "total": 17,
+          "score": 11.8
+        }
+      },
+      "by_language": {
+        "en": {
+          "found": 2,
+          "measured": 15,
+          "total": 15,
+          "score": 13.3
+        },
+        "es": {
+          "found": 0,
+          "measured": 8,
+          "total": 8,
+          "score": 0.0
+        },
+        "he": {
+          "found": 1,
+          "measured": 7,
+          "total": 7,
+          "score": 14.3
+        }
+      },
+      "by_language_group": {
+        "en_es": {
+          "found": 2,
+          "measured": 23,
+          "total": 23,
+          "score": 8.7
+        },
+        "he": {
+          "found": 1,
+          "measured": 7,
+          "total": 7,
+          "score": 14.3
+        }
+      },
+      "rank_changes": [
+        {
+          "q": "best corporate event company in Israel",
+          "lang": "en",
+          "before": 8,
+          "now": 6,
+          "change": 2
+        },
+        {
+          "q": "corporate event production company Tel Aviv",
+          "lang": "en",
+          "before": 9,
+          "now": null,
+          "change": null
+        },
+        {
+          "q": "הפקת אירועים לחברות בישראל",
+          "lang": "he",
+          "before": 7,
+          "now": null,
+          "change": null
+        },
+        {
+          "q": "הפקת כנסים מקצועיים",
+          "lang": "he",
+          "before": 8,
+          "now": 6,
+          "change": 2
+        },
+        {
+          "q": "ימי גיבוש לחברות",
+          "lang": "he",
+          "before": 3,
+          "now": null,
+          "change": null
+        }
+      ],
+      "comparison_baseline": {
+        "measured_at": "2026-11-04T13:09:50.325860+00:00",
+        "method": "serpapi-google",
+        "cohort": "aaf546d73c2324a7",
+        "context": {
+          "en": {
+            "gl": "es",
+            "hl": "en"
+          },
+          "es": {
+            "gl": "es",
+            "hl": "es"
+          },
+          "he": {
+            "gl": "il",
+            "hl": "iw"
+          },
+          "device": "desktop",
+          "scope": "first-page-organic-up-to-10",
+          "max_results": 10
+        }
+      },
+      "entered_first_page": [],
+      "exited_first_page": [
+        {
+          "q": "corporate event production company Tel Aviv",
+          "lang": "en"
+        },
+        {
+          "q": "הפקת אירועים לחברות בישראל",
+          "lang": "he"
+        },
+        {
+          "q": "ימי גיבוש לחברות",
+          "lang": "he"
+        }
+      ],
+      "comparison": "comparable",
+      "unmeasured_reasons": [],
+      "provider_account": {
+        "total_searches_left": 876,
+        "plan_renewal_date": "2026-11-21"
+      }
+    },
+    "gsc_report_generated_at": "2026-11-10",
+    "newly_due_page_comparisons": [
+      {
+        "url": "https://upe.co.il/es/eventos-corporativos-barcelona-guia-empresas-2026/",
+        "source_path": "src/content/blog/es/eventos-corporativos-barcelona-guia-empresas-2026.md",
+        "changed_at": "2026-10-10",
+        "reviewed_source_commit": "ec593e7421a1368bf10e8b474468d6facf13ca47",
+        "change_evidence": "PR197 added answer-first comparison FAQs and expanded supplier-type routing on 2026-10-10, so the prior PR132 evaluation window is no longer causally clean.",
+        "source_review_date": "2026-10-13",
+        "minor_later_changes": "None recorded after the substantive PR197 change.",
+        "windows": {
+          "before": {
+            "startDate": "2026-09-12",
+            "endDate": "2026-10-09"
+          },
+          "after": {
+            "startDate": "2026-10-11",
+            "endDate": "2026-11-07"
+          }
+        },
+        "reviewed_at": "2026-11-10",
+        "metrics": {
+          "before": {
+            "clicks": 0,
+            "impressions": 19,
+            "ctr": 0,
+            "position": 16
+          },
+          "after": {
+            "clicks": 0,
+            "impressions": 17,
+            "ctr": 0,
+            "position": 5.764705882352941
+          }
+        },
+        "status": "measured",
+        "observed_source_commit": "ec593e7421a1368bf10e8b474468d6facf13ca47",
+        "collect_not_before": "2026-11-10",
+        "interpretation": "Matched 28-day windows; observational, not causal evidence. Sparse data cannot establish ranking lift."
+      },
+      {
+        "url": "https://upe.co.il/en/incentive-travel-to-spain-the-ultimate-planning-guide-for-international-companie/",
+        "source_path": "src/content/blog/en/incentive-travel-to-spain-the-ultimate-planning-guide-for-international-companie.md",
+        "changed_at": "2026-10-10",
+        "reviewed_source_commit": "2167e135923ab85e44881d4addf6a9883f74f430",
+        "change_evidence": "PR197 added a new answer-first opening and three intent-matched FAQs on 2026-10-10, so the prior PR132 evaluation window is no longer causally clean.",
+        "source_review_date": "2026-10-13",
+        "minor_later_changes": "PR201 added indicative-range disclaimers on 2026-10-11 without changing the target service intent; the reviewed commit includes that factual-risk correction.",
+        "windows": {
+          "before": {
+            "startDate": "2026-09-12",
+            "endDate": "2026-10-09"
+          },
+          "after": {
+            "startDate": "2026-10-11",
+            "endDate": "2026-11-07"
+          }
+        },
+        "reviewed_at": "2026-11-10",
+        "metrics": {
+          "before": {
+            "clicks": 1,
+            "impressions": 56,
+            "ctr": 0.017857142857142856,
+            "position": 14.25
+          },
+          "after": {
+            "clicks": 0,
+            "impressions": 104,
+            "ctr": 0,
+            "position": 27.182692307692307
+          }
+        },
+        "status": "measured",
+        "observed_source_commit": "2167e135923ab85e44881d4addf6a9883f74f430",
+        "collect_not_before": "2026-11-10",
+        "interpretation": "Matched 28-day windows; observational, not causal evidence. Sparse data cannot establish ranking lift."
+      }
+    ],
+    "live_page_checks": [
+      {
+        "url": "https://upe.co.il/es/eventos-corporativos-barcelona-guia-empresas-2026/",
+        "status": 200,
+        "canonical": [
+          "https://upe.co.il/es/eventos-corporativos-barcelona-guia-empresas-2026/"
+        ],
+        "h1": [
+          "Producción de Eventos Corporativos en Barcelona"
+        ],
+        "has_form_link": true
+      },
+      {
+        "url": "https://upe.co.il/en/incentive-travel-to-spain-the-ultimate-planning-guide-for-international-companie/",
+        "status": 200,
+        "canonical": [
+          "https://upe.co.il/en/incentive-travel-to-spain-the-ultimate-planning-guide-for-international-companie/"
+        ],
+        "h1": [
+          "Incentive Travel to Spain: The Ultimate Planning Guide for International Companies"
+        ],
+        "has_form_link": true
+      }
+    ],
+    "source_review_fix": {
+      "pr": "https://github.com/alon3153/uproduction-astro/pull/231",
+      "state": "open",
+      "head": "fe3ff35cec5dbee7db823d284ca7888ed3e81bfb",
+      "checks": "success",
+      "deployed_source_drift_pages": 4,
+      "note": "Existing tested fix awaits authorized merge; no duplicate fix or protection bypass."
+    },
+    "aeo": {
+      "weekly_date": "2026-11-08",
+      "weekly_complete_engines": [
+        "claude"
+      ],
+      "daily_date": "2026-11-09",
+      "daily_complete_engines": [
+        "claude"
+      ],
+      "chatgpt": "0/32 answers, HTTP429 no credits remaining",
+      "gemini": "0/32 answers, HTTP401 invalid API key; supersedes November4 billing diagnosis",
+      "note": "Missing engine results are not zero visibility. No new probes, credential changes or spending."
+    },
+    "council": {
+      "date": "2026-11-09",
+      "json_and_html_on_main": true,
+      "gsc_week_from": "2026-10-29",
+      "gsc_week_to": "2026-11-04",
+      "inclusive_days": 7,
+      "coverage_note": "Only one engine measured. The generic skipped_schedule warning does not explain all observed provider failures; use raw dated history for diagnosis."
+    },
+    "verification_queue": {
+      "dir_icca_mpi_hb": "Not due: next_review_at November11; preserve November4 evidence and historical approval."
+    },
+    "decision": "No page rewrite from these sparse results. Spanish Barcelona mean position improved 16 to 5.76 on 19 versus17 impressions, with zero clicks in both windows. Incentive impressions increased 56 to104 but clicks fell1 to0 and mean position worsened14.25 to27.18. No causal ranking or business uplift established."
   }
 }
