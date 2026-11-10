@@ -1,22 +1,22 @@
 {
   "schema_version": 1,
   "source_key": "executor",
-  "generated_at": "2026-11-09T16:44:50.513593+00:00",
-  "workflow_run_id": "42657234422",
-  "status": "partial",
-  "complete": false,
-  "drafting_complete": false,
-  "postprocessing": "not_needed",
+  "generated_at": "2026-11-10T15:08:01.465296+00:00",
+  "workflow_run_id": "42840564218",
+  "status": "ok",
+  "complete": true,
+  "drafting_complete": true,
+  "postprocessing": "complete",
   "planned": 1,
   "attempted": 1,
-  "advanced": 0,
+  "advanced": 1,
   "deferred": 0,
   "active_id": null,
   "source": "Executor durable checkpoint; drafts only",
   "facts": [
     [
       "טיוטות שקודמו",
-      0
+      1
     ],
     [
       "ניסיונות",
@@ -33,8 +33,8 @@
   ],
   "findings": [
     {
-      "severity": "warn",
-      "text": "הטיוטות נשמרות בנפרד; הסבב או שלבי הרישום והדיווח טרם הושלמו במלואם."
+      "severity": "info",
+      "text": "סבב הטיוטות הסתיים ונשמר; אין בכך אישור לפרסום או ביצוע שיווקי."
     }
   ]
 }

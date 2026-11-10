@@ -18802,7 +18802,7 @@
     "channel": "leads",
     "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
     "action_key": "salesforce-attribution-fix",
-    "owner": "מנהל מכירות/RevOps מכין; Alon מאשר ומפיץ",
+    "owner": "מנהל CRM מכין; Alon מאשר ומפיץ",
     "success_metric": "ייחוס לידים: בסיס לא-מיוחס; יעד המדד מקור אמיתי. יש להשוות תקופות תואמות."
   },
   "2769e4c7": {
@@ -18963,8 +18963,8 @@
     "channel": "linkedin",
     "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
     "action_key": "linkedin-executive-posting",
-    "owner": "מנהל תוכן מכין טיוטות; מנכ\"ל מאשר ומפרסם מחשבון אישי",
-    "success_metric": "נוכחות סושיאל (רצפה): בסיס 4.0; יעד המדד 5. יש להשוות תקופות תואמות.",
+    "owner": "מנהל תוכן מכין טיוטות; מנהל בכיר ו-Alon מאשרים לפני פרסום",
+    "success_metric": "נוכחות סושיאל (רצפה): בסיס 3.0; יעד המדד 5. יש להשוות תקופות תואמות.",
     "consecutive_failures": 0,
     "merged_from": [
       {
@@ -19150,8 +19150,8 @@
   "091d2112": {
     "id": "091d2112",
     "title": "בדוק update_required מתועד לדפי הזדמנות מחוץ ל-cooldown: הפקת-אירועי-חברה (pos 17.4, 385 impressions) ואירועים-לחברות (pos 18.3, 308 impressions); אם update_required=true וקיים גיליון פתוח — הכן טיוטת עדכון ממוקד (תשובה-ראשית, FAQ תואם כוונת קנייה) לאישור. אל תשכתב דפים בלי issue מתועד.",
-    "status": "todo",
-    "revisions": 0,
+    "status": "awaiting_approval",
+    "revisions": 1,
     "history": [
       {
         "date": "2026-11-09",
@@ -19162,17 +19162,22 @@
           "last_block_type": "text",
           "text_characters": 17651
         }
+      },
+      {
+        "date": "2026-11-10",
+        "summary": "הוכנה טיוטת עדכון ראשונה לשני דפי הזדמנות (הפקת-אירועי-חברה, אירועים-לחברות) הכוללת: meta title+description, H1, Lead Answer Block, מבנה סקשנים, 5 שאלות FAQ לכוונת קנייה לכל דף, JSON-LD schema (@graph עם Service+FAQPage+Organization), מיפוי מילות מפתח ורשימת Internal Links — הכל ממתין לאישור Alon ולאימות issue מתועד לפני כל פרסום.",
+        "ready": true
       }
     ],
     "created": "2026-11-09",
-    "updated": "2026-11-09",
+    "updated": "2026-11-10",
     "kind": "recommendation",
-    "priority": "P0",
+    "priority": "P1",
     "channel": "google_organic_geo",
     "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
     "action_key": "top3-keyword-ranking-push",
-    "owner": "SEO drafts; Alon approves",
+    "owner": "SEO מכין טיוטה; Alon מאשר עדכון",
     "success_metric": "מונחי מעקב ב-Top-3: בסיס 1; יעד המדד 3. יש להשוות תקופות תואמות.",
-    "consecutive_failures": 1
+    "consecutive_failures": 0
   }
 }
