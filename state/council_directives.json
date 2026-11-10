@@ -1,49 +1,15 @@
 {
-  "updated_at": "2026-11-09",
+  "updated_at": "2026-11-10",
   "source": "daily-council",
   "directives": [
     {
       "category": "safe_auto",
-      "action": "ניסוי LinkedIn: carousel עברי בפרופיל מנכ\"ל — 3 שקפים, נתון אמיתי מהפקה (מספר משתתפים, מדינה, אתגר שנפתר) + שאלה פתוחה לסיום; פרסום בבוקר יום ב'-ד' (8-10 לפי מקורות 2026 לשווקי B2B); אל לשלוח לינק חיצוני בפוסט עצמו",
-      "detail": "הצעה לבדיקה על בסיס המדד המתועד; לא בוצע שינוי.",
-      "channel": "linkedin",
-      "evidence": {
-        "source": "scorecard",
-        "metric": "נוכחות סושיאל (רצפה)",
-        "value": 4.0,
-        "target": 5,
-        "unit": "",
-        "status": "❌"
-      },
-      "status": "candidate",
-      "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
-      "success_metric": "נוכחות סושיאל (רצפה): בסיס 4.0; יעד המדד 5. יש להשוות תקופות תואמות."
-    },
-    {
-      "category": "safe_auto",
-      "action": "ניסוי TikTok/Reels: 60 שניות vertical ממשי מהפקה בלי תסריט — נתח אחד מחיי ההפקה האמיתיים; מדוד reach ב-7 ימים אחרי; אל לצאת מהפלטפורמה בפוסט עצמו",
-      "detail": "הצעה לבדיקה על בסיס המדד המתועד; לא בוצע שינוי.",
-      "channel": "tiktok",
-      "evidence": {
-        "source": "scorecard",
-        "metric": "נוכחות סושיאל (רצפה)",
-        "value": 4.0,
-        "target": 5,
-        "unit": "",
-        "status": "❌"
-      },
-      "status": "candidate",
-      "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
-      "success_metric": "נוכחות סושיאל (רצפה): בסיס 4.0; יעד המדד 5. יש להשוות תקופות תואמות."
-    },
-    {
-      "category": "safe_auto",
-      "action": "זיהוי מונחי הזדמנות מחוץ ל-cooldown: הפקת-אירועי-חברה (pos 17.4, 385 impressions) ואירועים-לחברות (pos 18.3, 308 impressions) — בדוק update_required מתועד לפני כל שינוי; הפקת-כנסים וכנסים-לחברות-הייטק ב-cooldown עד 2026-11-29 ואין לגעת בהם",
+      "action": "הכן רשימת 5 פרומפטים מסחריים ב-ChatGPT ו-Gemini (עברית + אנגלית) לבדיקה ידנית חודשית: 'best corporate event production Israel', 'incentive travel company Israel', 'הפקת כנסים לחברות', 'מי מפיק ערבי גאלה בישראל', 'boutique MICE company Israel' — תעד ציטוטים ב-GA4 UTM",
       "detail": "הצעה לבדיקה על בסיס המדד המתועד; לא בוצע שינוי.",
       "channel": "google_organic_geo",
       "evidence": {
         "source": "scorecard",
-        "metric": "מונחי מעקב ב-Top-3",
+        "metric": "מנועי AI שנבדקו (לא אזכורים)",
         "value": 1,
         "target": 3,
         "unit": "",
@@ -51,12 +17,29 @@
       },
       "status": "candidate",
       "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
-      "success_metric": "מונחי מעקב ב-Top-3: בסיס 1; יעד המדד 3. יש להשוות תקופות תואמות."
+      "success_metric": "מנועי AI שנבדקו (לא אזכורים): בסיס 1; יעד המדד 3. יש להשוות תקופות תואמות."
+    },
+    {
+      "category": "safe_auto",
+      "action": "הכן אסטרטגיית hashtag ל-LinkedIn: 3-5 תגיות ספציפיות (#HRIsrael #MICE #הפקתאירועים #CorporateEvents #IncentiveTravel) — בדוק reach לעומת פוסטים ללא תגיות ב-14 הימים הקרובים",
+      "detail": "הצעה לבדיקה על בסיס המדד המתועד; לא בוצע שינוי.",
+      "channel": "linkedin",
+      "evidence": {
+        "source": "scorecard",
+        "metric": "נוכחות סושיאל (רצפה)",
+        "value": 3.0,
+        "target": 5,
+        "unit": "",
+        "status": "❌"
+      },
+      "status": "candidate",
+      "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
+      "success_metric": "נוכחות סושיאל (רצפה): בסיס 3.0; יעד המדד 5. יש להשוות תקופות תואמות."
     }
   ],
   "channel_cadence": {
     "facebook": {
-      "max_posts_per_week": 2,
+      "max_posts_per_week": 1,
       "reason": "מכסה מוצעת לבדיקה בתקופת המדידה; אין מסקנה סיבתית על אלגוריתם."
     },
     "instagram": {
@@ -68,7 +51,7 @@
       "reason": "מכסה מוצעת לבדיקה בתקופת המדידה; אין מסקנה סיבתית על אלגוריתם."
     },
     "tiktok": {
-      "max_posts_per_week": 3,
+      "max_posts_per_week": 2,
       "reason": "מכסה מוצעת לבדיקה בתקופת המדידה; אין מסקנה סיבתית על אלגוריתם."
     },
     "youtube": {
@@ -78,10 +61,10 @@
   },
   "channel_priority": [
     "linkedin",
-    "tiktok",
     "youtube",
     "facebook",
-    "instagram"
+    "instagram",
+    "tiktok"
   ],
   "channel_plan_basis": [
     "facebook: מכסה מוצעת לבדיקה בתקופת המדידה; אין מסקנה סיבתית על אלגוריתם.",

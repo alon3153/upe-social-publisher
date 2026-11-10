@@ -1,0 +1,1503 @@
+{
+  "generated_at": "2026-11-10T13:42:01",
+  "period_days": 7,
+  "period_start": "2026-11-03T13:42:01",
+  "period_end": "2026-11-10T13:42:01",
+  "networks": {
+    "instagram": {
+      "posts": 0,
+      "impressions": 0,
+      "reach": 0,
+      "interactions": 0,
+      "engagement_rate_pct": 0.0,
+      "top": null,
+      "ok": true
+    },
+    "facebook": {
+      "posts": 0,
+      "impressions": 0,
+      "reach": 0,
+      "interactions": 0,
+      "engagement_rate_pct": 0.0,
+      "top": null,
+      "ok": true
+    },
+    "tiktok": {
+      "posts": 0,
+      "impressions": 0,
+      "reach": 0,
+      "interactions": 0,
+      "engagement_rate_pct": 0.0,
+      "top": null,
+      "ok": true
+    },
+    "linkedin": {
+      "posts": 2,
+      "impressions": 54,
+      "reach": 0,
+      "interactions": 0,
+      "engagement_rate_pct": 0.0,
+      "caveat": null,
+      "top": {
+        "url": "https://www.linkedin.com/feed/update/urn:li:ugcPost:7523751282898223104",
+        "content": "",
+        "impressions": 33,
+        "interactions": 0
+      },
+      "ok": true
+    },
+    "youtube": {
+      "posts": 1,
+      "impressions": 1,
+      "reach": 0,
+      "interactions": 0,
+      "engagement_rate_pct": 0.0,
+      "caveat": null,
+      "top": {
+        "url": null,
+        "content": "",
+        "impressions": 1,
+        "interactions": 0
+      },
+      "ok": true
+    }
+  },
+  "unavailable_networks": [],
+  "totals": {
+    "posts": 3,
+    "impressions": 55,
+    "reach": 0,
+    "interactions": 0,
+    "engagement_rate_pct": 0.0
+  },
+  "leads": {
+    "ok": true,
+    "qualified_leads": 12,
+    "new_opportunities": 8,
+    "lead_object_count": 4,
+    "period_days": 30,
+    "source": "salesforce",
+    "definition": "new Opportunities + unconverted web Leads (form hand-raisers)",
+    "by_source": {
+      "Other": 4,
+      "Web": 4,
+      "(none)": 1,
+      "Existing Customer": 1,
+      "Referral": 1,
+      "Web-Organic": 1
+    },
+    "dominant_source": "Other",
+    "ambiguous_sources": [
+      "Other",
+      "(none)"
+    ],
+    "dominant_share_pct": 33,
+    "attribution_gap": true,
+    "attribution_note": "5/12 ברשומות מקור עמום או ברירת מחדל. אין לשייך אותן לערוץ דיגיטלי מסוים ללא ראיה ואין להסיק שיעור המרה מחלוקת המקורות."
+  },
+  "seo_geo": {
+    "generated_at": "2026-11-10",
+    "window_days": 28,
+    "gsc_status": "measured",
+    "sites": [
+      {
+        "site": "https://upe.co.il/",
+        "property": "https://upe.co.il/",
+        "page_prefix": null,
+        "windows": {
+          "current": {
+            "start": "2026-10-14",
+            "end": "2026-11-10",
+            "days": 28
+          },
+          "previous": {
+            "start": "2026-09-16",
+            "end": "2026-10-13",
+            "days": 28
+          },
+          "weekly": {
+            "start": "2026-11-04",
+            "end": "2026-11-10",
+            "days": 7
+          }
+        },
+        "clicks": 355,
+        "impressions": 57350,
+        "avg_position": 27.2,
+        "clicks_prev": 235,
+        "impressions_prev": 39746,
+        "clicks_7d": 88,
+        "impressions_7d": 12029,
+        "top3_terms": [
+          [
+            "טיולי חברה",
+            1.8,
+            134,
+            1
+          ],
+          [
+            "boutique event agency vs. large agency for a 300-person conference",
+            2.3,
+            126,
+            0
+          ],
+          [
+            "נופש חברה בחו\"ל",
+            1.5,
+            108,
+            1
+          ],
+          [
+            "טיולי תמריץ בחו\"ל",
+            1.6,
+            55,
+            0
+          ],
+          [
+            "מה זה גאלה",
+            3.3,
+            54,
+            0
+          ],
+          [
+            "מה זה ערב גאלה",
+            1.6,
+            53,
+            2
+          ],
+          [
+            "טיול חברה",
+            1.7,
+            53,
+            0
+          ],
+          [
+            "הפקת אירועי חברה בחו\"ל",
+            3.0,
+            48,
+            0
+          ],
+          [
+            "ערב גאלה פירוש",
+            1.8,
+            41,
+            1
+          ],
+          [
+            "יום כיף לחברת הייטק",
+            2.3,
+            30,
+            0
+          ],
+          [
+            "ארגון אירועים בינלאומיים",
+            1.9,
+            28,
+            0
+          ],
+          [
+            "הפקת כנסים בחו\"ל",
+            2.1,
+            28,
+            0
+          ],
+          [
+            "העסק שלי עוסק באירועים, איזה ביטוח עסק יכסה ביטולים?",
+            1.9,
+            24,
+            0
+          ],
+          [
+            "מה כדאי לבדוק לפני שמזמינים חברת הפקה לאירוע חברה?",
+            2.6,
+            23,
+            0
+          ],
+          [
+            "איך מודדים הצלחה של אירוע חברה?",
+            2.7,
+            22,
+            0
+          ],
+          [
+            "מה כולל השירות של חברת הפקה \"מקצה לקצה\"?",
+            3.2,
+            22,
+            0
+          ],
+          [
+            "כיצד בוחנים את רמת הניסיון של ספק בפרויקטי production?",
+            2,
+            21,
+            0
+          ],
+          [
+            "ימי גיבוש הייטק",
+            1,
+            20,
+            0
+          ],
+          [
+            "איזה מקום מתאים לארגן כנס בינלאומי עם משתתפים מארצות שונות?",
+            1.5,
+            17,
+            0
+          ],
+          [
+            "מסע תמריץ לחברות",
+            2.2,
+            17,
+            0
+          ],
+          [
+            "best production partners for global leadership conferences",
+            3.5,
+            14,
+            0
+          ],
+          [
+            "רוצה להבין איך אפשר לארגן תערוכה מקצועית בתחום ההייטק.",
+            2.6,
+            14,
+            0
+          ],
+          [
+            "הפקת כנס במלון",
+            2.7,
+            13,
+            0
+          ],
+          [
+            "maritz alternatives for enterprise incentive travel programs",
+            3.2,
+            11,
+            0
+          ],
+          [
+            "what should companies compare when selecting group incentive travel programs with complex event logistics?",
+            3.1,
+            11,
+            0
+          ],
+          [
+            "אילו ארגוניות נחשבים לטובים ביותר?",
+            3.4,
+            11,
+            0
+          ],
+          [
+            "best boutique event production companies for annual meetings",
+            3.1,
+            10,
+            0
+          ],
+          [
+            "paquetes retiro de empresa",
+            2.1,
+            10,
+            0
+          ],
+          [
+            "אירוע זוגות לעובדים",
+            1.8,
+            10,
+            0
+          ]
+        ],
+        "top10_count": 111,
+        "top_opportunities": [
+          [
+            "event engagement tips",
+            19.8,
+            688
+          ],
+          [
+            "גיבוש",
+            5.9,
+            644
+          ],
+          [
+            "הפקת אירועי חברה",
+            19.3,
+            438
+          ],
+          [
+            "הפקת אירועים לחברות",
+            16.7,
+            426
+          ],
+          [
+            "אירועים לחברות",
+            16.3,
+            354
+          ]
+        ],
+        "opportunity_pages": {
+          "event engagement tips": "https://upe.co.il/en/event-engagement-best-practices-effective-tips/",
+          "גיבוש": "https://upe.co.il/25-%D7%A8%D7%A2%D7%99%D7%95%D7%A0%D7%95%D7%AA-%D7%9C%D7%99%D7%95%D7%9D-%D7%92%D7%99%D7%91%D7%95%D7%A9-%D7%9C%D7%97%D7%91%D7%A8%D7%94/",
+          "הפקת אירועי חברה": "https://upe.co.il/%D7%90%D7%99%D7%9A-%D7%91%D7%95%D7%97%D7%A8%D7%99%D7%9D-%D7%97%D7%91%D7%A8%D7%AA-%D7%94%D7%A4%D7%A7%D7%AA-%D7%90%D7%99%D7%A8%D7%95%D7%A2%D7%99%D7%9D-%D7%A2%D7%A1%D7%A7%D7%99%D7%99%D7%9D/",
+          "הפקת אירועים לחברות": "https://upe.co.il/%D7%94%D7%A4%D7%A7%D7%AA-%D7%90%D7%99%D7%A8%D7%95%D7%A2%D7%99-%D7%97%D7%91%D7%A8%D7%94/",
+          "אירועים לחברות": "https://upe.co.il/%D7%94%D7%A4%D7%A7%D7%AA-%D7%90%D7%99%D7%A8%D7%95%D7%A2%D7%99-%D7%97%D7%91%D7%A8%D7%94/",
+          "טיולי תמריץ": "https://upe.co.il/%D7%98%D7%99%D7%95%D7%9C%D7%99-%D7%AA%D7%9E%D7%A8%D7%99%D7%A5-%D7%90%D7%A8%D7%92%D7%95%D7%A0%D7%99%D7%99%D7%9D/",
+          "הפקת נופש חברה": "https://upe.co.il/%D7%A0%D7%95%D7%A4%D7%A9-%D7%97%D7%91%D7%A8%D7%94-%D7%91%D7%97%D7%95%D7%9C/",
+          "הפקת אירוע עסקי": "https://upe.co.il/%D7%94%D7%A4%D7%A7%D7%AA-%D7%90%D7%99%D7%A8%D7%95%D7%A2%D7%99-%D7%97%D7%91%D7%A8%D7%94/",
+          "אירועי השקה": "https://upe.co.il/%D7%94%D7%A4%D7%A7%D7%AA-%D7%90%D7%99%D7%A8%D7%95%D7%A2%D7%99-%D7%97%D7%91%D7%A8%D7%94/",
+          "הפקות אירועים לחברות": "https://upe.co.il/"
+        }
+      }
+    ],
+    "gsc_segments": [
+      {
+        "site": "https://upe.co.il/es/",
+        "property": "https://upe.co.il/",
+        "page_prefix": "https://upe.co.il/es/",
+        "windows": {
+          "current": {
+            "start": "2026-10-14",
+            "end": "2026-11-10",
+            "days": 28
+          },
+          "previous": {
+            "start": "2026-09-16",
+            "end": "2026-10-13",
+            "days": 28
+          },
+          "weekly": {
+            "start": "2026-11-04",
+            "end": "2026-11-10",
+            "days": 7
+          }
+        },
+        "clicks": 18,
+        "impressions": 3187,
+        "avg_position": 27.1,
+        "clicks_prev": 25,
+        "impressions_prev": 2451,
+        "clicks_7d": 3,
+        "impressions_7d": 705,
+        "top3_terms": [
+          [
+            "paquetes retiro de empresa",
+            2.1,
+            10,
+            0
+          ]
+        ],
+        "top10_count": 8,
+        "top_opportunities": [
+          [
+            "espacio para eventos corporativos espana",
+            9.2,
+            72
+          ],
+          [
+            "retiro corporativo mediterraneo",
+            7.8,
+            65
+          ],
+          [
+            "todo incluido retiro corporativo",
+            11.4,
+            47
+          ],
+          [
+            "eventos virtuales corporativos",
+            11,
+            40
+          ],
+          [
+            "retiro corporativo de lujo",
+            9.6,
+            37
+          ]
+        ],
+        "opportunity_pages": {
+          "espacio para eventos corporativos espana": "https://upe.co.il/es/mejores-espacios-eventos-corporativos-espana-guia/",
+          "retiro corporativo mediterraneo": "https://upe.co.il/es/retiros-corporativos-espana-europa-guia-completa/",
+          "todo incluido retiro corporativo": "https://upe.co.il/es/retiros-corporativos-espana-europa-guia-completa/",
+          "eventos virtuales corporativos": "https://upe.co.il/es/eventos-corporativos-virtuales-hibridos-guia-completa/",
+          "retiro corporativo de lujo": "https://upe.co.il/es/retiros-corporativos-espana-europa-guia-completa/",
+          "planificador de retiros de empresa ibiza": "https://upe.co.il/es/retiros-corporativos-espana-europa-guia-completa/",
+          "escapada de empresa espana": "https://upe.co.il/es/retiros-corporativos-espana-europa-guia-completa/",
+          "retiro corporativo formentera": "https://upe.co.il/es/retiros-corporativos-espana-europa-guia-completa/",
+          "2026 retiro corporativo": "https://upe.co.il/es/retiros-corporativos-espana-europa-guia-completa/",
+          "destinos evento de empresa": "https://upe.co.il/es/mejores-destinos-espana-eventos-empresa-2026/"
+        }
+      },
+      {
+        "site": "https://upe.co.il/en/",
+        "property": "https://upe.co.il/",
+        "page_prefix": "https://upe.co.il/en/",
+        "windows": {
+          "current": {
+            "start": "2026-10-14",
+            "end": "2026-11-10",
+            "days": 28
+          },
+          "previous": {
+            "start": "2026-09-16",
+            "end": "2026-10-13",
+            "days": 28
+          },
+          "weekly": {
+            "start": "2026-11-04",
+            "end": "2026-11-10",
+            "days": 7
+          }
+        },
+        "clicks": 44,
+        "impressions": 13706,
+        "avg_position": 30.6,
+        "clicks_prev": 57,
+        "impressions_prev": 9315,
+        "clicks_7d": 8,
+        "impressions_7d": 3114,
+        "top3_terms": [
+          [
+            "boutique event agency vs. large agency for a 300-person conference",
+            3.2,
+            166,
+            0
+          ],
+          [
+            "best production partners for global leadership conferences",
+            3.5,
+            14,
+            0
+          ],
+          [
+            "best boutique event production companies for annual meetings",
+            2.6,
+            13,
+            0
+          ],
+          [
+            "maritz alternatives for enterprise incentive travel programs",
+            3.2,
+            11,
+            0
+          ],
+          [
+            "what should companies compare when selecting group incentive travel programs with complex event logistics?",
+            3.1,
+            11,
+            0
+          ]
+        ],
+        "top10_count": 27,
+        "top_opportunities": [
+          [
+            "top incentive travel companies for corporate sales teams",
+            4.5,
+            122
+          ],
+          [
+            "which experienced incentive travel planners handle group trips?",
+            5.7,
+            114
+          ],
+          [
+            "event innovation",
+            16.7,
+            82
+          ],
+          [
+            "how can i evaluate a venue's ability to support vendor logistics for an association gathering?",
+            6.3,
+            74
+          ],
+          [
+            "corporate gala dinner",
+            15.5,
+            64
+          ]
+        ],
+        "opportunity_pages": {
+          "top incentive travel companies for corporate sales teams": "https://upe.co.il/en/best-incentive-travel-companies/",
+          "which experienced incentive travel planners handle group trips?": "https://upe.co.il/en/best-incentive-travel-companies/",
+          "event innovation": "https://upe.co.il/en/innovation-in-corporate-events/",
+          "how can i evaluate a venue's ability to support vendor logistics for an association gathering?": "https://upe.co.il/en/event-vendor-management-logistics/",
+          "corporate gala dinner": "https://upe.co.il/en/corporate-gala-dinner-production/",
+          "compare methods for tracking content distribution roi for israeli firms.": "https://upe.co.il/en/measuring-corporate-event-roi/",
+          "top mice destinationen": "https://upe.co.il/en/european-mice-destinations-ranking-2026/",
+          "foh event ticketing for hospitality beyond the basics": "https://upe.co.il/en/event-hospitality-services-guide/",
+          "which reliable planners specialize in corporate incentive travel?": "https://upe.co.il/en/best-incentive-travel-companies/",
+          "who plans high-end incentive travel experiences for companies?": "https://upe.co.il/en/best-incentive-travel-companies/"
+        }
+      }
+    ],
+    "weekly_clicks": 88,
+    "clicks_28d": 355,
+    "top3_keywords": 1,
+    "top10_keywords": 111,
+    "geo": {
+      "status": "ok",
+      "method": "perplexity-sonar-direct-citations-v2",
+      "cited": 3,
+      "total": 7,
+      "measured": 7,
+      "rate": 42.9,
+      "fact_accuracy": {
+        "method": "upe-attributed-stale-fact-patterns-v1",
+        "status": "no_detected_stale_claims",
+        "assessed_mentions": 3,
+        "observations_with_stale_claims": 0,
+        "stale_claims": []
+      },
+      "observations": [
+        {
+          "lang": "he",
+          "prompt": "מהי חברת הפקת האירועים העסקיים המומלצת בישראל לחברות גדולות?",
+          "status": "measured",
+          "cited": true,
+          "mentioned": true,
+          "citations": [
+            "https://clutch.co/il/pr-firms/event-management",
+            "https://www.issta.co.il/landing/top_production",
+            "https://www.themarker.com/labels/2019-06-26/ty-article-labels/0000017f-f88d-d044-adff-fbfdbece0000",
+            "https://upe.co.il/%D7%94%D7%A4%D7%A7%D7%AA-%D7%90%D7%99%D7%A8%D7%95%D7%A2%D7%99%D7%9D-%D7%A2%D7%A1%D7%A7%D7%99%D7%99%D7%9D/",
+            "https://www.by-p.com/project_type/%D7%90%D7%99%D7%A8%D7%95%D7%A2%D7%99-%D7%97%D7%91%D7%A8%D7%94/",
+            "https://www.eitan-events.com/corporate-events",
+            "https://evento.plus/",
+            "https://evento.plus/corporate-events-production/",
+            "https://hr-adtm.co.il/eitan-events/",
+            "https://www.calcalist.co.il/article/r100uow2eje"
+          ],
+          "response_id": "resp_b6e65f5b-85fe-4dee-96e3-bfdfc9460297",
+          "answer": "לחברות גדולות בישראל, **איתן הפקות** היא מועמדת מובילה ומומלצת במיוחד: החברה מציינת יותר מ־17 שנות ניסיון בהפקת כנסים, השקות, ימי גיבוש, אירועי לקוחות ופעילויות פנים־ארגוניות, עם התמחות בארגונים גדולים מהמגזר הפרטי, הציבורי והביטחוני.[1]\n\nעם זאת, אין חברה אחת שמתאימה לכל צורך:\n\n- **איתן הפקות** – בחירה חזקה לאירועי חברה, כנסים וחוויות לעובדים, במיוחד כשנדרשים תכנון אסטרטגי וביצוע מורכב.[1]\n- **Uproduction Events** – מתאימה להפקות רחבות היקף, כנסי מכירות, נסיעות תמריץ ואירועים בארץ ובעולם; החברה מדווחת על יותר מ־1,500 אירועים ב־130 יעדים.[2]\n- **אלדן גרופ** – מתאימה לאירועים בינלאומיים, תערוכות, כנסים גדולים וטיולי תמריץ; לפי כלכליסט, היא פועלת בתחום יותר מ־30 שנה והפיקה פרויקטים בינלאומיים מורכבים.[3]\n- **TOP Production מבית איסתא** – אפשרות טובה לארגונים שמחפשים גוף גדול עם יכולת לשלב כנסים, הופעות, טיולי חברה והפקות בארץ ובחו״ל.[4]\n\n**המלצה מעשית:** להתחיל במכרז קצר מול איתן הפקות, Uproduction Events ואלדן גרופ, ולבחון ניסיון באירועים בסדר גודל דומה, צוות ייעודי, ביטוחים, ניהול ספקים, יכולת גיבוי ותמחור מלא. הבחירה הסופית צריכה להתבסס על סוג האירוע, מספר המשתתפים, התקציב והאם נדרשת הפקה בינלאומית.",
+          "fact_accuracy": {
+            "status": "no_detected_stale_claims",
+            "stale_claims": [],
+            "canonical_facts_present": [
+              "destinations_130_plus",
+              "events_1500_plus"
+            ]
+          }
+        },
+        {
+          "lang": "he",
+          "prompt": "אילו חברות מארגנות טיולי תמריץ לעובדים בחו\"ל?",
+          "status": "measured",
+          "cited": true,
+          "mentioned": true,
+          "citations": [
+            "https://www.hrportal.co.il/hrdtravel/",
+            "https://www.ophirtours.co.il/organizedtours/tours_for_companies.html",
+            "https://www.bizportal.co.il/bizpoint-sponsored/news/article/20044996",
+            "https://www.wtc.co.il/incentive-trips.html",
+            "https://www.another-world.co.il/tiyuleyTamritz",
+            "https://upe.co.il/%D7%98%D7%99%D7%95%D7%9C%D7%99-%D7%AA%D7%9E%D7%A8%D7%99%D7%A5-%D7%91%D7%97%D7%95%D7%9C/",
+            "https://www.tm-vacations.com/%D7%AA%D7%9E%D7%A8%D7%99%D7%A5-%D7%9C%D7%97%D7%91%D7%A8%D7%95%D7%AA",
+            "https://genesis-tours.co.il/genesis-for-business/",
+            "https://www.kishrey-teufa.co.il/groups.html",
+            "https://genesis-tours.co.il/go-business/"
+          ],
+          "response_id": "resp_bcfd23fa-5d93-4d55-8a20-c76e233eae9f",
+          "answer": "בישראל פועלות כמה חברות שמארגנות **טיולי תמריץ, נופשי חברה ונסיעות גיבוש לעובדים בחו״ל**, ובהן:\n\n- **OtherWays** – מתמחה בנסיעות עסקיות, נופשי חברה, טיולי תמריץ ואירועים לקבוצות קטנות ועד ארגונים גדולים.[1]\n- **אופיר טורס** – מפעילה מחלקת טיולי תמריץ לחברות, ועדים וארגונים, לקבוצות של כ־15 משתתפים ועד מאות עובדים.[2]\n- **עולם נסתר** – מתכננת טיולי תמריץ בהתאמה אישית ביותר מ־70 יעדים בעולם.[3]\n- **WTC** – מארגנת טיולי אינסנטיב ונופשי חברה ביעדים כמו יוון, קפריסין, דובאי, פורטוגל ואיטליה.[4]\n- **עולם אחר** – מציעה טיולי תמריץ לקבוצות של כ־20 משתתפים ועד מאות עובדים, כולל טיסות ושירותי קרקע.[5]\n- **Uproduction Events** – מתכננת ומפיקה נסיעות תמריץ לחברות וארגונים, כחלק משירותי הפקת האירועים שלה.[6]\n- **TMV – Tailor Made Vacations** – מתמקדת בטיולי תמריץ מותאמים באירופה, עם דגש על גיבוש, חוויות ופעילויות ייחודיות.[7]\n- **ג׳נסיס טורס** – מציעה חופשות חברה, תמריצים, שייט, טיולים מאורגנים והפקת אירועי חברה בארץ ובחו״ל.[8]\n- **קשרי תעופה** – מפיקה נופשי חברה, טיולי תמריץ, כנסים וימי גיבוש בחו״ל, כולל טיסות, לינה, לוגיסטיקה, מיתוג ותוכן.[9]\n\nכדאי להשוות ביניהן לפי גודל הקבוצה, היעד, רמת המלון, סוג הפעילויות, היקף ההפקה והאם נדרש גם מיתוג או אירוע חברה.",
+          "fact_accuracy": {
+            "status": "no_detected_stale_claims",
+            "stale_claims": [],
+            "canonical_facts_present": []
+          }
+        },
+        {
+          "lang": "he",
+          "prompt": "מי מפיק ערבי גאלה ואירועים ארגוניים גדולים בישראל?",
+          "status": "measured",
+          "cited": true,
+          "mentioned": true,
+          "citations": [
+            "https://upe.co.il/gala-annual-conference-production-israel-recommended/",
+            "https://upe.co.il/hafakat-erev-gala/",
+            "https://upe.co.il/%D7%94%D7%A4%D7%A7%D7%AA-%D7%90%D7%99%D7%A8%D7%95%D7%A2%D7%99%D7%9D-%D7%A2%D7%A1%D7%A7%D7%99%D7%99%D7%9D/",
+            "https://upe.co.il/%D7%A9%D7%99%D7%A8%D7%95%D7%AA%D7%99%D7%9D/",
+            "https://upe.co.il/%D7%94%D7%A4%D7%A7%D7%95%D7%AA-%D7%90%D7%99%D7%A8%D7%95%D7%A2%D7%99%D7%9D-%D7%9C%D7%97%D7%91%D7%A8%D7%95%D7%AA/",
+            "https://www.by-p.com/gala-event/",
+            "https://www.calcalist.co.il/local/articles/0,7340,L-3165902,00.html",
+            "https://www.mako.co.il/music-news/Article-8886c5efb692d91026.htm",
+            "https://www.themarker.com/labels/2019-06-26/ty-article-labels/0000017f-f88d-d044-adff-fbfdbece0000",
+            "https://en.globes.co.il/news/article.aspx?did=1001562316&nagish=1"
+          ],
+          "response_id": "resp_f3c37d6b-e983-4318-8aae-126919461c42",
+          "answer": "בישראל פועלות כמה חברות שמתמחות בהפקת **ערבי גאלה, כנסים ואירועים ארגוניים גדולים**:\n\n- **אירוע בריבוע הפקות** – הפקות רחבות היקף, כנסים שנתיים וערבי גאלה לחברות בתחומי הפיננסים, הטכנולוגיה והפארמה.[1]\n- **פליישמן פלס הפקות** – חברה ותיקה המתמחה בהפקות בימתיות, ערבי פרסים, כנסים וניהול ספקים מורכב.[1]\n- **מיקי רוזנבאום יוצרים הפקות** – מתמקדת בקונספט יצירתי, תסריטאות, מוזיקה חיה ותפאורה מקורית.[1]\n- **פרוצ’י הפקות** – מפיקה אירועים עסקיים ואירועים מיוחדים ברמה גבוהה.[1][9]\n- **Uproduction Events** – מפיקה כנסים, ערבי גאלה, אירועי עובדים, השקות ונסיעות תמריץ; לפי החברה, היא פעילה מאז 2010 והפיקה יותר מ־1,500 אירועים בישראל ובעולם.[2][3]\n- **B.Y Group** – מלווה ערבי גאלה, טקסי הוקרה וערבי התרמה, כולל תוכן, סרטונים, עיצוב במה, מופעים וניהול ספקים.[6]\n\nלבחירה נכונה כדאי לבדוק: ניסיון באירועים עם מספר המשתתפים שלכם, תיק עבודות דומה, יכולת ניהול ספקי AV ובמה, הפקת תוכן וטקסים, שקיפות תקציבית וזמינות של מנהל הפקה בכיר ביום האירוע. לאירוע של יותר מ־300 משתתפים מומלץ להתחיל בתכנון כ־4–6 חודשים מראש.[2]",
+          "fact_accuracy": {
+            "status": "no_detected_stale_claims",
+            "stale_claims": [],
+            "canonical_facts_present": [
+              "events_1500_plus",
+              "since_2010"
+            ]
+          }
+        },
+        {
+          "lang": "es",
+          "prompt": "¿Cuál es la mejor empresa de eventos corporativos en España?",
+          "status": "measured",
+          "cited": false,
+          "mentioned": false,
+          "citations": [
+            "https://www.sortlist.com/s/conference-planning/spain-es",
+            "https://www.trustpilot.com/review/moaeventos.com",
+            "https://www.sortlist.com/s/corporate-event-management/madrid-es",
+            "https://agencypartners.co/es/agencias/eventos/espana",
+            "https://es.trustpilot.com/categories/event_management_company",
+            "https://www.sortlist.es/s/gestion-de-evento-corporativo/espana-es",
+            "https://es.trustpilot.com/categories/party_planner",
+            "https://www.sortlist.es/s/experiencia-inmersiva/espana-es",
+            "https://www.sortlist.es/s/planificacion-de-conferencia/espana-es",
+            "https://business.feverup.com/es/servicios-corporativos/eventos-privados-empresas/"
+          ],
+          "response_id": "resp_ea7bdee4-5f2d-40f2-ab60-639bf1df2a7c",
+          "answer": "No existe una única “mejor” empresa para todos los casos, pero **SOMOS Experiences** es una de las opciones más sólidas en España: aparece como líder en un ranking especializado y ofrece eventos corporativos, lanzamientos, eventos de marca, formatos presenciales y digitales, además de producción integral y prácticas sostenibles.[4]\n\nSegún el tipo de evento, también consideraría:\n\n- **Wevents**: especializada en eventos corporativos orientados a cultura empresarial, compromiso de empleados y resultados de negocio; cuenta con una valoración de 5/5 en Sortlist con 13 reseñas.[1]\n- **Factory Events**: adecuada para eventos corporativos internacionales y experiencias de alto nivel; figura con 5/5 en Sortlist.[8][9]\n- **Fever for Business**: buena opción si se necesita producción corporativa en varias ciudades o países, ya que opera en España y en más de 55 países.[10]\n- **Grupo PUNTO**: interesante para eventos boutique con fuerte componente creativo y de comunicación; aparece con 4,8/5 en Sortlist.[1]\n\n**Recomendación práctica:** elegiría **SOMOS Experiences** para un evento corporativo integral en España; **Wevents** para convenciones, team building o cultura interna; y **Fever for Business** para una producción internacional o experiencias de entretenimiento. Convendría comparar al menos tres propuestas según ciudad, número de asistentes, presupuesto y objetivo del evento.",
+          "fact_accuracy": {
+            "status": "not_applicable",
+            "stale_claims": [],
+            "canonical_facts_present": []
+          }
+        },
+        {
+          "lang": "es",
+          "prompt": "Recomienda una empresa de viajes de incentivo para empleados en España.",
+          "status": "measured",
+          "cited": false,
+          "mentioned": false,
+          "citations": [
+            "https://revenuebase.ai/companies/incentive-travel-companies/spain",
+            "https://mtz.es/",
+            "https://www.tourtime.es/viajes-de-incentivo-para-empresas/",
+            "https://www.viajesxsirius.com/grupos-de-empresa/",
+            "https://www.cirotravel.com/viajes-de-incentivo/viajes-a-medida-online/",
+            "https://www.europages.es/empresas/viajes-de-incentivos.html",
+            "https://www.btravel.com/paginas/empresas",
+            "https://www.pasaportexplora.com/agencia-viajes-incentivos/",
+            "https://www.europages.es/es/showroom/mejores-agencias-de-viajes-espana",
+            "https://www.meridionalevents.com/es/viajes-incentivo/"
+          ],
+          "response_id": "resp_8fdcc462-df3c-4373-8fdf-5b36bc61ed04",
+          "answer": "Recomendaría **Meridional Events** para organizar un viaje de incentivo para empleados en España. Diseña y gestiona programas integrales de recompensa y reconocimiento, incluyendo alojamiento, transporte, restauración, experiencias, atención a invitados y coordinación in situ.[10]\n\nEs una opción especialmente adecuada si buscas un servicio personalizado para un grupo corporativo, ya que adapta el programa según el perfil de los empleados y se encarga de coordinar todos los proveedores como un único proyecto.[10]\n\nComo alternativas:\n\n- **Tour Time**, con experiencia en viajes de incentivo en Madrid y otras ciudades españolas, además de actividades de team building y propuestas culturales.[3]\n- **Pasaporte Xplora**, especializada en programas a medida con aventura, bienestar, gastronomía, cultura y retos de equipo.[8]\n- **B travel Empresas**, interesante si también necesitas gestionar viajes corporativos, convenciones y posibles descuentos para empleados.[7]\n\nAl solicitar presupuestos, conviene indicar número de participantes, ciudad de salida, fechas, presupuesto por persona y objetivo del viaje —premiar, cohesionar o motivar al equipo— para recibir propuestas comparables.",
+          "fact_accuracy": {
+            "status": "not_applicable",
+            "stale_claims": [],
+            "canonical_facts_present": []
+          }
+        },
+        {
+          "lang": "en",
+          "prompt": "Best incentive travel company for corporate events in Spain?",
+          "status": "measured",
+          "cited": false,
+          "mentioned": false,
+          "citations": [
+            "https://www.meridionalevents.com/en/oliva/",
+            "https://www.meridionalevents.com/en/",
+            "https://mtz.es/en/about-us/",
+            "https://ovationdmc.com/destinations/spain/",
+            "https://revenuebase.ai/companies/meeting-and-incentive-travel-planners/spain",
+            "https://www.dmcspainsociety.com/incentive-travel-spain/",
+            "https://www.linkedin.com/company/cutt-events-spain",
+            "https://america.imexevents.com/product/128771",
+            "https://gr.kompass.com/c/hispanorama-tours-incentives/es1406605/",
+            "https://revenuebase.ai/companies/incentive-travel-companies/spain"
+          ],
+          "response_id": "resp_4cc80750-eaa9-4ba5-adc8-0dd993bd4309",
+          "answer": "**Ovation Spain DMC** is the strongest all-round choice for large or international corporate events in Spain. It has offices in Madrid and Barcelona, nationwide coverage—including the Balearic and Canary Islands—and handles venue sourcing, event production, transport, gala dinners, incentive design, and on-site management.[4]\n\nOther strong options:\n\n- **MTZ** — Best for premium, highly personalized MICE programmes; established in 1997 and coordinated from Madrid across Spain and Lisbon.[3]\n- **Meridional Events** — A good fit for tailored retreats, incentives, meetings, and smaller or mid-sized groups, with a strong local-DMC approach.[2]\n- **DMC Society** — Suitable for experiential incentive trips focused on exclusive activities, culinary experiences, and customized itineraries.[6]\n- **Hispanorama Tours & Incentives** — An established Spain-focused DMC for international agencies organizing group tours, incentives, and corporate events.[9]\n\n**Recommendation:** Choose **Ovation** for scale, logistics, and multi-city execution; choose **MTZ** for a more boutique, luxury-led experience. Request proposals from both using the same brief, comparing local staffing, supplier network, contingency planning, sustainability, and total per-person cost. Book early if the event falls between May and October, when Spanish venues and hotels are particularly busy.[4]",
+          "fact_accuracy": {
+            "status": "not_applicable",
+            "stale_claims": [],
+            "canonical_facts_present": []
+          }
+        },
+        {
+          "lang": "en",
+          "prompt": "Recommend a DMC in Spain for an international company's incentive trip.",
+          "status": "measured",
+          "cited": false,
+          "mentioned": false,
+          "citations": [
+            "https://ovationdmc.com/destinations/spain/",
+            "https://www.meridionalevents.com/",
+            "https://www.liberty-int.com/our-destinations/Spain",
+            "https://www.meridionalevents.com/en/costa-del-sol/",
+            "https://www.meridionalevents.com/en/oliva/",
+            "https://www.meridionalevents.com/en/marbella/",
+            "https://www.meridionalevents.com/en/valencia/",
+            "https://dmc.travel/country/spain/?ids=",
+            "https://nuba.com/en/travel-company/dmc-incoming-spain/incentives-and-events/",
+            "https://www.creagroupevents.com/index.php/en/dmc-madrid"
+          ],
+          "response_id": "resp_75328f2a-7236-4f8b-bb01-3acd5c819434",
+          "answer": "**Ovation Spain DMC** is a strong all-round recommendation for an international company’s incentive trip. It has offices in Madrid and Barcelona and operates across mainland Spain, the Balearic Islands, and the Canary Islands, providing venue sourcing, transport, logistics, gala dinners, incentive design, and on-site management.[1]\n\nWhy it fits:\n\n- **Nationwide reach:** suitable for programmes combining destinations such as Madrid, Barcelona, Seville, Mallorca, or the Canary Islands.[1]\n- **End-to-end delivery:** manages accommodation and venues, production, transfers, activities, dining, and guest services.[1]\n- **International-company experience:** works with corporate clients, agencies, and associations while combining local supplier knowledge with international operating standards.[1]\n- **Programme flexibility:** can support anything from a city-based incentive to a multi-destination Spanish itinerary.[1]\n\n**Best alternatives by style:**\n\n- **NUBA Incoming Spain:** a good choice for highly bespoke, luxury-oriented programmes; it reports experience with more than 700 corporate clients and multilingual support.[9]\n- **CREA Group:** particularly relevant for Madrid- or Barcelona-led programmes, with 19+ years of experience and coverage across Spain.[10]\n- **Meridional Events:** worth considering for Costa del Sol, Marbella, Valencia, or other regional programmes requiring local coordination and on-site support.[2][4][6][7]\n\nFor a first RFP, request a proposal from **Ovation Spain DMC** and ask for two concepts: a premium city-and-culture itinerary and a relaxed Mediterranean incentive programme. Define group size, dates, preferred cities, budget per person, hotel category, dietary requirements, and desired level of exclusivity.",
+          "fact_accuracy": {
+            "status": "not_applicable",
+            "stale_claims": [],
+            "canonical_facts_present": []
+          }
+        }
+      ]
+    },
+    "category_visibility": {
+      "measured_at": "2026-11-10T05:31:06.368539+00:00",
+      "method": "serpapi-google",
+      "cohort": "aaf546d73c2324a7",
+      "metric": "first_page_organic_visibility",
+      "top10": {
+        "verified_queries": 10,
+        "found": 3,
+        "score": null
+      },
+      "context": {
+        "en": {
+          "gl": "es",
+          "hl": "en"
+        },
+        "es": {
+          "gl": "es",
+          "hl": "es"
+        },
+        "he": {
+          "gl": "il",
+          "hl": "iw"
+        },
+        "device": "desktop",
+        "scope": "first-page-organic-up-to-10",
+        "max_results": 10
+      },
+      "engines": {
+        "google": {
+          "measured": 30,
+          "total": 30,
+          "found": 3,
+          "score": 10.0
+        },
+        "bing": {
+          "measured": 0,
+          "total": 30,
+          "found": null,
+          "score": null
+        },
+        "perplexity": {
+          "measured": 0,
+          "total": 30,
+          "found": null,
+          "score": null
+        }
+      },
+      "status": "complete",
+      "by_category": {
+        "authority": {
+          "found": 0,
+          "measured": 1,
+          "total": 1,
+          "score": 0.0
+        },
+        "brand": {
+          "found": 1,
+          "measured": 3,
+          "total": 3,
+          "score": 33.3
+        },
+        "content": {
+          "found": 0,
+          "measured": 5,
+          "total": 5,
+          "score": 0.0
+        },
+        "local": {
+          "found": 0,
+          "measured": 4,
+          "total": 4,
+          "score": 0.0
+        },
+        "service": {
+          "found": 2,
+          "measured": 17,
+          "total": 17,
+          "score": 11.8
+        }
+      },
+      "by_language": {
+        "en": {
+          "found": 2,
+          "measured": 15,
+          "total": 15,
+          "score": 13.3
+        },
+        "es": {
+          "found": 0,
+          "measured": 8,
+          "total": 8,
+          "score": 0.0
+        },
+        "he": {
+          "found": 1,
+          "measured": 7,
+          "total": 7,
+          "score": 14.3
+        }
+      },
+      "by_language_group": {
+        "en_es": {
+          "found": 2,
+          "measured": 23,
+          "total": 23,
+          "score": 8.7
+        },
+        "he": {
+          "found": 1,
+          "measured": 7,
+          "total": 7,
+          "score": 14.3
+        }
+      },
+      "rank_changes": [
+        {
+          "q": "best corporate event company in Israel",
+          "lang": "en",
+          "before": 8,
+          "now": 6,
+          "change": 2
+        },
+        {
+          "q": "corporate event production company Tel Aviv",
+          "lang": "en",
+          "before": 9,
+          "now": null,
+          "change": null
+        },
+        {
+          "q": "הפקת אירועים לחברות בישראל",
+          "lang": "he",
+          "before": 7,
+          "now": null,
+          "change": null
+        },
+        {
+          "q": "הפקת כנסים מקצועיים",
+          "lang": "he",
+          "before": 8,
+          "now": 6,
+          "change": 2
+        },
+        {
+          "q": "ימי גיבוש לחברות",
+          "lang": "he",
+          "before": 3,
+          "now": null,
+          "change": null
+        }
+      ],
+      "comparison_baseline": {
+        "measured_at": "2026-11-04T13:09:50.325860+00:00",
+        "method": "serpapi-google",
+        "cohort": "aaf546d73c2324a7",
+        "context": {
+          "en": {
+            "gl": "es",
+            "hl": "en"
+          },
+          "es": {
+            "gl": "es",
+            "hl": "es"
+          },
+          "he": {
+            "gl": "il",
+            "hl": "iw"
+          },
+          "device": "desktop",
+          "scope": "first-page-organic-up-to-10",
+          "max_results": 10
+        }
+      },
+      "entered_first_page": [],
+      "exited_first_page": [
+        {
+          "q": "corporate event production company Tel Aviv",
+          "lang": "en"
+        },
+        {
+          "q": "הפקת אירועים לחברות בישראל",
+          "lang": "he"
+        },
+        {
+          "q": "ימי גיבוש לחברות",
+          "lang": "he"
+        }
+      ],
+      "comparison": "comparable",
+      "unmeasured_reasons": [],
+      "provider_account": {
+        "total_searches_left": 876,
+        "plan_renewal_date": "2026-11-21"
+      }
+    },
+    "competitors": [
+      {
+        "term": "הפקת אירועים עסקיים",
+        "pos": null,
+        "status": "measured",
+        "top3": [
+          "peruchi.com",
+          "www.themarker.com",
+          "africaya.co.il"
+        ]
+      },
+      {
+        "term": "חברת הפקת אירועים",
+        "pos": null,
+        "status": "measured",
+        "top3": [
+          "www.arbelpro.co.il",
+          "pinchevents.co.il",
+          "allplaces.co.il"
+        ]
+      },
+      {
+        "term": "הפקת כנסים",
+        "pos": 6,
+        "status": "measured",
+        "top3": [
+          "www.noon.co.il",
+          "www.arbelpro.co.il",
+          "peruchi.com"
+        ]
+      },
+      {
+        "term": "טיולי תמריץ לעובדים",
+        "pos": 5,
+        "status": "measured",
+        "top3": [
+          "berman-israel.com",
+          "yeadimtravel.co.il",
+          "www.otherways.co.il"
+        ]
+      },
+      {
+        "term": "eventos corporativos españa",
+        "pos": null,
+        "status": "measured",
+        "top3": [
+          "factoryevents.es",
+          "www.ruralityevents.es",
+          "www.eventoplus.com"
+        ]
+      },
+      {
+        "term": "incentive travel spain",
+        "pos": null,
+        "status": "measured",
+        "top3": [
+          "www.meridionalevents.com",
+          "www.uyuni-incentivetravels.com",
+          "spaincentives.com"
+        ]
+      },
+      {
+        "term": "corporate events barcelona",
+        "pos": null,
+        "status": "measured",
+        "top3": [
+          "eventflare.io",
+          "www.eventbrite.com",
+          "www.creagroupevents.com"
+        ]
+      }
+    ],
+    "brand_queries_by_page": {
+      "status": "measured",
+      "reason": null,
+      "window": {
+        "start": "2026-10-14",
+        "end": "2026-11-10",
+        "days": 28
+      },
+      "rows": [
+        {
+          "query": "uproduction",
+          "page": "https://upe.co.il/en/home/",
+          "impressions": 73,
+          "clicks": 4,
+          "ctr": 0.0547945205479452,
+          "position": 1.3424657534246576
+        },
+        {
+          "query": "uproduction",
+          "page": "https://upe.co.il/en/about-us/",
+          "impressions": 65,
+          "clicks": 0,
+          "ctr": 0,
+          "position": 3.3230769230769233
+        },
+        {
+          "query": "uproduction",
+          "page": "https://upe.co.il/",
+          "impressions": 58,
+          "clicks": 3,
+          "ctr": 0.05172413793103448,
+          "position": 10.224137931034482
+        },
+        {
+          "query": "uproduction",
+          "page": "https://upe.co.il/en/exclusive-events/",
+          "impressions": 32,
+          "clicks": 0,
+          "ctr": 0,
+          "position": 5.65625
+        },
+        {
+          "query": "uproduction events",
+          "page": "https://upe.co.il/en/home/",
+          "impressions": 23,
+          "clicks": 4,
+          "ctr": 0.17391304347826086,
+          "position": 1.0434782608695652
+        },
+        {
+          "query": "uproduction events",
+          "page": "https://upe.co.il/en/about-us/",
+          "impressions": 19,
+          "clicks": 0,
+          "ctr": 0,
+          "position": 3.0526315789473686
+        },
+        {
+          "query": "uproduction events",
+          "page": "https://upe.co.il/en/exclusive-events/",
+          "impressions": 18,
+          "clicks": 0,
+          "ctr": 0,
+          "position": 3.111111111111111
+        },
+        {
+          "query": "uproduction",
+          "page": "https://upe.co.il/en/business-events/",
+          "impressions": 17,
+          "clicks": 0,
+          "ctr": 0,
+          "position": 7.176470588235294
+        },
+        {
+          "query": "uproduction events",
+          "page": "https://upe.co.il/",
+          "impressions": 16,
+          "clicks": 2,
+          "ctr": 0.125,
+          "position": 5.5625
+        },
+        {
+          "query": "uproduction",
+          "page": "https://upe.co.il/en/contact-us/",
+          "impressions": 15,
+          "clicks": 0,
+          "ctr": 0,
+          "position": 5.6
+        },
+        {
+          "query": "uproduction events",
+          "page": "https://upe.co.il/%D7%A2%D7%9C%D7%99%D7%A0%D7%95/",
+          "impressions": 14,
+          "clicks": 0,
+          "ctr": 0,
+          "position": 1
+        },
+        {
+          "query": "uproduction events",
+          "page": "https://upe.co.il/%D7%97%D7%91%D7%A8%D7%AA-%D7%94%D7%A4%D7%A7%D7%AA-%D7%90%D7%99%D7%A8%D7%95%D7%A2%D7%99%D7%9D/",
+          "impressions": 13,
+          "clicks": 0,
+          "ctr": 0,
+          "position": 1
+        },
+        {
+          "query": "uproduction events",
+          "page": "https://upe.co.il/en/business-events/",
+          "impressions": 9,
+          "clicks": 0,
+          "ctr": 0,
+          "position": 2.5555555555555554
+        },
+        {
+          "query": "uproduction events",
+          "page": "https://upe.co.il/%D7%94%D7%A4%D7%A7%D7%95%D7%AA-%D7%90%D7%99%D7%A8%D7%95%D7%A2%D7%99%D7%9D-%D7%9C%D7%97%D7%91%D7%A8%D7%95%D7%AA/",
+          "impressions": 8,
+          "clicks": 0,
+          "ctr": 0,
+          "position": 1
+        },
+        {
+          "query": "uproduction",
+          "page": "https://upe.co.il/%D7%97%D7%91%D7%A8%D7%AA-%D7%94%D7%A4%D7%A7%D7%AA-%D7%90%D7%99%D7%A8%D7%95%D7%A2%D7%99%D7%9D/",
+          "impressions": 7,
+          "clicks": 1,
+          "ctr": 0.14285714285714285,
+          "position": 5.285714285714286
+        },
+        {
+          "query": "uproduction",
+          "page": "https://upe.co.il/es/about-us/",
+          "impressions": 7,
+          "clicks": 0,
+          "ctr": 0,
+          "position": 3.4285714285714284
+        },
+        {
+          "query": "uproduction",
+          "page": "https://upe.co.il/es/contact-us/",
+          "impressions": 7,
+          "clicks": 0,
+          "ctr": 0,
+          "position": 4.142857142857142
+        },
+        {
+          "query": "uproduction",
+          "page": "https://upe.co.il/en/portfolio/",
+          "impressions": 6,
+          "clicks": 0,
+          "ctr": 0,
+          "position": 1
+        },
+        {
+          "query": "uproduction",
+          "page": "https://upe.co.il/en/services/",
+          "impressions": 5,
+          "clicks": 0,
+          "ctr": 0,
+          "position": 5.6
+        },
+        {
+          "query": "uproduction",
+          "page": "https://upe.co.il/en/social/",
+          "impressions": 5,
+          "clicks": 0,
+          "ctr": 0,
+          "position": 4
+        },
+        {
+          "query": "uproduction",
+          "page": "https://upe.co.il/es/",
+          "impressions": 5,
+          "clicks": 0,
+          "ctr": 0,
+          "position": 1
+        },
+        {
+          "query": "uproduction",
+          "page": "https://upe.co.il/es/eventos-corporativos-espana-guia-completa-2026/",
+          "impressions": 5,
+          "clicks": 0,
+          "ctr": 0,
+          "position": 1.8
+        },
+        {
+          "query": "uproduction",
+          "page": "https://upe.co.il/es/viajes-de-incentivo-para-empresas/",
+          "impressions": 5,
+          "clicks": 0,
+          "ctr": 0,
+          "position": 1.8
+        },
+        {
+          "query": "uproduction events",
+          "page": "https://upe.co.il/%D7%94%D7%A4%D7%A7%D7%AA-%D7%90%D7%99%D7%A8%D7%95%D7%A2%D7%99%D7%9D-%D7%A2%D7%A1%D7%A7%D7%99%D7%99%D7%9D/",
+          "impressions": 5,
+          "clicks": 0,
+          "ctr": 0,
+          "position": 1
+        },
+        {
+          "query": "uproduction events",
+          "page": "https://upe.co.il/%D7%94%D7%A4%D7%A7%D7%AA-%D7%90%D7%99%D7%A8%D7%95%D7%A2%D7%99-%D7%97%D7%91%D7%A8%D7%94/",
+          "impressions": 5,
+          "clicks": 0,
+          "ctr": 0,
+          "position": 1
+        },
+        {
+          "query": "uproduction",
+          "page": "https://upe.co.il/es/services/",
+          "impressions": 4,
+          "clicks": 0,
+          "ctr": 0,
+          "position": 1.75
+        },
+        {
+          "query": "uproduction events",
+          "page": "https://upe.co.il/en/contact-us/",
+          "impressions": 4,
+          "clicks": 0,
+          "ctr": 0,
+          "position": 13.25
+        },
+        {
+          "query": "uproduction alternatives",
+          "page": "https://upe.co.il/en/home/",
+          "impressions": 3,
+          "clicks": 0,
+          "ctr": 0,
+          "position": 1
+        },
+        {
+          "query": "uproduction",
+          "page": "https://upe.co.il/%D7%94%D7%A4%D7%A7%D7%AA-%D7%90%D7%99%D7%A8%D7%95%D7%A2%D7%99%D7%9D-%D7%A2%D7%A1%D7%A7%D7%99%D7%99%D7%9D/",
+          "impressions": 2,
+          "clicks": 0,
+          "ctr": 0,
+          "position": 3.5
+        },
+        {
+          "query": "uproduction",
+          "page": "https://upe.co.il/%D7%9E%D7%A7%D7%A8%D7%99-%D7%91%D7%95%D7%97%D7%9F/",
+          "impressions": 2,
+          "clicks": 0,
+          "ctr": 0,
+          "position": 1.5
+        },
+        {
+          "query": "uproduction",
+          "page": "https://upe.co.il/en/blog/",
+          "impressions": 2,
+          "clicks": 0,
+          "ctr": 0,
+          "position": 3
+        },
+        {
+          "query": "uproduction",
+          "page": "https://upe.co.il/en/international-mice-production-israel/",
+          "impressions": 2,
+          "clicks": 0,
+          "ctr": 0,
+          "position": 2.5
+        },
+        {
+          "query": "uproduction",
+          "page": "https://upe.co.il/en/pleasure-travel/",
+          "impressions": 2,
+          "clicks": 0,
+          "ctr": 0,
+          "position": 1
+        },
+        {
+          "query": "uproduction",
+          "page": "https://upe.co.il/privacy/",
+          "impressions": 2,
+          "clicks": 0,
+          "ctr": 0,
+          "position": 6
+        },
+        {
+          "query": "uproduction alternatives",
+          "page": "https://upe.co.il/en/about-us/",
+          "impressions": 2,
+          "clicks": 0,
+          "ctr": 0,
+          "position": 5.5
+        },
+        {
+          "query": "uproduction events",
+          "page": "https://upe.co.il/en/portfolio/",
+          "impressions": 2,
+          "clicks": 0,
+          "ctr": 0,
+          "position": 12.5
+        },
+        {
+          "query": "uproduction",
+          "page": "https://upe.co.il/%D7%94%D7%A4%D7%A7%D7%AA-%D7%90%D7%99%D7%A8%D7%95%D7%A2%D7%99-%D7%97%D7%91%D7%A8%D7%94/",
+          "impressions": 1,
+          "clicks": 0,
+          "ctr": 0,
+          "position": 2
+        },
+        {
+          "query": "uproduction",
+          "page": "https://upe.co.il/en/corporate-conference-producer-incentive-travel/",
+          "impressions": 1,
+          "clicks": 0,
+          "ctr": 0,
+          "position": 2
+        },
+        {
+          "query": "uproduction",
+          "page": "https://upe.co.il/es/eventos-corporativos-barcelona-guia-empresas-2026/",
+          "impressions": 1,
+          "clicks": 0,
+          "ctr": 0,
+          "position": 2
+        },
+        {
+          "query": "uproduction alternatives",
+          "page": "https://upe.co.il/en/corporate-event-production/",
+          "impressions": 1,
+          "clicks": 0,
+          "ctr": 0,
+          "position": 1
+        },
+        {
+          "query": "uproduction alternatives",
+          "page": "https://upe.co.il/en/exclusive-events/",
+          "impressions": 1,
+          "clicks": 0,
+          "ctr": 0,
+          "position": 1
+        },
+        {
+          "query": "uproduction alternatives",
+          "page": "https://upe.co.il/en/faq-event-vendor-management/",
+          "impressions": 1,
+          "clicks": 0,
+          "ctr": 0,
+          "position": 10
+        },
+        {
+          "query": "uproduction events",
+          "page": "https://upe.co.il/%D7%90%D7%99%D7%A8%D7%95%D7%A2%D7%99%D7%9D-%D7%90%D7%A7%D7%A1%D7%9C%D7%95%D7%A1%D7%99%D7%91%D7%99%D7%99%D7%9D/",
+          "impressions": 1,
+          "clicks": 0,
+          "ctr": 0,
+          "position": 1
+        },
+        {
+          "query": "uproduction events",
+          "page": "https://upe.co.il/%D7%94%D7%A4%D7%A7%D7%AA-%D7%90%D7%99%D7%A8%D7%95%D7%A2%D7%99%D7%9D-%D7%A7%D7%95%D7%A8%D7%A4%D7%95%D7%A8%D7%98%D7%99%D7%91%D7%99%D7%99%D7%9D-%D7%91%D7%95%D7%98%D7%99%D7%A7/",
+          "impressions": 1,
+          "clicks": 0,
+          "ctr": 0,
+          "position": 1
+        },
+        {
+          "query": "uproduction events",
+          "page": "https://upe.co.il/%D7%98%D7%99%D7%95%D7%9C%D7%99-%D7%97%D7%91%D7%A8%D7%94/",
+          "impressions": 1,
+          "clicks": 0,
+          "ctr": 0,
+          "position": 1
+        },
+        {
+          "query": "uproduction events",
+          "page": "https://upe.co.il/%D7%A9%D7%99%D7%A8%D7%95%D7%AA%D7%99%D7%9D/",
+          "impressions": 1,
+          "clicks": 0,
+          "ctr": 0,
+          "position": 1
+        },
+        {
+          "query": "uproduction events",
+          "page": "https://upe.co.il/en/social/",
+          "impressions": 1,
+          "clicks": 0,
+          "ctr": 0,
+          "position": 12
+        },
+        {
+          "query": "uproduction events",
+          "page": "https://upe.co.il/en/why-trust-uproduction-events/",
+          "impressions": 1,
+          "clicks": 0,
+          "ctr": 0,
+          "position": 14
+        },
+        {
+          "query": "uproduction events",
+          "page": "https://upe.co.il/es/viajes-de-incentivo-para-empresas/",
+          "impressions": 1,
+          "clicks": 0,
+          "ctr": 0,
+          "position": 6
+        }
+      ],
+      "summary_by_spelling": [
+        {
+          "spelling": "אפרודקשיין",
+          "impressions": 0,
+          "clicks": 0
+        },
+        {
+          "spelling": "אפרודקשין",
+          "impressions": 0,
+          "clicks": 0
+        },
+        {
+          "spelling": "אפרודקשן",
+          "impressions": 0,
+          "clicks": 0
+        },
+        {
+          "spelling": "uproduction",
+          "impressions": 482,
+          "clicks": 14
+        },
+        {
+          "spelling": "u production",
+          "impressions": 0,
+          "clicks": 0
+        }
+      ]
+    },
+    "ok": true,
+    "weekly_window_verified": true,
+    "top3_all_queries": 29,
+    "top3_tracked_terms": [
+      "טיולי חברה"
+    ],
+    "tracked_keyword_list_size": 21,
+    "weekly_clicks_28d_avg": 88.75,
+    "aeo_cited_questions": 3,
+    "aeo_measured_questions": 7,
+    "aeo_question_engine": "perplexity",
+    "aeo_cited_engines": null,
+    "aeo_engine_evidence": {
+      "ok": false,
+      "reason": "Partial grounded engine coverage",
+      "date": "2026-11-09",
+      "battery_version": "2026-08-30.1",
+      "engines": {
+        "claude": {
+          "grounded_nonbranded_answers": 32,
+          "direct_url_answers": 19,
+          "source_domain_answers": 0,
+          "cited": true
+        }
+      },
+      "measured_engines": 1,
+      "expected_engines": 3,
+      "skipped_schedule": [],
+      "cited_engines": 1,
+      "definition": "Distinct engines citing UPE in grounded nonbranded answers; direct URLs and grounding source-domain labels distinguished. Not recommendation rank. skipped_schedule is not a failure."
+    }
+  },
+  "site_inventory": {
+    "ok": true,
+    "service_pages": [
+      "why-uproduction-events-trust",
+      "אירוע-קונספט",
+      "אירועים-אקסלוסיביים",
+      "אירועים-עסקיים-מיוחדים",
+      "אירועים-קולינרים",
+      "ארגון-כנסים",
+      "הפקת-אירועי-חברה",
+      "הפקת-אירועי-חברה-בחול",
+      "הפקת-אירועים-לחברות-הייטק",
+      "הפקת-אירועים-עסקיים",
+      "הפקת-כנסים",
+      "חברת-הפקות",
+      "טיולי-חברה",
+      "טיולי-תמריץ-בחול",
+      "טיולי-תמריץ-לחברות",
+      "כנסים-לחברות-הייטק",
+      "כנסים-עסקיים",
+      "נופש-חברה",
+      "נופש-חברה-בחול",
+      "נופש-חברה-עם-חבילת-ספא-לעובדים",
+      "נופשים-וטיולי-תמריץ"
+    ],
+    "service_count": 21,
+    "key_pages": {
+      "llms.txt": true,
+      "llms-full.txt": true,
+      "faq": true,
+      "services_index": true,
+      "brand_hub_trust": true
+    },
+    "blog_article_count": 310,
+    "source": "github:alon3153/uproduction-astro"
+  }
+}

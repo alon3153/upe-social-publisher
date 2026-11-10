@@ -1,20 +1,20 @@
 {
-  "updated_at": "2026-11-09",
+  "updated_at": "2026-11-10",
   "scores": {
     "instagram": 10,
     "facebook": 10,
-    "tiktok": 20,
-    "linkedin": 25,
-    "youtube": 15,
+    "tiktok": 10,
+    "linkedin": 32,
+    "youtube": 12,
     "google_organic_geo": 38,
-    "overall": 52
+    "overall": 55
   },
   "recommendations": [
     {
       "category": "gated",
       "priority": "P0",
       "action_key": "salesforce-attribution-fix",
-      "owner": "מנהל מכירות/RevOps מכין; Alon מאשר ומפיץ",
+      "owner": "מנהל CRM מכין; Alon מאשר ומפיץ",
       "success_metric": "ייחוס לידים: בסיס לא-מיוחס; יעד המדד מקור אמיתי. יש להשוות תקופות תואמות.",
       "evidence": {
         "source": "scorecard",
@@ -26,7 +26,7 @@
       },
       "evidence_url": null,
       "target_url": null,
-      "action": "הפץ את טיוטת הנחיית ייחוס המקורות הקיימת (lead-source-guidance.md, status: draft_ready, לא הופצה) — הגדר כלל ברור: בדוק referrer + UTM ב-GA4 לפני שמירת רשומה; יישם תהליך ולידציה על רשומות 'Other' ו-'(none)' החדשות בלבד. שינוי תווית לא מוסיף לידים לספירה הכוללת.",
+      "action": "הפץ את טיוטת הנחיית ייחוס המקורות הקיימת (lead-source-guidance.md, status: draft_ready, לא הופצה) — הגדר כלל: בדוק referrer + UTM ב-GA4 לפני שמירת 'Other' או '(none)'; שינוי תווית לא מוסיף לידים לספירה",
       "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
       "channel": "leads",
       "status": "candidate",
@@ -34,9 +34,9 @@
     },
     {
       "category": "gated",
-      "priority": "P0",
+      "priority": "P1",
       "action_key": "top3-keyword-ranking-push",
-      "owner": "SEO drafts; Alon approves",
+      "owner": "SEO מכין טיוטה; Alon מאשר עדכון",
       "success_metric": "מונחי מעקב ב-Top-3: בסיס 1; יעד המדד 3. יש להשוות תקופות תואמות.",
       "evidence": {
         "source": "scorecard",
@@ -47,8 +47,8 @@
         "status": "❌"
       },
       "evidence_url": null,
-      "target_url": "https://upe.co.il/%D7%94%D7%A4%D7%A7%D7%AA-%D7%90%D7%99%D7%A8%D7%95%D7%A2%D7%99-%D7%97%D7%91%D7%A8%D7%94/",
-      "action": "בדוק update_required מתועד לדפי הזדמנות מחוץ ל-cooldown: הפקת-אירועי-חברה (pos 17.4, 385 impressions) ואירועים-לחברות (pos 18.3, 308 impressions); אם update_required=true וקיים גיליון פתוח — הכן טיוטת עדכון ממוקד (תשובה-ראשית, FAQ תואם כוונת קנייה) לאישור. אל תשכתב דפים בלי issue מתועד.",
+      "target_url": "https://upe.co.il/הפקת-אירועי-חברה/",
+      "action": "בדוק update_required מתועד לדפי הזדמנות מחוץ ל-cooldown (initiative 091d2112): הפקת-אירועי-חברה ואירועים-לחברות — אם update_required=true וקיים issue פתוח, הכן טיוטת עדכון ממוקד עם תשובה-ראשית ו-FAQ תואם כוונת קנייה; אל תשכתב דפים ב-cooldown (הפקת-כנסים, כנסים-לחברות-הייטק, boutique-vs-large — cooldown עד 2026-11-29)",
       "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
       "channel": "google_organic_geo",
       "status": "candidate",
@@ -56,23 +56,23 @@
     },
     {
       "category": "gated",
-      "priority": "P2",
-      "action_key": "tiktok-behind-scenes",
-      "owner": "צוות ייצור מפיק; Alon מאשר כל קליפ",
-      "success_metric": "נוכחות סושיאל (רצפה): בסיס 4.0; יעד המדד 5. יש להשוות תקופות תואמות.",
+      "priority": "P1",
+      "action_key": "linkedin-executive-posting",
+      "owner": "מנהל תוכן מכין טיוטות; מנהל בכיר ו-Alon מאשרים לפני פרסום",
+      "success_metric": "נוכחות סושיאל (רצפה): בסיס 3.0; יעד המדד 5. יש להשוות תקופות תואמות.",
       "evidence": {
         "source": "scorecard",
         "metric": "נוכחות סושיאל (רצפה)",
-        "value": 4.0,
+        "value": 3.0,
         "target": 5,
         "unit": "",
         "status": "❌"
       },
-      "evidence_url": null,
+      "evidence_url": "https://www.tiberius.co.nz/wiki/linkedin-organic-content-b2b-algorithm-strategy/",
       "target_url": null,
-      "action": "הפק 2-3 קליפים behind-the-scenes (60 שניות, vertical) מהפקה אמיתית קרובה — ללא תסריט, אותנטי; שתף גם ב-Instagram Reels לחיסכון בתפוקה. בסיס: תקופה קודמת — פוסט TikTok אחד = 10,588 חשיפות מדוד. כל קליפ ממתין לאישור לפני פרסום.",
+      "action": "המשך initiative d477123a: הכן טיוטות carousel document (PDF, 8-10 שקפים) + פוסט טקסט אחד לשבוע מפרופיל המנכ\"ל — תוכן: לקח מהפקה אמיתית עם נתון כמותי; אל תפרסם תוכן AI גנרי (LinkedIn algorithm 2026 מזהה ומעניש תוכן AI עד 47% פחות reach לפי tiberius.co.nz); כל פוסט ממתין לאישור מפורש",
       "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
-      "channel": "tiktok",
+      "channel": "linkedin",
       "status": "candidate",
       "detail": "הצעה לבדיקה על בסיס המדד המתועד; לא בוצע שינוי."
     }
