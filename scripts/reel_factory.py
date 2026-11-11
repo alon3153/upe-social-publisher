@@ -4,14 +4,15 @@ UPE Reel Factory - turns raw event footage in Dropbox into ready Instagram Reels
 and drops them into the existing approval gate. Alon only clicks Approve.
 
 Runs LOCALLY (needs the Dropbox archive), weekly via launchd:
-  1. pick N unused clips from Uproduction/pic/<year>/<event>/ (newest years first,
-     one clip per event, Philip Morris excluded - client policy)
-  2. extract 3 frames -> headless `claude -p` looks at them and writes a Hebrew
-     hook + caption in the shapes from state/ig_swipe.json (or rejects the clip)
-  3. render 1080x1920 (blur-pad if landscape), max 15s, hook burned on the first
-     3.5s (Pillow+raqm for correct RTL), original audio
-  4. upload mp4 to GitHub release `reels-auto`, write content/sofia/queue/<name>.json,
-     push, dispatch `sofia-approve.yml` -> approval email per reel
+  1. per event folder in Uproduction/pic/<year>/<event>/ (newest years first, Philip Morris
+     excluded - client policy): one mid frame from up to 10 unused clips
+  2. headless `claude -p` looks at the frames, picks 4-6 shots in story order + the opener frame,
+     writes Hebrew hook / captions / CTA / post caption in the shapes from state/ig_swipe.json
+  3. studio edit (reel_studio.py): beat-cut montage, grade, push-ins, transitions, kinetic Hebrew
+     captions, progress bar, end card, UPE music bed; Higgsfield Seedance cinematic opener from a
+     real frame of the event
+  4. host on fal (real video/mp4 content-type), Higgsfield Virality Predictor score in the email
+     subject, write content/sofia/queue/<name>.json to main, dispatch `sofia-approve.yml`
   5. Approve click -> existing `Publish Approved` cron publishes the Reel
 
 Usage:
@@ -26,13 +27,10 @@ ARCHIVE = os.path.expanduser(
 STATE = os.path.expanduser("~/.upe-jobs/reel_factory/state.json")
 OUTDIR = os.path.expanduser("~/.upe-jobs/reel_factory/out")
 SWIPE = os.path.join(ROOT, "state", "ig_swipe.json")
-FONT = "/Library/Fonts/Arial Unicode.ttf"
-RELEASE = "reels-auto"
 REPO = "alon3153/upe-social-publisher"
 YEARS = ["2026", "2025", "2024", "2023"]
 EXCLUDE = re.compile(r"פליפ|פיליפ|מוריס|philip|pmi|פמי", re.I)
 VIDEO = re.compile(r"\.(mp4|mov|m4v)$", re.I)
-MAX_SEC = 15.0
 CLAUDE = os.environ.get("CLAUDE_BIN", "claude")
 
 
@@ -52,9 +50,17 @@ def save_state(s):
     json.dump(s, open(STATE, "w"), ensure_ascii=False, indent=1)
 
 
+MUSIC_DIR = os.path.expanduser(
+    "~/Library/CloudStorage/Dropbox-UproductionEvents/Alon ouaknine/Uproduction Brand/מוזיקה/04 מוזיקה לסרטונים ומצגות")
+MUSIC_SKIP = re.compile(r"explainer|loop|candidate|battle", re.I)  # UPE-owned beds only, upbeat ones
+COMPOSIO = os.environ.get("COMPOSIO_BIN", os.path.expanduser("~/.composio/composio"))
+FAL_PY = os.path.expanduser("~/dev/claude-code-video-toolkit/.venv/bin/python")
+
+
 def candidates(state):
-    """One random unused clip per event folder, newest years first. Listing only - no hydration."""
+    """(event, [unused clips]) per event folder, newest years first. Listing only - no hydration."""
     skip = set(state["used"]) | set(state["rejected"])
+    done_events = set(state.get("events", []))
     out = []
     for y in YEARS:
         ydir = os.path.join(ARCHIVE, y)
@@ -63,113 +69,153 @@ def candidates(state):
         events = sorted(os.listdir(ydir))
         random.shuffle(events)
         for ev in events:
-            if EXCLUDE.search(ev):
+            if EXCLUDE.search(ev) or f"{y}/{ev}" in done_events:
                 continue
             clips = []
             for dp, _, fs in os.walk(os.path.join(ydir, ev)):
                 clips += [os.path.join(dp, f) for f in fs if VIDEO.search(f) and os.path.join(dp, f) not in skip]
-            if clips:
-                out.append((ev, random.choice(clips)))
+            if len(clips) >= 4:  # a montage needs at least 4 shots
+                random.shuffle(clips)
+                out.append((f"{y}/{ev}", ev, clips[:10]))
     return out
 
 
 def probe(path):
-    j = json.loads(sh(["ffprobe", "-v", "error", "-select_streams", "v:0", "-show_entries",
-                       "stream=width,height:stream_side_data=rotation:format=duration", "-of", "json", path]))
-    st = j["streams"][0]
-    w, h = st["width"], st["height"]
-    rot = abs(int(next((d.get("rotation", 0) for d in st.get("side_data_list", [])), 0)))
-    if rot in (90, 270):
-        w, h = h, w
-    return float(j["format"]["duration"]), w, h
+    return float(sh(["ffprobe", "-v", "error", "-show_entries", "format=duration", "-of", "csv=p=0", path]).strip())
 
 
-def frames(path, dur, work):
-    paths = []
-    for i, frac in enumerate((0.15, 0.5, 0.85)):
-        p = os.path.join(work, f"f{i}.jpg")
-        sh(["ffmpeg", "-y", "-v", "error", "-ss", f"{dur * frac:.2f}", "-i", path, "-frames:v", "1",
-            "-vf", "scale=540:-2", p])
-        paths.append(p)
-    return paths
+def contact_frames(clips, work):
+    """One mid frame per usable clip (>= 2.5 s)."""
+    keep = []
+    for c in clips:
+        try:
+            d = probe(c)
+        except Exception:
+            continue
+        if d < 2.5:
+            continue
+        p = os.path.join(work, f"k{len(keep)}.jpg")
+        sh(["ffmpeg", "-y", "-v", "error", "-ss", f"{d * 0.5:.2f}", "-i", c, "-frames:v", "1", "-vf", "scale=480:-2", p])
+        keep.append((c, p))
+    return keep
 
 
-def write_copy(event, frame_paths):
+def write_copy(event, shots):
     sw = json.load(open(SWIPE))
-    prompt = f"""You write Instagram Reels for Uproduction Events (UPE): Israeli B2B corporate events and
-incentive trips. Account @uproductionevents, Hebrew audience: HR, CEOs, sales managers.
+    listing = "\n".join(f"  [{i}] {p}" for i, (_, p) in enumerate(shots))
+    prompt = f"""You are the editor and copywriter of Instagram Reels for Uproduction Events (UPE): Israeli B2B
+corporate events and incentive trips. Account @uproductionevents, Hebrew audience: HR, CEOs, sales managers.
 
-Look at these 3 frames from ONE raw phone clip shot at a real UPE production: {', '.join(frame_paths)}
-Event folder name (client + destination): "{event}"
+Each image is the middle frame of one raw phone clip from the SAME real UPE production.
+Event folder (client + destination): "{event}"
+{listing}
 
 Hook shapes that win on Instagram right now (copy the SHAPE, never words):
 {chr(10).join('- ' + x for x in sw['winning_patterns'])}
 Never open with:
 {chr(10).join('- ' + x for x in sw['losing_patterns'])}
 
-Rules:
-- Reject the clip (usable=false) if it is blurry, dark, mostly empty, shows a screen/slide only,
-  shows a document, a passport, children close-up, or anything embarrassing for a client.
-- hook: natural spoken Hebrew, max 9 words, about what is actually visible. It is burned on screen.
-  No hashtags, no emoji, no company name, no year or date.
-- caption: Hebrew. Line 1 = a stronger version of the hook (must make sense before the "...more" cut).
-  Then 1-2 short lines of value for an HR/CEO reader. Then one soft ask (save / send to your HR /
-  comment). Then the line "📷 רגע אמיתי מהפקה של Uproduction · <place in Hebrew>". Then 4 hashtags
-  max (one of #נופשחברה #ימיגיבוש #אירועיחברה #כנסים + one destination tag).
-- Never invent numbers, prices, client quotes or names you cannot see. Client brand names from the
-  folder are allowed. Never mention a year or date.
-- place: the destination from the folder name, in Hebrew.
+Your job:
+1. pick: 4-6 clip indexes for a fast montage, in story order. Prefer people having fun, crowd energy,
+   wow venues, action. pick[0] MUST be the most energetic shot with people moving (it carries the
+   hook - Higgsfield scores it). Drop blurry/dark/empty frames, screens/slides, documents, passports,
+   close-ups of children, anything embarrassing for a client. If fewer than 4 are good: usable=false.
+2. opener: index of the single most cinematic frame (wide, beautiful, no close faces) - an AI camera
+   move will be made from it.
+3. hook: natural spoken Hebrew, max 8 words, about what is visible. Burned on screen. No hashtags,
+   no emoji, no company name, no year or date.
+4. captions: 3 punchy Hebrew on-screen words/short phrases (1-3 words each) that build the story.
+5. cta: end-card line, Hebrew, max 7 words, inviting the HR/CEO viewer to message us.
+6. caption: Hebrew post text. Line 1 = stronger version of the hook (works before "...more").
+   1-2 short value lines for an HR/CEO reader. One soft ask (save / send to your HR / comment).
+   Then "📷 רגע אמיתי מהפקה של Uproduction · <place>". Then max 4 hashtags
+   (one of #נופשחברה #ימיגיבוש #אירועיחברה #כנסים + one destination tag).
+7. opener_prompt: English, one sentence: the camera move for the opener (drone push-in, slow orbit,
+   rising crane...). The scene and people must stay exactly as in the frame.
+Never invent numbers, prices, quotes or names you cannot see. Client names from the folder are OK.
 
-Return ONLY JSON: {{"usable": true|false, "reason": "...", "hook": "...", "caption": "...", "place": "..."}}"""
+Return ONLY JSON: {{"usable": true|false, "reason": "...", "pick": [..], "opener": 0, "hook": "...",
+"captions": ["..",".."], "cta": "...", "caption": "...", "place": "...", "opener_prompt": "..."}}"""
     out = subprocess.run([CLAUDE, "-p", "--allowedTools=Read", "--output-format", "text", prompt],
-                         capture_output=True, text=True, timeout=300).stdout
+                         capture_output=True, text=True, timeout=600).stdout
     m = re.search(r"\{.*\}", out, re.S)
-    if not m:  # infra failure (login, quota) - abort the run, never blame the clip
+    if not m:  # infra failure (login, quota) - abort the run, never blame the clips
         raise SystemExit(f"reel_factory: claude CLI gave no JSON, aborting: {out.strip()[:200]}")
     return json.loads(m.group(0))
 
 
-def hook_png(text, path):
-    from PIL import Image, ImageDraw, ImageFont  # raqm layout shapes RTL - no python-bidi pass
-    W, pad = 1080, 40
-    font = ImageFont.truetype(FONT, 74, layout_engine=ImageFont.Layout.RAQM)
-    words, lines, cur = text.split(), [], ""
-    d = ImageDraw.Draw(Image.new("RGBA", (W, 10)))
-    for w in words:  # greedy wrap, RTL word order preserved by raqm per line
-        t = (cur + " " + w).strip()
-        if d.textlength(t, font=font, direction="rtl", language="he") > W - 2 * pad - 60 and cur:
-            lines.append(cur); cur = w
-        else:
-            cur = t
-    lines.append(cur)
-    lh = 96
-    img = Image.new("RGBA", (W, lh * len(lines) + 2 * pad), (0, 0, 0, 0))
-    d = ImageDraw.Draw(img)
-    d.rounded_rectangle((30, 0, W - 30, img.height), radius=28, fill=(17, 17, 17, 205))
-    for i, ln in enumerate(lines):
-        d.text((W // 2, pad + i * lh + lh // 2), ln, font=font, fill=(240, 192, 64, 255),
-               anchor="mm", direction="rtl", language="he")
-    img.save(path)
-    return img.height
+# ---------- hosting + Higgsfield (via Composio) ----------
+
+def fal_upload(path):
+    """Public URL with a real content-type (GitHub release assets are octet-stream; IG/Higgsfield reject them)."""
+    code = ("import os,sys,fal_client;os.environ.setdefault('FAL_KEY',open(os.path.expanduser('~/.upe_fal_key'))"
+            ".read().strip());print(fal_client.upload_file(sys.argv[1]))")
+    return sh([FAL_PY, "-c", code, path]).strip().splitlines()[-1]
 
 
-def render(src, dur, w, h, hook, out, work):
-    png = os.path.join(work, "hook.png")
-    ph = hook_png(hook, png)
-    length = min(dur, MAX_SEC)
-    start = 0.0 if dur <= MAX_SEC else min(2.0, dur - MAX_SEC)
-    if h / w >= 1.7:   # already vertical
-        base = "[0:v]scale=1080:1920:force_original_aspect_ratio=increase,crop=1080:1920,setsar=1[bg]"
-    else:              # blur-pad landscape/square so nothing is cropped
-        base = ("[0:v]split[a][b];[a]scale=1080:1920:force_original_aspect_ratio=increase,crop=1080:1920,"
-                "boxblur=30:3[bgb];[b]scale=1080:-2[fg];[bgb][fg]overlay=(W-w)/2:(H-h)/2,setsar=1[bg]")
-    y = int(1920 * 0.18)
-    fc = f"{base};[bg][1:v]overlay=0:{y}:enable='lte(t,3.5)'[v]"
-    sh(["ffmpeg", "-y", "-v", "error", "-ss", f"{start:.2f}", "-t", f"{length:.2f}", "-i", src, "-i", png,
-        "-filter_complex", fc, "-map", "[v]", "-map", "0:a?", "-c:v", "libx264", "-preset", "medium",
-        "-crf", "21", "-pix_fmt", "yuv420p", "-r", "30", "-c:a", "aac", "-b:a", "128k", "-ar", "44100",
-        "-movflags", "+faststart", out])
-    return ph
+def hf(tool, data, timeout=900):
+    r = subprocess.run([COMPOSIO, "execute", tool, "-d", json.dumps(data)], capture_output=True, text=True,
+                       timeout=timeout)
+    j = json.loads(r.stdout[r.stdout.index("{"):])
+    if not j.get("successful"):
+        raise RuntimeError(f"{tool}: {str(j.get('error'))[:200]}")
+    return j["data"]
+
+
+def hf_wait(job_id, tries=40):
+    for _ in range(tries):
+        d = hf("HIGGSFIELD_MCP_JOB_STATUS", {"jobId": job_id, "sync": True})
+        s = json.dumps(d)
+        st = re.search(r'"status": ?"(\w+)"', s)
+        if st and st.group(1) == "completed":
+            return d
+        if st and st.group(1) in ("failed", "nsfw", "cancelled"):
+            raise RuntimeError(f"higgsfield job {job_id} {st.group(1)}")
+    raise RuntimeError(f"higgsfield job {job_id} timeout")
+
+
+def hf_import(url, kind):
+    return re.search(r'"media_id": ?"([^"]+)"', json.dumps(hf("HIGGSFIELD_MCP_MEDIA_IMPORT_URL",
+                                                               {"url": url, "type": kind}))).group(1)
+
+
+def ai_opener(clip, prompt, work):
+    """Real frame from the event -> Seedance 2.0 4 s camera move. Returns local mp4 or None."""
+    try:
+        d = probe(clip)
+        fr = os.path.join(work, "opener.jpg")
+        sh(["ffmpeg", "-y", "-v", "error", "-ss", f"{d * 0.5:.2f}", "-i", clip, "-frames:v", "1", "-q:v", "2", fr])
+        mid = hf_import(fal_upload(fr), "image")
+        job = hf("HIGGSFIELD_MCP_GENERATE_VIDEO", {"params": {
+            "model": "seedance_2_0", "duration": 4, "resolution": "1080p", "mode": "std", "aspect_ratio": "9:16",
+            "generate_audio": False, "medias": [{"role": "start_image", "value": mid}],
+            "prompt": prompt + " Keep the scene and people exactly as in the image; only the camera moves. "
+                               "Premium travel-commercial look."}})
+        jid = job["results"][0]["id"]
+        raw = re.search(r'"rawUrl": ?"([^"]+)"', json.dumps(hf_wait(jid))).group(1)
+        src, out = os.path.join(work, "opener_raw.mp4"), os.path.join(work, "opener.mp4")
+        sh(["curl", "-sL", "-o", src, raw])
+        sh(["ffmpeg", "-y", "-v", "error", "-i", src, "-vf",
+            "scale=1080:1920:force_original_aspect_ratio=increase,crop=1080:1920,fps=30,format=yuv420p",
+            "-an", "-c:v", "libx264", "-crf", "18", "-preset", "veryfast", out])
+        return out
+    except Exception as e:
+        print(f"  opener skipped: {e}")
+        return None
+
+
+def virality(url):
+    """Higgsfield Virality Predictor score (0-100) or None."""
+    try:
+        mid = hf_import(url, "video")
+        d = hf("HIGGSFIELD_MCP_VIRALITY_PREDICTOR", {"action": "create", "params": {
+            "model": "virality_predictor", "medias": [{"role": "video", "id": mid}]}})
+        s = json.dumps(hf_wait(d["job_id"], tries=80))
+        m = re.search(r'"overall_score": ?([0-9.]+)', s)
+        return round(float(m.group(1))) if m else None
+    except Exception as e:
+        print(f"  virality skipped: {e}")
+        return None
 
 
 def slots(n):
@@ -183,47 +229,62 @@ def slots(n):
 
 
 def main():
+    import reel_studio
     ap = argparse.ArgumentParser()
     ap.add_argument("--count", type=int, default=3)
     ap.add_argument("--dry-run", action="store_true")
+    ap.add_argument("--no-opener", action="store_true")
     a = ap.parse_args()
     state = load_state()
+    state.setdefault("events", [])
     os.makedirs(OUTDIR, exist_ok=True)
+    tracks = sorted(os.path.join(MUSIC_DIR, f) for f in os.listdir(MUSIC_DIR)
+                    if re.search(r"\.(mp3|wav|m4a)$", f, re.I) and not MUSIC_SKIP.search(f))
     made = []
-    for event, clip in candidates(state):
+    for key, event, clips in candidates(state):
         if len(made) >= a.count:
             break
         with tempfile.TemporaryDirectory() as work:
             try:
-                dur, w, h = probe(clip)
-                if dur < 4:
-                    state["rejected"].append(clip); continue
-                copy = write_copy(event, frames(clip, dur, work))
-                if not copy.get("usable"):
+                shots = contact_frames(clips, work)
+                if len(shots) < 4:
+                    state["events"].append(key); continue
+                copy = write_copy(event, shots)
+                if not copy.get("usable") or len(copy.get("pick", [])) < 4:
                     print(f"skip {event}: {copy.get('reason')}")
-                    state["rejected"].append(clip); continue
+                    state["events"].append(key); continue
+                picked = [shots[i][0] for i in copy["pick"] if 0 <= i < len(shots)][:6]
+                opener = None if a.no_opener else ai_opener(shots[copy.get("opener", 0)][0],
+                                                             copy.get("opener_prompt", "Slow cinematic drone push-in."),
+                                                             work)
+                music = tracks[(state["seq"]) % len(tracks)]
                 state["seq"] += 1
                 name = f"upe-reel-{dt.date.today():%Y%m%d}-{state['seq']:04d}.mp4"
                 out = os.path.join(OUTDIR, name)
-                render(clip, dur, w, h, copy["hook"], out, work)
-            except Exception as e:  # one bad clip must not kill the batch
+                info = reel_studio.build(picked, music, copy["hook"], copy.get("captions", []),
+                                         copy.get("cta", "רוצים כזה לחברה שלכם? שלחו הודעה"), out, work, opener)
+            except SystemExit:
+                raise
+            except Exception as e:  # one bad event must not kill the batch
                 print(f"error {event}: {e}")
-                state["rejected"].append(clip); continue
-        state["used"].append(clip)
-        made.append({"name": name, "file": out, "event": event, "clip": clip, **copy})
-        print(f"made {name}: {copy['hook']}")
+                state["events"].append(key); continue
+        state["used"] += picked
+        state["events"].append(key)
+        made.append({"name": name, "file": out, "event": event, "music": os.path.basename(music), **info, **copy})
+        print(f"made {name}: {copy['hook']} ({info['duration']}s, {info['shots']} shots, opener={'yes' if opener else 'no'})")
         save_state(state)
     save_state(state)
     if a.dry_run or not made:
         print(json.dumps(made, ensure_ascii=False, indent=1)); return 0
 
-    if subprocess.run(["gh", "release", "view", RELEASE, "-R", REPO], capture_output=True).returncode:
-        sh(["gh", "release", "create", RELEASE, "-R", REPO, "--title", "Reel factory assets",
-            "--notes", "Auto-rendered reels. Do not delete: approved posts reference these URLs."])
-    sh(["gh", "release", "upload", RELEASE, "-R", REPO, "--clobber"] + [m["file"] for m in made])
+    for m in made:
+        m["url"] = fal_upload(m["file"])
+        m["score"] = virality(m["url"])
+        print(f"{m['name']}: {m['url']}  virality={m['score']}")
     qname = f"reels-{dt.date.today():%Y%m%d}-{state['seq']:04d}"
-    queue = [{"id": m["name"][:-4], "headline": m["hook"], "caption": m["caption"],
-              "video_url": f"https://github.com/{REPO}/releases/download/{RELEASE}/{m['name']}",
+    queue = [{"id": m["name"][:-4],
+              "headline": (f"[{m['score']}/100] " if m.get("score") is not None else "") + m["hook"],
+              "caption": m["caption"], "video_url": m["url"],
               "accounts": ["uproductionevents"], "scheduled_date": s, "day": 80000 + int(m["name"][-8:-4]),
               "kind": "reel_factory", "source_event": m["event"]}
              for m, s in zip(made, slots(len(made)))]
