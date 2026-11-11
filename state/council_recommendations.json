@@ -1,13 +1,13 @@
 {
-  "updated_at": "2026-11-10",
+  "updated_at": "2026-11-11",
   "scores": {
-    "instagram": 10,
-    "facebook": 10,
+    "instagram": 22,
+    "facebook": 35,
     "tiktok": 10,
-    "linkedin": 32,
-    "youtube": 12,
+    "linkedin": 20,
+    "youtube": 10,
     "google_organic_geo": 38,
-    "overall": 55
+    "overall": 62
   },
   "recommendations": [
     {
@@ -26,7 +26,7 @@
       },
       "evidence_url": null,
       "target_url": null,
-      "action": "הפץ את טיוטת הנחיית ייחוס המקורות הקיימת (lead-source-guidance.md, status: draft_ready, לא הופצה) — הגדר כלל: בדוק referrer + UTM ב-GA4 לפני שמירת 'Other' או '(none)'; שינוי תווית לא מוסיף לידים לספירה",
+      "action": "הפץ את טיוטת הנחיית lead-source-guidance.md (status: draft_ready, לא הופצה) — הגדר כלל: בדוק referrer + UTM ב-GA4 לפני שמירת 'Other' או '(none)'; שינוי תווית אינו מוסיף לידים לספירה.",
       "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
       "channel": "leads",
       "status": "candidate",
@@ -34,9 +34,9 @@
     },
     {
       "category": "gated",
-      "priority": "P1",
+      "priority": "P0",
       "action_key": "top3-keyword-ranking-push",
-      "owner": "SEO מכין טיוטה; Alon מאשר עדכון",
+      "owner": "SEO drafts; Alon approves before publish",
       "success_metric": "מונחי מעקב ב-Top-3: בסיס 1; יעד המדד 3. יש להשוות תקופות תואמות.",
       "evidence": {
         "source": "scorecard",
@@ -47,8 +47,8 @@
         "status": "❌"
       },
       "evidence_url": null,
-      "target_url": "https://upe.co.il/הפקת-אירועי-חברה/",
-      "action": "בדוק update_required מתועד לדפי הזדמנות מחוץ ל-cooldown (initiative 091d2112): הפקת-אירועי-חברה ואירועים-לחברות — אם update_required=true וקיים issue פתוח, הכן טיוטת עדכון ממוקד עם תשובה-ראשית ו-FAQ תואם כוונת קנייה; אל תשכתב דפים ב-cooldown (הפקת-כנסים, כנסים-לחברות-הייטק, boutique-vs-large — cooldown עד 2026-11-29)",
+      "target_url": "https://upe.co.il/הפקת-כנסים/",
+      "action": "לאחר יציאת cooldown (2026-11-29): בדוק update_required מתועד ל-/הפקת-כנסים/ ו-/הפקת-אירועי-חברה/; אם update_required=true — הכן טיוטת עדכון ממוקד עם תשובה-ראשית (answer-first) ו-FAQ תואם כוונת קנייה, לאישור Alon לפני פרסום. אל תשכתב ללא issue מתועד.",
       "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
       "channel": "google_organic_geo",
       "status": "candidate",
@@ -58,19 +58,19 @@
       "category": "gated",
       "priority": "P1",
       "action_key": "linkedin-executive-posting",
-      "owner": "מנהל תוכן מכין טיוטות; מנהל בכיר ו-Alon מאשרים לפני פרסום",
-      "success_metric": "נוכחות סושיאל (רצפה): בסיס 3.0; יעד המדד 5. יש להשוות תקופות תואמות.",
+      "owner": "תוכן מכין (טיוטות); מנכ\"ל/מנהל בכיר מאשר ומפרסם",
+      "success_metric": "נוכחות סושיאל (רצפה): בסיס 6.0; יעד המדד 5. יש להשוות תקופות תואמות.",
       "evidence": {
         "source": "scorecard",
         "metric": "נוכחות סושיאל (רצפה)",
-        "value": 3.0,
+        "value": 6.0,
         "target": 5,
         "unit": "",
-        "status": "❌"
+        "status": "✅"
       },
       "evidence_url": "https://www.tiberius.co.nz/wiki/linkedin-organic-content-b2b-algorithm-strategy/",
       "target_url": null,
-      "action": "המשך initiative d477123a: הכן טיוטות carousel document (PDF, 8-10 שקפים) + פוסט טקסט אחד לשבוע מפרופיל המנכ\"ל — תוכן: לקח מהפקה אמיתית עם נתון כמותי; אל תפרסם תוכן AI גנרי (LinkedIn algorithm 2026 מזהה ומעניש תוכן AI עד 47% פחות reach לפי tiberius.co.nz); כל פוסט ממתין לאישור מפורש",
+      "action": "הפעל initiative d477123a: הכן 2 טיוטות carousel קצרות (8 שקפים, PDF) מפרופיל מנכ\"ל — נושא ראשון: תובנה מפרויקט אמיתי עם נתון ממשי; נושא שני: השוואת boutique vs. large agency (מנצל תוכן קיים). ללא קישור חיצוני בגוף הפוסט. כל פוסט ממתין לאישור מפורש.",
       "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
       "channel": "linkedin",
       "status": "candidate",

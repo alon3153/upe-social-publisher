@@ -1,40 +1,74 @@
 {
-  "updated_at": "2026-11-10",
+  "updated_at": "2026-11-11",
   "source": "daily-council",
   "directives": [
     {
       "category": "safe_auto",
-      "action": "הכן רשימת 5 פרומפטים מסחריים ב-ChatGPT ו-Gemini (עברית + אנגלית) לבדיקה ידנית חודשית: 'best corporate event production Israel', 'incentive travel company Israel', 'הפקת כנסים לחברות', 'מי מפיק ערבי גאלה בישראל', 'boutique MICE company Israel' — תעד ציטוטים ב-GA4 UTM",
+      "action": "ניסוי LinkedIn: carousel PDF (8-10 שקפים) מנקודת-מבט מנהל — 'מה שלמדנו מהפקה של 500 אנשים בחו\"ל' — ללא קישור חיצוני בגוף הפוסט (קישור בתגובה ראשונה בלבד)",
+      "detail": "הצעה לבדיקה על בסיס המדד המתועד; לא בוצע שינוי.",
+      "channel": "linkedin",
+      "evidence": {
+        "source": "scorecard",
+        "metric": "נוכחות סושיאל (רצפה)",
+        "value": 6.0,
+        "target": 5,
+        "unit": "",
+        "status": "✅"
+      },
+      "status": "candidate",
+      "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
+      "success_metric": "נוכחות סושיאל (רצפה): בסיס 6.0; יעד המדד 5. יש להשוות תקופות תואמות."
+    },
+    {
+      "category": "safe_auto",
+      "action": "ניסוי hashtag LinkedIn: הצמד 3-5 תגיות ספציפיות (#MICE #IncentiveTravel #CorporateEvents) — בדוק reach בפוסט הבא מול פוסט ללא תגיות",
+      "detail": "הצעה לבדיקה על בסיס המדד המתועד; לא בוצע שינוי.",
+      "channel": "linkedin",
+      "evidence": {
+        "source": "scorecard",
+        "metric": "נוכחות סושיאל (רצפה)",
+        "value": 6.0,
+        "target": 5,
+        "unit": "",
+        "status": "✅"
+      },
+      "status": "candidate",
+      "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
+      "success_metric": "נוכחות סושיאל (רצפה): בסיס 6.0; יעד המדד 5. יש להשוות תקופות תואמות."
+    },
+    {
+      "category": "safe_auto",
+      "action": "הכן זווית תוכן Instagram לניסוי: 'יום הגעה = יום תוכנית' — פוסט עם תמונה אמיתית מהפקה (לא גרפיקה) + כיתוב קצר בעברית/אנגלית; מדוד impressions ואינטראקציות מול הפוסט הנוכחי (20 impressions, 0 אינטראקציות)",
+      "detail": "הצעה לבדיקה על בסיס המדד המתועד; לא בוצע שינוי.",
+      "channel": "instagram",
+      "evidence": {
+        "source": "scorecard",
+        "metric": "נוכחות סושיאל (רצפה)",
+        "value": 6.0,
+        "target": 5,
+        "unit": "",
+        "status": "✅"
+      },
+      "status": "candidate",
+      "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
+      "success_metric": "נוכחות סושיאל (רצפה): בסיס 6.0; יעד המדד 5. יש להשוות תקופות תואמות."
+    },
+    {
+      "category": "safe_auto",
+      "action": "הכן שאלת בחינה ל-ChatGPT Search: 'best corporate event production company for incentive travel from Israel' — רשום האם UPE מוזכר ובאיזה הקשר; תעד את התוצאה לצוות AEO",
       "detail": "הצעה לבדיקה על בסיס המדד המתועד; לא בוצע שינוי.",
       "channel": "google_organic_geo",
       "evidence": {
         "source": "scorecard",
         "metric": "מנועי AI שנבדקו (לא אזכורים)",
         "value": 1,
-        "target": 3,
+        "target": 2,
         "unit": "",
         "status": "❌"
       },
       "status": "candidate",
       "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
-      "success_metric": "מנועי AI שנבדקו (לא אזכורים): בסיס 1; יעד המדד 3. יש להשוות תקופות תואמות."
-    },
-    {
-      "category": "safe_auto",
-      "action": "הכן אסטרטגיית hashtag ל-LinkedIn: 3-5 תגיות ספציפיות (#HRIsrael #MICE #הפקתאירועים #CorporateEvents #IncentiveTravel) — בדוק reach לעומת פוסטים ללא תגיות ב-14 הימים הקרובים",
-      "detail": "הצעה לבדיקה על בסיס המדד המתועד; לא בוצע שינוי.",
-      "channel": "linkedin",
-      "evidence": {
-        "source": "scorecard",
-        "metric": "נוכחות סושיאל (רצפה)",
-        "value": 3.0,
-        "target": 5,
-        "unit": "",
-        "status": "❌"
-      },
-      "status": "candidate",
-      "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
-      "success_metric": "נוכחות סושיאל (רצפה): בסיס 3.0; יעד המדד 5. יש להשוות תקופות תואמות."
+      "success_metric": "מנועי AI שנבדקו (לא אזכורים): בסיס 1; יעד המדד 2. יש להשוות תקופות תואמות."
     }
   ],
   "channel_cadence": {
@@ -43,7 +77,7 @@
       "reason": "מכסה מוצעת לבדיקה בתקופת המדידה; אין מסקנה סיבתית על אלגוריתם."
     },
     "instagram": {
-      "max_posts_per_week": 3,
+      "max_posts_per_week": 2,
       "reason": "מכסה מוצעת לבדיקה בתקופת המדידה; אין מסקנה סיבתית על אלגוריתם."
     },
     "linkedin": {
@@ -60,11 +94,11 @@
     }
   },
   "channel_priority": [
-    "linkedin",
-    "youtube",
     "facebook",
     "instagram",
-    "tiktok"
+    "linkedin",
+    "tiktok",
+    "youtube"
   ],
   "channel_plan_basis": [
     "facebook: מכסה מוצעת לבדיקה בתקופת המדידה; אין מסקנה סיבתית על אלגוריתם.",
