@@ -18963,8 +18963,8 @@
     "channel": "linkedin",
     "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
     "action_key": "linkedin-executive-posting",
-    "owner": "מנהל תוכן מכין טיוטות; מנהל בכיר ו-Alon מאשרים לפני פרסום",
-    "success_metric": "נוכחות סושיאל (רצפה): בסיס 3.0; יעד המדד 5. יש להשוות תקופות תואמות.",
+    "owner": "תוכן מכין (טיוטות); מנכ\"ל/מנהל בכיר מאשר ומפרסם",
+    "success_metric": "נוכחות סושיאל (רצפה): בסיס 6.0; יעד המדד 5. יש להשוות תקופות תואמות.",
     "consecutive_failures": 0,
     "merged_from": [
       {
@@ -19172,11 +19172,11 @@
     "created": "2026-11-09",
     "updated": "2026-11-10",
     "kind": "recommendation",
-    "priority": "P1",
+    "priority": "P0",
     "channel": "google_organic_geo",
     "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
     "action_key": "top3-keyword-ranking-push",
-    "owner": "SEO מכין טיוטה; Alon מאשר עדכון",
+    "owner": "SEO drafts; Alon approves before publish",
     "success_metric": "מונחי מעקב ב-Top-3: בסיס 1; יעד המדד 3. יש להשוות תקופות תואמות.",
     "consecutive_failures": 0
   }
