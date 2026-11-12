@@ -69,6 +69,8 @@ def _trends(history, scorecard):
             "avg7_mention_days": mention["days"],
             "avg7_product_search": prominence["average"],
             "avg7_product_search_days": prominence["days"],
+            # last real measurement + the run of failures after it (any battery)
+            **aeo_probe.measurement_gap(history, model, end),
         }
     return trends
 

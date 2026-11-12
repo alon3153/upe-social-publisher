@@ -195,6 +195,9 @@ def outreach_targets(scorecard, top=15):
 def append_history(scorecard, path):
     p = Path(path)
     data = json.loads(p.read_text()) if p.exists() else []
+    # Re-redact the rows already on disk too: rows written before the redaction
+    # patterns existed (04.11.2026) still carried a key inside an error URL.
+    data = redact_obj(data)
     data.append(redact_obj(scorecard))  # never persist a key echoed in an error string
     p.write_text(json.dumps(data, ensure_ascii=False, indent=2), encoding="utf-8")
 
@@ -311,3 +314,49 @@ def last_ran(history, model, before_date):
         if found_date is None or stamp > found_date:
             found, found_date, found_battery = block, stamp, row.get("battery_version")
     return found, (found_date.isoformat() if found_date else None), found_battery
+
+
+def measurement_gap(history, model, on_date):
+    """Since when has `model` produced no measurement?
+
+    "Not scheduled" on an off day is true and still hides an outage: ChatGPT read
+    "not scheduled" on 12.11.2026 while every scheduled run since 26.10 had failed.
+    This reports the last real measurement and the run of failures after it.
+
+    A failed run is a history day after the last measurement, up to `on_date`,
+    on which the model was not skipped by schedule and produced no measurement.
+    Scheduled skips are neither a measurement nor a failure.
+    """
+    empty = {"last_measured_date": None, "last_mention_rate_nonbranded": None,
+             "last_product_search": None, "failed_since": None, "failed_runs": 0}
+    try:
+        end = _as_date(on_date)
+    except (TypeError, ValueError):
+        return empty
+    measured, failed = {}, set()
+    for row in history or []:
+        if not isinstance(row, dict):
+            continue
+        try:
+            stamp = _as_date(row.get("date"))
+        except (TypeError, ValueError):
+            continue
+        if stamp > end:
+            continue
+        block = (row.get("models") or {}).get(model)
+        if model_ran(block):
+            measured[stamp] = block
+        elif not is_skipped_schedule(block):
+            failed.add(stamp)
+    failed -= set(measured)  # a re-run that succeeded the same day wins
+    last = max(measured) if measured else None
+    after = sorted(d for d in failed if last is None or d > last)
+    out = dict(empty)
+    if last is not None:
+        out["last_measured_date"] = last.isoformat()
+        out["last_mention_rate_nonbranded"] = measured[last].get("mention_rate_nonbranded")
+        out["last_product_search"] = measured[last].get("product_search")
+    if after:
+        out["failed_since"] = after[0].isoformat()
+        out["failed_runs"] = len(after)
+    return out
