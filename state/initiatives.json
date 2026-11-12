@@ -18802,7 +18802,7 @@
     "channel": "leads",
     "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
     "action_key": "salesforce-attribution-fix",
-    "owner": "מנהל CRM מכין; Alon מאשר ומפיץ",
+    "owner": "מנהל מכירות מוציא לפועל; Alon מאשר",
     "success_metric": "ייחוס לידים: בסיס לא-מיוחס; יעד המדד מקור אמיתי. יש להשוות תקופות תואמות."
   },
   "2769e4c7": {
@@ -18963,8 +18963,8 @@
     "channel": "linkedin",
     "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
     "action_key": "linkedin-executive-posting",
-    "owner": "תוכן מכין (טיוטות); מנכ\"ל/מנהל בכיר מאשר ומפרסם",
-    "success_metric": "נוכחות סושיאל (רצפה): בסיס 6.0; יעד המדד 5. יש להשוות תקופות תואמות.",
+    "owner": "מנהל תוכן מכין טיוטות; מנכ\"ל מאשר ומפרסם",
+    "success_metric": "נוכחות סושיאל (רצפה): בסיס 8.0; יעד המדד 5. יש להשוות תקופות תואמות.",
     "consecutive_failures": 0,
     "merged_from": [
       {
@@ -19030,8 +19030,8 @@
     "channel": "tiktok",
     "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
     "action_key": "tiktok-behind-scenes",
-    "owner": "צוות ייצור מפיק; Alon מאשר כל קליפ",
-    "success_metric": "נוכחות סושיאל (רצפה): בסיס 4.0; יעד המדד 5. יש להשוות תקופות תואמות.",
+    "owner": "מפיק תוכן מצלם; Alon מאשר לפני פרסום",
+    "success_metric": "נוכחות סושיאל (רצפה): בסיס 8.0; יעד המדד 5. יש להשוות תקופות תואמות.",
     "consecutive_failures": 0,
     "merged_from": [
       {
@@ -19178,6 +19178,29 @@
     "action_key": "top3-keyword-ranking-push",
     "owner": "SEO drafts; Alon approves before publish",
     "success_metric": "מונחי מעקב ב-Top-3: בסיס 1; יעד המדד 3. יש להשוות תקופות תואמות.",
+    "consecutive_failures": 0
+  },
+  "1a8a9cc9": {
+    "id": "1a8a9cc9",
+    "title": "הרץ סט קבוע של 10 שאלות קונים (כגון: 'best incentive travel company Israel', 'מי מפיק כנסים לחברות הייטק') ב-ChatGPT (web search פעיל) וב-Gemini — רשום תוצאות בגיליון שבועי. אם UPE לא מצוטטת, זהה את הדומיין שכן מצוטט ובחן מה שונה במבנה התוכן שלו לפי מסגרת GEO.",
+    "status": "awaiting_approval",
+    "revisions": 1,
+    "history": [
+      {
+        "date": "2026-11-12",
+        "summary": "נוצר פרוטוקול GEO מלא ומוכן לשימוש: 10 שאלות קונים קבועות, גיליון מעקב שבועי עם לשוניות מדידה והיסטוריה, Competitor GEO Audit Checklist על בסיס מסגרת 2026, SOP ריצה, Scoring Matrix וטמפלט דוח שבועי לאלון.",
+        "ready": true
+      }
+    ],
+    "created": "2026-11-12",
+    "updated": "2026-11-12",
+    "kind": "recommendation",
+    "priority": "P0",
+    "channel": "google_organic_geo",
+    "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
+    "action_key": "aeo-engine-coverage-expansion",
+    "owner": "SEO/Content lead מוציא לפועל; Alon מאשר",
+    "success_metric": "מנועי AI שנבדקו (לא אזכורים): בסיס 1; יעד המדד 3. יש להשוות תקופות תואמות.",
     "consecutive_failures": 0
   }
 }
