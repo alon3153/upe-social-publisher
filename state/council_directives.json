@@ -1,74 +1,74 @@
 {
-  "updated_at": "2026-11-11",
+  "updated_at": "2026-11-12",
   "source": "daily-council",
   "directives": [
     {
       "category": "safe_auto",
-      "action": "ניסוי LinkedIn: carousel PDF (8-10 שקפים) מנקודת-מבט מנהל — 'מה שלמדנו מהפקה של 500 אנשים בחו\"ל' — ללא קישור חיצוני בגוף הפוסט (קישור בתגובה ראשונה בלבד)",
+      "action": "ניסוי TikTok: מדוד האם Hook ב-3 השניות הראשונות משפיע על שיעור צפייה מלאה — השווה בין 2 קליפים שמתחילים בשאלה ישירה לבין 2 שמתחילים בסצנה ויזואלית, וקבל 4 תוצאות לפני שבוחרים מבנה קבוע",
+      "detail": "הצעה לבדיקה על בסיס המדד המתועד; לא בוצע שינוי.",
+      "channel": "tiktok",
+      "evidence": {
+        "source": "scorecard",
+        "metric": "נוכחות סושיאל (רצפה)",
+        "value": 8.0,
+        "target": 5,
+        "unit": "",
+        "status": "✅"
+      },
+      "status": "candidate",
+      "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
+      "success_metric": "נוכחות סושיאל (רצפה): בסיס 8.0; יעד המדד 5. יש להשוות תקופות תואמות."
+    },
+    {
+      "category": "safe_auto",
+      "action": "ניסוי LinkedIn: בדוק האם פוסט וידאו קצר (60 שניות, talking-head מנהל) מקבל יחס אינטראקציות גבוה יותר מפוסט טקסט — פרסם גרסת טקסט ב-שבוע A וגרסת וידאו ב-שבוע B, מדוד impressions ואינטראקציות",
       "detail": "הצעה לבדיקה על בסיס המדד המתועד; לא בוצע שינוי.",
       "channel": "linkedin",
       "evidence": {
         "source": "scorecard",
         "metric": "נוכחות סושיאל (רצפה)",
-        "value": 6.0,
+        "value": 8.0,
         "target": 5,
         "unit": "",
         "status": "✅"
       },
       "status": "candidate",
       "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
-      "success_metric": "נוכחות סושיאל (רצפה): בסיס 6.0; יעד המדד 5. יש להשוות תקופות תואמות."
+      "success_metric": "נוכחות סושיאל (רצפה): בסיס 8.0; יעד המדד 5. יש להשוות תקופות תואמות."
     },
     {
       "category": "safe_auto",
-      "action": "ניסוי hashtag LinkedIn: הצמד 3-5 תגיות ספציפיות (#MICE #IncentiveTravel #CorporateEvents) — בדוק reach בפוסט הבא מול פוסט ללא תגיות",
-      "detail": "הצעה לבדיקה על בסיס המדד המתועד; לא בוצע שינוי.",
-      "channel": "linkedin",
-      "evidence": {
-        "source": "scorecard",
-        "metric": "נוכחות סושיאל (רצפה)",
-        "value": 6.0,
-        "target": 5,
-        "unit": "",
-        "status": "✅"
-      },
-      "status": "candidate",
-      "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
-      "success_metric": "נוכחות סושיאל (רצפה): בסיס 6.0; יעד המדד 5. יש להשוות תקופות תואמות."
-    },
-    {
-      "category": "safe_auto",
-      "action": "הכן זווית תוכן Instagram לניסוי: 'יום הגעה = יום תוכנית' — פוסט עם תמונה אמיתית מהפקה (לא גרפיקה) + כיתוב קצר בעברית/אנגלית; מדוד impressions ואינטראקציות מול הפוסט הנוכחי (20 impressions, 0 אינטראקציות)",
-      "detail": "הצעה לבדיקה על בסיס המדד המתועד; לא בוצע שינוי.",
-      "channel": "instagram",
-      "evidence": {
-        "source": "scorecard",
-        "metric": "נוכחות סושיאל (רצפה)",
-        "value": 6.0,
-        "target": 5,
-        "unit": "",
-        "status": "✅"
-      },
-      "status": "candidate",
-      "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
-      "success_metric": "נוכחות סושיאל (רצפה): בסיס 6.0; יעד המדד 5. יש להשוות תקופות תואמות."
-    },
-    {
-      "category": "safe_auto",
-      "action": "הכן שאלת בחינה ל-ChatGPT Search: 'best corporate event production company for incentive travel from Israel' — רשום האם UPE מוזכר ובאיזה הקשר; תעד את התוצאה לצוות AEO",
+      "action": "ניסוי GEO: הרץ ידנית 10 שאלות קונים מובילות ב-ChatGPT (web search פעיל) וב-Gemini, תעד האם UPE מצוטטת או מוזכרת, ורשום לוג שבועי — זה מאפשר לסגור את פער 'מנועי AI שנבדקו: 1 מתוך 3'",
       "detail": "הצעה לבדיקה על בסיס המדד המתועד; לא בוצע שינוי.",
       "channel": "google_organic_geo",
       "evidence": {
         "source": "scorecard",
         "metric": "מנועי AI שנבדקו (לא אזכורים)",
         "value": 1,
-        "target": 2,
+        "target": 3,
         "unit": "",
         "status": "❌"
       },
       "status": "candidate",
       "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
-      "success_metric": "מנועי AI שנבדקו (לא אזכורים): בסיס 1; יעד המדד 2. יש להשוות תקופות תואמות."
+      "success_metric": "מנועי AI שנבדקו (לא אזכורים): בסיס 1; יעד המדד 3. יש להשוות תקופות תואמות."
+    },
+    {
+      "category": "safe_auto",
+      "action": "ניסוי Instagram: הכן 2 פוסטים שונים של אותו תוכן מאחורי הקלעים — גרסה A: תמונה סטטית עם caption מפורט, גרסה B: Reel 15 שניות ללא עריכה — מדוד reach ואינטראקציות אחרי 72 שעות",
+      "detail": "הצעה לבדיקה על בסיס המדד המתועד; לא בוצע שינוי.",
+      "channel": "instagram",
+      "evidence": {
+        "source": "scorecard",
+        "metric": "נוכחות סושיאל (רצפה)",
+        "value": 8.0,
+        "target": 5,
+        "unit": "",
+        "status": "✅"
+      },
+      "status": "candidate",
+      "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
+      "success_metric": "נוכחות סושיאל (רצפה): בסיס 8.0; יעד המדד 5. יש להשוות תקופות תואמות."
     }
   ],
   "channel_cadence": {
@@ -77,7 +77,7 @@
       "reason": "מכסה מוצעת לבדיקה בתקופת המדידה; אין מסקנה סיבתית על אלגוריתם."
     },
     "instagram": {
-      "max_posts_per_week": 2,
+      "max_posts_per_week": 3,
       "reason": "מכסה מוצעת לבדיקה בתקופת המדידה; אין מסקנה סיבתית על אלגוריתם."
     },
     "linkedin": {
@@ -85,7 +85,7 @@
       "reason": "מכסה מוצעת לבדיקה בתקופת המדידה; אין מסקנה סיבתית על אלגוריתם."
     },
     "tiktok": {
-      "max_posts_per_week": 2,
+      "max_posts_per_week": 3,
       "reason": "מכסה מוצעת לבדיקה בתקופת המדידה; אין מסקנה סיבתית על אלגוריתם."
     },
     "youtube": {
@@ -94,10 +94,10 @@
     }
   },
   "channel_priority": [
+    "tiktok",
     "facebook",
     "instagram",
     "linkedin",
-    "tiktok",
     "youtube"
   ],
   "channel_plan_basis": [
