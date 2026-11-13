@@ -1,0 +1,397 @@
+{
+  "date": "2026-11-13",
+  "scorecard": {
+    "rows": [
+      {
+        "metric": "לידים לפי ההגדרה התפעולית (30 ימים)",
+        "value": 11,
+        "target": 10,
+        "unit": "",
+        "status": "✅",
+        "window_from": "2026-10-15",
+        "window_to": "2026-11-13",
+        "snapshot_date": "2026-11-13"
+      },
+      {
+        "metric": "Website leads (not paid)",
+        "value": 3,
+        "target": 3,
+        "unit": "",
+        "status": "✅",
+        "window_from": "2026-10-15",
+        "window_to": "2026-11-13",
+        "snapshot_date": "2026-11-13"
+      },
+      {
+        "metric": "קליקים אורגניים/שבוע",
+        "value": 75,
+        "target": 300,
+        "unit": "",
+        "status": "❌",
+        "window_from": "2026-11-07",
+        "window_to": "2026-11-13",
+        "snapshot_date": "2026-11-13",
+        "weekly_avg_28d": 92.75
+      },
+      {
+        "metric": "מונחי מעקב ב-Top-3",
+        "value": 1,
+        "target": 3,
+        "unit": "",
+        "status": "❌",
+        "window_from": "2026-10-17",
+        "window_to": "2026-11-13",
+        "snapshot_date": "2026-11-13",
+        "tracked_terms": [
+          "טיולי חברה"
+        ]
+      },
+      {
+        "metric": "מנועי AI שנבדקו (לא אזכורים)",
+        "value": 1,
+        "target": 2,
+        "unit": "",
+        "status": "❌",
+        "window_from": "2026-11-12",
+        "window_to": "2026-11-12",
+        "snapshot_date": "2026-11-12"
+      },
+      {
+        "metric": "נוכחות סושיאל (רצפה)",
+        "value": 8.0,
+        "target": 5,
+        "unit": "",
+        "status": "✅",
+        "window_from": "2026-11-06",
+        "window_to": "2026-11-13",
+        "snapshot_date": "2026-11-13"
+      },
+      {
+        "metric": "ממוצע קליקים שבועי מ-28 יום (מידע)",
+        "value": 92.75,
+        "target": 300,
+        "unit": "",
+        "status": "—",
+        "window_from": "2026-10-17",
+        "window_to": "2026-11-13",
+        "snapshot_date": "2026-11-13"
+      },
+      {
+        "metric": "מונחי Top-3 בכל השאילתות (מידע)",
+        "value": 28,
+        "target": null,
+        "unit": "",
+        "status": "—",
+        "window_from": "2026-10-17",
+        "window_to": "2026-11-13",
+        "snapshot_date": "2026-11-13"
+      },
+      {
+        "metric": "שיעור אזכור לא-ממותג (מידע)",
+        "value": 40.6,
+        "target": "מידע",
+        "unit": "%",
+        "status": "—",
+        "window_from": "2026-11-12",
+        "window_to": "2026-11-12",
+        "snapshot_date": "2026-11-12",
+        "by_engine": {
+          "claude": 41
+        },
+        "engines_detail": "claude 41"
+      },
+      {
+        "metric": "שאלות עם ציטוט במנוע Perplexity (מדידה נפרדת)",
+        "value": 3,
+        "target": 7,
+        "unit": "",
+        "status": "—",
+        "window_from": "2026-11-13",
+        "window_to": "2026-11-13",
+        "snapshot_date": "2026-11-13"
+      },
+      {
+        "metric": "צמיחת חשיפות",
+        "value": 70051.3,
+        "target": 10,
+        "unit": "%",
+        "status": "✅",
+        "window_from": "2026-11-06",
+        "window_to": "2026-11-13",
+        "snapshot_date": "2026-11-13"
+      },
+      {
+        "metric": "Engagement rate",
+        "value": 10.9,
+        "target": 2.0,
+        "unit": "%",
+        "status": "✅",
+        "window_from": "2026-11-06",
+        "window_to": "2026-11-13",
+        "snapshot_date": "2026-11-13"
+      },
+      {
+        "metric": "חשיפות (תקופה)",
+        "value": 53315,
+        "target": "↑",
+        "unit": "",
+        "status": "✅",
+        "window_from": "2026-11-06",
+        "window_to": "2026-11-13",
+        "snapshot_date": "2026-11-13"
+      },
+      {
+        "metric": "עדכניות snapshot אורגני (ימים)",
+        "value": 0,
+        "target": "≤8",
+        "unit": "",
+        "status": "✅",
+        "window_from": "2026-11-13",
+        "window_to": "2026-11-13",
+        "snapshot_date": "2026-11-13"
+      },
+      {
+        "metric": "ייחוס לידים",
+        "value": "לא-מיוחס",
+        "target": "מקור אמיתי",
+        "unit": "",
+        "status": "❌",
+        "window_from": "2026-10-15",
+        "window_to": "2026-11-13",
+        "snapshot_date": "2026-11-13"
+      }
+    ],
+    "scored_rows": [
+      {
+        "metric": "לידים לפי ההגדרה התפעולית (30 ימים)",
+        "value": 11,
+        "target": 10,
+        "unit": "",
+        "status": "✅",
+        "window_from": "2026-10-15",
+        "window_to": "2026-11-13",
+        "snapshot_date": "2026-11-13"
+      },
+      {
+        "metric": "Website leads (not paid)",
+        "value": 3,
+        "target": 3,
+        "unit": "",
+        "status": "✅",
+        "window_from": "2026-10-15",
+        "window_to": "2026-11-13",
+        "snapshot_date": "2026-11-13"
+      },
+      {
+        "metric": "קליקים אורגניים/שבוע",
+        "value": 75,
+        "target": 300,
+        "unit": "",
+        "status": "❌",
+        "window_from": "2026-11-07",
+        "window_to": "2026-11-13",
+        "snapshot_date": "2026-11-13",
+        "weekly_avg_28d": 92.75
+      },
+      {
+        "metric": "מונחי מעקב ב-Top-3",
+        "value": 1,
+        "target": 3,
+        "unit": "",
+        "status": "❌",
+        "window_from": "2026-10-17",
+        "window_to": "2026-11-13",
+        "snapshot_date": "2026-11-13",
+        "tracked_terms": [
+          "טיולי חברה"
+        ]
+      },
+      {
+        "metric": "מנועי AI שנבדקו (לא אזכורים)",
+        "value": 1,
+        "target": 2,
+        "unit": "",
+        "status": "❌",
+        "window_from": "2026-11-12",
+        "window_to": "2026-11-12",
+        "snapshot_date": "2026-11-12"
+      },
+      {
+        "metric": "נוכחות סושיאל (רצפה)",
+        "value": 8.0,
+        "target": 5,
+        "unit": "",
+        "status": "✅",
+        "window_from": "2026-11-06",
+        "window_to": "2026-11-13",
+        "snapshot_date": "2026-11-13"
+      }
+    ],
+    "context_rows": [
+      {
+        "metric": "ממוצע קליקים שבועי מ-28 יום (מידע)",
+        "value": 92.75,
+        "target": 300,
+        "unit": "",
+        "status": "—",
+        "window_from": "2026-10-17",
+        "window_to": "2026-11-13",
+        "snapshot_date": "2026-11-13"
+      },
+      {
+        "metric": "מונחי Top-3 בכל השאילתות (מידע)",
+        "value": 28,
+        "target": null,
+        "unit": "",
+        "status": "—",
+        "window_from": "2026-10-17",
+        "window_to": "2026-11-13",
+        "snapshot_date": "2026-11-13"
+      },
+      {
+        "metric": "שיעור אזכור לא-ממותג (מידע)",
+        "value": 40.6,
+        "target": "מידע",
+        "unit": "%",
+        "status": "—",
+        "window_from": "2026-11-12",
+        "window_to": "2026-11-12",
+        "snapshot_date": "2026-11-12",
+        "by_engine": {
+          "claude": 41
+        },
+        "engines_detail": "claude 41"
+      },
+      {
+        "metric": "שאלות עם ציטוט במנוע Perplexity (מדידה נפרדת)",
+        "value": 3,
+        "target": 7,
+        "unit": "",
+        "status": "—",
+        "window_from": "2026-11-13",
+        "window_to": "2026-11-13",
+        "snapshot_date": "2026-11-13"
+      },
+      {
+        "metric": "צמיחת חשיפות",
+        "value": 70051.3,
+        "target": 10,
+        "unit": "%",
+        "status": "✅",
+        "window_from": "2026-11-06",
+        "window_to": "2026-11-13",
+        "snapshot_date": "2026-11-13"
+      },
+      {
+        "metric": "Engagement rate",
+        "value": 10.9,
+        "target": 2.0,
+        "unit": "%",
+        "status": "✅",
+        "window_from": "2026-11-06",
+        "window_to": "2026-11-13",
+        "snapshot_date": "2026-11-13"
+      },
+      {
+        "metric": "חשיפות (תקופה)",
+        "value": 53315,
+        "target": "↑",
+        "unit": "",
+        "status": "✅",
+        "window_from": "2026-11-06",
+        "window_to": "2026-11-13",
+        "snapshot_date": "2026-11-13"
+      },
+      {
+        "metric": "עדכניות snapshot אורגני (ימים)",
+        "value": 0,
+        "target": "≤8",
+        "unit": "",
+        "status": "✅",
+        "window_from": "2026-11-13",
+        "window_to": "2026-11-13",
+        "snapshot_date": "2026-11-13"
+      },
+      {
+        "metric": "ייחוס לידים",
+        "value": "לא-מיוחס",
+        "target": "מקור אמיתי",
+        "unit": "",
+        "status": "❌",
+        "window_from": "2026-10-15",
+        "window_to": "2026-11-13",
+        "snapshot_date": "2026-11-13"
+      }
+    ],
+    "coverage_percent": 100,
+    "warnings": [
+      "ספירת הלידים כוללת הזדמנויות ופניות טופס שלא סומנו כלא מתאימות; אינה הוכחה שכל פנייה הוסמכה במכירות.",
+      "מדידת מנועי AI מתאריך 2026-11-12: ציטוטי כתובת או תווית דומיין ממקור חיפוש, בשאלות לא ממותגות; אינה מדידת מקום ראשון. ChatGPT not scheduled (skipped_schedule) — לא תקלה."
+    ],
+    "components": {
+      "qualified_leads": 1.1,
+      "digital_leads": 1.0,
+      "organic": 0.29166666666666663,
+      "aeo": 0.5,
+      "social_presence": 1.0
+    },
+    "weighted": 78,
+    "passed": 3,
+    "total": 6,
+    "impressions_growth_pct": 70051.3,
+    "posts_per_week": 8.0,
+    "lead_attribution": {
+      "by_source": {
+        "Other": 4,
+        "Web": 3,
+        "(none)": 1,
+        "Existing Customer": 1,
+        "Referral": 1,
+        "Web-Organic": 1
+      },
+      "dominant_source": "Other",
+      "dominant_share_pct": 36,
+      "attribution_gap": true,
+      "note": "5/11 ברשומות מקור עמום או ברירת מחדל. אין לשייך אותן לערוץ דיגיטלי מסוים ללא ראיה ואין להסיק שיעור המרה מחלוקת המקורות."
+    }
+  },
+  "verdict": {
+    "error": "anthropic 503: credential validation failed",
+    "verdict_summary": "3 מתוך 6 מדדים הגיעו ליעד; כיסוי הנתונים 100%. הפערים והעמידה ביעדים מפורטים להלן. אין בנתונים הוכחה לסיבת השינוי או לרווחיות ערוץ.",
+    "what_worked": [
+      "לידים לפי ההגדרה התפעולית (30 ימים): 11; יעד 10.",
+      "Website leads (not paid): 3; יעד 3.",
+      "נוכחות סושיאל (רצפה): 8.0; יעד 5."
+    ],
+    "what_failed": [
+      "קליקים אורגניים/שבוע: 75; יעד 300.",
+      "מונחי מעקב ב-Top-3: 1; יעד 3.",
+      "מנועי AI שנבדקו (לא אזכורים): 1; יעד 2."
+    ],
+    "narrative_source": "deterministic_scorecard"
+  },
+  "applied_directives": [],
+  "cadence": {
+    "facebook": {
+      "max_posts_per_week": 1,
+      "reason": "מכסה מוצעת לבדיקה בתקופת המדידה; אין מסקנה סיבתית על אלגוריתם."
+    },
+    "instagram": {
+      "max_posts_per_week": 3,
+      "reason": "מכסה מוצעת לבדיקה בתקופת המדידה; אין מסקנה סיבתית על אלגוריתם."
+    },
+    "linkedin": {
+      "max_posts_per_week": 3,
+      "reason": "מכסה מוצעת לבדיקה בתקופת המדידה; אין מסקנה סיבתית על אלגוריתם."
+    },
+    "tiktok": {
+      "max_posts_per_week": 3,
+      "reason": "מכסה מוצעת לבדיקה בתקופת המדידה; אין מסקנה סיבתית על אלגוריתם."
+    },
+    "youtube": {
+      "max_posts_per_week": 1,
+      "reason": "מכסה מוצעת לבדיקה בתקופת המדידה; אין מסקנה סיבתית על אלגוריתם."
+    }
+  },
+  "email_requested": true
+}
