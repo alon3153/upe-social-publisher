@@ -225,3 +225,37 @@ def test_citation_classification_does_not_treat_competitors_as_outreach():
     assert rows['sortlist.com']['kind'] == 'directory'
     assert rows['bizbash.com']['kind'] == 'editorial'
     assert 'bad.example' not in rows and 'sub.upe.co.il' not in rows
+
+
+def test_measurement_gap_separates_failed_from_not_scheduled():
+    from scripts import aeo_probe as pr
+    ran = {"mention_rate_nonbranded": 41, "product_search": 55}
+    skip = {"status": "skipped_schedule"}
+    history = [
+        {"date": "2026-10-26", "models": {"chatgpt": ran, "claude": ran}},
+        {"date": "2026-10-27", "models": {"claude": ran}},                 # failed: absent
+        {"date": "2026-11-01", "models": {"claude": ran, "chatgpt": skip}},  # off day
+        {"date": "2026-11-02", "models": {"claude": ran}},                 # failed
+        {"date": "2026-11-03", "models": {"claude": ran, "chatgpt": skip}},
+    ]
+    gap = pr.measurement_gap(history, "chatgpt", "2026-11-03")
+    assert gap["last_measured_date"] == "2026-10-26"
+    assert gap["last_mention_rate_nonbranded"] == 41
+    assert gap["failed_since"] == "2026-10-27"
+    assert gap["failed_runs"] == 2          # the two off days are not failures
+    healthy = pr.measurement_gap(history, "claude", "2026-11-03")
+    assert healthy["last_measured_date"] == "2026-11-03" and healthy["failed_runs"] == 0
+    never = pr.measurement_gap(history, "gemini", "2026-11-03")
+    assert never["last_measured_date"] is None and never["failed_runs"] == 5
+
+
+def test_append_history_scrubs_keys_already_on_disk(tmp_path):
+    import json
+    from scripts import aeo_probe as pr
+    path = tmp_path / "h.json"
+    leaked = "AQ." + "x" * 40
+    path.write_text(json.dumps([{"date": "2026-11-04", "models": {},
+                                 "errors": [f"gemini: HTTP 402 from https://g/v1?key={leaked}: boom"]}]))
+    pr.append_history({"date": "2026-11-05", "models": {}, "errors": []}, path)
+    text = path.read_text()
+    assert leaked not in text and "REDACTED" in text
