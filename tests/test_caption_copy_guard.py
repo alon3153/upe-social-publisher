@@ -29,6 +29,7 @@ DAY132_QUOTES = (
 )
 
 # במאז must not match במאזן ("in the balance sheet").
+# "16 years" (since 2010) is the LOCKED canonical fact (22.06.2026) - never flag it.
 PATTERNS = (
     re.compile(r"ב-מאז", re.IGNORECASE),
     re.compile(r"ו-מאז", re.IGNORECASE),
@@ -48,11 +49,7 @@ PATTERNS = (
     re.compile(r"130\+ countries", re.IGNORECASE),
     re.compile(r"130\+ países", re.IGNORECASE),
     re.compile(r"130\+ מדינות", re.IGNORECASE),
-    re.compile(r"16 years", re.IGNORECASE),
-    re.compile(r"16 שנה", re.IGNORECASE),
-    re.compile(r"16 años", re.IGNORECASE),
     re.compile(r"quince años", re.IGNORECASE),
-    re.compile(r"dieciséis años", re.IGNORECASE),
     re.compile(r"200\+ events", re.IGNORECASE),
     re.compile(r"120 countries", re.IGNORECASE),
     re.compile(r"15 years", re.IGNORECASE),
@@ -151,11 +148,7 @@ def test_guard_flags_the_listed_patterns():
         "130+ Countries",
         "130+ países",
         "130+ מדינות",
-        "16 Years of corporate events",
-        "16 שנה",
-        "16 Años",
         "Quince años.",
-        "Dieciséis años.",
         "200+ Events",
         "120 Countries",
         "15 Years",
@@ -164,6 +157,8 @@ def test_guard_flags_the_listed_patterns():
         assert any(pattern.search(sample) for pattern in PATTERNS), sample
     assert ES_HE_DESTINATIONS.search("Across 130+ Destinations")
     assert not any(pattern.search("במאזן") for pattern in PATTERNS)
+    for canonical in ("16 years of corporate events", "אחרי 16 שנה", "16 años", "dieciséis años"):
+        assert not any(pattern.search(canonical) for pattern in PATTERNS), canonical
     assert not any(pattern.search("here's what we've learned since 2010 about corporate event ROI:") for pattern in PATTERNS)
     assert not any(pattern.search("Llevamos desde 2010 produciendo eventos.") for pattern in PATTERNS)
     assert not any(pattern.search("EN UPRODUCTION EVENTS LLEVAMOS DESDE 2010 PRODUCIENDO eventos.") for pattern in PATTERNS)
