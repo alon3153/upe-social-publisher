@@ -18963,8 +18963,8 @@
     "channel": "linkedin",
     "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
     "action_key": "linkedin-executive-posting",
-    "owner": "מנהל תוכן מכין טיוטות; מנכ\"ל מאשר ומפרסם",
-    "success_metric": "נוכחות סושיאל (רצפה): בסיס 8.0; יעד המדד 5. יש להשוות תקופות תואמות.",
+    "owner": "מנכ\"ל / CMO עם תמיכת copywriter; Alon מאשר כל פוסט",
+    "success_metric": "מנועי AI שנבדקו (לא אזכורים): בסיס 1; יעד המדד 3. יש להשוות תקופות תואמות.",
     "consecutive_failures": 0,
     "merged_from": [
       {
@@ -19030,8 +19030,8 @@
     "channel": "tiktok",
     "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
     "action_key": "tiktok-behind-scenes",
-    "owner": "מפיק תוכן מצלם; Alon מאשר לפני פרסום",
-    "success_metric": "נוכחות סושיאל (רצפה): בסיס 8.0; יעד המדד 5. יש להשוות תקופות תואמות.",
+    "owner": "צוות תוכן; Alon מאשר כל קליפ",
+    "success_metric": "נוכחות סושיאל (רצפה): בסיס 9.0; יעד המדד 5. יש להשוות תקופות תואמות.",
     "consecutive_failures": 0,
     "merged_from": [
       {
@@ -19172,18 +19172,18 @@
     "created": "2026-11-09",
     "updated": "2026-11-10",
     "kind": "recommendation",
-    "priority": "P0",
+    "priority": "P1",
     "channel": "google_organic_geo",
     "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
     "action_key": "top3-keyword-ranking-push",
-    "owner": "SEO drafts; Alon approves before publish",
+    "owner": "מנהל SEO; Alon מאשר כל עדכון דף",
     "success_metric": "מונחי מעקב ב-Top-3: בסיס 1; יעד המדד 3. יש להשוות תקופות תואמות.",
     "consecutive_failures": 0
   },
   "1a8a9cc9": {
     "id": "1a8a9cc9",
     "title": "הרץ סט קבוע של 10 שאלות קונים (כגון: 'best incentive travel company Israel', 'מי מפיק כנסים לחברות הייטק') ב-ChatGPT (web search פעיל) וב-Gemini — רשום תוצאות בגיליון שבועי. אם UPE לא מצוטטת, זהה את הדומיין שכן מצוטט ובחן מה שונה במבנה התוכן שלו לפי מסגרת GEO.",
-    "status": "awaiting_approval",
+    "status": "approved",
     "revisions": 1,
     "history": [
       {
@@ -19199,7 +19199,7 @@
     "channel": "google_organic_geo",
     "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
     "action_key": "aeo-engine-coverage-expansion",
-    "owner": "SEO/Content lead מוציא לפועל; Alon מאשר",
+    "owner": "מנהל SEO/AEO; Alon מאשר פרסום כל שינוי תוכן",
     "success_metric": "מנועי AI שנבדקו (לא אזכורים): בסיס 1; יעד המדד 3. יש להשוות תקופות תואמות.",
     "consecutive_failures": 0
   }
