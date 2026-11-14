@@ -73,6 +73,15 @@ def _rate(hits, total):
     return round(100 * hits / total) if total else 0
 
 
+_FATAL_RE = re.compile(r"HTTP (401|403)\b|insufficient_quota|no credits remaining|"
+                       r"credit balance is too low|API key not valid", re.I)
+
+
+def _is_fatal(exc):
+    """Auth/billing errors that will hit every question identically (not a transient 429)."""
+    return bool(_FATAL_RE.search(str(exc)))
+
+
 def run_probe(questions, models, ask_fn, judge_fn, on_date=None):
     # on_date is the run's calendar day (UTC in the daily workflow). Callers that
     # omit it keep the previous behaviour: the machine-local date.
@@ -102,6 +111,10 @@ def run_probe(questions, models, ask_fn, judge_fn, on_date=None):
                     gerr = res.get("grounded_error") if isinstance(res, dict) else None
                     sc = score_answer(q, ans, judge_fn)
                 except Exception as e:  # one flaky question must not sink the whole model battery
+                    if _is_fatal(e):  # dead key / no credit: every other question fails the same way
+                        out["errors"].append(f"{model}: dead key or no credit, battery aborted "
+                                             f"({type(e).__name__}: {str(e)[:300]})")
+                        break
                     out["errors"].append(f"{model}/{q['id']}: {type(e).__name__}: {str(e)[:200]}")
                     continue
                 per_dim[q["dimension"]].append(sc[q["dimension"]])

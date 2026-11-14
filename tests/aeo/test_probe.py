@@ -225,3 +225,31 @@ def test_citation_classification_does_not_treat_competitors_as_outreach():
     assert rows['sortlist.com']['kind'] == 'directory'
     assert rows['bizbash.com']['kind'] == 'editorial'
     assert 'bad.example' not in rows and 'sub.upe.co.il' not in rows
+
+
+def test_dead_key_aborts_battery_with_one_error_and_keeps_other_models():
+    calls = {"chatgpt": 0, "gemini": 0}
+
+    def ask(model, text):
+        if model == "chatgpt":
+            calls["chatgpt"] += 1
+            raise RuntimeError('HTTP 429 from https://api.openai.com: {"error": {"message": '
+                               '"You have no credits remaining.", "code": "insufficient_quota"}}')
+        if model == "gemini":
+            calls["gemini"] += 1
+            raise RuntimeError("HTTP 401 from https://generativelanguage.googleapis.com: API key not valid.")
+        return "answer"
+
+    judge = make_judge({"product_search": 50, "comparison": 0, "reputation": 0,
+                        "competitors": [], "gap_note": ""})
+    questions = [{"id": f"q{i}", "dimension": "product_search", "text": str(i)} for i in range(5)]
+    out = p.run_probe(questions, ["chatgpt", "gemini", "claude"], ask, judge)
+    assert calls == {"chatgpt": 1, "gemini": 1}  # no wasted calls after a fatal error
+    assert list(out["models"]) == ["claude"]
+    assert sum(e.startswith("chatgpt") for e in out["errors"]) == 2  # abort line + "all questions failed"
+    assert any("dead key or no credit" in e and "insufficient_quota" in e for e in out["errors"])
+
+
+def test_plain_rate_limit_is_not_fatal():
+    assert not p._is_fatal(RuntimeError('HTTP 429 from x: {"error": {"code": "rate_limit_exceeded"}}'))
+    assert p._is_fatal(RuntimeError("HTTP 403 from x: forbidden"))
