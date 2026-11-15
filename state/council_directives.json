@@ -1,57 +1,40 @@
 {
-  "updated_at": "2026-11-14",
+  "updated_at": "2026-11-15",
   "source": "daily-council",
   "directives": [
     {
       "category": "safe_auto",
-      "action": "ניסוי LinkedIn — טיוטות carousel קצרות (8-12 שקפים) מפרופיל אישי של מנהל בכיר: פורמט 'בעיה ← ראיה ← מסקנה' על אתגר ספציפי בהפקת אירועים; ללא קישור חיצוני בגוף הפוסט (קישור בתגובה ראשונה בלבד). מדוד reach לעומת פוסט טקסט אחרון אחרי 72 שעות.",
-      "detail": "הצעה לבדיקה על בסיס המדד המתועד; לא בוצע שינוי.",
-      "channel": "linkedin",
-      "evidence": {
-        "source": "scorecard",
-        "metric": "מנועי AI שנבדקו (לא אזכורים)",
-        "value": 1,
-        "target": 3,
-        "unit": "",
-        "status": "❌"
-      },
-      "status": "candidate",
-      "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
-      "success_metric": "מנועי AI שנבדקו (לא אזכורים): בסיס 1; יעד המדד 3. יש להשוות תקופות תואמות."
-    },
-    {
-      "category": "safe_auto",
-      "action": "ניסוי AEO — הרץ ידנית 10 שאלות קונים (5 עברית, 3 אנגלית, 2 ספרדית) ב-ChatGPT (web search פעיל) וב-Gemini; תעד האם UPE מצוטטת, ואיזה דומיין מתחרה מצוטט במקומה. רשום בגיליון מעקב שבועי.",
-      "detail": "הצעה לבדיקה על בסיס המדד המתועד; לא בוצע שינוי.",
-      "channel": "google_organic_geo",
-      "evidence": {
-        "source": "scorecard",
-        "metric": "מנועי AI שנבדקו (לא אזכורים)",
-        "value": 1,
-        "target": 3,
-        "unit": "",
-        "status": "❌"
-      },
-      "status": "candidate",
-      "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
-      "success_metric": "מנועי AI שנבדקו (לא אזכורים): בסיס 1; יעד המדד 3. יש להשוות תקופות תואמות."
-    },
-    {
-      "category": "safe_auto",
-      "action": "ניסוי TikTok/Instagram — בדוק האם פרסום אותו קליפ 'מאחורי הקלעים' ב-TikTok ולאחר 24-48 שעות כ-Reel ב-Instagram משפיע על reach הרגיל של Instagram (נוכחי: 102 reach לעומת 40,524 ב-TikTok). מדוד 2 קליפים לפני מסקנה.",
+      "action": "ניסוי TikTok: האם תוכן 'מאחורי הקלעים' מאירוע אמיתי מייצר reach גבוה יותר מתוכן ערכי כללי — 3 קליפים, מדידה אחרי 72 שעות",
       "detail": "הצעה לבדיקה על בסיס המדד המתועד; לא בוצע שינוי.",
       "channel": "tiktok",
       "evidence": {
         "source": "scorecard",
         "metric": "נוכחות סושיאל (רצפה)",
-        "value": 9.0,
+        "value": 11.0,
         "target": 5,
         "unit": "",
         "status": "✅"
       },
       "status": "candidate",
       "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
-      "success_metric": "נוכחות סושיאל (רצפה): בסיס 9.0; יעד המדד 5. יש להשוות תקופות תואמות."
+      "success_metric": "נוכחות סושיאל (רצפה): בסיס 11.0; יעד המדד 5. יש להשוות תקופות תואמות."
+    },
+    {
+      "category": "safe_auto",
+      "action": "הכן אסטרטגיית מונחי GSC: זהה מתוך top_opportunities את 2 המונחים הקרובים ביותר ל-Top-3 שאינם ב-cooldown, ובדוק update_required לפני כל עדכון דף",
+      "detail": "הצעה לבדיקה על בסיס המדד המתועד; לא בוצע שינוי.",
+      "channel": "google_organic_geo",
+      "evidence": {
+        "source": "scorecard",
+        "metric": "מונחי מעקב ב-Top-3",
+        "value": 1,
+        "target": 3,
+        "unit": "",
+        "status": "❌"
+      },
+      "status": "candidate",
+      "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
+      "success_metric": "מונחי מעקב ב-Top-3: בסיס 1; יעד המדד 3. יש להשוות תקופות תואמות."
     }
   ],
   "channel_cadence": {
