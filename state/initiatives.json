@@ -18802,7 +18802,7 @@
     "channel": "leads",
     "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
     "action_key": "salesforce-attribution-fix",
-    "owner": "מנהל מכירות מוציא לפועל; Alon מאשר",
+    "owner": "אלון מאשר; צוות מכירות/אופרציות מיישם",
     "success_metric": "ייחוס לידים: בסיס לא-מיוחס; יעד המדד מקור אמיתי. יש להשוות תקופות תואמות."
   },
   "2769e4c7": {
@@ -19030,8 +19030,8 @@
     "channel": "tiktok",
     "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
     "action_key": "tiktok-behind-scenes",
-    "owner": "צוות תוכן; Alon מאשר כל קליפ",
-    "success_metric": "נוכחות סושיאל (רצפה): בסיס 9.0; יעד המדד 5. יש להשוות תקופות תואמות.",
+    "owner": "צוות תוכן מצלם ועורך; אלון מאשר לפני פרסום",
+    "success_metric": "נוכחות סושיאל (רצפה): בסיס 11.0; יעד המדד 5. יש להשוות תקופות תואמות.",
     "consecutive_failures": 0,
     "merged_from": [
       {
@@ -19176,7 +19176,7 @@
     "channel": "google_organic_geo",
     "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
     "action_key": "top3-keyword-ranking-push",
-    "owner": "מנהל SEO; Alon מאשר כל עדכון דף",
+    "owner": "צוות SEO מכין טיוטה; אלון מאשר לפני פרסום",
     "success_metric": "מונחי מעקב ב-Top-3: בסיס 1; יעד המדד 3. יש להשוות תקופות תואמות.",
     "consecutive_failures": 0
   },
@@ -19201,6 +19201,29 @@
     "action_key": "aeo-engine-coverage-expansion",
     "owner": "מנהל SEO/AEO; Alon מאשר פרסום כל שינוי תוכן",
     "success_metric": "מנועי AI שנבדקו (לא אזכורים): בסיס 1; יעד המדד 3. יש להשוות תקופות תואמות.",
+    "consecutive_failures": 0
+  },
+  "eda278b3": {
+    "id": "eda278b3",
+    "title": "חדש/תקן את מפתח Gemini API כדי לאפשר מדידת AEO על מנוע שני — זו תקלת חשבון, לא פער שיווקי.",
+    "status": "awaiting_approval",
+    "revisions": 1,
+    "history": [
+      {
+        "date": "2026-11-15",
+        "summary": "הופק מסמך פנימי מלא עם הוראות שלב-אחר-שלב לחידוש/יצירת מפתח Gemini API (Auth Key, 2026), בדיקת תקינות, הגדרת מדידת AEO על מנוע שני, טמפלט Google Sheet לעקוב שבועי, וצ'קליסט הפעלה — הכל מותאם לקריטריון ההצלחה: בסיס 1 מנוע → יעד 2 מנועים.",
+        "ready": true
+      }
+    ],
+    "created": "2026-11-15",
+    "updated": "2026-11-15",
+    "kind": "recommendation",
+    "priority": "P0",
+    "channel": "google_organic_geo",
+    "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
+    "action_key": "gemini-api-key-fix",
+    "owner": "אלון — פעולת חשבון/מפתח",
+    "success_metric": "מנועי AI שנבדקו (לא אזכורים): בסיס 1; יעד המדד 2. יש להשוות תקופות תואמות.",
     "consecutive_failures": 0
   }
 }
