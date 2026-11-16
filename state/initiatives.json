@@ -18963,8 +18963,8 @@
     "channel": "linkedin",
     "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
     "action_key": "linkedin-executive-posting",
-    "owner": "מנכ\"ל / CMO עם תמיכת copywriter; Alon מאשר כל פוסט",
-    "success_metric": "מנועי AI שנבדקו (לא אזכורים): בסיס 1; יעד המדד 3. יש להשוות תקופות תואמות.",
+    "owner": "מנכ\"ל/מנהל בכיר מכין תוכן; אלון מאשר כל פוסט",
+    "success_metric": "מונחי מעקב ב-Top-3: בסיס 1; יעד המדד 3. יש להשוות תקופות תואמות.",
     "consecutive_failures": 0,
     "merged_from": [
       {
@@ -19120,7 +19120,7 @@
     "channel": "google_organic_geo",
     "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
     "action_key": "salesforce-attribution-fix",
-    "owner": "מנהל CRM מכין; אלון מאשר הפצה",
+    "owner": "מנהל RevOps/מכירות מפיץ; אלון מאשר",
     "success_metric": "ייחוס לידים: בסיס לא-מיוחס; יעד המדד מקור אמיתי. יש להשוות תקופות תואמות.",
     "consecutive_failures": 0
   },
@@ -19176,7 +19176,7 @@
     "channel": "google_organic_geo",
     "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
     "action_key": "top3-keyword-ranking-push",
-    "owner": "צוות SEO מכין טיוטה; אלון מאשר לפני פרסום",
+    "owner": "SEO lead מכין טיוטה; אלון מאשר לפני פרסום",
     "success_metric": "מונחי מעקב ב-Top-3: בסיס 1; יעד המדד 3. יש להשוות תקופות תואמות.",
     "consecutive_failures": 0
   },
@@ -19206,7 +19206,7 @@
   "eda278b3": {
     "id": "eda278b3",
     "title": "חדש/תקן את מפתח Gemini API כדי לאפשר מדידת AEO על מנוע שני — זו תקלת חשבון, לא פער שיווקי.",
-    "status": "awaiting_approval",
+    "status": "approved",
     "revisions": 1,
     "history": [
       {
@@ -19222,7 +19222,7 @@
     "channel": "google_organic_geo",
     "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
     "action_key": "gemini-api-key-fix",
-    "owner": "אלון — פעולת חשבון/מפתח",
+    "owner": "אלון מתקן מפתח API; מערכת מודדת אוטומטית",
     "success_metric": "מנועי AI שנבדקו (לא אזכורים): בסיס 1; יעד המדד 2. יש להשוות תקופות תואמות.",
     "consecutive_failures": 0
   }
