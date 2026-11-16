@@ -180,3 +180,33 @@ def test_empty_model_set_does_not_claim_target_achieved():
     subject, html = rep.build_daily_email({"date": "2026-09-09", "models": {}}, None, {}, [], target=70)
     assert "יעד הציון הושג" not in subject + html
     assert "דירוג ראשון לא נמדד" in html
+
+
+def test_off_day_still_shows_last_measurement_and_the_outage():
+    off = {"date": "2026-11-12", "models": {
+        "claude": _block(product_search=80, mention_rate_nonbranded=41),
+        "chatgpt": {"status": "skipped_schedule", "reason": "not scheduled"},
+    }}
+    trends = {"chatgpt": {"last_measured_date": "2026-10-26", "last_mention_rate_nonbranded": 41,
+                          "failed_since": "2026-10-27", "failed_runs": 10},
+              "gemini": {"last_measured_date": "2026-11-03", "last_mention_rate_nonbranded": 28,
+                         "failed_since": "2026-11-04", "failed_runs": 9}}
+    _, html = rep.build_daily_email(off, None, {}, failures=[], target=70, trends=trends)
+    assert "לא מתוזמן" in html
+    assert 'כשל ב-10 ריצות רצופות מאז <span dir="ltr">27.10.2026</span>' in html
+    assert 'מדידה אחרונה <span dir="ltr">26.10.2026</span> <span dir="ltr">(41%)</span>' in html
+    # Gemini failed outright and is absent from the scorecard: it still gets a row
+    assert "Gemini ⛔" in html
+    assert 'כשל ב-9 ריצות רצופות מאז <span dir="ltr">04.11.2026</span>' in html
+
+
+def test_healthy_off_day_shows_last_measurement_without_alarm():
+    off = {"date": "2026-11-03", "models": {
+        "claude": _block(product_search=80),
+        "chatgpt": {"status": "skipped_schedule", "reason": "not scheduled"},
+    }}
+    trends = {"chatgpt": {"last_measured_date": "2026-11-02", "last_mention_rate_nonbranded": 22,
+                          "failed_since": None, "failed_runs": 0}}
+    _, html = rep.build_daily_email(off, None, {}, failures=[], target=70, trends=trends)
+    assert 'מדידה אחרונה <span dir="ltr">02.11.2026</span>' in html
+    assert "כשל" not in html and "⛔" not in html

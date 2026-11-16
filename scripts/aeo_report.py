@@ -196,6 +196,46 @@ def _avg7_html(trends):
             + " · ".join(bits) + "</p>")
 
 
+def _he_date(iso):
+    y, m, d = str(iso)[:10].split("-")
+    return f'<span dir="ltr">{d}.{m}.{y}</span>'
+
+
+def _gap_note(item):
+    """Last real measurement and the failures since. Empty when there is nothing to say."""
+    item = item or {}
+    bits = []
+    runs = item.get("failed_runs") or 0
+    if runs and item.get("failed_since"):
+        bits.append(f'⛔ כשל ב-{runs} ריצות רצופות מאז {_he_date(item["failed_since"])}')
+    last = item.get("last_measured_date")
+    if last:
+        rate = item.get("last_mention_rate_nonbranded")
+        tail = f' <span dir="ltr">({rate}%)</span>' if rate is not None else ""
+        bits.append(f"מדידה אחרונה {_he_date(last)}{tail}")
+    elif runs:
+        bits.append("מעולם לא נמדד")
+    return " · ".join(bits)
+
+
+def _unmeasured_rows(scorecard, trends):
+    """A model that failed outright is dropped from the scorecard, so it used to
+    vanish from the table. Give it a row: failed is not the same as absent."""
+    rows = ""
+    for model in ("claude", "chatgpt", "gemini"):
+        if model in scorecard.get("models", {}):
+            continue
+        item = trends.get(model) or {}
+        if not item.get("failed_runs"):
+            continue
+        rows += (f'<tr><td dir="rtl" style="padding:4px 8px;">{MODEL_HE.get(model, model)} ⛔</td>'
+                 f'<td dir="rtl" style="padding:4px 8px;text-align:center;">—</td>'
+                 f'<td dir="rtl" style="padding:4px 8px;text-align:center;">—</td>'
+                 f'<td dir="rtl" style="padding:4px 8px;text-align:center;">—</td>'
+                 f'<td dir="rtl" style="padding:4px 8px;color:#b00;">לא נמדד היום · {_gap_note(item)}</td></tr>')
+    return rows
+
+
 def build_daily_email(scorecard, prev, keywords, failures, target=90, reminders=None, trends=None):
     """Report mentions and the judge rubric score; recommendation rank is unmeasured."""
     trends = trends or {}
@@ -206,11 +246,14 @@ def build_daily_email(scorecard, prev, keywords, failures, target=90, reminders=
         if aeo_probe.is_skipped_schedule(block):
             # Not a miss and not an outage. Keep it out of the failure banner.
             label = MODEL_HE.get(model, model)
+            # An off day must not hide an outage: say when it was last measured.
+            note = _gap_note(trends.get(model))
+            gap = f" · {note}" if note else ""
             rows += (f'<tr><td dir="rtl" style="padding:4px 8px;">{label}</td>'
                      f'<td dir="rtl" style="padding:4px 8px;text-align:center;">—</td>'
                      f'<td dir="rtl" style="padding:4px 8px;text-align:center;">—</td>'
                      f'<td dir="rtl" style="padding:4px 8px;text-align:center;">—</td>'
-                     f'<td dir="rtl" style="padding:4px 8px;">לא מתוזמן (not scheduled)</td></tr>')
+                     f'<td dir="rtl" style="padding:4px 8px;">לא מתוזמן (not scheduled){gap}</td></tr>')
             continue
         pblock = (prev or {}).get("models", {}).get(model, {}) if prev else {}
         trend = trends.get(model) or {}
@@ -244,6 +287,8 @@ def build_daily_email(scorecard, prev, keywords, failures, target=90, reminders=
                  f'<td dir="rtl" style="padding:4px 8px;text-align:center;">{ps}</td>'
                  f'<td dir="rtl" style="padding:4px 8px;text-align:center;">{arrow}</td>'
                  f'<td dir="rtl" style="padding:4px 8px;">{status}</td></tr>')
+
+    rows += _unmeasured_rows(scorecard, trends)
 
     def _kwlist(items, ltr=False):
         if not items:
