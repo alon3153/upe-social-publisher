@@ -115,6 +115,10 @@ def summarize(posts):
     # Per-network field gaps: some networks (e.g. TikTok) report reach but not
     # impressions. Use reach as the impressions denominator when impressions is 0.
     denom = impressions if impressions > 0 else reach
+    # LinkedIn (company posts) and YouTube expose no unique-reach field in
+    # /v2/analytics/posts — 0 there means "not provided", not "nobody saw it".
+    if not any(p.get("reach") is not None or p.get("impressionsUnique") is not None for p in posts):
+        reach = None
     er = (interactions / denom * 100) if denom else 0.0
     caveat = None
     if er > 100:  # cumulative/under-reported field (seen on FB) — flag, don't trust
@@ -127,7 +131,7 @@ def summarize(posts):
     return {
         "posts": len(posts),
         "impressions": int(impressions),
-        "reach": int(reach),
+        "reach": None if reach is None else int(reach),
         "interactions": int(interactions),
         "engagement_rate_pct": round(er, 2),
         "caveat": caveat,
@@ -154,9 +158,9 @@ def snapshot(days=7, end=None):
             s = {**summarize([]), "ok": False, "caveat": "analytics unavailable"}
         out["networks"][net] = s
         for k in totals:
-            totals[k] += s.get(k, 0)
+            totals[k] += s.get(k) or 0
     reliable = [s for s in out["networks"].values() if s["ok"] and not s.get("caveat")]
-    denominator = sum(s["impressions"] or s["reach"] for s in reliable)
+    denominator = sum(s["impressions"] or s["reach"] or 0 for s in reliable)
     totals["engagement_rate_pct"] = round(sum(s["interactions"] for s in reliable) / denominator * 100, 2) if denominator else 0.0
     out["unavailable_networks"] = [n for n, s in out["networks"].items() if not s["ok"]]
     out["totals"] = totals

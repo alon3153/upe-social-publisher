@@ -44,6 +44,9 @@ REPORT_DIR = ROOT / "reports" / "council"
 METRICS_DIR = ROOT / "reports" / "metrics"
 STATE_DIR = ROOT / "state"
 DIRECTIVES = STATE_DIR / "council_directives.json"
+MIN_GROWTH_BASE_IMPRESSIONS = 100  # below this, week-over-week % is not comparable
+
+AEO_ENGINE_NAMES = {"chatgpt": "ChatGPT", "gemini": "Gemini", "claude": "Claude"}
 
 
 def _today():
@@ -224,10 +227,16 @@ def build_scorecard(cur, prev, leads, seo_geo=None):
         if isinstance(declared, int) and not isinstance(declared, bool) and declared > 0:
             expected_engines = declared
         comp["aeo"] = min(1.0, checked / expected_engines)
+        failed = (evidence.get("failed_engines") or {}) if isinstance(evidence, dict) else {}
+        engine_note = " · ".join(f"{AEO_ENGINE_NAMES.get(n, n)}: {why}" for n, why in failed.items())
         row(scored, "מנועי AI שנבדקו (לא אזכורים)", checked, expected_engines,
             checked >= expected_engines,
             window_from=evidence_date or seo_snap, window_to=evidence_date or seo_snap,
-            snapshot_date=evidence_date or seo_snap)
+            snapshot_date=evidence_date or seo_snap,
+            failed_engines=failed, note=(engine_note + " — נדרש אלון") if failed else "")
+        if failed:
+            warnings.append("מנועי AI שלא נמדדו הם תקלת חשבון/מפתח, לא פער שיווקי (" + engine_note +
+                            "). מנוע שנמדד עם 0 ציטוטים מופיע כנמדד.")
     else:
         comp["aeo"] = None
         row(scored, "מנועי AI שנבדקו (לא אזכורים)", "לא נמדד", 3, None,
@@ -237,7 +246,7 @@ def build_scorecard(cur, prev, leads, seo_geo=None):
         mention = council_source_evidence.unbranded_mention_rates(date=evidence_date)
         if mention:
             detail = ", ".join(f"{name} {rate}" for name, rate in mention["by_engine"].items())
-            row(context, "שיעור אזכור לא-ממותג (מידע)", mention["pooled_pct"], "מידע", None, "%",
+            row(context, "שיעור אזכור לא-ממותג (מידע)", mention["pooled_pct"], None, None, "%",
                 window_from=mention["date"], window_to=mention["date"], snapshot_date=mention["date"],
                 by_engine=mention["by_engine"], engines_detail=detail)
     if seo_geo and seo_geo.get("aeo_engine_evidence"):
@@ -261,11 +270,18 @@ def build_scorecard(cur, prev, leads, seo_geo=None):
         window_from=social_from, window_to=social_to, snapshot_date=snap)
 
     # CONTEXT (not scored): engagement + impressions growth
-    imp_growth = round(((ct["impressions"] - pt["impressions"]) / pt["impressions"] * 100)
-                       if pt.get("impressions") else 0.0, 1)
+    # 14.11.2026: prior week 76 impressions → one 52k TikTok post read as "+70167% ✅".
+    # A % change on a near-zero base is noise, not growth.
+    prev_imp = pt.get("impressions") or 0
+    small_base = prev_imp < MIN_GROWTH_BASE_IMPRESSIONS
+    imp_growth = None if small_base else round((ct["impressions"] - prev_imp) / prev_imp * 100, 1)
     if cur.get("unavailable_networks") or prev.get("unavailable_networks"):
         row(context, "צמיחת חשיפות", "נתונים חלקיים", t["weekly_impressions_growth_pct"], False,
             window_from=social_from, window_to=social_to, snapshot_date=snap)
+    elif small_base:
+        row(context, "צמיחת חשיפות", "בסיס קטן מדי — לא בר השוואה", t["weekly_impressions_growth_pct"],
+            None, window_from=social_from, window_to=social_to, snapshot_date=snap,
+            previous_impressions=prev_imp)
     else:
         row(context, "צמיחת חשיפות", imp_growth, t["weekly_impressions_growth_pct"],
             imp_growth >= t["weekly_impressions_growth_pct"], "%",
@@ -625,16 +641,20 @@ def render_html(cur, scorecard, verdict, applied, cadence=None, report_date=None
         if s.get("ok") is False:
             net_rows += f"<tr><td>{label}</td><td colspan='6'>נתונים לא זמינים — נדרשת בדיקת חיבור</td></tr>"
             continue
+        reach_td = "<td>לא זמין</td>" if s.get("reach") is None else f"<td dir='ltr'>{s['reach']:,}</td>"
         cav = " <span dir='rtl' style='color:#b00'>(דיווח החשיפות חלקי; מדד המעורבות אינו אמין)</span>" if s.get("caveat") else ""
         net_rows += (f"<tr><td>{label}</td><td dir='ltr'>{s['posts']}</td><td dir='ltr'>{s['impressions']:,}</td>"
-                     f"<td dir='ltr'>{s['reach']:,}</td><td dir='ltr'>{s['interactions']:,}</td>"
+                     f"{reach_td}<td dir='ltr'>{s['interactions']:,}</td>"
                      f"<td>{str(s['engagement_rate_pct']) + '%' if not cav else 'לא אמין'}{cav}</td><td dir='ltr'>{sc.get(net,'—')}</td></tr>")
     def metric_row(r):
         window = (f"{r['window_from']} – {r['window_to']}"
                   if r.get("window_from") and r.get("window_to") else "—")
         snap = r.get("snapshot_date") or "—"
-        return (f"<tr><td>{escape(str(r['metric']).replace('Engagement rate', 'מעורבות'))}</td>"
-                f"{cell(r['value'], r['unit'])}{cell(r['target'], r['unit'])}"
+        note = (f"<br><span dir='rtl' style='color:#b00;font-size:12px;'>{escape(str(r['note']))}</span>"
+                if r.get("note") else "")
+        return (f"<tr><td>{escape(str(r['metric']).replace('Engagement rate', 'מעורבות'))}{note}</td>"
+                f"{cell(r['value'], r['unit'])}"
+                f"{'<td>—</td>' if r['target'] in (None, 'מידע') else cell(r['target'], r['unit'])}"
                 f"<td dir='ltr'>{escape(window)}</td><td dir='ltr'>{escape(str(snap))}</td>"
                 f"<td>{r['status']}</td></tr>")
     sb_rows = "".join(metric_row(r) for r in scorecard["scored_rows"])

@@ -26,6 +26,25 @@ def citation_basis(value):
     return None
 
 
+def engine_failure_reason(errors):
+    """Hebrew reason an engine was not measured, from the monitor's error strings.
+
+    An unmeasured engine is an account/key problem, not a 0-citation result (12.11.2026:
+    ChatGPT 429 no credits, Gemini 401 invalid key read as a marketing gap)."""
+    text = ' '.join(errors).strip()
+    if '429' in text and re.search(r'credit|quota', text, re.I):
+        return 'אין קרדיט'
+    if '402' in text:
+        return 'בעיית חיוב'
+    if '401' in text or '403' in text or re.search(r'api key not valid|invalid api key', text, re.I):
+        return 'מפתח לא תקין'
+    if '429' in text:
+        return 'חסימת קצב'
+    if text:
+        return 'שגיאת API'
+    return 'לא נמדד (סיבה לא ידועה)'
+
+
 def engine_evidence(path=None, today=None):
     today = datetime.date.fromisoformat(today or datetime.date.today().isoformat())
     try:
@@ -63,10 +82,17 @@ def engine_evidence(path=None, today=None):
                          'cited': direct + labels > 0}
     expected = EXPECTED_MODELS - set(skipped)
     complete = bool(expected) and set(engines) == expected
+    errors = [e for e in latest.get('errors', []) if isinstance(e, str)]
+    models = latest.get('models', {})
+    failed = {name: engine_failure_reason(
+                  [e for e in errors if e.startswith(name + '/') or e.startswith(name + ':')]
+                  + [str((models.get(name) or {}).get('degraded_reason') or '')])
+              for name in sorted(expected - set(engines))}
     return {'ok': complete, 'reason': '' if complete else 'Partial grounded engine coverage',
             'date': latest['date'], 'battery_version': latest.get('battery_version'),
             'engines': engines, 'measured_engines': len(engines),
             'expected_engines': len(expected), 'skipped_schedule': skipped,
+            'failed_engines': failed,
             'cited_engines': sum(v['cited'] for v in engines.values()),
             'definition': 'Distinct engines citing UPE in grounded nonbranded answers; direct URLs and grounding source-domain labels distinguished. Not recommendation rank. skipped_schedule is not a failure.'}
 
