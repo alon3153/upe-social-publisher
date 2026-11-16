@@ -1,42 +1,20 @@
 {
-  "updated_at": "2026-11-15",
+  "updated_at": "2026-11-16",
   "scores": {
-    "instagram": 42,
-    "facebook": 38,
-    "tiktok": 78,
-    "linkedin": 22,
-    "youtube": 15,
-    "google_organic_geo": 35,
+    "instagram": 32,
+    "facebook": 35,
+    "tiktok": 72,
+    "linkedin": 18,
+    "youtube": 10,
+    "google_organic_geo": 38,
     "overall": 62
   },
   "recommendations": [
     {
       "category": "gated",
       "priority": "P0",
-      "action_key": "salesforce-attribution-fix",
-      "owner": "אלון מאשר; צוות מכירות/אופרציות מיישם",
-      "success_metric": "ייחוס לידים: בסיס לא-מיוחס; יעד המדד מקור אמיתי. יש להשוות תקופות תואמות.",
-      "evidence": {
-        "source": "scorecard",
-        "metric": "ייחוס לידים",
-        "value": "לא-מיוחס",
-        "target": "מקור אמיתי",
-        "unit": "",
-        "status": "❌"
-      },
-      "evidence_url": null,
-      "target_url": null,
-      "action": "הפץ את טיוטת הנחיית הייחוס הקיימת (lead-source-guidance.md, status: draft_ready, לא הופצה) — הגדר כלל: לפני שמירת רשומה כ-Other/(none), בדוק referrer + UTM ב-GA4/GSC. שינוי תווית אינו מוסיף ליד לספירה.",
-      "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
-      "channel": "leads",
-      "status": "candidate",
-      "detail": "הצעה לבדיקה על בסיס המדד המתועד; לא בוצע שינוי."
-    },
-    {
-      "category": "gated",
-      "priority": "P0",
       "action_key": "gemini-api-key-fix",
-      "owner": "אלון — פעולת חשבון/מפתח",
+      "owner": "אלון מתקן מפתח API; מערכת מודדת אוטומטית",
       "success_metric": "מנועי AI שנבדקו (לא אזכורים): בסיס 1; יעד המדד 2. יש להשוות תקופות תואמות.",
       "evidence": {
         "source": "scorecard",
@@ -48,7 +26,29 @@
       },
       "evidence_url": null,
       "target_url": null,
-      "action": "חדש/תקן את מפתח Gemini API כדי לאפשר מדידת AEO על מנוע שני — זו תקלת חשבון, לא פער שיווקי.",
+      "action": "חדש/תקן מפתח Gemini API (תקלת חשבון בלבד — לא פער שיווקי) כדי לאפשר מדידת AEO על מנוע שני ולעבור את היעד",
+      "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
+      "channel": "google_organic_geo",
+      "status": "candidate",
+      "detail": "הצעה לבדיקה על בסיס המדד המתועד; לא בוצע שינוי."
+    },
+    {
+      "category": "gated",
+      "priority": "P0",
+      "action_key": "salesforce-attribution-fix",
+      "owner": "מנהל RevOps/מכירות מפיץ; אלון מאשר",
+      "success_metric": "ייחוס לידים: בסיס לא-מיוחס; יעד המדד מקור אמיתי. יש להשוות תקופות תואמות.",
+      "evidence": {
+        "source": "scorecard",
+        "metric": "ייחוס לידים",
+        "value": "לא-מיוחס",
+        "target": "מקור אמיתי",
+        "unit": "",
+        "status": "❌"
+      },
+      "evidence_url": null,
+      "target_url": null,
+      "action": "הפץ את טיוטת הנחיית ייחוס המקורות הקיימת (deliverable: lead-source-guidance.md, status: draft_ready, לא הופצה) — הגדר כלל עבור Other ו-(none): בדוק referrer + UTM ב-GA4/GSC לפני שמירה; תיוג רטרואקטיבי לא מוסיף לידים לספירה",
       "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
       "channel": "google_organic_geo",
       "status": "candidate",
@@ -58,7 +58,7 @@
       "category": "gated",
       "priority": "P1",
       "action_key": "top3-keyword-ranking-push",
-      "owner": "צוות SEO מכין טיוטה; אלון מאשר לפני פרסום",
+      "owner": "SEO lead מכין טיוטה; אלון מאשר לפני פרסום",
       "success_metric": "מונחי מעקב ב-Top-3: בסיס 1; יעד המדד 3. יש להשוות תקופות תואמות.",
       "evidence": {
         "source": "scorecard",
@@ -68,9 +68,9 @@
         "unit": "",
         "status": "❌"
       },
-      "evidence_url": "https://www.pathandcompass.com/2026-seo-changes-event-companies-need-to-know/",
-      "target_url": "https://upe.co.il/הפקת-אירועי-חברה/",
-      "action": "בדוק update_required מתועד לדף הפקת-אירועי-חברה (pos.17.3, 403 GSC impressions, מחוץ ל-cooldown). אם קיים issue פתוח — הכן טיוטת עדכון ממוקד: תשובה-ראשית בפסקה הראשונה, FAQ תואם כוונת קנייה (מה כולל שירות מקצה לקצה, כמה עולה, איך בוחרים). אין לשכתב ללא issue מתועד עם update_required=true.",
+      "evidence_url": null,
+      "target_url": "https://upe.co.il/%D7%94%D7%A4%D7%A7%D7%AA-%D7%90%D7%99%D7%A8%D7%95%D7%A2%D7%99-%D7%97%D7%91%D7%A8%D7%94/",
+      "action": "בדוק update_required מתועד לדף הפקת-אירועי-חברה (GSC opportunity pos ~17, 412 impressions, מחוץ ל-cooldown); אם issue פתוח — הכן טיוטת עדכון ממוקד: תשובה-ראשית, FAQ תואם כוונת קנייה, internal link מ-blog רלוונטי קיים. אין לשכתב דפים ב-cooldown (הפקת-כנסים, כנסים-לחברות-הייטק — עד 2026-11-29)",
       "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
       "channel": "google_organic_geo",
       "status": "candidate",
@@ -78,23 +78,23 @@
     },
     {
       "category": "gated",
-      "priority": "P2",
-      "action_key": "tiktok-behind-scenes",
-      "owner": "צוות תוכן מצלם ועורך; אלון מאשר לפני פרסום",
-      "success_metric": "נוכחות סושיאל (רצפה): בסיס 11.0; יעד המדד 5. יש להשוות תקופות תואמות.",
+      "priority": "P1",
+      "action_key": "linkedin-executive-posting",
+      "owner": "מנכ\"ל/מנהל בכיר מכין תוכן; אלון מאשר כל פוסט",
+      "success_metric": "מונחי מעקב ב-Top-3: בסיס 1; יעד המדד 3. יש להשוות תקופות תואמות.",
       "evidence": {
         "source": "scorecard",
-        "metric": "נוכחות סושיאל (רצפה)",
-        "value": 11.0,
-        "target": 5,
+        "metric": "מונחי מעקב ב-Top-3",
+        "value": 1,
+        "target": 3,
         "unit": "",
-        "status": "✅"
+        "status": "❌"
       },
-      "evidence_url": "https://www.pathandcompass.com/2026-seo-changes-event-companies-need-to-know/",
+      "evidence_url": "https://chiefcontentmarketer.com/linkedin-organic-reach-in-2026-5-tactics-b2b-leaders-are-using-to-win/",
       "target_url": null,
-      "action": "הכן 3 קליפים vertical (45-60 שניות) מאחורי הקלעים של הפקה אמיתית קרובה — Hook ב-3 השניות הראשונות, ללא תסריט מלאכותי. כל קליפ שאושר מועלה גם ל-Instagram Reels לחיסכון בתפוקה. אין לפרסם ללא אישור מפורש.",
+      "action": "הפעל initiative d477123a: הכן טיוטות carousel קצר (3 שקפים) מנתון ממשי של הפקה + שאלה לקהל CMO/HR — פורמט שמתגמל saves ו-comments ב-LinkedIn 2026; כל פוסט ממתין לאישור מפורש לפני פרסום",
       "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
-      "channel": "tiktok",
+      "channel": "linkedin",
       "status": "candidate",
       "detail": "הצעה לבדיקה על בסיס המדד המתועד; לא בוצע שינוי."
     }
