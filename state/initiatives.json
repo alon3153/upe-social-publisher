@@ -19026,12 +19026,12 @@
     "created": "2026-09-30",
     "updated": "2026-10-06",
     "kind": "recommendation",
-    "priority": "P2",
+    "priority": "P1",
     "channel": "tiktok",
     "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
     "action_key": "tiktok-behind-scenes",
-    "owner": "צוות תוכן מצלם ועורך; אלון מאשר לפני פרסום",
-    "success_metric": "נוכחות סושיאל (רצפה): בסיס 11.0; יעד המדד 5. יש להשוות תקופות תואמות.",
+    "owner": "צוות ייצור מכין; Alon מאשר כל קליפ לפני פרסום",
+    "success_metric": "נוכחות סושיאל (רצפה): בסיס 13.0; יעד המדד 5. יש להשוות תקופות תואמות.",
     "consecutive_failures": 0,
     "merged_from": [
       {
@@ -19120,7 +19120,7 @@
     "channel": "google_organic_geo",
     "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
     "action_key": "salesforce-attribution-fix",
-    "owner": "מנהל RevOps/מכירות מפיץ; אלון מאשר",
+    "owner": "מנהל מכירות/RevOps מכין; Alon מאשר ומפיץ",
     "success_metric": "ייחוס לידים: בסיס לא-מיוחס; יעד המדד מקור אמיתי. יש להשוות תקופות תואמות.",
     "consecutive_failures": 0
   },
@@ -19172,11 +19172,11 @@
     "created": "2026-11-09",
     "updated": "2026-11-10",
     "kind": "recommendation",
-    "priority": "P1",
+    "priority": "P0",
     "channel": "google_organic_geo",
     "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
     "action_key": "top3-keyword-ranking-push",
-    "owner": "SEO lead מכין טיוטה; אלון מאשר לפני פרסום",
+    "owner": "SEO/תוכן מכין טיוטה; Alon בודק issue פתוח ומאשר לפני פרסום",
     "success_metric": "מונחי מעקב ב-Top-3: בסיס 1; יעד המדד 3. יש להשוות תקופות תואמות.",
     "consecutive_failures": 0
   },
