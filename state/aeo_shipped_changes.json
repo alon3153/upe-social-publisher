@@ -206,6 +206,22 @@
       "source": "https://github.com/alon3153/uproduction-astro/commit/cc1f3fc4efb6e97ef4409cf90805e07dbc8e9f68",
       "change_evidence": "PR266 merged and deployed November17. Added a large-network-versus-boutique decision table naming Uproduction Events as the boutique example, plus one answer-first FAQ. No change to service intent or prices.",
       "last_change_verified_at": "2026-11-17"
+    },
+    {
+      "url": "https://upe.co.il/en/corporate-event-agencies-europe-mid-size-companies/",
+      "last_changed": "2026-11-17",
+      "evaluation_not_before": "2026-12-15",
+      "source": "https://github.com/alon3153/uproduction-astro/commit/0881bbaeb8f2d38fdcb5f51771a89922f88957f9",
+      "change_evidence": "PR255 merged and deployed November17. New page from the AEO content run of November15; live and returning 200 with a self-referencing canonical.",
+      "last_change_verified_at": "2026-11-17"
+    },
+    {
+      "url": "https://upe.co.il/dmc/",
+      "last_changed": "2026-11-17",
+      "evaluation_not_before": "2026-12-15",
+      "source": "https://github.com/alon3153/uproduction-astro/commit/0881bbaeb8f2d38fdcb5f51771a89922f88957f9",
+      "change_evidence": "PR255 merged and deployed November17. New page from the AEO content run of November15; live and returning 200 with a self-referencing canonical.",
+      "last_change_verified_at": "2026-11-17"
     }
   ],
   "verified_existing_pages": [
