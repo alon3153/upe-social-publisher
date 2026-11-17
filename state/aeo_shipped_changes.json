@@ -1417,7 +1417,9 @@
       ],
       "changed_at": "2026-11-01",
       "collect_not_before": "2026-12-02",
-      "note": "Conservative restart for new opening/internal linking; prior windows preserved in proposed config. Deployed config still reports source_changed_needs_review until merge."
+      "note": "Conservative restart for new opening/internal linking; prior windows preserved in proposed config. Deployed config still reports source_changed_needs_review until merge.",
+      "resolved_at": "2026-11-17",
+      "resolution": "PR231 merged November14; no source drift in November16 cloud report."
     },
     "aeo": {
       "daily_date": "2026-11-04",
@@ -1743,7 +1745,9 @@
       "head": "fe3ff35cec5dbee7db823d284ca7888ed3e81bfb",
       "checks": "success",
       "deployed_source_drift_pages": 4,
-      "note": "Existing tested fix awaits authorized merge; no duplicate fix or protection bypass."
+      "note": "Existing tested fix awaits authorized merge; no duplicate fix or protection bypass.",
+      "resolved_at": "2026-11-17",
+      "resolution": "PR231 merged November14; no source drift in November16 cloud report."
     },
     "aeo": {
       "weekly_date": "2026-11-08",
@@ -1770,5 +1774,312 @@
       "dir_icca_mpi_hb": "Not due: next_review_at November11; preserve November4 evidence and historical approval."
     },
     "decision": "No page rewrite from these sparse results. Spanish Barcelona mean position improved 16 to 5.76 on 19 versus17 impressions, with zero clicks in both windows. Incentive impressions increased 56 to104 but clicks fell1 to0 and mean position worsened14.25 to27.18. No causal ranking or business uplift established."
+  },
+  "measurement_review_2026_11_17": {
+    "reviewed_at": "2026-11-17",
+    "source_review_fix": {
+      "pr": "https://github.com/alon3153/uproduction-astro/pull/231",
+      "state": "merged",
+      "merged_at": "2026-11-14T12:57:06Z",
+      "cloud_report_date": "2026-11-16",
+      "source_drift_pages": 0
+    },
+    "category": {
+      "measured_at": "2026-11-16T05:27:47.311556+00:00",
+      "method": "serpapi-google",
+      "cohort": "aaf546d73c2324a7",
+      "metric": "first_page_organic_visibility",
+      "top10": {
+        "verified_queries": 12,
+        "found": 3,
+        "score": null
+      },
+      "context": {
+        "en": {
+          "gl": "es",
+          "hl": "en"
+        },
+        "es": {
+          "gl": "es",
+          "hl": "es"
+        },
+        "he": {
+          "gl": "il",
+          "hl": "iw"
+        },
+        "device": "desktop",
+        "scope": "first-page-organic-up-to-10",
+        "max_results": 10
+      },
+      "engines": {
+        "google": {
+          "measured": 30,
+          "total": 30,
+          "found": 3,
+          "score": 10.0
+        },
+        "bing": {
+          "measured": 0,
+          "total": 30,
+          "found": null,
+          "score": null
+        },
+        "perplexity": {
+          "measured": 0,
+          "total": 30,
+          "found": null,
+          "score": null
+        }
+      },
+      "status": "complete",
+      "by_category": {
+        "authority": {
+          "found": 0,
+          "measured": 1,
+          "total": 1,
+          "score": 0.0
+        },
+        "brand": {
+          "found": 1,
+          "measured": 3,
+          "total": 3,
+          "score": 33.3
+        },
+        "content": {
+          "found": 1,
+          "measured": 5,
+          "total": 5,
+          "score": 20.0
+        },
+        "local": {
+          "found": 0,
+          "measured": 4,
+          "total": 4,
+          "score": 0.0
+        },
+        "service": {
+          "found": 1,
+          "measured": 17,
+          "total": 17,
+          "score": 5.9
+        }
+      },
+      "by_language": {
+        "en": {
+          "found": 3,
+          "measured": 15,
+          "total": 15,
+          "score": 20.0
+        },
+        "es": {
+          "found": 0,
+          "measured": 8,
+          "total": 8,
+          "score": 0.0
+        },
+        "he": {
+          "found": 0,
+          "measured": 7,
+          "total": 7,
+          "score": 0.0
+        }
+      },
+      "by_language_group": {
+        "en_es": {
+          "found": 3,
+          "measured": 23,
+          "total": 23,
+          "score": 13.0
+        },
+        "he": {
+          "found": 0,
+          "measured": 7,
+          "total": 7,
+          "score": 0.0
+        }
+      },
+      "rank_changes": [
+        {
+          "q": "best corporate event company in Israel",
+          "lang": "en",
+          "before": 7,
+          "now": 8,
+          "change": -1
+        },
+        {
+          "q": "incentive travel Israel to Europe",
+          "lang": "en",
+          "before": 6,
+          "now": null,
+          "change": null
+        },
+        {
+          "q": "MICE services Israel",
+          "lang": "en",
+          "before": 6,
+          "now": 4,
+          "change": 2
+        },
+        {
+          "q": "best corporate retreat destinations Europe 2026",
+          "lang": "en",
+          "before": null,
+          "now": 7,
+          "change": null
+        }
+      ],
+      "comparison_baseline": {
+        "measured_at": "2026-11-13T05:32:09.619462+00:00",
+        "method": "serpapi-google",
+        "cohort": "aaf546d73c2324a7",
+        "context": {
+          "en": {
+            "gl": "es",
+            "hl": "en"
+          },
+          "es": {
+            "gl": "es",
+            "hl": "es"
+          },
+          "he": {
+            "gl": "il",
+            "hl": "iw"
+          },
+          "device": "desktop",
+          "scope": "first-page-organic-up-to-10",
+          "max_results": 10
+        }
+      },
+      "entered_first_page": [
+        {
+          "q": "best corporate retreat destinations Europe 2026",
+          "lang": "en"
+        }
+      ],
+      "exited_first_page": [
+        {
+          "q": "incentive travel Israel to Europe",
+          "lang": "en"
+        }
+      ],
+      "comparison": "comparable",
+      "unmeasured_reasons": [],
+      "provider_account": {
+        "total_searches_left": 745,
+        "plan_renewal_date": "2026-11-21"
+      }
+    },
+    "new_boutique_comparison": {
+      "url": "https://upe.co.il/en/boutique-global-corporate-conference-production/",
+      "source_path": "src/pages/en/boutique-global-corporate-conference-production.astro",
+      "changed_at": "2026-10-11",
+      "reviewed_source_commit": "53075605592fca6b16a849ab03ea645d51021768",
+      "change_evidence": "PR202 October11 removed the six-continents offering claim. Conservatively reset for this scope correction, consistently with the comparison pages September28 review.",
+      "source_review_date": "2026-10-13",
+      "historical_baseline": {
+        "change_date": "2026-09-12",
+        "pre_window": {
+          "start": "2026-08-15",
+          "end": "2026-09-11"
+        },
+        "clicks": 0,
+        "impressions": 16,
+        "ctr": 0.0,
+        "position": 51.5,
+        "note": "September13 frozen final-data evidence. Compare only when windows match; otherwise retain as history, not current baseline."
+      },
+      "windows": {
+        "before": {
+          "startDate": "2026-09-13",
+          "endDate": "2026-10-10"
+        },
+        "after": {
+          "startDate": "2026-10-12",
+          "endDate": "2026-11-08"
+        }
+      },
+      "reviewed_at": "2026-11-16",
+      "metrics": {
+        "before": {
+          "clicks": 0,
+          "impressions": 22,
+          "ctr": 0,
+          "position": 16.590909090909093
+        },
+        "after": {
+          "clicks": 0,
+          "impressions": 6,
+          "ctr": 0,
+          "position": 2.5
+        }
+      },
+      "status": "measured",
+      "observed_source_commit": "53075605592fca6b16a849ab03ea645d51021768",
+      "collect_not_before": "2026-11-11",
+      "interpretation": "Matched 28-day windows; observational, not causal evidence. Sparse data cannot establish ranking lift."
+    },
+    "conference_change": {
+      "url": "https://upe.co.il/en/choosing-global-corporate-event-conference-production-company/",
+      "source_path": "src/content/blog/en/choosing-global-corporate-event-conference-production-company.md",
+      "changed_at": "2026-11-14",
+      "reviewed_source_commit": "d595b1390b4b5501c5e9dac33ae5028bccab3c65",
+      "change_evidence": "Merged PR219 on November14 (merge commit 06a3af353326f01517edd76d15038f5de33b4009, page commit d595b1390b4b5501c5e9dac33ae5028bccab3c65): added a \"When to start the selection process\" lead-time section and one insurance/customs line folded from held draft seo-en-039; PR218 redirects /en/choosing-event-production-company/ here. Substantive change; restart the observation window from the production deploy date. Frontmatter dateModified (2026-10-19) predates publication.",
+      "source_review_date": "2026-11-14",
+      "prior_review_windows": [
+        {
+          "changed_at": "2026-09-23",
+          "reviewed_source_commit": "374674c941c201c04ce725e291b8545c8f6667b8",
+          "change_evidence": "Alon-approved substantive AEO opening, commit 265e340ae466e242307012e1af6c0d7ac2359214",
+          "windows": {
+            "before": {
+              "startDate": "2026-08-26",
+              "endDate": "2026-09-22"
+            },
+            "after": {
+              "startDate": "2026-09-24",
+              "endDate": "2026-10-21"
+            }
+          },
+          "note": "Historical window preserved. Numeric age/founding wording and contact email corrections do not change the service intent or reset this evaluation window. Source changed after this window ended (PR219); do not reinterpret this record as measured metrics."
+        }
+      ],
+      "windows": {
+        "before": {
+          "startDate": "2026-10-17",
+          "endDate": "2026-11-13"
+        },
+        "after": {
+          "startDate": "2026-11-15",
+          "endDate": "2026-12-12"
+        }
+      },
+      "reviewed_at": "2026-11-16",
+      "metrics": null,
+      "status": "waiting_final_data",
+      "observed_source_commit": "d595b1390b4b5501c5e9dac33ae5028bccab3c65",
+      "collect_not_before": "2026-12-15"
+    },
+    "aeo_recovery": {
+      "daily_date": "2026-11-16",
+      "answers_by_engine": {
+        "claude": 32,
+        "chatgpt": 32,
+        "gemini": 32
+      },
+      "errors": 0,
+      "note": "Fresh full daily coverage supersedes prior provider-credit/key blockers. Do not request another payment or credential fix from stale November15 evidence. This is measurement recovery, not ranking improvement."
+    },
+    "council": {
+      "date": "2026-11-16",
+      "json_and_html_verified_on_main": true,
+      "gsc_week": [
+        "2026-11-10",
+        "2026-11-16"
+      ],
+      "inclusive_days": 7,
+      "ai_source_date": "2026-11-15",
+      "note": "Council snapshot predates the November16 full daily run; retained as source-dated history, not overwritten or rescored."
+    },
+    "decision": "No content rewrite. First-page visibility remains3/30. Boutique page comparison has only6 post-window impressions and0 clicks; improved average position is insufficient proof of lift. Respect December2 reviewed windows and December15 conference review following actual November14 merge/redirect."
   }
 }
