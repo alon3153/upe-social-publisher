@@ -1,74 +1,23 @@
 {
-  "updated_at": "2026-11-16",
+  "updated_at": "2026-11-17",
   "source": "daily-council",
   "directives": [
     {
       "category": "safe_auto",
-      "action": "ניסוי קפשן-חיפוש ב-TikTok: הוסף 3-5 מונחי חיפוש ספציפיים בעברית/אנגלית לכותרת הפוסט הבא ('הפקת אירועי חברה', 'טיול תמריץ לעובדים', 'נופש חברה בחו\"ל') — TikTok Search הפך לערוץ גילוי בכוונת רכש גבוהה ב-2026",
+      "action": "ניסוי TikTok/Instagram — בדוק אם שיתוף קליפי TikTok (שהגיעו ל-52,834 חשיפות) כ-Reels Instagram מגדיל את 251 חשיפות ה-Instagram הנוכחיות; מדוד reach/פוסט לכל פורמט בנפרד ל-4 שבועות.",
       "detail": "הצעה לבדיקה על בסיס המדד המתועד; לא בוצע שינוי.",
       "channel": "tiktok",
       "evidence": {
         "source": "scorecard",
         "metric": "נוכחות סושיאל (רצפה)",
-        "value": 10.0,
+        "value": 13.0,
         "target": 5,
         "unit": "",
         "status": "✅"
       },
       "status": "candidate",
       "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
-      "success_metric": "נוכחות סושיאל (רצפה): בסיס 10.0; יעד המדד 5. יש להשוות תקופות תואמות."
-    },
-    {
-      "category": "safe_auto",
-      "action": "מיפוי הזדמנויות opportunity מחוץ ל-cooldown: בדוק אם לדף הפקת-אירועי-חברה (pos ~17, 412 impressions) ודף גיבוש (pos 4.5, 607 impressions) יש update_required מתועד — רק אז הכן טיוטת עדכון ממוקד תשובה-ראשית + FAQ קנייתי",
-      "detail": "הצעה לבדיקה על בסיס המדד המתועד; לא בוצע שינוי.",
-      "channel": "google_organic_geo",
-      "evidence": {
-        "source": "scorecard",
-        "metric": "קליקים אורגניים/שבוע",
-        "value": 63,
-        "target": 300,
-        "unit": "",
-        "status": "❌"
-      },
-      "status": "candidate",
-      "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
-      "success_metric": "קליקים אורגניים/שבוע: בסיס 63; יעד המדד 300. יש להשוות תקופות תואמות."
-    },
-    {
-      "category": "safe_auto",
-      "action": "ניסוי 'behind the scenes 60 שניות' — TikTok-first, שיתוף ל-Instagram Reels: הפק קליפ אחד מהפקה קרובה ובדוק האם תבנית ה-BTS (פנים מאחורי הקלעים אמיתיים, ללא תסריט) שומרת על engagement כמו הפוסט הנוכחי — לא הבטחה לחזרת הביצוע",
-      "detail": "הצעה לבדיקה על בסיס המדד המתועד; לא בוצע שינוי.",
-      "channel": "tiktok",
-      "evidence": {
-        "source": "scorecard",
-        "metric": "Engagement rate",
-        "value": 10.88,
-        "target": 2.0,
-        "unit": "%",
-        "status": "✅"
-      },
-      "status": "candidate",
-      "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
-      "success_metric": "Engagement rate: בסיס 10.88; יעד המדד 2.0. יש להשוות תקופות תואמות."
-    },
-    {
-      "category": "safe_auto",
-      "action": "הכן הנחיית נושאים לתוכן Instagram שבועי: 2 פוסטים/שבוע בנושאי 'case insight' + 'destination reveal' — בדוק לאחר 4 שבועות האם reach/post עולה מ-139 הנוכחי; ER נמוך ב-Israeli-B2B צפוי ואינו בעיה דחופה",
-      "detail": "הצעה לבדיקה על בסיס המדד המתועד; לא בוצע שינוי.",
-      "channel": "instagram",
-      "evidence": {
-        "source": "scorecard",
-        "metric": "נוכחות סושיאל (רצפה)",
-        "value": 10.0,
-        "target": 5,
-        "unit": "",
-        "status": "✅"
-      },
-      "status": "candidate",
-      "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
-      "success_metric": "נוכחות סושיאל (רצפה): בסיס 10.0; יעד המדד 5. יש להשוות תקופות תואמות."
+      "success_metric": "נוכחות סושיאל (רצפה): בסיס 13.0; יעד המדד 5. יש להשוות תקופות תואמות."
     }
   ],
   "channel_cadence": {
@@ -77,7 +26,7 @@
       "reason": "מכסה מוצעת לבדיקה בתקופת המדידה; אין מסקנה סיבתית על אלגוריתם."
     },
     "instagram": {
-      "max_posts_per_week": 3,
+      "max_posts_per_week": 4,
       "reason": "מכסה מוצעת לבדיקה בתקופת המדידה; אין מסקנה סיבתית על אלגוריתם."
     },
     "linkedin": {
@@ -89,16 +38,16 @@
       "reason": "מכסה מוצעת לבדיקה בתקופת המדידה; אין מסקנה סיבתית על אלגוריתם."
     },
     "youtube": {
-      "max_posts_per_week": 1,
+      "max_posts_per_week": 2,
       "reason": "מכסה מוצעת לבדיקה בתקופת המדידה; אין מסקנה סיבתית על אלגוריתם."
     }
   },
   "channel_priority": [
     "tiktok",
-    "facebook",
+    "youtube",
     "instagram",
-    "linkedin",
-    "youtube"
+    "facebook",
+    "linkedin"
   ],
   "channel_plan_basis": [
     "facebook: מכסה מוצעת לבדיקה בתקופת המדידה; אין מסקנה סיבתית על אלגוריתם.",
