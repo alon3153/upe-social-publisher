@@ -145,11 +145,11 @@
     },
     {
       "url": "https://upe.co.il/en/choosing-global-corporate-event-conference-production-company/",
-      "last_changed": "2026-09-23",
-      "evaluation_not_before": "2026-10-21",
-      "source": "https://github.com/alon3153/uproduction-astro/commit/374674c941c201c04ce725e291b8545c8f6667b8",
-      "last_change_verified_at": "2026-10-13",
-      "change_evidence": "Alon-approved substantive AEO opening, commit 265e340ae466e242307012e1af6c0d7ac2359214"
+      "last_changed": "2026-11-17",
+      "evaluation_not_before": "2026-12-15",
+      "source": "https://github.com/alon3153/uproduction-astro/commit/cc1f3fc4efb6e97ef4409cf90805e07dbc8e9f68",
+      "last_change_verified_at": "2026-11-17",
+      "change_evidence": "PR266 merged and deployed November17. Added a large-network-versus-boutique decision table naming Uproduction Events as the boutique example, plus one answer-first FAQ. No change to service intent or prices. Previous entry: last_changed 2026-09-23, https://github.com/alon3153/uproduction-astro/commit/374674c941c201c04ce725e291b8545c8f6667b8"
     },
     {
       "url": "https://upe.co.il/en/corporate-events-barcelona-guide/",
@@ -190,6 +190,22 @@
       "source": "https://github.com/alon3153/uproduction-astro/commit/7b76e00b42e24249cc9f3ca13804698729ae8c8d",
       "change_evidence": "September27 e4d68801b22aea8c6f8e3f651d699969c5462aa1 replaced 20+ European countries with 130+ destinations. Conservatively reset for geographic-scope correction; subsequent present-perfect edit is minor.",
       "last_change_verified_at": "2026-10-13"
+    },
+    {
+      "url": "https://upe.co.il/es/guia-elegir-productora-eventos-corporativos-conferencias-globales/",
+      "last_changed": "2026-11-17",
+      "evaluation_not_before": "2026-12-15",
+      "source": "https://github.com/alon3153/uproduction-astro/commit/cc1f3fc4efb6e97ef4409cf90805e07dbc8e9f68",
+      "change_evidence": "PR266 merged and deployed November17. Added a large-network-versus-boutique decision table naming Uproduction Events as the boutique example, plus one answer-first FAQ. No change to service intent or prices.",
+      "last_change_verified_at": "2026-11-17"
+    },
+    {
+      "url": "https://upe.co.il/איך-בוחרים-חברת-הפקה-לאירוע-גלובלי/",
+      "last_changed": "2026-11-17",
+      "evaluation_not_before": "2026-12-15",
+      "source": "https://github.com/alon3153/uproduction-astro/commit/cc1f3fc4efb6e97ef4409cf90805e07dbc8e9f68",
+      "change_evidence": "PR266 merged and deployed November17. Added a large-network-versus-boutique decision table naming Uproduction Events as the boutique example, plus one answer-first FAQ. No change to service intent or prices.",
+      "last_change_verified_at": "2026-11-17"
     }
   ],
   "verified_existing_pages": [
