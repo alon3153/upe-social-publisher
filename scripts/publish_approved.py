@@ -218,6 +218,16 @@ def _recover_linkedin_auth_failures(auth_cache):
     return recovered
 
 
+def _today_il():
+    from zoneinfo import ZoneInfo
+    return datetime.datetime.now(ZoneInfo("Asia/Jerusalem")).date().isoformat()
+
+
+def _not_due(row, today):
+    """True when the row carries a scheduled_date later than today (Israel time)."""
+    return (row.get("scheduled_date") or "")[:10] > today
+
+
 def publish_row(r, linkedin_target=None):
     net, account, day = r["network"], r["account"], r["day"]
     text = r["caption"]
@@ -261,8 +271,13 @@ def main():
     run_count = {}                                 # personal key -> published to it this run
     deferred = 0
     auth_held = 0
+    today = _today_il()
     for r in rows:
         label = f"day{r['day']} {r['network']}/{r['account']}"
+        if _not_due(r, today):
+            deferred += 1
+            print(f"HOLD {label} -> scheduled for {r['scheduled_date'][:10]}; stays approved")
+            continue
         li_target = None
         if r.get("network") == "linkedin":
             li_target = _linkedin_target(r.get("account"))
@@ -308,7 +323,7 @@ def main():
             print(f"ERR {label} -> {res.get('error')}")
     holds = []
     if deferred:
-        holds.append(f"held {deferred} personal-profile post(s) for next run")
+        holds.append(f"held {deferred} post(s) for a later run or date")
     if auth_held:
         holds.append(f"held {auth_held} LinkedIn post(s) for authorization repair")
     tail = f" ({'; '.join(holds)})" if holds else ""
