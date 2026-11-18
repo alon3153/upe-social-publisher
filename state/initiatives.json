@@ -18802,7 +18802,7 @@
     "channel": "leads",
     "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
     "action_key": "salesforce-attribution-fix",
-    "owner": "אלון מאשר; צוות מכירות/אופרציות מיישם",
+    "owner": "אחראי CRM מכין; Alon מאשר ומפיץ",
     "success_metric": "ייחוס לידים: בסיס לא-מיוחס; יעד המדד מקור אמיתי. יש להשוות תקופות תואמות."
   },
   "2769e4c7": {
@@ -18963,8 +18963,8 @@
     "channel": "linkedin",
     "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
     "action_key": "linkedin-executive-posting",
-    "owner": "מנכ\"ל/מנהל בכיר מכין תוכן; אלון מאשר כל פוסט",
-    "success_metric": "מונחי מעקב ב-Top-3: בסיס 1; יעד המדד 3. יש להשוות תקופות תואמות.",
+    "owner": "מנהל בכיר מכין טיוטה; Alon מאשר ומפרסם",
+    "success_metric": "נוכחות סושיאל (רצפה): בסיס 17.0; יעד המדד 5. יש להשוות תקופות תואמות.",
     "consecutive_failures": 0,
     "merged_from": [
       {
@@ -19026,12 +19026,12 @@
     "created": "2026-09-30",
     "updated": "2026-10-06",
     "kind": "recommendation",
-    "priority": "P1",
+    "priority": "P2",
     "channel": "tiktok",
     "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
     "action_key": "tiktok-behind-scenes",
-    "owner": "צוות ייצור מכין; Alon מאשר כל קליפ לפני פרסום",
-    "success_metric": "נוכחות סושיאל (רצפה): בסיס 13.0; יעד המדד 5. יש להשוות תקופות תואמות.",
+    "owner": "צוות הפקה מצלם; Alon מאשר כל קליפ",
+    "success_metric": "נוכחות סושיאל (רצפה): בסיס 17.0; יעד המדד 5. יש להשוות תקופות תואמות.",
     "consecutive_failures": 0,
     "merged_from": [
       {
@@ -19176,7 +19176,7 @@
     "channel": "google_organic_geo",
     "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
     "action_key": "top3-keyword-ranking-push",
-    "owner": "SEO/תוכן מכין טיוטה; Alon בודק issue פתוח ומאשר לפני פרסום",
+    "owner": "SEO drafts; Alon approves",
     "success_metric": "מונחי מעקב ב-Top-3: בסיס 1; יעד המדד 3. יש להשוות תקופות תואמות.",
     "consecutive_failures": 0
   },
