@@ -1,0 +1,56 @@
+name: Fix Canonical Facts In Live Posts
+
+on:
+  workflow_dispatch:
+    inputs:
+      apply:
+        description: "Edit the live posts (false = dry run, prints before/after)"
+        type: boolean
+        default: false
+      network:
+        description: "facebook | linkedin | instagram (empty = all)"
+        default: ""
+      account:
+        description: "Account label, e.g. li_spain (empty = all)"
+        default: ""
+      limit:
+        description: "Max posts (0 = all). Use 1 to trial an account."
+        default: "0"
+
+concurrency:
+  group: fix-canonical-facts
+  cancel-in-progress: false
+
+jobs:
+  fix:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    if: github.actor == 'alon3153'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - run: pip install -r requirements.txt
+      - name: Rewrite retired facts
+        env:
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
+          FB_UPRODUCTIONEVENTS_PAGE_TOKEN: ${{ secrets.FB_UPRODUCTIONEVENTS_PAGE_TOKEN }}
+          FB_UPRODUCTION_SPAIN_PAGE_TOKEN: ${{ secrets.FB_UPRODUCTION_SPAIN_PAGE_TOKEN }}
+          LINKEDIN_ACCESS_TOKEN: ${{ secrets.LINKEDIN_ACCESS_TOKEN }}
+          LINKEDIN_CLIENT_ID: ${{ secrets.LINKEDIN_CLIENT_ID }}
+          LINKEDIN_CLIENT_SECRET: ${{ secrets.LINKEDIN_CLIENT_SECRET }}
+          LINKEDIN_ORG_URN: ${{ secrets.LINKEDIN_ORG_URN }}
+          LINKEDIN_ORG_URN_SPAIN: ${{ secrets.LINKEDIN_ORG_URN_SPAIN }}
+          LINKEDIN_MEMBER_URN: ${{ secrets.LINKEDIN_MEMBER_URN }}
+          NETWORK: ${{ inputs.network }}
+          ACCOUNT: ${{ inputs.account }}
+          LIMIT: ${{ inputs.limit }}
+          APPLY: ${{ inputs.apply }}
+        run: |
+          args=(--limit "$LIMIT")
+          [ -n "$NETWORK" ] && args+=(--network "$NETWORK")
+          [ -n "$ACCOUNT" ] && args+=(--account "$ACCOUNT")
+          [ "$APPLY" = "true" ] && args+=(--apply)
+          python3 scripts/fix_canonical_facts.py "${args[@]}"
