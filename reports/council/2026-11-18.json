@@ -1,0 +1,693 @@
+{
+  "date": "2026-11-18",
+  "scorecard": {
+    "rows": [
+      {
+        "metric": "לידים לפי ההגדרה התפעולית (30 ימים)",
+        "value": 14,
+        "target": 10,
+        "unit": "",
+        "status": "✅",
+        "window_from": "2026-10-20",
+        "window_to": "2026-11-18",
+        "snapshot_date": "2026-11-18"
+      },
+      {
+        "metric": "Website leads (not paid)",
+        "value": 4,
+        "target": 3,
+        "unit": "",
+        "status": "✅",
+        "window_from": "2026-10-20",
+        "window_to": "2026-11-18",
+        "snapshot_date": "2026-11-18"
+      },
+      {
+        "metric": "קליקים אורגניים/שבוע",
+        "value": 71,
+        "target": 300,
+        "unit": "",
+        "status": "❌",
+        "window_from": "2026-11-12",
+        "window_to": "2026-11-18",
+        "snapshot_date": "2026-11-18",
+        "weekly_avg_28d": 96.5
+      },
+      {
+        "metric": "מונחי מעקב ב-Top-3",
+        "value": 1,
+        "target": 3,
+        "unit": "",
+        "status": "❌",
+        "window_from": "2026-10-22",
+        "window_to": "2026-11-18",
+        "snapshot_date": "2026-11-18",
+        "tracked_terms": [
+          "טיולי חברה"
+        ]
+      },
+      {
+        "metric": "מנועי AI שנבדקו (לא אזכורים)",
+        "value": 2,
+        "target": 2,
+        "unit": "",
+        "status": "✅",
+        "window_from": "2026-11-17",
+        "window_to": "2026-11-17",
+        "snapshot_date": "2026-11-17",
+        "failed_engines": {},
+        "note": ""
+      },
+      {
+        "metric": "נוכחות סושיאל (רצפה)",
+        "value": 17.0,
+        "target": 5,
+        "unit": "",
+        "status": "✅",
+        "window_from": "2026-11-11",
+        "window_to": "2026-11-18",
+        "snapshot_date": "2026-11-18"
+      },
+      {
+        "metric": "ממוצע קליקים שבועי מ-28 יום (מידע)",
+        "value": 96.5,
+        "target": 300,
+        "unit": "",
+        "status": "—",
+        "window_from": "2026-10-22",
+        "window_to": "2026-11-18",
+        "snapshot_date": "2026-11-18"
+      },
+      {
+        "metric": "מונחי Top-3 בכל השאילתות (מידע)",
+        "value": 29,
+        "target": null,
+        "unit": "",
+        "status": "—",
+        "window_from": "2026-10-22",
+        "window_to": "2026-11-18",
+        "snapshot_date": "2026-11-18"
+      },
+      {
+        "metric": "שיעור אזכור לא-ממותג (מידע)",
+        "value": 34.4,
+        "target": null,
+        "unit": "%",
+        "status": "—",
+        "window_from": "2026-11-17",
+        "window_to": "2026-11-17",
+        "snapshot_date": "2026-11-17",
+        "by_engine": {
+          "claude": 38,
+          "gemini": 31
+        },
+        "engines_detail": "claude 38, gemini 31"
+      },
+      {
+        "metric": "שאלות עם ציטוט במנוע Perplexity (מדידה נפרדת)",
+        "value": 2,
+        "target": 7,
+        "unit": "",
+        "status": "—",
+        "window_from": "2026-11-18",
+        "window_to": "2026-11-18",
+        "snapshot_date": "2026-11-18"
+      },
+      {
+        "metric": "צמיחת חשיפות",
+        "value": 172.6,
+        "target": 10,
+        "unit": "%",
+        "status": "✅",
+        "window_from": "2026-11-11",
+        "window_to": "2026-11-18",
+        "snapshot_date": "2026-11-18"
+      },
+      {
+        "metric": "Engagement rate",
+        "value": 3.21,
+        "target": 2.0,
+        "unit": "%",
+        "status": "✅",
+        "window_from": "2026-11-11",
+        "window_to": "2026-11-18",
+        "snapshot_date": "2026-11-18"
+      },
+      {
+        "metric": "חשיפות (תקופה)",
+        "value": 180662,
+        "target": "↑",
+        "unit": "",
+        "status": "✅",
+        "window_from": "2026-11-11",
+        "window_to": "2026-11-18",
+        "snapshot_date": "2026-11-18"
+      },
+      {
+        "metric": "עדכניות snapshot אורגני (ימים)",
+        "value": 0,
+        "target": "≤8",
+        "unit": "",
+        "status": "✅",
+        "window_from": "2026-11-18",
+        "window_to": "2026-11-18",
+        "snapshot_date": "2026-11-18"
+      },
+      {
+        "metric": "ייחוס לידים",
+        "value": "לא-מיוחס",
+        "target": "מקור אמיתי",
+        "unit": "",
+        "status": "❌",
+        "window_from": "2026-10-20",
+        "window_to": "2026-11-18",
+        "snapshot_date": "2026-11-18"
+      }
+    ],
+    "scored_rows": [
+      {
+        "metric": "לידים לפי ההגדרה התפעולית (30 ימים)",
+        "value": 14,
+        "target": 10,
+        "unit": "",
+        "status": "✅",
+        "window_from": "2026-10-20",
+        "window_to": "2026-11-18",
+        "snapshot_date": "2026-11-18"
+      },
+      {
+        "metric": "Website leads (not paid)",
+        "value": 4,
+        "target": 3,
+        "unit": "",
+        "status": "✅",
+        "window_from": "2026-10-20",
+        "window_to": "2026-11-18",
+        "snapshot_date": "2026-11-18"
+      },
+      {
+        "metric": "קליקים אורגניים/שבוע",
+        "value": 71,
+        "target": 300,
+        "unit": "",
+        "status": "❌",
+        "window_from": "2026-11-12",
+        "window_to": "2026-11-18",
+        "snapshot_date": "2026-11-18",
+        "weekly_avg_28d": 96.5
+      },
+      {
+        "metric": "מונחי מעקב ב-Top-3",
+        "value": 1,
+        "target": 3,
+        "unit": "",
+        "status": "❌",
+        "window_from": "2026-10-22",
+        "window_to": "2026-11-18",
+        "snapshot_date": "2026-11-18",
+        "tracked_terms": [
+          "טיולי חברה"
+        ]
+      },
+      {
+        "metric": "מנועי AI שנבדקו (לא אזכורים)",
+        "value": 2,
+        "target": 2,
+        "unit": "",
+        "status": "✅",
+        "window_from": "2026-11-17",
+        "window_to": "2026-11-17",
+        "snapshot_date": "2026-11-17",
+        "failed_engines": {},
+        "note": ""
+      },
+      {
+        "metric": "נוכחות סושיאל (רצפה)",
+        "value": 17.0,
+        "target": 5,
+        "unit": "",
+        "status": "✅",
+        "window_from": "2026-11-11",
+        "window_to": "2026-11-18",
+        "snapshot_date": "2026-11-18"
+      }
+    ],
+    "context_rows": [
+      {
+        "metric": "ממוצע קליקים שבועי מ-28 יום (מידע)",
+        "value": 96.5,
+        "target": 300,
+        "unit": "",
+        "status": "—",
+        "window_from": "2026-10-22",
+        "window_to": "2026-11-18",
+        "snapshot_date": "2026-11-18"
+      },
+      {
+        "metric": "מונחי Top-3 בכל השאילתות (מידע)",
+        "value": 29,
+        "target": null,
+        "unit": "",
+        "status": "—",
+        "window_from": "2026-10-22",
+        "window_to": "2026-11-18",
+        "snapshot_date": "2026-11-18"
+      },
+      {
+        "metric": "שיעור אזכור לא-ממותג (מידע)",
+        "value": 34.4,
+        "target": null,
+        "unit": "%",
+        "status": "—",
+        "window_from": "2026-11-17",
+        "window_to": "2026-11-17",
+        "snapshot_date": "2026-11-17",
+        "by_engine": {
+          "claude": 38,
+          "gemini": 31
+        },
+        "engines_detail": "claude 38, gemini 31"
+      },
+      {
+        "metric": "שאלות עם ציטוט במנוע Perplexity (מדידה נפרדת)",
+        "value": 2,
+        "target": 7,
+        "unit": "",
+        "status": "—",
+        "window_from": "2026-11-18",
+        "window_to": "2026-11-18",
+        "snapshot_date": "2026-11-18"
+      },
+      {
+        "metric": "צמיחת חשיפות",
+        "value": 172.6,
+        "target": 10,
+        "unit": "%",
+        "status": "✅",
+        "window_from": "2026-11-11",
+        "window_to": "2026-11-18",
+        "snapshot_date": "2026-11-18"
+      },
+      {
+        "metric": "Engagement rate",
+        "value": 3.21,
+        "target": 2.0,
+        "unit": "%",
+        "status": "✅",
+        "window_from": "2026-11-11",
+        "window_to": "2026-11-18",
+        "snapshot_date": "2026-11-18"
+      },
+      {
+        "metric": "חשיפות (תקופה)",
+        "value": 180662,
+        "target": "↑",
+        "unit": "",
+        "status": "✅",
+        "window_from": "2026-11-11",
+        "window_to": "2026-11-18",
+        "snapshot_date": "2026-11-18"
+      },
+      {
+        "metric": "עדכניות snapshot אורגני (ימים)",
+        "value": 0,
+        "target": "≤8",
+        "unit": "",
+        "status": "✅",
+        "window_from": "2026-11-18",
+        "window_to": "2026-11-18",
+        "snapshot_date": "2026-11-18"
+      },
+      {
+        "metric": "ייחוס לידים",
+        "value": "לא-מיוחס",
+        "target": "מקור אמיתי",
+        "unit": "",
+        "status": "❌",
+        "window_from": "2026-10-20",
+        "window_to": "2026-11-18",
+        "snapshot_date": "2026-11-18"
+      }
+    ],
+    "coverage_percent": 100,
+    "warnings": [
+      "ספירת הלידים כוללת הזדמנויות ופניות טופס שלא סומנו כלא מתאימות; אינה הוכחה שכל פנייה הוסמכה במכירות.",
+      "מדידת מנועי AI מתאריך 2026-11-17: ציטוטי כתובת או תווית דומיין ממקור חיפוש, בשאלות לא ממותגות; אינה מדידת מקום ראשון. ChatGPT not scheduled (skipped_schedule) — לא תקלה."
+    ],
+    "components": {
+      "qualified_leads": 1.4,
+      "digital_leads": 1.3333333333333333,
+      "organic": 0.285,
+      "aeo": 1.0,
+      "social_presence": 1.0
+    },
+    "weighted": 86,
+    "passed": 4,
+    "total": 6,
+    "impressions_growth_pct": 172.6,
+    "posts_per_week": 17.0,
+    "lead_attribution": {
+      "by_source": {
+        "Other": 3,
+        "Web": 4,
+        "(none)": 1,
+        "Existing Customer": 4,
+        "Referral": 1,
+        "Web-Organic": 1
+      },
+      "dominant_source": "Web",
+      "dominant_share_pct": 29,
+      "attribution_gap": true,
+      "note": "4/14 ברשומות מקור עמום או ברירת מחדל. אין לשייך אותן לערוץ דיגיטלי מסוים ללא ראיה ואין להסיק שיעור המרה מחלוקת המקורות."
+    }
+  },
+  "verdict": {
+    "verdict_summary": "4 מתוך 6 מדדים הגיעו ליעד; כיסוי הנתונים 100%. הפערים והעמידה ביעדים מפורטים להלן. אין בנתונים הוכחה לסיבת השינוי או לרווחיות ערוץ.",
+    "scores": {
+      "instagram": 32,
+      "facebook": 10,
+      "tiktok": 72,
+      "linkedin": 12,
+      "youtube": 38,
+      "google_organic_geo": 28,
+      "overall": 62
+    },
+    "what_worked": [
+      "לידים לפי ההגדרה התפעולית (30 ימים): 14; יעד 10.",
+      "Website leads (not paid): 4; יעד 3.",
+      "מנועי AI שנבדקו (לא אזכורים): 2; יעד 2.",
+      "נוכחות סושיאל (רצפה): 17.0; יעד 5."
+    ],
+    "what_failed": [
+      "קליקים אורגניים/שבוע: 71; יעד 300.",
+      "מונחי מעקב ב-Top-3: 1; יעד 3."
+    ],
+    "auto_fixes": [
+      {
+        "category": "safe_auto",
+        "action": "ניסוי LinkedIn: פוסטים מפרופיל אישי של מנהל — נושא 'שאלה אחת שכל CMO שואל לפני שבוחר חברת הפקה' (טקסט בלבד, 800-1200 תווים, ללא קישור חיצוני, שאלה בסוף). מדוד engagement rate ו-reach לעומת פוסטי דף החברה הנוכחיים. זהו ניסוי בלבד — אין ערובה ל-reach.",
+        "detail": "הצעה לבדיקה על בסיס המדד המתועד; לא בוצע שינוי.",
+        "channel": "linkedin",
+        "evidence": {
+          "source": "scorecard",
+          "metric": "נוכחות סושיאל (רצפה)",
+          "value": 17.0,
+          "target": 5,
+          "unit": "",
+          "status": "✅"
+        },
+        "status": "candidate",
+        "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
+        "success_metric": "נוכחות סושיאל (רצפה): בסיס 17.0; יעד המדד 5. יש להשוות תקופות תואמות."
+      },
+      {
+        "category": "safe_auto",
+        "action": "ניסוי קשתות LinkedIn: טיוטת carousel PDF (8 שקפים) בנושא 'כיצד בוחרים חברת הפקה לכנס 300+ משתתפים' — משתמשת בנתוני GSC האמיתיים מה-top3_terms (pos 2.0, 168 impressions). מדוד saves ו-dwell time לעומת פוסטי טקסט. ממתין לאישור לפני פרסום.",
+        "detail": "הצעה לבדיקה על בסיס המדד המתועד; לא בוצע שינוי.",
+        "channel": "linkedin",
+        "evidence": {
+          "source": "scorecard",
+          "metric": "מונחי מעקב ב-Top-3",
+          "value": 1,
+          "target": 3,
+          "unit": "",
+          "status": "❌"
+        },
+        "status": "candidate",
+        "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
+        "success_metric": "מונחי מעקב ב-Top-3: בסיס 1; יעד המדד 3. יש להשוות תקופות תואמות."
+      },
+      {
+        "category": "safe_auto",
+        "action": "ניסוי TikTok/Reels: סדרת 'מה קורה 24 שעות לפני כנס בחו\"ל' — 60 שניות vertical, ממש כמו הפוסט המוביל הנוכחי שצבר 5,787 אינטראקציות. מדוד האם אותו פורמט מחזיר ביצועים דומים בסרטון שני, לפני הרחבת הסדרה.",
+        "detail": "הצעה לבדיקה על בסיס המדד המתועד; לא בוצע שינוי.",
+        "channel": "tiktok",
+        "evidence": {
+          "source": "scorecard",
+          "metric": "נוכחות סושיאל (רצפה)",
+          "value": 17.0,
+          "target": 5,
+          "unit": "",
+          "status": "✅"
+        },
+        "status": "candidate",
+        "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
+        "success_metric": "נוכחות סושיאל (רצפה): בסיס 17.0; יעד המדד 5. יש להשוות תקופות תואמות."
+      },
+      {
+        "category": "safe_auto",
+        "action": "ניסוי hashtag LinkedIn: צמצם ל-3 תגיות ממוקדות בעברית (#הפקתאירועים #כנסיםעסקיים #טיולתמריץ) ובאנגלית (#CorporateEvents #IncentiveTravel #MICE) — אין לשלב יותר מ-5 תגיות. עקוב אחר reach גולמי 2 שבועות לפני ואחרי.",
+        "detail": "הצעה לבדיקה על בסיס המדד המתועד; לא בוצע שינוי.",
+        "channel": "linkedin",
+        "evidence": {
+          "source": "scorecard",
+          "metric": "מונחי מעקב ב-Top-3",
+          "value": 1,
+          "target": 3,
+          "unit": "",
+          "status": "❌"
+        },
+        "status": "candidate",
+        "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
+        "success_metric": "מונחי מעקב ב-Top-3: בסיס 1; יעד המדד 3. יש להשוות תקופות תואמות."
+      }
+    ],
+    "channel_cadence": {
+      "facebook": {
+        "max_posts_per_week": 1,
+        "reason": "מכסה מוצעת לבדיקה בתקופת המדידה; אין מסקנה סיבתית על אלגוריתם."
+      },
+      "instagram": {
+        "max_posts_per_week": 4,
+        "reason": "מכסה מוצעת לבדיקה בתקופת המדידה; אין מסקנה סיבתית על אלגוריתם."
+      },
+      "linkedin": {
+        "max_posts_per_week": 3,
+        "reason": "מכסה מוצעת לבדיקה בתקופת המדידה; אין מסקנה סיבתית על אלגוריתם."
+      },
+      "tiktok": {
+        "max_posts_per_week": 3,
+        "reason": "מכסה מוצעת לבדיקה בתקופת המדידה; אין מסקנה סיבתית על אלגוריתם."
+      },
+      "youtube": {
+        "max_posts_per_week": 2,
+        "reason": "מכסה מוצעת לבדיקה בתקופת המדידה; אין מסקנה סיבתית על אלגוריתם."
+      }
+    },
+    "recommendations": [
+      {
+        "category": "gated",
+        "priority": "P0",
+        "action_key": "salesforce-attribution-fix",
+        "owner": "אחראי CRM מכין; Alon מאשר ומפיץ",
+        "success_metric": "ייחוס לידים: בסיס לא-מיוחס; יעד המדד מקור אמיתי. יש להשוות תקופות תואמות.",
+        "evidence": {
+          "source": "scorecard",
+          "metric": "ייחוס לידים",
+          "value": "לא-מיוחס",
+          "target": "מקור אמיתי",
+          "unit": "",
+          "status": "❌"
+        },
+        "evidence_url": null,
+        "target_url": null,
+        "action": "הפץ את טיוטת lead-source-guidance.md הקיימת (status: draft_ready, לא הופצה) — הגדר כלל: לפני שמירת רשומה כ-'Other' או '(none)', בדוק referrer + UTM ב-GA4 ורשום את הממצא בהערות. הפצה לצוות המכירות בלבד; אין שינוי במספר הלידים הכולל.",
+        "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
+        "channel": "leads",
+        "status": "candidate",
+        "detail": "הצעה לבדיקה על בסיס המדד המתועד; לא בוצע שינוי."
+      },
+      {
+        "category": "gated",
+        "priority": "P0",
+        "action_key": "top3-keyword-ranking-push",
+        "owner": "SEO drafts; Alon approves",
+        "success_metric": "מונחי מעקב ב-Top-3: בסיס 1; יעד המדד 3. יש להשוות תקופות תואמות.",
+        "evidence": {
+          "source": "scorecard",
+          "metric": "מונחי מעקב ב-Top-3",
+          "value": 1,
+          "target": 3,
+          "unit": "",
+          "status": "❌"
+        },
+        "evidence_url": null,
+        "target_url": "https://upe.co.il/%D7%94%D7%A4%D7%A7%D7%AA-%D7%90%D7%99%D7%A8%D7%95%D7%A2%D7%99-%D7%97%D7%91%D7%A8%D7%94/",
+        "action": "בדוק update_required מתועד עבור 'הפקת אירועי חברה' (pos 19.8, 437 impressions) ו-'גיבוש' (pos 4.1, 626 impressions) — שני הדפים מחוץ ל-cooldown. אם update_required=true וקיים issue פתוח: הכן טיוטת עדכון ממוקד עם תשובה-ראשית ו-FAQ תואם כוונת קנייה. אל תשכתב ללא issue מתועד. דפי הפקת-כנסים וכנסים-לחברות-הייטק ב-cooldown עד 2026-11-29 — לא לגעת.",
+        "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
+        "channel": "google_organic_geo",
+        "status": "candidate",
+        "detail": "הצעה לבדיקה על בסיס המדד המתועד; לא בוצע שינוי."
+      },
+      {
+        "category": "gated",
+        "priority": "P1",
+        "action_key": "linkedin-executive-posting",
+        "owner": "מנהל בכיר מכין טיוטה; Alon מאשר ומפרסם",
+        "success_metric": "נוכחות סושיאל (רצפה): בסיס 17.0; יעד המדד 5. יש להשוות תקופות תואמות.",
+        "evidence": {
+          "source": "scorecard",
+          "metric": "נוכחות סושיאל (רצפה)",
+          "value": 17.0,
+          "target": 5,
+          "unit": "",
+          "status": "✅"
+        },
+        "evidence_url": "https://www.overthetopseo.com/linkedin-marketing-b2b-lead-generation-2026-2/",
+        "target_url": null,
+        "action": "הפעל את initiative d477123a: טיוטות פוסט case-study מפרופיל המנכ\"ל — פורמט carousel PDF (8 שקפים, narrative+data+real photo). נושאים ראשוניים: 'כנס 300 איש בחו\"ל — מה שאף לקוח לא שואל אבל צריך'; כל פוסט ממתין לאישור מפורש. אין הבטחת reach.",
+        "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
+        "channel": "linkedin",
+        "status": "candidate",
+        "detail": "הצעה לבדיקה על בסיס המדד המתועד; לא בוצע שינוי."
+      },
+      {
+        "category": "gated",
+        "priority": "P2",
+        "action_key": "tiktok-behind-scenes",
+        "owner": "צוות הפקה מצלם; Alon מאשר כל קליפ",
+        "success_metric": "נוכחות סושיאל (רצפה): בסיס 17.0; יעד המדד 5. יש להשוות תקופות תואמות.",
+        "evidence": {
+          "source": "scorecard",
+          "metric": "נוכחות סושיאל (רצפה)",
+          "value": 17.0,
+          "target": 5,
+          "unit": "",
+          "status": "✅"
+        },
+        "evidence_url": null,
+        "target_url": null,
+        "action": "הפעל את initiative dc82116b: 3 קליפים 'מאחורי הקלעים' (60 שניות, vertical, ללא תסריט) מהפקה אמיתית — פרסם ב-TikTok ושתף ב-Instagram Reels. נושא ספציפי: 'מה קורה כשמשהו משתבש בכנס בינלאומי — תיקון חי'. כל קליפ ממתין לאישור מפורש לפני פרסום.",
+        "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
+        "channel": "tiktok",
+        "status": "candidate",
+        "detail": "הצעה לבדיקה על בסיס המדד המתועד; לא בוצע שינוי."
+      }
+    ],
+    "follower_growth_plan": [],
+    "leads_actions": [
+      "טיוטת הנחיית ייחוס המקורות כבר הוכנה וממתינה לבדיקה. טרם הופצה; אין ליצור אותה מחדש.",
+      "בדוק את המקור של רשומות Web, Advertisement ו-Other מול ראיה מתועדת. שינוי תווית מקור אינו מוסיף ליד לספירה הכוללת.",
+      "הבחן בין Google Organic לתנועה ממומנת באמצעות פרטי הפנייה והייחוס. תשובה כללית ״מצאתי בגוגל״ אינה מספיקה לסיווג כאורגני.",
+      "עקוב אחרי הפניות הקיימות ותעד את שלב הטיפול. אין לשנות רשומות CRM או להפיץ הנחיות ללא ההרשאה המתאימה."
+    ],
+    "verified_source_urls": [],
+    "narrative_source": "deterministic_scorecard",
+    "deliverables": [
+      {
+        "action_key": "salesforce-attribution-fix",
+        "status": "draft_ready",
+        "path": "Uproduction Operations/Marketing-Council/verification-2026-09-13/lead-source-guidance.md",
+        "source_report_date": "2026-09-13",
+        "distributed": false,
+        "crm_modified": false
+      }
+    ],
+    "evidence_notes": [
+      "אין בנתונים בסיס לתחזית עוקבים או לתוספת מובטחת של קליקים ולידים. צעדי צמיחה הם ניסויים למדידה.",
+      "ייחוס מקור הליד מציג חלק מסך הלידים. שיעור המרה ורווחיות ערוץ אינם ידועים ללא נתוני תנועה והמרות תואמים; Web אינו בהכרח Google Organic.",
+      "המלצות לשינוי אתר חייבות להפנות לפער מתועד שטרם טופל ולכבד את מועד השינוי האחרון.",
+      "נתוני GSC מתארים חשיפות של האתר בתקופה שנמדדה, ולא נפח חיפושים חודשי בשוק."
+    ],
+    "withheld_advice": [
+      {
+        "action_key": "youtube-seo-videos",
+        "reason": "site_evidence"
+      }
+    ],
+    "directive_save_status": "saved"
+  },
+  "applied_directives": [
+    {
+      "category": "safe_auto",
+      "action": "ניסוי LinkedIn: פוסטים מפרופיל אישי של מנהל — נושא 'שאלה אחת שכל CMO שואל לפני שבוחר חברת הפקה' (טקסט בלבד, 800-1200 תווים, ללא קישור חיצוני, שאלה בסוף). מדוד engagement rate ו-reach לעומת פוסטי דף החברה הנוכחיים. זהו ניסוי בלבד — אין ערובה ל-reach.",
+      "detail": "הצעה לבדיקה על בסיס המדד המתועד; לא בוצע שינוי.",
+      "channel": "linkedin",
+      "evidence": {
+        "source": "scorecard",
+        "metric": "נוכחות סושיאל (רצפה)",
+        "value": 17.0,
+        "target": 5,
+        "unit": "",
+        "status": "✅"
+      },
+      "status": "candidate",
+      "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
+      "success_metric": "נוכחות סושיאל (רצפה): בסיס 17.0; יעד המדד 5. יש להשוות תקופות תואמות."
+    },
+    {
+      "category": "safe_auto",
+      "action": "ניסוי קשתות LinkedIn: טיוטת carousel PDF (8 שקפים) בנושא 'כיצד בוחרים חברת הפקה לכנס 300+ משתתפים' — משתמשת בנתוני GSC האמיתיים מה-top3_terms (pos 2.0, 168 impressions). מדוד saves ו-dwell time לעומת פוסטי טקסט. ממתין לאישור לפני פרסום.",
+      "detail": "הצעה לבדיקה על בסיס המדד המתועד; לא בוצע שינוי.",
+      "channel": "linkedin",
+      "evidence": {
+        "source": "scorecard",
+        "metric": "מונחי מעקב ב-Top-3",
+        "value": 1,
+        "target": 3,
+        "unit": "",
+        "status": "❌"
+      },
+      "status": "candidate",
+      "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
+      "success_metric": "מונחי מעקב ב-Top-3: בסיס 1; יעד המדד 3. יש להשוות תקופות תואמות."
+    },
+    {
+      "category": "safe_auto",
+      "action": "ניסוי TikTok/Reels: סדרת 'מה קורה 24 שעות לפני כנס בחו\"ל' — 60 שניות vertical, ממש כמו הפוסט המוביל הנוכחי שצבר 5,787 אינטראקציות. מדוד האם אותו פורמט מחזיר ביצועים דומים בסרטון שני, לפני הרחבת הסדרה.",
+      "detail": "הצעה לבדיקה על בסיס המדד המתועד; לא בוצע שינוי.",
+      "channel": "tiktok",
+      "evidence": {
+        "source": "scorecard",
+        "metric": "נוכחות סושיאל (רצפה)",
+        "value": 17.0,
+        "target": 5,
+        "unit": "",
+        "status": "✅"
+      },
+      "status": "candidate",
+      "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
+      "success_metric": "נוכחות סושיאל (רצפה): בסיס 17.0; יעד המדד 5. יש להשוות תקופות תואמות."
+    },
+    {
+      "category": "safe_auto",
+      "action": "ניסוי hashtag LinkedIn: צמצם ל-3 תגיות ממוקדות בעברית (#הפקתאירועים #כנסיםעסקיים #טיולתמריץ) ובאנגלית (#CorporateEvents #IncentiveTravel #MICE) — אין לשלב יותר מ-5 תגיות. עקוב אחר reach גולמי 2 שבועות לפני ואחרי.",
+      "detail": "הצעה לבדיקה על בסיס המדד המתועד; לא בוצע שינוי.",
+      "channel": "linkedin",
+      "evidence": {
+        "source": "scorecard",
+        "metric": "מונחי מעקב ב-Top-3",
+        "value": 1,
+        "target": 3,
+        "unit": "",
+        "status": "❌"
+      },
+      "status": "candidate",
+      "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
+      "success_metric": "מונחי מעקב ב-Top-3: בסיס 1; יעד המדד 3. יש להשוות תקופות תואמות."
+    }
+  ],
+  "cadence": {
+    "facebook": {
+      "max_posts_per_week": 1,
+      "reason": "מכסה מוצעת לבדיקה בתקופת המדידה; אין מסקנה סיבתית על אלגוריתם."
+    },
+    "instagram": {
+      "max_posts_per_week": 4,
+      "reason": "מכסה מוצעת לבדיקה בתקופת המדידה; אין מסקנה סיבתית על אלגוריתם."
+    },
+    "linkedin": {
+      "max_posts_per_week": 3,
+      "reason": "מכסה מוצעת לבדיקה בתקופת המדידה; אין מסקנה סיבתית על אלגוריתם."
+    },
+    "tiktok": {
+      "max_posts_per_week": 3,
+      "reason": "מכסה מוצעת לבדיקה בתקופת המדידה; אין מסקנה סיבתית על אלגוריתם."
+    },
+    "youtube": {
+      "max_posts_per_week": 2,
+      "reason": "מכסה מוצעת לבדיקה בתקופת המדידה; אין מסקנה סיבתית על אלגוריתם."
+    }
+  },
+  "email_requested": true
+}

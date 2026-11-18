@@ -1,23 +1,74 @@
 {
-  "updated_at": "2026-11-17",
+  "updated_at": "2026-11-18",
   "source": "daily-council",
   "directives": [
     {
       "category": "safe_auto",
-      "action": "ניסוי TikTok/Instagram — בדוק אם שיתוף קליפי TikTok (שהגיעו ל-52,834 חשיפות) כ-Reels Instagram מגדיל את 251 חשיפות ה-Instagram הנוכחיות; מדוד reach/פוסט לכל פורמט בנפרד ל-4 שבועות.",
+      "action": "ניסוי LinkedIn: פוסטים מפרופיל אישי של מנהל — נושא 'שאלה אחת שכל CMO שואל לפני שבוחר חברת הפקה' (טקסט בלבד, 800-1200 תווים, ללא קישור חיצוני, שאלה בסוף). מדוד engagement rate ו-reach לעומת פוסטי דף החברה הנוכחיים. זהו ניסוי בלבד — אין ערובה ל-reach.",
       "detail": "הצעה לבדיקה על בסיס המדד המתועד; לא בוצע שינוי.",
-      "channel": "tiktok",
+      "channel": "linkedin",
       "evidence": {
         "source": "scorecard",
         "metric": "נוכחות סושיאל (רצפה)",
-        "value": 13.0,
+        "value": 17.0,
         "target": 5,
         "unit": "",
         "status": "✅"
       },
       "status": "candidate",
       "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
-      "success_metric": "נוכחות סושיאל (רצפה): בסיס 13.0; יעד המדד 5. יש להשוות תקופות תואמות."
+      "success_metric": "נוכחות סושיאל (רצפה): בסיס 17.0; יעד המדד 5. יש להשוות תקופות תואמות."
+    },
+    {
+      "category": "safe_auto",
+      "action": "ניסוי קשתות LinkedIn: טיוטת carousel PDF (8 שקפים) בנושא 'כיצד בוחרים חברת הפקה לכנס 300+ משתתפים' — משתמשת בנתוני GSC האמיתיים מה-top3_terms (pos 2.0, 168 impressions). מדוד saves ו-dwell time לעומת פוסטי טקסט. ממתין לאישור לפני פרסום.",
+      "detail": "הצעה לבדיקה על בסיס המדד המתועד; לא בוצע שינוי.",
+      "channel": "linkedin",
+      "evidence": {
+        "source": "scorecard",
+        "metric": "מונחי מעקב ב-Top-3",
+        "value": 1,
+        "target": 3,
+        "unit": "",
+        "status": "❌"
+      },
+      "status": "candidate",
+      "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
+      "success_metric": "מונחי מעקב ב-Top-3: בסיס 1; יעד המדד 3. יש להשוות תקופות תואמות."
+    },
+    {
+      "category": "safe_auto",
+      "action": "ניסוי TikTok/Reels: סדרת 'מה קורה 24 שעות לפני כנס בחו\"ל' — 60 שניות vertical, ממש כמו הפוסט המוביל הנוכחי שצבר 5,787 אינטראקציות. מדוד האם אותו פורמט מחזיר ביצועים דומים בסרטון שני, לפני הרחבת הסדרה.",
+      "detail": "הצעה לבדיקה על בסיס המדד המתועד; לא בוצע שינוי.",
+      "channel": "tiktok",
+      "evidence": {
+        "source": "scorecard",
+        "metric": "נוכחות סושיאל (רצפה)",
+        "value": 17.0,
+        "target": 5,
+        "unit": "",
+        "status": "✅"
+      },
+      "status": "candidate",
+      "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
+      "success_metric": "נוכחות סושיאל (רצפה): בסיס 17.0; יעד המדד 5. יש להשוות תקופות תואמות."
+    },
+    {
+      "category": "safe_auto",
+      "action": "ניסוי hashtag LinkedIn: צמצם ל-3 תגיות ממוקדות בעברית (#הפקתאירועים #כנסיםעסקיים #טיולתמריץ) ובאנגלית (#CorporateEvents #IncentiveTravel #MICE) — אין לשלב יותר מ-5 תגיות. עקוב אחר reach גולמי 2 שבועות לפני ואחרי.",
+      "detail": "הצעה לבדיקה על בסיס המדד המתועד; לא בוצע שינוי.",
+      "channel": "linkedin",
+      "evidence": {
+        "source": "scorecard",
+        "metric": "מונחי מעקב ב-Top-3",
+        "value": 1,
+        "target": 3,
+        "unit": "",
+        "status": "❌"
+      },
+      "status": "candidate",
+      "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
+      "success_metric": "מונחי מעקב ב-Top-3: בסיס 1; יעד המדד 3. יש להשוות תקופות תואמות."
     }
   ],
   "channel_cadence": {
@@ -46,8 +97,8 @@
     "tiktok",
     "youtube",
     "instagram",
-    "facebook",
-    "linkedin"
+    "linkedin",
+    "facebook"
   ],
   "channel_plan_basis": [
     "facebook: מכסה מוצעת לבדיקה בתקופת המדידה; אין מסקנה סיבתית על אלגוריתם.",

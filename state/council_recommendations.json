@@ -1,20 +1,20 @@
 {
-  "updated_at": "2026-11-17",
+  "updated_at": "2026-11-18",
   "scores": {
-    "instagram": 42,
-    "facebook": 35,
-    "tiktok": 78,
-    "linkedin": 18,
-    "youtube": 55,
+    "instagram": 32,
+    "facebook": 10,
+    "tiktok": 72,
+    "linkedin": 12,
+    "youtube": 38,
     "google_organic_geo": 28,
-    "overall": 61
+    "overall": 62
   },
   "recommendations": [
     {
       "category": "gated",
       "priority": "P0",
       "action_key": "salesforce-attribution-fix",
-      "owner": "מנהל מכירות/RevOps מכין; Alon מאשר ומפיץ",
+      "owner": "אחראי CRM מכין; Alon מאשר ומפיץ",
       "success_metric": "ייחוס לידים: בסיס לא-מיוחס; יעד המדד מקור אמיתי. יש להשוות תקופות תואמות.",
       "evidence": {
         "source": "scorecard",
@@ -26,9 +26,9 @@
       },
       "evidence_url": null,
       "target_url": null,
-      "action": "הפץ את טיוטת הנחיית ייחוס המקורות הקיימת (lead-source-guidance.md, status: draft_ready, לא הופצה). הגדר נוהל: כל רשומת Other/(none) חדשה — בדוק referrer ב-GA4 ו-UTM לפני שמירה. שינוי תווית לא מוסיף ליד לספירה.",
+      "action": "הפץ את טיוטת lead-source-guidance.md הקיימת (status: draft_ready, לא הופצה) — הגדר כלל: לפני שמירת רשומה כ-'Other' או '(none)', בדוק referrer + UTM ב-GA4 ורשום את הממצא בהערות. הפצה לצוות המכירות בלבד; אין שינוי במספר הלידים הכולל.",
       "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
-      "channel": "google_organic_geo",
+      "channel": "leads",
       "status": "candidate",
       "detail": "הצעה לבדיקה על בסיס המדד המתועד; לא בוצע שינוי."
     },
@@ -36,7 +36,7 @@
       "category": "gated",
       "priority": "P0",
       "action_key": "top3-keyword-ranking-push",
-      "owner": "SEO/תוכן מכין טיוטה; Alon בודק issue פתוח ומאשר לפני פרסום",
+      "owner": "SEO drafts; Alon approves",
       "success_metric": "מונחי מעקב ב-Top-3: בסיס 1; יעד המדד 3. יש להשוות תקופות תואמות.",
       "evidence": {
         "source": "scorecard",
@@ -48,7 +48,7 @@
       },
       "evidence_url": null,
       "target_url": "https://upe.co.il/%D7%94%D7%A4%D7%A7%D7%AA-%D7%90%D7%99%D7%A8%D7%95%D7%A2%D7%99-%D7%97%D7%91%D7%A8%D7%94/",
-      "action": "בדוק update_required מתועד לדפי הזדמנות מחוץ ל-cooldown: הפקת-אירועי-חברה (pos.17.4, 412 impressions) ואירועים-לחברות (pos.14.0, 379 impressions). אם קיים issue פתוח עם update_required=true — הכן טיוטת עדכון ממוקד (תשובה-ראשית, FAQ תואם כוונת קנייה) לאישור. דפי הפקת-כנסים, כנסים-לחברות-הייטק, boutique-vs-large ו-choosing-global ב-cooldown — אין לגעת.",
+      "action": "בדוק update_required מתועד עבור 'הפקת אירועי חברה' (pos 19.8, 437 impressions) ו-'גיבוש' (pos 4.1, 626 impressions) — שני הדפים מחוץ ל-cooldown. אם update_required=true וקיים issue פתוח: הכן טיוטת עדכון ממוקד עם תשובה-ראשית ו-FAQ תואם כוונת קנייה. אל תשכתב ללא issue מתועד. דפי הפקת-כנסים וכנסים-לחברות-הייטק ב-cooldown עד 2026-11-29 — לא לגעת.",
       "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
       "channel": "google_organic_geo",
       "status": "candidate",
@@ -57,20 +57,42 @@
     {
       "category": "gated",
       "priority": "P1",
-      "action_key": "tiktok-behind-scenes",
-      "owner": "צוות ייצור מכין; Alon מאשר כל קליפ לפני פרסום",
-      "success_metric": "נוכחות סושיאל (רצפה): בסיס 13.0; יעד המדד 5. יש להשוות תקופות תואמות.",
+      "action_key": "linkedin-executive-posting",
+      "owner": "מנהל בכיר מכין טיוטה; Alon מאשר ומפרסם",
+      "success_metric": "נוכחות סושיאל (רצפה): בסיס 17.0; יעד המדד 5. יש להשוות תקופות תואמות.",
       "evidence": {
         "source": "scorecard",
         "metric": "נוכחות סושיאל (רצפה)",
-        "value": 13.0,
+        "value": 17.0,
+        "target": 5,
+        "unit": "",
+        "status": "✅"
+      },
+      "evidence_url": "https://www.overthetopseo.com/linkedin-marketing-b2b-lead-generation-2026-2/",
+      "target_url": null,
+      "action": "הפעל את initiative d477123a: טיוטות פוסט case-study מפרופיל המנכ\"ל — פורמט carousel PDF (8 שקפים, narrative+data+real photo). נושאים ראשוניים: 'כנס 300 איש בחו\"ל — מה שאף לקוח לא שואל אבל צריך'; כל פוסט ממתין לאישור מפורש. אין הבטחת reach.",
+      "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
+      "channel": "linkedin",
+      "status": "candidate",
+      "detail": "הצעה לבדיקה על בסיס המדד המתועד; לא בוצע שינוי."
+    },
+    {
+      "category": "gated",
+      "priority": "P2",
+      "action_key": "tiktok-behind-scenes",
+      "owner": "צוות הפקה מצלם; Alon מאשר כל קליפ",
+      "success_metric": "נוכחות סושיאל (רצפה): בסיס 17.0; יעד המדד 5. יש להשוות תקופות תואמות.",
+      "evidence": {
+        "source": "scorecard",
+        "metric": "נוכחות סושיאל (רצפה)",
+        "value": 17.0,
         "target": 5,
         "unit": "",
         "status": "✅"
       },
       "evidence_url": null,
       "target_url": null,
-      "action": "המשך initiative dc82116b: 2-3 קליפי 'מאחורי הקלעים' (60 שניות, vertical 9:16, ללא תסריט) מהפקה אמיתית בשבוע — פרסם ב-TikTok ובחן cross-post ל-Instagram Reels לאחר אישור נפרד. אל תוסיף קישור חיצוני בגוף הפוסט.",
+      "action": "הפעל את initiative dc82116b: 3 קליפים 'מאחורי הקלעים' (60 שניות, vertical, ללא תסריט) מהפקה אמיתית — פרסם ב-TikTok ושתף ב-Instagram Reels. נושא ספציפי: 'מה קורה כשמשהו משתבש בכנס בינלאומי — תיקון חי'. כל קליפ ממתין לאישור מפורש לפני פרסום.",
       "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
       "channel": "tiktok",
       "status": "candidate",
