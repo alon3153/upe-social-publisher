@@ -1,74 +1,91 @@
 {
-  "updated_at": "2026-11-18",
+  "updated_at": "2026-11-19",
   "source": "daily-council",
   "directives": [
     {
       "category": "safe_auto",
-      "action": "ניסוי LinkedIn: פוסטים מפרופיל אישי של מנהל — נושא 'שאלה אחת שכל CMO שואל לפני שבוחר חברת הפקה' (טקסט בלבד, 800-1200 תווים, ללא קישור חיצוני, שאלה בסוף). מדוד engagement rate ו-reach לעומת פוסטי דף החברה הנוכחיים. זהו ניסוי בלבד — אין ערובה ל-reach.",
+      "action": "ניסוי פורמט carousel/PDF ב-LinkedIn: הכן 1 טיוטת carousel (8 שקפים) על שאלת קונה מוכחת — 'מה כולל תקציב הפקת כנס ל-200 משתתפים?' — ללא קישור חיצוני בגוף הפוסט; מדוד engagement לעומת פוסטי טקסט הנוכחיים לאחר 4 שבועות",
       "detail": "הצעה לבדיקה על בסיס המדד המתועד; לא בוצע שינוי.",
       "channel": "linkedin",
       "evidence": {
         "source": "scorecard",
-        "metric": "נוכחות סושיאל (רצפה)",
-        "value": 17.0,
-        "target": 5,
-        "unit": "",
-        "status": "✅"
+        "metric": "Engagement rate",
+        "value": 0.01,
+        "target": 2.0,
+        "unit": "%",
+        "status": "❌"
       },
       "status": "candidate",
       "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
-      "success_metric": "נוכחות סושיאל (רצפה): בסיס 17.0; יעד המדד 5. יש להשוות תקופות תואמות."
+      "success_metric": "Engagement rate: בסיס 0.01; יעד המדד 2.0. יש להשוות תקופות תואמות."
     },
     {
       "category": "safe_auto",
-      "action": "ניסוי קשתות LinkedIn: טיוטת carousel PDF (8 שקפים) בנושא 'כיצד בוחרים חברת הפקה לכנס 300+ משתתפים' — משתמשת בנתוני GSC האמיתיים מה-top3_terms (pos 2.0, 168 impressions). מדוד saves ו-dwell time לעומת פוסטי טקסט. ממתין לאישור לפני פרסום.",
+      "action": "ניסוי 'שאלת מנהלים' ב-LinkedIn מפרופיל אישי: הכן טיוטת שאלה אחת (עברית, 2-3 שורות) מנקודת המבט של מנכ\"ל UPE — למשל 'מה ההחלטה הקשה ביותר בבחירת חברת הפקה?' — מדוד reach מול פוסט חברה מקביל; אל תפרסם ללא אישור",
       "detail": "הצעה לבדיקה על בסיס המדד המתועד; לא בוצע שינוי.",
       "channel": "linkedin",
       "evidence": {
         "source": "scorecard",
-        "metric": "מונחי מעקב ב-Top-3",
-        "value": 1,
-        "target": 3,
+        "metric": "Engagement rate",
+        "value": 0.01,
+        "target": 2.0,
+        "unit": "%",
+        "status": "❌"
+      },
+      "status": "candidate",
+      "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
+      "success_metric": "Engagement rate: בסיס 0.01; יעד המדד 2.0. יש להשוות תקופות תואמות."
+    },
+    {
+      "category": "safe_auto",
+      "action": "זיהוי 5 שאלות Long-tail עבריות ב-GSC עם מיקום 4-8 ו-impressions ≥20 שאינן ב-cooldown — סמן כ-candidates לעדכון answer-first; אל תשנה תוכן ללא issue מתועד עם update_required=true",
+      "detail": "הצעה לבדיקה על בסיס המדד המתועד; לא בוצע שינוי.",
+      "channel": "google_organic_geo",
+      "evidence": {
+        "source": "scorecard",
+        "metric": "קליקים אורגניים/שבוע",
+        "value": 71,
+        "target": 300,
         "unit": "",
         "status": "❌"
       },
       "status": "candidate",
       "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
-      "success_metric": "מונחי מעקב ב-Top-3: בסיס 1; יעד המדד 3. יש להשוות תקופות תואמות."
+      "success_metric": "קליקים אורגניים/שבוע: בסיס 71; יעד המדד 300. יש להשוות תקופות תואמות."
     },
     {
       "category": "safe_auto",
-      "action": "ניסוי TikTok/Reels: סדרת 'מה קורה 24 שעות לפני כנס בחו\"ל' — 60 שניות vertical, ממש כמו הפוסט המוביל הנוכחי שצבר 5,787 אינטראקציות. מדוד האם אותו פורמט מחזיר ביצועים דומים בסרטון שני, לפני הרחבת הסדרה.",
+      "action": "הכן טיוטת hashtag strategy עברית ל-TikTok ו-Instagram: הגבל ל-5 תגיות ממוקדות (ולא 15 גנריות) — לדוגמה #הפקתאירועים #נופשחברה #טיולתמריץ #מנהליHR #אירועיחברות — בדוק אחת לרבעון",
       "detail": "הצעה לבדיקה על בסיס המדד המתועד; לא בוצע שינוי.",
       "channel": "tiktok",
       "evidence": {
         "source": "scorecard",
-        "metric": "נוכחות סושיאל (רצפה)",
-        "value": 17.0,
-        "target": 5,
-        "unit": "",
-        "status": "✅"
-      },
-      "status": "candidate",
-      "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
-      "success_metric": "נוכחות סושיאל (רצפה): בסיס 17.0; יעד המדד 5. יש להשוות תקופות תואמות."
-    },
-    {
-      "category": "safe_auto",
-      "action": "ניסוי hashtag LinkedIn: צמצם ל-3 תגיות ממוקדות בעברית (#הפקתאירועים #כנסיםעסקיים #טיולתמריץ) ובאנגלית (#CorporateEvents #IncentiveTravel #MICE) — אין לשלב יותר מ-5 תגיות. עקוב אחר reach גולמי 2 שבועות לפני ואחרי.",
-      "detail": "הצעה לבדיקה על בסיס המדד המתועד; לא בוצע שינוי.",
-      "channel": "linkedin",
-      "evidence": {
-        "source": "scorecard",
-        "metric": "מונחי מעקב ב-Top-3",
-        "value": 1,
-        "target": 3,
-        "unit": "",
+        "metric": "Engagement rate",
+        "value": 0.01,
+        "target": 2.0,
+        "unit": "%",
         "status": "❌"
       },
       "status": "candidate",
       "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
-      "success_metric": "מונחי מעקב ב-Top-3: בסיס 1; יעד המדד 3. יש להשוות תקופות תואמות."
+      "success_metric": "Engagement rate: בסיס 0.01; יעד המדד 2.0. יש להשוות תקופות תואמות."
+    },
+    {
+      "category": "safe_auto",
+      "action": "הכן מדריך זמני פרסום ל-LinkedIn: ימי שלישי-חמישי בין 08:00-10:00 (ישראל) בהתבסס על הפעילות העסקית של קהל היעד; תעד אם engagement משתפר לאחר 6 שבועות לעומת בייסליין הנוכחי",
+      "detail": "הצעה לבדיקה על בסיס המדד המתועד; לא בוצע שינוי.",
+      "channel": "linkedin",
+      "evidence": {
+        "source": "scorecard",
+        "metric": "Engagement rate",
+        "value": 0.01,
+        "target": 2.0,
+        "unit": "%",
+        "status": "❌"
+      },
+      "status": "candidate",
+      "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
+      "success_metric": "Engagement rate: בסיס 0.01; יעד המדד 2.0. יש להשוות תקופות תואמות."
     }
   ],
   "channel_cadence": {
@@ -94,8 +111,8 @@
     }
   },
   "channel_priority": [
-    "tiktok",
     "youtube",
+    "tiktok",
     "instagram",
     "linkedin",
     "facebook"
