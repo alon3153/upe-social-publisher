@@ -16,7 +16,8 @@ sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), ".."
 RULES = [
     # --- years ---
     (r"\bFifteen years", "Sixteen years"),
-    (r"\b15\+? years", "16 years"),
+    # ponytail: "15 years ago" is elapsed time, not company age; quoted client tenures are not detected
+    (r"\b15\+? years(?! ago)", "16 years"),
     (r"\bQuince años", "Dieciséis años"),
     (r"\bquince años", "dieciséis años"),
     (r"\b15 años", "16 años"),
@@ -26,7 +27,7 @@ RULES = [
     (r"\bover 200 of them", "over 1,500 of them"),
     (r"\+200 (eventos|experiencias)", r"+1.500 \1"),
     (r"\b200\+ eventos", "1.500+ eventos"),
-    (r"([Mm])ás de 200 (eventos|experiencias)", r"\1ás de 1.500 \2"),
+    (r"([Mm])ás de 200 (eventos|experiencias|veces)", r"\1ás de 1.500 \2"),
     (r"(?<!\d)200\+ אירועים", "1,500+ אירועים"),
     (r"(מעל |יותר מ-)200 (אירועים|חוויות)", r"\g<1>1,500 \2"),
     # --- countries -> destinations ---
@@ -159,6 +160,7 @@ def demo():
     for keep in ("200+ internal hours", "200 guests arrive late", "1,500+ events across 130+ destinations",
                  "800 personas, 3 países", "16 years"):
         assert fix(keep) == keep, keep
+    assert fix("what Barcelona was 15 years ago") == "what Barcelona was 15 years ago"
     assert fix(fix("15+ years and 200+ events")) == fix("15+ years and 200+ events")
     assert li_commentary("a (b) #Tag_x") == r"a \(b\) {hashtag|\#|Tag_x}"
     print("self-check OK")

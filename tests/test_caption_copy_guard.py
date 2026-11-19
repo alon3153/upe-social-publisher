@@ -51,6 +51,12 @@ PATTERNS = (
     re.compile(r"130\+ מדינות", re.IGNORECASE),
     re.compile(r"quince años", re.IGNORECASE),
     re.compile(r"200\+ events", re.IGNORECASE),
+    re.compile(r"200\+ (of these|productions|times|eventos|אירועים)", re.IGNORECASE),
+    re.compile(r"\+200 (eventos|experiencias)", re.IGNORECASE),
+    re.compile(r"más de 200 (eventos|experiencias|veces)|más de 120 países", re.IGNORECASE),
+    re.compile(r"(מעל|יותר מ-) ?200 (אירועים|חוויות)|יותר מ-120 מדינות"),
+    re.compile(r"120\+ (countries|מדינות)|\+?120 países|\b20\+ (countries|países)", re.IGNORECASE),
+    re.compile(r"\b15 años|15\+? (שנה|שנים)", re.IGNORECASE),
     re.compile(r"120 countries", re.IGNORECASE),
     re.compile(r"15 years", re.IGNORECASE),
 )
