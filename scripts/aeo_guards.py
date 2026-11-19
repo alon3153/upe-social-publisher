@@ -1,5 +1,6 @@
 """Hard content guards: canonical facts only, no event dates."""
 import re
+from pathlib import Path
 
 CANON = {"founded": 2010, "years": 16, "events": "1,500+", "destinations": "130+", "participants": "25K+"}
 
@@ -174,3 +175,58 @@ def sourcing_violations(text):
             seen.add(v)
             out.append(v)
     return out
+
+
+# --- duplicate-topic check (mirrors uproduction-astro scripts/check-duplicate-topics.mjs) ---
+# The astro CI guard rejects a PR that adds a page the site already has. The loop used
+# to find that out only after opening the PR, so the intent never got a live URL, was
+# re-briefed every week, and the same duplicate was regenerated and blocked again
+# (PR #275, 18.11.2026). Checking here lets the loop point the intent at the live page.
+_DUP_PUNCT = re.compile(r"[-_/|,.:;!?()\[\]\"'׳״“”–—]")
+_DUP_THRESHOLD, _DUP_MIN_SIG, _DUP_MIN_SHARED = 0.75, 3, 2
+_FAQ_PREFIX = re.compile(r"^(faq-|preguntas-frecuentes-)")
+
+
+def _dup_stopwords(repo):
+    """Read STOP from the site's own guard so the two checks never drift apart."""
+    src = (Path(repo) / "scripts/check-duplicate-topics.mjs").read_text(encoding="utf-8")
+    block = re.search(r"const STOP = new Set\(\[(.*?)\]\);", src, re.S).group(1)
+    block = re.sub(r"//[^\n]*", "", block)
+    return set(re.findall(r"'([^']*)'", block))
+
+
+def _dup_tokens(text, stop):
+    text = _DUP_PUNCT.sub(" ", (text or "").lower().split("|")[0])
+    return {w for w in text.split() if len(w) > 1 and w not in stop and not w.isdigit()}
+
+
+def _fm(src, name):
+    m = re.search(rf"^{name}:\s*[\"']?(.*?)[\"']?\s*$", src, re.M)
+    return m.group(1) if m else ""
+
+
+def existing_topic_page(page, repo):
+    """Canonical URL of a live site page the astro guard would call a duplicate, else None."""
+    if not (Path(repo) / "scripts/check-duplicate-topics.mjs").is_file():
+        return None
+    stop = _dup_stopwords(repo)
+    fm = page.get("frontmatter") or {}
+    slug = fm.get("urlSlug") or page.get("slug", "")
+    lang = fm.get("language") or page.get("lang") or "he"
+    sig = _dup_tokens(slug, stop) | _dup_tokens(fm.get("h1") or fm.get("title"), stop)
+    if len(sig) < _DUP_MIN_SIG:
+        return None
+    for path in sorted((Path(repo) / "src/content").rglob("*.md")):
+        src = path.read_text(encoding="utf-8")
+        other = _fm(src, "urlSlug")
+        if (not other or other == slug or _fm(src, "migrationStatus") == "draft"
+                or _fm(src, "canonicalOverride") or (_fm(src, "language") or "he") != lang
+                or bool(_FAQ_PREFIX.match(slug)) or bool(_FAQ_PREFIX.match(other))):
+            continue
+        osig = _dup_tokens(other, stop) | _dup_tokens(_fm(src, "h1") or _fm(src, "title"), stop)
+        if len(osig) < _DUP_MIN_SIG:
+            continue
+        shared = len(sig & osig)
+        if shared >= _DUP_MIN_SHARED and shared / min(len(sig), len(osig)) >= _DUP_THRESHOLD:
+            return _fm(src, "canonical") or f"https://upe.co.il/{other}/"
+    return None
