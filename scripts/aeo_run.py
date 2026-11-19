@@ -86,9 +86,11 @@ def run(repo, dry_run, ask_fn=None, judge_fn=None, send_fn=None, runner=None, to
     except FileNotFoundError:
         pass  # no pipeline state — behave as before
 
+    astro_repo = repo if dry_run else os.environ.get("ASTRO_REPO", "/Users/alonouanine/dev/uproduction-astro")
     pages = []
     held_now = []
     comparative = []
+    reused = []  # (intent, existing URL) — generated page duplicated a live one
     for brief in briefs:
         try:
             rendered = aeo_generate.render_brief(brief, ask_fn, today)
@@ -111,6 +113,12 @@ def run(repo, dry_run, ask_fn=None, judge_fn=None, send_fn=None, runner=None, to
             if problems:
                 failures.append(f"guard rejected {page['slug']}: {problems}")
                 continue
+            existing = aeo_guards.existing_topic_page(page, astro_repo)
+            if existing:
+                failures.append(f"duplicate of live page, not published: {page['slug']} -> {existing}")
+                if page.get("intent"):
+                    reused.append((page["intent"], existing))
+                continue
             if comp:
                 comparative.append({"slug": page["slug"], "competitors": comp})
             pages.append(page)
@@ -126,7 +134,9 @@ def run(repo, dry_run, ask_fn=None, judge_fn=None, send_fn=None, runner=None, to
         pages.extend(merged_from_hold)
     citations_status += held_pages.digest_html(today)
 
-    astro_repo = repo if dry_run else os.environ.get("ASTRO_REPO", "/Users/alonouanine/dev/uproduction-astro")
+    if reused and not dry_run:
+        for intent, url in reused:
+            aeo_intents.cover(intent, url, today)
     pub_kwargs = {"dry_run": dry_run}
     if runner:
         pub_kwargs["runner"] = runner

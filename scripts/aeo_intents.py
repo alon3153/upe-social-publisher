@@ -61,6 +61,20 @@ def record(pages, today, path=None):
     return data
 
 
+def cover(intent, url, today, path=None):
+    """Point an intent at a page that already exists on the site. Used when a freshly
+    generated page duplicates a live one: the intent is covered by that page, so it
+    stops coming back as a brief. verify() still re-checks the URL every run."""
+    data = load(path)
+    entry = data["intents"].get(intent, {})
+    entry.update({"slug": url.rstrip("/").rsplit("/", 1)[-1], "url": url, "live": True,
+                  "verified": False, "existing_page": True, "last_published": today})
+    entry.setdefault("first_published", today)
+    data["intents"][intent] = entry
+    save(data, path, today)
+    return data
+
+
 def _status(url, opener=None):
     """200 -> 'live', 404/410 -> 'dead', anything else (timeout, 403, 5xx) -> 'unknown'.
     Unknown never demotes an intent: a flaky fetch must not trigger a rewrite."""

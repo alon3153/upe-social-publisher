@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-18",
+  "updated": "2026-11-19",
   "intents": {
     "cmp_vs_bcd": {
       "slug": "boutique-vs-large-event-agency",
@@ -82,24 +82,26 @@
       "last_verified": "2026-11-18"
     },
     "bh_il_criteria": {
-      "slug": "hafrakat-eiroim-israelit-mul-dmc-nofesh-hevra-bchutz-laaretz",
-      "url": "https://upe.co.il/hafrakat-eiroim-israelit-mul-dmc-nofesh-hevra-bchutz-laaretz/",
+      "slug": "dmc",
+      "url": "https://upe.co.il/dmc/",
       "lang": "he",
-      "last_published": "2026-11-18",
-      "live": false,
-      "verified": true,
+      "last_published": "2026-11-19",
+      "live": true,
+      "verified": false,
       "first_published": "2026-09-06",
-      "last_verified": "2026-11-18"
+      "last_verified": "2026-11-18",
+      "existing_page": true
     },
     "bh_il_gala": {
-      "slug": "hapalat-erev-gala-vekenes-shnati-israel",
-      "url": "https://upe.co.il/hapalat-erev-gala-vekenes-shnati-israel/",
+      "slug": "gala-annual-conference-production-israel-recommended",
+      "url": "https://upe.co.il/gala-annual-conference-production-israel-recommended/",
       "lang": "he",
-      "last_published": "2026-11-18",
-      "live": false,
-      "verified": true,
+      "last_published": "2026-11-19",
+      "live": true,
+      "verified": false,
       "first_published": "2026-09-06",
-      "last_verified": "2026-11-18"
+      "last_verified": "2026-11-18",
+      "existing_page": true
     },
     "bh_en_il_mice": {
       "slug": "israel-mice-event-production-agencies",
