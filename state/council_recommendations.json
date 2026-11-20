@@ -1,20 +1,42 @@
 {
-  "updated_at": "2026-11-19",
+  "updated_at": "2026-11-20",
   "scores": {
     "instagram": 32,
     "facebook": 15,
-    "tiktok": 44,
+    "tiktok": 68,
     "linkedin": 18,
     "youtube": 55,
     "google_organic_geo": 28,
-    "overall": 58
+    "overall": 54
   },
   "recommendations": [
     {
       "category": "gated",
       "priority": "P0",
+      "action_key": "top3-keyword-ranking-push",
+      "owner": "SEO drafts; Alon approves",
+      "success_metric": "מונחי מעקב ב-Top-3: בסיס 1; יעד המדד 3. יש להשוות תקופות תואמות.",
+      "evidence": {
+        "source": "scorecard",
+        "metric": "מונחי מעקב ב-Top-3",
+        "value": 1,
+        "target": 3,
+        "unit": "",
+        "status": "❌"
+      },
+      "evidence_url": null,
+      "target_url": "https://upe.co.il/הפקת-אירועי-חברה/",
+      "action": "בדוק update_required מתועד לדפי הזדמנות מחוץ ל-cooldown: הפקת-אירועי-חברה (pos.19.8, 437 impressions) ואירועים-לחברות (pos.14.2, 397 impressions) — אם קיים issue פתוח, הכן טיוטת עדכון ממוקד (תשובה-ראשית, FAQ תואם כוונת קנייה) לאישור. אל תשכתב דפים ב-cooldown (הפקת-כנסים ו-כנסים-לחברות-הייטק — cooldown עד 2026-11-29).",
+      "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
+      "channel": "google_organic_geo",
+      "status": "candidate",
+      "detail": "הצעה לבדיקה על בסיס המדד המתועד; לא בוצע שינוי."
+    },
+    {
+      "category": "gated",
+      "priority": "P0",
       "action_key": "salesforce-attribution-fix",
-      "owner": "מנהל פעולות שיווק; אלון מאשר",
+      "owner": "Marketing Ops drafts; Alon approves הפצה",
       "success_metric": "ייחוס לידים: בסיס לא-מיוחס; יעד המדד מקור אמיתי. יש להשוות תקופות תואמות.",
       "evidence": {
         "source": "scorecard",
@@ -26,7 +48,7 @@
       },
       "evidence_url": null,
       "target_url": null,
-      "action": "הפץ את טיוטת lead-source-guidance.md הקיימת (status: draft_ready, לא הופצה) — הגדר כלל: לפני שמירת רשומה כ-Other/(none), בדוק referrer+UTM ב-GA4; אל תשנה ספירת לידים כוללת — רק שפר דיוק מקור",
+      "action": "הפץ את lead-source-guidance.md הקיים (status: draft_ready, לא הופצה — deliverable: Uproduction Operations/Marketing-Council/verification-2026-09-13/lead-source-guidance.md); הגדר כלל: Other/(none) → בדוק referrer + UTM ב-GA4/GSC לפני שמירה. שינוי תווית אינו מוסיף לידים לספירה הכוללת.",
       "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
       "channel": "google_organic_geo",
       "status": "candidate",
@@ -36,19 +58,19 @@
       "category": "gated",
       "priority": "P1",
       "action_key": "linkedin-executive-posting",
-      "owner": "מנכ\"ל / CMO UPE מייצרים תוכן; מנהל שיווק מתאם; אלון מאשר כל פוסט",
-      "success_metric": "Engagement rate: בסיס 0.01; יעד המדד 2.0. יש להשוות תקופות תואמות.",
+      "owner": "מנהל תוכן מכין טיוטות; מנכ\"ל מאשר ומפרסם",
+      "success_metric": "נוכחות סושיאל (רצפה): בסיס 18.0; יעד המדד 5. יש להשוות תקופות תואמות.",
       "evidence": {
         "source": "scorecard",
-        "metric": "Engagement rate",
-        "value": 0.01,
-        "target": 2.0,
-        "unit": "%",
-        "status": "❌"
+        "metric": "נוכחות סושיאל (רצפה)",
+        "value": 18.0,
+        "target": 5,
+        "unit": "",
+        "status": "✅"
       },
       "evidence_url": "https://www.overthetopseo.com/linkedin-marketing-b2b-lead-generation-2026-2/",
       "target_url": null,
-      "action": "הפעל initiative d477123a: הכן 3 טיוטות carousel קצר (8 שקפים) מנקודת מבט אישית של מנהל — נושאים: כנס בחו\"ל מאחורי הקלעים / בחירת ספק הפקה / case study אמיתי; פרסום רק לאחר אישור מפורש; ללא קישור חיצוני בגוף הפוסט",
+      "action": "הכן 4 טיוטות פוסט מנכ\"ל בפורמט carousel PDF (8-10 שקפים): case study מהפקה אמיתית + שאלה לקהל; אין קישור חיצוני בגוף הפוסט (עונש reach ~60%); כל פוסט ממתין לאישור מפורש. הפרופיל האישי מניב 5-10x יותר reach מדף חברה לפי מקורות מדודים — בדוק לאחר 4 פוסטים.",
       "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
       "channel": "linkedin",
       "status": "candidate",
@@ -58,7 +80,7 @@
       "category": "gated",
       "priority": "P2",
       "action_key": "tiktok-behind-scenes",
-      "owner": "צוות פרודקשן שטח + עריכה; אלון מאשר כל קליפ",
+      "owner": "מפיק תוכן מצלם; Alon מאשר לפני פרסום",
       "success_metric": "נוכחות סושיאל (רצפה): בסיס 18.0; יעד המדד 5. יש להשוות תקופות תואמות.",
       "evidence": {
         "source": "scorecard",
@@ -70,7 +92,7 @@
       },
       "evidence_url": null,
       "target_url": null,
-      "action": "הפעל initiative dc82116b: צלם 2 קליפים 'מאחורי הקלעים' (60 שניות, vertical, ללא תסריט) מהפקה אמיתית — פרסם ב-TikTok ושתף ל-Instagram Reels; אל תפרסם ללא אישור; בדוק saves וcomments כמדד עיקרי ולא רק views",
+      "action": "הכן 3 קליפי 'מאחורי הקלעים' (60 שניות, vertical, ללא תסריט) מהפקה אמיתית בשבוע — פרסם ב-TikTok ושתף ב-Instagram Reels; כל קליפ ממתין לאישור. קיים כבר: dc82116b; אל תיצור initiative חדש.",
       "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
       "channel": "tiktok",
       "status": "candidate",
