@@ -18963,8 +18963,8 @@
     "channel": "linkedin",
     "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
     "action_key": "linkedin-executive-posting",
-    "owner": "מנכ\"ל / CMO UPE מייצרים תוכן; מנהל שיווק מתאם; אלון מאשר כל פוסט",
-    "success_metric": "Engagement rate: בסיס 0.01; יעד המדד 2.0. יש להשוות תקופות תואמות.",
+    "owner": "מנהל תוכן מכין טיוטות; מנכ\"ל מאשר ומפרסם",
+    "success_metric": "נוכחות סושיאל (רצפה): בסיס 18.0; יעד המדד 5. יש להשוות תקופות תואמות.",
     "consecutive_failures": 0,
     "merged_from": [
       {
@@ -19030,7 +19030,7 @@
     "channel": "tiktok",
     "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
     "action_key": "tiktok-behind-scenes",
-    "owner": "צוות פרודקשן שטח + עריכה; אלון מאשר כל קליפ",
+    "owner": "מפיק תוכן מצלם; Alon מאשר לפני פרסום",
     "success_metric": "נוכחות סושיאל (רצפה): בסיס 18.0; יעד המדד 5. יש להשוות תקופות תואמות.",
     "consecutive_failures": 0,
     "merged_from": [
@@ -19120,7 +19120,7 @@
     "channel": "google_organic_geo",
     "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
     "action_key": "salesforce-attribution-fix",
-    "owner": "מנהל פעולות שיווק; אלון מאשר",
+    "owner": "Marketing Ops drafts; Alon approves הפצה",
     "success_metric": "ייחוס לידים: בסיס לא-מיוחס; יעד המדד מקור אמיתי. יש להשוות תקופות תואמות.",
     "consecutive_failures": 0
   },

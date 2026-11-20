@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
   "source_key": "executor",
-  "generated_at": "2026-11-19T15:55:30.715405+00:00",
-  "workflow_run_id": "44560192449",
+  "generated_at": "2026-11-20T15:39:07.238863+00:00",
+  "workflow_run_id": "44765333086",
   "status": "ok",
   "complete": true,
   "drafting_complete": true,
