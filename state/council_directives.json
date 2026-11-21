@@ -1,40 +1,23 @@
 {
-  "updated_at": "2026-11-20",
+  "updated_at": "2026-11-21",
   "source": "daily-council",
   "directives": [
     {
       "category": "safe_auto",
-      "action": "ניסוי LinkedIn carousel: הכן 2 טיוטות carousel PDF (8-10 שקפים) מנקודת מבט מנהל — פורמט 'בעיה → ראיה → מסגרת → takeaway' — בלי קישור חיצוני בגוף הפוסט; העבר לאישור לפני פרסום",
-      "detail": "הצעה לבדיקה על בסיס המדד המתועד; לא בוצע שינוי.",
-      "channel": "linkedin",
-      "evidence": {
-        "source": "scorecard",
-        "metric": "נוכחות סושיאל (רצפה)",
-        "value": 18.0,
-        "target": 5,
-        "unit": "",
-        "status": "✅"
-      },
-      "status": "candidate",
-      "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
-      "success_metric": "נוכחות סושיאל (רצפה): בסיס 18.0; יעד המדד 5. יש להשוות תקופות תואמות."
-    },
-    {
-      "category": "safe_auto",
-      "action": "ניסוי TikTok/Reels: תעד 2 פוסטים 'מאחורי הקלעים' אמיתיים (60 שניות, vertical) מהפקה קרובה — שתף ב-Instagram Reels לחיסכון בתפוקה; כל קליפ ממתין לאישור",
+      "action": "ניסוי TikTok/Reels: תעד 2 קטעי 'אחרי ולפני' (60 שניות, vertical) מהפקה אמיתית — השווה ER ו-reach לפוסט הנוכחי בעל 4.87% ER כ-baseline; מדוד האם תוכן 'תוצאה' עולה על תוכן 'תהליך'.",
       "detail": "הצעה לבדיקה על בסיס המדד המתועד; לא בוצע שינוי.",
       "channel": "tiktok",
       "evidence": {
         "source": "scorecard",
-        "metric": "נוכחות סושיאל (רצפה)",
-        "value": 18.0,
-        "target": 5,
-        "unit": "",
-        "status": "✅"
+        "metric": "Engagement rate",
+        "value": 0.69,
+        "target": 2.0,
+        "unit": "%",
+        "status": "❌"
       },
       "status": "candidate",
       "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
-      "success_metric": "נוכחות סושיאל (רצפה): בסיס 18.0; יעד המדד 5. יש להשוות תקופות תואמות."
+      "success_metric": "Engagement rate: בסיס 0.69; יעד המדד 2.0. יש להשוות תקופות תואמות."
     }
   ],
   "channel_cadence": {
