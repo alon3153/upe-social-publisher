@@ -62,6 +62,16 @@ def pull_posts(network, frm, to, tok, uid, bid, strict=False):
         data = j.get("data") if isinstance(j, dict) else j
         if not isinstance(data, list):
             raise ValueError("analytics response did not contain a post list")
+        if network == "instagram":
+            # /posts/instagram returns feed posts only; reels live on their own
+            # endpoint (22.11.2026: 5 reels in the window were never counted).
+            j = _req("/v2/analytics/reels/instagram",
+                     {"blogId": bid, "from": _dt(frm), "to": _dt(to)}, tok, uid)
+            reels = j.get("data") if isinstance(j, dict) else j
+            if not isinstance(reels, list):
+                raise ValueError("analytics response did not contain a reel list")
+            seen = {p.get("url") for p in data if p.get("url")}
+            data = data + [r for r in reels if r.get("url") not in seen]
         return data
     except urllib.error.HTTPError as e:
         sys.stderr.write(f"[{network}] HTTP {e.code}: {e.read().decode()[:160]}\n")

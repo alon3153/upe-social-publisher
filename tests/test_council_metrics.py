@@ -178,3 +178,15 @@ def test_unbranded_mention_rate_reads_the_named_history_date(tmp_path):
     found = unbranded_mention_rates(path, "2026-09-24")
     assert found["pooled_pct"] == 21.9
     assert found["by_engine"] == {"claude": 22}
+
+
+def test_instagram_pull_includes_reels(monkeypatch):
+    import datetime
+    import metricool_analytics as ma
+    pages = {"/v2/analytics/posts/instagram": [{"url": "a", "impressionsTotal": 10}],
+             "/v2/analytics/reels/instagram": [{"url": "a", "views": 10}, {"url": "b", "views": 200}]}
+    monkeypatch.setattr(ma, "_req", lambda path, params, tok, uid: {"data": pages[path]})
+    now = datetime.datetime(2026, 11, 22)
+    posts = ma.pull_posts("instagram", now, now, "t", "u", "b")
+    assert [p["url"] for p in posts] == ["a", "b"]
+    assert ma.summarize(posts)["impressions"] == 210

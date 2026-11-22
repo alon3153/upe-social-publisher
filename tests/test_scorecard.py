@@ -167,3 +167,13 @@ def test_all_sources_unwired_does_not_inflate():
     assert sc["weighted"] <= 40  # capped — leads dark cannot be a winning score
     # and it must not have crashed / must still produce the standard shape
     assert "weighted" in sc and "scored_rows" in sc
+
+
+def test_tracked_top3_matches_gershayim_spelling():
+    """חו"ל in Search Console must match the slug-derived חול in the tracked list."""
+    import seo_geo_source
+    data = {"tracked_keywords": ["נופש חברה בחול", "טיולי חברה", "גאלה"],
+            "sites": [{"top3_terms": [["נופש חברה בחו\"ל", 2.1, 104, 1], ["טיולי חברה", 1.8, 128, 1],
+                                      ["מה זה ערב גאלה", 1.4, 41, 1]]}]}
+    parts = seo_geo_source.split_top3(data)
+    assert parts["tracked"] == 2  # exact match only: "גאלה" must not match a longer query
