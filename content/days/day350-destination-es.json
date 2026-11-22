@@ -1,0 +1,31 @@
+{
+  "day": 350,
+  "category": "destination",
+  "language": "es",
+  "date": "",
+  "weekday": "",
+  "theme": "The destination is never just the backdrop — it's the whole point",
+  "linkedin": {
+    "profile": "Uproduction Events (Company Page)",
+    "text": "La mayoría de los viajes corporativos usan el destino como decorado. El programa podría ejecutarse en cualquier ciudad — la ubicación es solo un detalle logístico. Creemos que eso es una oportunidad desperdiciada. Después de más de 1.500 eventos en más de 130 destinos, comprobamos que la ciudad, activada correctamente, genera engagement real, refuerza la memoria del equipo y hace que los objetivos de negocio tengan más impacto. La cena en un patio local que nadie esperaba, la sesión de trabajo en un espacio que sorprende, el traslado que se convierte en anécdota: no son detalles, son estrategia. Si tu equipo está evaluando destinos para una conferencia, viaje de incentivo o retiro, con gusto compartimos lo que sabemos sobre las ciudades en tu lista. ¿Cuál están considerando?"
+  },
+  "instagram": {
+    "profile": "@uproductionevents",
+    "text": "'No sabía que esta ciudad podía sentirse así.' — lo escuchamos de un participante en medio de un viaje de incentivo. Esa reacción no la genera el hotel. La genera conocer el destino lo suficiente como para mostrarlo de otra manera. Más de 130 destinos. Más de 1.500 eventos. Sabemos dónde llevar a la gente — y más importante, cómo llevarla. Escríbenos por DM con la ciudad que estás considerando y te contamos lo que la mayoría de los planificadores no sabe sobre ella. 🌍\n#viajesincentivoempresarial #eventoscorporativos #teambuilding #destinationmanagement #retiroempresarial #eventplanning #incentivetravel #uproductionevents"
+  },
+  "facebook": {
+    "profile": "Uproduction Events (Page)",
+    "text": "Un cliente nos dijo una vez: 'Ya fuimos a Lisboa el año pasado, necesitamos algo distinto.' Le respondimos: 'No necesitas otra ciudad, necesitas conocer mejor la misma.' El destino no es el problema — es cómo se usa. Con más de 1.500 eventos producidos en más de 130 destinos, aprendimos que cada ciudad tiene una versión que los grupos corporativos casi nunca ven. Nuestra función es mostrarles esa versión. ¿Tienen un destino en mente para el próximo evento? Cuéntenlo en los comentarios."
+  },
+  "image_file": "content/images/d129_real.jpg",
+  "image_source": "real_archive_reused",
+  "image_credit": "📷 Un fotograma real de una producción de Uproduction",
+  "brand": {
+    "colors": [
+      "#1C1C1C",
+      "#FBCE0A"
+    ],
+    "font": "Comfortaa",
+    "logo": "uproduction_official_logo.png"
+  }
+}

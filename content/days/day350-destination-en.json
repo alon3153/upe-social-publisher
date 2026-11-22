@@ -1,0 +1,31 @@
+{
+  "day": 350,
+  "category": "destination",
+  "language": "en",
+  "date": "",
+  "weekday": "",
+  "theme": "The destination is never just the backdrop — it's the whole point",
+  "linkedin": {
+    "profile": "Uproduction Events (Company Page)",
+    "text": "Most corporate trips use the destination as a backdrop. The agenda could happen anywhere — the city is just scenery. We think that's a missed opportunity. After producing 1,500+ events across 130+ destinations, we've learned that the city itself — when activated correctly — drives engagement, strengthens team memory, and makes the business goals land harder. The dinner in a hidden local courtyard, the offsite session in a space that surprises people, the transfer route that becomes a talking point: these aren't extras, they're the strategy. If your team is in planning mode for an upcoming conference, incentive trip or retreat, I'd be glad to share destination intelligence on wherever you're considering. What's on your shortlist?"
+  },
+  "instagram": {
+    "profile": "@uproductionevents",
+    "text": "'I had no idea this city could feel like this.' — overheard from a participant on day two of an incentive trip. That reaction doesn't come from a good hotel. It comes from knowing a place well enough to show it differently. 130+ destinations. 1,500+ events. We know where to take people. DM us the city you're considering and we'll tell you what most planners miss about it. 🌍\n#incentivetravel #corporateevents #eventplanning #destinationmanagement #teamretreat #corporatetravel #eventprofs #uproductionevents"
+  },
+  "facebook": {
+    "profile": "Uproduction Events (Page)",
+    "text": "A client once told us: 'We've done Barcelona three times and it always feels like the first time.' That's not luck — that's knowing which neighbourhood to book the dinner in, which local guide actually tells stories instead of reciting facts, and which rooftop nobody else has found yet. After 1,500+ events across 130+ destinations, we stopped thinking of a city as a pin on a map. It's a toolkit. The right destination, used the right way, is the difference between a trip your team remembers and one they politely forget. Got a destination on your shortlist? Drop it in the comments — happy to share what we know about it."
+  },
+  "image_file": "content/images/d129_real.jpg",
+  "image_source": "real_archive_reused",
+  "image_credit": "📷 A real frame from a Uproduction production",
+  "brand": {
+    "colors": [
+      "#1C1C1C",
+      "#FBCE0A"
+    ],
+    "font": "Comfortaa",
+    "logo": "uproduction_official_logo.png"
+  }
+}
