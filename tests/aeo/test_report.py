@@ -108,6 +108,21 @@ def test_degraded_engine_is_flagged_as_a_broken_instrument():
     assert "model retired" in html
 
 
+def test_pr_pending_pages_are_listed_as_pending_merge():
+    import aeo_report as r
+    url = "https://upe.co.il/es/como-elegir-productora-eventos-corporativos-congreso-internacional/"
+    subject, html = r.build_email(
+        _sc({"claude": _block()}), None,
+        shipped=[], queued=1, failures=[],
+        pr_url="https://github.com/alon3153/uproduction-astro/pull/278",
+        pending=[{"title": "Cómo elegir", "url": url}])
+    assert "pending merge" in html
+    assert "como-elegir-productora" in html
+    assert "אינם חיים" not in html
+    assert "reported-but-not-live" not in html
+    assert "0 עמודים חיים" in subject
+
+
 def test_pages_that_are_not_live_are_not_reported_as_published():
     import aeo_report as r
     subject, html = r.build_email(

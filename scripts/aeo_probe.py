@@ -21,11 +21,56 @@ JUDGE_SYSTEM = (
 )
 
 
+_STRICT_RETRY = (
+    "\n\nYOUR PREVIOUS REPLY WAS NOT VALID JSON. Reply again with ONLY one JSON object: no prose, "
+    "no code fence. Never put a raw double quote inside a string value; write Hebrew abbreviations "
+    "with the Hebrew gershayim \u05f4 (e.g. \u05d7\u05d5\u05f4\u05dc) or escape the quote as \\\"."
+)
+
+
+class JudgeParseError(ValueError):
+    """The judge's reply stayed unparsable after local repair and one strict retry."""
+
+
+def _repair_json(raw):
+    """Best-effort repair of the judge's near-JSON: a quote inside a string closes it only when the
+    next non-space char is one of , } ] : ; any other quote is escaped. Trailing commas dropped."""
+    out, in_str, esc, n = [], False, False, len(raw)
+    for i, ch in enumerate(raw):
+        if in_str:
+            if esc:
+                esc = False
+            elif ch == "\\":
+                esc = True
+            elif ch == '"':
+                j = i + 1
+                while j < n and raw[j] in " \t\r\n":
+                    j += 1
+                if j >= n or raw[j] in ",}]:":
+                    in_str = False
+                else:
+                    out.append("\\")
+            elif ch in "\n\r":
+                out.append("\\n" if ch == "\n" else "")
+                continue
+        elif ch == '"':
+            in_str = True
+        out.append(ch)
+    return re.sub(r",\s*([}\]])", r"\1", "".join(out))
+
+
 def _extract_json(text):
-    m = re.search(r"\{.*\}", text, re.S)
+    m = re.search(r"\{.*\}", text or "", re.S)
     if not m:
-        raise ValueError(f"no json in judge output: {text[:200]}")
-    return json.loads(m.group(0))
+        raise ValueError(f"no json in judge output: {(text or '')[:200]}")
+    raw = m.group(0)
+    try:
+        return json.loads(raw)
+    except json.JSONDecodeError as first:
+        try:
+            return json.loads(_repair_json(raw))
+        except json.JSONDecodeError:
+            raise first
 
 
 def score_answer(question, answer, judge_fn):
@@ -35,8 +80,14 @@ def score_answer(question, answer, judge_fn):
     )
     try:
         data = _extract_json(judge_fn(prompt))
-    except (ValueError, json.JSONDecodeError):  # judge emitted malformed JSON — one retry
-        data = _extract_json(judge_fn(prompt))
+    except (ValueError, json.JSONDecodeError):  # malformed even after repair: one strict retry
+        reply = judge_fn(prompt + _STRICT_RETRY)
+        try:
+            data = _extract_json(reply)
+        except (ValueError, json.JSONDecodeError) as e:
+            raise JudgeParseError(
+                f"judge JSON unparsable after repair+strict retry: {e}; "
+                f"reply starts: {(reply or '')[:160]!r}") from e
     return {
         "product_search": int(data.get("product_search", 0)),
         "comparison": int(data.get("comparison", 0)),

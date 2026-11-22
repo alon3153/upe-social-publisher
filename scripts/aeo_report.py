@@ -93,7 +93,7 @@ def _degraded_html(scorecard):
 
 
 def build_email(scorecard, prev, shipped, queued, failures, pr_url, citations_status="",
-                not_live=(), comparative=()):
+                not_live=(), comparative=(), pending=()):
     prev, baseline_note = _comparable(scorecard, prev)
     rows = ""
     for model, block in scorecard["models"].items():
@@ -129,6 +129,17 @@ def build_email(scorecard, prev, shipped, queued, failures, pr_url, citations_st
         items = "".join(f'<li dir="rtl" style="text-align:right;">{p["title"]} — {_ltr(p["url"])}</li>'
                         for p in not_live)
         notlive_html = ('<h3 dir="rtl" style="color:#b00;">⚠️ נוצרו אך אינם חיים (לא נספרו כפרסום)</h3>'
+                        f'<ul dir="rtl" style="direction:rtl;text-align:right;">{items}</ul>')
+
+    # An open PR 404s until it merges. That is pending merge, not a dead page.
+    pending_html = ""
+    if pending:
+        items = "".join(f'<li dir="rtl" style="text-align:right;">{p["title"]} — {_ltr(p["url"])}</li>'
+                        for p in pending)
+        pending_html = ('<h3 dir="rtl">pending merge</h3>'
+                        '<p dir="rtl" style="direction:rtl;text-align:right;color:#666;">'
+                        'העמודים האלה יושבים על PR שעדיין לא מוזג. הם לא נספרו כפרסום '
+                        'ולא כעמוד שמת.</p>'
                         f'<ul dir="rtl" style="direction:rtl;text-align:right;">{items}</ul>')
 
     comparative_html = ""
@@ -168,6 +179,7 @@ def build_email(scorecard, prev, shipped, queued, failures, pr_url, citations_st
 <h3 dir="rtl">מה פורסם השבוע (אומת חי)</h3>
 <ul dir="rtl" style="direction:rtl;text-align:right;">{shipped_html}</ul>
 {notlive_html}
+{pending_html}
 {comparative_html}
 <p dir="rtl" style="direction:rtl;text-align:right;">בתור לשבוע הבא: {queued} בריפים.</p>
 {pr_html}

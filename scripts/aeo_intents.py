@@ -34,27 +34,57 @@ def save(data, path=None, today=None):
 
 
 def covered(path=None):
-    """Intent keys whose page is believed live. An intent whose URL went dead is NOT
-    covered — it becomes a brief again rather than a silent hole."""
-    return {k for k, v in load(path).get("intents", {}).items() if v.get("live", True)}
+    """Intent keys that must not be briefed again.
+
+    A live URL is covered. So is an unmerged PR (`pending_merge`): its 404 is not a
+    dead page, and rewriting it produces a duplicate. An intent whose URL went dead,
+    and that has no open PR, is NOT covered — it becomes a brief again.
+    """
+    covered_keys = set()
+    for key, entry in load(path).get("intents", {}).items():
+        if entry.get("pending_merge") or entry.get("live", True):
+            covered_keys.add(key)
+    return covered_keys
 
 
-def record(pages, today, path=None):
-    """Mark intents as published. `pages` carry `intent` + frontmatter canonical."""
+def record(pages, today, path=None, pending=False):
+    """Mark intents as published. `pages` carry `intent` + frontmatter canonical.
+
+    `pending=True` means the URL exists only on an unmerged PR. It is stored as
+    `pending_merge` and must not replace a URL that is already live.
+    """
     data = load(path)
     for page in pages:
         intent = page.get("intent")
         if not intent:
             continue
+        url = (page.get("frontmatter") or {}).get("canonical", "")
         entry = data["intents"].get(intent, {})
+        if pending and entry.get("live") and entry.get("url"):
+            if entry.get("url") != url:
+                entry["pending_url"] = url
+                entry["pending_slug"] = page.get("slug", "")
+                entry["pending_since"] = today
+                entry["pending_merge"] = True
+                data["intents"][intent] = entry
+            continue
         entry.update({
             "slug": page.get("slug", ""),
-            "url": (page.get("frontmatter") or {}).get("canonical", ""),
+            "url": url,
             "lang": page.get("lang", ""),
             "last_published": today,
-            "live": True,          # provisional until verify() confirms it
+            "live": not pending,   # a PR url is not live; verify() promotes it on 200
             "verified": False,
         })
+        if pending:
+            entry["pending_merge"] = True
+            entry["pending_url"] = url
+            entry["pending_since"] = today
+        else:
+            entry.pop("pending_merge", None)
+            entry.pop("pending_url", None)
+            entry.pop("pending_slug", None)
+            entry.pop("pending_since", None)
         entry.setdefault("first_published", today)
         data["intents"][intent] = entry
     save(data, path, today)
@@ -73,6 +103,11 @@ def cover(intent, url, today, path=None):
     data["intents"][intent] = entry
     save(data, path, today)
     return data
+
+
+def _clear_pending(entry):
+    for key in ("pending_merge", "pending_url", "pending_slug", "pending_since"):
+        entry.pop(key, None)
 
 
 def _status(url, opener=None):
@@ -116,10 +151,30 @@ def verify(today=None, path=None, opener=None):
         if st == "unknown":
             unknown.append(intent)
             continue
+        pending_url = entry.get("pending_url")
+        # The canonical URL is the unmerged PR itself. A 404 is "pending merge",
+        # not "no longer live" — the latter drops the intent and the loop writes
+        # another page.
+        pr_is_canonical = bool(entry.get("pending_merge")) and (not pending_url or pending_url == url)
+        if pr_is_canonical and st != "live":
+            entry["live"] = False
+            entry["verified"] = True
+            entry["last_verified"] = today
+            continue
         entry["live"] = st == "live"
         entry["verified"] = True
         entry["last_verified"] = today
-        (live if entry["live"] else dead).append(intent)
+        if entry["live"] and pr_is_canonical:
+            _clear_pending(entry)
+        if entry.get("pending_merge") and pending_url and pending_url != url:
+            if _status(pending_url, opener) == "live":
+                _clear_pending(entry)
+        if entry["live"]:
+            live.append(intent)
+        elif entry.get("pending_merge"):
+            pass  # the open PR still covers the intent
+        else:
+            dead.append(intent)
     save(data, path, today)
     return live, dead, unknown
 

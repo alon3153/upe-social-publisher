@@ -73,6 +73,85 @@ def test_append_history_creates_and_appends(tmp_path):
     assert len(data) == 2 and data[1]["date"] == "2026-07-05"
 
 
+def test_hebrew_quotes_in_gap_note_are_repaired_without_another_judge_call():
+    calls = []
+    raw = ('{"product_search":0,"comparison":12,"reputation":0,'
+           '"competitors":["אירועים בע"מ"],"gap_note":"בחו"ל"}')
+
+    def judge(prompt):
+        calls.append(prompt)
+        return raw
+
+    q = {"id": "bh_il_gala", "dimension": "comparison", "text": "מי מפיק גאלה?"}
+    out = p.score_answer(q, "תשובה", judge)
+    assert out["comparison"] == 12
+    assert out["competitors"] == ['אירועים בע"מ']
+    assert out["gap_note"] == 'בחו"ל'
+    assert len(calls) == 1
+
+
+def test_trailing_comma_inside_a_code_fence_is_repaired():
+    fenced = ('```json\n{"product_search":1,"comparison":0,"reputation":0,'
+              '"competitors":[],"gap_note":"ok",}\n```')
+    out = p.score_answer({"id": "x", "dimension": "product_search", "text": "q"},
+                         "ans", lambda prompt: fenced)
+    assert out["product_search"] == 1
+    assert out["gap_note"] == "ok"
+    assert out["competitors"] == []
+
+
+def test_valid_judge_json_is_unchanged_and_not_retried():
+    calls = []
+    payload = {"product_search": 7, "comparison": 0, "reputation": 0,
+               "competitors": ["BCD"], "gap_note": "בסדר"}
+    raw = json.dumps(payload, ensure_ascii=False)
+
+    def judge(prompt):
+        calls.append(prompt)
+        return raw
+
+    out = p.score_answer({"id": "x", "dimension": "product_search", "text": "q"}, "ans", judge)
+    assert out["product_search"] == 7
+    assert out["competitors"] == ["BCD"]
+    assert out["gap_note"] == "בסדר"
+    assert len(calls) == 1
+    assert p._repair_json(raw) == raw
+    assert p._extract_json(raw) == payload
+
+
+def test_strict_retry_prompt_then_judge_parse_error():
+    calls = []
+
+    def judge(prompt):
+        calls.append(prompt)
+        return "not json at all"
+
+    q = {"id": "bh_il_gala", "dimension": "product_search", "text": "q"}
+    try:
+        p.score_answer(q, "ans", judge)
+    except p.JudgeParseError:
+        pass
+    else:
+        raise AssertionError("expected JudgeParseError")
+    assert len(calls) == 2
+    assert calls[1].endswith(p._STRICT_RETRY)
+    assert "YOUR PREVIOUS REPLY WAS NOT VALID JSON" in calls[1]
+
+
+def test_run_probe_records_judge_parse_error_and_keeps_other_questions():
+    def judge(prompt):
+        if 'qid="bad"' in prompt:
+            return "still not json"
+        return '{"product_search":50,"comparison":0,"reputation":0,"competitors":[],"gap_note":""}'
+
+    questions = [{"id": "bad", "dimension": "product_search", "text": "a"},
+                 {"id": "ok", "dimension": "product_search", "text": "b"}]
+    out = p.run_probe(questions, ["claude"], lambda model, text: "answer", judge)
+    assert any("claude/bad: JudgeParseError" in e for e in out["errors"])
+    assert [a["id"] for a in out["models"]["claude"]["answers"]] == ["ok"]
+    assert out["models"]["claude"]["product_search"] == 50
+
+
 def test_score_answer_retries_judge_once_on_bad_json():
     import scripts.aeo_probe as probe
     calls = []

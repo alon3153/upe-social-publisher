@@ -62,14 +62,19 @@
       "last_verified": "2026-11-22"
     },
     "ex_es_elegir": {
-      "slug": "como-elegir-productora-eventos-corporativos-congreso-internacional",
-      "url": "https://upe.co.il/es/como-elegir-productora-eventos-corporativos-congreso-internacional/",
+      "slug": "guia-elegir-productora-eventos-corporativos-conferencias-globales",
+      "url": "https://upe.co.il/es/guia-elegir-productora-eventos-corporativos-conferencias-globales/",
       "lang": "es",
       "last_published": "2026-11-22",
-      "live": false,
+      "live": true,
       "verified": true,
       "first_published": "2026-08-30",
-      "last_verified": "2026-11-22"
+      "last_verified": "2026-11-22",
+      "existing_page": true,
+      "pending_merge": true,
+      "pending_url": "https://upe.co.il/es/como-elegir-productora-eventos-corporativos-congreso-internacional/",
+      "pending_slug": "como-elegir-productora-eventos-corporativos-congreso-internacional",
+      "pending_since": "2026-11-22"
     },
     "ex_es_congresos": {
       "slug": "eventos-corporativos-espana-guia-completa-2026",
@@ -171,7 +176,10 @@
       "live": false,
       "verified": true,
       "first_published": "2026-11-22",
-      "last_verified": "2026-11-22"
+      "last_verified": "2026-11-22",
+      "pending_merge": true,
+      "pending_url": "https://upe.co.il/es/agencias-eventos-corporativos-barcelona-madrid/",
+      "pending_since": "2026-11-22"
     },
     "ex_es_bcn_incentivo": {
       "slug": "organizadores-viajes-incentivo-empresas-barcelona",
@@ -181,7 +189,10 @@
       "live": false,
       "verified": true,
       "first_published": "2026-11-22",
-      "last_verified": "2026-11-22"
+      "last_verified": "2026-11-22",
+      "pending_merge": true,
+      "pending_url": "https://upe.co.il/es/organizadores-viajes-incentivo-empresas-barcelona/",
+      "pending_since": "2026-11-22"
     }
   }
 }
