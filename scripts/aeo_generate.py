@@ -199,7 +199,24 @@ def _yaml_scalar(v):
     return json.dumps(v, ensure_ascii=False)
 
 
+_BODY_H1 = re.compile(r"^#[ \t]+[^\n]*\n?", re.M)
+
+
+def _strip_body_h1(body):
+    """BlogArticleLayout renders frontmatter h1; a body '# ' line is a second H1
+    (astro #272, #278). Drop H1 lines outside fenced code; '##' and deeper stay."""
+    out, fenced = [], False
+    for line in (body or "").splitlines(keepends=True):
+        if line.lstrip().startswith("```"):
+            fenced = not fenced
+        if not fenced and _BODY_H1.match(line):
+            continue
+        out.append(line)
+    return "".join(out).lstrip("\n")
+
+
 def to_markdown(frontmatter, body):
+    body = _strip_body_h1(body)
     lines = ["---"]
     for k, v in frontmatter.items():
         if k == "faqs" and v:
