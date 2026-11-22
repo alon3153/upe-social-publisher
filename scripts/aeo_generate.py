@@ -109,7 +109,10 @@ def _build_page(brief, lang, payload, body, date):
     }
     text_to_check = json.dumps(fm, ensure_ascii=False) + "\n" + body
     violations = (aeo_guards.check_content(text_to_check)
-                  + aeo_guards.destination_violations(text_to_check))
+                  + aeo_guards.destination_violations(text_to_check)
+                  # sourcing used to be checked only in aeo_run, after retries were spent,
+                  # so an uncited "10-20 %" killed the page with no regeneration (22.11: 3/3 ES pages).
+                  + aeo_guards.sourcing_violations(body))
     return {"collection": COLLECTION[brief["type"]], "lang": lang, "slug": slug_base,
             "intent": brief.get("intent"),
             "frontmatter": fm, "body": body, "violations": violations}
@@ -123,7 +126,10 @@ def _correction(violations):
         "1,500+ events, 130+ destinations, 25K+ participants); if you need a number for venue size, "
         "headcount or budget, rephrase to avoid 2000/2,000/200+/120+/800+, and never place a "
         "2011-2024 year next to an event/case mention. Do not name competing firms: "
-        "replace a company roster with buyer criteria and neutral service-model tradeoffs."
+        "replace a company roster with buyer criteria and neutral service-model tradeoffs. "
+        "No percentage anywhere (fees, contingency, shares, rates) unless the same line carries "
+        "a markdown source link [name](https://...); otherwise describe it qualitatively "
+        "(e.g. 'a management fee agreed per project', 'a contingency reserve')."
     )
 
 

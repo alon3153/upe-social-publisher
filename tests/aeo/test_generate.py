@@ -173,3 +173,21 @@ def test_destination_violation_cannot_escape_final_attempt():
         return json.dumps({"title": "Guide", "description": "d", "h1": "Maritz", "slug": "guide"}) + "\n===BODY===\nBuyer criteria"
     page = gen.generate_page(BRIEF, "en", ask, "2026-09-13")
     assert any("destination competitor guard" in x for x in page["violations"])
+
+
+def test_uncited_percentage_is_regenerated_not_dropped():
+    # 22.11.2026: 3/3 ES pages died in aeo_run on "10 % y el 20 %" with no retry
+    calls = {"n": 0}
+
+    def ask(model, prompt):
+        calls["n"] += 1
+        meta = json.dumps({"title": "Guía", "description": "d", "h1": "h",
+                           "slug": "guia-incentivos", "faqs": []})
+        if calls["n"] == 1:
+            return meta + "\n===BODY===\n- **Honorarios:** entre el 10 % y el 20 % del presupuesto.\n"
+        assert "REJECTED" in prompt and "uncited statistic" in prompt
+        return meta + "\n===BODY===\n- **Honorarios:** una tarifa de gestión acordada por proyecto.\n"
+
+    page = gen.generate_page(BRIEF, "es", ask, "2026-11-22")
+    assert page["violations"] == []
+    assert calls["n"] == 2
