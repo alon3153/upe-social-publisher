@@ -191,3 +191,10 @@ def test_uncited_percentage_is_regenerated_not_dropped():
     page = gen.generate_page(BRIEF, "es", ask, "2026-11-22")
     assert page["violations"] == []
     assert calls["n"] == 2
+
+
+def test_to_markdown_drops_body_h1_keeps_h2_and_code():
+    md = gen.to_markdown({"title": "t"}, "# Dup title\n\nintro\n## Section\n```\n# code\n```\n")
+    body = md.split("---", 2)[2]
+    assert "# Dup title" not in body
+    assert "## Section" in body and "# code" in body
