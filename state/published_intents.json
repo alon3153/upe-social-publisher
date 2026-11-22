@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-19",
+  "updated": "2026-11-22",
   "intents": {
     "cmp_vs_bcd": {
       "slug": "boutique-vs-large-event-agency",
@@ -9,7 +9,7 @@
       "live": true,
       "verified": true,
       "first_published": "2026-08-30",
-      "last_verified": "2026-11-18"
+      "last_verified": "2026-11-22"
     },
     "cmp_il_boutique": {
       "slug": "בוטיק-מול-סוכנות-אירועים-גדולה",
@@ -19,7 +19,7 @@
       "live": true,
       "verified": true,
       "first_published": "2026-08-30",
-      "last_verified": "2026-11-18"
+      "last_verified": "2026-11-22"
     },
     "ex_en_boutique_eu": {
       "slug": "boutique-global-corporate-conference-production",
@@ -29,7 +29,7 @@
       "live": true,
       "verified": true,
       "first_published": "2026-08-30",
-      "last_verified": "2026-11-18"
+      "last_verified": "2026-11-22"
     },
     "ex_es_boutique": {
       "slug": "productora-boutique-eventos-corporativos-vs-grandes-redes-globales",
@@ -39,7 +39,7 @@
       "live": true,
       "verified": true,
       "first_published": "2026-08-30",
-      "last_verified": "2026-11-18"
+      "last_verified": "2026-11-22"
     },
     "cmp_full_service": {
       "slug": "global-corporate-event-conference-production-company-guide",
@@ -49,7 +49,7 @@
       "live": true,
       "verified": true,
       "first_published": "2026-08-30",
-      "last_verified": "2026-11-18"
+      "last_verified": "2026-11-22"
     },
     "cmp_il_criteria": {
       "slug": "how-to-choose-global-corporate-event-conference-production-company",
@@ -59,17 +59,17 @@
       "live": true,
       "verified": true,
       "first_published": "2026-08-30",
-      "last_verified": "2026-11-18"
+      "last_verified": "2026-11-22"
     },
     "ex_es_elegir": {
-      "slug": "guia-elegir-productora-global-eventos-corporativos-congresos",
-      "url": "https://upe.co.il/es/guia-elegir-productora-global-eventos-corporativos-congresos/",
+      "slug": "como-elegir-productora-eventos-corporativos-congreso-internacional",
+      "url": "https://upe.co.il/es/como-elegir-productora-eventos-corporativos-congreso-internacional/",
       "lang": "es",
-      "last_published": "2026-08-30",
+      "last_published": "2026-11-22",
       "live": false,
       "verified": true,
       "first_published": "2026-08-30",
-      "last_verified": "2026-11-18"
+      "last_verified": "2026-11-22"
     },
     "ex_es_congresos": {
       "slug": "eventos-corporativos-espana-guia-completa-2026",
@@ -79,7 +79,7 @@
       "live": true,
       "verified": true,
       "first_published": "2026-08-30",
-      "last_verified": "2026-11-18"
+      "last_verified": "2026-11-22"
     },
     "bh_il_criteria": {
       "slug": "dmc",
@@ -87,9 +87,9 @@
       "lang": "he",
       "last_published": "2026-11-19",
       "live": true,
-      "verified": false,
+      "verified": true,
       "first_published": "2026-09-06",
-      "last_verified": "2026-11-18",
+      "last_verified": "2026-11-22",
       "existing_page": true
     },
     "bh_il_gala": {
@@ -98,9 +98,9 @@
       "lang": "he",
       "last_published": "2026-11-19",
       "live": true,
-      "verified": false,
+      "verified": true,
       "first_published": "2026-09-06",
-      "last_verified": "2026-11-18",
+      "last_verified": "2026-11-22",
       "existing_page": true
     },
     "bh_en_il_mice": {
@@ -111,7 +111,7 @@
       "live": true,
       "verified": true,
       "first_published": "2026-09-06",
-      "last_verified": "2026-11-18"
+      "last_verified": "2026-11-22"
     },
     "bh_en_il_tech": {
       "slug": "corporate-incentive-trips-offsites-israeli-tech-companies",
@@ -121,7 +121,7 @@
       "live": false,
       "verified": true,
       "first_published": "2026-09-13",
-      "last_verified": "2026-11-18"
+      "last_verified": "2026-11-22"
     },
     "bh_il_greece": {
       "slug": "hafakat-kenes-beinleumi-yavan-kufrisin",
@@ -131,7 +131,7 @@
       "live": false,
       "verified": true,
       "first_published": "2026-10-11",
-      "last_verified": "2026-11-18"
+      "last_verified": "2026-11-22"
     },
     "ex_en_destination": {
       "slug": "european-destination-event-production-companies",
@@ -141,7 +141,7 @@
       "live": false,
       "verified": true,
       "first_published": "2026-10-11",
-      "last_verified": "2026-11-18"
+      "last_verified": "2026-11-22"
     },
     "bh_il_europe": {
       "slug": "incentive-travel-europe-israel-companies",
@@ -151,7 +151,7 @@
       "live": false,
       "verified": true,
       "first_published": "2026-10-25",
-      "last_verified": "2026-11-18"
+      "last_verified": "2026-11-22"
     },
     "ex_en_europe_mid": {
       "slug": "corporate-event-agencies-europe-mid-size-companies",
@@ -161,7 +161,27 @@
       "live": true,
       "verified": true,
       "first_published": "2026-11-01",
-      "last_verified": "2026-11-18"
+      "last_verified": "2026-11-22"
+    },
+    "ex_es_agencias_bcn": {
+      "slug": "agencias-eventos-corporativos-barcelona-madrid",
+      "url": "https://upe.co.il/es/agencias-eventos-corporativos-barcelona-madrid/",
+      "lang": "es",
+      "last_published": "2026-11-22",
+      "live": false,
+      "verified": true,
+      "first_published": "2026-11-22",
+      "last_verified": "2026-11-22"
+    },
+    "ex_es_bcn_incentivo": {
+      "slug": "organizadores-viajes-incentivo-empresas-barcelona",
+      "url": "https://upe.co.il/es/organizadores-viajes-incentivo-empresas-barcelona/",
+      "lang": "es",
+      "last_published": "2026-11-22",
+      "live": false,
+      "verified": true,
+      "first_published": "2026-11-22",
+      "last_verified": "2026-11-22"
     }
   }
 }
