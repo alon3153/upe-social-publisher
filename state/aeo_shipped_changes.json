@@ -257,6 +257,19 @@
       "source": "https://github.com/alon3153/uproduction-astro/commit/a9fee0337c723f1674ca0f268a71a9ef2c189b66",
       "change_evidence": "PR280 merged November23 with Alon's approval. Title only: now leads with the page's own term instead of the travel wording. H1, description, slug and canonical unchanged. Alon chose this page as owner of the head term among four incentive pages. Live title verified November23. No ranking forecast.",
       "last_change_verified_at": "2026-11-23"
+    },
+    {
+      "url": "https://upe.co.il/yemei-gibush-leovdim/",
+      "last_changed": "2026-11-23",
+      "evaluation_not_before": "2026-12-21",
+      "aliases": [
+        "ימי גיבוש לעובדים",
+        "ימי גיבוש",
+        "יום גיבוש"
+      ],
+      "source": "https://github.com/alon3153/uproduction-astro/commit/05a4dbfe64efd648a51d1599f7e8fed6eabbac92",
+      "change_evidence": "PR283 merged November23 by Alon. H1 only: brand suffix removed, so the H1 no longer repeats the title tag. Title, description, slug, canonical and body unchanged. Live H1 verified November23. The bare head term is not listed as an alias: stored metrics hold queries without pages, so the page that ranks for it is unverified. No ranking forecast.",
+      "last_change_verified_at": "2026-11-23"
     }
   ],
   "verified_existing_pages": [
