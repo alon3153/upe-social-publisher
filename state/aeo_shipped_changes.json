@@ -222,6 +222,29 @@
       "source": "https://github.com/alon3153/uproduction-astro/commit/0881bbaeb8f2d38fdcb5f51771a89922f88957f9",
       "change_evidence": "PR255 merged and deployed November17. New page from the AEO content run of November15; live and returning 200 with a self-referencing canonical.",
       "last_change_verified_at": "2026-11-17"
+    },
+    {
+      "url": "https://upe.co.il/הפקת-אירועי-חברה/",
+      "last_changed": "2026-11-15",
+      "evaluation_not_before": "2026-12-13",
+      "aliases": [
+        "הפקת אירועי חברה"
+      ],
+      "source": "https://github.com/alon3153/uproduction-astro/commit/4c83aeccc55f85d8dab82045b14e88dbb08aaa77",
+      "change_evidence": "PR247 merged November15. Guide-style title and description, plus a paragraph linking to the service page /הפקות-אירועים-לחברות/. H1 unchanged. Live title verified November23. Search Console window in the November23 council report ends November18, so the reported position mostly predates this change.",
+      "last_change_verified_at": "2026-11-23"
+    },
+    {
+      "url": "https://upe.co.il/הפקות-אירועים-לחברות/",
+      "last_changed": "2026-11-15",
+      "evaluation_not_before": "2026-12-13",
+      "aliases": [
+        "הפקת אירועים לחברות",
+        "הפקות אירועים לחברות"
+      ],
+      "source": "https://github.com/alon3153/uproduction-astro/commit/a16163be0b4f748f12d377ffaf2f4cd4623aae92",
+      "change_evidence": "PR252 merged November15 (refs uproduction-astro issue 251). Title and H1 now lead with the commercial query; differentiation box links to the guide, the supplier-choice page and the retreat page; one FAQ added. Live title and H1 verified November23.",
+      "last_change_verified_at": "2026-11-23"
     }
   ],
   "verified_existing_pages": [
