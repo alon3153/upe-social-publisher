@@ -19031,7 +19031,7 @@
     "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
     "action_key": "tiktok-behind-scenes",
     "owner": "executor drafts; Alon approves",
-    "success_metric": "Engagement rate: בסיס 0.81; יעד המדד 2.0. יש להשוות תקופות תואמות.",
+    "success_metric": "Engagement rate: בסיס 0.69; יעד המדד 2.0. יש להשוות תקופות תואמות.",
     "consecutive_failures": 0,
     "merged_from": [
       {
@@ -19177,7 +19177,7 @@
     "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
     "action_key": "top3-keyword-ranking-push",
     "owner": "executor drafts; Alon approves",
-    "success_metric": "מונחי מעקב ב-Top-3: בסיס 1; יעד המדד 3. יש להשוות תקופות תואמות.",
+    "success_metric": "קליקים אורגניים/שבוע: בסיס 71; יעד המדד 300. יש להשוות תקופות תואמות.",
     "consecutive_failures": 0
   },
   "1a8a9cc9": {
