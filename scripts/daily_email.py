@@ -18,7 +18,7 @@ UA = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36"
 
 # (network, account, platform_key_in_json, lang)
 ACCOUNTS = [
-    ("facebook",  "uproductionevents", "facebook",  "en"),
+    ("facebook",  "uproductionevents", "facebook",  "he"),  # buyers are Israeli HR/welfare managers (Alon, 23.11.2026)
     ("facebook",  "uproduction_spain", "facebook",  "es"),
     ("instagram", "ig_uproductionevents", "instagram", "en"),
     ("instagram", "ig_uproduction_spain", "instagram", "es"),
