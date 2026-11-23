@@ -4,71 +4,37 @@
   "directives": [
     {
       "category": "safe_auto",
-      "action": "ניסוי LinkedIn: החלף 2 מתוך 5 פוסטי-חברה שבועיים בפוסטים מפרופיל אישי של מנהל — טקסט + נתון ממשי מהפקה אחרונה (לדוגמה: '1,400 עובדים, 2 מחזורים — מה למדנו'). תוכן אישי מקבל reach גבוה פי 5-10 מדף חברה לפי נתוני 2026.",
+      "action": "ניסוי LinkedIn: carousel בפורמט document (8-12 שקפים) מהפקה אמיתית — נתון ממשי + לקח מקצועי; ללא טקסט AI גנרי; מדוד dwell-time ו-saves ביחס לפוסטים הנוכחיים",
       "detail": "הצעה לבדיקה על בסיס המדד המתועד; לא בוצע שינוי.",
       "channel": "linkedin",
       "evidence": {
         "source": "scorecard",
         "metric": "Engagement rate",
-        "value": 0.97,
+        "value": 0.69,
         "target": 2.0,
         "unit": "%",
         "status": "❌"
       },
       "status": "candidate",
       "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
-      "success_metric": "Engagement rate: בסיס 0.97; יעד המדד 2.0. יש להשוות תקופות תואמות."
+      "success_metric": "Engagement rate: בסיס 0.69; יעד המדד 2.0. יש להשוות תקופות תואמות."
     },
     {
       "category": "safe_auto",
-      "action": "ניסוי hashtag LinkedIn: הצע 3-5 תגיות ממוקדות בעברית ואנגלית (#הפקתאירועים #MICE #IncentiveTravel #CorporateEvents #ישראל) במקום תגיות גנריות — שמור על לא יותר מ-5 תגיות לפוסט לפי נתוני 2026.",
+      "action": "ניסוי TikTok: תעד בנפרד ביצועי קליפ 'מאחורי הקלעים' אמיתי מול קליפ 'הסבר שירות' — 2 פוסטים בשבוע; מדוד ER per-video ב-7 ימים לפני אישור הגדלת תדירות",
       "detail": "הצעה לבדיקה על בסיס המדד המתועד; לא בוצע שינוי.",
-      "channel": "linkedin",
-      "evidence": {
-        "source": "scorecard",
-        "metric": "נוכחות סושיאל (רצפה)",
-        "value": 27.0,
-        "target": 5,
-        "unit": "",
-        "status": "✅"
-      },
-      "status": "candidate",
-      "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
-      "success_metric": "נוכחות סושיאל (רצפה): בסיס 27.0; יעד המדד 5. יש להשוות תקופות תואמות."
-    },
-    {
-      "category": "safe_auto",
-      "action": "ניסוי carousel LinkedIn: הכן טיוטת carousel PDF (8 שקפים) על שאלת קונה אמיתית מה-GSC ('מה כדאי לבדוק לפני שמזמינים חברת הפקה?') — פורמט carousel מניב dwell-time גבוה ו-ER ~7% לפי נתוני 2026 ל-B2B.",
-      "detail": "הצעה לבדיקה על בסיס המדד המתועד; לא בוצע שינוי.",
-      "channel": "linkedin",
+      "channel": "tiktok",
       "evidence": {
         "source": "scorecard",
         "metric": "Engagement rate",
-        "value": 0.97,
+        "value": 0.69,
         "target": 2.0,
         "unit": "%",
         "status": "❌"
       },
       "status": "candidate",
       "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
-      "success_metric": "Engagement rate: בסיס 0.97; יעד המדד 2.0. יש להשוות תקופות תואמות."
-    },
-    {
-      "category": "safe_auto",
-      "action": "ניסוי נושא YouTube: בדוק אם 3 מונחי GSC בעלי impression גבוה ('גיבוש' pos.4.1/626, 'הפקת אירועים לחברות' pos.19.8/437, 'טיולי תמריץ' pos.14.7/358) מתאימים לסרטונים קצרים (Shorts) לפני הפקת סרטון ארוך — השוואה בין נושאים לפי קליקים בפועל.",
-      "detail": "הצעה לבדיקה על בסיס המדד המתועד; לא בוצע שינוי.",
-      "channel": "youtube",
-      "evidence": {
-        "source": "scorecard",
-        "metric": "קליקים אורגניים/שבוע",
-        "value": 71,
-        "target": 300,
-        "unit": "",
-        "status": "❌"
-      },
-      "status": "candidate",
-      "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
-      "success_metric": "קליקים אורגניים/שבוע: בסיס 71; יעד המדד 300. יש להשוות תקופות תואמות."
+      "success_metric": "Engagement rate: בסיס 0.69; יעד המדד 2.0. יש להשוות תקופות תואמות."
     }
   ],
   "channel_cadence": {
@@ -81,11 +47,11 @@
       "reason": "מכסה מוצעת לבדיקה בתקופת המדידה; אין מסקנה סיבתית על אלגוריתם."
     },
     "linkedin": {
-      "max_posts_per_week": 3,
+      "max_posts_per_week": 4,
       "reason": "מכסה מוצעת לבדיקה בתקופת המדידה; אין מסקנה סיבתית על אלגוריתם."
     },
     "tiktok": {
-      "max_posts_per_week": 3,
+      "max_posts_per_week": 2,
       "reason": "מכסה מוצעת לבדיקה בתקופת המדידה; אין מסקנה סיבתית על אלגוריתם."
     },
     "youtube": {

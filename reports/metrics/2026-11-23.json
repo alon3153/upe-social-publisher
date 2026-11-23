@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-11-23T06:33:07",
+  "generated_at": "2026-11-23T16:21:22",
   "period_days": 7,
-  "period_start": "2026-11-16T06:33:07",
-  "period_end": "2026-11-23T06:33:07",
+  "period_start": "2026-11-16T16:21:22",
+  "period_end": "2026-11-23T16:21:22",
   "networks": {
     "instagram": {
       "posts": 10,
@@ -50,23 +50,23 @@
       "ok": true
     },
     "linkedin": {
-      "posts": 5,
-      "impressions": 85,
+      "posts": 7,
+      "impressions": 14604,
       "reach": null,
-      "interactions": 0,
-      "engagement_rate_pct": 0.0,
+      "interactions": 1,
+      "engagement_rate_pct": 0.01,
       "caveat": null,
       "top": {
-        "url": "https://www.linkedin.com/feed/update/urn:li:share:7528722362217750528",
+        "url": "https://www.linkedin.com/feed/update/urn:li:ugcPost:7528865164117487617",
         "content": "",
-        "impressions": 24,
-        "interactions": 0
+        "impressions": 14474,
+        "interactions": 1
       },
       "ok": true
     },
     "youtube": {
       "posts": 10,
-      "impressions": 69370,
+      "impressions": 89561,
       "reach": null,
       "interactions": 1,
       "engagement_rate_pct": 0.0,
@@ -74,7 +74,7 @@
       "top": {
         "url": null,
         "content": "",
-        "impressions": 69294,
+        "impressions": 89482,
         "interactions": 1
       },
       "ok": true
@@ -82,11 +82,11 @@
   },
   "unavailable_networks": [],
   "totals": {
-    "posts": 27,
-    "impressions": 87481,
+    "posts": 29,
+    "impressions": 122191,
     "reach": 17006,
-    "interactions": 848,
-    "engagement_rate_pct": 0.97
+    "interactions": 849,
+    "engagement_rate_pct": 0.69
   },
   "leads": {
     "ok": true,
@@ -97,19 +97,20 @@
     "source": "salesforce",
     "definition": "new Opportunities + unconverted web Leads (form hand-raisers)",
     "by_source": {
-      "Web": 6,
+      "Web": 5,
       "Other": 3,
       "(none)": 1,
       "Existing Customer": 4,
       "Referral": 1,
-      "Web-Organic": 1
+      "Web-Organic": 1,
+      "Facebook": 1
     },
     "dominant_source": "Web",
     "ambiguous_sources": [
       "Other",
       "(none)"
     ],
-    "dominant_share_pct": 38,
+    "dominant_share_pct": 31,
     "attribution_gap": true,
     "attribution_note": "4/16 ברשומות מקור עמום או ברירת מחדל. אין לשייך אותן לערוץ דיגיטלי מסוים ללא ראיה ואין להסיק שיעור המרה מחלוקת המקורות."
   },

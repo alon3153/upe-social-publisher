@@ -3,11 +3,11 @@
   "scores": {
     "instagram": 42,
     "facebook": 18,
-    "tiktok": 68,
+    "tiktok": 71,
     "linkedin": 22,
     "youtube": 55,
     "google_organic_geo": 48,
-    "overall": 72
+    "overall": 61
   },
   "recommendations": [
     {
@@ -25,8 +25,8 @@
         "status": "❌"
       },
       "evidence_url": null,
-      "target_url": "Uproduction Operations/Marketing-Council/verification-2026-09-13/lead-source-guidance.md",
-      "action": "הפץ את טיוטת הנחיית ייחוס המקורות הקיימת (lead-source-guidance.md, status: draft_ready, לא הופצה) — הגדר כלל עבור 'Other' ו-'(none)': בדוק referrer + UTM ב-GA4/GSC לפני שמירה. שינוי תווית מקור אינו מוסיף לידים לספירה הכוללת.",
+      "target_url": null,
+      "action": "הפץ את טיוטת הנחיית ייחוס המקורות הקיימת (lead-source-guidance.md, status: draft_ready, לא הופצה) — הגדר כלל עבור Other ו-(none): בדוק referrer + UTM ב-GA4 לפני שמירה; שינוי תווית אינו מוסיף לידים לספירה",
       "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
       "channel": "leads",
       "status": "candidate",
@@ -47,8 +47,8 @@
         "status": "❌"
       },
       "evidence_url": null,
-      "target_url": "https://upe.co.il/הפקת-אירועי-חברה/",
-      "action": "בדוק update_required מתועד לדפי הזדמנות מחוץ ל-cooldown: 'הפקת אירועים לחברות' (pos 19.8, 437 impressions), 'אירועים לחברות' (pos 14.2, 397 impressions), 'גיבוש' (pos 4.1, 626 impressions) ו-'טיולי תמריץ' (pos 14.7, 358 impressions). אם update_required=true ויש issue פתוח — הכן טיוטת עדכון ממוקד (תשובה-ראשית, FAQ תואם כוונת קנייה) לאישור. אל תשכתב דפים בלי issue מתועד ואל תיגע בדפים ב-cooldown עד 2026-11-29 ו-2026-12-15.",
+      "target_url": "https://upe.co.il/הפקות-אירועים-לחברות/",
+      "action": "לאחר 2026-11-29: אמת update_required=true על דפי גיבוש (pos 4.1, 626 impr) ו-הפקת אירועי חברה (pos 19.8, 437 impr) — הכן טיוטת עדכון תשובה-ראשית + FAQ תואם כוונת קנייה לאישור; אין לשכתב דפים ב-cooldown",
       "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
       "channel": "google_organic_geo",
       "status": "candidate",
@@ -57,42 +57,20 @@
     {
       "category": "gated",
       "priority": "P1",
-      "action_key": "linkedin-executive-posting",
+      "action_key": "tiktok-behind-scenes",
       "owner": "executor drafts; Alon approves",
-      "success_metric": "Engagement rate: בסיס 0.97; יעד המדד 2.0. יש להשוות תקופות תואמות.",
+      "success_metric": "Engagement rate: בסיס 0.69; יעד המדד 2.0. יש להשוות תקופות תואמות.",
       "evidence": {
         "source": "scorecard",
         "metric": "Engagement rate",
-        "value": 0.97,
+        "value": 0.69,
         "target": 2.0,
         "unit": "%",
         "status": "❌"
       },
-      "evidence_url": "https://www.overthetopseo.com/linkedin-marketing-b2b-lead-generation-2026-2/",
-      "target_url": "https://www.linkedin.com/feed/update/urn:li:share:7528722362217750528",
-      "action": "הכן טיוטות פוסט case-study מפרופיל אישי של המנכ\"ל — פורמט carousel PDF (8 שקפים): נתון ממשי מהפקה + שיעור מקצועי. פרסום רק לאחר אישור מפורש. לא להבטיח reach target. תוכן אישי מקבל reach גבוה פי 5-10 מדף חברה לפי מקורות 2026.",
-      "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
-      "channel": "linkedin",
-      "status": "candidate",
-      "detail": "הצעה לבדיקה על בסיס המדד המתועד; לא בוצע שינוי."
-    },
-    {
-      "category": "gated",
-      "priority": "P1",
-      "action_key": "tiktok-behind-scenes",
-      "owner": "executor drafts; Alon approves",
-      "success_metric": "נוכחות סושיאל (רצפה): בסיס 27.0; יעד המדד 5. יש להשוות תקופות תואמות.",
-      "evidence": {
-        "source": "scorecard",
-        "metric": "נוכחות סושיאל (רצפה)",
-        "value": 27.0,
-        "target": 5,
-        "unit": "",
-        "status": "✅"
-      },
-      "evidence_url": "https://cufinder.io/blog/benchmarks/event-management/",
+      "evidence_url": "https://www.socialinsider.io/blog/tiktok-for-b2b/",
       "target_url": null,
-      "action": "הכן 3 קליפים 'מאחורי הקלעים' (60 שניות, vertical) מהפקה אמיתית — hook ב-3 שניות הראשונות, כתוביות בעברית, ללא תסריט. פרסם ב-TikTok ושתף ב-Instagram Reels לחיסכון בתפוקה. כל קליפ ממתין לאישור מפורש. benchmark ענפי events TikTok: 4.5% ER.",
+      "action": "הפק 2 קליפים 'מאחורי הקלעים' (60 שניות, vertical, ללא תסריט) מהפקה אמיתית — שתף גם ב-Instagram Reels לחיסכון בתפוקה; כל קליפ ממתין לאישור; מדוד ER ו-reach לפני הגדלת תדירות",
       "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
       "channel": "tiktok",
       "status": "candidate",

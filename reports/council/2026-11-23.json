@@ -63,7 +63,7 @@
       },
       {
         "metric": "נוכחות סושיאל (רצפה)",
-        "value": 27.0,
+        "value": 29.0,
         "target": 5,
         "unit": "",
         "status": "✅",
@@ -118,7 +118,7 @@
       },
       {
         "metric": "צמיחת חשיפות",
-        "value": -59.4,
+        "value": -43.4,
         "target": 10,
         "unit": "%",
         "status": "❌",
@@ -128,7 +128,7 @@
       },
       {
         "metric": "Engagement rate",
-        "value": 0.97,
+        "value": 0.69,
         "target": 2.0,
         "unit": "%",
         "status": "❌",
@@ -138,7 +138,7 @@
       },
       {
         "metric": "חשיפות (תקופה)",
-        "value": 87481,
+        "value": 122191,
         "target": "↑",
         "unit": "",
         "status": "✅",
@@ -229,7 +229,7 @@
       },
       {
         "metric": "נוכחות סושיאל (רצפה)",
-        "value": 27.0,
+        "value": 29.0,
         "target": 5,
         "unit": "",
         "status": "✅",
@@ -286,7 +286,7 @@
       },
       {
         "metric": "צמיחת חשיפות",
-        "value": -59.4,
+        "value": -43.4,
         "target": 10,
         "unit": "%",
         "status": "❌",
@@ -296,7 +296,7 @@
       },
       {
         "metric": "Engagement rate",
-        "value": 0.97,
+        "value": 0.69,
         "target": 2.0,
         "unit": "%",
         "status": "❌",
@@ -306,7 +306,7 @@
       },
       {
         "metric": "חשיפות (תקופה)",
-        "value": 87481,
+        "value": 122191,
         "target": "↑",
         "unit": "",
         "status": "✅",
@@ -350,19 +350,20 @@
     "weighted": 92,
     "passed": 5,
     "total": 6,
-    "impressions_growth_pct": -59.4,
-    "posts_per_week": 27.0,
+    "impressions_growth_pct": -43.4,
+    "posts_per_week": 29.0,
     "lead_attribution": {
       "by_source": {
-        "Web": 6,
+        "Web": 5,
         "Other": 3,
         "(none)": 1,
         "Existing Customer": 4,
         "Referral": 1,
-        "Web-Organic": 1
+        "Web-Organic": 1,
+        "Facebook": 1
       },
       "dominant_source": "Web",
-      "dominant_share_pct": 38,
+      "dominant_share_pct": 31,
       "attribution_gap": true,
       "note": "4/16 ברשומות מקור עמום או ברירת מחדל. אין לשייך אותן לערוץ דיגיטלי מסוים ללא ראיה ואין להסיק שיעור המרה מחלוקת המקורות."
     }
@@ -372,18 +373,18 @@
     "scores": {
       "instagram": 42,
       "facebook": 18,
-      "tiktok": 68,
+      "tiktok": 71,
       "linkedin": 22,
       "youtube": 55,
       "google_organic_geo": 48,
-      "overall": 72
+      "overall": 61
     },
     "what_worked": [
       "לידים לפי ההגדרה התפעולית (30 ימים): 16; יעד 10.",
       "Website leads (not paid): 6; יעד 3.",
       "מונחי מעקב ב-Top-3: 4; יעד 3.",
       "מנועי AI שנבדקו (לא אזכורים): 2; יעד 2.",
-      "נוכחות סושיאל (רצפה): 27.0; יעד 5."
+      "נוכחות סושיאל (רצפה): 29.0; יעד 5."
     ],
     "what_failed": [
       "קליקים אורגניים/שבוע: 71; יעד 300."
@@ -391,71 +392,37 @@
     "auto_fixes": [
       {
         "category": "safe_auto",
-        "action": "ניסוי LinkedIn: החלף 2 מתוך 5 פוסטי-חברה שבועיים בפוסטים מפרופיל אישי של מנהל — טקסט + נתון ממשי מהפקה אחרונה (לדוגמה: '1,400 עובדים, 2 מחזורים — מה למדנו'). תוכן אישי מקבל reach גבוה פי 5-10 מדף חברה לפי נתוני 2026.",
+        "action": "ניסוי LinkedIn: carousel בפורמט document (8-12 שקפים) מהפקה אמיתית — נתון ממשי + לקח מקצועי; ללא טקסט AI גנרי; מדוד dwell-time ו-saves ביחס לפוסטים הנוכחיים",
         "detail": "הצעה לבדיקה על בסיס המדד המתועד; לא בוצע שינוי.",
         "channel": "linkedin",
         "evidence": {
           "source": "scorecard",
           "metric": "Engagement rate",
-          "value": 0.97,
+          "value": 0.69,
           "target": 2.0,
           "unit": "%",
           "status": "❌"
         },
         "status": "candidate",
         "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
-        "success_metric": "Engagement rate: בסיס 0.97; יעד המדד 2.0. יש להשוות תקופות תואמות."
+        "success_metric": "Engagement rate: בסיס 0.69; יעד המדד 2.0. יש להשוות תקופות תואמות."
       },
       {
         "category": "safe_auto",
-        "action": "ניסוי hashtag LinkedIn: הצע 3-5 תגיות ממוקדות בעברית ואנגלית (#הפקתאירועים #MICE #IncentiveTravel #CorporateEvents #ישראל) במקום תגיות גנריות — שמור על לא יותר מ-5 תגיות לפוסט לפי נתוני 2026.",
+        "action": "ניסוי TikTok: תעד בנפרד ביצועי קליפ 'מאחורי הקלעים' אמיתי מול קליפ 'הסבר שירות' — 2 פוסטים בשבוע; מדוד ER per-video ב-7 ימים לפני אישור הגדלת תדירות",
         "detail": "הצעה לבדיקה על בסיס המדד המתועד; לא בוצע שינוי.",
-        "channel": "linkedin",
-        "evidence": {
-          "source": "scorecard",
-          "metric": "נוכחות סושיאל (רצפה)",
-          "value": 27.0,
-          "target": 5,
-          "unit": "",
-          "status": "✅"
-        },
-        "status": "candidate",
-        "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
-        "success_metric": "נוכחות סושיאל (רצפה): בסיס 27.0; יעד המדד 5. יש להשוות תקופות תואמות."
-      },
-      {
-        "category": "safe_auto",
-        "action": "ניסוי carousel LinkedIn: הכן טיוטת carousel PDF (8 שקפים) על שאלת קונה אמיתית מה-GSC ('מה כדאי לבדוק לפני שמזמינים חברת הפקה?') — פורמט carousel מניב dwell-time גבוה ו-ER ~7% לפי נתוני 2026 ל-B2B.",
-        "detail": "הצעה לבדיקה על בסיס המדד המתועד; לא בוצע שינוי.",
-        "channel": "linkedin",
+        "channel": "tiktok",
         "evidence": {
           "source": "scorecard",
           "metric": "Engagement rate",
-          "value": 0.97,
+          "value": 0.69,
           "target": 2.0,
           "unit": "%",
           "status": "❌"
         },
         "status": "candidate",
         "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
-        "success_metric": "Engagement rate: בסיס 0.97; יעד המדד 2.0. יש להשוות תקופות תואמות."
-      },
-      {
-        "category": "safe_auto",
-        "action": "ניסוי נושא YouTube: בדוק אם 3 מונחי GSC בעלי impression גבוה ('גיבוש' pos.4.1/626, 'הפקת אירועים לחברות' pos.19.8/437, 'טיולי תמריץ' pos.14.7/358) מתאימים לסרטונים קצרים (Shorts) לפני הפקת סרטון ארוך — השוואה בין נושאים לפי קליקים בפועל.",
-        "detail": "הצעה לבדיקה על בסיס המדד המתועד; לא בוצע שינוי.",
-        "channel": "youtube",
-        "evidence": {
-          "source": "scorecard",
-          "metric": "קליקים אורגניים/שבוע",
-          "value": 71,
-          "target": 300,
-          "unit": "",
-          "status": "❌"
-        },
-        "status": "candidate",
-        "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
-        "success_metric": "קליקים אורגניים/שבוע: בסיס 71; יעד המדד 300. יש להשוות תקופות תואמות."
+        "success_metric": "Engagement rate: בסיס 0.69; יעד המדד 2.0. יש להשוות תקופות תואמות."
       }
     ],
     "channel_cadence": {
@@ -468,11 +435,11 @@
         "reason": "מכסה מוצעת לבדיקה בתקופת המדידה; אין מסקנה סיבתית על אלגוריתם."
       },
       "linkedin": {
-        "max_posts_per_week": 3,
+        "max_posts_per_week": 4,
         "reason": "מכסה מוצעת לבדיקה בתקופת המדידה; אין מסקנה סיבתית על אלגוריתם."
       },
       "tiktok": {
-        "max_posts_per_week": 3,
+        "max_posts_per_week": 2,
         "reason": "מכסה מוצעת לבדיקה בתקופת המדידה; אין מסקנה סיבתית על אלגוריתם."
       },
       "youtube": {
@@ -496,8 +463,8 @@
           "status": "❌"
         },
         "evidence_url": null,
-        "target_url": "Uproduction Operations/Marketing-Council/verification-2026-09-13/lead-source-guidance.md",
-        "action": "הפץ את טיוטת הנחיית ייחוס המקורות הקיימת (lead-source-guidance.md, status: draft_ready, לא הופצה) — הגדר כלל עבור 'Other' ו-'(none)': בדוק referrer + UTM ב-GA4/GSC לפני שמירה. שינוי תווית מקור אינו מוסיף לידים לספירה הכוללת.",
+        "target_url": null,
+        "action": "הפץ את טיוטת הנחיית ייחוס המקורות הקיימת (lead-source-guidance.md, status: draft_ready, לא הופצה) — הגדר כלל עבור Other ו-(none): בדוק referrer + UTM ב-GA4 לפני שמירה; שינוי תווית אינו מוסיף לידים לספירה",
         "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
         "channel": "leads",
         "status": "candidate",
@@ -518,8 +485,8 @@
           "status": "❌"
         },
         "evidence_url": null,
-        "target_url": "https://upe.co.il/הפקת-אירועי-חברה/",
-        "action": "בדוק update_required מתועד לדפי הזדמנות מחוץ ל-cooldown: 'הפקת אירועים לחברות' (pos 19.8, 437 impressions), 'אירועים לחברות' (pos 14.2, 397 impressions), 'גיבוש' (pos 4.1, 626 impressions) ו-'טיולי תמריץ' (pos 14.7, 358 impressions). אם update_required=true ויש issue פתוח — הכן טיוטת עדכון ממוקד (תשובה-ראשית, FAQ תואם כוונת קנייה) לאישור. אל תשכתב דפים בלי issue מתועד ואל תיגע בדפים ב-cooldown עד 2026-11-29 ו-2026-12-15.",
+        "target_url": "https://upe.co.il/הפקות-אירועים-לחברות/",
+        "action": "לאחר 2026-11-29: אמת update_required=true על דפי גיבוש (pos 4.1, 626 impr) ו-הפקת אירועי חברה (pos 19.8, 437 impr) — הכן טיוטת עדכון תשובה-ראשית + FAQ תואם כוונת קנייה לאישור; אין לשכתב דפים ב-cooldown",
         "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
         "channel": "google_organic_geo",
         "status": "candidate",
@@ -528,42 +495,20 @@
       {
         "category": "gated",
         "priority": "P1",
-        "action_key": "linkedin-executive-posting",
+        "action_key": "tiktok-behind-scenes",
         "owner": "executor drafts; Alon approves",
-        "success_metric": "Engagement rate: בסיס 0.97; יעד המדד 2.0. יש להשוות תקופות תואמות.",
+        "success_metric": "Engagement rate: בסיס 0.69; יעד המדד 2.0. יש להשוות תקופות תואמות.",
         "evidence": {
           "source": "scorecard",
           "metric": "Engagement rate",
-          "value": 0.97,
+          "value": 0.69,
           "target": 2.0,
           "unit": "%",
           "status": "❌"
         },
-        "evidence_url": "https://www.overthetopseo.com/linkedin-marketing-b2b-lead-generation-2026-2/",
-        "target_url": "https://www.linkedin.com/feed/update/urn:li:share:7528722362217750528",
-        "action": "הכן טיוטות פוסט case-study מפרופיל אישי של המנכ\"ל — פורמט carousel PDF (8 שקפים): נתון ממשי מהפקה + שיעור מקצועי. פרסום רק לאחר אישור מפורש. לא להבטיח reach target. תוכן אישי מקבל reach גבוה פי 5-10 מדף חברה לפי מקורות 2026.",
-        "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
-        "channel": "linkedin",
-        "status": "candidate",
-        "detail": "הצעה לבדיקה על בסיס המדד המתועד; לא בוצע שינוי."
-      },
-      {
-        "category": "gated",
-        "priority": "P1",
-        "action_key": "tiktok-behind-scenes",
-        "owner": "executor drafts; Alon approves",
-        "success_metric": "נוכחות סושיאל (רצפה): בסיס 27.0; יעד המדד 5. יש להשוות תקופות תואמות.",
-        "evidence": {
-          "source": "scorecard",
-          "metric": "נוכחות סושיאל (רצפה)",
-          "value": 27.0,
-          "target": 5,
-          "unit": "",
-          "status": "✅"
-        },
-        "evidence_url": "https://cufinder.io/blog/benchmarks/event-management/",
+        "evidence_url": "https://www.socialinsider.io/blog/tiktok-for-b2b/",
         "target_url": null,
-        "action": "הכן 3 קליפים 'מאחורי הקלעים' (60 שניות, vertical) מהפקה אמיתית — hook ב-3 שניות הראשונות, כתוביות בעברית, ללא תסריט. פרסם ב-TikTok ושתף ב-Instagram Reels לחיסכון בתפוקה. כל קליפ ממתין לאישור מפורש. benchmark ענפי events TikTok: 4.5% ER.",
+        "action": "הפק 2 קליפים 'מאחורי הקלעים' (60 שניות, vertical, ללא תסריט) מהפקה אמיתית — שתף גם ב-Instagram Reels לחיסכון בתפוקה; כל קליפ ממתין לאישור; מדוד ER ו-reach לפני הגדלת תדירות",
         "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
         "channel": "tiktok",
         "status": "candidate",
@@ -590,21 +535,24 @@
       }
     ],
     "evidence_notes": [
-      "מדדי הפוסטים הם ערכים מצטברים לפי מועד פרסום; אין להסיק שפוסט יצא מהחלון או שהוא סיבת הירידה ללא בדיקת שני החלונות.",
-      "אין בנתונים בסיס לתחזית עוקבים או לתוספת מובטחת של קליקים ולידים. צעדי צמיחה הם ניסויים למדידה.",
-      "המלצות לשינוי אתר חייבות להפנות לפער מתועד שטרם טופל ולכבד את מועד השינוי האחרון.",
       "טענות על אלגוריתמים, שעות מועדפות ובנצ׳מרקים דורשות מקור מאומת; יעילותן עבור UPE דורשת ניסוי.",
+      "המלצות לשינוי אתר חייבות להפנות לפער מתועד שטרם טופל ולכבד את מועד השינוי האחרון.",
       "ייחוס מקור הליד מציג חלק מסך הלידים. שיעור המרה ורווחיות ערוץ אינם ידועים ללא נתוני תנועה והמרות תואמים; Web אינו בהכרח Google Organic.",
-      "נתוני GSC מתארים חשיפות של האתר בתקופה שנמדדה, ולא נפח חיפושים חודשי בשוק."
+      "נתוני GSC מתארים חשיפות של האתר בתקופה שנמדדה, ולא נפח חיפושים חודשי בשוק.",
+      "אין בנתונים בסיס לתחזית עוקבים או לתוספת מובטחת של קליקים ולידים. צעדי צמיחה הם ניסויים למדידה."
     ],
     "withheld_advice": [
       {
-        "action_key": "youtube-seo-videos",
+        "action_key": "linkedin-executive-posting",
+        "reason": "benchmark"
+      },
+      {
+        "action_key": "aeo-llms-txt-update",
         "reason": "site_evidence"
       },
       {
         "action_key": null,
-        "reason": "benchmark"
+        "reason": "site_evidence"
       }
     ],
     "directive_save_status": "saved"
@@ -612,71 +560,37 @@
   "applied_directives": [
     {
       "category": "safe_auto",
-      "action": "ניסוי LinkedIn: החלף 2 מתוך 5 פוסטי-חברה שבועיים בפוסטים מפרופיל אישי של מנהל — טקסט + נתון ממשי מהפקה אחרונה (לדוגמה: '1,400 עובדים, 2 מחזורים — מה למדנו'). תוכן אישי מקבל reach גבוה פי 5-10 מדף חברה לפי נתוני 2026.",
+      "action": "ניסוי LinkedIn: carousel בפורמט document (8-12 שקפים) מהפקה אמיתית — נתון ממשי + לקח מקצועי; ללא טקסט AI גנרי; מדוד dwell-time ו-saves ביחס לפוסטים הנוכחיים",
       "detail": "הצעה לבדיקה על בסיס המדד המתועד; לא בוצע שינוי.",
       "channel": "linkedin",
       "evidence": {
         "source": "scorecard",
         "metric": "Engagement rate",
-        "value": 0.97,
+        "value": 0.69,
         "target": 2.0,
         "unit": "%",
         "status": "❌"
       },
       "status": "candidate",
       "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
-      "success_metric": "Engagement rate: בסיס 0.97; יעד המדד 2.0. יש להשוות תקופות תואמות."
+      "success_metric": "Engagement rate: בסיס 0.69; יעד המדד 2.0. יש להשוות תקופות תואמות."
     },
     {
       "category": "safe_auto",
-      "action": "ניסוי hashtag LinkedIn: הצע 3-5 תגיות ממוקדות בעברית ואנגלית (#הפקתאירועים #MICE #IncentiveTravel #CorporateEvents #ישראל) במקום תגיות גנריות — שמור על לא יותר מ-5 תגיות לפוסט לפי נתוני 2026.",
+      "action": "ניסוי TikTok: תעד בנפרד ביצועי קליפ 'מאחורי הקלעים' אמיתי מול קליפ 'הסבר שירות' — 2 פוסטים בשבוע; מדוד ER per-video ב-7 ימים לפני אישור הגדלת תדירות",
       "detail": "הצעה לבדיקה על בסיס המדד המתועד; לא בוצע שינוי.",
-      "channel": "linkedin",
-      "evidence": {
-        "source": "scorecard",
-        "metric": "נוכחות סושיאל (רצפה)",
-        "value": 27.0,
-        "target": 5,
-        "unit": "",
-        "status": "✅"
-      },
-      "status": "candidate",
-      "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
-      "success_metric": "נוכחות סושיאל (רצפה): בסיס 27.0; יעד המדד 5. יש להשוות תקופות תואמות."
-    },
-    {
-      "category": "safe_auto",
-      "action": "ניסוי carousel LinkedIn: הכן טיוטת carousel PDF (8 שקפים) על שאלת קונה אמיתית מה-GSC ('מה כדאי לבדוק לפני שמזמינים חברת הפקה?') — פורמט carousel מניב dwell-time גבוה ו-ER ~7% לפי נתוני 2026 ל-B2B.",
-      "detail": "הצעה לבדיקה על בסיס המדד המתועד; לא בוצע שינוי.",
-      "channel": "linkedin",
+      "channel": "tiktok",
       "evidence": {
         "source": "scorecard",
         "metric": "Engagement rate",
-        "value": 0.97,
+        "value": 0.69,
         "target": 2.0,
         "unit": "%",
         "status": "❌"
       },
       "status": "candidate",
       "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
-      "success_metric": "Engagement rate: בסיס 0.97; יעד המדד 2.0. יש להשוות תקופות תואמות."
-    },
-    {
-      "category": "safe_auto",
-      "action": "ניסוי נושא YouTube: בדוק אם 3 מונחי GSC בעלי impression גבוה ('גיבוש' pos.4.1/626, 'הפקת אירועים לחברות' pos.19.8/437, 'טיולי תמריץ' pos.14.7/358) מתאימים לסרטונים קצרים (Shorts) לפני הפקת סרטון ארוך — השוואה בין נושאים לפי קליקים בפועל.",
-      "detail": "הצעה לבדיקה על בסיס המדד המתועד; לא בוצע שינוי.",
-      "channel": "youtube",
-      "evidence": {
-        "source": "scorecard",
-        "metric": "קליקים אורגניים/שבוע",
-        "value": 71,
-        "target": 300,
-        "unit": "",
-        "status": "❌"
-      },
-      "status": "candidate",
-      "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
-      "success_metric": "קליקים אורגניים/שבוע: בסיס 71; יעד המדד 300. יש להשוות תקופות תואמות."
+      "success_metric": "Engagement rate: בסיס 0.69; יעד המדד 2.0. יש להשוות תקופות תואמות."
     }
   ],
   "cadence": {
@@ -689,11 +603,11 @@
       "reason": "מכסה מוצעת לבדיקה בתקופת המדידה; אין מסקנה סיבתית על אלגוריתם."
     },
     "linkedin": {
-      "max_posts_per_week": 3,
+      "max_posts_per_week": 4,
       "reason": "מכסה מוצעת לבדיקה בתקופת המדידה; אין מסקנה סיבתית על אלגוריתם."
     },
     "tiktok": {
-      "max_posts_per_week": 3,
+      "max_posts_per_week": 2,
       "reason": "מכסה מוצעת לבדיקה בתקופת המדידה; אין מסקנה סיבתית על אלגוריתם."
     },
     "youtube": {
@@ -701,5 +615,5 @@
       "reason": "מכסה מוצעת לבדיקה בתקופת המדידה; אין מסקנה סיבתית על אלגוריתם."
     }
   },
-  "email_requested": false
+  "email_requested": true
 }
