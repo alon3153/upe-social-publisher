@@ -74,3 +74,33 @@ def test_no_new_day_and_nothing_stuck_sends_nothing(monkeypatch):
                         lambda *a, **k: (_ for _ in ()).throw(AssertionError("must not email")))
 
     assert daily.main() == 0
+
+
+def test_pick_next_day_reaches_days_past_130(monkeypatch, tmp_path):
+    """The bank runs past day 130; a fixed range(1, 131) starved the queue for weeks."""
+    days = tmp_path / "content" / "days"
+    days.mkdir(parents=True)
+    for d in (130, 131, 200):
+        (days / f"week9-day{d}-topic-en.json").write_text("{}")
+    monkeypatch.setattr(daily, "ROOT", str(tmp_path))
+    monkeypatch.setattr(daily, "load_state", lambda: {})
+    monkeypatch.setattr(daily, "get_published_days", lambda state, acc: [130])
+    monkeypatch.setattr(daily.queue, "published_days", lambda: {131})
+    monkeypatch.setattr(daily.queue, "day_awaiting", lambda day: False)
+    monkeypatch.setattr(daily, "find_image_path", lambda day, data: "img.jpg")
+    assert daily.bank_days() == [130, 131, 200]
+    assert daily.pick_next_day() == 200
+
+
+def test_pick_next_day_skips_day_without_image(monkeypatch, tmp_path):
+    days = tmp_path / "content" / "days"
+    days.mkdir(parents=True)
+    for d in (191, 201):
+        (days / f"week9-day{d}-topic-en.json").write_text("{}")
+    monkeypatch.setattr(daily, "ROOT", str(tmp_path))
+    monkeypatch.setattr(daily, "load_state", lambda: {})
+    monkeypatch.setattr(daily, "get_published_days", lambda state, acc: [])
+    monkeypatch.setattr(daily.queue, "published_days", lambda: set())
+    monkeypatch.setattr(daily.queue, "day_awaiting", lambda day: False)
+    monkeypatch.setattr(daily, "find_image_path", lambda day, data: None if day == 191 else "img.jpg")
+    assert daily.pick_next_day() == 201
