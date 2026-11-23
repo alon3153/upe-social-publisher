@@ -41,6 +41,8 @@ jobs:
           METRICOOL_TOKEN:        ${{ secrets.METRICOOL_TOKEN }}
           METRICOOL_USER_ID:      ${{ secrets.METRICOOL_USER_ID }}
           METRICOOL_BLOG_ID:      ${{ secrets.METRICOOL_BLOG_ID }}
+          # Brand "Uproduction Spain" holds Alon's personal LinkedIn profile (not a secret)
+          METRICOOL_FOUNDER_BLOG_ID: "6332834"
           GH_PAT:                 ${{ secrets.GH_PAT }}
           SALESFORCE_INSTANCE_URL: ${{ secrets.SALESFORCE_INSTANCE_URL }}
           SALESFORCE_CLIENT_ID:    ${{ secrets.SALESFORCE_CLIENT_ID }}
