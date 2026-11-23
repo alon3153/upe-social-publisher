@@ -245,6 +245,18 @@
       "source": "https://github.com/alon3153/uproduction-astro/commit/a16163be0b4f748f12d377ffaf2f4cd4623aae92",
       "change_evidence": "PR252 merged November15 (refs uproduction-astro issue 251). Title and H1 now lead with the commercial query; differentiation box links to the guide, the supplier-choice page and the retreat page; one FAQ added. Live title and H1 verified November23.",
       "last_change_verified_at": "2026-11-23"
+    },
+    {
+      "url": "https://upe.co.il/טיולי-תמריץ-ארגוניים/",
+      "last_changed": "2026-11-23",
+      "evaluation_not_before": "2026-12-21",
+      "aliases": [
+        "טיולי תמריץ",
+        "טיולי תמריץ ארגוניים"
+      ],
+      "source": "https://github.com/alon3153/uproduction-astro/commit/a9fee0337c723f1674ca0f268a71a9ef2c189b66",
+      "change_evidence": "PR280 merged November23 with Alon's approval. Title only: now leads with the page's own term instead of the travel wording. H1, description, slug and canonical unchanged. Alon chose this page as owner of the head term among four incentive pages. Live title verified November23. No ranking forecast.",
+      "last_change_verified_at": "2026-11-23"
     }
   ],
   "verified_existing_pages": [
