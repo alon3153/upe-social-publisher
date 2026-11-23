@@ -74,7 +74,19 @@ PROFILES = {
 CATEGORIES = [
     "destination", "cta_lead", "testimonial", "behind_the_scenes", "expert_tip",
     "social_proof", "incentive_travel", "problem_solution", "seasonal_hook", "founder_insight",
+    "hr_checklist", "contrarian_take", "proposal_comparison",
 ]
+# Formats that the 23.11.2026 LinkedIn/Facebook research found get shared and
+# commented on. Posts that tag named people are NOT generated: they need real names.
+CATEGORY_GUIDE = {
+    "hr_checklist": "A numbered checklist of 5-7 practical questions an HR or welfare manager should ask "
+                    "before booking a company trip or event. One short line per item. End by inviting a comment.",
+    "contrarian_take": "One clear opinion that goes against a common buying habit (for example choosing by "
+                       "lowest price per attendee). State it in the first line, give the reasoning, "
+                       "end with a question that invites disagreement.",
+    "proposal_comparison": "For procurement and finance: 4-5 specific lines to compare between two event "
+                           "proposals that show similar totals. Numbered list. No invented prices.",
+}
 # Real-archive imagery only. Client feedback: AI images made UPE look like it has
 # no real events (see PR #30). New posts reuse a vetted real photo from the archive
 # pool instead of generating an AI image. Provenance stays generic (no invented
@@ -135,6 +147,7 @@ def call_claude(category, day):
 {council_steering()}
 
 Write a single corporate-social post for day {day}, category "{category}", for Uproduction Events.
+{CATEGORY_GUIDE.get(category, "")}
 Produce Facebook, Instagram and LinkedIn copy in THREE languages: English (en), Spanish (es), Hebrew (he).
 Each network/language version conveys the same idea, adapted to that platform and language (not literal translations).
 
