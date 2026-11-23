@@ -85,6 +85,20 @@ def _query_text(term):
     return None
 
 
+_QUOTE_MARKS = str.maketrans("", "", "\"'\u05f4\u05f3\u201c\u201d\u2019")
+
+
+def _match_key(text):
+    """Exact-match key that ignores quote marks and spacing only.
+
+    The tracked list is derived from page slugs, so it spells חו"ל as חול;
+    Search Console reports the query with the gershayim. Without this the
+    same query never matches itself (22.11.2026: 4 tracked terms in Top-3
+    were counted as 1). Still exact match - no substring matching.
+    """
+    return " ".join(text.translate(_QUOTE_MARKS).casefold().split())
+
+
 def split_top3(data):
     """Separate the scored tracked-keyword count from the all-query count.
 
@@ -110,12 +124,12 @@ def split_top3(data):
     matched = []
     tracked = None
     if keywords and terms_present:
-        wanted = {item.casefold() for item in keywords}
+        wanted = {_match_key(item) for item in keywords}
         seen = set()
         for site in sites:
             for term in site.get("top3_terms") or []:
                 query = _query_text(term)
-                key = query.casefold() if query else ""
+                key = _match_key(query) if query else ""
                 if key and key in wanted and key not in seen:
                     seen.add(key)
                     matched.append(query)
