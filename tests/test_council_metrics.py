@@ -190,3 +190,24 @@ def test_instagram_pull_includes_reels(monkeypatch):
     posts = ma.pull_posts("instagram", now, now, "t", "u", "b")
     assert [p["url"] for p in posts] == ["a", "b"]
     assert ma.summarize(posts)["impressions"] == 210
+
+
+def test_linkedin_snapshot_adds_founder_profile(monkeypatch):
+    import metricool_analytics as ma
+    calls = []
+
+    def fake_pull(network, frm, to, tok, uid, bid, strict=False):
+        calls.append((network, bid))
+        if network != "linkedin":
+            return []
+        return [{"impressions": 1000}] if bid == "FOUNDER" else [{"impressions": 20}]
+
+    monkeypatch.setattr(ma, "_load_creds", lambda: ("t", "u", "MAIN"))
+    monkeypatch.setattr(ma, "pull_posts", fake_pull)
+    monkeypatch.setenv("METRICOOL_FOUNDER_BLOG_ID", "FOUNDER")
+    snap = ma.snapshot(days=7)
+    assert snap["networks"]["linkedin"]["impressions"] == 1020
+    assert snap["networks"]["linkedin"]["posts"] == 2
+    assert ("facebook", "FOUNDER") not in calls
+    monkeypatch.delenv("METRICOOL_FOUNDER_BLOG_ID")
+    assert ma.snapshot(days=7)["networks"]["linkedin"]["impressions"] == 20

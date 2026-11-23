@@ -163,6 +163,11 @@ def snapshot(days=7, end=None):
     for net in NETWORKS:
         try:
             posts = pull_posts(net, frm, to, tok, uid, bid, strict=True)
+            # Founder-led LinkedIn: Alon's personal profile is connected to a second
+            # Metricool brand. Without it the council sees only the company page.
+            founder_bid = os.environ.get("METRICOOL_FOUNDER_BLOG_ID")
+            if net == "linkedin" and founder_bid:
+                posts = posts + pull_posts(net, frm, to, tok, uid, founder_bid, strict=True)
             s = {**summarize(posts), "ok": True}
         except Exception:
             s = {**summarize([]), "ok": False, "caveat": "analytics unavailable"}
