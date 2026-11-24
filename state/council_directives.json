@@ -1,40 +1,40 @@
 {
-  "updated_at": "2026-11-23",
+  "updated_at": "2026-11-24",
   "source": "daily-council",
   "directives": [
     {
       "category": "safe_auto",
-      "action": "ניסוי LinkedIn: carousel בפורמט document (8-12 שקפים) מהפקה אמיתית — נתון ממשי + לקח מקצועי; ללא טקסט AI גנרי; מדוד dwell-time ו-saves ביחס לפוסטים הנוכחיים",
+      "action": "ניסוי YouTube playlist SEO: ארגן 12 הסרטונים הקיימים ל-3 פלייליסטים נושאיים (טיולי תמריץ / כנסים / אירועי חברה) עם כותרות וtimestamps מותאמות לחיפוש. מדוד session-time לפני ואחרי.",
       "detail": "הצעה לבדיקה על בסיס המדד המתועד; לא בוצע שינוי.",
-      "channel": "linkedin",
+      "channel": "youtube",
       "evidence": {
         "source": "scorecard",
-        "metric": "Engagement rate",
-        "value": 0.69,
-        "target": 2.0,
-        "unit": "%",
+        "metric": "קליקים אורגניים/שבוע",
+        "value": 71,
+        "target": 300,
+        "unit": "",
         "status": "❌"
       },
       "status": "candidate",
       "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
-      "success_metric": "Engagement rate: בסיס 0.69; יעד המדד 2.0. יש להשוות תקופות תואמות."
+      "success_metric": "קליקים אורגניים/שבוע: בסיס 71; יעד המדד 300. יש להשוות תקופות תואמות."
     },
     {
       "category": "safe_auto",
-      "action": "ניסוי TikTok: תעד בנפרד ביצועי קליפ 'מאחורי הקלעים' אמיתי מול קליפ 'הסבר שירות' — 2 פוסטים בשבוע; מדוד ER per-video ב-7 ימים לפני אישור הגדלת תדירות",
+      "action": "הכן קדנצת Instagram Reels: 1 Reel/שבוע מאחורי הקלעים מהפקה אמיתית (60 שניות, vertical, כתוביות) — שמור כטיוטה לאישור; מדוד reach מול פוסטי תמונה באותה שבוע.",
       "detail": "הצעה לבדיקה על בסיס המדד המתועד; לא בוצע שינוי.",
-      "channel": "tiktok",
+      "channel": "instagram",
       "evidence": {
         "source": "scorecard",
-        "metric": "Engagement rate",
-        "value": 0.69,
-        "target": 2.0,
-        "unit": "%",
-        "status": "❌"
+        "metric": "נוכחות סושיאל (רצפה)",
+        "value": 30.0,
+        "target": 5,
+        "unit": "",
+        "status": "✅"
       },
       "status": "candidate",
       "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
-      "success_metric": "Engagement rate: בסיס 0.69; יעד המדד 2.0. יש להשוות תקופות תואמות."
+      "success_metric": "נוכחות סושיאל (רצפה): בסיס 30.0; יעד המדד 5. יש להשוות תקופות תואמות."
     }
   ],
   "channel_cadence": {
@@ -43,7 +43,7 @@
       "reason": "מכסה מוצעת לבדיקה בתקופת המדידה; אין מסקנה סיבתית על אלגוריתם."
     },
     "instagram": {
-      "max_posts_per_week": 5,
+      "max_posts_per_week": 7,
       "reason": "מכסה מוצעת לבדיקה בתקופת המדידה; אין מסקנה סיבתית על אלגוריתם."
     },
     "linkedin": {
@@ -51,7 +51,7 @@
       "reason": "מכסה מוצעת לבדיקה בתקופת המדידה; אין מסקנה סיבתית על אלגוריתם."
     },
     "tiktok": {
-      "max_posts_per_week": 2,
+      "max_posts_per_week": 3,
       "reason": "מכסה מוצעת לבדיקה בתקופת המדידה; אין מסקנה סיבתית על אלגוריתם."
     },
     "youtube": {
@@ -60,10 +60,10 @@
     }
   },
   "channel_priority": [
-    "tiktok",
+    "linkedin",
     "youtube",
     "instagram",
-    "linkedin",
+    "tiktok",
     "facebook"
   ],
   "channel_plan_basis": [
