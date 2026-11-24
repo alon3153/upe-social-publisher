@@ -18527,12 +18527,12 @@
     "created": "2026-09-12",
     "updated": "2026-09-12",
     "kind": "recommendation",
-    "priority": "P2",
+    "priority": "P1",
     "channel": "youtube",
     "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
     "action_key": "youtube-seo-videos",
-    "owner": "Content/Production team מפיקים; Alon מאשר לפני פרסום",
-    "success_metric": "קליקים אורגניים/שבוע: בסיס 52; יעד המדד 300. יש להשוות תקופות תואמות."
+    "owner": "executor drafts; Alon approves",
+    "success_metric": "קליקים אורגניים/שבוע: בסיס 71; יעד המדד 300. יש להשוות תקופות תואמות."
   },
   "a78a8d0c": {
     "id": "a78a8d0c",
@@ -18964,7 +18964,7 @@
     "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
     "action_key": "linkedin-executive-posting",
     "owner": "executor drafts; Alon approves",
-    "success_metric": "Engagement rate: בסיס 0.81; יעד המדד 2.0. יש להשוות תקופות תואמות.",
+    "success_metric": "Engagement rate: בסיס 0.01; יעד המדד 2.0. יש להשוות תקופות תואמות.",
     "consecutive_failures": 0,
     "merged_from": [
       {
@@ -19026,12 +19026,12 @@
     "created": "2026-09-30",
     "updated": "2026-10-06",
     "kind": "recommendation",
-    "priority": "P1",
+    "priority": "P2",
     "channel": "tiktok",
     "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
     "action_key": "tiktok-behind-scenes",
     "owner": "executor drafts; Alon approves",
-    "success_metric": "Engagement rate: בסיס 0.69; יעד המדד 2.0. יש להשוות תקופות תואמות.",
+    "success_metric": "נוכחות סושיאל (רצפה): בסיס 30.0; יעד המדד 5. יש להשוות תקופות תואמות.",
     "consecutive_failures": 0,
     "merged_from": [
       {
