@@ -18963,7 +18963,7 @@
     "channel": "linkedin",
     "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
     "action_key": "linkedin-executive-posting",
-    "owner": "executor drafts; Alon approves",
+    "owner": "מנכ\"ל / מנהל בכיר מכין טיוטה; Alon מאשר לפני פרסום",
     "success_metric": "Engagement rate: בסיס 0.01; יעד המדד 2.0. יש להשוות תקופות תואמות.",
     "consecutive_failures": 0,
     "merged_from": [
@@ -19026,12 +19026,12 @@
     "created": "2026-09-30",
     "updated": "2026-10-06",
     "kind": "recommendation",
-    "priority": "P2",
+    "priority": "P1",
     "channel": "tiktok",
     "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
     "action_key": "tiktok-behind-scenes",
-    "owner": "executor drafts; Alon approves",
-    "success_metric": "נוכחות סושיאל (רצפה): בסיס 30.0; יעד המדד 5. יש להשוות תקופות תואמות.",
+    "owner": "מפיק תוכן מכין; Alon מאשר כל קליפ לפני פרסום",
+    "success_metric": "נוכחות סושיאל (רצפה): בסיס 37.0; יעד המדד 5. יש להשוות תקופות תואמות.",
     "consecutive_failures": 0,
     "merged_from": [
       {
@@ -19176,7 +19176,7 @@
     "channel": "google_organic_geo",
     "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
     "action_key": "top3-keyword-ranking-push",
-    "owner": "executor drafts; Alon approves",
+    "owner": "SEO lead מכין טיוטה; Alon מאשר לפני פרסום",
     "success_metric": "קליקים אורגניים/שבוע: בסיס 71; יעד המדד 300. יש להשוות תקופות תואמות.",
     "consecutive_failures": 0
   },
