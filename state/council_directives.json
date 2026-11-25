@@ -1,12 +1,63 @@
 {
-  "updated_at": "2026-11-24",
+  "updated_at": "2026-11-25",
   "source": "daily-council",
   "directives": [
     {
       "category": "safe_auto",
-      "action": "ניסוי YouTube playlist SEO: ארגן 12 הסרטונים הקיימים ל-3 פלייליסטים נושאיים (טיולי תמריץ / כנסים / אירועי חברה) עם כותרות וtimestamps מותאמות לחיפוש. מדוד session-time לפני ואחרי.",
+      "action": "ניסוי תוכן LinkedIn: carousel PDF (8-12 שקפים) בפרופיל אישי של מנהל — נושא 'שאלות שקונה B2B שואל לפני חתימה עם חברת הפקה' עם נתון אמיתי מהפקה — ולמדוד dwell-time ו-saves ב-7 ימים מול פוסט תמונה רגיל",
       "detail": "הצעה לבדיקה על בסיס המדד המתועד; לא בוצע שינוי.",
-      "channel": "youtube",
+      "channel": "linkedin",
+      "evidence": {
+        "source": "scorecard",
+        "metric": "Engagement rate",
+        "value": 0.01,
+        "target": 2.0,
+        "unit": "%",
+        "status": "❌"
+      },
+      "status": "candidate",
+      "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
+      "success_metric": "Engagement rate: בסיס 0.01; יעד המדד 2.0. יש להשוות תקופות תואמות."
+    },
+    {
+      "category": "safe_auto",
+      "action": "ניסוי TikTok/Reels: קליפ 'מאחורי הקלעים' אחד השבוע מהפקה אמיתית (60 שניות, vertical, ללא תסריט, כתוביות) — מדוד reach ו-interactions לעומת ממוצע 7 הימים האחרונים לפני החלטה על קצב קבוע",
+      "detail": "הצעה לבדיקה על בסיס המדד המתועד; לא בוצע שינוי.",
+      "channel": "tiktok",
+      "evidence": {
+        "source": "scorecard",
+        "metric": "נוכחות סושיאל (רצפה)",
+        "value": 37.0,
+        "target": 5,
+        "unit": "",
+        "status": "✅"
+      },
+      "status": "candidate",
+      "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
+      "success_metric": "נוכחות סושיאל (רצפה): בסיס 37.0; יעד המדד 5. יש להשוות תקופות תואמות."
+    },
+    {
+      "category": "safe_auto",
+      "action": "ניסוי hashtag LinkedIn: צמצם ל-3-5 תגיות ספציפיות (#MICE #incentivetravel #corporateevents) בפוסטים הבאים ומדוד reach לעומת פוסטים עם תגיות גנריות רבות — בדיקה במשך 4 שבועות",
+      "detail": "הצעה לבדיקה על בסיס המדד המתועד; לא בוצע שינוי.",
+      "channel": "linkedin",
+      "evidence": {
+        "source": "scorecard",
+        "metric": "Engagement rate",
+        "value": 0.01,
+        "target": 2.0,
+        "unit": "%",
+        "status": "❌"
+      },
+      "status": "candidate",
+      "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
+      "success_metric": "Engagement rate: בסיס 0.01; יעד המדד 2.0. יש להשוות תקופות תואמות."
+    },
+    {
+      "category": "safe_auto",
+      "action": "בדיקת הזדמנויות SEO לאחר צאת cooldown ב-29.11: בדוק ב-GSC אם /בוטיק-מול-סוכנות-אירועים-גדולה/ ו-/הפקת-כנסים/ שיפרו position לאחר PR228 לפני כל פעולה נוספת — תיעד ממצאים בגיליון open issue",
+      "detail": "הצעה לבדיקה על בסיס המדד המתועד; לא בוצע שינוי.",
+      "channel": "google_organic_geo",
       "evidence": {
         "source": "scorecard",
         "metric": "קליקים אורגניים/שבוע",
@@ -18,23 +69,6 @@
       "status": "candidate",
       "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
       "success_metric": "קליקים אורגניים/שבוע: בסיס 71; יעד המדד 300. יש להשוות תקופות תואמות."
-    },
-    {
-      "category": "safe_auto",
-      "action": "הכן קדנצת Instagram Reels: 1 Reel/שבוע מאחורי הקלעים מהפקה אמיתית (60 שניות, vertical, כתוביות) — שמור כטיוטה לאישור; מדוד reach מול פוסטי תמונה באותה שבוע.",
-      "detail": "הצעה לבדיקה על בסיס המדד המתועד; לא בוצע שינוי.",
-      "channel": "instagram",
-      "evidence": {
-        "source": "scorecard",
-        "metric": "נוכחות סושיאל (רצפה)",
-        "value": 30.0,
-        "target": 5,
-        "unit": "",
-        "status": "✅"
-      },
-      "status": "candidate",
-      "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
-      "success_metric": "נוכחות סושיאל (רצפה): בסיס 30.0; יעד המדד 5. יש להשוות תקופות תואמות."
     }
   ],
   "channel_cadence": {
@@ -43,7 +77,7 @@
       "reason": "מכסה מוצעת לבדיקה בתקופת המדידה; אין מסקנה סיבתית על אלגוריתם."
     },
     "instagram": {
-      "max_posts_per_week": 7,
+      "max_posts_per_week": 5,
       "reason": "מכסה מוצעת לבדיקה בתקופת המדידה; אין מסקנה סיבתית על אלגוריתם."
     },
     "linkedin": {

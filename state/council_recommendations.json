@@ -1,42 +1,20 @@
 {
-  "updated_at": "2026-11-24",
+  "updated_at": "2026-11-25",
   "scores": {
     "instagram": 42,
     "facebook": 18,
-    "tiktok": 30,
+    "tiktok": 20,
     "linkedin": 55,
     "youtube": 48,
-    "google_organic_geo": 38,
-    "overall": 68
+    "google_organic_geo": 52,
+    "overall": 67
   },
   "recommendations": [
     {
       "category": "gated",
       "priority": "P0",
-      "action_key": "salesforce-attribution-fix",
-      "owner": "executor drafts; Alon approves",
-      "success_metric": "ייחוס לידים: בסיס לא-מיוחס; יעד המדד מקור אמיתי. יש להשוות תקופות תואמות.",
-      "evidence": {
-        "source": "scorecard",
-        "metric": "ייחוס לידים",
-        "value": "לא-מיוחס",
-        "target": "מקור אמיתי",
-        "unit": "",
-        "status": "❌"
-      },
-      "evidence_url": null,
-      "target_url": null,
-      "action": "הפץ את lead-source-guidance.md הקיימת (status: draft_ready, לא הופצה) — הגדר כלל: בדוק referrer + UTM ב-GA4/GSC לפני שמירת רשומה כ-'Other' או '(none)'; שינוי תווית אינו מוסיף לידים לספירה הכוללת. טיוטה מוכנה — נדרשת רק אישור הפצה.",
-      "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
-      "channel": "leads",
-      "status": "candidate",
-      "detail": "הצעה לבדיקה על בסיס המדד המתועד; לא בוצע שינוי."
-    },
-    {
-      "category": "gated",
-      "priority": "P0",
       "action_key": "top3-keyword-ranking-push",
-      "owner": "executor drafts; Alon approves",
+      "owner": "SEO lead מכין טיוטה; Alon מאשר לפני פרסום",
       "success_metric": "קליקים אורגניים/שבוע: בסיס 71; יעד המדד 300. יש להשוות תקופות תואמות.",
       "evidence": {
         "source": "scorecard",
@@ -47,8 +25,8 @@
         "status": "❌"
       },
       "evidence_url": null,
-      "target_url": "https://upe.co.il/הפקת-אירועי-חברה/",
-      "action": "בדוק update_required מתועד לדפי opportunity שאינם ב-cooldown: /הפקת-אירועי-חברה/ ו-/נופשים-וטיולי-תמריץ/. אם issue פתוח קיים — הכן טיוטת עדכון ממוקד (תשובה ראשית, FAQ תואם כוונת קנייה, internal link לדף השירות המסחרי) לאישור; אל תשכתב דפים בcooldown (הפקת-כנסים, כנסים-לחברות-הייטק — עד 2026-11-29).",
+      "target_url": "https://upe.co.il/הפקות-אירועים-לחברות/",
+      "action": "ב-30.11 לאחר צאת cooldown — בדוק update_required מתועד לדפי הזדמנות: 'גיבוש' (pos 4.1) ו-'הפקת אירועים לחברות' (pos 19.8). אם קיים גיליון פתוח — הכן טיוטת עדכון ממוקד (תשובה-ראשית, FAQ תואם כוונה) ממתינה לאישור. אל תשכתב דפים ב-cooldown.",
       "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
       "channel": "google_organic_geo",
       "status": "candidate",
@@ -58,7 +36,7 @@
       "category": "gated",
       "priority": "P1",
       "action_key": "linkedin-executive-posting",
-      "owner": "executor drafts; Alon approves",
+      "owner": "מנכ\"ל / מנהל בכיר מכין טיוטה; Alon מאשר לפני פרסום",
       "success_metric": "Engagement rate: בסיס 0.01; יעד המדד 2.0. יש להשוות תקופות תואמות.",
       "evidence": {
         "source": "scorecard",
@@ -68,9 +46,9 @@
         "unit": "%",
         "status": "❌"
       },
-      "evidence_url": "https://coommit.com/blog/linkedin-organic-reach-2026",
+      "evidence_url": "https://www.b4b.co.uk/news/the-complete-guide-to-linkedin-marketing-strategy-content-ads-and-roi/",
       "target_url": null,
-      "action": "הפעל initiative d477123a: הכן 2 טיוטות carousel PDF (8-10 שקפים, פרופיל אישי מנכ\"ל) על case-study אמיתית + שאלת buyer מוכחת מה-GSC ('כיצד בוחנים ניסיון ספק בproduction?'); כל carousel ממתין לאישור מפורש. אל תפרסם מדפי חברה בלבד — פרופיל אישי מקבל reach גבוה פי 5-10.",
+      "action": "הכן טיוטת carousel (8 שקפים): 'שאלות שקונה B2B שואל לפני חתימה עם חברת הפקה' — נתון אמיתי מהפקה, hook ממוקד בשקף 1, takeaway לא פרסומי. פרסום מפרופיל אישי של מנהל, ממתין לאישור מפורש. לא מובטח reach target.",
       "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
       "channel": "linkedin",
       "status": "candidate",
@@ -79,42 +57,20 @@
     {
       "category": "gated",
       "priority": "P1",
-      "action_key": "youtube-seo-videos",
-      "owner": "executor drafts; Alon approves",
-      "success_metric": "קליקים אורגניים/שבוע: בסיס 71; יעד המדד 300. יש להשוות תקופות תואמות.",
-      "evidence": {
-        "source": "scorecard",
-        "metric": "קליקים אורגניים/שבוע",
-        "value": 71,
-        "target": 300,
-        "unit": "",
-        "status": "❌"
-      },
-      "evidence_url": "https://www.atakinteractive.com/blog/youtube-seo-for-b2b-in-2026-how-to-show-up-before-your-website-does",
-      "target_url": null,
-      "action": "הפעל initiative 0a16e409: הכן 3 טיוטות סרטון YouTube (5-8 דקות) על שאלות קונה מוכחות מה-GSC — 'כמה עולה הפקת כנס', 'איך בוחרים חברת הפקה', 'נופש חברה vs טיול תמריץ'. כלול timestamps, description 300+ מילים עם מונחים מה-top3_terms, end-screen ל-CTA, וorganize בפלייליסט נושאי; כל סרטון ממתין לאישור.",
-      "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
-      "channel": "youtube",
-      "status": "candidate",
-      "detail": "הצעה לבדיקה על בסיס המדד המתועד; לא בוצע שינוי."
-    },
-    {
-      "category": "gated",
-      "priority": "P2",
       "action_key": "tiktok-behind-scenes",
-      "owner": "executor drafts; Alon approves",
-      "success_metric": "נוכחות סושיאל (רצפה): בסיס 30.0; יעד המדד 5. יש להשוות תקופות תואמות.",
+      "owner": "מפיק תוכן מכין; Alon מאשר כל קליפ לפני פרסום",
+      "success_metric": "נוכחות סושיאל (רצפה): בסיס 37.0; יעד המדד 5. יש להשוות תקופות תואמות.",
       "evidence": {
         "source": "scorecard",
         "metric": "נוכחות סושיאל (רצפה)",
-        "value": 30.0,
+        "value": 37.0,
         "target": 5,
         "unit": "",
         "status": "✅"
       },
       "evidence_url": null,
       "target_url": null,
-      "action": "הפעל initiative dc82116b: הכן 3 קליפי 'מאחורי הקלעים' (60 שניות, vertical, ללא תסריט) מהפקה אמיתית — פרסם ב-TikTok ושתף ב-Instagram Reels (חיסכון בתפוקה); כל קליפ ממתין לאישור מפורש. TikTok הציג 70,190 חשיפות בתקופה הקודמת — פעילות UNKNOWN כרגע, לא אפס מובנה.",
+      "action": "חזור לקצב 2-3 קליפי 'מאחורי הקלעים' בשבוע (60 שניות, vertical, כתוביות, ללא תסריט) — שתף ב-Instagram Reels לחיסכון בתפוקה. כל קליפ ממתין לאישור מפורש לפני פרסום.",
       "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
       "channel": "tiktok",
       "status": "candidate",
