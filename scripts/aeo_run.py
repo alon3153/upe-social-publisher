@@ -157,14 +157,21 @@ def run(repo, dry_run, ask_fn=None, judge_fn=None, send_fn=None, runner=None, to
     # publishing: PRs #99/#108/#112 were closed unmerged and #120 failed its build, yet
     # four weekly emails reported those pages as shipped and IndexNow was pinged for URLs
     # that 404. Only verified-live URLs are reported or pinged.
+    # A URL that 404s because its PR is still open is pending merge. Record it that
+    # way, keep any URL that is already live, and do not call the page dead.
     not_live = []
+    pending_pages = []
+    pr_url = publish.get("pr_url")
     if pages and not dry_run:
-        aeo_intents.record(pages, today)
+        aeo_intents.record(pages, today, pending=bool(pr_url))
         _, dead, _unknown = aeo_intents.verify(today)
         if dead:
             failures.append("intents whose page is no longer live (will be re-briefed): "
                             + ", ".join(dead))
         shipped, not_live = aeo_intents.filter_live(shipped)
+        if pr_url:
+            pending_pages = not_live
+            not_live = []
         for s_ in not_live:
             failures.append(f"reported-but-not-live (NOT counted as published): {s_['url']}")
     if shipped and not dry_run:
@@ -173,8 +180,9 @@ def run(repo, dry_run, ask_fn=None, judge_fn=None, send_fn=None, runner=None, to
         except Exception as e:
             failures.append(f"indexnow ping failed ({type(e).__name__})")
     subject, html = aeo_report.build_email(scorecard, prev, shipped, deferred, failures,
-                                           publish.get("pr_url"), citations_status=citations_status,
-                                           not_live=not_live, comparative=comparative)
+                                           pr_url, citations_status=citations_status,
+                                           not_live=not_live, pending=pending_pages,
+                                           comparative=comparative)
     email_sent = False
     if not dry_run or send_fn:
         ok, _ = aeo_report.send(subject, html, send_fn=send_fn)
@@ -183,7 +191,7 @@ def run(repo, dry_run, ask_fn=None, judge_fn=None, send_fn=None, runner=None, to
     return {"scorecard": scorecard, "briefs": briefs, "deferred": deferred,
             "pages": pages, "publish": publish, "email_sent": email_sent,
             "comparative": comparative, "shipped": shipped, "not_live": not_live,
-            "failures": failures}
+            "pending": pending_pages, "failures": failures}
 
 
 def main():

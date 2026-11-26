@@ -104,3 +104,67 @@ def test_publish_rejection_is_reported_without_claiming_shipment(tmp_path, monke
     assert out["pages"] == []
     assert out["publish"]["pr_url"] is None
     assert any("publication preflight failed" in failure for failure in out["failures"])
+
+
+def test_unmerged_pr_is_recorded_pending_and_reported_as_pending_merge(tmp_path, monkeypatch):
+    """A PR that is not merged yet must not be filed as reported-but-not-live."""
+    monkeypatch.setenv("ANTHROPIC_API_KEY", "x")
+    monkeypatch.setenv("ASTRO_REPO", str(tmp_path))
+    monkeypatch.setattr(run_mod, "HISTORY", tmp_path / "aeo_history.json")
+    monkeypatch.setattr(run_mod.citations_pipeline, "verified_count", lambda data=None: 3)
+    monkeypatch.setattr(run_mod.citations_pipeline, "verify", lambda: [])
+    monkeypatch.setattr(run_mod.citations_pipeline, "digest_html", lambda: "")
+    monkeypatch.setattr(run_mod.held_pages, "hold", lambda *a, **k: None)
+    monkeypatch.setattr(run_mod.held_pages, "due_for_merge", lambda *a, **k: [])
+    monkeypatch.setattr(run_mod.held_pages, "digest_html", lambda *a, **k: "")
+    monkeypatch.setattr(run_mod.held_pages, "release", lambda *a, **k: None)
+    def ping(urls):
+        raise AssertionError("pending urls must not be pinged")
+
+    monkeypatch.setattr(run_mod.indexnow_ping, "ping", ping)
+
+    seen = {}
+
+    def record(pages, today, path=None, pending=False):
+        seen["pending"] = pending
+        seen["urls"] = [(p.get("frontmatter") or {}).get("canonical") for p in pages]
+
+    def verify(today=None, path=None, opener=None):
+        return [], [], []
+
+    def filter_live(shipped, opener=None):
+        return [], list(shipped)
+
+    monkeypatch.setattr(run_mod.aeo_intents, "record", record)
+    monkeypatch.setattr(run_mod.aeo_intents, "verify", verify)
+    monkeypatch.setattr(run_mod.aeo_intents, "filter_live", filter_live)
+    monkeypatch.setattr(run_mod.aeo_intents, "cover", lambda *a, **k: None)
+
+    def publish(repo, pages, branch, date, runner=None, dry_run=False):
+        return {"branch": branch, "files": ["x.md"],
+                "pr_url": "https://github.com/alon3153/uproduction-astro/pull/278",
+                "dry_run": False}
+
+    monkeypatch.setattr(run_mod.aeo_publish, "publish", publish)
+    sent = {}
+
+    def ask(model, prompt):
+        if "PAGE TYPE" in prompt:
+            return (json.dumps({"title": "Cómo elegir", "description": "d", "h1": "Cómo elegir",
+                                "slug": "como-elegir-productora"})
+                    + "\n===BODY===\nBuyer criteria for a corporate producer.\n")
+        return "answer omitting brand"
+
+    out = run_mod.run(str(tmp_path), dry_run=False, ask_fn=ask,
+                      judge_fn=lambda prompt: json.dumps({
+                          "product_search": 0, "comparison": 0, "reputation": 0,
+                          "competitors": [], "gap_note": "gap"}),
+                      send_fn=lambda subject, html: sent.update(subject=subject, html=html) or (True, "ok"),
+                      today="2026-11-22")
+    assert seen.get("pending") is True
+    assert out["shipped"] == []
+    assert out["not_live"] == []
+    assert out["pending"]
+    assert "pending merge" in sent["html"]
+    assert "reported-but-not-live" not in sent["html"]
+    assert all("reported-but-not-live" not in f for f in out["failures"])
