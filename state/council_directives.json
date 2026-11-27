@@ -1,57 +1,57 @@
 {
-  "updated_at": "2026-11-26",
+  "updated_at": "2026-11-27",
   "source": "daily-council",
   "directives": [
     {
       "category": "safe_auto",
-      "action": "ניסוי LinkedIn: carousel בן 8-10 שקפים מנהל — 'כך תכננו כנס ל-X משתתפים בחו״ל' עם נתון כמותי אחד וסיום בשאלה פתוחה לקהל; מדוד dwell-time ו-saves אחרי 72 שעות ביחס לפוסטים הנוכחיים",
+      "action": "ניסוי תוכן YouTube: הכן 2 כותרות ותיאורים (300+ מילים עבריות) לסרטוני behind-the-scenes קיימים — כלול timestamps ומונחי חיפוש כמו 'הפקת ערב גאלה'; שמור כטיוטה לאישור",
       "detail": "הצעה לבדיקה על בסיס המדד המתועד; לא בוצע שינוי.",
-      "channel": "linkedin",
+      "channel": "youtube",
       "evidence": {
         "source": "scorecard",
-        "metric": "מונחי מעקב ב-Top-3",
-        "value": 1,
-        "target": 3,
+        "metric": "קליקים אורגניים/שבוע",
+        "value": 58,
+        "target": 300,
         "unit": "",
         "status": "❌"
       },
       "status": "candidate",
       "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
-      "success_metric": "מונחי מעקב ב-Top-3: בסיס 1; יעד המדד 3. יש להשוות תקופות תואמות."
+      "success_metric": "קליקים אורגניים/שבוע: בסיס 58; יעד המדד 300. יש להשוות תקופות תואמות."
     },
     {
       "category": "safe_auto",
-      "action": "ניסוי Instagram: הפוך את ה-Reel הקיים מה-26.11 (נופש RYDE) ל-carousel בן 5-6 כרטיסיות — 'רגעים שלא רואים בהזמנה' — ומדוד saves ו-shares ביחס ל-ER 0.87% הנוכחי; carousel מביא save-rate גבוה יותר מ-Reels בחשבונות B2B",
+      "action": "ניסוי תדירות Instagram: הפחת ל-7 פוסטים/שבוע (מ-14 בתקופה זו) ומדוד האם reach/impressions לפוסט עולים; אין לשנות תוכן שאושר",
       "detail": "הצעה לבדיקה על בסיס המדד המתועד; לא בוצע שינוי.",
       "channel": "instagram",
       "evidence": {
         "source": "scorecard",
-        "metric": "Engagement rate",
-        "value": 0.02,
-        "target": 2.0,
-        "unit": "%",
-        "status": "❌"
-      },
-      "status": "candidate",
-      "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
-      "success_metric": "Engagement rate: בסיס 0.02; יעד המדד 2.0. יש להשוות תקופות תואמות."
-    },
-    {
-      "category": "safe_auto",
-      "action": "הכן קונספטים ל-3 Reels תוכן-מחסום עברי ל-TikTok+Instagram ב-60 שניות: 'מה קורה 24 שעות לפני הפקה', 'שלושת הטעויות שחברות עושות בבחירת ספק', 'ורטיקל הפקה בחו״ל vs ישראל' — ממתין לאישור לפני פרסום",
-      "detail": "הצעה לבדיקה על בסיס המדד המתועד; לא בוצע שינוי.",
-      "channel": "tiktok",
-      "evidence": {
-        "source": "scorecard",
         "metric": "נוכחות סושיאל (רצפה)",
-        "value": 34.0,
+        "value": 43.0,
         "target": 5,
         "unit": "",
         "status": "✅"
       },
       "status": "candidate",
       "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
-      "success_metric": "נוכחות סושיאל (רצפה): בסיס 34.0; יעד המדד 5. יש להשוות תקופות תואמות."
+      "success_metric": "נוכחות סושיאל (רצפה): בסיס 43.0; יעד המדד 5. יש להשוות תקופות תואמות."
+    },
+    {
+      "category": "safe_auto",
+      "action": "בדיקת YouTube top-post rollout: השווה את ה-top post הנוכחי (111,616 impressions) לתאריך הפרסום שלו — בדוק אם אותו פוסט הופיע בחלון הקודם (180K); אם כן, תעד שה-48% ירידה היא ארטיפקט ולא קריסה",
+      "detail": "הצעה לבדיקה על בסיס המדד המתועד; לא בוצע שינוי.",
+      "channel": "youtube",
+      "evidence": {
+        "source": "scorecard",
+        "metric": "צמיחת חשיפות",
+        "value": -48.0,
+        "target": 10,
+        "unit": "%",
+        "status": "❌"
+      },
+      "status": "candidate",
+      "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
+      "success_metric": "צמיחת חשיפות: בסיס -48.0; יעד המדד 10. יש להשוות תקופות תואמות."
     }
   ],
   "channel_cadence": {
@@ -60,7 +60,7 @@
       "reason": "מכסה מוצעת לבדיקה בתקופת המדידה; אין מסקנה סיבתית על אלגוריתם."
     },
     "instagram": {
-      "max_posts_per_week": 5,
+      "max_posts_per_week": 7,
       "reason": "מכסה מוצעת לבדיקה בתקופת המדידה; אין מסקנה סיבתית על אלגוריתם."
     },
     "linkedin": {
@@ -77,11 +77,11 @@
     }
   },
   "channel_priority": [
-    "youtube",
     "linkedin",
+    "youtube",
     "instagram",
-    "tiktok",
-    "facebook"
+    "facebook",
+    "tiktok"
   ],
   "channel_plan_basis": [
     "facebook: מכסה מוצעת לבדיקה בתקופת המדידה; אין מסקנה סיבתית על אלגוריתם.",
