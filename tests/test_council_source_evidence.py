@@ -1,4 +1,5 @@
 import json
+import sys
 from scripts.council_source_evidence import citation_basis, engine_evidence, valid_week
 from scripts import seo_geo_source
 import council
@@ -100,3 +101,34 @@ def test_manual_main_persists_reviewable_report_without_email(tmp_path, monkeypa
     assert list((tmp_path / 'REPORT_DIR').glob('*.html'))
     saved = json.loads(next((tmp_path / 'REPORT_DIR').glob('*.json')).read_text())
     assert saved['email_requested'] is False
+
+
+def test_email_subject_uses_weighted_formula_score(tmp_path, monkeypatch):
+    cur = {'totals': {'impressions': 10, 'posts': 5, 'engagement_rate_pct': 1},
+           'period_days': 7, 'period_start': '2026-09-06T00:00:00', 'networks': {}}
+    monkeypatch.setattr(sys, 'argv', ['council.py', '--send-email'])
+    monkeypatch.setattr(council.ma, 'snapshot', lambda *a, **k: dict(cur))
+    monkeypatch.setattr(council.leads_source, 'count', lambda *a: {'ok': False})
+    monkeypatch.setattr(council.seo_geo_source, 'fetch', lambda: {'ok': False})
+    monkeypatch.setattr(council.site_inventory, 'fetch', lambda: {'ok': False})
+    monkeypatch.setattr(council, 'build_scorecard', lambda *a, **k: {'weighted': 61})
+    monkeypatch.setattr(council, 'run_council', lambda *a, **k: {
+        'scores': {'overall': 17}, 'verdict_summary': 'opinion', 'what_worked': [],
+        'what_failed': [], 'auto_fixes': [], 'recommendations': [],
+        'follower_growth_plan': [], 'leads_actions': [],
+    })
+    monkeypatch.setattr(council, 'apply_auto_fixes', lambda *a: ([], {}))
+    monkeypatch.setattr(council, 'render_html', lambda *a, **k: '<html dir="rtl">report</html>')
+    monkeypatch.setattr(council, 'render_md', lambda *a, **k: 'report')
+    for field in ('METRICS_DIR', 'REPORT_DIR', 'STATE_DIR'):
+        monkeypatch.setattr(council, field, tmp_path / field)
+    sent = {}
+
+    def send_graph_html(subject, html):
+        sent['subject'] = subject
+        return True, 'ok'
+
+    monkeypatch.setitem(sys.modules, 'daily_email', type('Email', (), {'send_graph_html': staticmethod(send_graph_html)}))
+    assert council.main() == 0
+    assert sent['subject'].endswith('ציון 61/100')
+    assert '17' not in sent['subject']
