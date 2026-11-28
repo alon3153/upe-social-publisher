@@ -18963,8 +18963,8 @@
     "channel": "linkedin",
     "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
     "action_key": "linkedin-executive-posting",
-    "owner": "מנכ\"ל/מנהל בכיר מכין; Alon מאשר כל פוסט לפני פרסום",
-    "success_metric": "נוכחות סושיאל (רצפה): בסיס 43.0; יעד המדד 5. יש להשוות תקופות תואמות.",
+    "owner": "Content team drafts; מנכ\"ל/מנהל בכיר + Alon approves",
+    "success_metric": "מנועי AI שנבדקו (לא אזכורים): בסיס 2; יעד המדד 3. יש להשוות תקופות תואמות.",
     "consecutive_failures": 0,
     "merged_from": [
       {
@@ -19026,12 +19026,12 @@
     "created": "2026-09-30",
     "updated": "2026-10-06",
     "kind": "recommendation",
-    "priority": "P1",
+    "priority": "P2",
     "channel": "tiktok",
     "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
     "action_key": "tiktok-behind-scenes",
-    "owner": "צלם/עורך מכין; Alon מאשר כל קליפ לפני פרסום",
-    "success_metric": "נוכחות סושיאל (רצפה): בסיס 43.0; יעד המדד 5. יש להשוות תקופות תואמות.",
+    "owner": "Content team drafts; Alon approves כל קליפ",
+    "success_metric": "נוכחות סושיאל (רצפה): בסיס 46.0; יעד המדד 5. יש להשוות תקופות תואמות.",
     "consecutive_failures": 0,
     "merged_from": [
       {
@@ -19224,6 +19224,29 @@
     "action_key": "gemini-api-key-fix",
     "owner": "אלון מתקן מפתח API; מערכת מודדת אוטומטית",
     "success_metric": "מנועי AI שנבדקו (לא אזכורים): בסיס 1; יעד המדד 2. יש להשוות תקופות תואמות.",
+    "consecutive_failures": 0
+  },
+  "bb4455b5": {
+    "id": "bb4455b5",
+    "title": "אלון נדרש להפעיל קרדיט API ל-ChatGPT: OpenAI מציעה מאז 28 אוקטובר 2026 עד $500/חודש ב-API credits לחברי ChatGPT Pro ו-Business. יש לכנס את ChatGPT subscription לארגון API בחשבון הקיים ולהפעיל את ה-benefit בהגדרות Billing. זוהי בעיה אדמינית, לא שיווקית — אין להחליף את המדידה בנתון אחר.",
+    "status": "awaiting_approval",
+    "revisions": 1,
+    "history": [
+      {
+        "date": "2026-11-28",
+        "summary": "הופק מסמך הפעלה אדמינית מלא בעברית עבור אלון להפעלת הטבת ה-API Credits של OpenAI (עד $500/חודש), כולל תנאי זכאות, שתי נתיבי הפעלה מאומתים מהתיעוד הרשמי, טבלת מגבלות, checklist לביצוע וקריטריון מדידה (3 מנועי AI לעומת בסיס של 2).",
+        "ready": true
+      }
+    ],
+    "created": "2026-11-28",
+    "updated": "2026-11-28",
+    "kind": "recommendation",
+    "priority": "P1",
+    "channel": "google_organic_geo",
+    "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
+    "action_key": "aeo-chatgpt-credit-restore",
+    "owner": "Alon (חשבון OpenAI) — פעולה אדמינית בלבד",
+    "success_metric": "מנועי AI שנבדקו (לא אזכורים): בסיס 2; יעד המדד 3. יש להשוות תקופות תואמות.",
     "consecutive_failures": 0
   }
 }
