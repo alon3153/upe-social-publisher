@@ -853,9 +853,10 @@ def main():
     if not a.send_email:
         print("Report and evidence saved; email delivery disabled.")
         return 0
+    # Subject shows the formula score; the LLM opinion stays in the body, labelled as opinion.
     subj = (f"מועצת השיווק — דוח יומי {_today()} · "
             + ("⚠️ חוות הדעת נכשלה" if verdict.get("error")
-               else f"ציון {verdict.get('scores', {}).get('overall', '—')}/100"))
+               else f"ציון {scorecard['weighted']}/100"))
     try:
         from daily_email import send_graph_html
         ok, info = send_graph_html(subj, html)
