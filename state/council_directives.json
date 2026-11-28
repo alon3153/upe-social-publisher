@@ -1,12 +1,29 @@
 {
-  "updated_at": "2026-11-27",
+  "updated_at": "2026-11-28",
   "source": "daily-council",
   "directives": [
     {
       "category": "safe_auto",
-      "action": "ניסוי תוכן YouTube: הכן 2 כותרות ותיאורים (300+ מילים עבריות) לסרטוני behind-the-scenes קיימים — כלול timestamps ומונחי חיפוש כמו 'הפקת ערב גאלה'; שמור כטיוטה לאישור",
+      "action": "ניסוי LinkedIn carousel: הכן 2 טיוטות carousel מסמך (8 שקפים) מנקודת מבט מנהל בכיר — פורמט: בעיה → ראיה → framework → takeaway — לאישור לפני פרסום; מדוד dwell time ו-saves ב-7 ימים ראשונים.",
       "detail": "הצעה לבדיקה על בסיס המדד המתועד; לא בוצע שינוי.",
-      "channel": "youtube",
+      "channel": "linkedin",
+      "evidence": {
+        "source": "scorecard",
+        "metric": "מנועי AI שנבדקו (לא אזכורים)",
+        "value": 2,
+        "target": 3,
+        "unit": "",
+        "status": "❌"
+      },
+      "status": "candidate",
+      "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
+      "success_metric": "מנועי AI שנבדקו (לא אזכורים): בסיס 2; יעד המדד 3. יש להשוות תקופות תואמות."
+    },
+    {
+      "category": "safe_auto",
+      "action": "הגדר 3-5 hashtags ממוקדים לתוכן LinkedIn (#MICE #HapakotAeruim #CorporateEvents #IncentiveTravel) — הסר hashtags גנריים מעל 5 לפוסט; בדוק reach per post ב-14 ימים.",
+      "detail": "הצעה לבדיקה על בסיס המדד המתועד; לא בוצע שינוי.",
+      "channel": "linkedin",
       "evidence": {
         "source": "scorecard",
         "metric": "קליקים אורגניים/שבוע",
@@ -21,37 +38,20 @@
     },
     {
       "category": "safe_auto",
-      "action": "ניסוי תדירות Instagram: הפחת ל-7 פוסטים/שבוע (מ-14 בתקופה זו) ומדוד האם reach/impressions לפוסט עולים; אין לשנות תוכן שאושר",
+      "action": "הכן רשימת שאלות AEO לחלון Perplexity הבא: לפחות 4 שאלות חדשות על טיולי תמריץ, הפקת כנסים ו-gala — ממוקדות בשוק ספרדי/אירופאי שבו UPE אינה מצוטטת (es/en) — לאישור תוכן לפני הגשה.",
       "detail": "הצעה לבדיקה על בסיס המדד המתועד; לא בוצע שינוי.",
-      "channel": "instagram",
+      "channel": "google_organic_geo",
       "evidence": {
         "source": "scorecard",
-        "metric": "נוכחות סושיאל (רצפה)",
-        "value": 43.0,
-        "target": 5,
+        "metric": "מנועי AI שנבדקו (לא אזכורים)",
+        "value": 2,
+        "target": 3,
         "unit": "",
-        "status": "✅"
-      },
-      "status": "candidate",
-      "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
-      "success_metric": "נוכחות סושיאל (רצפה): בסיס 43.0; יעד המדד 5. יש להשוות תקופות תואמות."
-    },
-    {
-      "category": "safe_auto",
-      "action": "בדיקת YouTube top-post rollout: השווה את ה-top post הנוכחי (111,616 impressions) לתאריך הפרסום שלו — בדוק אם אותו פוסט הופיע בחלון הקודם (180K); אם כן, תעד שה-48% ירידה היא ארטיפקט ולא קריסה",
-      "detail": "הצעה לבדיקה על בסיס המדד המתועד; לא בוצע שינוי.",
-      "channel": "youtube",
-      "evidence": {
-        "source": "scorecard",
-        "metric": "צמיחת חשיפות",
-        "value": -48.0,
-        "target": 10,
-        "unit": "%",
         "status": "❌"
       },
       "status": "candidate",
       "expected_impact": "מועמדת לניסוי; אין תחזית לתוספת לידים, קליקים או הכנסה.",
-      "success_metric": "צמיחת חשיפות: בסיס -48.0; יעד המדד 10. יש להשוות תקופות תואמות."
+      "success_metric": "מנועי AI שנבדקו (לא אזכורים): בסיס 2; יעד המדד 3. יש להשוות תקופות תואמות."
     }
   ],
   "channel_cadence": {
@@ -60,7 +60,7 @@
       "reason": "מכסה מוצעת לבדיקה בתקופת המדידה; אין מסקנה סיבתית על אלגוריתם."
     },
     "instagram": {
-      "max_posts_per_week": 7,
+      "max_posts_per_week": 5,
       "reason": "מכסה מוצעת לבדיקה בתקופת המדידה; אין מסקנה סיבתית על אלגוריתם."
     },
     "linkedin": {
@@ -78,10 +78,10 @@
   },
   "channel_priority": [
     "linkedin",
-    "youtube",
     "instagram",
     "facebook",
-    "tiktok"
+    "tiktok",
+    "youtube"
   ],
   "channel_plan_basis": [
     "facebook: מכסה מוצעת לבדיקה בתקופת המדידה; אין מסקנה סיבתית על אלגוריתם.",
